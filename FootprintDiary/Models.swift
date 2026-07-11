@@ -60,6 +60,18 @@ final class Visit {
     }
 }
 
+extension CLLocationCoordinate2D {
+    /// 이 좌표에서 다른 좌표를 향한 방위각(도, 북쪽 0° 기준 시계 방향)
+    func bearing(to other: CLLocationCoordinate2D) -> Double {
+        let lat1 = latitude * .pi / 180
+        let lat2 = other.latitude * .pi / 180
+        let deltaLon = (other.longitude - longitude) * .pi / 180
+        let y = sin(deltaLon) * cos(lat2)
+        let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(deltaLon)
+        return atan2(y, x) * 180 / .pi
+    }
+}
+
 /// 하루 단위 일기
 @Model
 final class DiaryEntry {

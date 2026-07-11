@@ -11,9 +11,11 @@ import MapKit
 
 struct MapScreen: View {
     @EnvironmentObject private var locationManager: LocationManager
+    @Environment(\.openURL) private var openURL
 
     @State private var selectedDate: Date = .now
     @State private var showTimelapse = false
+    @State private var showDayTimelapse = false
 
     private var calendar: Calendar { .current }
 
@@ -26,11 +28,16 @@ struct MapScreen: View {
             .navigationTitle("발자국")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
+                ToolbarItemGroup(placement: .topBarLeading) {
                     Button {
                         showTimelapse = true
                     } label: {
                         Label("타임랩스", systemImage: "film")
+                    }
+                    Button {
+                        showDayTimelapse = true
+                    } label: {
+                        Label("하루 재생", systemImage: "play.circle")
                     }
                 }
                 ToolbarItem(placement: .topBarTrailing) {
@@ -40,13 +47,35 @@ struct MapScreen: View {
                         if locationManager.isRecordingManually {
                             ProgressView()
                         } else {
-                            Label("현재 위치 기록", systemImage: "plus.circle.fill")
+                            Label("현재 위치 기록", systemImage: "shoeprints.fill")
                         }
                     }
                 }
             }
             .fullScreenCover(isPresented: $showTimelapse) {
                 TimelapseView()
+            }
+            .fullScreenCover(isPresented: $showDayTimelapse) {
+                DayTimelapseView(date: selectedDate)
+            }
+            .alert(
+                "현재 위치 기록",
+                isPresented: Binding(
+                    get: { locationManager.manualRecordError != nil },
+                    set: { if !$0 { locationManager.manualRecordError = nil } }
+                ),
+                presenting: locationManager.manualRecordError
+            ) { error in
+                if error == .permissionDenied {
+                    Button("설정 열기") {
+                        if let url = URL(string: UIApplication.openSettingsURLString) {
+                            openURL(url)
+                        }
+                    }
+                }
+                Button("확인", role: .cancel) {}
+            } message: { error in
+                Text(error.message)
             }
         }
     }
@@ -105,18 +134,16 @@ struct DayMapView: View {
             // 현재 내 위치
             UserAnnotation()
 
-            // 이동 경로 선
-            if dayVisits.count >= 2 {
-                MapPolyline(coordinates: dayVisits.map(\.coordinate))
-                    .stroke(
-                        Color.accentColor.opacity(0.7),
-                        style: StrokeStyle(lineWidth: 3, dash: [6, 6])
-                    )
+            // 이동 경로를 따라 남는 발자국 자취
+            ForEach(FootprintTrail.steps(along: dayVisits.map(\.coordinate))) { step in
+                Annotation("", coordinate: step.coordinate, anchor: .center) {
+                    FootprintTrail.mark(heading: step.heading)
+                }
             }
             // 발자국 마커
             ForEach(Array(dayVisits.enumerated()), id: \.element.persistentModelID) { index, visit in
                 Annotation(visit.displayName, coordinate: visit.coordinate) {
-                    FootprintMarker(number: index + 1)
+                    FootprintMarker(number: index + 1, heading: heading(at: index))
                         .onTapGesture { selectedVisit = visit }
                 }
             }
@@ -207,6 +234,11 @@ struct DayMapView: View {
         return text
     }
 
+    /// index번째 발자국의 진행 방향(도)
+    private func heading(at index: Int) -> Double {
+        FootprintTrail.heading(through: dayVisits.map(\.coordinate), at: index)
+    }
+
     private func fitCamera() {
         guard !dayVisits.isEmpty else { return }
         let coords = dayVisits.map(\.coordinate)
@@ -228,24 +260,82 @@ struct DayMapView: View {
     }
 }
 
-/// 지도 위 발자국 마커
+/// 방문 지점 사이를 따라 일정 간격으로 찍히는 작은 발자국 자취
+enum FootprintTrail {
+    struct Step: Identifiable {
+        let id: Int
+        let coordinate: CLLocationCoordinate2D
+        let heading: Double
+    }
+
+    /// 좌표 목록을 따라 spacing(미터) 간격으로 발자국 위치를 만든다.
+    /// 긴 구간은 maxPerSegment개로 제한해 어노테이션 수가 폭증하지 않게 한다.
+    static func steps(
+        along coordinates: [CLLocationCoordinate2D],
+        spacing: CLLocationDistance = 40,
+        maxPerSegment: Int = 12
+    ) -> [Step] {
+        guard coordinates.count >= 2 else { return [] }
+        var steps: [Step] = []
+        for (from, to) in zip(coordinates, coordinates.dropFirst()) {
+            let distance = CLLocation(latitude: from.latitude, longitude: from.longitude)
+                .distance(from: CLLocation(latitude: to.latitude, longitude: to.longitude))
+            guard distance > 15 else { continue }
+            let count = min(max(Int(distance / spacing), 1), maxPerSegment)
+            let heading = from.bearing(to: to)
+            for i in 1...count {
+                let fraction = Double(i) / Double(count + 1)
+                steps.append(Step(
+                    id: steps.count,
+                    coordinate: CLLocationCoordinate2D(
+                        latitude: from.latitude + (to.latitude - from.latitude) * fraction,
+                        longitude: from.longitude + (to.longitude - from.longitude) * fraction
+                    ),
+                    heading: heading
+                ))
+            }
+        }
+        return steps
+    }
+
+    /// index번째 지점의 진행 방향(도). 다음 지점을 향하고, 마지막은 직전 방향을 유지한다.
+    static func heading(through coordinates: [CLLocationCoordinate2D], at index: Int) -> Double {
+        if index + 1 < coordinates.count {
+            return coordinates[index].bearing(to: coordinates[index + 1])
+        }
+        if index > 0 {
+            return coordinates[index - 1].bearing(to: coordinates[index])
+        }
+        return 0
+    }
+
+    /// 자취 발자국 하나의 모양
+    static func mark(heading: Double, opacity: Double = 1) -> some View {
+        Text("👣")
+            .font(.system(size: 11))
+            .shadow(color: .black.opacity(0.2), radius: 1, y: 0.5)
+            .rotationEffect(.degrees(heading))
+            .opacity(0.55 * opacity)
+    }
+}
+
+/// 지도 위 발자국 마커. 진행 방향으로 발자국을 회전시키고, 번호 배지는 항상 똑바로 보여준다.
 struct FootprintMarker: View {
     let number: Int
+    var heading: Double = 0
 
     var body: some View {
-        VStack(spacing: 0) {
-            ZStack(alignment: .topTrailing) {
-                Text("👣")
-                    .font(.title2)
-                    .padding(6)
-                    .background(Circle().fill(.background).shadow(radius: 2))
-                Text("\(number)")
-                    .font(.system(size: 10, weight: .bold))
-                    .foregroundStyle(.white)
-                    .frame(width: 16, height: 16)
-                    .background(Circle().fill(Color.accentColor))
-                    .offset(x: 4, y: -4)
-            }
+        ZStack(alignment: .topTrailing) {
+            Text("👣")
+                .font(.title2)
+                .shadow(color: .black.opacity(0.35), radius: 1.5, y: 1)
+                .rotationEffect(.degrees(heading))
+            Text("\(number)")
+                .font(.system(size: 10, weight: .bold))
+                .foregroundStyle(.white)
+                .frame(width: 16, height: 16)
+                .background(Circle().fill(Color.accentColor))
+                .offset(x: 8, y: -8)
         }
     }
 }

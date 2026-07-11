@@ -26,6 +26,26 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published var lastKnownLocation: CLLocation?
     @Published var isRecordingManually = false
+    @Published var manualRecordError: ManualRecordError?
+
+    /// 권한 요청 응답을 기다렸다가 수동 기록을 이어서 진행하기 위한 플래그
+    private var pendingManualRecord = false
+
+    enum ManualRecordError: Identifiable {
+        case permissionDenied
+        case locationUnavailable
+
+        var id: Self { self }
+
+        var message: String {
+            switch self {
+            case .permissionDenied:
+                return "위치 권한이 꺼져 있어요. 설정에서 위치 접근을 허용해주세요."
+            case .locationUnavailable:
+                return "현재 위치를 가져오지 못했어요. 잠시 후 다시 시도해주세요.\n(시뮬레이터라면 Features > Location에서 위치를 설정해주세요.)"
+            }
+        }
+    }
 
     /// 이 거리(m) 안에 이미 이름 붙은 장소가 있으면 이름을 자동으로 재사용한다.
     static let sameSpotThreshold: CLLocationDistance = 150
@@ -67,8 +87,17 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     // MARK: - 수동 기록 (시뮬레이터 테스트 및 즉시 기록용)
 
     func recordCurrentLocation() {
-        isRecordingManually = true
-        manager.requestLocation()
+        switch manager.authorizationStatus {
+        case .notDetermined:
+            // 권한을 먼저 받고, 응답이 오면 이어서 기록한다.
+            pendingManualRecord = true
+            manager.requestWhenInUseAuthorization()
+        case .denied, .restricted:
+            manualRecordError = .permissionDenied
+        default:
+            isRecordingManually = true
+            manager.requestLocation()
+        }
     }
 
     // MARK: - CLLocationManagerDelegate
@@ -80,6 +109,17 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         }
         if status == .authorizedAlways || status == .authorizedWhenInUse {
             startMonitoringIfAuthorized()
+        }
+
+        // 수동 기록 도중 권한 요청이 끼어들었으면 응답에 따라 이어간다.
+        guard pendingManualRecord, status != .notDetermined else { return }
+        pendingManualRecord = false
+        Task { @MainActor in
+            if status == .authorizedAlways || status == .authorizedWhenInUse {
+                self.recordCurrentLocation()
+            } else {
+                self.manualRecordError = .permissionDenied
+            }
         }
     }
 
@@ -119,6 +159,9 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
 
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         Task { @MainActor in
+            if self.isRecordingManually {
+                self.manualRecordError = .locationUnavailable
+            }
             self.isRecordingManually = false
         }
     }
@@ -201,12 +244,16 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         context.insert(visit)
         try? context.save()
 
-        // 주소는 참고용으로 비동기 채움
-        reverseGeocode(visit: visit)
+        // 주소는 참고용으로 비동기 채움 — 근처 장소에서 재사용했으면 네트워크 요청을 생략
+        if visit.address?.isEmpty != false {
+            reverseGeocode(visit: visit)
+        }
     }
 
     @MainActor
     private func reverseGeocode(visit: Visit) {
+        // CLGeocoder는 동시 요청을 지원하지 않아 겹치면 요청만 낭비된다.
+        guard !geocoder.isGeocoding else { return }
         let location = CLLocation(latitude: visit.latitude, longitude: visit.longitude)
         geocoder.reverseGeocodeLocation(location) { placemarks, _ in
             guard let placemark = placemarks?.first else { return }

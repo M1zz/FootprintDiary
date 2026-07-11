@@ -103,28 +103,26 @@ private struct TimelapsePlayerView: View {
 
         VStack(spacing: 0) {
             ZStack(alignment: .top) {
+                // 과거 기록 재생 화면이라 UserAnnotation(현재 위치)을 넣지 않는다.
+                // 넣으면 지도가 떠 있는 내내 GPS가 켜져 배터리를 소모한다.
                 Map(position: $cameraPosition) {
-                    UserAnnotation()
-
                     // 로토스코프 잔상: 지난 ghostDays일의 발자국이 옅어지며 남는다
                     ForEach(ghostRange(), id: \.self) { dayIndex in
                         let age = frameIndex - dayIndex
                         let opacity = pow(0.55, Double(age))
                         if let dayVisits = frames[days[dayIndex]], !dayVisits.isEmpty {
-                            if dayVisits.count >= 2 {
-                                MapPolyline(coordinates: dayVisits.map(\.coordinate))
-                                    .stroke(
-                                        Color.accentColor.opacity(0.7 * opacity),
-                                        style: StrokeStyle(lineWidth: 3, dash: [6, 6])
-                                    )
+                            ForEach(FootprintTrail.steps(along: dayVisits.map(\.coordinate))) { step in
+                                Annotation("", coordinate: step.coordinate, anchor: .center) {
+                                    FootprintTrail.mark(heading: step.heading, opacity: opacity)
+                                }
                             }
-                            ForEach(dayVisits, id: \.persistentModelID) { visit in
+                            ForEach(Array(dayVisits.enumerated()), id: \.element.persistentModelID) { index, visit in
                                 if age == 0 {
                                     Annotation(visit.displayName, coordinate: visit.coordinate) {
                                         Text("👣")
                                             .font(.title3)
-                                            .padding(4)
-                                            .background(Circle().fill(.background).shadow(radius: 2))
+                                            .shadow(color: .black.opacity(0.35), radius: 1.5, y: 1)
+                                            .rotationEffect(.degrees(FootprintTrail.heading(through: dayVisits.map(\.coordinate), at: index)))
                                     }
                                 } else {
                                     Annotation("", coordinate: visit.coordinate) {

@@ -95,6 +95,7 @@ struct DiaryDayView: View {
     @State private var text: String = ""
     @State private var selectedPhotos: [PhotosPickerItem] = []
     @State private var loaded = false
+    @State private var pendingSave: Task<Void, Never>?
 
     private var calendar: Calendar { .current }
 
@@ -166,6 +167,16 @@ struct DiaryDayView: View {
             loaded = true
         }
         .onChange(of: text) {
+            // 키 입력마다 디스크에 쓰지 않도록 입력이 멎은 뒤 저장한다
+            pendingSave?.cancel()
+            pendingSave = Task {
+                try? await Task.sleep(nanoseconds: 800_000_000)
+                guard !Task.isCancelled else { return }
+                saveText()
+            }
+        }
+        .onDisappear {
+            pendingSave?.cancel()
             saveText()
         }
         .onChange(of: selectedPhotos) {
@@ -217,6 +228,8 @@ struct DiaryDayView: View {
 
     private func saveText() {
         guard loaded else { return }
+        // 내용이 그대로면 저장하지 않는다 (빈 일기 생성 방지 포함)
+        guard text != (entry?.text ?? "") else { return }
         let entry = fetchOrCreateEntry()
         entry.text = text
         entry.updatedAt = .now
@@ -228,12 +241,31 @@ struct DiaryDayView: View {
         let entry = fetchOrCreateEntry()
         for item in selectedPhotos {
             if let data = try? await item.loadTransferable(type: Data.self) {
-                entry.photos.append(DiaryPhoto(data: data))
+                // 원본(수 MB~수십 MB)을 그대로 저장하지 않고 화면 표시에 충분한 크기로 줄인다
+                let stored = await Task.detached(priority: .userInitiated) {
+                    Self.downscaledJPEG(from: data) ?? data
+                }.value
+                entry.photos.append(DiaryPhoto(data: stored))
             }
         }
         entry.updatedAt = .now
         try? modelContext.save()
         selectedPhotos = []
+    }
+
+    /// 긴 변이 maxDimension을 넘는 사진을 JPEG으로 줄여 저장 용량과 디코딩 비용을 낮춘다
+    private static func downscaledJPEG(from data: Data, maxDimension: CGFloat = 1600) -> Data? {
+        guard let image = UIImage(data: data) else { return nil }
+        let longSide = max(image.size.width, image.size.height)
+        guard longSide > maxDimension else { return data }
+        let scale = maxDimension / longSide
+        let newSize = CGSize(width: image.size.width * scale, height: image.size.height * scale)
+        let format = UIGraphicsImageRendererFormat()
+        format.scale = 1
+        let resized = UIGraphicsImageRenderer(size: newSize, format: format).image { _ in
+            image.draw(in: CGRect(origin: .zero, size: newSize))
+        }
+        return resized.jpegData(compressionQuality: 0.85)
     }
 
     private func deletePhoto(_ photo: DiaryPhoto) {
