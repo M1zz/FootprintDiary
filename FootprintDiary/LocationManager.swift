@@ -49,6 +49,9 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
 
     /// 이 거리(m) 안에 이미 이름 붙은 장소가 있으면 이름을 자동으로 재사용한다.
     static let sameSpotThreshold: CLLocationDistance = 150
+    /// 직전 발자국이 이 거리(m) 안이면 같은 장소로 보고 새로 저장하지 않는다.
+    /// 한 장소에 머물며 방문 이벤트가 반복해서 들어와도 발자국이 쌓이지 않게 한다.
+    static let repeatSuppressionRadius: CLLocationDistance = 500
     /// 도착 직전 이 시간(초) 동안의 모션 활동으로 이동 수단을 판별한다.
     static let arrivalLookback: TimeInterval = 20 * 60
 
@@ -151,7 +154,9 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
                     latitude: location.coordinate.latitude,
                     longitude: location.coordinate.longitude,
                     arrival: Date(),
-                    departure: nil
+                    departure: nil,
+                    // 사용자가 직접 남긴 발자국은 근처라도 그대로 저장한다.
+                    suppressNearby: false
                 )
             }
         }
@@ -204,19 +209,33 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     // MARK: - 저장
 
     @MainActor
-    private func saveVisit(latitude: Double, longitude: Double, arrival: Date, departure: Date?) {
+    private func saveVisit(
+        latitude: Double,
+        longitude: Double,
+        arrival: Date,
+        departure: Date?,
+        suppressNearby: Bool = true
+    ) {
         guard let modelContainer else { return }
         let context = modelContainer.mainContext
 
-        // 같은 방문 이벤트가 도착/출발로 두 번 오는 경우: 최근 기록 1건만 확인해 갱신
+        // 최근 발자국 1건을 확인해 같은 장소면 새로 저장하지 않고 갱신만 한다.
         var lastDescriptor = FetchDescriptor<Visit>(sortBy: [SortDescriptor(\.arrivalDate, order: .reverse)])
         lastDescriptor.fetchLimit = 1
-        if let last = (try? context.fetch(lastDescriptor))?.first,
-           last.distance(latitude: latitude, longitude: longitude) < 50,
-           abs(last.arrivalDate.timeIntervalSince(arrival)) < 60 * 5 {
-            last.departureDate = departure ?? last.departureDate
-            try? context.save()
-            return
+        if let last = (try? context.fetch(lastDescriptor))?.first {
+            let distance = last.distance(latitude: latitude, longitude: longitude)
+            // 같은 방문 이벤트가 도착/출발로 두 번 오는 경우: 출발 시각만 갱신
+            if distance < 50, abs(last.arrivalDate.timeIntervalSince(arrival)) < 60 * 5 {
+                last.departureDate = departure ?? last.departureDate
+                try? context.save()
+                return
+            }
+            // 자동 기록에서, 직전 장소 500m 이내면 반복 저장하지 않는다.
+            if suppressNearby, distance < Self.repeatSuppressionRadius {
+                if let departure { last.departureDate = departure }
+                try? context.save()
+                return
+            }
         }
 
         let visit = Visit(

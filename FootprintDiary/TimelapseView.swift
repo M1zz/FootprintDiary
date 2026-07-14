@@ -97,20 +97,27 @@ private struct TimelapsePlayerView: View {
         Dictionary(grouping: visits) { calendar.startOfDay(for: $0.arrivalDate) }
     }
 
+    /// 발자국이 있는 날만 추린 프레임 목록 (발자국 없는 날은 타임랩스에서 제외)
+    private var activeDays: [Date] {
+        let frames = visitsByDay
+        return days.filter { frames[$0]?.isEmpty == false }
+    }
+
     var body: some View {
         let frames = visitsByDay
-        let currentDay = days.indices.contains(frameIndex) ? days[frameIndex] : days.first ?? .now
+        let activeDays = activeDays
+        let currentDay = activeDays.indices.contains(frameIndex) ? activeDays[frameIndex] : activeDays.first ?? .now
 
         VStack(spacing: 0) {
             ZStack(alignment: .top) {
                 // 과거 기록 재생 화면이라 UserAnnotation(현재 위치)을 넣지 않는다.
                 // 넣으면 지도가 떠 있는 내내 GPS가 켜져 배터리를 소모한다.
                 Map(position: $cameraPosition) {
-                    // 로토스코프 잔상: 지난 ghostDays일의 발자국이 옅어지며 남는다
-                    ForEach(ghostRange(), id: \.self) { dayIndex in
+                    // 로토스코프 잔상: 지난 ghostDays개 프레임의 발자국이 옅어지며 남는다
+                    ForEach(ghostRange(dayCount: activeDays.count), id: \.self) { dayIndex in
                         let age = frameIndex - dayIndex
                         let opacity = pow(0.55, Double(age))
-                        if let dayVisits = frames[days[dayIndex]], !dayVisits.isEmpty {
+                        if let dayVisits = frames[activeDays[dayIndex]], !dayVisits.isEmpty {
                             ForEach(FootprintTrail.steps(along: dayVisits.map(\.coordinate))) { step in
                                 Annotation("", coordinate: step.coordinate, anchor: .center) {
                                     FootprintTrail.mark(heading: step.heading, opacity: opacity)
@@ -139,7 +146,7 @@ private struct TimelapsePlayerView: View {
                 dateBadge(for: currentDay, count: frames[currentDay]?.count ?? 0)
             }
 
-            controls
+            controlsView(activeDays: activeDays)
         }
         .onAppear { fitCamera() }
         .onChange(of: visits.map(\.persistentModelID)) {
@@ -151,7 +158,7 @@ private struct TimelapsePlayerView: View {
             while !Task.isCancelled {
                 try? await Task.sleep(nanoseconds: UInt64(Self.baseFrameDuration / speed * 1_000_000_000))
                 guard !Task.isCancelled else { return }
-                if frameIndex < days.count - 1 {
+                if frameIndex < activeDays.count - 1 {
                     withAnimation(.easeInOut(duration: 0.25)) { frameIndex += 1 }
                 } else {
                     isPlaying = false
@@ -164,9 +171,9 @@ private struct TimelapsePlayerView: View {
     /// 재생 상태/배속이 바뀔 때마다 재생 태스크를 새로 시작하기 위한 키
     private var playbackToken: String { "\(isPlaying)-\(speed)" }
 
-    private func ghostRange() -> Range<Int> {
-        guard !days.isEmpty else { return 0..<0 }
-        let clamped = min(frameIndex, days.count - 1)
+    private func ghostRange(dayCount: Int) -> Range<Int> {
+        guard dayCount > 0 else { return 0..<0 }
+        let clamped = min(frameIndex, dayCount - 1)
         return max(0, clamped - Self.ghostDays)..<(clamped + 1)
     }
 
@@ -187,8 +194,8 @@ private struct TimelapsePlayerView: View {
     }
 
     @ViewBuilder
-    private var controls: some View {
-        if days.isEmpty || visits.isEmpty {
+    private func controlsView(activeDays: [Date]) -> some View {
+        if activeDays.isEmpty {
             VStack(spacing: 8) {
                 Image(systemName: "film")
                     .font(.largeTitle)
@@ -205,19 +212,19 @@ private struct TimelapsePlayerView: View {
                         get: { Double(frameIndex) },
                         set: { frameIndex = Int($0.rounded()) }
                     ),
-                    in: 0...Double(max(days.count - 1, 1)),
+                    in: 0...Double(max(activeDays.count - 1, 1)),
                     step: 1
                 )
 
                 HStack {
-                    Text(Self.shortDayFormatter.string(from: days.first ?? .now))
+                    Text(Self.shortDayFormatter.string(from: activeDays.first ?? .now))
                         .font(.caption2)
                         .foregroundStyle(.secondary)
 
                     Spacer()
 
                     Button {
-                        if !isPlaying && frameIndex >= days.count - 1 {
+                        if !isPlaying && frameIndex >= activeDays.count - 1 {
                             frameIndex = 0
                         }
                         isPlaying.toggle()
