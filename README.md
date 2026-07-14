@@ -61,3 +61,9 @@
 | `MapScreen.swift` | 날짜별 지도 발자국 + 경로 + 발자국 수정 |
 | `PlaceNamingView.swift` | "여기는 어디였나요?" 장소 이름 묻기 시트 |
 | `DiaryScreen.swift` | 날짜별 일기 목록 + 텍스트/사진 일기 편집 |
+
+## 문서 · 링크
+
+- 🏠 [소개 페이지](https://m1zz.github.io/FootprintDiary/)
+- 🔒 [개인정보 처리방침](https://m1zz.github.io/FootprintDiary/privacy.html)
+- 💬 [지원 / 문의](https://m1zz.github.io/FootprintDiary/support.html)
