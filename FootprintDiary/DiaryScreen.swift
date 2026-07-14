@@ -42,32 +42,44 @@ struct DiaryScreen: View {
     private func dayRow(_ day: Date) -> some View {
         let entry = entries.first { calendar.isDate($0.dayStart, inSameDayAs: day) }
         let visitCount = allVisits.filter { calendar.isDate($0.arrivalDate, inSameDayAs: day) }.count
+        let firstPhoto = entry?.photos.sorted(by: { $0.createdAt < $1.createdAt }).first
 
-        VStack(alignment: .leading, spacing: 4) {
-            HStack {
-                Text(dayTitle(day))
-                    .font(.headline)
-                Spacer()
-                if visitCount > 0 {
-                    Label("\(visitCount)", systemImage: "shoeprints.fill")
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
+        HStack(spacing: 12) {
+            VStack(alignment: .leading, spacing: 4) {
+                HStack {
+                    Text(dayTitle(day))
+                        .font(.headline)
+                    Spacer()
+                    if visitCount > 0 {
+                        Label("\(visitCount)", systemImage: "shoeprints.fill")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
+                    if let entry, !entry.photos.isEmpty {
+                        Label("\(entry.photos.count)", systemImage: "photo")
+                            .font(.caption)
+                            .foregroundStyle(.secondary)
+                    }
                 }
-                if let entry, !entry.photos.isEmpty {
-                    Label("\(entry.photos.count)", systemImage: "photo")
-                        .font(.caption)
+                if let entry, !entry.text.isEmpty {
+                    Text(entry.text)
+                        .font(.subheadline)
                         .foregroundStyle(.secondary)
+                        .lineLimit(2)
+                } else {
+                    Text("아직 일기가 없어요")
+                        .font(.subheadline)
+                        .foregroundStyle(.tertiary)
                 }
             }
-            if let entry, !entry.text.isEmpty {
-                Text(entry.text)
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(2)
-            } else {
-                Text("아직 일기가 없어요")
-                    .font(.subheadline)
-                    .foregroundStyle(.tertiary)
+
+            // 사진이 있으면 첫 사진을 썸네일로 미리 보여준다
+            if let firstPhoto, let uiImage = UIImage(data: firstPhoto.data) {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: 56, height: 56)
+                    .clipShape(RoundedRectangle(cornerRadius: 8))
             }
         }
         .padding(.vertical, 2)
