@@ -23,6 +23,9 @@ struct MapScreen: View {
         NavigationStack {
             VStack(spacing: 0) {
                 dayPicker
+                if !locationManager.isTrackingEnabled {
+                    trackingOffBanner
+                }
                 DayMapView(date: selectedDate)
             }
             .navigationTitle("발자국")
@@ -40,7 +43,17 @@ struct MapScreen: View {
                         Label("하루 재생", systemImage: "play.circle")
                     }
                 }
-                ToolbarItem(placement: .topBarTrailing) {
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    Button {
+                        locationManager.isTrackingEnabled.toggle()
+                    } label: {
+                        Label(
+                            locationManager.isTrackingEnabled ? "자동 추적 켜짐" : "자동 추적 꺼짐",
+                            systemImage: locationManager.isTrackingEnabled ? "location.fill" : "location.slash.fill"
+                        )
+                    }
+                    .tint(locationManager.isTrackingEnabled ? .accentColor : .secondary)
+
                     Button {
                         locationManager.recordCurrentLocation()
                     } label: {
@@ -81,6 +94,24 @@ struct MapScreen: View {
     }
 
     // MARK: - 하위 뷰
+
+    private var trackingOffBanner: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "location.slash.fill")
+                .foregroundStyle(.secondary)
+            Text("자동 추적이 꺼져 있어요. 이동해도 발자국이 자동 기록되지 않아요.")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+            Spacer()
+            Button("켜기") {
+                locationManager.isTrackingEnabled = true
+            }
+            .font(.caption.bold())
+        }
+        .padding(.horizontal)
+        .padding(.vertical, 8)
+        .background(Color.secondary.opacity(0.12))
+    }
 
     private var dayPicker: some View {
         HStack {

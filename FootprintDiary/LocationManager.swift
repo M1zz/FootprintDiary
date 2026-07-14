@@ -28,6 +28,21 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     @Published var isRecordingManually = false
     @Published var manualRecordError: ManualRecordError?
 
+    /// 자동 위치 추적 켜짐/꺼짐 (사용자 설정 — 재실행·백그라운드 깨어남에도 유지)
+    @Published var isTrackingEnabled: Bool = true {
+        didSet {
+            guard oldValue != isTrackingEnabled else { return }
+            UserDefaults.standard.set(isTrackingEnabled, forKey: Self.trackingEnabledKey)
+            if isTrackingEnabled {
+                startMonitoringIfAuthorized()
+            } else {
+                stopMonitoring()
+            }
+        }
+    }
+
+    private static let trackingEnabledKey = "footprint.isTrackingEnabled"
+
     /// 권한 요청 응답을 기다렸다가 수동 기록을 이어서 진행하기 위한 플래그
     private var pendingManualRecord = false
 
@@ -56,6 +71,11 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     static let arrivalLookback: TimeInterval = 20 * 60
 
     override init() {
+        // 저장된 설정이 없으면 기본값은 켜짐(기존 동작 유지).
+        // init 안에서의 대입은 didSet을 호출하지 않으므로 모니터링을 조기 시작하지 않는다.
+        if UserDefaults.standard.object(forKey: Self.trackingEnabledKey) != nil {
+            isTrackingEnabled = UserDefaults.standard.bool(forKey: Self.trackingEnabledKey)
+        }
         super.init()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -79,11 +99,19 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     func startMonitoringIfAuthorized() {
         let status = manager.authorizationStatus
         authorizationStatus = status
+        // 사용자가 추적을 꺼 두었으면 백그라운드 깨어남에도 다시 시작하지 않는다.
+        guard isTrackingEnabled else { return }
         guard status == .authorizedAlways || status == .authorizedWhenInUse else { return }
         manager.startMonitoringVisits()
         // 과거 버전이 켜 둔 큰 위치 변화 감지를 끈다.
         // 운전 중에도 셀 타워가 바뀔 때마다 앱을 깨워 배터리를 소모하는데,
         // 방문 기록에는 CLVisit만으로 충분하다.
+        manager.stopMonitoringSignificantLocationChanges()
+    }
+
+    /// 자동 위치 추적을 멈춘다. (수동 + 기록은 계속 사용할 수 있다)
+    func stopMonitoring() {
+        manager.stopMonitoringVisits()
         manager.stopMonitoringSignificantLocationChanges()
     }
 
