@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import LeeoKit
 
 @main
 struct FootprintDiaryApp: App {
@@ -26,6 +27,7 @@ struct FootprintDiaryApp: App {
             // 모니터링이 즉시 재개되도록 초기화 시점에 시작한다.
             manager.startMonitoringIfAuthorized()
             _locationManager = StateObject(wrappedValue: manager)
+            LeeoEngagement.shared.registerLaunch()
         } catch {
             fatalError("SwiftData 컨테이너 생성 실패: \(error)")
         }
@@ -35,6 +37,7 @@ struct FootprintDiaryApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(locationManager)
+                .leeoSatisfactionCheck(FootprintDiarySpec.self)
         }
         .modelContainer(container)
     }
