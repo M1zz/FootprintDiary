@@ -13,6 +13,8 @@ struct DiaryScreen: View {
     @Query(sort: \Visit.arrivalDate, order: .reverse) private var allVisits: [Visit]
     @Query(sort: \DiaryEntry.dayStart, order: .reverse) private var entries: [DiaryEntry]
 
+    @State private var showSupport = false
+
     private var calendar: Calendar { .current }
 
     /// 발자국이 있거나 일기가 있는 날짜들 (최신순)
@@ -35,6 +37,18 @@ struct DiaryScreen: View {
             }
             .listStyle(.insetGrouped)
             .navigationTitle("일기")
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        showSupport = true
+                    } label: {
+                        Image(systemName: "gearshape")
+                    }
+                }
+            }
+            .sheet(isPresented: $showSupport) {
+                FootprintDiarySupportView()
+            }
         }
     }
 
