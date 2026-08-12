@@ -2,6 +2,18 @@
 //  PlaceNamingView.swift
 //  FootprintDiary
 //
+//  [보관] 앱을 열 때 뜨던 '새로운 발견' 카드와 장소 이름 붙이기.
+//
+//  앱이 '탐험 일지' 한 화면으로 정리되면서 쓰이지 않는다.
+//  지우지 않고 통째로 주석 처리해 둔다 — 되살리려면 아래 주석을 벗기고
+//  ContentView에서 다시 연결하면 된다. (동작하던 마지막 상태: 커밋 a0de097)
+//
+
+/*
+//
+//  PlaceNamingView.swift
+//  FootprintDiary
+//
 //  앱을 열었을 때 뜨는 '발견 카드'.
 //  예전에는 이름 입력 폼부터 보여줬지만, 그러면 앱을 여는 순간이 숙제가 된다.
 //  먼저 무엇을 발견했는지 보여주고, 이름 짓기는 그 위에 얹는다.
@@ -243,3 +255,4 @@ struct DiscoveryReviewView: View {
         return text
     }
 }
+*/

@@ -2,6 +2,18 @@
 //  SpotViews.swift
 //  FootprintDiary
 //
+//  [보관] 지도 위 사진 스팟 마커와 상세 시트, 스팟 자동 채우기.
+//
+//  앱이 '탐험 일지' 한 화면으로 정리되면서 쓰이지 않는다.
+//  지우지 않고 통째로 주석 처리해 둔다 — 되살리려면 아래 주석을 벗기고
+//  ContentView에서 다시 연결하면 된다. (동작하던 마지막 상태: 커밋 a0de097)
+//
+
+/*
+//
+//  SpotViews.swift
+//  FootprintDiary
+//
 //  지도 위의 스팟 표시와, 스팟을 눌렀을 때 뜨는 화면.
 //
 
@@ -162,3 +174,4 @@ final class SpotReplenisher: ObservableObject {
         }
     }
 }
+*/

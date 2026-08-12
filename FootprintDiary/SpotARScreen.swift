@@ -2,6 +2,18 @@
 //  SpotARScreen.swift
 //  FootprintDiary
 //
+//  [보관] RealityKit AR — 스팟 방향에 랜드마크를 세우고 안개 너머로 찾아가 촬영.
+//
+//  앱이 '탐험 일지' 한 화면으로 정리되면서 쓰이지 않는다.
+//  지우지 않고 통째로 주석 처리해 둔다 — 되살리려면 아래 주석을 벗기고
+//  ContentView에서 다시 연결하면 된다. (동작하던 마지막 상태: 커밋 a0de097)
+//
+
+/*
+//
+//  SpotARScreen.swift
+//  FootprintDiary
+//
 //  스팟을 AR로 찾아가서 사진을 찍는 화면.
 //
 //  ARKit의 지오 앵커(ARGeoTrackingConfiguration)는 한국을 비롯한 많은 나라에서
@@ -461,3 +473,4 @@ struct SpotARContainer: UIViewRepresentable {
 final class ARCaptureController: ObservableObject {}
 
 #endif
+*/

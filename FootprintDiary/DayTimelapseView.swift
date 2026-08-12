@@ -2,6 +2,18 @@
 //  DayTimelapseView.swift
 //  FootprintDiary
 //
+//  [보관] 하루 발자국 재생.
+//
+//  앱이 '탐험 일지' 한 화면으로 정리되면서 쓰이지 않는다.
+//  지우지 않고 통째로 주석 처리해 둔다 — 되살리려면 아래 주석을 벗기고
+//  ContentView에서 다시 연결하면 된다. (동작하던 마지막 상태: 커밋 a0de097)
+//
+
+/*
+//
+//  DayTimelapseView.swift
+//  FootprintDiary
+//
 //  하루의 이동을 발자국이 찍히는 순서대로 재생하는 타임랩스.
 //  발자국이 시간 순서대로 하나씩 나타나므로
 //  같은 곳을 왕복한 경로도 오간 순서와 방향이 그대로 보인다.
@@ -292,3 +304,4 @@ private struct DayTimelapsePlayerView: View {
         }
     }
 }
+*/

@@ -2,6 +2,18 @@
 //  FogMapView.swift
 //  FootprintDiary
 //
+//  [보관] 안개(fog of war) 지도 렌더링과 걸은 길 오버레이.
+//
+//  앱이 '탐험 일지' 한 화면으로 정리되면서 쓰이지 않는다.
+//  지우지 않고 통째로 주석 처리해 둔다 — 되살리려면 아래 주석을 벗기고
+//  ContentView에서 다시 연결하면 된다. (동작하던 마지막 상태: 커밋 a0de097)
+//
+
+/*
+//
+//  FogMapView.swift
+//  FootprintDiary
+//
 //  앱의 유일한 지도. 세상을 안개로 덮고, 내가 지나간 자리만 걷어낸다.
 //  그 위에 쌓인 발자국과 아직 가보지 않은 스팟을 함께 얹는다.
 //
@@ -461,3 +473,4 @@ struct FogScreen: View {
         : String(format: "%.1fkm", meters / 1_000)
     }
 }
+*/

@@ -2,12 +2,18 @@
 //  WalkDrawing.swift
 //  FootprintDiary
 //
-//  그날 걸은 궤적을 배경 없이 선으로만 그린다.
-//  선의 색은 시작에서 끝으로 흐르게 해서, 어디서 출발해 어디서 멈췄는지 읽힌다.
+//  일지에 하루 한 장씩 쌓이는 카드.
+//  그날 걸은 것 중 '처음 걷는 길'이 얼마였는지를 보여준다.
 //
 
 import SwiftUI
 import CoreLocation
+
+/*
+ [보관] 걸은 궤적을 선으로 그리던 뷰.
+ 경로를 선으로 남기는 표현은 다른 걷기 앱들이 이미 하는 것이라,
+ 카드는 '처음 걷는 길의 비율'로 바꿨다. 되살리려면 주석을 벗기고
+ WalkDayCard 안의 NoveltyGauge 자리에 넣으면 된다.
 
 struct WalkDrawing: View {
     let walk: DayWalk
@@ -71,6 +77,7 @@ struct WalkDrawing: View {
         ))
     }
 }
+*/
 
 // MARK: - 하루 카드
 
