@@ -17,9 +17,19 @@ struct FootprintDiaryApp: App {
 
     init() {
         do {
-            let container = try ModelContainer(
-                for: Visit.self, DiaryEntry.self, DiaryPhoto.self
+            // 피드백 허브용 CloudKit entitlement 때문에 SwiftData가 로컬 스토어까지
+            // 자동으로 CloudKit 동기화 대상으로 삼으려 한다. 현재 스키마는 CloudKit
+            // 요구사항(모든 속성 기본값/옵셔널, 관계의 inverse)을 만족하지 않으므로
+            // 앱 데이터 스토어는 명시적으로 CloudKit을 끈다.
+            let schema = Schema([
+                Visit.self, DiaryEntry.self, DiaryPhoto.self, PhotoSpot.self, TrackPoint.self
+            ])
+            let configuration = ModelConfiguration(
+                schema: schema,
+                isStoredInMemoryOnly: false,
+                cloudKitDatabase: .none
             )
+            let container = try ModelContainer(for: schema, configurations: configuration)
             self.container = container
             let manager = LocationManager()
             manager.modelContainer = container

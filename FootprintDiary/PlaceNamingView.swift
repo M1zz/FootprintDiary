@@ -2,25 +2,31 @@
 //  PlaceNamingView.swift
 //  FootprintDiary
 //
-//  앱을 열었을 때 아직 이름이 없는 장소들을 한꺼번에 물어보는 화면.
-//  "여기는 어디였나요?"
+//  앱을 열었을 때 뜨는 '발견 카드'.
+//  예전에는 이름 입력 폼부터 보여줬지만, 그러면 앱을 여는 순간이 숙제가 된다.
+//  먼저 무엇을 발견했는지 보여주고, 이름 짓기는 그 위에 얹는다.
 //
 
 import SwiftUI
 import SwiftData
 import MapKit
 
-struct PlaceNamingView: View {
+struct DiscoveryReviewView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
 
-    @Query(filter: #Predicate<Visit> { $0.isNamed == false }, sort: \Visit.arrivalDate)
-    private var unnamedVisits: [Visit]
+    /// 아직 확인하지 않은 발자국. 새로 발견한 자리(발견 번호가 큰 쪽)를 먼저 보여준다.
+    @Query(
+        filter: #Predicate<Visit> { $0.isNamed == false },
+        sort: \Visit.discoveryIndex,
+        order: .reverse
+    )
+    private var pendingVisits: [Visit]
 
     @State private var name: String = ""
-    @FocusState private var nameFieldFocused: Bool
+    @State private var namedCount = 0
 
-    private var current: Visit? { unnamedVisits.first }
+    private var current: Visit? { pendingVisits.first }
 
     /// 최근에 사용한 장소 이름 제안
     @Query(sort: \Visit.arrivalDate, order: .reverse)
@@ -35,77 +41,25 @@ struct PlaceNamingView: View {
             .map { $0 }
     }
 
+    private var discoveryCount: Int {
+        pendingVisits.filter(\.isFirstVisit).count
+    }
+
     var body: some View {
         NavigationStack {
             if let visit = current {
-                VStack(spacing: 16) {
-                    // 진행 상황
-                    if unnamedVisits.count > 1 {
-                        Text("남은 장소 \(unnamedVisits.count)곳")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
+                ScrollView {
+                    VStack(spacing: 16) {
+                        headline(for: visit)
+                        miniMap(for: visit)
+                        detail(for: visit)
+                        nameField
+                        if !suggestions.isEmpty { suggestionChips }
+                        actions(for: visit)
                     }
-
-                    // 미니 지도
-                    Map(initialPosition: .region(MKCoordinateRegion(
-                        center: visit.coordinate,
-                        span: MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008)
-                    ))) {
-                        Annotation("", coordinate: visit.coordinate) {
-                            Text("👣").font(.title)
-                        }
-                    }
-                    .frame(height: 220)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
-                    .allowsHitTesting(false)
-                    .id(visit.persistentModelID)
-
-                    VStack(spacing: 4) {
-                        Text("여기는 어디였나요?")
-                            .font(.title2.bold())
-                        Text(visitDescription(visit))
-                            .font(.subheadline)
-                            .foregroundStyle(.secondary)
-                            .multilineTextAlignment(.center)
-                    }
-
-                    TextField("예: 집, 회사, 단골 카페", text: $name)
-                        .textFieldStyle(.roundedBorder)
-                        .focused($nameFieldFocused)
-                        .submitLabel(.done)
-                        .onSubmit { saveCurrent() }
-
-                    // 최근 이름 제안 칩
-                    if !suggestions.isEmpty {
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack {
-                                ForEach(suggestions, id: \.self) { suggestion in
-                                    Button(suggestion) {
-                                        name = suggestion
-                                        saveCurrent()
-                                    }
-                                    .buttonStyle(.bordered)
-                                    .buttonBorderShape(.capsule)
-                                }
-                            }
-                        }
-                    }
-
-                    HStack {
-                        Button("건너뛰기") { skipCurrent(visit) }
-                            .buttonStyle(.bordered)
-                            .frame(maxWidth: .infinity)
-
-                        Button("저장") { saveCurrent() }
-                            .buttonStyle(.borderedProminent)
-                            .frame(maxWidth: .infinity)
-                            .disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-                    }
-
-                    Spacer()
+                    .padding()
                 }
-                .padding()
-                .navigationTitle("장소 확인")
+                .navigationTitle(visit.isFirstVisit ? "새로운 발견" : "장소 확인")
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
@@ -113,18 +67,141 @@ struct PlaceNamingView: View {
                     }
                 }
             } else {
-                // 모두 답하면 자동으로 닫힘
-                VStack(spacing: 12) {
-                    Image(systemName: "checkmark.circle.fill")
-                        .font(.system(size: 48))
-                        .foregroundStyle(.green)
-                    Text("모든 장소를 확인했어요!")
-                        .font(.headline)
+                completionCard
+            }
+        }
+    }
+
+    // MARK: - 하위 뷰
+
+    /// 보상이 먼저 온다 — 몇 번째 발견인지, 몇 군데가 남았는지
+    @ViewBuilder
+    private func headline(for visit: Visit) -> some View {
+        VStack(spacing: 10) {
+            if visit.isFirstVisit {
+                ZStack {
+                    Circle()
+                        .fill(
+                            RadialGradient(
+                                colors: [.yellow.opacity(0.55), .yellow.opacity(0)],
+                                center: .center,
+                                startRadius: 4,
+                                endRadius: 52
+                            )
+                        )
+                        .frame(width: 104, height: 104)
+                    Text("👣")
+                        .font(.system(size: 46))
                 }
-                .onAppear {
-                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { dismiss() }
+                Text("\(visit.discoveryIndex)번째 발견")
+                    .font(.title2.bold())
+                    .foregroundStyle(.orange)
+                Text("처음 밟아 본 자리예요")
+                    .font(.subheadline)
+                    .foregroundStyle(.secondary)
+            } else {
+                Text("👣").font(.system(size: 40))
+                Text("다시 찾은 자리")
+                    .font(.title3.bold())
+            }
+
+            if discoveryCount > 1 || pendingVisits.count > 1 {
+                Text(remainingText)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+        }
+    }
+
+    private var remainingText: String {
+        if discoveryCount > 1 {
+            return "새로 발견한 곳 \(discoveryCount)군데 · 확인할 곳 \(pendingVisits.count)곳"
+        }
+        return "확인할 곳 \(pendingVisits.count)곳"
+    }
+
+    private func miniMap(for visit: Visit) -> some View {
+        Map(initialPosition: .region(MKCoordinateRegion(
+            center: visit.coordinate,
+            span: MKCoordinateSpan(latitudeDelta: 0.008, longitudeDelta: 0.008)
+        ))) {
+            Annotation("", coordinate: visit.coordinate) {
+                FootprintMarker(number: max(visit.discoveryIndex, 1), isDiscovery: visit.isFirstVisit)
+            }
+        }
+        .frame(height: 200)
+        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .overlay(
+            RoundedRectangle(cornerRadius: 16)
+                .strokeBorder(
+                    visit.isFirstVisit ? Color.yellow.opacity(0.7) : Color.clear,
+                    lineWidth: 2
+                )
+        )
+        .allowsHitTesting(false)
+        .id(visit.persistentModelID)
+    }
+
+    private func detail(for visit: Visit) -> some View {
+        VStack(spacing: 4) {
+            Text("여기는 어디였나요?")
+                .font(.headline)
+            Text(visitDescription(visit))
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.center)
+        }
+    }
+
+    private var nameField: some View {
+        TextField("예: 집, 회사, 단골 카페", text: $name)
+            .textFieldStyle(.roundedBorder)
+            .submitLabel(.done)
+            .onSubmit { saveCurrent() }
+    }
+
+    private var suggestionChips: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack {
+                ForEach(suggestions, id: \.self) { suggestion in
+                    Button(suggestion) {
+                        name = suggestion
+                        saveCurrent()
+                    }
+                    .buttonStyle(.bordered)
+                    .buttonBorderShape(.capsule)
                 }
             }
+        }
+    }
+
+    private func actions(for visit: Visit) -> some View {
+        HStack {
+            Button("건너뛰기") { skipCurrent(visit) }
+                .buttonStyle(.bordered)
+                .frame(maxWidth: .infinity)
+
+            Button("이름 붙이기") { saveCurrent() }
+                .buttonStyle(.borderedProminent)
+                .frame(maxWidth: .infinity)
+                .disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+        }
+    }
+
+    /// 다 확인했을 때 — 무엇을 모았는지 한 번 더 보여주고 닫는다
+    private var completionCard: some View {
+        VStack(spacing: 12) {
+            Image(systemName: "checkmark.seal.fill")
+                .font(.system(size: 52))
+                .foregroundStyle(.green)
+            Text(namedCount > 0 ? "\(namedCount)곳에 이름을 붙였어요" : "모든 장소를 확인했어요!")
+                .font(.headline)
+            Text("도감에서 지금까지 모은 발자국을 볼 수 있어요")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+        }
+        .onAppear {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) { dismiss() }
         }
     }
 
@@ -136,9 +213,10 @@ struct PlaceNamingView: View {
         guard !trimmed.isEmpty else { return }
         visit.placeName = trimmed
         visit.isNamed = true
+        namedCount += 1
 
         // 같은 자리로 추정되는 다른 미확인 발자국에도 같은 이름 적용
-        for other in unnamedVisits where other !== visit {
+        for other in pendingVisits where other !== visit {
             if other.distance(latitude: visit.latitude, longitude: visit.longitude) < LocationManager.sameSpotThreshold {
                 other.placeName = trimmed
                 other.isNamed = true

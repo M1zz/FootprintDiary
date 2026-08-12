@@ -17,8 +17,6 @@
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		A10000000000000000000001 /* FootprintDiary */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = FootprintDiary;
 			sourceTree = "<group>";
 		};
@@ -104,7 +102,7 @@
 			mainGroup = A10000000000000000000003;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				5A1AFE1A3B552C8A530994CA /* XCLocalSwiftPackageReference "LeeoKit" */,
+				22D37F8F469684CA515A2E5C /* XCRemoteSwiftPackageReference "LeeoKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = A10000000000000000000004 /* Products */;
@@ -266,7 +264,9 @@
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "발자국일기";
+				INFOPLIST_KEY_NSCameraUsageDescription = "스팟에 도착했을 때 그 자리에서 사진을 남기기 위해 카메라를 사용합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "장소를 옮길 때마다 발자국을 자동으로 기록하려면 '항상 허용' 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 지도에 발자국으로 기록하기 위해 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "걷기·뛰기로 이동했는지 확인해 차량 이동은 기록하지 않기 위해 동작 데이터를 사용합니다.";
@@ -301,7 +301,9 @@
 				DEVELOPMENT_TEAM = QGAQ3AY3R3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "발자국일기";
+				INFOPLIST_KEY_NSCameraUsageDescription = "스팟에 도착했을 때 그 자리에서 사진을 남기기 위해 카메라를 사용합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "장소를 옮길 때마다 발자국을 자동으로 기록하려면 '항상 허용' 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 지도에 발자국으로 기록하기 위해 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "걷기·뛰기로 이동했는지 확인해 차량 이동은 기록하지 않기 위해 동작 데이터를 사용합니다.";
@@ -348,17 +350,21 @@
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCLocalSwiftPackageReference section */
-		5A1AFE1A3B552C8A530994CA /* XCLocalSwiftPackageReference "LeeoKit" */ = {
-			isa = XCLocalSwiftPackageReference;
-			relativePath = ../LeeoKit;
+/* Begin XCRemoteSwiftPackageReference section */
+		22D37F8F469684CA515A2E5C /* XCRemoteSwiftPackageReference "LeeoKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/M1zz/LeeoKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.6.0;
+			};
 		};
-/* End XCLocalSwiftPackageReference section */
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
 		BBA4968938A8F667BEBB35DA /* LeeoKit */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 5A1AFE1A3B552C8A530994CA /* XCLocalSwiftPackageReference "LeeoKit" */;
+			package = 22D37F8F469684CA515A2E5C /* XCRemoteSwiftPackageReference "LeeoKit" */;
 			productName = LeeoKit;
 		};
 /* End XCSwiftPackageProductDependency section */

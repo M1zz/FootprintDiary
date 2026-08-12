@@ -9,34 +9,68 @@ import SwiftUI
 import SwiftData
 import PhotosUI
 
-struct DiaryScreen: View {
-    @Query(sort: \Visit.arrivalDate, order: .reverse) private var allVisits: [Visit]
-    @Query(sort: \DiaryEntry.dayStart, order: .reverse) private var entries: [DiaryEntry]
+/// 카드에 필요한 계산을 한 번만 해서 들고 있는 상자.
+/// 걸음이 쌓일수록 무거워지므로 본문에서 매번 하지 않고 백그라운드에서 만든다.
+@MainActor
+final class DiaryFeedState: ObservableObject {
+    @Published private(set) var entries: [DayEntry] = []
+    private var signature: Int?
 
+    func rebuild(track: [TrackPoint], calendar: Calendar) {
+        guard signature != track.count else { return }
+        signature = track.count
+
+        let points = DayWalk.values(of: track)
+        Task.detached(priority: .userInitiated) {
+            let walks = DayWalk.build(from: points, calendar: calendar)
+            let novelty = WalkNovelty.newDistances(for: walks)
+            let built = walks.map { DayEntry(walk: $0, newDistance: novelty[$0.day] ?? 0) }
+            await MainActor.run { self.entries = built }
+        }
+    }
+}
+
+struct DiaryScreen: View {
+    @Query(sort: \DiaryEntry.dayStart, order: .reverse) private var diaryEntries: [DiaryEntry]
+    @Query(sort: \TrackPoint.timestamp) private var track: [TrackPoint]
+
+    @StateObject private var feed = DiaryFeedState()
     @State private var showSupport = false
 
     private var calendar: Calendar { .current }
 
-    /// 발자국이 있거나 일기가 있는 날짜들 (최신순)
-    private var days: [Date] {
-        var set = Set<Date>()
-        for visit in allVisits { set.insert(calendar.startOfDay(for: visit.arrivalDate)) }
-        for entry in entries { set.insert(calendar.startOfDay(for: entry.dayStart)) }
-        set.insert(calendar.startOfDay(for: .now))
-        return set.sorted(by: >)
+    /// 걸음이 남은 날들 (최신순). 오늘은 걷지 않았어도 늘 맨 위에 둔다.
+    private var days: [DayEntry] {
+        var built = feed.entries
+        let today = calendar.startOfDay(for: .now)
+        if !built.contains(where: { calendar.isDate($0.walk.day, inSameDayAs: today) }) {
+            built.insert(DayEntry(walk: .empty(on: today), newDistance: 0), at: 0)
+        }
+        return built
     }
 
     var body: some View {
         NavigationStack {
-            List(days, id: \.self) { day in
-                NavigationLink {
-                    DiaryDayView(day: day)
-                } label: {
-                    dayRow(day)
+            ScrollView {
+                LazyVStack(spacing: 16) {
+                    ForEach(days) { entry in
+                        NavigationLink {
+                            DiaryDayView(day: entry.walk.day)
+                        } label: {
+                            WalkDayCard(
+                                entry: entry,
+                                title: dayTitle(entry.walk.day),
+                                note: note(for: entry.walk.day),
+                                photo: photo(for: entry.walk.day)
+                            )
+                        }
+                        .buttonStyle(.plain)
+                    }
                 }
+                .padding()
             }
-            .listStyle(.insetGrouped)
-            .navigationTitle("일기")
+            .background(Color(.systemGroupedBackground))
+            .navigationTitle("탐험 일지")
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -49,54 +83,26 @@ struct DiaryScreen: View {
             .sheet(isPresented: $showSupport) {
                 FootprintDiarySupportView()
             }
+            .onAppear { feed.rebuild(track: track, calendar: calendar) }
+            .onChange(of: track.count) { feed.rebuild(track: track, calendar: calendar) }
         }
     }
 
-    @ViewBuilder
-    private func dayRow(_ day: Date) -> some View {
-        let entry = entries.first { calendar.isDate($0.dayStart, inSameDayAs: day) }
-        let visitCount = allVisits.filter { calendar.isDate($0.arrivalDate, inSameDayAs: day) }.count
-        let firstPhoto = entry?.photos.sorted(by: { $0.createdAt < $1.createdAt }).first
+    private func entry(for day: Date) -> DiaryEntry? {
+        diaryEntries.first { calendar.isDate($0.dayStart, inSameDayAs: day) }
+    }
 
-        HStack(spacing: 12) {
-            VStack(alignment: .leading, spacing: 4) {
-                HStack {
-                    Text(dayTitle(day))
-                        .font(.headline)
-                    Spacer()
-                    if visitCount > 0 {
-                        Label("\(visitCount)", systemImage: "shoeprints.fill")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                    if let entry, !entry.photos.isEmpty {
-                        Label("\(entry.photos.count)", systemImage: "photo")
-                            .font(.caption)
-                            .foregroundStyle(.secondary)
-                    }
-                }
-                if let entry, !entry.text.isEmpty {
-                    Text(entry.text)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(2)
-                } else {
-                    Text("아직 일기가 없어요")
-                        .font(.subheadline)
-                        .foregroundStyle(.tertiary)
-                }
-            }
+    private func note(for day: Date) -> String {
+        entry(for: day)?.text ?? ""
+    }
 
-            // 사진이 있으면 첫 사진을 썸네일로 미리 보여준다
-            if let firstPhoto, let uiImage = UIImage(data: firstPhoto.data) {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 56, height: 56)
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
-            }
-        }
-        .padding(.vertical, 2)
+    private func photo(for day: Date) -> UIImage? {
+        guard let data = entry(for: day)?
+            .photos
+            .sorted(by: { $0.createdAt < $1.createdAt })
+            .first?
+            .data else { return nil }
+        return UIImage(data: data)
     }
 
     private func dayTitle(_ day: Date) -> String {
@@ -137,7 +143,7 @@ struct DiaryDayView: View {
         Form {
             // 그날의 발자국 요약
             if !dayVisits.isEmpty {
-                Section("오늘의 발자국") {
+                Section("걸어서 닿은 곳") {
                     ForEach(Array(dayVisits.enumerated()), id: \.element.persistentModelID) { index, visit in
                         HStack(spacing: 10) {
                             Text("\(index + 1)")
@@ -154,12 +160,12 @@ struct DiaryDayView: View {
                 }
             }
 
-            Section("일기") {
+            Section("오늘의 탐험") {
                 TextEditor(text: $text)
                     .frame(minHeight: 160)
                     .overlay(alignment: .topLeading) {
                         if text.isEmpty {
-                            Text("오늘 하루는 어땠나요?")
+                            Text("오늘은 어디를 탐험했나요?")
                                 .foregroundStyle(.tertiary)
                                 .padding(.top, 8)
                                 .padding(.leading, 4)
@@ -269,7 +275,7 @@ struct DiaryDayView: View {
             if let data = try? await item.loadTransferable(type: Data.self) {
                 // 원본(수 MB~수십 MB)을 그대로 저장하지 않고 화면 표시에 충분한 크기로 줄인다
                 let stored = await Task.detached(priority: .userInitiated) {
-                    Self.downscaledJPEG(from: data) ?? data
+                    PhotoStore.downscaledJPEG(from: data) ?? data
                 }.value
                 entry.photos.append(DiaryPhoto(data: stored))
             }
@@ -277,21 +283,6 @@ struct DiaryDayView: View {
         entry.updatedAt = .now
         try? modelContext.save()
         selectedPhotos = []
-    }
-
-    /// 긴 변이 maxDimension을 넘는 사진을 JPEG으로 줄여 저장 용량과 디코딩 비용을 낮춘다
-    private static func downscaledJPEG(from data: Data, maxDimension: CGFloat = 1600) -> Data? {
-        guard let image = UIImage(data: data) else { return nil }
-        let longSide = max(image.size.width, image.size.height)
-        guard longSide > maxDimension else { return data }
-        let scale = maxDimension / longSide
-        let newSize = CGSize(width: image.size.width * scale, height: image.size.height * scale)
-        let format = UIGraphicsImageRendererFormat()
-        format.scale = 1
-        let resized = UIGraphicsImageRenderer(size: newSize, format: format).image { _ in
-            image.draw(in: CGRect(origin: .zero, size: newSize))
-        }
-        return resized.jpegData(compressionQuality: 0.85)
     }
 
     private func deletePhoto(_ photo: DiaryPhoto) {

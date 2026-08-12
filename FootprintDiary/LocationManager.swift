@@ -42,6 +42,15 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     }
 
     private static let trackingEnabledKey = "footprint.isTrackingEnabled"
+    private static let discoveryBackfillKey = "footprint.discoveryBackfillDone"
+
+    /// 역지오코딩 대기열 (CLGeocoder는 한 번에 한 건만 처리한다)
+    private var geocodeQueue: [Visit] = []
+    private var isProcessingGeocode = false
+
+    /// 지금 위치를 계속 받고 있는 이유들
+    private var updateReasons: Set<UpdateReason> = []
+    private var isDetectingActivity = false
 
     /// 권한 요청 응답을 기다렸다가 수동 기록을 이어서 진행하기 위한 플래그
     private var pendingManualRecord = false
@@ -69,6 +78,9 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     static let repeatSuppressionRadius: CLLocationDistance = 500
     /// 도착 직전 이 시간(초) 동안의 모션 활동으로 이동 수단을 판별한다.
     static let arrivalLookback: TimeInterval = 20 * 60
+    /// 이 거리(m) 밖이면 '처음 밟은 자리'로 보고 새 발견으로 센다.
+    /// GPS 오차로 같은 자리가 새 발견이 되지 않도록 넉넉히 잡는다.
+    static let discoveryRadius: CLLocationDistance = 300
 
     override init() {
         // 저장된 설정이 없으면 기본값은 켜짐(기존 동작 유지).
@@ -80,6 +92,146 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         manager.pausesLocationUpdatesAutomatically = true
+    }
+
+    /// 시스템이 들고 있는 최근 위치. 지도를 처음 열 때 화면을 어디에 맞출지 정하는 데 쓴다.
+    var currentLocation: CLLocation? {
+        manager.location ?? lastKnownLocation
+    }
+
+    /// 스팟을 찾아가는 동안에만 위치를 계속 받는다. (AR 화면에서 거리·방향을 갱신하려면 필요)
+    /// 배터리를 쓰므로 화면을 닫으면 반드시 stopLiveUpdates()로 되돌린다.
+    func startLiveUpdates() {
+        addUpdateReason(.guiding)
+    }
+
+    func stopLiveUpdates() {
+        removeUpdateReason(.guiding)
+    }
+
+    // MARK: - 걷기 감지와 경로 기록
+
+    /// 위치를 계속 받아야 하는 이유들. 하나라도 남아 있으면 켜 둔다.
+    private enum UpdateReason: Hashable {
+        case walking   // 걷는 중 — 경로를 남긴다
+        case guiding   // AR로 스팟을 찾아가는 중
+    }
+
+    /// 이 속도(m/s)를 넘으면 걷기·뛰기로 보지 않는다 (약 21km/h)
+    static let maxWalkingSpeed: CLLocationDistance = 6
+
+    /// Info.plist에 백그라운드 위치 모드가 선언돼 있는지
+    static let hasBackgroundLocationMode: Bool = {
+        let modes = Bundle.main.object(forInfoDictionaryKey: "UIBackgroundModes") as? [String]
+        return modes?.contains("location") ?? false
+    }()
+    /// 경로 점 사이의 최소 간격(m)
+    static let trackPointSpacing: CLLocationDistance = 12
+
+    /// 걷는 동안에만 경로를 남긴다. 모션 판정으로 걷기가 시작되면 켜고, 멈추거나 차를 타면 끈다.
+    func startWalkDetection() {
+        guard CMMotionActivityManager.isActivityAvailable() else {
+            // 모션을 쓸 수 없는 기기·권한이면 기록 자체가 멈춰 버린다.
+            // 그럴 때는 위치를 받되 걷기 속도를 넘는 점을 버리는 것으로 규칙을 지킨다.
+            addUpdateReason(.walking)
+            return
+        }
+        guard !isDetectingActivity else { return }
+        isDetectingActivity = true
+        activityManager.startActivityUpdates(to: .main) { [weak self] activity in
+            guard let self, let activity, activity.confidence != .low else { return }
+            if activity.walking || activity.running {
+                self.addUpdateReason(.walking)
+            } else if activity.stationary || activity.automotive || activity.cycling {
+                self.removeUpdateReason(.walking)
+            }
+        }
+    }
+
+    func stopWalkDetection() {
+        guard isDetectingActivity else { return }
+        isDetectingActivity = false
+        activityManager.stopActivityUpdates()
+        removeUpdateReason(.walking)
+    }
+
+    private func addUpdateReason(_ reason: UpdateReason) {
+        let status = manager.authorizationStatus
+        guard status == .authorizedAlways || status == .authorizedWhenInUse else { return }
+        guard updateReasons.insert(reason).inserted else { return }
+        applyUpdateReasons()
+    }
+
+    private func removeUpdateReason(_ reason: UpdateReason) {
+        guard updateReasons.remove(reason) != nil else { return }
+        applyUpdateReasons()
+    }
+
+    private func applyUpdateReasons() {
+        guard !updateReasons.isEmpty else {
+            manager.stopUpdatingLocation()
+            manager.allowsBackgroundLocationUpdates = false
+            manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
+            manager.distanceFilter = kCLDistanceFilterNone
+            return
+        }
+
+        if updateReasons.contains(.guiding) {
+            // 방향을 알려 줘야 하므로 가장 정확하게
+            manager.desiredAccuracy = kCLLocationAccuracyBest
+            manager.distanceFilter = kCLDistanceFilterNone
+        } else {
+            // 경로를 그릴 정도면 충분하다 — 배터리를 아낀다
+            manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+            manager.distanceFilter = Self.trackPointSpacing
+        }
+        manager.activityType = .fitness
+        // 걸음이 멈추면 iOS가 알아서 잠시 꺼 준다
+        manager.pausesLocationUpdatesAutomatically = true
+        // 백그라운드 위치 모드가 없는데 이 값을 켜면 앱이 그 자리에서 죽는다.
+        // 설정이 빠졌을 때 크래시 대신 '앱이 떠 있을 때만 기록'으로 물러난다.
+        if Self.hasBackgroundLocationMode, manager.authorizationStatus == .authorizedAlways {
+            manager.allowsBackgroundLocationUpdates = true
+        }
+        manager.startUpdatingLocation()
+    }
+
+    /// 걷는 동안 들어온 위치를 경로로 남긴다.
+    /// 정확도가 나쁘거나 차량 속도인 점은 버려서 '걸어야만 기록된다'는 규칙을 지킨다.
+    @MainActor
+    private func appendTrackPoint(_ location: CLLocation) {
+        guard updateReasons.contains(.walking) else { return }
+        guard let modelContainer else { return }
+        guard location.horizontalAccuracy > 0, location.horizontalAccuracy <= 50 else { return }
+        guard abs(location.timestamp.timeIntervalSinceNow) < 60 else { return }
+        if location.speed >= 0, location.speed > Self.maxWalkingSpeed { return }
+
+        let context = modelContainer.mainContext
+        var descriptor = FetchDescriptor<TrackPoint>(
+            sortBy: [SortDescriptor(\.timestamp, order: .reverse)]
+        )
+        descriptor.fetchLimit = 1
+        if let last = (try? context.fetch(descriptor))?.first {
+            let previous = CLLocation(latitude: last.latitude, longitude: last.longitude)
+            guard previous.distance(from: location) >= Self.trackPointSpacing else { return }
+        }
+
+        context.insert(TrackPoint(
+            timestamp: location.timestamp,
+            latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude,
+            speed: location.speed
+        ))
+        try? context.save()
+    }
+
+    /// 현재 위치를 한 번만 받아 온다. (발자국을 남기지 않고 지도 화면을 맞추는 용도)
+    /// 앱이 막 켜진 직후에는 시스템이 들고 있는 위치가 비어 있을 수 있다.
+    func refreshCurrentLocation() {
+        let status = manager.authorizationStatus
+        guard status == .authorizedAlways || status == .authorizedWhenInUse else { return }
+        guard !isRecordingManually else { return }
+        manager.requestLocation()
     }
 
     // MARK: - 권한
@@ -102,6 +254,9 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         // 사용자가 추적을 꺼 두었으면 백그라운드 깨어남에도 다시 시작하지 않는다.
         guard isTrackingEnabled else { return }
         guard status == .authorizedAlways || status == .authorizedWhenInUse else { return }
+        // 걷기가 시작되면 경로를 남기기 시작한다 (이 앱의 기록은 걷기에서 나온다)
+        startWalkDetection()
+        // 앱이 꺼져 있어도 다시 깨워 주는 장치. 걸어서 도착한 자리를 '장소'로 남긴다.
         manager.startMonitoringVisits()
         // 과거 버전이 켜 둔 큰 위치 변화 감지를 끈다.
         // 운전 중에도 셀 타워가 바뀔 때마다 앱을 깨워 배터리를 소모하는데,
@@ -111,6 +266,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
 
     /// 자동 위치 추적을 멈춘다. (수동 + 기록은 계속 사용할 수 있다)
     func stopMonitoring() {
+        stopWalkDetection()
         manager.stopMonitoringVisits()
         manager.stopMonitoringSignificantLocationChanges()
     }
@@ -176,6 +332,10 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         Task { @MainActor in
             self.lastKnownLocation = location
             self.isRecordingManually = false
+            // 걷는 중이면 지나온 점들을 모두 경로로 남긴다
+            for point in locations {
+                self.appendTrackPoint(point)
+            }
             if wasManual {
                 // 사용자가 직접 + 버튼을 눌렀을 때는 이동 수단을 따지지 않는다.
                 self.saveVisit(
@@ -288,34 +448,160 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
             visit.isNamed = true
         }
 
+        // 처음 밟은 자리면 발견 번호를 붙인다 (수집의 단위)
+        if Self.isNewGround(latitude: latitude, longitude: longitude, in: context) {
+            visit.isFirstVisit = true
+            visit.discoveryIndex = Self.nextDiscoveryIndex(in: context)
+        }
+
         context.insert(visit)
         try? context.save()
 
-        // 주소는 참고용으로 비동기 채움 — 근처 장소에서 재사용했으면 네트워크 요청을 생략
-        if visit.address?.isEmpty != false {
+        // 주소·행정구역은 참고용으로 비동기 채움.
+        // 이름을 물려받았더라도 행정구역이 없으면 도감 집계를 위해 조회한다.
+        if visit.address?.isEmpty != false || visit.needsRegionLookup {
             reverseGeocode(visit: visit)
         }
     }
 
+    // MARK: - 발견 판정
+
+    /// 이 좌표가 기존 어떤 발자국과도 discoveryRadius 밖인지.
+    /// 전체를 훑지 않도록 위경도 사각형으로 먼저 좁힌 뒤 실제 거리를 잰다.
+    @MainActor
+    static func isNewGround(latitude: Double, longitude: Double, in context: ModelContext) -> Bool {
+        let latDelta = discoveryRadius / 111_320
+        // 고위도에서 경도 간격이 좁아지는 것을 보정한다 (극지방에서 0으로 나누지 않도록 하한을 둔다)
+        let lonDelta = discoveryRadius / (111_320 * max(cos(latitude * .pi / 180), 0.01))
+        let minLat = latitude - latDelta, maxLat = latitude + latDelta
+        let minLon = longitude - lonDelta, maxLon = longitude + lonDelta
+
+        let descriptor = FetchDescriptor<Visit>(
+            predicate: #Predicate<Visit> {
+                $0.latitude >= minLat && $0.latitude <= maxLat
+                && $0.longitude >= minLon && $0.longitude <= maxLon
+            }
+        )
+        let nearby = (try? context.fetch(descriptor)) ?? []
+        return !nearby.contains {
+            $0.distance(latitude: latitude, longitude: longitude) < discoveryRadius
+        }
+    }
+
+    /// 다음 발견 번호 (기존 최댓값 + 1)
+    @MainActor
+    static func nextDiscoveryIndex(in context: ModelContext) -> Int {
+        var descriptor = FetchDescriptor<Visit>(
+            sortBy: [SortDescriptor(\.discoveryIndex, order: .reverse)]
+        )
+        descriptor.fetchLimit = 1
+        let highest = (try? context.fetch(descriptor))?.first?.discoveryIndex ?? 0
+        return highest + 1
+    }
+
+    /// CLGeocoder는 동시 요청을 지원하지 않는다. 요청을 버리지 않고 한 건씩 차례로 처리한다.
     @MainActor
     private func reverseGeocode(visit: Visit) {
-        // CLGeocoder는 동시 요청을 지원하지 않아 겹치면 요청만 낭비된다.
-        guard !geocoder.isGeocoding else { return }
+        guard !geocodeQueue.contains(where: { $0.persistentModelID == visit.persistentModelID }) else { return }
+        geocodeQueue.append(visit)
+        processGeocodeQueue()
+    }
+
+    @MainActor
+    private func processGeocodeQueue() {
+        guard !isProcessingGeocode, !geocodeQueue.isEmpty else { return }
+        isProcessingGeocode = true
+        let visit = geocodeQueue.removeFirst()
+        Task { @MainActor in
+            await lookUpPlacemark(for: visit)
+            // 애플 지오코더 호출 제한에 걸리지 않도록 간격을 둔다
+            try? await Task.sleep(nanoseconds: 1_200_000_000)
+            isProcessingGeocode = false
+            processGeocodeQueue()
+        }
+    }
+
+    @MainActor
+    private func lookUpPlacemark(for visit: Visit) async {
+        // 큐에 있는 동안 삭제됐을 수 있다
+        guard visit.modelContext != nil else { return }
         let location = CLLocation(latitude: visit.latitude, longitude: visit.longitude)
-        geocoder.reverseGeocodeLocation(location) { placemarks, _ in
-            guard let placemark = placemarks?.first else { return }
-            let parts = [
-                placemark.locality,
-                placemark.subLocality,
-                placemark.thoroughfare,
-                placemark.name
-            ].compactMap { $0 }
-            var seen = Set<String>()
-            let address = parts.filter { seen.insert($0).inserted }.joined(separator: " ")
-            Task { @MainActor in
-                visit.address = address
-                try? visit.modelContext?.save()
+        guard let placemark = try? await geocoder.reverseGeocodeLocation(location).first else { return }
+        guard visit.modelContext != nil else { return }
+
+        let parts = [
+            placemark.locality,
+            placemark.subLocality,
+            placemark.thoroughfare,
+            placemark.name
+        ].compactMap { $0 }
+        var seen = Set<String>()
+        let address = parts.filter { seen.insert($0).inserted }.joined(separator: " ")
+        if !address.isEmpty { visit.address = address }
+
+        // 도감 집계에 쓰는 행정구역
+        visit.administrativeArea = placemark.administrativeArea
+        visit.subAdministrativeArea = placemark.subAdministrativeArea
+        visit.locality = placemark.locality
+        visit.subLocality = placemark.subLocality
+        visit.country = placemark.country
+        visit.isoCountryCode = placemark.isoCountryCode
+
+        try? visit.modelContext?.save()
+    }
+
+    // MARK: - 기존 기록 보정
+
+    /// 도감·발견 기능이 생기기 전에 쌓인 발자국에 발견 번호를 채워 넣는다. (앱당 1회)
+    @MainActor
+    func backfillDiscoveriesIfNeeded() {
+        guard !UserDefaults.standard.bool(forKey: Self.discoveryBackfillKey) else { return }
+        guard let modelContainer else { return }
+        let context = modelContainer.mainContext
+        let all = (try? context.fetch(
+            FetchDescriptor<Visit>(sortBy: [SortDescriptor(\.arrivalDate)])
+        )) ?? []
+
+        let radius = Self.discoveryRadius
+        let step = SpatialGrid.step(meters: radius)
+        var anchors: [CLLocation] = []
+        var index: [GridCell: [Int]] = [:]
+        var discovered = 0
+
+        for visit in all {
+            let location = CLLocation(latitude: visit.latitude, longitude: visit.longitude)
+            let candidates = SpatialGrid
+                .neighbors(latitude: visit.latitude, longitude: visit.longitude, step: step, meters: radius)
+                .flatMap { index[$0] ?? [] }
+            let isNewGround = !candidates.contains { anchors[$0].distance(from: location) < radius }
+
+            if isNewGround {
+                discovered += 1
+                visit.isFirstVisit = true
+                visit.discoveryIndex = discovered
+                anchors.append(location)
+                let cell = SpatialGrid.cell(latitude: visit.latitude, longitude: visit.longitude, step: step)
+                index[cell, default: []].append(anchors.count - 1)
+            } else if visit.discoveryIndex != 0 || visit.isFirstVisit {
+                visit.isFirstVisit = false
+                visit.discoveryIndex = 0
             }
+        }
+
+        try? context.save()
+        UserDefaults.standard.set(true, forKey: Self.discoveryBackfillKey)
+    }
+
+    /// 행정구역이 비어 있는 기록을 조금씩 채운다. (지오코더 제한 때문에 한 번에 조금씩)
+    @MainActor
+    func backfillRegions(limit: Int = 25) {
+        guard let modelContainer else { return }
+        let context = modelContainer.mainContext
+        var descriptor = FetchDescriptor<Visit>(sortBy: [SortDescriptor(\.arrivalDate, order: .reverse)])
+        descriptor.fetchLimit = 500
+        let visits = (try? context.fetch(descriptor)) ?? []
+        for visit in visits.filter({ $0.needsRegionLookup }).prefix(limit) {
+            reverseGeocode(visit: visit)
         }
     }
 }

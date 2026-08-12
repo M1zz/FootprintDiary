@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<!-- 걷는 동안에는 앱이 뒤로 가 있어도 경로를 계속 남겨야 한다.
+	     나머지 키는 빌드 설정(INFOPLIST_KEY_*)에서 생성되어 여기에 합쳐진다. -->
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>location</string>
+	</array>
+</dict>
+</plist>

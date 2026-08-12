@@ -23,6 +23,27 @@ final class Visit {
     /// 사용자에게 "여기는 어디였나요?"를 이미 물어봤는지 여부
     var isNamed: Bool
 
+    // MARK: 발견 (수집 요소)
+    // 기존 저장소와의 호환을 위해 모두 기본값을 가진다 (경량 마이그레이션).
+
+    /// 기존 어떤 발자국과도 떨어진 '처음 밟은 자리'인지
+    var isFirstVisit: Bool = false
+    /// 몇 번째 발견인지 (첫 방문에만 1부터 부여, 재방문은 0)
+    var discoveryIndex: Int = 0
+
+    // MARK: 행정구역 (도감 집계용)
+
+    /// 시·도 (예: 서울특별시, 경기도)
+    var administrativeArea: String?
+    /// 시·군 (예: 성남시) — 광역시에서는 비어 있을 수 있다
+    var subAdministrativeArea: String?
+    /// 시·군·구 (예: 강남구)
+    var locality: String?
+    /// 읍·면·동 (예: 역삼동)
+    var subLocality: String?
+    var country: String?
+    var isoCountryCode: String?
+
     init(
         arrivalDate: Date,
         departureDate: Date? = nil,
@@ -30,7 +51,9 @@ final class Visit {
         longitude: Double,
         placeName: String? = nil,
         address: String? = nil,
-        isNamed: Bool = false
+        isNamed: Bool = false,
+        isFirstVisit: Bool = false,
+        discoveryIndex: Int = 0
     ) {
         self.arrivalDate = arrivalDate
         self.departureDate = departureDate
@@ -39,6 +62,32 @@ final class Visit {
         self.placeName = placeName
         self.address = address
         self.isNamed = isNamed
+        self.isFirstVisit = isFirstVisit
+        self.discoveryIndex = discoveryIndex
+    }
+
+    /// 행정구역 정보가 아직 채워지지 않았는지 (역지오코딩 대상 판별용)
+    var needsRegionLookup: Bool {
+        administrativeArea == nil && country == nil
+    }
+
+    /// 도감에서 쓰는 광역 지역 (한국은 시·도 축약형, 해외는 국가명)
+    var provinceKey: String? {
+        RegionCatalog.provinceKey(
+            administrativeArea: administrativeArea,
+            isoCountryCode: isoCountryCode,
+            country: country
+        )
+    }
+
+    /// 도감에서 쓰는 시·군·구 이름
+    var districtName: String? {
+        RegionCatalog.districtName(
+            administrativeArea: administrativeArea,
+            subAdministrativeArea: subAdministrativeArea,
+            locality: locality,
+            subLocality: subLocality
+        )
     }
 
     var coordinate: CLLocationCoordinate2D {
@@ -69,6 +118,79 @@ extension CLLocationCoordinate2D {
         let y = sin(deltaLon) * cos(lat2)
         let x = cos(lat1) * sin(lat2) - sin(lat1) * cos(lat2) * cos(deltaLon)
         return atan2(y, x) * 180 / .pi
+    }
+}
+
+/// 걸어서 지나간 한 점.
+///
+/// 이 앱은 '머문 곳'이 아니라 '걸은 길'을 기록한다.
+/// 걷기·뛰기로 판정된 동안에만 쌓이고, 차량 속도로 움직인 구간은 들어오지 않는다.
+@Model
+final class TrackPoint {
+    var timestamp: Date
+    var latitude: Double
+    var longitude: Double
+    /// 그때의 속도(m/s). 음수면 알 수 없음.
+    var speed: Double
+
+    init(timestamp: Date = .now, latitude: Double, longitude: Double, speed: Double = -1) {
+        self.timestamp = timestamp
+        self.latitude = latitude
+        self.longitude = longitude
+        self.speed = speed
+    }
+
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+}
+
+/// 지도에 뿌려지는 사진 스팟.
+/// 아직 밟지 않은 자리에만 생기고, 그 자리에 가서 사진을 찍으면 수집된다.
+@Model
+final class PhotoSpot {
+    var latitude: Double
+    var longitude: Double
+    var name: String
+    /// MKPointOfInterestCategory의 rawValue (표시할 아이콘을 고르는 데 쓴다)
+    var category: String?
+    var createdAt: Date
+    /// 사진을 찍은 시각 (nil이면 아직 안 간 곳)
+    var collectedAt: Date?
+
+    @Attribute(.externalStorage)
+    var photoData: Data?
+
+    init(
+        latitude: Double,
+        longitude: Double,
+        name: String,
+        category: String? = nil,
+        createdAt: Date = .now
+    ) {
+        self.latitude = latitude
+        self.longitude = longitude
+        self.name = name
+        self.category = category
+        self.createdAt = createdAt
+    }
+
+    /// 이 거리(m) 안에 들어와야 사진을 찍을 수 있다
+    static let captureRadius: CLLocationDistance = 100
+
+    var coordinate: CLLocationCoordinate2D {
+        CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
+    }
+
+    var isCollected: Bool { collectedAt != nil }
+
+    func distance(from location: CLLocation) -> CLLocationDistance {
+        CLLocation(latitude: latitude, longitude: longitude).distance(from: location)
+    }
+
+    /// 지도에 쓰는 아이콘. AR에 세워질 랜드마크와 같은 성격을 쓴다.
+    var symbolName: String {
+        landmarkKind.symbolName
     }
 }
 

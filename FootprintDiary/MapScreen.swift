@@ -2,7 +2,8 @@
 //  MapScreen.swift
 //  FootprintDiary
 //
-//  선택한 날짜의 이동 경로를 지도 위 발자국으로 보여준다.
+//  앱의 첫 화면. 안개로 덮인 지도 한 장에 지금까지의 발자국과
+//  아직 가보지 않은 스팟이 함께 올라간다.
 //
 
 import SwiftUI
@@ -11,24 +12,39 @@ import MapKit
 
 struct MapScreen: View {
     @EnvironmentObject private var locationManager: LocationManager
+    @Environment(\.modelContext) private var modelContext
     @Environment(\.openURL) private var openURL
 
-    @State private var selectedDate: Date = .now
+    @Query(sort: \Visit.arrivalDate) private var allVisits: [Visit]
+    @Query(sort: \TrackPoint.timestamp) private var track: [TrackPoint]
+    @Query(sort: \PhotoSpot.createdAt, order: .reverse) private var spots: [PhotoSpot]
+
+    @State private var selectedPlace: FootprintPlace?
+    @State private var selectedSpot: PhotoSpot?
     @State private var showTimelapse = false
     @State private var showDayTimelapse = false
-
-    private var calendar: Calendar { .current }
+    @StateObject private var replenisher = SpotReplenisher()
 
     var body: some View {
         NavigationStack {
             VStack(spacing: 0) {
-                dayPicker
                 if !locationManager.isTrackingEnabled {
                     trackingOffBanner
                 }
-                DayMapView(date: selectedDate)
+
+                FogScreen(
+                    visits: allVisits,
+                    track: track,
+                    spots: spots,
+                    focus: MapFocus.initialFocus(
+                        near: locationManager.currentLocation,
+                        fitting: allVisits.map(\.coordinate)
+                    ),
+                    onSelectPlace: { selectedPlace = $0 },
+                    onSelectSpot: { selectedSpot = $0 }
+                )
             }
-            .navigationTitle("발자국")
+            .navigationTitle("탐험")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItemGroup(placement: .topBarLeading) {
@@ -40,7 +56,7 @@ struct MapScreen: View {
                     Button {
                         showDayTimelapse = true
                     } label: {
-                        Label("하루 재생", systemImage: "play.circle")
+                        Label("오늘 재생", systemImage: "play.circle")
                     }
                 }
                 ToolbarItemGroup(placement: .topBarTrailing) {
@@ -48,7 +64,7 @@ struct MapScreen: View {
                         locationManager.isTrackingEnabled.toggle()
                     } label: {
                         Label(
-                            locationManager.isTrackingEnabled ? "자동 추적 켜짐" : "자동 추적 꺼짐",
+                            locationManager.isTrackingEnabled ? "걷기 기록 켜짐" : "걷기 기록 꺼짐",
                             systemImage: locationManager.isTrackingEnabled ? "location.fill" : "location.slash.fill"
                         )
                     }
@@ -60,16 +76,31 @@ struct MapScreen: View {
                         if locationManager.isRecordingManually {
                             ProgressView()
                         } else {
-                            Label("현재 위치 기록", systemImage: "shoeprints.fill")
+                            Label("지금 자리 남기기", systemImage: "shoeprints.fill")
                         }
                     }
                 }
+            }
+            .sheet(item: $selectedPlace) { place in
+                PlaceDetailSheet(place: place)
+                    .presentationDetents([.medium])
+            }
+            .sheet(item: $selectedSpot) { spot in
+                SpotDetailSheet(spot: spot)
+                    .presentationDetents([.medium])
             }
             .fullScreenCover(isPresented: $showTimelapse) {
                 TimelapseView()
             }
             .fullScreenCover(isPresented: $showDayTimelapse) {
-                DayTimelapseView(date: selectedDate)
+                DayTimelapseView(date: .now)
+            }
+            .onAppear {
+                locationManager.refreshCurrentLocation()
+                replenisher.replenishIfNeeded(near: locationManager.currentLocation, context: modelContext)
+            }
+            .onChange(of: locationManager.lastKnownLocation) {
+                replenisher.replenishIfNeeded(near: locationManager.currentLocation, context: modelContext)
             }
             .alert(
                 "현재 위치 기록",
@@ -93,13 +124,11 @@ struct MapScreen: View {
         }
     }
 
-    // MARK: - 하위 뷰
-
     private var trackingOffBanner: some View {
         HStack(spacing: 8) {
             Image(systemName: "location.slash.fill")
                 .foregroundStyle(.secondary)
-            Text("자동 추적이 꺼져 있어요. 이동해도 발자국이 자동 기록되지 않아요.")
+            Text("걷기 기록이 꺼져 있어요. 걸어도 길이 남지 않아요.")
                 .font(.caption)
                 .foregroundStyle(.secondary)
             Spacer()
@@ -112,184 +141,241 @@ struct MapScreen: View {
         .padding(.vertical, 8)
         .background(Color.secondary.opacity(0.12))
     }
+}
 
-    private var dayPicker: some View {
-        HStack {
-            Button {
-                selectedDate = calendar.date(byAdding: .day, value: -1, to: selectedDate) ?? selectedDate
-            } label: {
-                Image(systemName: "chevron.left")
-            }
+// MARK: - 첫 화면 범위
 
-            Spacer()
+/// 지도를 처음 열 때 잡을 화면. 내 위치로 맞춘 것인지 함께 들고 다녀서
+/// '기록 전체로 맞춰 둔 화면'을 나중에 내 위치로 한 번 더 당길 수 있게 한다.
+struct MapInitialFocus: Equatable {
+    let latitude: Double
+    let longitude: Double
+    let latitudeDelta: Double
+    let longitudeDelta: Double
+    let isUserCentered: Bool
 
-            DatePicker("날짜", selection: $selectedDate, displayedComponents: .date)
-                .labelsHidden()
-                .environment(\.locale, Locale(identifier: "ko_KR"))
+    init(region: MKCoordinateRegion, isUserCentered: Bool) {
+        self.latitude = region.center.latitude
+        self.longitude = region.center.longitude
+        self.latitudeDelta = region.span.latitudeDelta
+        self.longitudeDelta = region.span.longitudeDelta
+        self.isUserCentered = isUserCentered
+    }
 
-            Spacer()
-
-            Button {
-                selectedDate = calendar.date(byAdding: .day, value: 1, to: selectedDate) ?? selectedDate
-            } label: {
-                Image(systemName: "chevron.right")
-            }
-            .disabled(calendar.isDateInToday(selectedDate))
-        }
-        .padding(.horizontal)
-        .padding(.vertical, 8)
+    var region: MKCoordinateRegion {
+        MKCoordinateRegion(
+            center: CLLocationCoordinate2D(latitude: latitude, longitude: longitude),
+            span: MKCoordinateSpan(latitudeDelta: latitudeDelta, longitudeDelta: longitudeDelta)
+        )
     }
 }
 
-/// 하루치 발자국 지도 + 목록.
-/// 날짜별 필터링을 SwiftData 쿼리(저장소 레벨)로 내려서
-/// 전체 기록을 메모리로 가져와 매 렌더마다 거르던 비용을 없앤다.
-struct DayMapView: View {
-    @Query private var dayVisits: [Visit]
+enum MapFocus {
+    /// 내 위치를 중심으로 잡을 때의 범위 (약 2.5km — 걸어 다니는 거리)
+    static let nearbySpan = MKCoordinateSpan(latitudeDelta: 0.025, longitudeDelta: 0.025)
 
-    @State private var cameraPosition: MapCameraPosition = .automatic
-    @State private var selectedVisit: Visit?
+    /// 내 위치 주변을 가깝게 보여준다
+    static func region(around location: CLLocation) -> MKCoordinateRegion {
+        MKCoordinateRegion(center: location.coordinate, span: nearbySpan)
+    }
 
-    init(date: Date) {
-        let calendar = Calendar.current
-        let dayStart = calendar.startOfDay(for: date)
-        let dayEnd = calendar.date(byAdding: .day, value: 1, to: dayStart) ?? dayStart
-        _dayVisits = Query(
-            filter: #Predicate<Visit> { $0.arrivalDate >= dayStart && $0.arrivalDate < dayEnd },
-            sort: \Visit.arrivalDate
+    /// 좌표들이 모두 들어오도록 맞춘다
+    static func region(fitting coordinates: [CLLocationCoordinate2D]) -> MKCoordinateRegion {
+        guard let first = coordinates.first else {
+            return MKCoordinateRegion(
+                center: CLLocationCoordinate2D(latitude: 37.5665, longitude: 126.9780),
+                span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2)
+            )
+        }
+        var minLat = first.latitude, maxLat = first.latitude
+        var minLon = first.longitude, maxLon = first.longitude
+        for coordinate in coordinates {
+            minLat = min(minLat, coordinate.latitude)
+            maxLat = max(maxLat, coordinate.latitude)
+            minLon = min(minLon, coordinate.longitude)
+            maxLon = max(maxLon, coordinate.longitude)
+        }
+        return MKCoordinateRegion(
+            center: CLLocationCoordinate2D(
+                latitude: (minLat + maxLat) / 2,
+                longitude: (minLon + maxLon) / 2
+            ),
+            span: MKCoordinateSpan(
+                latitudeDelta: max((maxLat - minLat) * 1.4, 0.02),
+                longitudeDelta: max((maxLon - minLon) * 1.4, 0.02)
+            )
         )
+    }
+
+    /// 지도의 첫 화면.
+    /// 기록 전체를 담으면 나라 단위까지 멀어지므로, 내 위치를 알면 그 주변부터 보여준다.
+    static func initialFocus(
+        near location: CLLocation?,
+        fitting coordinates: [CLLocationCoordinate2D]
+    ) -> MapInitialFocus {
+        if let location {
+            return MapInitialFocus(region: region(around: location), isUserCentered: true)
+        }
+        return MapInitialFocus(region: region(fitting: coordinates), isUserCentered: false)
+    }
+}
+
+// MARK: - 장소 마커와 상세
+
+/// 지도 위 장소 하나. 방문 횟수에 따라 커지고, 첫 발견은 금색 테두리가 붙는다.
+struct PlaceMarker: View {
+    let place: FootprintPlace
+
+    private var size: CGFloat {
+        switch place.rank {
+        case 0: return 16
+        case 1: return 22
+        case 2: return 28
+        default: return 34
+        }
     }
 
     var body: some View {
-        Map(position: $cameraPosition) {
-            // 현재 내 위치
-            UserAnnotation()
-
-            // 이동 경로를 따라 남는 발자국 자취
-            ForEach(FootprintTrail.steps(along: dayVisits.map(\.coordinate))) { step in
-                Annotation("", coordinate: step.coordinate, anchor: .center) {
-                    FootprintTrail.mark(heading: step.heading)
-                }
+        ZStack {
+            Circle()
+                .fill(Color.accentColor.opacity(0.4 + Double(place.rank) * 0.18))
+                .frame(width: size, height: size)
+            Circle()
+                .strokeBorder(Color.white.opacity(0.9), lineWidth: 1.5)
+                .frame(width: size, height: size)
+            if place.isDiscovered {
+                Circle()
+                    .strokeBorder(
+                        LinearGradient(
+                            colors: [Color(red: 1, green: 0.84, blue: 0.3), Color(red: 0.85, green: 0.6, blue: 0.1)],
+                            startPoint: .top,
+                            endPoint: .bottom
+                        ),
+                        lineWidth: 2.5
+                    )
+                    .frame(width: size + 7, height: size + 7)
             }
-            // 발자국 마커
-            ForEach(Array(dayVisits.enumerated()), id: \.element.persistentModelID) { index, visit in
-                Annotation(visit.displayName, coordinate: visit.coordinate) {
-                    FootprintMarker(number: index + 1, heading: heading(at: index))
-                        .onTapGesture { selectedVisit = visit }
-                }
+            if place.isFavorite {
+                Text("\(place.visitCount)")
+                    .font(.system(size: 10, weight: .bold))
+                    .foregroundStyle(.white)
             }
-        }
-        .mapControls {
-            MapUserLocationButton()
-        }
-        .frame(maxHeight: .infinity)
-
-        visitList
-            .sheet(item: $selectedVisit) { visit in
-                VisitEditView(visit: visit)
-                    .presentationDetents([.medium])
-            }
-            .onAppear { fitCamera() }
-            .onChange(of: dayVisits.map(\.persistentModelID)) { fitCamera() }
-    }
-
-    @ViewBuilder
-    private var visitList: some View {
-        if dayVisits.isEmpty {
-            VStack(spacing: 8) {
-                Image(systemName: "figure.walk")
-                    .font(.largeTitle)
-                    .foregroundStyle(.secondary)
-                Text("이 날의 발자국이 아직 없어요")
-                    .foregroundStyle(.secondary)
-                Text("걷거나 뛰어서 이동하면 자동으로 기록되고, + 버튼으로 지금 위치를 바로 남길 수도 있어요.")
-                    .font(.caption)
-                    .foregroundStyle(.tertiary)
-                    .multilineTextAlignment(.center)
-            }
-            .padding()
-            .frame(height: 160)
-        } else {
-            List {
-                ForEach(Array(dayVisits.enumerated()), id: \.element.persistentModelID) { index, visit in
-                    Button {
-                        selectedVisit = visit
-                    } label: {
-                        HStack(spacing: 12) {
-                            Text("\(index + 1)")
-                                .font(.caption.bold())
-                                .frame(width: 24, height: 24)
-                                .background(Circle().fill(Color.accentColor.opacity(0.2)))
-
-                            VStack(alignment: .leading, spacing: 2) {
-                                Text(visit.displayName)
-                                    .font(.body)
-                                    .foregroundStyle(.primary)
-                                Text(timeRange(for: visit))
-                                    .font(.caption)
-                                    .foregroundStyle(.secondary)
-                            }
-
-                            Spacer()
-
-                            if !visit.isNamed {
-                                Text("이름 없음")
-                                    .font(.caption2)
-                                    .padding(.horizontal, 6)
-                                    .padding(.vertical, 2)
-                                    .background(Capsule().fill(Color.orange.opacity(0.2)))
-                            }
-                        }
-                    }
-                }
-            }
-            .listStyle(.plain)
-            .frame(height: 200)
-        }
-    }
-
-    // MARK: - 헬퍼
-
-    private static let timeFormatter: DateFormatter = {
-        let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "a h:mm"
-        return formatter
-    }()
-
-    private func timeRange(for visit: Visit) -> String {
-        var text = Self.timeFormatter.string(from: visit.arrivalDate)
-        if let departure = visit.departureDate {
-            text += " ~ " + Self.timeFormatter.string(from: departure)
-        }
-        return text
-    }
-
-    /// index번째 발자국의 진행 방향(도)
-    private func heading(at index: Int) -> Double {
-        FootprintTrail.heading(through: dayVisits.map(\.coordinate), at: index)
-    }
-
-    private func fitCamera() {
-        guard !dayVisits.isEmpty else { return }
-        let coords = dayVisits.map(\.coordinate)
-        let minLat = coords.map(\.latitude).min()!
-        let maxLat = coords.map(\.latitude).max()!
-        let minLon = coords.map(\.longitude).min()!
-        let maxLon = coords.map(\.longitude).max()!
-        let center = CLLocationCoordinate2D(
-            latitude: (minLat + maxLat) / 2,
-            longitude: (minLon + maxLon) / 2
-        )
-        let span = MKCoordinateSpan(
-            latitudeDelta: max((maxLat - minLat) * 1.5, 0.01),
-            longitudeDelta: max((maxLon - minLon) * 1.5, 0.01)
-        )
-        withAnimation {
-            cameraPosition = .region(MKCoordinateRegion(center: center, span: span))
         }
     }
 }
+
+/// 지도에서 장소를 눌렀을 때. 이름을 고치거나 지울 수 있다.
+struct PlaceDetailSheet: View {
+    let place: FootprintPlace
+
+    @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
+
+    @State private var name: String = ""
+    @State private var showDeleteConfirm = false
+
+    var body: some View {
+        NavigationStack {
+            VStack(spacing: 14) {
+                if place.isDiscovered {
+                    Text("\(place.discoveryIndex)번째 발견")
+                        .font(.caption.bold())
+                        .foregroundStyle(.orange)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 4)
+                        .background(Capsule().fill(Color.orange.opacity(0.15)))
+                }
+
+                HStack(spacing: 24) {
+                    stat(value: "\(place.visitCount)", label: "방문")
+                    stat(value: dateText(place.firstDate), label: "처음")
+                    stat(value: dateText(place.lastDate), label: "마지막")
+                }
+
+                TextField("이 자리의 이름 (예: 회사, 단골 카페)", text: $name)
+                    .textFieldStyle(.roundedBorder)
+                    .submitLabel(.done)
+                    .onSubmit { rename() }
+
+                if place.isFavorite {
+                    Label("단골로 등록된 자리예요", systemImage: "star.fill")
+                        .font(.caption)
+                        .foregroundStyle(.yellow)
+                }
+
+                Spacer()
+
+                Button("이 자리의 발자국 지우기", role: .destructive) {
+                    showDeleteConfirm = true
+                }
+                .font(.callout)
+            }
+            .padding()
+            .navigationTitle(place.name ?? "이름 없는 자리")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .cancellationAction) {
+                    Button("닫기") { dismiss() }
+                }
+                ToolbarItem(placement: .confirmationAction) {
+                    Button("저장") { rename() }
+                        .disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                }
+            }
+            .onAppear { name = place.name ?? "" }
+            .confirmationDialog(
+                "이 자리의 발자국 \(place.visitCount)개를 지울까요?",
+                isPresented: $showDeleteConfirm,
+                titleVisibility: .visible
+            ) {
+                Button("지우기", role: .destructive) { deletePlace() }
+                Button("취소", role: .cancel) {}
+            } message: {
+                Text("되돌릴 수 없어요.")
+            }
+        }
+    }
+
+    private func stat(value: String, label: String) -> some View {
+        VStack(spacing: 2) {
+            Text(value).font(.headline)
+            Text(label).font(.caption2).foregroundStyle(.secondary)
+        }
+    }
+
+    private func dateText(_ date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yy.M.d"
+        return formatter.string(from: date)
+    }
+
+    /// 이 자리를 이루는 발자국 전부의 이름을 함께 바꾼다
+    private func rename() {
+        let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return }
+        for visit in visits() {
+            visit.placeName = trimmed
+            visit.isNamed = true
+        }
+        try? modelContext.save()
+        dismiss()
+    }
+
+    private func deletePlace() {
+        for visit in visits() {
+            modelContext.delete(visit)
+        }
+        try? modelContext.save()
+        dismiss()
+    }
+
+    private func visits() -> [Visit] {
+        place.visitIDs.compactMap { modelContext.model(for: $0) as? Visit }
+    }
+}
+
+// MARK: - 발자국 자취 (타임랩스와 발견 카드가 함께 쓴다)
 
 /// 방문 지점 사이를 따라 일정 간격으로 찍히는 작은 발자국 자취
 enum FootprintTrail {
@@ -350,13 +436,27 @@ enum FootprintTrail {
     }
 }
 
-/// 지도 위 발자국 마커. 진행 방향으로 발자국을 회전시키고, 번호 배지는 항상 똑바로 보여준다.
+/// 발자국 마커. 진행 방향으로 발자국을 회전시키고, 번호 배지는 항상 똑바로 보여준다.
+/// 처음 밟은 자리는 금빛 후광으로 구분한다.
 struct FootprintMarker: View {
     let number: Int
     var heading: Double = 0
+    var isDiscovery: Bool = false
 
     var body: some View {
         ZStack(alignment: .topTrailing) {
+            if isDiscovery {
+                Circle()
+                    .fill(
+                        RadialGradient(
+                            colors: [Color.yellow.opacity(0.75), Color.yellow.opacity(0)],
+                            center: .center,
+                            startRadius: 2,
+                            endRadius: 22
+                        )
+                    )
+                    .frame(width: 44, height: 44)
+            }
             Text("👣")
                 .font(.title2)
                 .shadow(color: .black.opacity(0.35), radius: 1.5, y: 1)
@@ -365,56 +465,8 @@ struct FootprintMarker: View {
                 .font(.system(size: 10, weight: .bold))
                 .foregroundStyle(.white)
                 .frame(width: 16, height: 16)
-                .background(Circle().fill(Color.accentColor))
+                .background(Circle().fill(isDiscovery ? Color.orange : Color.accentColor))
                 .offset(x: 8, y: -8)
-        }
-    }
-}
-
-/// 발자국(방문) 이름/정보 수정 시트
-struct VisitEditView: View {
-    @Environment(\.dismiss) private var dismiss
-    @Environment(\.modelContext) private var modelContext
-
-    let visit: Visit
-    @State private var name: String = ""
-
-    var body: some View {
-        NavigationStack {
-            Form {
-                Section("장소 이름") {
-                    TextField("예: 회사, 단골 카페", text: $name)
-                }
-                if let address = visit.address, !address.isEmpty {
-                    Section("주소") {
-                        Text(address).foregroundStyle(.secondary)
-                    }
-                }
-                Section {
-                    Button("이 발자국 삭제", role: .destructive) {
-                        modelContext.delete(visit)
-                        try? modelContext.save()
-                        dismiss()
-                    }
-                }
-            }
-            .navigationTitle("발자국 수정")
-            .navigationBarTitleDisplayMode(.inline)
-            .toolbar {
-                ToolbarItem(placement: .confirmationAction) {
-                    Button("저장") {
-                        visit.placeName = name.trimmingCharacters(in: .whitespacesAndNewlines)
-                        visit.isNamed = true
-                        try? modelContext.save()
-                        dismiss()
-                    }
-                    .disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
-                }
-                ToolbarItem(placement: .cancellationAction) {
-                    Button("닫기") { dismiss() }
-                }
-            }
-            .onAppear { name = visit.placeName ?? "" }
         }
     }
 }
