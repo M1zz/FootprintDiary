@@ -22,10 +22,10 @@ struct StampSpot: Identifiable {
 
 @MainActor
 final class AtlasState: ObservableObject {
-    /// 지난 날들에 그린 길
-    @Published private(set) var past: [[CLLocationCoordinate2D]] = []
-    /// 오늘 그린 길
-    @Published private(set) var today: [[CLLocationCoordinate2D]] = []
+    /// 걸은 자리를 칸으로 센 것 (지도에 점으로 찍힌다)
+    @Published private(set) var cells: [HeatCell] = []
+    /// 길게 누를 때 붙일 대상이 되는 길
+    @Published private(set) var trails: [[CLLocationCoordinate2D]] = []
     /// 내가 그린 지도의 총 길이(m) — 날짜별 '처음 걷는 거리'의 합
     @Published private(set) var atlasLength: CLLocationDistance = 0
     /// 오늘 새로 그은 길이(m)
@@ -65,25 +65,17 @@ final class AtlasState: ObservableObject {
             let walks = DayWalk.build(from: points, calendar: calendar)
             let novelty = WalkNovelty.newDistances(for: walks)
 
-            var past: [[CLLocationCoordinate2D]] = []
-            var today: [[CLLocationCoordinate2D]] = []
-            for walk in walks {
-                // 모서리 깎기는 그리는 선에만 쓴다.
-                // 각을 자르면 길이가 조금 줄어들어 '내가 그린 길'이 실제보다 짧아진다.
-                let segments = walk.segments.map { TrackSmoothing.rounded($0.map(\.coordinate)) }
-                if walk.day == startOfToday {
-                    today += segments
-                } else {
-                    past += segments
-                }
-            }
+            let segments = walks.flatMap(\.segments)
+            let cells = WalkHeatmap.cells(passes: segments, today: startOfToday, calendar: calendar)
+            // 길게 눌러 붙일 때만 쓰는 선. 모서리를 깎아 두면 손가락이 길에 더 잘 붙는다.
+            let trails = segments.map { TrackSmoothing.rounded($0.map(\.coordinate)) }
 
             let total = novelty.values.reduce(0, +)
             let todayNew = novelty[startOfToday] ?? 0
 
             await MainActor.run {
-                self.past = past
-                self.today = today
+                self.cells = cells
+                self.trails = trails
                 self.atlasLength = total
                 self.todayLength = todayNew
                 self.isReady = true
@@ -106,6 +98,8 @@ struct AtlasScreen: View {
     @State private var pendingCoordinate: StampSpot?
     @State private var selectedStamp: MapStamp?
     @State private var showNoLocation = false
+    /// 배경 지도를 비춰 볼지. 기본은 꺼 둔다 — 백지에 내 발자국만 남는 것이 이 지도의 뜻이다.
+    @AppStorage("footprint.showsBasemap") private var showsBasemap = false
 
     private var calendar: Calendar { .current }
 
@@ -113,8 +107,9 @@ struct AtlasScreen: View {
         NavigationStack {
             ZStack(alignment: .top) {
                 AtlasMapView(
-                    past: state.past,
-                    today: state.today,
+                    cells: state.cells,
+                    trails: state.trails,
+                    showsBasemap: showsBasemap,
                     stamps: stamps,
                     onSelectStamp: { selectedStamp = $0 },
                     onPickCoordinate: { pendingCoordinate = StampSpot(coordinate: $0) },
@@ -134,11 +129,14 @@ struct AtlasScreen: View {
                     emptyHint
                 }
 
-                stampButton
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-                    .padding(.leading, 16)
-                    // 애플 지도 저작권 표기를 가리지 않도록 띄운다 (가리면 심사에서 걸린다)
-                    .padding(.bottom, 52)
+                VStack(alignment: .leading, spacing: 10) {
+                    basemapToggle
+                    stampButton
+                }
+                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+                .padding(.leading, 16)
+                // 애플 지도 저작권 표기를 가리지 않도록 띄운다 (가리면 심사에서 걸린다)
+                .padding(.bottom, 52)
             }
             .navigationTitle("내 지도")
             .navigationBarTitleDisplayMode(.inline)
@@ -219,6 +217,21 @@ struct AtlasScreen: View {
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
         .accessibilityElement(children: .combine)
         .accessibilityLabel("내가 그린 길 \(distanceText(state.atlasLength)), 오늘 그은 길 \(distanceText(state.todayLength))")
+    }
+
+    /// 배경 지도를 잠깐 비춰 본다.
+    /// 평소에는 백지에 내 발자국만 두고, 어디였는지 알고 싶을 때만 밑에 지도를 깐다.
+    private var basemapToggle: some View {
+        Button {
+            showsBasemap.toggle()
+        } label: {
+            Image(systemName: showsBasemap ? "map.fill" : "map")
+                .font(.title3)
+                .foregroundStyle(showsBasemap ? Color.accentColor : .secondary)
+                .frame(width: 44, height: 44)
+                .background(.ultraThinMaterial, in: Circle())
+        }
+        .accessibilityLabel(showsBasemap ? "지도 비춰보기 끄기" : "지도에 비춰보기")
     }
 
     /// 지금 선 자리에 찍는다. 걷는 중에는 지도를 정확히 짚기 어려우므로 이쪽이 빠르다.

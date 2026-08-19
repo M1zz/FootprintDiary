@@ -22,6 +22,8 @@ struct TrackingDiagnosticsView: View {
         NavigationStack {
             List {
                 Section("지금 상태") {
+                    row("자동 기록", locationManager.isTrackingEnabled ? "켜짐" : "꺼짐 — 아무것도 기록되지 않아요",
+                        warn: !locationManager.isTrackingEnabled)
                     row("기록 방식", locationManager.trackingMode.title)
                     row("저전력 모드", isLowPower ? "켜짐 — 배경 기록이 줄어요" : "꺼짐", warn: isLowPower)
                     row("걷기로 보고 기록 중", locationManager.diagnostics.isWalking ? "예" : "아니오",

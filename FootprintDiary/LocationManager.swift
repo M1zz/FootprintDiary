@@ -24,6 +24,8 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     private var isCountingSteps = false
     /// 마지막으로 걸음이 늘어난 시각
     private var lastStepAt: Date?
+    /// 모션이 한 번이라도 대답했는지
+    private var didReceiveMotion = false
 
     /// 앱에서 주입해 주는 SwiftData 컨테이너
     var modelContainer: ModelContainer?
@@ -188,17 +190,31 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     /// 걷는 동안에만 경로를 남긴다. 모션 판정으로 걷기가 시작되면 켜고, 멈추거나 차를 타면 끈다.
     func startWalkDetection() {
         guard CMMotionActivityManager.isActivityAvailable() else {
-            // 모션을 쓸 수 없는 기기·권한이면 기록 자체가 멈춰 버린다.
+            // 모션을 쓸 수 없는 기기면 기록 자체가 멈춰 버린다.
             // 그럴 때는 위치를 받되 걷기 속도를 넘는 점을 버리는 것으로 규칙을 지킨다.
             addUpdateReason(.walking)
             return
         }
+
+        // 권한이 막혀 있으면 startActivityUpdates가 오류도 없이 조용히 아무것도 보내지 않는다.
+        // 그대로 두면 '걷기로 판정되지 않음' 상태로 굳어 한 점도 남지 않는다.
+        // 기다리지 말고 기록하되, 걷기 규칙은 저장 단계의 속도 필터가 지킨다.
+        switch CMMotionActivityManager.authorizationStatus() {
+        case .denied, .restricted:
+            addUpdateReason(.walking)
+            return
+        default:
+            break
+        }
+
         guard !isDetectingActivity else { return }
         isDetectingActivity = true
         startStepDetection()
+        startMotionTimeout()
         activityManager.startActivityUpdates(to: .main) { [weak self] activity in
             guard let self, let activity else { return }
             Task { @MainActor in
+                self.didReceiveMotion = true
                 self.diagnostics.motionState = Self.describe(activity)
             }
             guard activity.confidence != .low else { return }
@@ -216,6 +232,23 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
                 }
                 self.removeUpdateReason(.walking)
             }
+        }
+    }
+
+    /// 모션이 이 시간(초) 안에 한 번도 대답하지 않으면 기다리기를 그만둔다.
+    ///
+    /// 권한이 '아직 묻지 않음'인 채로 프롬프트가 뜨지 않거나, 기기 사정으로 판정이
+    /// 오지 않는 경우가 있다. 그때 잠자코 기다리면 걷는 내내 한 점도 남지 않는다.
+    /// 기록을 막느니 받아 두고 속도로 거르는 편이 낫다.
+    static let motionSilenceTimeout: TimeInterval = 25
+
+    private func startMotionTimeout() {
+        let deadline = Self.motionSilenceTimeout
+        Task { @MainActor [weak self] in
+            try? await Task.sleep(nanoseconds: UInt64(deadline * 1_000_000_000))
+            guard let self, !self.didReceiveMotion, self.isDetectingActivity else { return }
+            self.diagnostics.motionState = "대답 없음 — 걷기 판정 없이 기록"
+            self.addUpdateReason(.walking)
         }
     }
 
@@ -267,6 +300,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         stopStepDetection()
         guard isDetectingActivity else { return }
         isDetectingActivity = false
+        didReceiveMotion = false
         activityManager.stopActivityUpdates()
         removeUpdateReason(.walking)
     }

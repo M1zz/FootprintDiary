@@ -2,47 +2,53 @@
 //  AtlasMapView.swift
 //  FootprintDiary
 //
-//  대동여지도 — 배경 지도는 종이처럼 눌러 두고, 내가 걸어서 지난 길만 먹선으로 남긴다.
+//  대동여지도 — 백지 위에 내가 걸은 자리만 남는다.
 //
 //  세상은 이미 네이버·카카오·구글이 다 그려 놓았다. 그 위에 하나 더 그릴 이유는 없다.
-//  이 지도의 값어치는 '내 두 발로 지난 길만 그려져 있다'는 것 하나뿐이므로,
-//  배경은 muted로 누르고 관심지점을 전부 끈다. 화면에서 눈에 띄는 건 내 선이어야 한다.
+//  이 지도의 값어치는 '내 두 발로 지난 자리만 그려져 있다'는 것 하나뿐이므로,
+//  기본은 배경 지도를 종이로 덮어 두고 필요할 때만 비춰 본다.
+//
+//  걸은 자리는 선이 아니라 촘촘한 점으로 찍는다. 선으로 그리면 한 번 지난 길과
+//  백 번 지난 길이 똑같아 보이지만, 점은 자주 지난 자리일수록 짙어진다.
 //
 
 import SwiftUI
 import MapKit
 import SwiftData
 
-/// 선을 두 겹(번짐 + 심)으로 그리기 위한 구분표.
-/// 한 겹으로 그리면 배경 위에서 선이 얇게 떠 보이고, 두 겹으로 그리면 먹이 번진 것처럼 앉는다.
+/// 먹과 종이의 빛깔
 enum InkStyle {
-    static let pastBleed = "ink.past.bleed"
-    static let pastCore = "ink.past.core"
-    static let todayBleed = "ink.today.bleed"
-    static let todayCore = "ink.today.core"
-
-    /// 지난 날의 먹 — 밝은 배경에선 짙은 먹, 어두운 배경에선 종이빛으로 뒤집는다
+    /// 먹 — 밝은 배경에선 짙은 먹, 어두운 배경에선 종이빛으로 뒤집는다
     static let ink = UIColor { traits in
         traits.userInterfaceStyle == .dark
         ? UIColor(red: 0.97, green: 0.94, blue: 0.87, alpha: 1)
         : UIColor(red: 0.11, green: 0.12, blue: 0.16, alpha: 1)
     }
 
-    /// 낙관을 찍는 인주 빛. 오늘의 주묵보다 짙어서 선과 도장이 섞이지 않는다.
-    static let sealRed = UIColor { traits in
+    /// 배경 지도를 덮는 종이. 옛 지도의 닥종이처럼 아주 옅은 누런빛.
+    static let paper = UIColor { traits in
         traits.userInterfaceStyle == .dark
-        ? UIColor(red: 0.86, green: 0.30, blue: 0.24, alpha: 1)
-        : UIColor(red: 0.66, green: 0.14, blue: 0.11, alpha: 1)
+        ? UIColor(red: 0.09, green: 0.09, blue: 0.10, alpha: 1)
+        : UIColor(red: 0.96, green: 0.95, blue: 0.91, alpha: 1)
     }
 
-    /// 오늘 그린 길은 주묵(붉은 먹)으로 얹는다.
-    /// 옛 지도가 길을 붉은 선으로 표시하던 것과 같고, 오늘 내가 무엇을 더했는지 바로 보인다.
+    /// 오늘 지난 자리는 주묵(붉은 먹)으로 찍는다.
+    /// 옛 지도가 길을 붉은 선으로 표시하던 것과 같고, 오늘 무엇을 더했는지 바로 보인다.
     static let vermilion = UIColor { traits in
         traits.userInterfaceStyle == .dark
         ? UIColor(red: 1.0, green: 0.45, blue: 0.35, alpha: 1)
         : UIColor(red: 0.78, green: 0.20, blue: 0.13, alpha: 1)
     }
+
+    /// 낙관을 찍는 인주 빛. 주묵보다 짙어 점과 도장이 섞이지 않는다.
+    static let sealRed = UIColor { traits in
+        traits.userInterfaceStyle == .dark
+        ? UIColor(red: 0.86, green: 0.30, blue: 0.24, alpha: 1)
+        : UIColor(red: 0.66, green: 0.14, blue: 0.11, alpha: 1)
+    }
 }
+
+// MARK: - 스탬프
 
 /// 지도에 찍힌 스탬프 하나
 final class StampAnnotation: NSObject, MKAnnotation {
@@ -69,7 +75,7 @@ enum StampSeal {
         if let cached = cache[kind.id] { return cached }
 
         let renderer = UIGraphicsImageRenderer(size: size)
-        let image = renderer.image { context in
+        let image = renderer.image { _ in
             let rect = CGRect(origin: .zero, size: size)
             // 옛 도장처럼 모서리가 둥근 네모로 찍는다
             let seal = UIBezierPath(roundedRect: rect.insetBy(dx: 1, dy: 1), cornerRadius: 8)
@@ -82,15 +88,13 @@ enum StampSeal {
             let configuration = UIImage.SymbolConfiguration(pointSize: 14, weight: .semibold)
             if let glyph = UIImage(systemName: kind.symbolName, withConfiguration: configuration)?
                 .withTintColor(.white, renderingMode: .alwaysOriginal) {
-                let box = CGRect(
+                glyph.draw(in: CGRect(
                     x: (size.width - glyph.size.width) / 2,
                     y: (size.height - glyph.size.height) / 2,
                     width: glyph.size.width,
                     height: glyph.size.height
-                )
-                glyph.draw(in: box)
+                ))
             }
-            _ = context
         }
         cache[kind.id] = image
         return image
@@ -111,14 +115,18 @@ final class StampAnnotationView: MKAnnotationView {
     }
 }
 
+// MARK: - 지도
+
 struct AtlasMapView: UIViewRepresentable {
-    /// 지난 날들에 그린 길
-    let past: [[CLLocationCoordinate2D]]
-    /// 오늘 그린 길
-    let today: [[CLLocationCoordinate2D]]
+    /// 걸은 자리를 칸으로 센 것
+    let cells: [HeatCell]
+    /// 길게 눌렀을 때 붙일 대상이 되는 길
+    let trails: [[CLLocationCoordinate2D]]
+    /// 배경 지도를 비춰 볼지. 꺼 두면 종이 위에 내 발자국만 남는다.
+    let showsBasemap: Bool
     /// 지도에 찍은 스탬프
     let stamps: [MapStamp]
-    /// 스탬프를 눌렀을 때
+
     var onSelectStamp: (MapStamp) -> Void = { _ in }
     /// 지도를 길게 눌러 자리를 골랐을 때
     var onPickCoordinate: (CLLocationCoordinate2D) -> Void = { _ in }
@@ -130,7 +138,7 @@ struct AtlasMapView: UIViewRepresentable {
         mapView.delegate = context.coordinator
         mapView.showsUserLocation = true
 
-        // 상호명·아이콘이 남아 있으면 내 선이 그 사이에 묻힌다
+        // 종이로 덮을 때 지명이 비쳐 보이지 않도록 관심지점을 끈다
         let configuration = MKStandardMapConfiguration(emphasisStyle: .muted)
         configuration.pointOfInterestFilter = .excludingAll
         mapView.preferredConfiguration = configuration
@@ -153,16 +161,18 @@ struct AtlasMapView: UIViewRepresentable {
     }
 
     func updateUIView(_ mapView: MKMapView, context: Context) {
-        context.coordinator.onSelectStamp = onSelectStamp
-        context.coordinator.onPickCoordinate = onPickCoordinate
-        context.coordinator.onMoveStamp = onMoveStamp
-        context.coordinator.stampsByID = Dictionary(
+        let coordinator = context.coordinator
+        coordinator.onSelectStamp = onSelectStamp
+        coordinator.onPickCoordinate = onPickCoordinate
+        coordinator.onMoveStamp = onMoveStamp
+        coordinator.stampsByID = Dictionary(
             stamps.map { ($0.persistentModelID, $0) },
             uniquingKeysWith: { first, _ in first }
         )
-        context.coordinator.trails = past + today
-        context.coordinator.sync(on: mapView, past: past, today: today)
-        context.coordinator.syncStamps(on: mapView, stamps: stamps)
+        coordinator.trails = trails
+        coordinator.syncPaper(on: mapView, showsBasemap: showsBasemap)
+        coordinator.syncDots(on: mapView, cells: cells)
+        coordinator.syncStamps(on: mapView, stamps: stamps)
     }
 
     static func dismantleUIView(_ mapView: MKMapView, coordinator: Coordinator) {
@@ -186,29 +196,155 @@ struct AtlasMapView: UIViewRepresentable {
     // MARK: - 조정자
 
     final class Coordinator: NSObject, MKMapViewDelegate {
-        private var overlays: [MKPolyline] = []
-        /// 지금 그려져 있는 선의 지문 — 달라졌을 때만 다시 그린다 (매 렌더마다 다시 얹으면 깜빡인다)
-        private var signature: String?
-        private var didCenterOnUser = false
-        /// 지금 올라가 있는 스탬프의 지문 — 달라졌을 때만 다시 얹는다
+
+        // 지금 올라가 있는 것들
+        private var paperOverlay: MKPolygon?
+        private var paperRect: MKMapRect?
+        private var showsBasemap = false
+        private var dotOverlay: DotGridOverlay?
+        private var dotSignature: String?
         private var stampSignature: String?
+        private var didCenterOnUser = false
+
         var stampsByID: [PersistentIdentifier: MapStamp] = [:]
+        var trails: [[CLLocationCoordinate2D]] = []
         var onSelectStamp: (MapStamp) -> Void = { _ in }
         var onPickCoordinate: (CLLocationCoordinate2D) -> Void = { _ in }
         var onMoveStamp: (MapStamp, CLLocationCoordinate2D) -> Void = { _, _ in }
 
-        /// 길게 눌렀을 때 그 자리에서 이 거리(pt) 안에 내 길이 있으면 길 위로 붙인다.
+        // MARK: 종이
+
+        /// 배경 지도를 덮는 종이.
+        ///
+        /// 온 세상을 한 장으로 덮는 폴리곤은 경도 ±180°에서 뒤집혀 제대로 그려지지 않는다.
+        /// 그래서 보이는 범위보다 넉넉한 만큼만 덮고, 옮겨서 모자라면 다시 만든다.
+        func syncPaper(on mapView: MKMapView, showsBasemap: Bool) {
+            let changed = showsBasemap != self.showsBasemap
+            self.showsBasemap = showsBasemap
+            rebuildPaper(on: mapView, force: changed)
+        }
+
+        private func rebuildPaper(on mapView: MKMapView, force: Bool) {
+            guard !showsBasemap else {
+                if let paperOverlay { mapView.removeOverlay(paperOverlay) }
+                paperOverlay = nil
+                paperRect = nil
+                return
+            }
+
+            let visible = mapView.visibleMapRect
+            guard visible.size.width > 0 else { return }
+            if !force, let paperRect, paperRect.contains(visible) { return }
+
+            // 보이는 범위의 세 배를 덮어 두면 웬만큼 옮겨도 다시 만들지 않는다
+            let target = visible.insetBy(dx: -visible.size.width, dy: -visible.size.height)
+            paperRect = target
+
+            if let paperOverlay { mapView.removeOverlay(paperOverlay) }
+            // MKPolygon에는 사각형으로 만드는 생성자가 없어 네 꼭짓점으로 만든다
+            let corners = [
+                MKMapPoint(x: target.minX, y: target.minY),
+                MKMapPoint(x: target.maxX, y: target.minY),
+                MKMapPoint(x: target.maxX, y: target.maxY),
+                MKMapPoint(x: target.minX, y: target.maxY)
+            ]
+            let paper = MKPolygon(points: corners, count: corners.count)
+            paperOverlay = paper
+            // 맨 아래에 깔아야 점이 그 위로 온다 (다시 만들어도 순서가 지켜진다)
+            mapView.insertOverlay(paper, at: 0, level: .aboveLabels)
+        }
+
+        func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+            rebuildPaper(on: mapView, force: false)
+        }
+
+        // MARK: 점
+
+        func syncDots(on mapView: MKMapView, cells: [HeatCell]) {
+            let signature = "\(cells.count)-\(cells.reduce(0) { $0 + $1.passes })"
+            guard signature != dotSignature else { return }
+            dotSignature = signature
+
+            if let dotOverlay { mapView.removeOverlay(dotOverlay) }
+            dotOverlay = nil
+            guard !cells.isEmpty else { return }
+
+            let dots = DotGridOverlay(cells: cells)
+            dotOverlay = dots
+            mapView.addOverlay(dots, level: .aboveLabels)
+        }
+
+        // MARK: 그리기
+
+        func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+            if let dots = overlay as? DotGridOverlay {
+                return DotGridRenderer(overlay: dots, traits: mapView.traitCollection)
+            }
+            if let paper = overlay as? MKPolygon {
+                let renderer = MKPolygonRenderer(polygon: paper)
+                renderer.fillColor = InkStyle.paper.resolvedColor(with: mapView.traitCollection)
+                renderer.strokeColor = .clear
+                renderer.lineWidth = 0
+                return renderer
+            }
+            return MKOverlayRenderer(overlay: overlay)
+        }
+
+        // MARK: 스탬프
+
+        func syncStamps(on mapView: MKMapView, stamps: [MapStamp]) {
+            let signature = stamps
+                .map { "\($0.persistentModelID.hashValue):\($0.kindID)" }
+                .joined(separator: ",")
+            guard signature != stampSignature else { return }
+            stampSignature = signature
+
+            mapView.removeAnnotations(mapView.annotations.compactMap { $0 as? StampAnnotation })
+            mapView.addAnnotations(stamps.map(StampAnnotation.init))
+        }
+
+        func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
+            guard annotation is StampAnnotation else { return nil }
+            return mapView.dequeueReusableAnnotationView(
+                withIdentifier: StampAnnotationView.reuseIdentifier,
+                for: annotation
+            )
+        }
+
+        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            guard let annotation = view.annotation as? StampAnnotation else { return }
+            // 고른 표시를 남겨 두면 다음에 같은 걸 눌러도 반응하지 않는다
+            mapView.deselectAnnotation(annotation, animated: false)
+            if let stamp = stampsByID[annotation.id] { onSelectStamp(stamp) }
+        }
+
+        /// 스탬프를 끌어 옮겼을 때. 걸으면서 대충 찍어 두고 나중에 다듬을 수 있어야 한다.
+        func mapView(
+            _ mapView: MKMapView,
+            annotationView view: MKAnnotationView,
+            didChange newState: MKAnnotationView.DragState,
+            fromOldState oldState: MKAnnotationView.DragState
+        ) {
+            guard newState == .ending || newState == .canceling else { return }
+            view.dragState = .none
+            guard newState == .ending,
+                  let annotation = view.annotation as? StampAnnotation,
+                  let stamp = stampsByID[annotation.id] else { return }
+            onMoveStamp(stamp, annotation.coordinate)
+            // 옮긴 자리를 그대로 두려면 다음 sync가 다시 얹지 않아야 한다
+            stampSignature = nil
+        }
+
+        // MARK: 길게 눌러 찍기
+
+        /// 길게 누른 자리에서 이 거리(pt) 안에 내 길이 있으면 길 위로 붙인다.
         /// 화면 거리로 재기 때문에 지도를 확대할수록 더 정확히 짚을 수 있다.
         static let snapDistance: CGFloat = 44
-
-        /// 지금 그려져 있는 길 (스냅 대상)
-        var trails: [[CLLocationCoordinate2D]] = []
 
         @objc func handleLongPress(_ gesture: UILongPressGestureRecognizer) {
             // began에서만 받는다. changed까지 받으면 누른 채 손이 흔들릴 때마다 열린다.
             guard gesture.state == .began, let mapView = gesture.view as? MKMapView else { return }
-            let point = gesture.location(in: mapView)
-            onPickCoordinate(snapped(point, on: mapView))
+            onPickCoordinate(snapped(gesture.location(in: mapView), on: mapView))
         }
 
         /// 누른 자리에서 가장 가까운 '내가 걸은 길' 위의 점.
@@ -224,8 +360,7 @@ struct AtlasMapView: UIViewRepresentable {
             )
 
             for trail in trails {
-                let onScreen = trail.contains { visible.contains(MKMapPoint($0)) }
-                guard onScreen else { continue }
+                guard trail.contains(where: { visible.contains(MKMapPoint($0)) }) else { continue }
                 let screen = trail.map { mapView.convert($0, toPointTo: mapView) }
                 for (a, b) in zip(screen, screen.dropFirst()) {
                     let candidate = Self.closestPoint(to: point, onSegmentFrom: a, to: b)
@@ -254,105 +389,13 @@ struct AtlasMapView: UIViewRepresentable {
             return CGPoint(x: a.x + t * dx, y: a.y + t * dy)
         }
 
-        /// 스탬프를 끌어 옮겼을 때. 걸으면서 대충 찍어 두고 나중에 다듬을 수 있어야 한다.
-        func mapView(
-            _ mapView: MKMapView,
-            annotationView view: MKAnnotationView,
-            didChange newState: MKAnnotationView.DragState,
-            fromOldState oldState: MKAnnotationView.DragState
-        ) {
-            guard newState == .ending || newState == .canceling else { return }
-            view.dragState = .none
-            guard newState == .ending,
-                  let annotation = view.annotation as? StampAnnotation,
-                  let stamp = stampsByID[annotation.id] else { return }
-            onMoveStamp(stamp, annotation.coordinate)
-            // 옮긴 자리를 그대로 두려면 다음 sync가 다시 얹지 않아야 한다
-            stampSignature = nil
-        }
-
-        func syncStamps(on mapView: MKMapView, stamps: [MapStamp]) {
-            let signature = stamps
-                .map { "\($0.persistentModelID.hashValue):\($0.kindID)" }
-                .joined(separator: ",")
-            guard signature != stampSignature else { return }
-            stampSignature = signature
-
-            let existing = mapView.annotations.compactMap { $0 as? StampAnnotation }
-            mapView.removeAnnotations(existing)
-            mapView.addAnnotations(stamps.map(StampAnnotation.init))
-        }
-
-        func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
-            guard annotation is StampAnnotation else { return nil }
-            return mapView.dequeueReusableAnnotationView(
-                withIdentifier: StampAnnotationView.reuseIdentifier,
-                for: annotation
-            )
-        }
-
-        func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
-            guard let annotation = view.annotation as? StampAnnotation else { return }
-            // 고른 표시를 남겨 두면 다음에 같은 걸 눌러도 반응하지 않는다
-            mapView.deselectAnnotation(annotation, animated: false)
-            if let stamp = stampsByID[annotation.id] { onSelectStamp(stamp) }
-        }
-
-        func sync(on mapView: MKMapView, past: [[CLLocationCoordinate2D]], today: [[CLLocationCoordinate2D]]) {
-            let key = "\(past.count):\(past.reduce(0) { $0 + $1.count })"
-                + "|\(today.count):\(today.reduce(0) { $0 + $1.count })"
-            guard key != signature else { return }
-            signature = key
-
-            mapView.removeOverlays(overlays)
-            overlays = past.flatMap { line(for: $0, bleed: InkStyle.pastBleed, core: InkStyle.pastCore) }
-                + today.flatMap { line(for: $0, bleed: InkStyle.todayBleed, core: InkStyle.todayCore) }
-            // 지명 위에 얹어야 선이 글자에 가리지 않는다
-            mapView.addOverlays(overlays, level: .aboveLabels)
-        }
-
-        /// 한 구간을 번짐과 심 두 겹으로 만든다
-        private func line(for segment: [CLLocationCoordinate2D], bleed: String, core: String) -> [MKPolyline] {
-            guard segment.count >= 2 else { return [] }
-            let under = MKPolyline(coordinates: segment, count: segment.count)
-            under.title = bleed
-            let over = MKPolyline(coordinates: segment, count: segment.count)
-            over.title = core
-            return [under, over]
-        }
-
-        // MARK: 그리기
-
-        func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
-            guard let line = overlay as? MKPolyline else { return MKOverlayRenderer(overlay: overlay) }
-            let renderer = MKPolylineRenderer(polyline: line)
-            renderer.lineCap = .round
-            renderer.lineJoin = .round
-
-            switch line.title {
-            case InkStyle.pastBleed:
-                renderer.strokeColor = InkStyle.ink.withAlphaComponent(0.18)
-                renderer.lineWidth = 9
-            case InkStyle.todayBleed:
-                renderer.strokeColor = InkStyle.vermilion.withAlphaComponent(0.22)
-                renderer.lineWidth = 11
-            case InkStyle.todayCore:
-                renderer.strokeColor = InkStyle.vermilion
-                renderer.lineWidth = 4
-            default:
-                renderer.strokeColor = InkStyle.ink.withAlphaComponent(0.9)
-                renderer.lineWidth = 3.5
-            }
-            return renderer
-        }
-
         // MARK: 첫 화면
 
         /// 앱을 켠 직후에는 내 위치가 아직 없다. 위치가 도착하면 한 번만 그리로 당겨 준다.
         func mapView(_ mapView: MKMapView, didUpdate userLocation: MKUserLocation) {
             guard !didCenterOnUser, let coordinate = userLocation.location?.coordinate else { return }
             didCenterOnUser = true
-            // 동네 한 눈에 — 이 배율이라야 한 번 걸을 때마다 선이 눈에 띄게 자란다
+            // 동네 한 눈에 — 이 배율이라야 한 번 걸을 때마다 점이 눈에 띄게 는다
             mapView.setRegion(
                 MKCoordinateRegion(center: coordinate, latitudinalMeters: 1_600, longitudinalMeters: 1_600),
                 animated: true
