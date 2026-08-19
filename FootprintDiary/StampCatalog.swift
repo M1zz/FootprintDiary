@@ -25,6 +25,7 @@ enum StampCatalog {
 
     /// 묶음의 차례 (고르는 화면에 이 순서로 나온다)
     static let groups: [String] = [
+        "기준점",
         "길",
         "쉼터",
         "자연",
@@ -38,6 +39,12 @@ enum StampCatalog {
     ]
 
     static let all: [StampKind] = [
+        StampKind(id: "home", title: "집", symbolName: "house.fill", group: "기준점"),
+        StampKind(id: "work", title: "일터", symbolName: "briefcase.fill", group: "기준점"),
+        StampKind(id: "campus", title: "학교·학원", symbolName: "graduationcap.circle.fill", group: "기준점"),
+        StampKind(id: "regular", title: "자주 가는 곳", symbolName: "star.circle.fill", group: "기준점"),
+        StampKind(id: "meeting", title: "자주 만나는 곳", symbolName: "person.2.circle.fill", group: "기준점"),
+        StampKind(id: "landmark", title: "눈에 띄는 것", symbolName: "flag.fill", group: "기준점"),
         StampKind(id: "shortcut", title: "지름길", symbolName: "arrow.triangle.turn.up.right.diamond.fill", group: "길"),
         StampKind(id: "stairs", title: "계단", symbolName: "figure.stairs", group: "길"),
         StampKind(id: "steep", title: "가파른 오르막", symbolName: "arrow.up.right", group: "길"),
@@ -107,7 +114,7 @@ enum StampCatalog {
         StampKind(id: "duck", title: "오리", symbolName: "bird", group: "동물"),
         StampKind(id: "squirrel", title: "다람쥐", symbolName: "hare.fill", group: "동물"),
         StampKind(id: "fish", title: "물고기 보임", symbolName: "fish.fill", group: "동물"),
-        StampKind(id: "insect", title: "벌레 많음", symbolName: "ant.fill", group: "동물"),
+        StampKind(id: "insect", title: "벌레 보이는 곳", symbolName: "ant.fill", group: "동물"),
         StampKind(id: "bee", title: "벌 조심", symbolName: "ladybug.fill", group: "동물"),
         StampKind(id: "cat_food", title: "고양이 밥자리", symbolName: "fork.knife", group: "동물"),
         StampKind(id: "turtle", title: "거북이", symbolName: "tortoise.fill", group: "동물"),
