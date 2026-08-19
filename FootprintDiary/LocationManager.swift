@@ -19,6 +19,11 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     private let manager = CLLocationManager()
     private let geocoder = CLGeocoder()
     private let activityManager = CMMotionActivityManager()
+    /// 걸음 수 계측기. 모션 활동 판정보다 훨씬 빨리 '지금 걷는 중'을 알려 준다.
+    private let pedometer = CMPedometer()
+    private var isCountingSteps = false
+    /// 마지막으로 걸음이 늘어난 시각
+    private var lastStepAt: Date?
 
     /// 앱에서 주입해 주는 SwiftData 컨테이너
     var modelContainer: ModelContainer?
@@ -27,6 +32,20 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     @Published var lastKnownLocation: CLLocation?
     @Published var isRecordingManually = false
     @Published var manualRecordError: ManualRecordError?
+
+    /// 어느 관문에서 점이 버려지는지 세는 계기판
+    let diagnostics = TrackingDiagnostics()
+
+    /// 얼마나 촘촘히 기록할지 (사용자 설정 — 재실행에도 유지)
+    @Published var trackingMode: TrackingMode = .thorough {
+        didSet {
+            guard oldValue != trackingMode else { return }
+            UserDefaults.standard.set(trackingMode.rawValue, forKey: Self.trackingModeKey)
+            // 바꾼 즉시 반영한다 (다음 산책까지 기다리지 않게)
+            applyUpdateReasons()
+            if isTrackingEnabled { startMonitoringIfAuthorized() }
+        }
+    }
 
     /// 자동 위치 추적 켜짐/꺼짐 (사용자 설정 — 재실행·백그라운드 깨어남에도 유지)
     @Published var isTrackingEnabled: Bool = true {
@@ -42,6 +61,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     }
 
     private static let trackingEnabledKey = "footprint.isTrackingEnabled"
+    private static let trackingModeKey = "footprint.trackingMode"
     private static let discoveryBackfillKey = "footprint.discoveryBackfillDone"
 
     /// 역지오코딩 대기열 (CLGeocoder는 한 번에 한 건만 처리한다)
@@ -88,6 +108,10 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         if UserDefaults.standard.object(forKey: Self.trackingEnabledKey) != nil {
             isTrackingEnabled = UserDefaults.standard.bool(forKey: Self.trackingEnabledKey)
         }
+        if let saved = UserDefaults.standard.string(forKey: Self.trackingModeKey),
+           let mode = TrackingMode(rawValue: saved) {
+            trackingMode = mode
+        }
         super.init()
         manager.delegate = self
         manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
@@ -128,6 +152,39 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     /// 경로 점 사이의 최소 간격(m)
     static let trackPointSpacing: CLLocationDistance = 12
 
+    /// 지도에 그릴 때 믿는 수평 정확도 상한(m).
+    /// 이보다 밀린 점을 직선으로 이으면 선이 건물 안을 가로지른다.
+    static let maxDrawAccuracy: CLLocationDistance = 25
+
+    /// 저장까지 받아들이는 상한(m).
+    /// 그리기 기준을 넘겨도 일단 남긴다 — 오늘 안 남긴 점은 나중에 어떤 방법으로도
+    /// 되살릴 수 없지만, 그리는 방법은 앞으로 얼마든지 나아질 수 있기 때문이다.
+    static let maxStoredAccuracy: CLLocationDistance = 60
+
+    /// 예전 이름 (진단 화면이 그리기 기준을 보여 줄 때 쓴다)
+    static var maxTrackAccuracy: CLLocationDistance { maxDrawAccuracy }
+    /// 위치를 켠 직후 정확도가 자리 잡을 때까지 기다리는 시간(초).
+    /// 이 동안에는 아주 정확한 점만 받는다.
+    static let warmupInterval: TimeInterval = 8
+    /// 워밍업 동안 요구하는 정확도(m)
+    static let warmupAccuracy: CLLocationDistance = 15
+    /// 이 시간(초)보다 오래된 점은 버린다.
+    /// startUpdatingLocation() 직후 iOS는 들고 있던 지난 위치부터 돌려주는데,
+    /// 실내에서 잡힌 Wi-Fi 기반 위치는 정확도를 낙관적으로 보고하면서도 수백 m 밀려 있다.
+    static let maxTrackAge: TimeInterval = 10
+    /// 걸음이 멎은 뒤 이 시간(초) 안에는 '멈춤' 판정이 와도 기록을 이어 간다.
+    /// 신호 대기·가게 구경처럼 잠깐 서는 일은 산책의 일부다.
+    static let stepGracePeriod: TimeInterval = 90
+
+    /// 점프로 판정해 연속으로 버릴 수 있는 최대 개수.
+    /// 잘못 저장된 점 하나 때문에 그 뒤의 멀쩡한 점이 영원히 막히는 걸 막는다.
+    static let maxConsecutiveJumpRejections = 3
+
+    /// 위치 갱신을 켠 시각. 그 이전에 찍힌(=iOS가 들고 있던) 점을 걸러내는 기준이 된다.
+    private var trackingStartedAt: Date?
+    /// 점프로 판정해 연달아 버린 횟수
+    private var jumpRejectionCount = 0
+
     /// 걷는 동안에만 경로를 남긴다. 모션 판정으로 걷기가 시작되면 켜고, 멈추거나 차를 타면 끈다.
     func startWalkDetection() {
         guard CMMotionActivityManager.isActivityAvailable() else {
@@ -138,17 +195,76 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         }
         guard !isDetectingActivity else { return }
         isDetectingActivity = true
+        startStepDetection()
         activityManager.startActivityUpdates(to: .main) { [weak self] activity in
-            guard let self, let activity, activity.confidence != .low else { return }
+            guard let self, let activity else { return }
+            Task { @MainActor in
+                self.diagnostics.motionState = Self.describe(activity)
+            }
+            guard activity.confidence != .low else { return }
             if activity.walking || activity.running {
                 self.addUpdateReason(.walking)
-            } else if activity.stationary || activity.automotive || activity.cycling {
+            } else if activity.automotive || activity.cycling {
+                // 차·자전거는 곧바로 끈다 — 이 앱의 기록은 걷기에서만 나온다
+                self.removeUpdateReason(.walking)
+            } else if activity.stationary {
+                // 방금까지 걸음이 있었다면 신호 대기일 뿐이다. 그때마다 끄면
+                // 다시 켜질 때의 첫 위치 지연이 쌓여 산책이 조각난다.
+                if let lastStepAt = self.lastStepAt,
+                   Date().timeIntervalSince(lastStepAt) < Self.stepGracePeriod {
+                    return
+                }
                 self.removeUpdateReason(.walking)
             }
         }
     }
 
+    /// 걸음 수로 걷기를 알아챈다.
+    ///
+    /// 모션 활동(CMMotionActivity)은 걷기를 확정하는 데 수십 초가 걸린다. 그동안 위치를
+    /// 받지 않으니 집에서 나와 처음 100~200m가 매번 통째로 빠진다. 걸음 수는 몇 초 안에
+    /// 늘기 시작하므로 훨씬 빨리 켤 수 있다.
+    ///
+    /// 켜는 것만 걸음 수로 하고, 차·자전거를 가려내는 일은 그대로 모션 활동에 맡긴다.
+    /// '걸어야만 기록된다'는 규칙은 저장 단계의 속도 필터가 이미 지키고 있다.
+    private func startStepDetection() {
+        guard trackingMode.usesPedometer else { return }
+        guard CMPedometer.isStepCountingAvailable(), !isCountingSteps else { return }
+        isCountingSteps = true
+        pedometer.startUpdates(from: Date()) { [weak self] data, _ in
+            guard let self, let data, data.numberOfSteps.intValue > 0 else { return }
+            Task { @MainActor in
+                self.lastStepAt = Date()
+                self.addUpdateReason(.walking)
+            }
+        }
+    }
+
+    private func stopStepDetection() {
+        guard isCountingSteps else { return }
+        isCountingSteps = false
+        pedometer.stopUpdates()
+    }
+
+    /// 모션이 알려 준 상태를 사람 말로 (계기판에 그대로 보여 준다)
+    private static func describe(_ activity: CMMotionActivity) -> String {
+        var names: [String] = []
+        if activity.walking { names.append("걷기") }
+        if activity.running { names.append("뛰기") }
+        if activity.cycling { names.append("자전거") }
+        if activity.automotive { names.append("차량") }
+        if activity.stationary { names.append("멈춤") }
+        if activity.unknown || names.isEmpty { names.append("알 수 없음") }
+        let confidence = switch activity.confidence {
+        case .high: "확실"
+        case .medium: "보통"
+        default: "낮음(무시됨)"
+        }
+        return names.joined(separator: "·") + " · " + confidence
+    }
+
     func stopWalkDetection() {
+        stopStepDetection()
         guard isDetectingActivity else { return }
         isDetectingActivity = false
         activityManager.stopActivityUpdates()
@@ -170,9 +286,14 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     private func applyUpdateReasons() {
         guard !updateReasons.isEmpty else {
             manager.stopUpdatingLocation()
+            // trackingStartedAt은 여기서 지우지 않는다.
+            // 신호 대기처럼 잠깐 멈출 때마다 걷기 판정이 껐다 켜지는데,
+            // 그때마다 8초짜리 엄한 워밍업이 다시 열리면 걷는 내내 점이 거의 안 남는다.
+            // 묵은 위치를 걸러 내는 기준으로는 처음 켠 시각 하나면 충분하다.
             manager.allowsBackgroundLocationUpdates = false
             manager.desiredAccuracy = kCLLocationAccuracyHundredMeters
             manager.distanceFilter = kCLDistanceFilterNone
+            Task { @MainActor in self.diagnostics.isWalking = false }
             return
         }
 
@@ -181,18 +302,34 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
             manager.desiredAccuracy = kCLLocationAccuracyBest
             manager.distanceFilter = kCLDistanceFilterNone
         } else {
-            // 경로를 그릴 정도면 충분하다 — 배터리를 아낀다
-            manager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
-            manager.distanceFilter = Self.trackPointSpacing
+            // 지도가 곧 결과물이라 경로는 최대한 정확해야 한다.
+            // 걷는 시간은 하루 30~60분이라 이 구간만 정확도를 올려도 배터리 부담이 크지 않다.
+            manager.desiredAccuracy = trackingMode.desiredAccuracy
+            // iOS가 raw 위치로 잘라 내게 두면 튄 점이 간격을 넘겨 통과하고
+            // 정확한 점이 대신 버려질 수 있다. 전부 받아서 직접 고른다.
+            manager.distanceFilter = kCLDistanceFilterNone
         }
         manager.activityType = .fitness
-        // 걸음이 멈추면 iOS가 알아서 잠시 꺼 준다
-        manager.pausesLocationUpdatesAutomatically = true
+        // iOS가 '멈췄다'고 보고 스스로 꺼 버리면 다시 켜 줄 신호가 마땅치 않다.
+        // 벤치에 앉았다 일어난 뒤의 산책이 통째로 사라질 수 있어, 빠짐없이 기록할 때는 맡기지 않는다.
+        manager.pausesLocationUpdatesAutomatically = trackingMode.allowsAutomaticPause
         // 백그라운드 위치 모드가 없는데 이 값을 켜면 앱이 그 자리에서 죽는다.
         // 설정이 빠졌을 때 크래시 대신 '앱이 떠 있을 때만 기록'으로 물러난다.
-        if Self.hasBackgroundLocationMode, manager.authorizationStatus == .authorizedAlways {
+        //
+        // '앱 사용 중' 권한에서도 켠다. 이 권한만으로도 앱이 떠 있을 때 시작한 갱신은
+        // 주머니에 넣은 뒤까지 이어진다. 이걸 '항상 허용'에만 걸어 두면, 승급 프롬프트를
+        // 놓친 사람은 화면을 켜 둔 채 걷지 않는 한 한 점도 남지 않는다.
+        // ('항상 허용'이라야 앱을 켜지 않고 걸어도 기록되는 건 그대로다)
+        let status = manager.authorizationStatus
+        if Self.hasBackgroundLocationMode, status == .authorizedAlways || status == .authorizedWhenInUse {
             manager.allowsBackgroundLocationUpdates = true
         }
+        // 여기서부터 들어오는 점만 믿는다 (이미 켜져 있었다면 기준을 흔들지 않는다)
+        if trackingStartedAt == nil {
+            trackingStartedAt = Date()
+            jumpRejectionCount = 0
+        }
+        Task { @MainActor in self.diagnostics.isWalking = self.updateReasons.contains(.walking) }
         manager.startUpdatingLocation()
     }
 
@@ -200,11 +337,31 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     /// 정확도가 나쁘거나 차량 속도인 점은 버려서 '걸어야만 기록된다'는 규칙을 지킨다.
     @MainActor
     private func appendTrackPoint(_ location: CLLocation) {
-        guard updateReasons.contains(.walking) else { return }
+        diagnostics.noteFix(location)
+
+        guard updateReasons.contains(.walking) else { diagnostics.note(.notWalking); return }
         guard let modelContainer else { return }
-        guard location.horizontalAccuracy > 0, location.horizontalAccuracy <= 50 else { return }
-        guard abs(location.timestamp.timeIntervalSinceNow) < 60 else { return }
-        if location.speed >= 0, location.speed > Self.maxWalkingSpeed { return }
+        guard location.horizontalAccuracy > 0 else { diagnostics.note(.accuracy); return }
+
+        // 켜기 이전에 찍힌 점은 iOS가 들고 있던 지난 위치다. 지금 내가 선 자리가 아니다.
+        if let trackingStartedAt, location.timestamp < trackingStartedAt {
+            diagnostics.note(.beforeStart); return
+        }
+        guard abs(location.timestamp.timeIntervalSinceNow) < Self.maxTrackAge else {
+            diagnostics.note(.staleFix); return
+        }
+
+        // 켠 직후에는 정확도가 자리를 잡을 때까지 아주 정확한 점만 받는다.
+        // 실내에서 출발하면 첫 몇 점이 Wi-Fi 기반이라 수백 m 밀려 있다.
+        let isWarmingUp = trackingStartedAt.map { Date().timeIntervalSince($0) < Self.warmupInterval } ?? false
+        let accuracyLimit = isWarmingUp ? Self.warmupAccuracy : Self.maxStoredAccuracy
+        guard location.horizontalAccuracy <= accuracyLimit else {
+            diagnostics.note(isWarmingUp ? .warmupAccuracy : .accuracy); return
+        }
+
+        if location.speed >= 0, location.speed > Self.maxWalkingSpeed {
+            diagnostics.note(.tooFast); return
+        }
 
         let context = modelContainer.mainContext
         var descriptor = FetchDescriptor<TrackPoint>(
@@ -213,16 +370,33 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         descriptor.fetchLimit = 1
         if let last = (try? context.fetch(descriptor))?.first {
             let previous = CLLocation(latitude: last.latitude, longitude: last.longitude)
-            guard previous.distance(from: location) >= Self.trackPointSpacing else { return }
+            let gap = previous.distance(from: location)
+            let interval = location.timestamp.timeIntervalSince(last.timestamp)
+
+            // 걸어서 닿을 수 없는 자리로 튀었으면 버린다.
+            // 기기가 보고하는 speed는 -1일 수 있어서 직전 점과의 실제 이동으로 다시 잰다.
+            // 간격이 길면 그 사이 앱이 꺼져 있었을 수 있으므로 판정하지 않는다.
+            if interval > 0, interval < 60, gap / interval > Self.maxWalkingSpeed {
+                jumpRejectionCount += 1
+                // 잘못 저장된 점 하나가 그 뒤를 계속 막을 수 있다. 몇 번 이어지면 여기서부터 다시 잇는다.
+                if jumpRejectionCount <= Self.maxConsecutiveJumpRejections {
+                    diagnostics.note(.jump); return
+                }
+            }
+            jumpRejectionCount = 0
+
+            guard gap >= trackingMode.pointSpacing else { diagnostics.note(.tooClose); return }
         }
 
         context.insert(TrackPoint(
             timestamp: location.timestamp,
             latitude: location.coordinate.latitude,
             longitude: location.coordinate.longitude,
-            speed: location.speed
+            speed: location.speed,
+            horizontalAccuracy: location.horizontalAccuracy
         ))
         try? context.save()
+        diagnostics.noteAccepted()
     }
 
     /// 현재 위치를 한 번만 받아 온다. (발자국을 남기지 않고 지도 화면을 맞추는 용도)
@@ -258,10 +432,17 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         startWalkDetection()
         // 앱이 꺼져 있어도 다시 깨워 주는 장치. 걸어서 도착한 자리를 '장소'로 남긴다.
         manager.startMonitoringVisits()
-        // 과거 버전이 켜 둔 큰 위치 변화 감지를 끈다.
-        // 운전 중에도 셀 타워가 바뀔 때마다 앱을 깨워 배터리를 소모하는데,
-        // 방문 기록에는 CLVisit만으로 충분하다.
-        manager.stopMonitoringSignificantLocationChanges()
+
+        // CLVisit은 '머문 뒤'에 오는 이벤트라 걷는 중에는 오지 않는다.
+        // 그래서 앱이 종료된 채 산책을 나가면 깨워 줄 것이 아무것도 없다.
+        // 큰 위치 변화 감지가 그 구멍을 메운다. 예전에 이걸 끈 까닭은 운전 중에도
+        // 셀 타워마다 깨어나 배터리를 쓴다는 것이었는데, 그건 깨어난 '뒤'에
+        // 걷는 중일 때만 정밀 추적을 켜는 것으로 해결한다 (차 안이면 곧바로 다시 잠든다).
+        if trackingMode.wakesOnSignificantChange {
+            manager.startMonitoringSignificantLocationChanges()
+        } else {
+            manager.stopMonitoringSignificantLocationChanges()
+        }
     }
 
     /// 자동 위치 추적을 멈춘다. (수동 + 기록은 계속 사용할 수 있다)
@@ -346,6 +527,28 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
                     // 사용자가 직접 남긴 발자국은 근처라도 그대로 저장한다.
                     suppressNearby: false
                 )
+            }
+        }
+    }
+
+    /// iOS가 '멈췄다'고 보고 스스로 위치 갱신을 멈췄을 때.
+    ///
+    /// 이 뒤로는 시스템이 알아서 되살려 주지 않는다. 그냥 두면 벤치에 앉았다 일어난 뒤의
+    /// 산책이 통째로 사라진다. 큰 위치 변화 감지로 넘겨 두었다가, 다시 움직이면 되살린다.
+    func locationManagerDidPauseLocationUpdates(_ manager: CLLocationManager) {
+        Task { @MainActor in
+            self.diagnostics.note(.systemPaused)
+            guard self.updateReasons.contains(.walking) else { return }
+            manager.startMonitoringSignificantLocationChanges()
+            // 걸음이 다시 잡히면 startStepDetection의 콜백이 정밀 추적을 되살린다
+            manager.startUpdatingLocation()
+        }
+    }
+
+    func locationManagerDidResumeLocationUpdates(_ manager: CLLocationManager) {
+        Task { @MainActor in
+            if !self.trackingMode.wakesOnSignificantChange {
+                manager.stopMonitoringSignificantLocationChanges()
             }
         }
     }

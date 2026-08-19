@@ -132,12 +132,25 @@ final class TrackPoint {
     var longitude: Double
     /// 그때의 속도(m/s). 음수면 알 수 없음.
     var speed: Double
+    /// 그때 보고된 수평 정확도(m). 음수면 알 수 없음.
+    ///
+    /// 선을 다듬을 때 '이 점을 얼마나 믿을지'의 근거가 된다. 정확도를 남기지 않으면
+    /// 나중에 알고리즘을 고쳐도 지난 기록은 손댈 수 없으므로 값으로 함께 저장한다.
+    /// (이 속성이 생기기 전에 쌓인 점은 -1이 들어간다)
+    var horizontalAccuracy: Double = -1
 
-    init(timestamp: Date = .now, latitude: Double, longitude: Double, speed: Double = -1) {
+    init(
+        timestamp: Date = .now,
+        latitude: Double,
+        longitude: Double,
+        speed: Double = -1,
+        horizontalAccuracy: Double = -1
+    ) {
         self.timestamp = timestamp
         self.latitude = latitude
         self.longitude = longitude
         self.speed = speed
+        self.horizontalAccuracy = horizontalAccuracy
     }
 
     var coordinate: CLLocationCoordinate2D {

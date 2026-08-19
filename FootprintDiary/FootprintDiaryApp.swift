@@ -22,7 +22,8 @@ struct FootprintDiaryApp: App {
             // 요구사항(모든 속성 기본값/옵셔널, 관계의 inverse)을 만족하지 않으므로
             // 앱 데이터 스토어는 명시적으로 CloudKit을 끈다.
             let schema = Schema([
-                Visit.self, DiaryEntry.self, DiaryPhoto.self, PhotoSpot.self, TrackPoint.self
+                Visit.self, DiaryEntry.self, DiaryPhoto.self, PhotoSpot.self, TrackPoint.self,
+                MapStamp.self
             ])
             let configuration = ModelConfiguration(
                 schema: schema,
