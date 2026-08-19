@@ -131,6 +131,8 @@ struct AtlasMapView: UIViewRepresentable {
     let showsBasemap: Bool
     /// 지도에 찍은 스탬프
     let stamps: [MapStamp]
+    /// 확대·축소와 배율을 주고받는 손잡이
+    let proxy: MapProxy
 
     var onSelectStamp: (MapStamp) -> Void = { _ in }
     /// 지도를 길게 눌러 자리를 골랐을 때
@@ -153,6 +155,8 @@ struct AtlasMapView: UIViewRepresentable {
         )
 
         addTrackingButton(to: mapView)
+        proxy.mapView = mapView
+        context.coordinator.proxy = proxy
 
         // 길게 눌러 원하는 자리에 찍는다
         let longPress = UILongPressGestureRecognizer(
@@ -182,6 +186,7 @@ struct AtlasMapView: UIViewRepresentable {
 
     static func dismantleUIView(_ mapView: MKMapView, coordinator: Coordinator) {
         mapView.delegate = nil
+        coordinator.proxy?.mapView = nil
     }
 
     func makeCoordinator() -> Coordinator { Coordinator() }
@@ -211,6 +216,7 @@ struct AtlasMapView: UIViewRepresentable {
         private var stampSignature: String?
         private var didCenterOnUser = false
 
+        var proxy: MapProxy?
         var stampsByID: [PersistentIdentifier: MapStamp] = [:]
         var trails: [[CLLocationCoordinate2D]] = []
         var onSelectStamp: (MapStamp) -> Void = { _ in }
@@ -261,6 +267,7 @@ struct AtlasMapView: UIViewRepresentable {
 
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
             rebuildPaper(on: mapView, force: false)
+            proxy?.report(mapView)
         }
 
         // MARK: 점
@@ -414,6 +421,7 @@ struct AtlasMapView: UIViewRepresentable {
                 MKCoordinateRegion(center: coordinate, latitudinalMeters: 1_600, longitudinalMeters: 1_600),
                 animated: true
             )
+            proxy?.report(mapView)
         }
     }
 }

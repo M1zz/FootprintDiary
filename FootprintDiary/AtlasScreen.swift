@@ -98,8 +98,13 @@ struct AtlasScreen: View {
     @State private var pendingCoordinate: StampSpot?
     @State private var selectedStamp: MapStamp?
     @State private var showNoLocation = false
-    /// 배경 지도를 비춰 볼지. 기본은 꺼 둔다 — 백지에 내 발자국만 남는 것이 이 지도의 뜻이다.
-    @AppStorage("footprint.showsBasemap") private var showsBasemap = false
+    /// 배경 지도를 비추는 중인지. 누르고 있는 동안에만 참이 된다.
+    ///
+    /// 켜 두는 설정으로 두지 않는 까닭이 있다. 한 번 켜 두면 그게 기본이 되어 버리고,
+    /// 그러면 이 앱은 그냥 '지도 위에 선 긋는 앱'이 된다. 손가락을 하나 붙들고 있어야
+    /// 보이게 해 두면 비춰보기는 잠깐 확인하는 일로 남는다.
+    @State private var isPeeking = false
+    @StateObject private var mapProxy = MapProxy()
 
     private var calendar: Calendar { .current }
 
@@ -109,8 +114,9 @@ struct AtlasScreen: View {
                 AtlasMapView(
                     cells: state.cells,
                     trails: state.trails,
-                    showsBasemap: showsBasemap,
+                    showsBasemap: isPeeking,
                     stamps: stamps,
+                    proxy: mapProxy,
                     onSelectStamp: { selectedStamp = $0 },
                     onPickCoordinate: { pendingCoordinate = StampSpot(coordinate: $0) },
                     onMoveStamp: { stamp, coordinate in
@@ -130,13 +136,18 @@ struct AtlasScreen: View {
                 }
 
                 VStack(alignment: .leading, spacing: 10) {
-                    basemapToggle
+                    scaleBar
+                    peekButton
                     stampButton
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
                 .padding(.leading, 16)
                 // 애플 지도 저작권 표기를 가리지 않도록 띄운다 (가리면 심사에서 걸린다)
                 .padding(.bottom, 52)
+
+                zoomButtons
+                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
+                    .padding(.trailing, 12)
             }
             .navigationTitle("내 지도")
             .navigationBarTitleDisplayMode(.inline)
@@ -219,19 +230,67 @@ struct AtlasScreen: View {
         .accessibilityLabel("내가 그린 길 \(distanceText(state.atlasLength)), 오늘 그은 길 \(distanceText(state.todayLength))")
     }
 
-    /// 배경 지도를 잠깐 비춰 본다.
-    /// 평소에는 백지에 내 발자국만 두고, 어디였는지 알고 싶을 때만 밑에 지도를 깐다.
-    private var basemapToggle: some View {
-        Button {
-            showsBasemap.toggle()
-        } label: {
-            Image(systemName: showsBasemap ? "map.fill" : "map")
-                .font(.title3)
-                .foregroundStyle(showsBasemap ? Color.accentColor : .secondary)
-                .frame(width: 44, height: 44)
-                .background(.ultraThinMaterial, in: Circle())
+    /// 배경 지도를 잠깐 비춰 본다. 누르고 있는 동안에만 비친다.
+    private var peekButton: some View {
+        Image(systemName: isPeeking ? "map.fill" : "map")
+            .font(.title3)
+            .foregroundStyle(isPeeking ? Color(InkStyle.sealRed) : .secondary)
+            .frame(width: 44, height: 44)
+            .background(.ultraThinMaterial, in: Circle())
+            // 눌렀다 떼는 것을 바로 알아야 해서 단추가 아니라 몸짓으로 받는다
+            .gesture(
+                DragGesture(minimumDistance: 0)
+                    .onChanged { _ in if !isPeeking { isPeeking = true } }
+                    .onEnded { _ in isPeeking = false }
+            )
+            .accessibilityLabel("누르고 있는 동안 지도 비춰보기")
+            .accessibilityHint("손을 떼면 다시 종이로 돌아갑니다")
+    }
+
+    /// 지금 배율. 막대 길이가 곧 그 거리다.
+    private var scaleBar: some View {
+        VStack(alignment: .leading, spacing: 3) {
+            Text(mapProxy.scaleText)
+                .font(.caption2.monospacedDigit().weight(.semibold))
+                .foregroundStyle(.secondary)
+            Rectangle()
+                .fill(Color(InkStyle.ink).opacity(0.55))
+                .frame(width: max(mapProxy.scaleBarWidth, 1), height: 2)
+                .overlay(alignment: .leading) { tick }
+                .overlay(alignment: .trailing) { tick }
         }
-        .accessibilityLabel(showsBasemap ? "지도 비춰보기 끄기" : "지도에 비춰보기")
+        .padding(.horizontal, 10)
+        .padding(.vertical, 7)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 8))
+        .opacity(mapProxy.scaleBarWidth > 0 ? 1 : 0)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel("지도 배율. 막대 하나가 \(mapProxy.scaleText)")
+    }
+
+    private var tick: some View {
+        Rectangle()
+            .fill(Color(InkStyle.ink).opacity(0.55))
+            .frame(width: 2, height: 7)
+    }
+
+    /// 확대·축소
+    private var zoomButtons: some View {
+        VStack(spacing: 1) {
+            zoomButton("plus", label: "확대") { mapProxy.zoomIn() }
+            Divider().frame(width: 30)
+            zoomButton("minus", label: "축소") { mapProxy.zoomOut() }
+        }
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10))
+    }
+
+    private func zoomButton(_ symbol: String, label: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Image(systemName: symbol)
+                .font(.body.weight(.medium))
+                .foregroundStyle(.primary)
+                .frame(width: 42, height: 40)
+        }
+        .accessibilityLabel(label)
     }
 
     /// 지금 선 자리에 찍는다. 걷는 중에는 지도를 정확히 짚기 어려우므로 이쪽이 빠르다.
