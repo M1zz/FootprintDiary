@@ -103,6 +103,8 @@ enum StampSeal {
 
 final class StampAnnotationView: MKAnnotationView {
     static let reuseIdentifier = "stamp"
+    /// 내 위치(.max)보다 낮게 둔다
+    static let stampPriority = MKAnnotationViewZPriority(rawValue: 200)
 
     override var annotation: (any MKAnnotation)? {
         didSet {
@@ -111,6 +113,9 @@ final class StampAnnotationView: MKAnnotationView {
             centerOffset = .zero
             canShowCallout = false
             isDraggable = true
+            // 내 위치 점보다 아래에 깔린다. 스탬프가 여러 개 겹쳐도 지금 내가 어디인지는
+            // 늘 보여야 한다 — 백지 지도에서는 그것이 유일한 '지금'의 기준이다.
+            zPriority = Self.stampPriority
         }
     }
 }
@@ -309,6 +314,15 @@ struct AtlasMapView: UIViewRepresentable {
                 withIdentifier: StampAnnotationView.reuseIdentifier,
                 for: annotation
             )
+        }
+
+        /// 내 위치 점을 맨 위로 올린다.
+        /// 기본값으로 두면 같은 자리에 찍힌 스탬프가 점을 덮어 지금 어디인지 알 수 없다.
+        func mapView(_ mapView: MKMapView, didAdd views: [MKAnnotationView]) {
+            for view in views where view.annotation is MKUserLocation {
+                view.zPriority = .max
+                view.superview?.bringSubviewToFront(view)
+            }
         }
 
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
