@@ -8,10 +8,11 @@
 //  앞으로 계속 나아질 것이기 때문이다. 그래서 이 파일은 저장된 점을 건드리지 않고
 //  화면에 올릴 값만 만들어 낸다.
 //
-//  여기서 하는 일은 세 가지다.
-//   1. 튄 점 걷어내기 — 앞뒤와 견줘 혼자 멀리 떨어진 점
-//   2. 정확도 가중 평균 — 정확도가 좋다고 보고된 점에 더 무게를 준다
-//   3. 모서리 깎기 — 12m 간격 직선이 만드는 각을 둥글린다
+//  여기서 하는 일은 네 가지다.
+//   1. 끊긴 곳에서 나누기 — 다듬기는 '이어서 걸은 한 줄기' 안에서만 뜻이 있다
+//   2. 튄 점 걷어내기 — 앞뒤와 견줘 혼자 멀리 떨어진 점
+//   3. 정확도 가중 평균 — 정확도가 좋다고 보고된 점에 더 무게를 준다
+//   4. 모서리 깎기 — 12m 간격 직선이 만드는 각을 둥글린다
 //
 
 import Foundation
@@ -33,6 +34,8 @@ enum TrackSmoothing {
     static let windowRadius = 2
     /// 앞뒤 점을 이은 선에서 이만큼(m) 넘게 벗어난 점은 튄 것으로 본다
     static let outlierThreshold: CLLocationDistance = 40
+    /// 이상치 판정으로 연달아 버릴 수 있는 최대 개수
+    static let maxConsecutiveDrops = 3
     /// 모서리를 깎는 횟수. 늘릴수록 부드럽지만 점이 배로 늘어난다.
     static let cornerCuts = 2
 
@@ -40,18 +43,56 @@ enum TrackSmoothing {
     ///
     /// 튄 점을 빼기 때문에 개수가 줄어든다. 그래서 입력과 짝을 맞춰 쓰면 안 되고,
     /// 뒤 단계가 정확도를 계속 쓸 수 있도록 RawPoint 그대로 돌려준다.
+    ///
+    /// 시각 순으로 정렬된 점을 받는다고 본다.
     static func smoothed(_ points: [RawPoint]) -> [RawPoint] {
         guard points.count >= 3 else { return points }
-        return weightedAverage(removingOutliers(points))
+        return runs(of: points).flatMap { weightedAverage(removingOutliers($0)) }
     }
 
-    // MARK: - 1. 튄 점 걷어내기
+    // MARK: - 1. 끊긴 곳에서 나누기
+
+    /// 기록이 끊긴 곳에서 줄기를 나눈다.
+    ///
+    /// 이 단계가 없으면 어제 집 앞에서 끝난 점과 오늘 3km 떨어진 곳에서 시작한 점이
+    /// 한 줄에 나란히 놓인다. 그 사이의 도약을 이웃으로 견주게 되므로 오늘 걸은 점이
+    /// 통째로 '튄 점'으로 몰려 사라지고, 가중 평균은 어제의 끝을 오늘 쪽으로 끌어당긴다.
+    ///
+    /// 나누는 자리는 지도에 선을 끊는 자리와 같아야 한다. 그래서 기준을 WalkTrail에서 빌린다.
+    /// (점이 하나뿐인 줄기도 버리지 않고 그대로 돌려준다 — 버릴지는 그리는 쪽이 정한다)
+    private static func runs(of points: [RawPoint]) -> [[RawPoint]] {
+        guard !points.isEmpty else { return [] }
+
+        var runs: [[RawPoint]] = []
+        var current: [RawPoint] = [points[0]]
+
+        for (previous, point) in zip(points, points.dropFirst()) {
+            let gap = distance(previous.coordinate, point.coordinate)
+            let interval = point.timestamp.timeIntervalSince(previous.timestamp)
+            if gap > WalkTrail.maxGapDistance || interval > WalkTrail.maxGapInterval {
+                runs.append(current)
+                current = [point]
+            } else {
+                current.append(point)
+            }
+        }
+        runs.append(current)
+        return runs
+    }
+
+    // MARK: - 2. 튄 점 걷어내기
 
     /// 앞뒤 점을 곧장 이었을 때의 중간 자리에서 혼자 멀리 떨어진 점을 뺀다.
     /// 사람은 한 걸음 사이에 40m를 옆으로 옮겨 갔다가 돌아오지 않는다.
+    ///
+    /// 견주는 기준은 '마지막으로 살린 점'이다. 그래서 한 번 버리기 시작하면 기준이
+    /// 뒤처진 자리에 굳어 그 뒤가 줄줄이 버려질 수 있다. 몇 번 이어지면 기준을 지금
+    /// 점으로 옮겨 다시 잇는다 — 잘못 본 점 하나가 그 뒤를 영원히 막지 않도록.
+    /// (저장할 때도 같은 까닭으로 LocationManager가 점프 판정을 몇 번에서 끊는다)
     private static func removingOutliers(_ points: [RawPoint]) -> [RawPoint] {
         guard points.count >= 3 else { return points }
         var kept: [RawPoint] = [points[0]]
+        var dropped = 0
 
         for index in 1..<(points.count - 1) {
             let previous = kept.last ?? points[index - 1]
@@ -60,8 +101,12 @@ enum TrackSmoothing {
                 latitude: (previous.coordinate.latitude + next.coordinate.latitude) / 2,
                 longitude: (previous.coordinate.longitude + next.coordinate.longitude) / 2
             )
-            if distance(points[index].coordinate, middle) <= outlierThreshold {
+            if distance(points[index].coordinate, middle) <= outlierThreshold
+                || dropped >= maxConsecutiveDrops {
                 kept.append(points[index])
+                dropped = 0
+            } else {
+                dropped += 1
             }
         }
 
@@ -69,7 +114,7 @@ enum TrackSmoothing {
         return kept
     }
 
-    // MARK: - 2. 정확도 가중 평균
+    // MARK: - 3. 정확도 가중 평균
 
     /// 앞뒤 몇 점을 함께 보되, 정확도가 좋다고 보고된 점에 더 무게를 준다.
     /// 무게를 1/정확도²로 두는 건 오차가 정규분포일 때의 최적 가중이다.
@@ -99,7 +144,7 @@ enum TrackSmoothing {
         }
     }
 
-    // MARK: - 3. 모서리 깎기
+    // MARK: - 4. 모서리 깎기
 
     /// 채이킨(Chaikin) 방식으로 모서리를 잘라 낸다.
     /// 각 변에서 1/4, 3/4 지점을 새 점으로 삼기를 되풀이하면 꺾인 선이 곡선에 가까워진다.

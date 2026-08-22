@@ -214,7 +214,12 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         activityManager.startActivityUpdates(to: .main) { [weak self] activity in
             guard let self, let activity else { return }
             Task { @MainActor in
-                self.didReceiveMotion = true
+                // 신뢰도가 낮거나 '알 수 없음'인 것은 대답으로 치지 않는다.
+                // 그런 것까지 세면 안전장치가 풀린 채 걷기 판정은 끝내 오지 않아
+                // 걷는 내내 한 점도 남지 않는다. (멈춤·차량은 제대로 된 대답이다)
+                if activity.confidence != .low, !activity.unknown {
+                    self.didReceiveMotion = true
+                }
                 self.diagnostics.motionState = Self.describe(activity)
             }
             guard activity.confidence != .low else { return }
