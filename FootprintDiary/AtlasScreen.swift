@@ -94,6 +94,7 @@ struct AtlasScreen: View {
     @StateObject private var state = AtlasState()
     @State private var showDiary = false
     @State private var showSupport = false
+    @State private var showFilm = false
     /// 스탬프를 찍을 자리. 정해지면 고르는 화면이 열린다.
     @State private var pendingCoordinate: StampSpot?
     @State private var selectedStamp: MapStamp?
@@ -162,6 +163,14 @@ struct AtlasScreen: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                        showFilm = true
+                    } label: {
+                        Image(systemName: "play.rectangle")
+                    }
+                    .accessibilityLabel("그려지는 것 보기")
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
                         showSupport = true
                     } label: {
                         Image(systemName: "gearshape")
@@ -175,6 +184,9 @@ struct AtlasScreen: View {
             }
             .sheet(isPresented: $showSupport) {
                 FootprintDiarySupportView()
+            }
+            .sheet(isPresented: $showFilm) {
+                FilmScreen()
             }
             .sheet(item: $pendingCoordinate) { spot in
                 StampPicker { kind in
