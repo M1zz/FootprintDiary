@@ -26,6 +26,9 @@ final class MapProxy: ObservableObject {
     static let minimumSpan: CLLocationDegrees = 0.0008   // 약 90m
     static let maximumSpan: CLLocationDegrees = 90
 
+    /// 아직 화면에 알리지 못한, 방금 잰 값
+    private var pending: CLLocationDistance?
+
     func report(_ mapView: MKMapView) {
         let width = mapView.bounds.width
         guard width > 0 else { return }
@@ -33,8 +36,16 @@ final class MapProxy: ObservableObject {
             * mapView.visibleMapRect.size.width
         let value = meters / width
         // 아주 작은 흔들림까지 새로 알리면 화면이 계속 다시 그려진다
-        guard abs(value - metersPerPoint) > metersPerPoint * 0.01 || metersPerPoint == 0 else { return }
-        metersPerPoint = value
+        let latest = pending ?? metersPerPoint
+        guard abs(value - latest) > latest * 0.01 || latest == 0 else { return }
+        // 지도는 SwiftUI가 화면을 그리는 도중에도 배율이 바뀌었다고 알려 온다.
+        // 그 자리에서 값을 바꾸면 그리는 중에 그림을 고치는 셈이라, 한 박자 미룬다.
+        pending = value
+        Task { @MainActor in
+            guard let value = self.pending else { return }
+            self.pending = nil
+            self.metersPerPoint = value
+        }
     }
 
     func zoomIn() { zoom(by: 1 / Self.zoomStep) }
