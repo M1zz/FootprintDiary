@@ -105,18 +105,22 @@ final class TerrainFinder {
     /// 여의도처럼 진짜 섬은 이보다 훨씬 크므로 살아남는다.
     static let markAreaRatio = 0.003
 
-    private var waterSnapshotter: MKMapSnapshotter?
-    private var hillSnapshotter: MKMapSnapshotter?
+    /// 아직 그리고 있는 것들. 끝날 때까지 붙들고 있는다.
+    ///
+    /// 그리다 만 지도를 중간에 걷어 내면(`cancel()`) 그 순간 그림판이 쓰고 있던 자리까지
+    /// 함께 사라진다. 화면 카드는 그 자리를 아직 쓰고 있어서 앱이 통째로 내려앉는다.
+    /// 지도를 축소했다가 곧바로 확대하면 앞선 것이 채 끝나기 전에 새것을 찍게 되는데,
+    /// 바로 그 자리다. 그래서 한 번 시작한 것은 끝까지 두고, 늦게 온 결과만 버린다.
+    private var running: [MKMapSnapshotter] = []
     /// 지난 요청의 결과가 늦게 도착해 새 것을 덮어쓰지 않도록 세는 번호
     private var generation = 0
     /// 뜬 산의 본을 들고 있는다. 넓게 떠 두므로 웬만큼 걸어 다녀도 다시 찍을 일이 없다.
     private var heldHills: (rect: MKMapRect, stencil: CGImage?)?
 
-    /// 주어진 범위의 물과 산을 찾는다. 앞선 요청이 있으면 버리고 새로 찍는다.
+    /// 주어진 범위의 물과 산을 찾는다. 앞선 요청의 결과는 버린다.
     ///
     /// 물은 준 범위 그대로, 산은 넉넉히 물러난 범위에서 뜬다. 둘을 함께 찍고 다 모이면 알린다.
     func find(in rect: MKMapRect, completion: @escaping (TerrainSearch) -> Void) {
-        cancelSnapshotters()
         generation += 1
         let token = generation
 
@@ -127,7 +131,7 @@ final class TerrainFinder {
         let group = DispatchGroup()
 
         group.enter()
-        waterSnapshotter = snapshot(of: rect, coarserThan: nil) { image in
+        snapshot(of: rect, coarserThan: nil) { image in
             if let image { water = Self.stencil(of: image, keeping: .water) } else { stumbled = true }
             group.leave()
         }
@@ -138,7 +142,7 @@ final class TerrainFinder {
             hills = heldHills.stencil
         } else {
             group.enter()
-            hillSnapshotter = snapshot(of: hillRect, coarserThan: Self.hillMetersPerPixel) { image in
+            snapshot(of: hillRect, coarserThan: Self.hillMetersPerPixel) { image in
                 if let image { hills = Self.stencil(of: image, keeping: .hill) } else { stumbled = true }
                 group.leave()
             }
@@ -147,8 +151,6 @@ final class TerrainFinder {
         group.notify(queue: .main) { [weak self] in
             // 이미 다른 자리를 보고 있다면 늦게 온 이 결과는 버린다
             guard let self, token == self.generation else { return }
-            self.waterSnapshotter = nil
-            self.hillSnapshotter = nil
 
             guard !stumbled else { completion(.failed); return }
             self.heldHills = (rect: hillRect, stencil: hills)
@@ -158,14 +160,12 @@ final class TerrainFinder {
         }
     }
 
+    /// 지금 찍고 있는 것의 결과를 더는 쓰지 않겠다는 뜻이다.
+    ///
+    /// 그리던 것을 중간에 걷어 내지는 않는다. 걷어 내는 그 순간이 앱이 내려앉는 자리다.
+    /// 그림은 제 속도로 끝나게 두고, 다 되면 아무도 받지 않아 조용히 버려진다.
     func cancel() {
-        cancelSnapshotters()
         generation += 1
-    }
-
-    private func cancelSnapshotters() {
-        waterSnapshotter?.cancel(); waterSnapshotter = nil
-        hillSnapshotter?.cancel(); hillSnapshotter = nil
     }
 
     /// 한 범위를 찍는다. 화소를 훑는 일은 메인에서 하면 지도가 뚝뚝 끊기므로 뒤로 물린다.
@@ -173,7 +173,7 @@ final class TerrainFinder {
         of rect: MKMapRect,
         coarserThan metersPerPixel: CLLocationDistance?,
         then handle: @escaping (UIImage?) -> Void
-    ) -> MKMapSnapshotter {
+    ) {
         let options = MKMapSnapshotter.Options()
         options.mapRect = rect
 
@@ -192,7 +192,11 @@ final class TerrainFinder {
             height = Self.stencilMaxHeight
             width = height / max(aspect, 0.0001)
         }
-        options.size = CGSize(width: max(width, 1), height: max(height, 1))
+        // 셈이 어긋나 크기가 성하지 않으면(0이거나 값이 아니면) 찍기를 그만둔다.
+        // 그런 크기를 주면 그림판이 자리를 잡지 못한 채 허물어지고, 앱이 함께 내려앉는다.
+        let size = CGSize(width: Self.sane(width), height: Self.sane(height))
+        guard size.width > 0, size.height > 0 else { handle(nil); return }
+        options.size = size
         // 관심지점을 지워 두면 그 표시가 물 위에 얹혀 본에 구멍을 내지 않는다
         let configuration = MKStandardMapConfiguration(emphasisStyle: .muted)
         configuration.pointOfInterestFilter = .excludingAll
@@ -204,10 +208,17 @@ final class TerrainFinder {
         ])
 
         let snapshotter = MKMapSnapshotter(options: options)
-        snapshotter.start(with: DispatchQueue.global(qos: .userInitiated)) { snapshot, _ in
+        // 끝날 때까지 붙들어 둔다. 그리는 중에 놓아 버리면 걷어 내는 것과 다를 바 없다.
+        running.append(snapshotter)
+        snapshotter.start(with: DispatchQueue.global(qos: .userInitiated)) { [weak self] snapshot, _ in
             handle(snapshot?.image)
+            DispatchQueue.main.async { self?.running.removeAll { $0 === snapshotter } }
         }
-        return snapshotter
+    }
+
+    /// 성한 픽셀 수인지 본다. 값이 아니거나 끝이 없으면 0을 돌려 '찍지 말라'고 알린다.
+    private static func sane(_ value: CGFloat) -> CGFloat {
+        value.isFinite ? max(value.rounded(), 1) : 0
     }
 
     /// 산의 본을 뜰 범위. 좁으면 애플 지도가 큰 산을 아예 그리지 않으므로 뒤로 물러선다.
