@@ -28,6 +28,24 @@ enum WalkHeatmap {
     /// 칸 한 변의 길이(m). 경로 점 간격(8~12m)과 비슷해야 점이 이가 빠지지 않는다.
     static let cellMeters: CLLocationDistance = 10
 
+    /// 칸의 크기를 재는 위도.
+    ///
+    /// 격자를 위경도 '각도'로 끊으면 가로 한 칸이 세로 한 칸보다 좁아진다. 경도 1도의
+    /// 실제 폭은 위도로 올라갈수록 줄어들기 때문이다 — 서울에서는 위도 1도의 0.79배다.
+    /// 그러면 점이 좌우로는 맞붙고 위아래로는 벌어져, 격자무늬가 아니라 줄무늬로 보인다.
+    ///
+    /// 그래서 각도가 아니라 지도 좌표로 끊는다. 메르카토르는 각을 지키는 투영이라,
+    /// 지도 좌표에서 정사각이면 화면에서도 어느 위도에서나 정사각이다. 대신 칸의 실제
+    /// 크기가 위도마다 조금씩 달라진다 — 이 위도에서 딱 cellMeters고, 남쪽으로 갈수록
+    /// 조금 크고 북쪽으로 갈수록 조금 작다. 눈에 보이는 것은 어디서나 고른 격자다.
+    static let referenceLatitude: CLLocationDegrees = 37.5
+
+    /// 칸 한 변 (지도 좌표).
+    /// 격자를 끊는 자와 점을 그리는 자가 같아야 간격이 고르게 나온다.
+    static var cellMapSize: Double {
+        MKMapPointsPerMeterAtLatitude(referenceLatitude) * cellMeters
+    }
+
     /// 이 횟수 이상 지나면 가장 짙게 그린다.
     /// 데이터가 늘 때마다 색이 바뀌지 않도록 기준을 고정해 둔다.
     static let hottest = 10
@@ -35,18 +53,14 @@ enum WalkHeatmap {
     /// 통과 묶음들을 칸으로 센다.
     /// 한 통과가 같은 칸을 여러 번 밟아도 1로 세야 '몇 번 다닌 길'이 된다.
     static func cells(passes: [[WalkTrail.Point]], today: Date, calendar: Calendar = .current) -> [HeatCell] {
-        let step = SpatialGrid.step(meters: cellMeters)
+        let step = cellMapSize
         var counts: [GridCell: Int] = [:]
         var todayCells: Set<GridCell> = []
 
         for pass in passes {
             var touched: Set<GridCell> = []
             for point in pass {
-                let cell = SpatialGrid.cell(
-                    latitude: point.coordinate.latitude,
-                    longitude: point.coordinate.longitude,
-                    step: step
-                )
+                let cell = gridCell(at: MKMapPoint(point.coordinate), step: step)
                 touched.insert(cell)
                 if calendar.isDate(point.timestamp, inSameDayAs: today) {
                     todayCells.insert(cell)
@@ -58,17 +72,26 @@ enum WalkHeatmap {
         }
 
         return counts.map { cell, passes in
-            let origin = SpatialGrid.origin(of: cell, step: step)
-            return HeatCell(
+            HeatCell(
                 // 칸의 한가운데에 점을 찍는다
-                center: CLLocationCoordinate2D(
-                    latitude: origin.latitude + step / 2,
-                    longitude: origin.longitude + step / 2
-                ),
+                center: center(of: cell, step: step),
                 passes: passes,
                 isToday: todayCells.contains(cell)
             )
         }
+    }
+
+    /// 지도 좌표를 정사각 격자의 한 칸으로 끊는다
+    private static func gridCell(at point: MKMapPoint, step: Double) -> GridCell {
+        GridCell(row: Int(floor(point.y / step)), col: Int(floor(point.x / step)))
+    }
+
+    /// 칸의 한가운데 좌표
+    private static func center(of cell: GridCell, step: Double) -> CLLocationCoordinate2D {
+        MKMapPoint(
+            x: (Double(cell.col) + 0.5) * step,
+            y: (Double(cell.row) + 0.5) * step
+        ).coordinate
     }
 }
 
@@ -89,8 +112,9 @@ final class DotGridOverlay: NSObject, MKOverlay {
     var coordinate: CLLocationCoordinate2D { boundingMapRect.origin.coordinate }
 
     init(cells: [HeatCell]) {
-        let latitude = cells.first?.center.latitude ?? 37.5
-        cellMapSize = MKMapPointsPerMeterAtLatitude(latitude) * WalkHeatmap.cellMeters
+        // 격자를 끊은 자와 같은 자로 잰다. 다른 자로 재면 점이 칸보다 크거나 작아져
+        // 좌우로는 맞붙고 위아래로는 벌어진다.
+        cellMapSize = WalkHeatmap.cellMapSize
 
         dots = cells.map { cell in
             Dot(
