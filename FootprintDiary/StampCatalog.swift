@@ -21,21 +21,33 @@ struct StampKind: Identifiable, Hashable {
     let group: String
 }
 
+/// 스탬프의 갈래.
+///
+/// 200가지를 한 판에 늘어놓으면 훑어보는 것만으로도 지친다. 그래서 갈래를 먼저 보여 주고
+/// 그 안에서 고르게 한다 — 갈래는 열한 개뿐이라 한눈에 들어온다.
+/// 갈래마다 표지 그림을 하나씩 두어, 글자를 읽기 전에 눈으로 먼저 짚이도록 했다.
+struct StampGroup: Identifiable, Hashable {
+    let name: String
+    let symbolName: String
+
+    var id: String { name }
+}
+
 enum StampCatalog {
 
     /// 묶음의 차례 (고르는 화면에 이 순서로 나온다)
-    static let groups: [String] = [
-        "기준점",
-        "길",
-        "쉼터",
-        "자연",
-        "동물",
-        "가게",
-        "먹을 곳",
-        "시설",
-        "운동·놀이",
-        "조심",
-        "기억"
+    static let groups: [StampGroup] = [
+        StampGroup(name: "기준점", symbolName: "mappin.and.ellipse"),
+        StampGroup(name: "길", symbolName: "arrow.triangle.turn.up.right.diamond.fill"),
+        StampGroup(name: "쉼터", symbolName: "chair.lounge.fill"),
+        StampGroup(name: "자연", symbolName: "tree.fill"),
+        StampGroup(name: "동물", symbolName: "pawprint.fill"),
+        StampGroup(name: "가게", symbolName: "bag.fill"),
+        StampGroup(name: "먹을 곳", symbolName: "fork.knife"),
+        StampGroup(name: "시설", symbolName: "building.2.fill"),
+        StampGroup(name: "운동·놀이", symbolName: "figure.run"),
+        StampGroup(name: "조심", symbolName: "exclamationmark.triangle.fill"),
+        StampGroup(name: "기억", symbolName: "heart.fill")
     ]
 
     static let all: [StampKind] = [
@@ -265,8 +277,8 @@ enum StampCatalog {
         byID[id] ?? fallback
     }
 
-    static func kinds(in group: String) -> [StampKind] {
-        all.filter { $0.group == group }
+    static func kinds(in group: StampGroup) -> [StampKind] {
+        all.filter { $0.group == group.name }
     }
 
     /// 이름으로 찾기. 200가지가 넘어 훑어보기만으로는 못 찾는다.

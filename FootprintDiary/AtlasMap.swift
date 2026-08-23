@@ -366,8 +366,9 @@ struct AtlasMapView: UIViewRepresentable {
         // MARK: 스탬프
 
         func syncStamps(on mapView: MKMapView, stamps: [MapStamp]) {
+            // 이름까지 넣어야 이름을 붙이고 돌아왔을 때 지도가 다시 그려진다
             let signature = stamps
-                .map { "\($0.persistentModelID.hashValue):\($0.kindID)" }
+                .map { "\($0.persistentModelID.hashValue):\($0.kindID):\($0.placeName)" }
                 .joined(separator: ",")
             guard signature != stampSignature else { return }
             stampSignature = signature

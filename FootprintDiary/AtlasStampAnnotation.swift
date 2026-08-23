@@ -19,14 +19,17 @@ import SwiftData
 final class StampAnnotation: NSObject, MKAnnotation {
     let id: PersistentIdentifier
     let kind: StampKind
+    /// 내가 붙인 이름 (없으면 빈 글). 도장 아래에 적힌다.
+    let placeName: String
     /// 끌어서 옮길 수 있어야 하므로 MKAnnotation 규약대로 쓰기 가능해야 한다
     @objc dynamic var coordinate: CLLocationCoordinate2D
-    var title: String? { kind.title }
+    var title: String? { placeName.isEmpty ? kind.title : placeName }
 
     init(stamp: MapStamp) {
         // 모델이 지워져도 지도가 흔들리지 않도록 값을 복사해 둔다
         self.id = stamp.persistentModelID
         self.kind = stamp.kind
+        self.placeName = stamp.placeName
         self.coordinate = stamp.coordinate
     }
 }
@@ -71,6 +74,21 @@ final class StampAnnotationView: MKAnnotationView {
     /// 내 위치(.max)보다 낮게 둔다
     static let stampPriority = MKAnnotationViewZPriority(rawValue: 200)
 
+    /// 이름을 붙인 스탬프만 도장 아래에 이름을 단다.
+    /// 종류 이름까지 모두 달면 백지 지도가 글씨로 덮인다 — 내가 부르는 이름만 남긴다.
+    private let nameLabel = StampNameLabel()
+
+    override init(annotation: (any MKAnnotation)?, reuseIdentifier: String?) {
+        super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
+        nameLabel.isUserInteractionEnabled = false
+        addSubview(nameLabel)
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:)는 쓰지 않는다")
+    }
+
     override var annotation: (any MKAnnotation)? {
         didSet {
             guard let stamp = annotation as? StampAnnotation else { return }
@@ -81,6 +99,63 @@ final class StampAnnotationView: MKAnnotationView {
             // 내 위치 점보다 아래에 깔린다. 스탬프가 여러 개 겹쳐도 지금 내가 어디인지는
             // 늘 보여야 한다 — 백지 지도에서는 그것이 유일한 '지금'의 기준이다.
             zPriority = Self.stampPriority
+
+            nameLabel.text = stamp.placeName
+            nameLabel.isHidden = stamp.placeName.isEmpty
+            setNeedsLayout()
         }
+    }
+
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        guard !nameLabel.isHidden else { return }
+        let width = bounds.width > 0 ? bounds.width : StampSeal.size.width
+        let height = bounds.height > 0 ? bounds.height : StampSeal.size.height
+        let fits = nameLabel.sizeThatFits(CGSize(width: StampNameLabel.maxWidth, height: .greatestFiniteMagnitude))
+        nameLabel.frame = CGRect(
+            x: (width - fits.width) / 2,
+            y: height + 2,
+            width: fits.width,
+            height: fits.height
+        )
+    }
+}
+
+/// 도장 아래에 붙는 이름표. 종이 위에 먹으로 쓴 것처럼 보이게 둔다.
+private final class StampNameLabel: UILabel {
+    /// 이름이 길어도 지도를 가리지 않도록 여기서 자른다
+    static let maxWidth: CGFloat = 96
+
+    private let insets = UIEdgeInsets(top: 2, left: 5, bottom: 2, right: 5)
+
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        let base = UIFont.systemFont(ofSize: 10, weight: .semibold)
+        font = UIFont(descriptor: base.fontDescriptor.withDesign(.serif) ?? base.fontDescriptor, size: 10)
+        textColor = InkStyle.ink
+        backgroundColor = InkStyle.paper.withAlphaComponent(0.82)
+        textAlignment = .center
+        numberOfLines = 1
+        lineBreakMode = .byTruncatingTail
+        layer.cornerRadius = 4
+        clipsToBounds = true
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:)는 쓰지 않는다")
+    }
+
+    override func drawText(in rect: CGRect) {
+        super.drawText(in: rect.inset(by: insets))
+    }
+
+    override func sizeThatFits(_ size: CGSize) -> CGSize {
+        let inner = CGSize(width: min(size.width, Self.maxWidth) - insets.left - insets.right, height: size.height)
+        let fits = super.sizeThatFits(inner)
+        return CGSize(
+            width: min(fits.width + insets.left + insets.right, Self.maxWidth),
+            height: fits.height + insets.top + insets.bottom
+        )
     }
 }
