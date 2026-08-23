@@ -15,6 +15,9 @@ import MapKit
 
 struct FilmScreen: View {
     @Query(sort: \TrackPoint.timestamp) private var track: [TrackPoint]
+    /// 필름 도중에 도장으로 찍을 자리들 (처음 밟은 자리와 손으로 찍은 스탬프)
+    @Query(sort: \Visit.arrivalDate) private var visits: [Visit]
+    @Query(sort: \MapStamp.createdAt) private var stamps: [MapStamp]
     @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) private var colorScheme
 
@@ -267,22 +270,31 @@ struct FilmScreen: View {
     @ViewBuilder
     private var summary: some View {
         if let reel, !reel.isEmpty {
-            // 하루짜리 필름에 '8월 23일 → 8월 23일'이라 적으면 읽는 사람이 한 번 멈칫한다
-            if calendar.isDate(reel.start, inSameDayAs: reel.end) {
-                Text(WalkFilm.dayFormatter.string(from: reel.start))
+            VStack(spacing: 4) {
+                // 하루짜리 필름에 '8월 23일 → 8월 23일'이라 적으면 읽는 사람이 한 번 멈칫한다
+                if calendar.isDate(reel.start, inSameDayAs: reel.end) {
+                    Text(WalkFilm.dayFormatter.string(from: reel.start))
+                        .font(.footnote)
+                        .foregroundStyle(.secondary)
+                        .frame(maxWidth: .infinity)
+                } else {
+                    HStack {
+                        Text(WalkFilm.dayFormatter.string(from: reel.start))
+                        Spacer(minLength: 8)
+                        Text("→").foregroundStyle(.secondary)
+                        Spacer(minLength: 8)
+                        Text(WalkFilm.dayFormatter.string(from: reel.end))
+                    }
                     .font(.footnote)
                     .foregroundStyle(.secondary)
-                    .frame(maxWidth: .infinity)
-            } else {
-                HStack {
-                    Text(WalkFilm.dayFormatter.string(from: reel.start))
-                    Spacer(minLength: 8)
-                    Text("→").foregroundStyle(.secondary)
-                    Spacer(minLength: 8)
-                    Text(WalkFilm.dayFormatter.string(from: reel.end))
                 }
-                .font(.footnote)
-                .foregroundStyle(.secondary)
+
+                // 도장이 몇 번 찍히는지 미리 알려 준다 — 기간을 고르는 손이 이 수를 보고 움직인다
+                if !reel.marks.isEmpty {
+                    Text("새로 닿은 자리 \(reel.marks.count)곳이 지나는 길에 찍힙니다")
+                        .font(.caption)
+                        .foregroundStyle(Color(InkStyle.sealRed))
+                }
             }
         }
     }
@@ -359,7 +371,18 @@ struct FilmScreen: View {
             earliest: track.first?.timestamp,
             picked: picked
         )
-        let built = WalkFilm.reel(from: track, from: interval.start, to: interval.end)
+        let arrivals = FilmMarks.arrivals(
+            visits: visits,
+            stamps: stamps,
+            from: interval.start,
+            to: interval.end
+        )
+        let built = WalkFilm.reel(
+            from: track,
+            arrivals: arrivals,
+            from: interval.start,
+            to: interval.end
+        )
 
         reel = built
         startedAt = Date()
