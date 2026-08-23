@@ -51,6 +51,20 @@ final class MapProxy: ObservableObject {
     func zoomIn() { zoom(by: 1 / Self.zoomStep) }
     func zoomOut() { zoom(by: Self.zoomStep) }
 
+    /// 목록에서 고른 자리를 지도 한가운데로 데려온다.
+    ///
+    /// 내 위치를 따라다니던 중이면 먼저 그 손을 놓는다. 놓지 않으면 데려다 놓자마자
+    /// 지도가 다시 내 자리로 돌아가 버려, 무엇을 골랐는지 볼 겨를이 없다.
+    func show(_ coordinate: CLLocationCoordinate2D) {
+        guard let mapView else { return }
+        mapView.setUserTrackingMode(.none, animated: false)
+        mapView.setRegion(
+            MKCoordinateRegion(center: coordinate, latitudinalMeters: 400, longitudinalMeters: 400),
+            animated: true
+        )
+        report(mapView)
+    }
+
     private func zoom(by factor: Double) {
         guard let mapView else { return }
         var region = mapView.region

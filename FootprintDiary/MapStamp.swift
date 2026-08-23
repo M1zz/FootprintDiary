@@ -32,13 +32,33 @@ final class MapStamp {
     var createdAt: Date = Date.now
     /// 덧붙인 한 줄 (없어도 된다)
     var note: String = ""
+    /// 내가 붙인 이름 (없으면 종류 이름으로 부른다).
+    ///
+    /// 종류는 '카페'까지밖에 말해 주지 못한다. 그런데 몇 달 뒤에 지도를 열어 그 자리가
+    /// 무엇이었는지 되살리는 것은 늘 '퇴근길 카페' 쪽이다. 그래서 부르던 이름을
+    /// 따로 받아 둔다 — 값이 없던 시절에 찍힌 스탬프도 깨지지 않도록 기본값을 준다.
+    var placeName: String = ""
 
-    init(kind: StampKind, coordinate: CLLocationCoordinate2D, createdAt: Date = .now, note: String = "") {
+    /// 이 자리에서 찍은 사진.
+    ///
+    /// 하루치로 묶는 일기 사진과 달리 자리에 붙는다. '그날 어땠나'가 아니라
+    /// '거기가 어땠나'를 남기는 것이라, 몇 달 뒤에 그 자리를 다시 찾을 때 쓰인다.
+    @Relationship(deleteRule: .cascade, inverse: \StampPhoto.stamp)
+    var photos: [StampPhoto] = []
+
+    init(
+        kind: StampKind,
+        coordinate: CLLocationCoordinate2D,
+        createdAt: Date = .now,
+        note: String = "",
+        placeName: String = ""
+    ) {
         self.kindID = kind.id
         self.latitude = coordinate.latitude
         self.longitude = coordinate.longitude
         self.createdAt = createdAt
         self.note = note
+        self.placeName = placeName
     }
 
     var coordinate: CLLocationCoordinate2D {
@@ -48,5 +68,32 @@ final class MapStamp {
     /// 저장된 값이 알 수 없는 종류이면 '그 밖'으로 떨어뜨린다 (앱이 깨지지 않게)
     var kind: StampKind {
         StampCatalog.kind(id: kindID)
+    }
+
+    /// 지도와 화면에서 이 스탬프를 부르는 이름
+    var displayName: String {
+        placeName.isEmpty ? kind.title : placeName
+    }
+
+    /// 찍은 차례대로 (붙인 차례가 아니라 찍은 때가 이야기의 차례다)
+    var photosInOrder: [StampPhoto] {
+        photos.sorted { $0.createdAt < $1.createdAt }
+    }
+}
+
+/// 스탬프 한 자리에 붙는 사진.
+///
+/// 스탬프가 지워지면 함께 지워진다 (자리가 없으면 그 사진도 갈 곳이 없다).
+@Model
+final class StampPhoto {
+    @Attribute(.externalStorage)
+    var data: Data = Data()
+    var createdAt: Date = Date.now
+    /// 어느 자리의 사진인지 (MapStamp.photos의 짝)
+    var stamp: MapStamp?
+
+    init(data: Data, createdAt: Date = .now) {
+        self.data = data
+        self.createdAt = createdAt
     }
 }

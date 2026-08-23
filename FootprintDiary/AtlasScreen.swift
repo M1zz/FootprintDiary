@@ -87,6 +87,7 @@ final class AtlasState: ObservableObject {
 struct AtlasScreen: View {
     @Query(sort: \TrackPoint.timestamp) private var track: [TrackPoint]
     @Query(sort: \MapStamp.createdAt) private var stamps: [MapStamp]
+    @Query(sort: \Visit.arrivalDate) private var visits: [Visit]
 
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject private var locationManager: LocationManager
@@ -95,6 +96,7 @@ struct AtlasScreen: View {
     @State private var showDiary = false
     @State private var showSupport = false
     @State private var showFilm = false
+    @State private var showStampList = false
     /// 스탬프를 찍을 자리. 정해지면 고르는 화면이 열린다.
     @State private var pendingCoordinate: StampSpot?
     @State private var selectedStamp: MapStamp?
@@ -108,6 +110,11 @@ struct AtlasScreen: View {
     @StateObject private var mapProxy = MapProxy()
 
     private var calendar: Calendar { .current }
+
+    /// 오늘 오래 머물렀는데 아직 지도에 남기지 않은 자리
+    private var asking: [Visit] {
+        StayPrompt.candidates(visits: visits, stamps: stamps, calendar: calendar)
+    }
 
     var body: some View {
         NavigationStack {
@@ -161,6 +168,24 @@ struct AtlasScreen: View {
                     }
                     .accessibilityLabel("일지")
                 }
+                ToolbarItem(placement: .topBarLeading) {
+                    Button {
+                        showStampList = true
+                    } label: {
+                        Image(systemName: "list.bullet")
+                            // 물어볼 자리가 있으면 작은 점 하나로만 알린다.
+                            // 알림을 띄우면 걷는 중에 끼어들고, 아무 표시도 없으면 영영 안 본다.
+                            .overlay(alignment: .topTrailing) {
+                                if !asking.isEmpty {
+                                    Circle()
+                                        .fill(Color(InkStyle.sealRed))
+                                        .frame(width: 7, height: 7)
+                                        .offset(x: 5, y: -3)
+                                }
+                            }
+                    }
+                    .accessibilityLabel(asking.isEmpty ? "내가 찍은 곳" : "내가 찍은 곳, 물어볼 것 있음")
+                }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         showFilm = true
@@ -187,6 +212,12 @@ struct AtlasScreen: View {
             }
             .sheet(isPresented: $showFilm) {
                 FilmScreen()
+            }
+            .sheet(isPresented: $showStampList) {
+                // 목록에서 고른 자리로 지도를 데려간다. 목록은 이미 제 손으로 닫힌 뒤다.
+                StampListScreen { coordinate in
+                    mapProxy.show(coordinate)
+                }
             }
             .sheet(item: $pendingCoordinate) { spot in
                 StampPicker { kind in
