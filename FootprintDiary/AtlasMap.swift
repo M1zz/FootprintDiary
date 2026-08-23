@@ -10,6 +10,7 @@
 //
 //  걸은 자리는 선이 아니라 촘촘한 점으로 찍는다. 선으로 그리면 한 번 지난 길과
 //  백 번 지난 길이 똑같아 보이지만, 점은 자주 지난 자리일수록 짙어진다.
+//  빛깔은 그날그날의 원색으로 찍히고 다시 밟지 않으면 해가 갈수록 바랜다 (WalkHeatmap.swift).
 //
 //  지도에 얹는 낙관은 AtlasStampAnnotation.swift에, 먹과 종이의 빛깔은 InkStyle.swift에 있다.
 //
@@ -327,7 +328,10 @@ struct AtlasMapView: UIViewRepresentable {
         // MARK: 점
 
         func syncDots(on mapView: MKMapView, cells: [HeatCell]) {
-            let signature = "\(cells.count)-\(cells.reduce(0) { $0 + $1.passes })"
+            // 마지막으로 밟은 때까지 지문에 넣는다. 같은 칸을 다시 밟으면 칸 수도 통과 수도
+            // 그대로인 채 빛깔만 바뀌는 날이 있는데, 그것까지 봐야 다시 그린다.
+            let latest = cells.map(\.lastVisit).max() ?? .distantPast
+            let signature = "\(cells.count)-\(cells.reduce(0) { $0 + $1.passes })-\(Int(latest.timeIntervalSinceReferenceDate))"
             guard signature != dotSignature else { return }
             dotSignature = signature
 

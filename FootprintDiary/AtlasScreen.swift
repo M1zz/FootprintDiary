@@ -66,7 +66,7 @@ final class AtlasState: ObservableObject {
             let novelty = WalkNovelty.newDistances(for: walks)
 
             let segments = walks.flatMap(\.segments)
-            let cells = WalkHeatmap.cells(passes: segments, today: startOfToday, calendar: calendar)
+            let cells = WalkHeatmap.cells(passes: segments, calendar: calendar)
             // 길게 눌러 붙일 때만 쓰는 선. 모서리를 깎아 두면 손가락이 길에 더 잘 붙는다.
             let trails = segments.map { TrackSmoothing.rounded($0.map(\.coordinate)) }
 
@@ -228,7 +228,7 @@ struct AtlasScreen: View {
             VStack(alignment: .trailing, spacing: 2) {
                 Text(state.todayLength >= 1 ? "+\(distanceText(state.todayLength))" : "—")
                     .font(.headline)
-                    .foregroundStyle(state.todayLength >= 1 ? Color(InkStyle.vermilion) : .secondary)
+                    .foregroundStyle(state.todayLength >= 1 ? Color(DotPalette.freshColor(forDay: calendar.startOfDay(for: .now))) : .secondary)
                     .contentTransition(.numericText())
                 Text("오늘 그은 길")
                     .font(.caption)
