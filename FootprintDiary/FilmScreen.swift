@@ -18,26 +18,65 @@ struct FilmScreen: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(\.colorScheme) private var colorScheme
 
-    /// 미리 골라 둘 만한 기간
+    /// 잘라 볼 만한 기간.
+    ///
+    /// 오래 걸은 것만 필름이 되는 것은 아니다. 오늘 하루도, 지난 주말도 한 편이 된다.
+    /// 그리고 어느 하루가 특별했는지는 걸은 사람만 알기 때문에, 날을 짚어 고르는 길을
+    /// 반드시 함께 둔다 — 미리 골라 둔 것만으로는 그 하루를 못 부른다.
     private enum Span: String, CaseIterable, Identifiable {
+        case today = "오늘"
+        case weekend = "주말"
         case week = "최근 7일"
         case month = "최근 30일"
         case year = "최근 1년"
         case all = "전부"
+        case pick = "고른 날"
 
         var id: String { rawValue }
 
-        func start(from end: Date, calendar: Calendar, earliest: Date?) -> Date {
+        /// 하루만 담는 갈피인지 (빈 화면의 말과 요약의 모양이 달라진다)
+        var isSingleDay: Bool { self == .today || self == .pick }
+
+        func interval(now: Date, calendar: Calendar, earliest: Date?, picked: Date) -> DateInterval {
             switch self {
-            case .week: return calendar.date(byAdding: .day, value: -6, to: end) ?? end
-            case .month: return calendar.date(byAdding: .day, value: -29, to: end) ?? end
-            case .year: return calendar.date(byAdding: .year, value: -1, to: end) ?? end
-            case .all: return earliest ?? end
+            case .today:
+                return DateInterval(start: calendar.startOfDay(for: now), end: now)
+            case .weekend:
+                return Self.latestWeekend(at: now, calendar: calendar)
+            case .week:
+                return span(days: -6, to: now, calendar: calendar)
+            case .month:
+                return span(days: -29, to: now, calendar: calendar)
+            case .year:
+                return DateInterval(start: calendar.date(byAdding: .year, value: -1, to: now) ?? now, end: now)
+            case .all:
+                return DateInterval(start: min(earliest ?? now, now), end: now)
+            case .pick:
+                let start = calendar.startOfDay(for: picked)
+                let next = calendar.date(byAdding: .day, value: 1, to: start) ?? start
+                return DateInterval(start: min(start, now), end: min(next, now))
             }
+        }
+
+        private func span(days: Int, to now: Date, calendar: Calendar) -> DateInterval {
+            DateInterval(start: calendar.date(byAdding: .day, value: days, to: now) ?? now, end: now)
+        }
+
+        /// 가장 가까운 주말 — 토요일 0시부터 일요일이 끝날 때까지.
+        /// 주말 한복판이면 지금까지만 담는다 (아직 걷지 않은 시간은 필름에 없다).
+        private static func latestWeekend(at now: Date, calendar: Calendar) -> DateInterval {
+            let today = calendar.startOfDay(for: now)
+            // 1=일 … 7=토. 토요일까지 며칠을 되짚어야 하는지를 셈한다.
+            let backToSaturday = calendar.component(.weekday, from: today) % 7
+            let saturday = calendar.date(byAdding: .day, value: -backToSaturday, to: today) ?? today
+            let monday = calendar.date(byAdding: .day, value: 2, to: saturday) ?? now
+            return DateInterval(start: min(saturday, now), end: min(monday, now))
         }
     }
 
     @State private var span: Span = .month
+    /// '고른 날'에 쓰는 날짜. 처음에는 오늘.
+    @State private var picked = Date()
     @State private var reel: WalkFilm.Reel?
     @State private var terrain: TerrainMask?
     @State private var isFindingTerrain = false
@@ -68,6 +107,7 @@ struct FilmScreen: View {
         NavigationStack {
             VStack(spacing: 16) {
                 spanPicker
+                dayPicker
                 stage
                 summary
                 exportButton
@@ -82,7 +122,7 @@ struct FilmScreen: View {
                     Button("닫기") { dismiss() }
                 }
             }
-            .task(id: span) { rebuild() }
+            .task(id: reelKey) { rebuild() }
             .sheet(item: $movie) { movie in
                 ShareSheet(items: [movie.url])
             }
@@ -99,12 +139,54 @@ struct FilmScreen: View {
 
     // MARK: - 기간 고르기
 
+    /// 갈피가 일곱이라 마디 단추로는 글씨가 뭉갠다. 옆으로 미는 알약으로 늘어놓는다.
     private var spanPicker: some View {
-        Picker("기간", selection: $span) {
-            ForEach(Span.allCases) { Text($0.rawValue).tag($0) }
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 8) {
+                ForEach(Span.allCases) { item in
+                    Button {
+                        span = item
+                    } label: {
+                        Text(item.rawValue)
+                            .font(.subheadline.weight(span == item ? .semibold : .regular))
+                            .foregroundStyle(span == item ? Color.white : Color(InkStyle.ink))
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 8)
+                            .background(
+                                Capsule().fill(
+                                    span == item
+                                        ? Color(InkStyle.sealRed)
+                                        : Color(InkStyle.ink).opacity(0.08)
+                                )
+                            )
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityAddTraits(span == item ? [.isSelected] : [])
+                }
+            }
+            .padding(.vertical, 2)
         }
-        .pickerStyle(.segmented)
         .disabled(isExporting)
+    }
+
+    /// 날을 짚어 고를 때만 나온다
+    @ViewBuilder
+    private var dayPicker: some View {
+        if span == .pick {
+            DatePicker("어느 날", selection: $picked, in: pickableDays, displayedComponents: .date)
+                .datePickerStyle(.compact)
+                .environment(\.locale, Locale(identifier: "ko_KR"))
+                .font(.subheadline)
+                .disabled(isExporting)
+        }
+    }
+
+    /// 고를 수 있는 날의 범위 — 처음 걸은 날부터 오늘까지.
+    /// 하루 안에서는 값이 바뀌지 않도록 자정에 맞춰 둔다.
+    private var pickableDays: ClosedRange<Date> {
+        let today = calendar.startOfDay(for: .now)
+        let first = calendar.startOfDay(for: track.first?.timestamp ?? today)
+        return min(first, today)...today
     }
 
     // MARK: - 미리보기
@@ -171,7 +253,7 @@ struct FilmScreen: View {
             Image(systemName: "figure.walk")
                 .font(.largeTitle)
                 .foregroundStyle(.secondary)
-            Text("이 기간에는 그린 길이 없어요")
+            Text(span.isSingleDay ? "이 날에는 그린 길이 없어요" : "이 기간에는 그린 길이 없어요")
                 .font(.headline)
             Text("걸으면 지나온 길이 순서대로 쌓입니다.")
                 .font(.footnote)
@@ -185,15 +267,23 @@ struct FilmScreen: View {
     @ViewBuilder
     private var summary: some View {
         if let reel, !reel.isEmpty {
-            HStack {
+            // 하루짜리 필름에 '8월 23일 → 8월 23일'이라 적으면 읽는 사람이 한 번 멈칫한다
+            if calendar.isDate(reel.start, inSameDayAs: reel.end) {
                 Text(WalkFilm.dayFormatter.string(from: reel.start))
-                Spacer(minLength: 8)
-                Text("→").foregroundStyle(.secondary)
-                Spacer(minLength: 8)
-                Text(WalkFilm.dayFormatter.string(from: reel.end))
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity)
+            } else {
+                HStack {
+                    Text(WalkFilm.dayFormatter.string(from: reel.start))
+                    Spacer(minLength: 8)
+                    Text("→").foregroundStyle(.secondary)
+                    Spacer(minLength: 8)
+                    Text(WalkFilm.dayFormatter.string(from: reel.end))
+                }
+                .font(.footnote)
+                .foregroundStyle(.secondary)
             }
-            .font(.footnote)
-            .foregroundStyle(.secondary)
         }
     }
 
@@ -257,11 +347,19 @@ struct FilmScreen: View {
         }
     }
 
+    /// 다시 감아야 하는지를 가리는 열쇠. 갈피를 바꾸든 날을 바꾸든 필름을 새로 만든다.
+    private var reelKey: String {
+        "\(span.rawValue)|\(calendar.startOfDay(for: picked).timeIntervalSince1970)"
+    }
+
     private func rebuild() {
-        let end = Date()
-        let earliest = track.first?.timestamp
-        let start = span.start(from: end, calendar: calendar, earliest: earliest)
-        let built = WalkFilm.reel(from: track, from: start, to: end)
+        let interval = span.interval(
+            now: Date(),
+            calendar: calendar,
+            earliest: track.first?.timestamp,
+            picked: picked
+        )
+        let built = WalkFilm.reel(from: track, from: interval.start, to: interval.end)
 
         reel = built
         startedAt = Date()
