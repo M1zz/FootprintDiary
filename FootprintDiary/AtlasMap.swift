@@ -1,5 +1,5 @@
 //
-//  AtlasMapView.swift
+//  AtlasMap.swift
 //  FootprintDiary
 //
 //  대동여지도 — 백지 위에 내가 걸은 자리만 남는다.
@@ -11,133 +11,12 @@
 //  걸은 자리는 선이 아니라 촘촘한 점으로 찍는다. 선으로 그리면 한 번 지난 길과
 //  백 번 지난 길이 똑같아 보이지만, 점은 자주 지난 자리일수록 짙어진다.
 //
+//  지도에 얹는 낙관은 AtlasStampAnnotation.swift에, 먹과 종이의 빛깔은 InkStyle.swift에 있다.
+//
 
 import SwiftUI
 import MapKit
 import SwiftData
-
-/// 먹과 종이의 빛깔
-enum InkStyle {
-    /// 먹 — 밝은 배경에선 짙은 먹, 어두운 배경에선 종이빛으로 뒤집는다
-    static let ink = UIColor { traits in
-        traits.userInterfaceStyle == .dark
-        ? UIColor(red: 0.97, green: 0.94, blue: 0.87, alpha: 1)
-        : UIColor(red: 0.11, green: 0.12, blue: 0.16, alpha: 1)
-    }
-
-    /// 배경 지도를 덮는 종이. 옛 지도의 닥종이처럼 아주 옅은 누런빛.
-    static let paper = UIColor { traits in
-        traits.userInterfaceStyle == .dark
-        ? UIColor(red: 0.09, green: 0.09, blue: 0.10, alpha: 1)
-        : UIColor(red: 0.96, green: 0.95, blue: 0.91, alpha: 1)
-    }
-
-    /// 오늘 지난 자리는 주묵(붉은 먹)으로 찍는다.
-    /// 옛 지도가 길을 붉은 선으로 표시하던 것과 같고, 오늘 무엇을 더했는지 바로 보인다.
-    static let vermilion = UIColor { traits in
-        traits.userInterfaceStyle == .dark
-        ? UIColor(red: 1.0, green: 0.45, blue: 0.35, alpha: 1)
-        : UIColor(red: 0.78, green: 0.20, blue: 0.13, alpha: 1)
-    }
-
-    /// 물빛. 종이에 미리 인쇄돼 있는 무늬라 먹보다 한참 옅다.
-    /// 걸어서 채울 수 없는 곳이므로 눈에 먼저 들어오면 안 되고, 그저 뭍의 테두리를 잡아 준다.
-    static let water = UIColor { traits in
-        traits.userInterfaceStyle == .dark
-        ? UIColor(red: 0.13, green: 0.19, blue: 0.26, alpha: 1)
-        : UIColor(red: 0.80, green: 0.86, blue: 0.89, alpha: 1)
-    }
-
-    /// 산·숲빛. 물보다 한참 옅다.
-    ///
-    /// 산자락에서는 화면의 거의 전부가 이 빛이 된다. 짙게 깔면 종이가 사라지고
-    /// 발자국이 묻힌다. 게다가 산은 물과 달리 걸어서 갈 수 있는 곳이라,
-    /// 여기는 '아직 채울 몫이 남은 자리'로 보여야 한다. 그래서 겨우 알아볼 만큼만 얹는다.
-    static let hill = UIColor { traits in
-        traits.userInterfaceStyle == .dark
-        ? UIColor(red: 0.12, green: 0.15, blue: 0.11, alpha: 1)
-        : UIColor(red: 0.91, green: 0.92, blue: 0.85, alpha: 1)
-    }
-
-    /// 낙관을 찍는 인주 빛. 주묵보다 짙어 점과 도장이 섞이지 않는다.
-    static let sealRed = UIColor { traits in
-        traits.userInterfaceStyle == .dark
-        ? UIColor(red: 0.86, green: 0.30, blue: 0.24, alpha: 1)
-        : UIColor(red: 0.66, green: 0.14, blue: 0.11, alpha: 1)
-    }
-}
-
-// MARK: - 스탬프
-
-/// 지도에 찍힌 스탬프 하나
-final class StampAnnotation: NSObject, MKAnnotation {
-    let id: PersistentIdentifier
-    let kind: StampKind
-    /// 끌어서 옮길 수 있어야 하므로 MKAnnotation 규약대로 쓰기 가능해야 한다
-    @objc dynamic var coordinate: CLLocationCoordinate2D
-    var title: String? { kind.title }
-
-    init(stamp: MapStamp) {
-        // 모델이 지워져도 지도가 흔들리지 않도록 값을 복사해 둔다
-        self.id = stamp.persistentModelID
-        self.kind = stamp.kind
-        self.coordinate = stamp.coordinate
-    }
-}
-
-/// 낙관처럼 보이는 도장 그림. SF Symbol을 붉은 인장 안에 새긴다.
-enum StampSeal {
-    static let size = CGSize(width: 30, height: 30)
-    private static var cache: [String: UIImage] = [:]
-
-    static func image(for kind: StampKind) -> UIImage {
-        if let cached = cache[kind.id] { return cached }
-
-        let renderer = UIGraphicsImageRenderer(size: size)
-        let image = renderer.image { _ in
-            let rect = CGRect(origin: .zero, size: size)
-            // 옛 도장처럼 모서리가 둥근 네모로 찍는다
-            let seal = UIBezierPath(roundedRect: rect.insetBy(dx: 1, dy: 1), cornerRadius: 8)
-            InkStyle.sealRed.setFill()
-            seal.fill()
-            UIColor.white.withAlphaComponent(0.9).setStroke()
-            seal.lineWidth = 1.5
-            seal.stroke()
-
-            let configuration = UIImage.SymbolConfiguration(pointSize: 14, weight: .semibold)
-            if let glyph = UIImage(systemName: kind.symbolName, withConfiguration: configuration)?
-                .withTintColor(.white, renderingMode: .alwaysOriginal) {
-                glyph.draw(in: CGRect(
-                    x: (size.width - glyph.size.width) / 2,
-                    y: (size.height - glyph.size.height) / 2,
-                    width: glyph.size.width,
-                    height: glyph.size.height
-                ))
-            }
-        }
-        cache[kind.id] = image
-        return image
-    }
-}
-
-final class StampAnnotationView: MKAnnotationView {
-    static let reuseIdentifier = "stamp"
-    /// 내 위치(.max)보다 낮게 둔다
-    static let stampPriority = MKAnnotationViewZPriority(rawValue: 200)
-
-    override var annotation: (any MKAnnotation)? {
-        didSet {
-            guard let stamp = annotation as? StampAnnotation else { return }
-            image = StampSeal.image(for: stamp.kind)
-            centerOffset = .zero
-            canShowCallout = false
-            isDraggable = true
-            // 내 위치 점보다 아래에 깔린다. 스탬프가 여러 개 겹쳐도 지금 내가 어디인지는
-            // 늘 보여야 한다 — 백지 지도에서는 그것이 유일한 '지금'의 기준이다.
-            zPriority = Self.stampPriority
-        }
-    }
-}
 
 // MARK: - 지도
 
