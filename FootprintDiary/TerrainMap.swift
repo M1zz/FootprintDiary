@@ -202,10 +202,10 @@ final class TerrainFinder {
         configuration.pointOfInterestFilter = .excludingAll
         options.preferredConfiguration = configuration
         // 늘 밝은 쪽으로, 배율은 1로 찍는다. 화면에 그대로 나갈 그림이 아니라 본일 뿐이다.
-        options.traitCollection = UITraitCollection(traitsFrom: [
-            UITraitCollection(userInterfaceStyle: .light),
-            UITraitCollection(displayScale: 1)
-        ])
+        options.traitCollection = UITraitCollection { traits in
+            traits.userInterfaceStyle = .light
+            traits.displayScale = 1
+        }
 
         let snapshotter = MKMapSnapshotter(options: options)
         // 끝날 때까지 붙들어 둔다. 그리는 중에 놓아 버리면 걷어 내는 것과 다를 바 없다.
