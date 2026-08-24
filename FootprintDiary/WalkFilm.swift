@@ -110,9 +110,12 @@ enum WalkFilm {
     ///
     /// 그릴 때 다듬는 규칙은 지도와 똑같이 따른다 — 같은 기록인데 지도와 영상의 모양이
     /// 다르면 안 되기 때문이다. (TrackSmoothing 참고)
+    /// - Parameter anchors: 스탬프를 찍었거나 머물렀던 자리. 점이 몇 개 없어도
+    ///   이 자리가 있는 지점은 앵글에 남긴다 — 뜻이 있어서 남긴 자리이기 때문이다.
     static func reel(
         from track: [TrackPoint],
         arrivals: [Arrival] = [],
+        anchors: [CLLocationCoordinate2D] = [],
         from start: Date,
         to end: Date
     ) -> Reel {
@@ -132,7 +135,7 @@ enum WalkFilm {
         let thinned = thinning(smoothed, to: maxPoints)
         let points = thinned.map { MKMapPoint($0.coordinate) }
         let times = thinned.map(\.timestamp)
-        let rect = bounds(of: points)
+        let rect = bounds(of: points, anchors: anchors.map(MKMapPoint.init))
 
         return Reel(
             points: points,
@@ -208,33 +211,102 @@ enum WalkFilm {
         return (0..<limit).map { points[Int((Double($0) * step).rounded())] }
     }
 
-    /// 화면을 맞출 때 양 끝에서 이만큼(비율)은 셈에 넣지 않는다.
-    ///
-    /// 비행기를 타고 다녀왔거나 위치가 한 번 크게 튀면 점 하나 때문에 범위가 대륙을 건너간다.
-    /// 그러면 정작 걸어 다닌 동네는 화면에서 점 하나로 쪼그라든다. 양 끝을 조금 잘라 내면
-    /// 늘 걷는 자리에 화면이 맞는다. 잘라 낸 점도 그리기는 그린다 — 화면 밖으로 나갈 뿐이다.
-    static let framingTrim = 0.02
+    // MARK: 앵글
 
-    /// 점들을 담을 범위. 가장자리에 여백을 둬야 붓끝이 화면 밖에 걸리지 않는다.
-    private static func bounds(of points: [MKMapPoint]) -> MKMapRect {
+    /// 점 사이가 이만큼(m) 벌어지면 다른 '지점'으로 본다.
+    ///
+    /// 걸어서는 이만큼을 한 걸음에 건너뛸 수 없다. 400m가 벌어져 있다는 것은 그 사이를
+    /// 차나 지하철로 건너갔다는 뜻이고, 그러면 앞뒤는 같은 동네가 아니라 다른 자리다.
+    static let clusterGap: CLLocationDistance = 400
+
+    /// 이보다 점이 적은 지점은, 스탬프도 방문도 없으면 앵글에서 뺀다.
+    ///
+    /// 점 다섯 개면 60m 남짓이다. 내려서 가게에 들어갔다 나온 정도라 '걸은 자리'라고
+    /// 하기 어려운데, 그 몇 걸음 때문에 화면이 몇 킬로미터씩 물러나 정작 하루 종일 걸은
+    /// 동네가 손톱만 해진다.
+    static let minClusterPoints = 6
+
+    /// 스탬프나 머무름이 이 거리(m) 안에 있으면 그 지점은 뜻이 있는 자리로 본다.
+    /// (FilmMarks가 같은 자리로 치는 거리와 같은 자를 쓴다)
+    static let anchorRadius: CLLocationDistance = 150
+
+    /// 앵글이 물러날 수 있는 한계(m).
+    ///
+    /// 걸어 다닌 자리가 여럿일 때, 그 사이의 빈 들판까지 담느라 화면이 끝없이 물러나는 것을
+    /// 막는다. 다만 한 지점 안에서는 자르지 않는다 — 온종일 걸은 10km 산길은 그 자체가
+    /// 하루의 동선이라, 잘라 내면 볼 것이 없어진다.
+    static let maxFrameSpan: CLLocationDistance = 3_000
+
+    /// 가장자리 여백 (붓끝이 화면 밖에 걸리지 않도록)
+    static let framePadding = 0.12
+
+    /// 점들을 담을 범위.
+    ///
+    /// 예전에는 양 끝에서 몇 %를 잘라 내는 것으로 튀는 점을 걸렀다. 점 하나가 튀는 것은
+    /// 그것으로 걸러졌지만, 먼 카페에 다녀와 그 앞에서 스무 걸음쯤 걸은 날은 걸러지지
+    /// 않았다. 그 스무 걸음이 2%를 넘기 때문이다. 그래서 몇 %가 아니라 '지점'으로 센다.
+    private static func bounds(of points: [MKMapPoint], anchors: [MKMapPoint]) -> MKMapRect {
         guard !points.isEmpty else { return .world }
 
-        let trim = min(points.count / 2, max(1, Int(Double(points.count) * framingTrim)))
-        let xs = points.map(\.x).sorted()
-        let ys = points.map(\.y).sorted()
-        let low = trim, high = points.count - 1 - trim
-        guard low <= high else { return .world }
+        let groups = clusters(of: points)
+        // 뜻이 있는 지점만 남긴다 — 오래 걸었거나(점이 여럿), 남길 만해서 남긴 자리거나.
+        let kept = groups.filter { group in
+            group.count >= minClusterPoints || holdsAnchor(group, anchors: anchors)
+        }
+        // 하루 종일 몇 걸음뿐이라 남는 지점이 없으면, 있는 그대로 다 담는다.
+        let chosen = (kept.isEmpty ? groups : kept).sorted { $0.count > $1.count }
 
-        let minX = xs[low], maxX = xs[high]
-        let minY = ys[low], maxY = ys[high]
+        // 가장 오래 걸은 지점은 통째로 담는다. 여기서부터 넓혀 나간다.
+        var rect = box(of: chosen[0])
+        let latitude = rect.origin.coordinate.latitude
+        let limit = max(
+            MKMapPointsPerMeterAtLatitude(latitude) * maxFrameSpan,
+            max(rect.size.width, rect.size.height) * 1.5
+        )
+        for group in chosen.dropFirst() {
+            let merged = rect.union(box(of: group))
+            guard max(merged.size.width, merged.size.height) <= limit else { continue }
+            rect = merged
+        }
 
         // 한 자리에만 머문 기록이면 너비가 0이 된다. 그때도 볼 수 있게 최소 크기를 준다.
-        let width = max(maxX - minX, 1_000.0)
-        let height = max(maxY - minY, 1_000.0)
-        let rect = MKMapRect(x: minX, y: minY, width: width, height: height)
-        return rect
-            .insetBy(dx: -width * 0.12, dy: -height * 0.12)
+        let width = max(rect.size.width, 1_000.0)
+        let height = max(rect.size.height, 1_000.0)
+        return MKMapRect(x: rect.midX - width / 2, y: rect.midY - height / 2, width: width, height: height)
+            .insetBy(dx: -width * framePadding, dy: -height * framePadding)
             .intersection(.world)
+    }
+
+    /// 이어 걸은 점들을 지점 하나로 묶는다. 사이가 크게 벌어지면 거기서 끊는다.
+    private static func clusters(of points: [MKMapPoint]) -> [[MKMapPoint]] {
+        var groups: [[MKMapPoint]] = []
+        var current: [MKMapPoint] = []
+        for point in points {
+            if let last = current.last, last.distance(to: point) > clusterGap {
+                groups.append(current)
+                current = []
+            }
+            current.append(point)
+        }
+        if !current.isEmpty { groups.append(current) }
+        return groups
+    }
+
+    /// 이 지점 안(가장자리 조금 밖까지)에 스탬프나 머무름이 있는지
+    private static func holdsAnchor(_ group: [MKMapPoint], anchors: [MKMapPoint]) -> Bool {
+        guard !anchors.isEmpty else { return false }
+        let rect = box(of: group)
+        let margin = MKMapPointsPerMeterAtLatitude(rect.origin.coordinate.latitude) * anchorRadius
+        let reach = rect.insetBy(dx: -margin, dy: -margin)
+        return anchors.contains { reach.contains($0) }
+    }
+
+    /// 점들을 감싸는 네모
+    private static func box(of points: [MKMapPoint]) -> MKMapRect {
+        let xs = points.map(\.x), ys = points.map(\.y)
+        let minX = xs.min() ?? 0, maxX = xs.max() ?? 0
+        let minY = ys.min() ?? 0, maxY = ys.max() ?? 0
+        return MKMapRect(x: minX, y: minY, width: maxX - minX, height: maxY - minY)
     }
 
     // MARK: - 그리기

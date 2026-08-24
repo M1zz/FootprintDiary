@@ -377,9 +377,19 @@ struct FilmScreen: View {
             from: interval.start,
             to: interval.end
         )
+        // 앵글에서 지키고 싶은 자리들 — 손으로 찍은 스탬프와 머물렀던 곳.
+        // 몇 걸음뿐이라도 여기는 내가 뜻이 있어 남긴 자리라 화면 밖으로 밀려나면 안 된다.
+        let anchors = stamps
+            .filter { $0.createdAt >= interval.start && $0.createdAt <= interval.end }
+            .map(\.coordinate)
+            + visits
+            .filter { $0.arrivalDate >= interval.start && $0.arrivalDate <= interval.end }
+            .map(\.coordinate)
+
         let built = WalkFilm.reel(
             from: track,
             arrivals: arrivals,
+            anchors: anchors,
             from: interval.start,
             to: interval.end
         )
