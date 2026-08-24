@@ -107,6 +107,12 @@ struct AtlasScreen: View {
     /// 그러면 이 앱은 그냥 '지도 위에 선 긋는 앱'이 된다. 손가락을 하나 붙들고 있어야
     /// 보이게 해 두면 비춰보기는 잠깐 확인하는 일로 남는다.
     @State private var isPeeking = false
+    /// 빈 지도 안내를 아직 띄우고 있는지.
+    ///
+    /// 이 안내는 화면 한가운데에 서는데, 거기가 마침 내 위치 점이 서는 자리다. 걷기 시작한
+    /// 사람은 '지금 내가 어디인가'부터 보고 싶은데 안내가 그 위를 덮고 있으면 안내가 아니라
+    /// 가림막이다. 그래서 읽을 만큼만 보여 주고 스스로 비켜난다.
+    @State private var showsEmptyHint = true
     @StateObject private var mapProxy = MapProxy()
 
     private var calendar: Calendar { .current }
@@ -139,8 +145,9 @@ struct AtlasScreen: View {
                     .padding(.horizontal)
                     .padding(.top, 8)
 
-                if state.isReady && state.atlasLength == 0 {
+                if isEmptyMap && showsEmptyHint {
                     emptyHint
+                        .transition(.opacity)
                 }
 
                 VStack(alignment: .leading, spacing: 10) {
@@ -227,6 +234,9 @@ struct AtlasScreen: View {
             }
             .sheet(item: $selectedStamp) { stamp in
                 StampDetailView(stamp: stamp) {
+                    // 고른 표시를 먼저 거둔다. 지워진 것을 붙들고 있으면 시트가 닫히는
+                    // 동안 이미 없는 자리를 다시 그리게 된다.
+                    selectedStamp = nil
                     modelContext.delete(stamp)
                     try? modelContext.save()
                 }
@@ -238,8 +248,25 @@ struct AtlasScreen: View {
             }
             .onAppear { state.rebuild(track: track, calendar: calendar) }
             .onChange(of: track.count) { state.rebuild(track: track, calendar: calendar) }
+            // 빈 지도가 확인된 순간부터 센다. 그리기가 끝나기 전부터 세면 셈이 다 지난 뒤에
+            // 안내가 떠서 곧바로 사라지는 꼴이 된다.
+            .task(id: isEmptyMap) {
+                guard isEmptyMap else { return }
+                showsEmptyHint = true
+                try? await Task.sleep(for: .seconds(Self.emptyHintDuration))
+                guard !Task.isCancelled else { return }
+                withAnimation(.easeOut(duration: 0.4)) { showsEmptyHint = false }
+            }
         }
     }
+
+    /// 아직 한 걸음도 그려지지 않은 지도인지
+    private var isEmptyMap: Bool {
+        state.isReady && state.atlasLength == 0
+    }
+
+    /// 빈 지도 안내를 띄워 두는 시간(초). 한 번 읽을 만큼만.
+    private static let emptyHintDuration: TimeInterval = 5
 
     // MARK: - 요약
 

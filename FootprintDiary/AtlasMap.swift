@@ -137,7 +137,6 @@ struct AtlasMapView: UIViewRepresentable {
         static let terrainSettleDelay: TimeInterval = 0.45
         /// 막혔을 때 다시 해 보기까지 두는 시간(초). 서둘러 다시 조르면 더 오래 막힌다.
         static let terrainRetryDelay: TimeInterval = 4
-        private var stampSignature: String?
         private var didCenterOnUser = false
 
         var proxy: MapProxy?
@@ -365,16 +364,47 @@ struct AtlasMapView: UIViewRepresentable {
 
         // MARK: 스탬프
 
+        /// 지도 위의 도장을 지금 기록과 맞춘다.
+        ///
+        /// 예전에는 스탬프 목록으로 서명을 만들어 두고 '서명이 같으면 아무것도 하지 않는'
+        /// 지름길을 썼다. 빠르긴 하나 지름길이 한 번이라도 어긋나면 지운 도장이 화면에
+        /// 그대로 남고, 그러면 다시 그릴 방법이 없다 — 서명은 이미 같아져 있기 때문이다.
+        /// 그래서 지금 얹혀 있는 것과 있어야 할 것을 그때그때 맞대어 본다. 도장은 많아야
+        /// 수백 개라 맞대는 값이 싸고, 바뀐 것만 손대므로 지도가 깜빡이지도 않는다.
         func syncStamps(on mapView: MKMapView, stamps: [MapStamp]) {
-            // 이름까지 넣어야 이름을 붙이고 돌아왔을 때 지도가 다시 그려진다
-            let signature = stamps
-                .map { "\($0.persistentModelID.hashValue):\($0.kindID):\($0.placeName)" }
-                .joined(separator: ",")
-            guard signature != stampSignature else { return }
-            stampSignature = signature
+            // 지워진 모델이 배열에 한 박자 더 남아 있을 수 있다. 그것으로 도장을 찍으면
+            // 방금 지운 자리가 되살아난 것처럼 보인다.
+            let live = stamps.filter { !$0.isDeleted }
+            let wanted = Dictionary(
+                live.map { ($0.persistentModelID, $0) },
+                uniquingKeysWith: { first, _ in first }
+            )
 
-            mapView.removeAnnotations(mapView.annotations.compactMap { $0 as? StampAnnotation })
-            mapView.addAnnotations(stamps.map(StampAnnotation.init))
+            var kept: Set<PersistentIdentifier> = []
+            var stale: [StampAnnotation] = []
+            for annotation in mapView.annotations.compactMap({ $0 as? StampAnnotation }) {
+                guard let stamp = wanted[annotation.id] else {
+                    stale.append(annotation)
+                    continue
+                }
+                // 도장 그림과 이름표는 만들 때 값을 복사해 두므로, 갈래나 이름이 바뀌면 새로 찍는다
+                if annotation.kind.id != stamp.kindID || annotation.placeName != stamp.placeName {
+                    stale.append(annotation)
+                    continue
+                }
+                kept.insert(annotation.id)
+                // 끌어 옮긴 자리가 기록과 어긋나 있으면 맞춘다
+                if annotation.coordinate.latitude != stamp.latitude
+                    || annotation.coordinate.longitude != stamp.longitude {
+                    annotation.coordinate = stamp.coordinate
+                }
+            }
+
+            if !stale.isEmpty { mapView.removeAnnotations(stale) }
+            let added = live
+                .filter { !kept.contains($0.persistentModelID) }
+                .map(StampAnnotation.init)
+            if !added.isEmpty { mapView.addAnnotations(added) }
         }
 
         func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
@@ -414,8 +444,7 @@ struct AtlasMapView: UIViewRepresentable {
                   let annotation = view.annotation as? StampAnnotation,
                   let stamp = stampsByID[annotation.id] else { return }
             onMoveStamp(stamp, annotation.coordinate)
-            // 옮긴 자리를 그대로 두려면 다음 sync가 다시 얹지 않아야 한다
-            stampSignature = nil
+            // 옮긴 자리는 맞대어 볼 때 저절로 맞춰진다 (도장을 다시 얹지 않는다)
         }
 
         // MARK: 길게 눌러 찍기
