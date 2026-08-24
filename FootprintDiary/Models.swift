@@ -4,6 +4,11 @@
 //
 //  SwiftData 모델 정의
 //
+//  모든 속성에 기본값이 있고, 관계에는 반드시 짝(inverse)이 있다. 이것은 취향이 아니라
+//  아이클라우드에 얹기 위한 조건이다 — CloudKit은 기기마다 스키마가 어긋날 수 있다고 보고,
+//  값이 비어 오는 경우와 관계를 거꾸로 되짚는 길을 모두 요구한다. 새 속성을 더할 때도
+//  기본값을 반드시 주어야 한다. 안 그러면 저장소가 아예 열리지 않는다.
+//
 
 import Foundation
 import SwiftData
@@ -12,16 +17,16 @@ import CoreLocation
 /// 한 번의 "머무름"(방문)을 나타내는 발자국 하나
 @Model
 final class Visit {
-    var arrivalDate: Date
+    var arrivalDate: Date = Date.now
     var departureDate: Date?
-    var latitude: Double
-    var longitude: Double
+    var latitude: Double = 0
+    var longitude: Double = 0
     /// 사용자가 붙인 장소 이름 (예: "회사", "단골 카페")
     var placeName: String?
     /// 역지오코딩으로 얻은 주소 (참고용)
     var address: String?
     /// 사용자에게 "여기는 어디였나요?"를 이미 물어봤는지 여부
-    var isNamed: Bool
+    var isNamed: Bool = false
 
     // MARK: 발견 (수집 요소)
     // 기존 저장소와의 호환을 위해 모두 기본값을 가진다 (경량 마이그레이션).
@@ -133,11 +138,11 @@ extension CLLocationCoordinate2D {
 /// 걷기·뛰기로 판정된 동안에만 쌓이고, 차량 속도로 움직인 구간은 들어오지 않는다.
 @Model
 final class TrackPoint {
-    var timestamp: Date
-    var latitude: Double
-    var longitude: Double
+    var timestamp: Date = Date.now
+    var latitude: Double = 0
+    var longitude: Double = 0
     /// 그때의 속도(m/s). 음수면 알 수 없음.
-    var speed: Double
+    var speed: Double = -1
     /// 그때 보고된 수평 정확도(m). 음수면 알 수 없음.
     ///
     /// 선을 다듬을 때 '이 점을 얼마나 믿을지'의 근거가 된다. 정확도를 남기지 않으면
@@ -168,12 +173,12 @@ final class TrackPoint {
 /// 아직 밟지 않은 자리에만 생기고, 그 자리에 가서 사진을 찍으면 수집된다.
 @Model
 final class PhotoSpot {
-    var latitude: Double
-    var longitude: Double
-    var name: String
+    var latitude: Double = 0
+    var longitude: Double = 0
+    var name: String = ""
     /// MKPointOfInterestCategory의 rawValue (표시할 아이콘을 고르는 데 쓴다)
     var category: String?
-    var createdAt: Date
+    var createdAt: Date = Date.now
     /// 사진을 찍은 시각 (nil이면 아직 안 간 곳)
     var collectedAt: Date?
 
@@ -217,12 +222,14 @@ final class PhotoSpot {
 @Model
 final class DiaryEntry {
     /// 해당 날짜의 자정 (하루를 식별하는 키)
-    var dayStart: Date
-    var text: String
-    var updatedAt: Date
+    var dayStart: Date = Date.now
+    var text: String = ""
+    var updatedAt: Date = Date.now
 
-    @Relationship(deleteRule: .cascade)
-    var photos: [DiaryPhoto]
+    /// 그날 붙인 사진들.
+    /// 옵셔널 배열인 것은 CloudKit이 여럿을 거느리는 관계에 요구하는 조건이다.
+    @Relationship(deleteRule: .cascade, inverse: \DiaryPhoto.entry)
+    var photos: [DiaryPhoto]?
 
     init(dayStart: Date, text: String = "", photos: [DiaryPhoto] = []) {
         self.dayStart = dayStart
@@ -230,14 +237,33 @@ final class DiaryEntry {
         self.updatedAt = .now
         self.photos = photos
     }
+
+    /// 붙인 차례대로
+    var photosInOrder: [DiaryPhoto] {
+        (photos ?? []).sorted { $0.createdAt < $1.createdAt }
+    }
+
+    var photoCount: Int { photos?.count ?? 0 }
+
+    /// 옵셔널 배열은 append로 넣으면 비어 있을 때 조용히 아무 일도 일어나지 않는다.
+    /// 그래서 넣고 빼는 길을 여기 하나로 둔다.
+    func addPhoto(_ photo: DiaryPhoto) {
+        photos = (photos ?? []) + [photo]
+    }
+
+    func removePhoto(_ photo: DiaryPhoto) {
+        photos = (photos ?? []).filter { $0.persistentModelID != photo.persistentModelID }
+    }
 }
 
 /// 일기에 첨부된 사진
 @Model
 final class DiaryPhoto {
     @Attribute(.externalStorage)
-    var data: Data
-    var createdAt: Date
+    var data: Data = Data()
+    var createdAt: Date = Date.now
+    /// 어느 날의 일기에 붙은 사진인지 (DiaryEntry.photos의 짝)
+    var entry: DiaryEntry?
 
     init(data: Data, createdAt: Date = .now) {
         self.data = data

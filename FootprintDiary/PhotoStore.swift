@@ -57,7 +57,7 @@ enum PhotoStore {
     @MainActor
     static func attachToDiary(data: Data, on day: Date, context: ModelContext) {
         let entry = entry(for: day, context: context)
-        entry.photos.append(DiaryPhoto(data: data))
+        entry.addPhoto(DiaryPhoto(data: data))
         entry.updatedAt = .now
     }
 }

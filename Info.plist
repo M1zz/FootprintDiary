@@ -3,10 +3,13 @@
 <plist version="1.0">
 <dict>
 	<!-- 걷는 동안에는 앱이 뒤로 가 있어도 경로를 계속 남겨야 한다.
+	     remote-notification은 아이클라우드 몫이다 — 다른 기기에서 바뀐 것을
+	     앱을 켜기 전에 받아 두어야 열었을 때 이미 최신이다.
 	     나머지 키는 빌드 설정(INFOPLIST_KEY_*)에서 생성되어 여기에 합쳐진다. -->
 	<key>UIBackgroundModes</key>
 	<array>
 		<string>location</string>
+		<string>remote-notification</string>
 	</array>
 </dict>
 </plist>

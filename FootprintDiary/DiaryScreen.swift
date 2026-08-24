@@ -97,11 +97,7 @@ struct DiaryScreen: View {
     }
 
     private func photo(for day: Date) -> UIImage? {
-        guard let data = entry(for: day)?
-            .photos
-            .sorted(by: { $0.createdAt < $1.createdAt })
-            .first?
-            .data else { return nil }
+        guard let data = entry(for: day)?.photosInOrder.first?.data else { return nil }
         return UIImage(data: data)
     }
 
@@ -175,11 +171,10 @@ struct DiaryDayView: View {
             }
 
             Section("사진") {
-                if let entry, !entry.photos.isEmpty {
+                if let entry, entry.photoCount > 0 {
                     ScrollView(.horizontal, showsIndicators: false) {
                         HStack(spacing: 8) {
-                            ForEach(entry.photos.sorted(by: { $0.createdAt < $1.createdAt }),
-                                    id: \.persistentModelID) { photo in
+                            ForEach(entry.photosInOrder, id: \.persistentModelID) { photo in
                                 photoThumbnail(photo)
                             }
                         }
@@ -277,7 +272,7 @@ struct DiaryDayView: View {
                 let stored = await Task.detached(priority: .userInitiated) {
                     PhotoStore.downscaledJPEG(from: data) ?? data
                 }.value
-                entry.photos.append(DiaryPhoto(data: stored))
+                entry.addPhoto(DiaryPhoto(data: stored))
             }
         }
         entry.updatedAt = .now
@@ -287,7 +282,7 @@ struct DiaryDayView: View {
 
     private func deletePhoto(_ photo: DiaryPhoto) {
         if let entry {
-            entry.photos.removeAll { $0.persistentModelID == photo.persistentModelID }
+            entry.removePhoto(photo)
         }
         modelContext.delete(photo)
         try? modelContext.save()

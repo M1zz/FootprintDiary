@@ -10,6 +10,7 @@ import LeeoKit
 
 struct FootprintDiarySupportView: View {
     @EnvironmentObject private var locationManager: LocationManager
+    @EnvironmentObject private var cloudSync: CloudSync
     @State private var showDiagnostics = false
 
     var body: some View {
@@ -73,6 +74,8 @@ struct FootprintDiarySupportView: View {
                     Text("걸었는데 지도에 선이 그어지지 않으면 여기서 까닭을 볼 수 있어요.")
                 }
 
+                cloud
+
                 Section {
                     LeeoSupportSection<FootprintDiarySpec>()
                 } header: {
@@ -82,10 +85,37 @@ struct FootprintDiarySupportView: View {
             .sheet(isPresented: $showDiagnostics) {
                 TrackingDiagnosticsView()
             }
+            .task { await cloudSync.refresh() }
             .navigationTitle("설정")
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             #endif
+        }
+    }
+
+    /// 아이클라우드가 지금 어떤지.
+    ///
+    /// 켜져 있다는 말만 적어 두면 정작 로그아웃된 채로 몇 달이 지나도 모른다.
+    /// 그래서 상태를 그대로 적고, 안 되고 있으면 그 까닭까지 적는다.
+    private var cloud: some View {
+        Section {
+            HStack(alignment: .top, spacing: 10) {
+                Image(systemName: cloudSync.symbolName)
+                    .font(.title3)
+                    .foregroundStyle(cloudSync.isHealthy ? Color.accentColor : .secondary)
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(cloudSync.title).font(.body.weight(.medium))
+                    Text(cloudSync.detail)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            .padding(.vertical, 2)
+            .accessibilityElement(children: .combine)
+        } header: {
+            Text("아이클라우드")
+        } footer: {
+            Text("내 개인 아이클라우드에만 담깁니다. 다른 사람에게 보이지 않아요.")
         }
     }
 }
