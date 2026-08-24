@@ -59,6 +59,24 @@ enum WalkHeatmap {
     /// 데이터가 늘 때마다 색이 바뀌지 않도록 기준을 고정해 둔다.
     static let hottest = 10
 
+    /// '요즘'으로 치는 날수.
+    ///
+    /// 바램(fadingSpan)과는 재는 것이 다르다. 바램은 두 해에 걸쳐 빛이 빠지는 긴 자로,
+    /// 오늘과 지난달을 거의 가르지 못한다(오늘 1.00, 한 달 전 0.96). 그런데 지도를 열고
+    /// 가장 먼저 찾는 것은 늘 '오늘 어디를 걸었나'다. 그것을 가리려면 짧은 자가 따로 있어야 한다.
+    ///
+    /// 두 주로 잡았다. 한 주로 끊으면 지난 주말에 다녀온 길이 벌써 옛것으로 물러나고,
+    /// 한 달로 늘리면 '요즘'이 너무 넓어져 오늘이 도드라지지 않는다.
+    static let recentSpanDays: Double = 14
+
+    /// 0~1로 누른 요즘다움. 1이면 오늘 밟은 자리, 0이면 두 주보다 오래된 자리.
+    static func recency(lastVisitDay: Date, today: Date) -> Double {
+        let days = today.timeIntervalSince(lastVisitDay) / 86_400
+        // 기기 시계가 뒤로 갔을 때 앞날에 찍힌 점은 오늘로 친다
+        guard days > 0 else { return 1 }
+        return max(0, 1 - days / recentSpanDays)
+    }
+
     /// 밟은 자리에서 빛이 다 빠지기까지 두는 시간.
     ///
     /// 2년으로 잡은 데는 까닭이 있다. 한 해로 끊으면 작년 이맘때 다니던 길이 벌써
@@ -205,6 +223,9 @@ enum DotPalette {
 /// 판 안에서는 점을 버킷 차례로 늘어놓는다. 지도는 화면을 타일로 쪼개어 타일마다 그리라고
 /// 시키는데, 판이 뒤죽박죽이면 타일 하나를 그릴 때마다 온 점을 처음부터 훑어야 한다.
 /// 버킷으로 묶어 두면 그 타일에 걸치는 묶음만 보면 된다.
+///
+/// 묶음 안에서는 바랜 점부터 싱싱한 점 차례로 세워 둔다. 늘어놓은 차례가 곧 그리는 차례라,
+/// 이렇게 해 두어야 겹치는 자리에서 요즘 걸음이 옛 걸음 위에 온다.
 struct DotSheet {
     /// 이 판의 점 하나가 대표하는 땅의 한 변 (맵 좌표)
     let cellSize: Double
@@ -235,7 +256,14 @@ struct DotSheet {
         ranges.reserveCapacity(byBucket.count)
         for (key, group) in byBucket {
             let start = flat.count
-            flat.append(contentsOf: group)
+            // 바랜 것을 먼저 깔고 싱싱한 것을 위에 얹는다.
+            //
+            // 점은 제 칸보다 굵게 그려져 이웃 칸의 점과 겹친다. 늘어놓은 차례가 곧 그리는
+            // 차례라, 뒤죽박죽으로 두면 오늘 걸은 자리가 몇 해 전 잿빛 점에 반쯤 덮인다.
+            // 자주 지난 칸일수록 점이 굵어지니, 옛날에 자주 다닌 길일수록 더 많이 덮는다.
+            // 나중 날이 앞선 날을 덮는다는 규칙은 한 칸 안에서만이 아니라 겹치는 자리에서도
+            // 지켜져야 한다.
+            flat.append(contentsOf: group.sorted { $0.freshness < $1.freshness })
             ranges[key] = start..<flat.count
         }
         self.dots = flat
@@ -263,7 +291,8 @@ struct DotSheet {
                 point: winner.point,
                 heat: max(dot.heat, old.heat),
                 hue: winner.hue,
-                freshness: winner.freshness
+                freshness: winner.freshness,
+                recency: winner.recency
             )
         }
         return Array(best.values)
@@ -279,6 +308,12 @@ final class DotGridOverlay: NSObject, MKOverlay {
         let hue: CGFloat
         /// 0~1로 누른 싱싱함. 1이면 갓 밟은 자리, 0이면 온전히 바랜 자리.
         let freshness: Double
+        /// 0~1로 누른 요즘다움. 1이면 오늘 밟은 자리, 0이면 두 주보다 오래된 자리.
+        ///
+        /// 싱싱함과 따로 두는 까닭은 재는 자가 다르기 때문이다. 싱싱함은 두 해를 재는
+        /// 긴 자라 오늘과 지난달이 거의 붙어 있다. 이 앱에서 가장 자주 묻는 물음이
+        /// '오늘 어디를 걸었나'인데, 긴 자 하나로는 그 답을 그려 낼 수 없다.
+        let recency: Double
     }
 
     /// 촘촘한 판부터 성긴 판까지. 배율에 맞는 것을 골라 쓴다.
@@ -296,13 +331,14 @@ final class DotGridOverlay: NSObject, MKOverlay {
     static let coarsestDotCount = 1_500
 
     /// - Parameter now: 얼마나 바랬는지 재는 기준 때. 시험할 때만 바꾼다.
-    init(cells: [HeatCell], now: Date = .now) {
+    init(cells: [HeatCell], now: Date = .now, calendar: Calendar = .current) {
         // 격자를 끊은 자와 같은 자로 잰다. 다른 자로 재면 점이 칸보다 크거나 작아져
         // 좌우로는 맞붙고 위아래로는 벌어진다.
         cellMapSize = WalkHeatmap.cellMapSize
 
         // 빛깔은 날마다 하나뿐이라, 칸마다 다시 뽑지 않고 날마다 한 번만 뽑아 나눠 쓴다.
         var hueByDay: [Date: CGFloat] = [:]
+        let today = calendar.startOfDay(for: now)
 
         let finest: [Dot] = cells.map { cell in
             let hue: CGFloat
@@ -316,7 +352,8 @@ final class DotGridOverlay: NSObject, MKOverlay {
                 point: MKMapPoint(cell.center),
                 heat: min(Double(cell.passes - 1) / Double(WalkHeatmap.hottest - 1), 1),
                 hue: hue,
-                freshness: WalkHeatmap.freshness(lastVisit: cell.lastVisit, now: now)
+                freshness: WalkHeatmap.freshness(lastVisit: cell.lastVisit, now: now),
+                recency: WalkHeatmap.recency(lastVisitDay: cell.lastVisitDay, today: today)
             )
         }
 
@@ -395,15 +432,23 @@ final class DotGridRenderer: MKOverlayRenderer {
             guard visible.contains(dot.point) else { continue }
             let center = point(for: dot.point)
             let freshness = CGFloat(dot.freshness)
+            let recency = CGFloat(dot.recency)
 
-            // 짙기는 두 가지가 함께 정한다 — 얼마나 자주 지났나, 그리고 얼마나 최근인가.
+            // 짙기는 셋이 함께 정한다 — 얼마나 자주 지났나, 얼마나 안 바랬나, 그리고 오늘인가.
             //
-            // 자주 지난 것만 보면 어제 처음 가 본 길이 30%로 흐려져, 원색으로 찍어도
-            // 원색으로 보이지 않는다. 갓 밟은 자리는 한 번만 지났어도 또렷해야 한다.
-            // 반대로 다 바랜 자리는 자주 다녔더라도 뒤로 물러나야 요즘 걸음이 앞에 선다.
-            let alpha = (0.30 + 0.35 * freshness) + 0.35 * CGFloat(dot.heat)
-            // 굵기는 지난 횟수만 따른다. 바랜 자리가 가늘어지면 지도에서 아예 지워진 것처럼 보인다.
-            let scaleUp = 1.0 + 0.45 * dot.heat
+            // 마지막 몫이 없으면 오늘 처음 걷는 골목이 지도에서 가장 흐린 점이 된다.
+            // 한 번 지난 길이라 진하기의 횟수 몫이 0이고, 두 해를 재는 싱싱함만으로는
+            // 오늘과 작년이 갈리지 않기 때문이다. 그러면 반투명한 오늘 점 아래로 옛 점의
+            // 빛깔이 비쳐 올라와, 위에 그려 놓고도 묻힌 것처럼 보인다.
+            // 오늘 걸은 자리는 밑이 비치지 않을 만큼 꽉 찬다.
+            let alpha = min(1, 0.32 + 0.30 * freshness + 0.30 * CGFloat(dot.heat) + 0.42 * recency)
+
+            // 굵기는 '자주 지난 길'과 '요즘 지난 길' 가운데 큰 쪽을 따른다.
+            //
+            // 둘을 더하면 매일 다니는 길이 오늘 또 지날 때마다 부풀어 골목을 뭉갠다.
+            // 큰 쪽만 따르면 굵기가 두 배를 넘지 않으면서도, 오늘 처음 걷는 길이 옛날에
+            // 자주 다니던 길에 가려지지 않는다. 바랜 자리도 가늘어지지 않아 지도에 그대로 남는다.
+            let scaleUp = 1.0 + 0.45 * max(dot.heat, dot.recency)
 
             // 바래는 것은 '색이 빠지는 것'이다. 채도를 0으로 끌면 그 자리가 곧 잿빛이라,
             // 원색과 잿빛을 따로 섞을 것 없이 한 줄로 이어진다.
