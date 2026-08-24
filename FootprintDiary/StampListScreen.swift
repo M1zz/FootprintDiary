@@ -291,9 +291,21 @@ private struct StampRow: View {
                 .background(RoundedRectangle(cornerRadius: 8).fill(Color(InkStyle.sealRed)))
 
             VStack(alignment: .leading, spacing: 2) {
-                Text(stamp.displayName)
-                    .font(.body.weight(.medium))
-                    .lineLimit(1)
+                HStack(spacing: 6) {
+                    Text(stamp.displayName)
+                        .font(.body.weight(.medium))
+                        .lineLimit(1)
+                    // 여러 번 다녀온 자리는 목록에서 바로 티가 나야 한다.
+                    // 한 번만 간 곳에는 붙이지 않는다 — 다 붙으면 아무 말도 하지 않는 표가 된다.
+                    if stamp.visitCount > 1 {
+                        Text("\(stamp.visitCount)번")
+                            .font(.caption2.weight(.semibold))
+                            .foregroundStyle(Color(InkStyle.sealRed))
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 2)
+                            .background(Capsule().fill(Color(InkStyle.sealRed).opacity(0.12)))
+                    }
+                }
                 Text(PlaceText.subtitle(for: stamp))
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -309,8 +321,8 @@ private struct StampRow: View {
                     .frame(width: 34, height: 34)
                     .clipShape(RoundedRectangle(cornerRadius: 7))
                     .overlay(alignment: .bottomTrailing) {
-                        if stamp.photos.count > 1 {
-                            Text("\(stamp.photos.count)")
+                        if stamp.photoCount > 1 {
+                            Text("\(stamp.photoCount)")
                                 .font(.system(size: 9, weight: .bold))
                                 .foregroundStyle(.white)
                                 .padding(.horizontal, 3)

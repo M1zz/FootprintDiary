@@ -23,7 +23,7 @@ struct FootprintDiaryApp: App {
             // 앱 데이터 스토어는 명시적으로 CloudKit을 끈다.
             let schema = Schema([
                 Visit.self, DiaryEntry.self, DiaryPhoto.self, PhotoSpot.self, TrackPoint.self,
-                MapStamp.self, StampPhoto.self
+                MapStamp.self, StampPhoto.self, StampVisit.self
             ])
             let configuration = ModelConfiguration(
                 schema: schema,

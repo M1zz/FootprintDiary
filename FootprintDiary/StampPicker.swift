@@ -248,6 +248,7 @@ struct StampEditor: View {
 
     @Environment(\.dismiss) private var dismiss
     @Environment(\.modelContext) private var modelContext
+    @EnvironmentObject private var locationManager: LocationManager
 
     /// 내가 붙일 이름. 비워 두면 종류 이름으로 부른다.
     @State private var name: String = ""
@@ -255,6 +256,10 @@ struct StampEditor: View {
     @State private var loaded = false
     @State private var picked: [PhotosPickerItem] = []
     @State private var isAddingPhotos = false
+    /// 다녀온 날을 다 펼쳐 볼지 (여러 해 다닌 자리는 목록이 길어진다)
+    @State private var showsAllVisits = false
+    /// 이 화면에서 지웠는지. 지운 뒤에는 떠나면서 다시 쓰지 않는다.
+    @State private var isGone = false
 
     var body: some View {
         Form {
@@ -273,6 +278,8 @@ struct StampEditor: View {
                 }
                 .padding(.vertical, 4)
             }
+
+            visiting
 
             // 이름은 내가 부르는 대로 붙인다. '카페'가 아니라 '퇴근길 카페'여야
             // 몇 달 뒤 지도를 열었을 때 그 자리가 무엇이었는지 되살아난다.
@@ -302,6 +309,10 @@ struct StampEditor: View {
 
             Section {
                 Button("이 스탬프 지우기", role: .destructive) {
+                    // 떠나면서 도는 갈무리보다 먼저 못을 박는다.
+                    // 이름을 고친 뒤 지우면 '적던 것과 다르다'는 셈이 서서, 지워진 자리에
+                    // 이름을 다시 쓰고 저장하게 된다.
+                    isGone = true
                     onDelete()
                     dismiss()
                 }
@@ -310,23 +321,162 @@ struct StampEditor: View {
         .navigationTitle("스탬프")
         .navigationBarTitleDisplayMode(.inline)
         .onAppear {
+            // 여는 동안에는 위치를 계속 받는다. 한 번만 받아 두면 가게 앞까지 걸어 들어가도
+            // 거리가 그대로라, 다 왔는데도 단추가 잠긴 채로 보인다.
+            locationManager.startLiveUpdates()
+            locationManager.refreshCurrentLocation()
             guard !loaded else { return }
             name = stamp.placeName
             note = stamp.note
             loaded = true
         }
-        .onDisappear { save() }
+        .onDisappear {
+            locationManager.stopLiveUpdates()
+            save()
+        }
         .onChange(of: picked) {
             Task { await addPhotos() }
         }
     }
+
+    // MARK: - 다시 다녀오기
+
+    /// 같은 자리에 다시 온 것을 하루 한 번 세어 둔다.
+    ///
+    /// 스탬프는 '처음 찾은 자리'를 남기는 것인데, 정작 오래 남는 자리는 처음 간 곳이 아니라
+    /// 자꾸 가는 곳이다. 그 둘을 한 화면에서 가르려면 횟수와 날이 함께 있어야 한다.
+    ///
+    /// 근처에 서 있을 때만 셀 수 있게 막아 둔다. 집에서 목록을 넘기다가 눌러 올릴 수 있으면
+    /// 이 숫자는 발걸음이 아니라 손가락을 세는 것이 된다.
+    @ViewBuilder
+    private var visiting: some View {
+        Section {
+            LabeledContent("다녀온 횟수") {
+                Text("\(stamp.visitCount)번")
+                    .font(.body.weight(.semibold))
+                    .contentTransition(.numericText())
+            }
+            LabeledContent("마지막 방문") {
+                Text(visitDayText(stamp.lastVisitedAt))
+            }
+            visitButton
+            visitHistory
+        } header: {
+            Text("방문")
+        } footer: {
+            Text(visitFooter)
+        }
+    }
+
+    private var visitButton: some View {
+        Button {
+            addVisit()
+        } label: {
+            Label(
+                alreadyToday ? "오늘은 이미 남겼어요" : "여기 다녀왔어요",
+                systemImage: alreadyToday ? "checkmark.seal.fill" : "seal"
+            )
+        }
+        .disabled(alreadyToday || !isHere)
+        .accessibilityHint(visitFooter)
+    }
+
+    /// 다녀온 날들. 가장 나중에 온 날이 위다 — 되짚어 볼 때 궁금한 것은 늘 최근 쪽이다.
+    @ViewBuilder
+    private var visitHistory: some View {
+        let days = stamp.visitDates.reversed().map { $0 }
+        if days.count > 1 {
+            let shown = showsAllVisits ? days : Array(days.prefix(3))
+            ForEach(Array(shown.enumerated()), id: \.offset) { index, date in
+                HStack {
+                    Text(visitDayText(date))
+                        .font(.subheadline)
+                    Spacer()
+                    // 마지막 칸이 곧 처음 찍은 날이다 (visitDates의 첫 자리를 뒤집어 놓은 것)
+                    Text(index == days.count - 1 ? "처음 찍은 날" : "\(days.count - index)번째")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+            if days.count > 3 {
+                Button(showsAllVisits ? "접기" : "\(days.count - 3)번 더 보기") {
+                    showsAllVisits.toggle()
+                }
+                .font(.subheadline)
+            }
+        }
+    }
+
+    /// 오늘 몫을 이미 셌는지
+    private var alreadyToday: Bool {
+        !stamp.canAddVisit()
+    }
+
+    /// 지금 선 자리에서 이 스탬프까지의 거리(m). 위치를 아직 못 찾았으면 없다.
+    private var distanceFromHere: CLLocationDistance? {
+        locationManager.currentLocation.map { stamp.distance(from: $0) }
+    }
+
+    private var isHere: Bool {
+        guard let distanceFromHere else { return false }
+        return distanceFromHere <= MapStamp.visitRadius
+    }
+
+    private var visitFooter: String {
+        if alreadyToday {
+            return "하루에 한 번만 셉니다. 내일 다시 오면 또 남길 수 있어요."
+        }
+        guard let distanceFromHere else {
+            return "현재 위치를 찾는 중이에요. 위치를 켜고 이 자리 근처에 오면 남길 수 있습니다."
+        }
+        if distanceFromHere <= MapStamp.visitRadius {
+            return "지금 이 자리에 있어요. 눌러서 다녀온 것으로 남기세요."
+        }
+        return "여기서 \(distanceText(distanceFromHere)) 떨어져 있어요. \(Int(MapStamp.visitRadius))m 안에 들어가면 남길 수 있습니다."
+    }
+
+    private func addVisit() {
+        // 화면이 그려진 뒤에 멀어졌거나 날이 넘어갔을 수 있으니 누르는 순간에 한 번 더 본다
+        guard let location = locationManager.currentLocation,
+              stamp.isNearby(location),
+              stamp.canAddVisit() else { return }
+        stamp.addVisit()
+        try? modelContext.save()
+    }
+
+    private func distanceText(_ meters: CLLocationDistance) -> String {
+        meters < 1_000 ? "\(Int(meters))m" : String(format: "%.1fkm", meters / 1_000)
+    }
+
+    /// 오늘·어제는 그렇게 부른다. 날짜로만 적으면 방금 남긴 것도 한눈에 안 들어온다.
+    private func visitDayText(_ date: Date) -> String {
+        let calendar = Calendar.current
+        let time = StampEditor.clock.string(from: date)
+        if calendar.isDateInToday(date) { return "오늘 \(time)" }
+        if calendar.isDateInYesterday(date) { return "어제 \(time)" }
+        return StampEditor.day.string(from: date)
+    }
+
+    private static let clock: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "a h:mm"
+        return formatter
+    }()
+
+    private static let day: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.locale = Locale(identifier: "ko_KR")
+        formatter.dateFormat = "yyyy년 M월 d일 (E)"
+        return formatter
+    }()
 
     // MARK: - 사진
 
     @ViewBuilder
     private var photos: some View {
         Section("사진") {
-            if !stamp.photos.isEmpty {
+            if stamp.photoCount > 0 {
                 ScrollView(.horizontal, showsIndicators: false) {
                     HStack(spacing: 8) {
                         ForEach(stamp.photosInOrder, id: \.persistentModelID) { photo in
@@ -337,7 +487,7 @@ struct StampEditor: View {
                 .frame(height: 96)
             }
             PhotosPicker(selection: $picked, maxSelectionCount: 10, matching: .images) {
-                Label(stamp.photos.isEmpty ? "이 자리의 사진 넣기" : "사진 더 넣기", systemImage: "photo.badge.plus")
+                Label(stamp.photoCount == 0 ? "이 자리의 사진 넣기" : "사진 더 넣기", systemImage: "photo.badge.plus")
             }
             .disabled(isAddingPhotos)
             if isAddingPhotos {
@@ -372,7 +522,7 @@ struct StampEditor: View {
                 let stored = await Task.detached(priority: .userInitiated) {
                     PhotoStore.downscaledJPEG(from: data) ?? data
                 }.value
-                stamp.photos.append(StampPhoto(data: stored))
+                stamp.addPhoto(StampPhoto(data: stored))
             }
         }
         try? modelContext.save()
@@ -381,7 +531,7 @@ struct StampEditor: View {
     }
 
     private func delete(_ photo: StampPhoto) {
-        stamp.photos.removeAll { $0.persistentModelID == photo.persistentModelID }
+        stamp.removePhoto(photo)
         modelContext.delete(photo)
         try? modelContext.save()
     }
@@ -410,7 +560,7 @@ struct StampEditor: View {
     }
 
     private func save() {
-        guard loaded else { return }
+        guard loaded, !isGone, !stamp.isDeleted else { return }
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
         guard trimmed != stamp.placeName || note != stamp.note else { return }
         stamp.placeName = trimmed
