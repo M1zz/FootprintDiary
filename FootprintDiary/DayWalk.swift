@@ -77,6 +77,56 @@ struct DayWalk: Identifiable {
 
     // MARK: - 그림 좌표로 바꾸기
 
+    /// 그날 걸은 것을 통째로 주어진 크기 안에 꽉 차게 눕힌다.
+    ///
+    /// 대표 구간 하나만 그리는 drawingPath와 따로 두는 까닭은 쓰는 자리가 다르기
+    /// 때문이다. 저쪽은 '그날의 모양' 한 장을 보여 주는 카드라 여럿을 담으면 각각이
+    /// 점처럼 작아진다. 이쪽은 달력에서 '그날 그린 지도'를 묻는 자리라, 아침에 걸은
+    /// 동네와 저녁에 걸은 동네가 둘 다 있어야 그날이 된다.
+    ///
+    /// 다만 아주 짧은 구간은 뺀다. 먼 카페에 다녀와 그 앞에서 스무 걸음 걸은 날,
+    /// 그 스무 걸음이 화면에 끼면 하루 종일 걸은 동네가 손톱만 해진다.
+    /// (같은 까닭으로 영상 앵글도 지점을 골라 담는다 — WalkFilm.swift)
+    ///
+    /// - Parameter minimumShare: 가장 긴 구간에 견주어 이 몫이 안 되는 구간은 뺀다.
+    func drawingPaths(in size: CGSize, inset: CGFloat = 8, minimumShare: Double = 0.08) -> [[CGPoint]] {
+        let measured = segments.map { ($0, WalkTrail.distance(ofSegment: $0)) }
+        guard let longest = measured.map(\.1).max(), longest > 0 else { return [] }
+        let kept = measured.filter { $0.1 >= longest * minimumShare }.map(\.0)
+        guard !kept.isEmpty else { return [] }
+
+        // 눕히는 자는 남은 구간 전부를 합쳐서 잰다. 구간마다 따로 재면 저마다
+        // 제 칸을 꽉 채워, 멀리 떨어진 두 동네가 나란히 붙어 있는 것처럼 보인다.
+        let all = kept.flatMap { $0 }
+        let latitudes = all.map(\.coordinate.latitude)
+        let longitudes = all.map(\.coordinate.longitude)
+        let minLat = latitudes.min()!, maxLat = latitudes.max()!
+        let minLon = longitudes.min()!, maxLon = longitudes.max()!
+        let midLat = (minLat + maxLat) / 2
+        let lonScale = max(cos(midLat * .pi / 180), 0.01)
+
+        let width = max((maxLon - minLon) * lonScale, 0.00005)
+        let height = max(maxLat - minLat, 0.00005)
+
+        let canvas = CGSize(
+            width: max(size.width - inset * 2, 1),
+            height: max(size.height - inset * 2, 1)
+        )
+        let scale = min(canvas.width / width, canvas.height / height)
+        let originX = inset + (canvas.width - width * scale) / 2
+        let originY = inset + (canvas.height - height * scale) / 2
+
+        return kept.map { segment in
+            segment.map { point in
+                CGPoint(
+                    x: originX + (point.coordinate.longitude - minLon) * lonScale * scale,
+                    // 북쪽이 위로 오도록 y를 뒤집는다
+                    y: originY + (maxLat - point.coordinate.latitude) * scale
+                )
+            }
+        }
+    }
+
     /// 대표 구간을 주어진 크기 안에 꽉 차게 눕힌다.
     ///
     /// 경도 1도는 위도 1도보다 짧으므로(위도에 따라 cos배) 그대로 그리면 그림이
