@@ -424,6 +424,7 @@ struct FilmScreen: View {
                 )
                 isExporting = false
                 movie = Movie(url: url)
+                FootprintUsage.log(.filmExported)
             } catch {
                 isExporting = false
                 failure = error.localizedDescription

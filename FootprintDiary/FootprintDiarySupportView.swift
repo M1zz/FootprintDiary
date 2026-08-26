@@ -12,6 +12,9 @@ struct FootprintDiarySupportView: View {
     @EnvironmentObject private var locationManager: LocationManager
     @EnvironmentObject private var cloudSync: CloudSync
     @State private var showDiagnostics = false
+    /// 개발자 모드. 버전 줄을 일곱 번 두드리면 켜진다 (LeeoSupportSection이 맡는다).
+    /// 여기서는 그 값을 읽어 통계 화면 입구만 함께 연다.
+    @AppStorage("dev.masterMode") private var devMode = false
 
     var body: some View {
         NavigationStack {
@@ -78,8 +81,17 @@ struct FootprintDiarySupportView: View {
 
                 Section {
                     LeeoSupportSection<FootprintDiarySpec>()
+                    if devMode {
+                        NavigationLink {
+                            LeeoUsageStatsView<FootprintDiarySpec>()
+                        } label: {
+                            Label("사용 통계 (개발자)", systemImage: "chart.bar")
+                        }
+                    }
                 } header: {
                     Text("지원")
+                } footer: {
+                    Text("어떤 화면이 쓰이는지 익명으로만 셉니다. 걸은 자리와 일기 글은 보내지 않아요.")
                 }
             }
             .sheet(isPresented: $showDiagnostics) {

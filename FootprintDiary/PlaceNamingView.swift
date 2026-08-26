@@ -235,6 +235,9 @@ struct DiscoveryReviewView: View {
             }
         }
         try? modelContext.save()
+        // 이름만 셈하고 이름 자체는 보내지 않는다. '몇 곳에 이름을 붙였나'가 알고
+        // 싶은 것이지 그곳이 어디인지는 알 필요가 없다. (FootprintUsage.swift)
+        FootprintUsage.log(.placeNamed)
         name = ""
     }
 

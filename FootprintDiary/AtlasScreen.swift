@@ -30,6 +30,8 @@ final class AtlasState: ObservableObject {
     @Published private(set) var atlasLength: CLLocationDistance = 0
     /// 오늘 새로 그은 길이(m)
     @Published private(set) var todayLength: CLLocationDistance = 0
+    /// 걸음이 남은 날 수 (익명 통계에만 쓴다)
+    @Published private(set) var walkedDays: Int = 0
     @Published private(set) var isReady = false
 
     private var signature: Int?
@@ -95,6 +97,7 @@ final class AtlasState: ObservableObject {
                 self.trails = trails
                 self.atlasLength = total
                 self.todayLength = todayNew
+                self.walkedDays = walks.count
                 self.isReady = true
             }
         }
@@ -105,6 +108,8 @@ struct AtlasScreen: View {
     @Query(sort: \TrackPoint.timestamp) private var track: [TrackPoint]
     @Query(sort: \MapStamp.createdAt) private var stamps: [MapStamp]
     @Query(sort: \Visit.arrivalDate) private var visits: [Visit]
+    /// 일기 편 수. 익명 통계에만 쓰고, 글은 읽지도 보내지도 않는다.
+    @Query private var diaryEntries: [DiaryEntry]
 
     @Environment(\.modelContext) private var modelContext
     @EnvironmentObject private var locationManager: LocationManager
@@ -133,6 +138,11 @@ struct AtlasScreen: View {
     @StateObject private var mapProxy = MapProxy()
 
     private var calendar: Calendar { .current }
+
+    /// 글이 한 자라도 있는 일기 편 수. 사진만 붙인 날은 세지 않는다.
+    private var diaryCount: Int {
+        diaryEntries.filter { !$0.text.isEmpty }.count
+    }
 
     /// 오늘 처음 밟은 자리 수. 위젯이 '처음 3곳'이라고 내거는 값이다.
     private var newPlacesToday: Int {
@@ -252,6 +262,7 @@ struct AtlasScreen: View {
                 StampPicker { kind in
                     modelContext.insert(MapStamp(kind: kind, coordinate: spot.coordinate))
                     try? modelContext.save()
+                    FootprintUsage.log(.stampPlaced)
                 }
             }
             .sheet(item: $selectedStamp) { stamp in
@@ -267,6 +278,19 @@ struct AtlasScreen: View {
                 Button("확인", role: .cancel) {}
             } message: {
                 Text("잠시 뒤 다시 시도하거나, 지도를 길게 눌러 원하는 자리에 찍어 주세요.")
+            }
+            // 이 설치가 어디까지 왔는지 익명으로 한 장 갱신한다. 지도가 다 그려진 뒤에
+            // 하는 까닭은, 그전에는 '내가 그린 길'이 아직 0이라 보내 봐야 거짓말이 되기
+            // 때문이다. 실제 전송은 열두 시간에 한 번뿐이다. (FootprintUsage.swift)
+            .task(id: state.isReady) {
+                guard state.isReady else { return }
+                FootprintUsage.report(
+                    atlasMeters: state.atlasLength,
+                    walkedDays: state.walkedDays,
+                    stamps: stamps.count,
+                    places: visits.count,
+                    diaries: diaryCount
+                )
             }
             .onAppear { state.rebuild(track: track, newPlacesToday: newPlacesToday, calendar: calendar) }
             .onChange(of: track.count) { state.rebuild(track: track, newPlacesToday: newPlacesToday, calendar: calendar) }
