@@ -256,6 +256,8 @@ struct StampEditor: View {
     @State private var loaded = false
     @State private var picked: [PhotosPickerItem] = []
     @State private var isAddingPhotos = false
+    /// 스티커를 찍는 카메라를 띄우고 있는지
+    @State private var isMakingSticker = false
     /// 다녀온 날을 다 펼쳐 볼지 (여러 해 다닌 자리는 목록이 길어진다)
     @State private var showsAllVisits = false
     /// 이 화면에서 지웠는지. 지운 뒤에는 떠나면서 다시 쓰지 않는다.
@@ -265,11 +267,7 @@ struct StampEditor: View {
         Form {
             Section {
                 HStack(spacing: 12) {
-                    Image(systemName: stamp.kind.symbolName)
-                        .font(.title2)
-                        .foregroundStyle(.white)
-                        .frame(width: 42, height: 42)
-                        .background(RoundedRectangle(cornerRadius: 11).fill(Color(InkStyle.sealRed)))
+                    StampSymbolBadge(stamp: stamp, side: 42, corner: 11)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(headline).font(.headline)
                         Text(subtitle)
@@ -280,6 +278,8 @@ struct StampEditor: View {
             }
 
             visiting
+
+            symbol
 
             // 이름은 내가 부르는 대로 붙인다. '카페'가 아니라 '퇴근길 카페'여야
             // 몇 달 뒤 지도를 열었을 때 그 자리가 무엇이었는지 되살아난다.
@@ -336,6 +336,15 @@ struct StampEditor: View {
         }
         .onChange(of: picked) {
             Task { await addPhotos() }
+        }
+        .fullScreenCover(isPresented: $isMakingSticker) {
+            // 전체 화면으로 띄운다. 카메라는 눈앞의 것을 겨누는 일이라 시트로 반쯤
+            // 올라오면 창이 좁아 무엇을 담을지 가늠할 수 없다.
+            StickerCameraScreen { data in
+                stamp.stickerData = data
+                try? modelContext.save()
+                FootprintUsage.log(.stickerMade)
+            }
         }
     }
 
@@ -471,6 +480,40 @@ struct StampEditor: View {
         return formatter
     }()
 
+    // MARK: - 심볼
+
+    /// 지도에 얹히는 그림 한 장.
+    ///
+    /// 사진과 갈라 둔 까닭은 하는 일이 다르기 때문이다. 사진은 '거기가 어땠나'를 남기는
+    /// 것이라 여러 장이어도 되고 들춰 봐야 보이지만, 심볼은 지도에서 '어느 자리인가'를
+    /// 알아보게 하는 것이라 딱 한 장이고 늘 보인다. 한 섹션에 같이 두면 사진을 넣다가
+    /// 지도가 바뀌어 놀라게 된다.
+    @ViewBuilder
+    private var symbol: some View {
+        Section {
+            Button {
+                isMakingSticker = true
+            } label: {
+                Label(stamp.sticker == nil ? "스티커 추가하기" : "스티커 다시 찍기",
+                      systemImage: "camera.viewfinder")
+            }
+            .foregroundStyle(.primary)
+
+            if stamp.sticker != nil {
+                Button("기본 그림으로 되돌리기", role: .destructive) {
+                    stamp.stickerData = nil
+                    try? modelContext.save()
+                }
+            }
+        } header: {
+            Text("심볼")
+        } footer: {
+            Text(stamp.sticker == nil
+                 ? "카메라로 찍어 이 자리만의 심볼을 만들 수 있어요. 지도에 그 그림이 찍힙니다."
+                 : "지도에는 이 스티커가 찍혀요.")
+        }
+    }
+
     // MARK: - 사진
 
     @ViewBuilder
@@ -487,7 +530,7 @@ struct StampEditor: View {
                 .frame(height: 96)
             }
             PhotosPicker(selection: $picked, maxSelectionCount: 10, matching: .images) {
-                Label(stamp.photoCount == 0 ? "이 자리의 사진 넣기" : "사진 더 넣기", systemImage: "photo.badge.plus")
+                Label("이미지 추가하기", systemImage: "photo.badge.plus")
             }
             .disabled(isAddingPhotos)
             if isAddingPhotos {

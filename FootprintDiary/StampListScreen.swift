@@ -284,11 +284,7 @@ private struct StampRow: View {
 
     var body: some View {
         HStack(spacing: 12) {
-            Image(systemName: stamp.kind.symbolName)
-                .font(.system(size: 15, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(width: 32, height: 32)
-                .background(RoundedRectangle(cornerRadius: 8).fill(Color(InkStyle.sealRed)))
+            StampSymbolBadge(stamp: stamp, side: 32)
 
             VStack(alignment: .leading, spacing: 2) {
                 HStack(spacing: 6) {
@@ -503,11 +499,7 @@ private struct TodayTimeline: View {
     private func knot(for moment: Moment) -> some View {
         switch moment {
         case .stamp(let stamp):
-            Image(systemName: stamp.kind.symbolName)
-                .font(.system(size: 12, weight: .semibold))
-                .foregroundStyle(.white)
-                .frame(width: 28, height: 28)
-                .background(RoundedRectangle(cornerRadius: 8).fill(Color(InkStyle.sealRed)))
+            StampSymbolBadge(stamp: stamp, side: 28)
         case .visit:
             Image(systemName: "figure.walk")
                 .font(.system(size: 12, weight: .semibold))

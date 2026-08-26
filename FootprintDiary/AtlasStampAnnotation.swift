@@ -19,6 +19,10 @@ import SwiftData
 final class StampAnnotation: NSObject, MKAnnotation {
     let id: PersistentIdentifier
     let kind: StampKind
+    /// 카메라로 찍어 넣은 심볼 (없으면 nil). 있으면 종류 그림 대신 이것이 찍힌다.
+    let sticker: UIImage?
+    /// 그 심볼의 크기(바이트). 심볼이 바뀌었는지 값싸게 견주는 데만 쓴다.
+    let stickerBytes: Int
     /// 내가 붙인 이름 (없으면 빈 글). 도장 아래에 적힌다.
     let placeName: String
     /// 끌어서 옮길 수 있어야 하므로 MKAnnotation 규약대로 쓰기 가능해야 한다
@@ -29,6 +33,8 @@ final class StampAnnotation: NSObject, MKAnnotation {
         // 모델이 지워져도 지도가 흔들리지 않도록 값을 복사해 둔다
         self.id = stamp.persistentModelID
         self.kind = stamp.kind
+        self.sticker = stamp.sticker.flatMap(UIImage.init(data:))
+        self.stickerBytes = stamp.sticker?.count ?? 0
         self.placeName = stamp.placeName
         self.coordinate = stamp.coordinate
     }
@@ -38,6 +44,28 @@ final class StampAnnotation: NSObject, MKAnnotation {
 enum StampSeal {
     static let size = CGSize(width: 30, height: 30)
     private static var cache: [String: UIImage] = [:]
+
+    /// 카메라로 찍은 스티커를 도장 크기로 앉힌다.
+    ///
+    /// 종이도 테두리도 깔지 않는다. 배경이 이미 지워져 있고 흰 테두리를 두르고
+    /// 나온 그림이라(StickerMaker), 그대로 얹으면 지도에 붙여 놓은 것처럼 선다.
+    /// 네모 종이를 한 겹 깔면 도리어 지도에 창문이 뚫린 것처럼 보인다.
+    ///
+    /// 그림자만 옅게 깐다. 흰 테두리가 밝은 종이 위에서는 배경과 붙어 보이는데,
+    /// 그림자 한 겹이면 떠 있는 것으로 갈린다.
+    ///
+    /// 갈무리하지 않는다: 스티커는 스탬프마다 다르고, 갈래처럼 몇 백 개를 돌려쓰는
+    /// 물건이 아니다.
+    static func image(sticker: UIImage) -> UIImage {
+        let format = UIGraphicsImageRendererFormat()
+        format.opaque = false
+        return UIGraphicsImageRenderer(size: size, format: format).image { ctx in
+            ctx.cgContext.setShadow(offset: CGSize(width: 0, height: 0.5),
+                                    blur: 1.5,
+                                    color: UIColor.black.withAlphaComponent(0.28).cgColor)
+            sticker.draw(in: CGRect(origin: .zero, size: size))
+        }
+    }
 
     static func image(for kind: StampKind) -> UIImage {
         if let cached = cache[kind.id] { return cached }
@@ -92,7 +120,7 @@ final class StampAnnotationView: MKAnnotationView {
     override var annotation: (any MKAnnotation)? {
         didSet {
             guard let stamp = annotation as? StampAnnotation else { return }
-            image = StampSeal.image(for: stamp.kind)
+            image = stamp.sticker.map(StampSeal.image(sticker:)) ?? StampSeal.image(for: stamp.kind)
             centerOffset = .zero
             canShowCallout = false
             isDraggable = true

@@ -388,8 +388,14 @@ struct AtlasMapView: UIViewRepresentable {
                     stale.append(annotation)
                     continue
                 }
-                // 도장 그림과 이름표는 만들 때 값을 복사해 두므로, 갈래나 이름이 바뀌면 새로 찍는다
-                if annotation.kind.id != stamp.kindID || annotation.placeName != stamp.placeName {
+                // 도장 그림과 이름표는 만들 때 값을 복사해 두므로, 갈래·이름·심볼이 바뀌면 새로 찍는다.
+                // 심볼은 몇 십 KB짜리 Data라 통째로 견주지 않고 있고 없음과 크기만 본다 —
+                // 도장 하나 옮길 때마다 수십 개를 바이트째 맞대면 지도가 끊긴다.
+                let stickerChanged = (annotation.sticker == nil) != (stamp.sticker == nil)
+                    || annotation.stickerBytes != (stamp.sticker?.count ?? 0)
+                if annotation.kind.id != stamp.kindID
+                    || annotation.placeName != stamp.placeName
+                    || stickerChanged {
                     stale.append(annotation)
                     continue
                 }

@@ -7,9 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F99CB4F99151C223726D632B /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = BBA4968938A8F667BEBB35DA /* LeeoKit */; };
 		A10000000000000000000021 /* FootprintWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = A10000000000000000000020 /* FootprintWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F99CB4F99151C223726D632B /* LeeoKit in Frameworks */ = {isa = PBXBuildFile; productRef = BBA4968938A8F667BEBB35DA /* LeeoKit */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A1000000000000000000002A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1000000000000000000000A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1000000000000000000001F;
+			remoteInfo = FootprintWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A10000000000000000000025 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A10000000000000000000021 /* FootprintWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A10000000000000000000005 /* FootprintDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FootprintDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,8 +138,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				A10000000000000000000023 /* FootprintWidget */,
 				A10000000000000000000022 /* Shared */,
+				A10000000000000000000023 /* FootprintWidget */,
 			);
 			name = FootprintWidgetExtension;
 			packageProductDependencies = (
@@ -165,30 +189,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXContainerItemProxy section */
-		A1000000000000000000002A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = A1000000000000000000000A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = A1000000000000000000001F;
-			remoteInfo = FootprintWidgetExtension;
-		};
-/* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		A10000000000000000000025 /* Embed Foundation Extensions */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 13;
-			files = (
-				A10000000000000000000021 /* FootprintWidgetExtension.appex in Embed Foundation Extensions */,
-			);
-			name = "Embed Foundation Extensions";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXResourcesBuildPhase section */
 		A10000000000000000000009 /* Resources */ = {
@@ -364,7 +364,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "벅뚜벅뚜";
-				INFOPLIST_KEY_NSCameraUsageDescription = "스팟에 도착했을 때 그 자리에서 사진을 남기기 위해 카메라를 사용합니다.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "그 자리의 사진을 남기고, 찍은 것을 오려 지도에 얹을 스티커로 만들기 위해 카메라를 사용합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "장소를 옮길 때마다 발자국을 자동으로 기록하려면 '항상 허용' 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 지도에 발자국으로 기록하기 위해 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "걷기·뛰기로 이동했는지 확인해 차량 이동은 기록하지 않기 위해 동작 데이터를 사용합니다.";
@@ -401,7 +401,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "벅뚜벅뚜";
-				INFOPLIST_KEY_NSCameraUsageDescription = "스팟에 도착했을 때 그 자리에서 사진을 남기기 위해 카메라를 사용합니다.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "그 자리의 사진을 남기고, 찍은 것을 오려 지도에 얹을 스티커로 만들기 위해 카메라를 사용합니다.";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "장소를 옮길 때마다 발자국을 자동으로 기록하려면 '항상 허용' 권한이 필요합니다.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 지도에 발자국으로 기록하기 위해 위치 권한이 필요합니다.";
 				INFOPLIST_KEY_NSMotionUsageDescription = "걷기·뛰기로 이동했는지 확인해 차량 이동은 기록하지 않기 위해 동작 데이터를 사용합니다.";
