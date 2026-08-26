@@ -8,10 +8,15 @@
 //  세면 자주 지난 칸일수록 짙어져서, 내 생활 반경이 어디에 뭉쳐 있는지가 그대로 드러난다.
 //  옛 지도에서 자주 쓰는 길이 굵게 그려진 것과 같은 뜻이다.
 //
-//  빛깔은 '언제 밟았는가'를 말한다. 그날 걸은 자리는 모두 그날의 원색 하나로 찍히고,
-//  다시 밟지 않은 채 해가 지나면 빛이 서서히 빠져 잿빛이 된다. 2년이면 다 바랜다.
-//  그래서 지도를 펼치면 요즘 사는 동네는 알록달록하고, 옛날에 살던 동네는 흑백 사진처럼
-//  남는다. 발길이 끊긴 자리가 스스로 사라지지 않고 '빛바랜 채로' 남는 것이 요점이다.
+//  빛깔은 '언제 밟았는가'를 말하되, 묻는 것은 단 하나 — 오늘인가 아닌가.
+//  오늘 걸은 자리는 날마다 똑같이 주묵(붉은 먹)이고, 지난 걸음은 모두 남빛이다.
+//  그리고 다시 밟지 않은 채 석 달이 지나면 빛이 다 빠져 잿빛이 된다.
+//
+//  전에는 날마다 빛깔을 하나씩 뽑았다. 알록달록하긴 했지만 어제가 무슨 색이었는지
+//  아무도 외우지 못하니, 색이 예쁘기만 하고 아무 말도 하지 않았다. 오늘 하나만 붙박이
+//  빛깔로 세워 두면 지도를 펼치는 순간 '오늘 어디를 걸었나'가 색 하나로 바로 읽힌다.
+//  나머지 걸음은 한 빛깔로 묶여 '지난 길'이라는 바탕이 되고, 잿빛으로 물러난 자리는
+//  발길이 끊긴 지 오래인 곳이다 — 사라지지 않고 '빛바랜 채로' 남는 것이 요점이다.
 //
 //  한 칸을 여러 날 밟았다면 가장 나중에 밟은 날이 이긴다. 덧칠하는 것과 같다.
 //
@@ -28,7 +33,7 @@ struct HeatCell {
     let passes: Int
     /// 마지막으로 밟은 때. 여러 날 밟았으면 가장 나중 것만 남아 앞선 날을 덮는다.
     let lastVisit: Date
-    /// 그날의 첫 시각(자정). 같은 날 밟은 칸끼리 같은 빛깔을 뽑는 열쇠다.
+    /// 그날의 첫 시각(자정). 이것이 오늘의 첫 시각과 같은지로 주묵과 남빛이 갈린다.
     let lastVisitDay: Date
 }
 
@@ -59,36 +64,30 @@ enum WalkHeatmap {
     /// 데이터가 늘 때마다 색이 바뀌지 않도록 기준을 고정해 둔다.
     static let hottest = 10
 
-    /// '요즘'으로 치는 날수.
+    /// 오늘 밟은 자리인지.
     ///
-    /// 바램(fadingSpan)과는 재는 것이 다르다. 바램은 두 해에 걸쳐 빛이 빠지는 긴 자로,
-    /// 오늘과 지난달을 거의 가르지 못한다(오늘 1.00, 한 달 전 0.96). 그런데 지도를 열고
-    /// 가장 먼저 찾는 것은 늘 '오늘 어디를 걸었나'다. 그것을 가리려면 짧은 자가 따로 있어야 한다.
+    /// '얼마나 오래됐나'(freshness)와 따로 묻는다. 오늘 걸은 자리는 바램의 자로 재면
+    /// 어제와 거의 붙어 있는데(오늘 1.00, 어제 0.99), 지도를 열고 가장 먼저 찾는 것은
+    /// 늘 '오늘 어디를 걸었나'다. 그래서 오늘만은 눈금이 아니라 예/아니오로 갈라
+    /// 아예 다른 빛깔(주묵)을 준다.
     ///
-    /// 두 주로 잡았다. 한 주로 끊으면 지난 주말에 다녀온 길이 벌써 옛것으로 물러나고,
-    /// 한 달로 늘리면 '요즘'이 너무 넓어져 오늘이 도드라지지 않는다.
-    static let recentSpanDays: Double = 14
-
-    /// 0~1로 누른 요즘다움. 1이면 오늘 밟은 자리, 0이면 두 주보다 오래된 자리.
-    static func recency(lastVisitDay: Date, today: Date) -> Double {
-        let days = today.timeIntervalSince(lastVisitDay) / 86_400
-        // 기기 시계가 뒤로 갔을 때 앞날에 찍힌 점은 오늘로 친다
-        guard days > 0 else { return 1 }
-        return max(0, 1 - days / recentSpanDays)
+    /// 시각이 아니라 '날'로 끊는 것이 중요하다. 스물네 시간으로 재면 어젯밤 걸음이
+    /// 오늘 아침까지 오늘 행세를 한다. 자정을 넘기면 지난 걸음이다.
+    static func isToday(lastVisitDay: Date, today: Date) -> Bool {
+        lastVisitDay >= today
     }
 
     /// 밟은 자리에서 빛이 다 빠지기까지 두는 시간.
     ///
-    /// 2년으로 잡은 데는 까닭이 있다. 한 해로 끊으면 작년 이맘때 다니던 길이 벌써
-    /// 잿빛이라 '요즘'이 너무 좁아지고, 5년으로 늘리면 웬만한 자리가 다 알록달록해
-    /// 빛깔이 아무 말도 하지 않게 된다. 이사·이직처럼 생활 반경이 통째로 바뀌는
-    /// 주기가 대략 이쯤이라, 2년이면 지난 삶과 지금 삶이 눈으로 갈린다.
-    static let fadingSpan: TimeInterval = 60 * 60 * 24 * 365 * 2
+    /// 석 달이다. 한 철이 지나도록 다시 밟지 않은 길은 이미 생활에서 빠진 길이라,
+    /// 잿빛으로 물러나 앉아야 요즘 다니는 길이 도드라진다. 전에는 두 해로 잡았는데
+    /// 그러면 웬만한 자리가 죄다 제 빛을 지니고 있어, 바램이 아무 말도 하지 않았다.
+    static let fadingSpan: TimeInterval = 60 * 60 * 24 * 90
 
     /// 0~1로 누른 싱싱함. 1이면 갓 밟은 자리, 0이면 온전히 바랜 자리.
     ///
-    /// 곧게 줄인다. 처음에 훅 빠지고 뒤에 오래 끄는 식으로 휘면 '작년에 간 곳'과
-    /// '3년 전에 간 곳'이 둘 다 잿빛으로 뭉개져, 정작 알고 싶은 옛 자리의 앞뒤가 사라진다.
+    /// 곧게 줄인다. 처음에 훅 빠지고 뒤에 오래 끄는 식으로 휘면 '한 달 전에 간 곳'과
+    /// '두 달 전에 간 곳'이 둘 다 잿빛으로 뭉개져, 정작 알고 싶은 옛 자리의 앞뒤가 사라진다.
     static func freshness(lastVisit: Date, now: Date) -> Double {
         let age = now.timeIntervalSince(lastVisit)
         // 기기 시계가 뒤로 간 뒤에 쌓인 점은 '앞날'에 찍혀 있다. 갓 밟은 것으로 친다.
@@ -156,61 +155,6 @@ enum WalkHeatmap {
     }
 }
 
-// MARK: - 날마다 하나씩 뽑는 빛깔
-
-/// 그날 걸은 자리에 찍을 원색을 고른다.
-///
-/// 칸마다 따로 뽑지 않고 날마다 하나만 뽑는다. 칸마다 뽑으면 한 골목이 색종이 조각처럼
-/// 어지러워지고, 무엇보다 '언제 걸었는가'라는 뜻이 사라진다. 하루를 한 빛깔로 묶어야
-/// 지도 위에서 그날의 걸음이 한 덩어리로 보인다.
-enum DotPalette {
-
-    /// 갓 밟았을 때의 채도. 원색이라 부를 만큼은 올리되, 종이 위에서 눈이 아프지 않은 선.
-    static let vividSaturation: CGFloat = 0.88
-
-    /// 갓 밟은 점의 밝기. 종이 위에서 원색이 원색답게 보이는 자리.
-    static let freshBrightness: (light: CGFloat, dark: CGFloat) = (0.78, 0.95)
-
-    /// 온전히 바랜 점의 밝기. 그 자리에서 채도가 0이 되므로 이 값이 곧 잿빛의 농도다.
-    ///
-    /// 밝은 종이에서는 어둡게, 어두운 종이에서는 밝게 잡는다. 한쪽에 맞춰 두면
-    /// 다른 쪽에서 옛 발자국이 배경에 묻혀 아예 없는 것처럼 보인다.
-    static let fadedBrightness: (light: CGFloat, dark: CGFloat) = (0.42, 0.70)
-
-    /// 뽑을 수 있는 빛깔들 (색상환에서의 자리).
-    ///
-    /// 색상환을 고르게 갈라 놓고 순서를 섞어 두었다. 차례대로 늘어놓으면 이어진 날들이
-    /// 빨강·주황·노랑처럼 비슷한 빛을 물려받아 어제와 오늘이 구별되지 않는다.
-    static let hues: [CGFloat] = [0.00, 0.55, 0.11, 0.72, 0.33, 0.86, 0.06, 0.47, 0.78, 0.24, 0.63, 0.16]
-
-    /// 그날의 빛깔. 같은 날이면 언제 물어도 같은 값이 나온다.
-    ///
-    /// 스위프트의 기본 해시는 앱을 켤 때마다 씨앗이 달라진다. 그것으로 뽑으면 어제 파랗던
-    /// 동네가 오늘 앱을 다시 켰을 때 노래진다. 그래서 셈을 직접 적는다.
-    static func hue(forDay day: Date) -> CGFloat {
-        // 날의 첫 시각을 초로 세어 씨앗으로 삼는다. 이웃한 날끼리 멀리 흩어지도록 섞는다.
-        var seed = UInt64(bitPattern: Int64(day.timeIntervalSinceReferenceDate.rounded()))
-        seed = (seed ^ (seed >> 30)) &* 0xBF58476D1CE4E5B9
-        seed = (seed ^ (seed >> 27)) &* 0x94D049BB133111EB
-        seed ^= seed >> 31
-        return hues[Int(seed % UInt64(hues.count))]
-    }
-
-    /// 그날의 빛깔을 바래기 전 그대로. 지도의 갓 찍은 점과 같은 빛이라 글과 지도가 이어진다.
-    static func freshColor(forDay day: Date) -> UIColor {
-        let hue = hue(forDay: day)
-        return UIColor { traits in
-            let dark = traits.userInterfaceStyle == .dark
-            return UIColor(
-                hue: hue,
-                saturation: vividSaturation,
-                brightness: dark ? freshBrightness.dark : freshBrightness.light,
-                alpha: 1
-            )
-        }
-    }
-}
-
 // MARK: - 지도에 올리는 오버레이
 
 /// 한 배율에 맞춰 미리 묶어 둔 점 한 판.
@@ -256,14 +200,20 @@ struct DotSheet {
         ranges.reserveCapacity(byBucket.count)
         for (key, group) in byBucket {
             let start = flat.count
-            // 바랜 것을 먼저 깔고 싱싱한 것을 위에 얹는다.
+            // 바랜 것을 먼저 깔고 싱싱한 것을 위에 얹되, 오늘 걸은 자리는 무조건 맨 위다.
             //
             // 점은 제 칸보다 굵게 그려져 이웃 칸의 점과 겹친다. 늘어놓은 차례가 곧 그리는
-            // 차례라, 뒤죽박죽으로 두면 오늘 걸은 자리가 몇 해 전 잿빛 점에 반쯤 덮인다.
+            // 차례라, 뒤죽박죽으로 두면 오늘 걸은 자리가 몇 달 전 잿빛 점에 반쯤 덮인다.
             // 자주 지난 칸일수록 점이 굵어지니, 옛날에 자주 다닌 길일수록 더 많이 덮는다.
             // 나중 날이 앞선 날을 덮는다는 규칙은 한 칸 안에서만이 아니라 겹치는 자리에서도
             // 지켜져야 한다.
-            flat.append(contentsOf: group.sorted { $0.freshness < $1.freshness })
+            //
+            // 오늘을 따로 앞세우는 까닭: 어젯밤 늦게 걸은 점과 오늘 새벽에 걸은 점은
+            // 싱싱함이 소수점 넷째 자리에서야 갈린다. 그 실낱같은 차이에 오늘의 자리를
+            // 맡길 수는 없다.
+            flat.append(contentsOf: group.sorted {
+                $0.isToday == $1.isToday ? $0.freshness < $1.freshness : !$0.isToday
+            })
             ranges[key] = start..<flat.count
         }
         self.dots = flat
@@ -290,9 +240,8 @@ struct DotSheet {
             best[key] = DotGridOverlay.Dot(
                 point: winner.point,
                 heat: max(dot.heat, old.heat),
-                hue: winner.hue,
                 freshness: winner.freshness,
-                recency: winner.recency
+                isToday: winner.isToday
             )
         }
         return Array(best.values)
@@ -304,16 +253,14 @@ final class DotGridOverlay: NSObject, MKOverlay {
         let point: MKMapPoint
         /// 0~1로 누른 진하기 (자주 지난 칸일수록 1에 가깝다)
         let heat: Double
-        /// 마지막으로 밟은 날의 빛깔 (색상환에서의 자리, 0~1)
-        let hue: CGFloat
-        /// 0~1로 누른 싱싱함. 1이면 갓 밟은 자리, 0이면 온전히 바랜 자리.
+        /// 0~1로 누른 싱싱함. 1이면 갓 밟은 자리, 0이면 온전히 바랜 자리(잿빛).
         let freshness: Double
-        /// 0~1로 누른 요즘다움. 1이면 오늘 밟은 자리, 0이면 두 주보다 오래된 자리.
+        /// 오늘 밟은 자리인지. 참이면 주묵, 거짓이면 남빛.
         ///
-        /// 싱싱함과 따로 두는 까닭은 재는 자가 다르기 때문이다. 싱싱함은 두 해를 재는
-        /// 긴 자라 오늘과 지난달이 거의 붙어 있다. 이 앱에서 가장 자주 묻는 물음이
-        /// '오늘 어디를 걸었나'인데, 긴 자 하나로는 그 답을 그려 낼 수 없다.
-        let recency: Double
+        /// 싱싱함과 따로 두는 까닭은 재는 자가 다르기 때문이다. 싱싱함은 석 달을 재는
+        /// 눈금이라 오늘과 어제가 거의 붙어 있다. 이 앱에서 가장 자주 묻는 물음이
+        /// '오늘 어디를 걸었나'인데, 눈금 하나로는 그 답을 그려 낼 수 없다.
+        let isToday: Bool
     }
 
     /// 촘촘한 판부터 성긴 판까지. 배율에 맞는 것을 골라 쓴다.
@@ -336,24 +283,14 @@ final class DotGridOverlay: NSObject, MKOverlay {
         // 좌우로는 맞붙고 위아래로는 벌어진다.
         cellMapSize = WalkHeatmap.cellMapSize
 
-        // 빛깔은 날마다 하나뿐이라, 칸마다 다시 뽑지 않고 날마다 한 번만 뽑아 나눠 쓴다.
-        var hueByDay: [Date: CGFloat] = [:]
         let today = calendar.startOfDay(for: now)
 
         let finest: [Dot] = cells.map { cell in
-            let hue: CGFloat
-            if let cached = hueByDay[cell.lastVisitDay] {
-                hue = cached
-            } else {
-                hue = DotPalette.hue(forDay: cell.lastVisitDay)
-                hueByDay[cell.lastVisitDay] = hue
-            }
-            return Dot(
+            Dot(
                 point: MKMapPoint(cell.center),
                 heat: min(Double(cell.passes - 1) / Double(WalkHeatmap.hottest - 1), 1),
-                hue: hue,
                 freshness: WalkHeatmap.freshness(lastVisit: cell.lastVisit, now: now),
-                recency: WalkHeatmap.recency(lastVisitDay: cell.lastVisitDay, today: today)
+                isToday: WalkHeatmap.isToday(lastVisitDay: cell.lastVisitDay, today: today)
             )
         }
 
@@ -398,14 +335,11 @@ final class DotGridOverlay: NSObject, MKOverlay {
 }
 
 final class DotGridRenderer: MKOverlayRenderer {
-    private let freshBrightness: CGFloat
-    private let fadedBrightness: CGFloat
+    private let isDark: Bool
 
     // 그리는 중에는 화면 설정을 물어볼 수 없으므로 만들 때 미리 갈라 둔다.
     init(overlay: DotGridOverlay, traits: UITraitCollection) {
-        let dark = traits.userInterfaceStyle == .dark
-        freshBrightness = dark ? DotPalette.freshBrightness.dark : DotPalette.freshBrightness.light
-        fadedBrightness = dark ? DotPalette.fadedBrightness.dark : DotPalette.fadedBrightness.light
+        isDark = traits.userInterfaceStyle == .dark
         super.init(overlay: overlay)
     }
 
@@ -432,18 +366,21 @@ final class DotGridRenderer: MKOverlayRenderer {
             guard visible.contains(dot.point) else { continue }
             let center = point(for: dot.point)
             let freshness = CGFloat(dot.freshness)
-            let recency = CGFloat(dot.recency)
 
             // 짙기는 셋이 함께 정한다 — 얼마나 자주 지났나, 얼마나 안 바랬나, 그리고 오늘인가.
             //
-            // 마지막 몫이 없으면 오늘 처음 걷는 골목이 지도에서 가장 흐린 점이 된다.
-            // 한 번 지난 길이라 진하기의 횟수 몫이 0이고, 두 해를 재는 싱싱함만으로는
-            // 오늘과 작년이 갈리지 않기 때문이다. 그러면 반투명한 오늘 점 아래로 옛 점의
-            // 빛깔이 비쳐 올라와, 위에 그려 놓고도 묻힌 것처럼 보인다.
+            // 오늘 걸은 자리는 아예 꽉 채운다. 마지막 몫이 없으면 오늘 처음 걷는 골목이
+            // 지도에서 가장 흐린 점이 된다. 한 번 지난 길이라 진하기의 횟수 몫이 0이고,
+            // 석 달을 재는 싱싱함만으로는 오늘과 어제가 갈리지 않기 때문이다. 그러면
+            // 반투명한 오늘 점 아래로 옛 점의 빛깔이 비쳐 올라와, 위에 그려 놓고도
+            // 묻힌 것처럼 보인다.
             //
             // 겹치는 자리에서 오늘이 맨 위에 서게 하는 것은 이 한 가지면 된다 — 밑이
             // 비치지 않을 만큼 꽉 채우는 것. 굵기까지 건드리면 점끼리 맞물려 띠가 된다.
-            let alpha = min(1, 0.32 + 0.30 * freshness + 0.30 * CGFloat(dot.heat) + 0.42 * recency)
+            //
+            // 잿빛으로 다 바랜 자리도 0.45는 남긴다. 더 지우면 옛 동네가 아예 없었던 곳처럼
+            // 보이는데, 발길이 끊긴 자리가 '빛바랜 채로' 남는 것이 이 지도의 요점이다.
+            let alpha = dot.isToday ? 1 : min(1, 0.45 + 0.35 * freshness + 0.20 * CGFloat(dot.heat))
 
             // 굵기는 지난 횟수만 따른다.
             //
@@ -454,14 +391,8 @@ final class DotGridRenderer: MKOverlayRenderer {
             // (바랜 자리가 가늘어지지 않아야 하는 것도 그대로다 — 가늘어지면 지워진 것처럼 보인다)
             let scaleUp = 1.0 + 0.45 * dot.heat
 
-            // 바래는 것은 '색이 빠지는 것'이다. 채도를 0으로 끌면 그 자리가 곧 잿빛이라,
-            // 원색과 잿빛을 따로 섞을 것 없이 한 줄로 이어진다.
-            let color = UIColor(
-                hue: dot.hue,
-                saturation: DotPalette.vividSaturation * freshness,
-                brightness: fadedBrightness + (freshBrightness - fadedBrightness) * freshness,
-                alpha: 1
-            )
+            // 오늘이면 주묵, 아니면 남빛. 석 달이 지난 자리는 둘 다 잿빛으로 만난다.
+            let color = DotPalette.color(isToday: dot.isToday, freshness: dot.freshness, dark: isDark)
 
             context.setFillColor(color.withAlphaComponent(alpha).cgColor)
             let size = radius * scaleUp

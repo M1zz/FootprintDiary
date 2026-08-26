@@ -9,7 +9,7 @@ import Foundation
 import LeeoKit
 
 enum FootprintDiarySpec: LeeoAppSpec {
-    static let appName = "벅터벅터"
+    static let appName = "벅뚜벅뚜"
     static let developerEmail = "mizzking75@gmail.com"
     static let feedback = LeeoFeedbackConfig(containerIdentifier: "iCloud.com.Ysoup.FeedbackHub", appIdentifier: "com.leeo.FootprintDiary")
 }

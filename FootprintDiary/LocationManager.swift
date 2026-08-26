@@ -407,9 +407,12 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
             sortBy: [SortDescriptor(\.timestamp, order: .reverse)]
         )
         descriptor.fetchLimit = 1
+        /// 직전 점에서 여기까지 온 거리. 위젯의 '걸은 거리'를 늘리는 데 쓴다.
+        var movedMeters: CLLocationDistance = 0
         if let last = (try? context.fetch(descriptor))?.first {
             let previous = CLLocation(latitude: last.latitude, longitude: last.longitude)
             let gap = previous.distance(from: location)
+            movedMeters = gap
             let interval = location.timestamp.timeIntervalSince(last.timestamp)
 
             // 걸어서 닿을 수 없는 자리로 튀었으면 버린다.
@@ -436,6 +439,10 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         ))
         try? context.save()
         diagnostics.noteAccepted()
+
+        // 걷는 동안 위젯도 함께 자란다. 지도를 다시 셈하지 않고 점 하나만 붙이는
+        // 값싼 갱신이라 뒤에 가 있어도 부담이 없다. (자세한 까닭은 WalkSnapshotWriter.swift)
+        WalkSnapshotWriter.append(location.coordinate, movedMeters: movedMeters)
     }
 
     /// 현재 위치를 한 번만 받아 온다. (발자국을 남기지 않고 지도 화면을 맞추는 용도)

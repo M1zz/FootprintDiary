@@ -7,6 +7,11 @@
 		<string>iCloud.com.Ysoup.FeedbackHub</string>
 		<string>iCloud.com.leeo.FootprintDiary</string>
 	</array>
+	<!-- 위젯과 함께 쓰는 그릇. 앱이 오늘 걸음을 여기에 적어 두면 위젯이 읽어 간다. -->
+	<key>com.apple.security.application-groups</key>
+	<array>
+		<string>group.com.leeo.FootprintDiary</string>
+	</array>
 	<key>com.apple.developer.icloud-services</key>
 	<array>
 		<string>CloudKit</string>

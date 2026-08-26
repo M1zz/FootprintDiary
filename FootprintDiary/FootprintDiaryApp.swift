@@ -2,7 +2,7 @@
 //  FootprintDiaryApp.swift
 //  FootprintDiary
 //
-//  벅터벅터 — 하루의 이동을 지도에 발자국으로 기록하고 일기를 쓰는 앱
+//  벅뚜벅뚜 — 하루의 이동을 지도에 발자국으로 기록하고 일기를 쓰는 앱
 //
 
 import SwiftUI

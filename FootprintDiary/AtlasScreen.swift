@@ -34,7 +34,9 @@ final class AtlasState: ObservableObject {
 
     private var signature: Int?
 
-    func rebuild(track: [TrackPoint], calendar: Calendar) {
+    /// - Parameter newPlacesToday: 오늘 처음 밟은 자리 수. 위젯에만 쓰인다.
+    ///   저장소를 여기서 다시 뒤지지 않고 화면이 이미 들고 있는 것을 받는다.
+    func rebuild(track: [TrackPoint], newPlacesToday: Int, calendar: Calendar) {
         guard signature != track.count else { return }
         signature = track.count
 
@@ -72,6 +74,21 @@ final class AtlasState: ObservableObject {
 
             let total = novelty.values.reduce(0, +)
             let todayNew = novelty[startOfToday] ?? 0
+
+            // 위젯에 건넬 꾸러미도 여기서 적는다. 오늘 걸음과 지난 걸음을 갈라 놓은
+            // 곳이 여기뿐이라, 다른 데서 적으려면 이 셈을 통째로 한 번 더 해야 한다.
+            let todayWalk = walks.first { $0.day == startOfToday }
+            WalkSnapshotWriter.write(
+                todayPoints: (todayWalk?.segments.flatMap { $0 } ?? []).map(\.coordinate),
+                pastPoints: walks
+                    .filter { $0.day < startOfToday }
+                    .flatMap { $0.segments.flatMap { $0 } }
+                    .map(\.coordinate),
+                newMeters: todayNew,
+                walkedMeters: todayWalk?.distance ?? 0,
+                newPlaces: newPlacesToday,
+                calendar: calendar
+            )
 
             await MainActor.run {
                 self.cells = cells
@@ -116,6 +133,11 @@ struct AtlasScreen: View {
     @StateObject private var mapProxy = MapProxy()
 
     private var calendar: Calendar { .current }
+
+    /// 오늘 처음 밟은 자리 수. 위젯이 '처음 3곳'이라고 내거는 값이다.
+    private var newPlacesToday: Int {
+        visits.filter { $0.isFirstVisit && calendar.isDateInToday($0.arrivalDate) }.count
+    }
 
     /// 오늘 오래 머물렀는데 아직 지도에 남기지 않은 자리
     private var asking: [Visit] {
@@ -246,8 +268,8 @@ struct AtlasScreen: View {
             } message: {
                 Text("잠시 뒤 다시 시도하거나, 지도를 길게 눌러 원하는 자리에 찍어 주세요.")
             }
-            .onAppear { state.rebuild(track: track, calendar: calendar) }
-            .onChange(of: track.count) { state.rebuild(track: track, calendar: calendar) }
+            .onAppear { state.rebuild(track: track, newPlacesToday: newPlacesToday, calendar: calendar) }
+            .onChange(of: track.count) { state.rebuild(track: track, newPlacesToday: newPlacesToday, calendar: calendar) }
             // 빈 지도가 확인된 순간부터 센다. 그리기가 끝나기 전부터 세면 셈이 다 지난 뒤에
             // 안내가 떠서 곧바로 사라지는 꼴이 된다.
             .task(id: isEmptyMap) {
@@ -286,7 +308,7 @@ struct AtlasScreen: View {
             VStack(alignment: .trailing, spacing: 2) {
                 Text(state.todayLength >= 1 ? "+\(distanceText(state.todayLength))" : "—")
                     .font(.headline)
-                    .foregroundStyle(state.todayLength >= 1 ? Color(DotPalette.freshColor(forDay: calendar.startOfDay(for: .now))) : .secondary)
+                    .foregroundStyle(state.todayLength >= 1 ? Color(DotPalette.today) : .secondary)
                     .contentTransition(.numericText())
                 Text("오늘 그은 길")
                     .font(.caption)
