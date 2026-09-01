@@ -49,6 +49,8 @@ enum FootprintUsage {
         case stickerMade = "sticker_made"
         /// 달력으로 지난 날들을 들춰 봤다
         case calendarOpened = "calendar_opened"
+        /// 개척 나침반을 열어 어느 쪽이 얕은지 봤다
+        case compassOpened = "compass_opened"
     }
 
     private static var reporter: LeeoUsageReporter {

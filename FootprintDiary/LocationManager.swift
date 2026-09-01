@@ -32,6 +32,12 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
 
     @Published var authorizationStatus: CLAuthorizationStatus = .notDetermined
     @Published var lastKnownLocation: CLLocation?
+
+    /// 기기가 지금 보고 있는 방위(도, 북이 0). 나침반이 없는 기기에서는 끝까지 nil이다.
+    ///
+    /// 이 값을 받는 동안에는 자기계가 계속 돌아 배터리를 쓴다. 그래서 걷기 기록과
+    /// 엮지 않고, 나침반 화면이 떠 있는 동안에만 켠다.
+    @Published var heading: CLLocationDirection?
     @Published var isRecordingManually = false
     @Published var manualRecordError: ManualRecordError?
 
@@ -133,6 +139,24 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
 
     func stopLiveUpdates() {
         removeUpdateReason(.guiding)
+    }
+
+    /// 나침반 화면이 떠 있는 동안에만 방위를 받는다.
+    ///
+    /// 자기계가 없는 기기(그리고 시뮬레이터)에서는 `headingAvailable()`이 거짓이라
+    /// 아무 일도 하지 않고, `heading`은 nil로 남는다. 그 경우 판은 진북을 위에 두고 선다.
+    func startHeadingUpdates() {
+        guard CLLocationManager.headingAvailable() else { return }
+        // 2도. 이보다 촘촘히 받으면 손이 조금만 떨려도 판이 흔들리고,
+        // 성기게 받으면 몸을 돌릴 때 판이 뚝뚝 끊겨 따라온다.
+        manager.headingFilter = 2
+        manager.startUpdatingHeading()
+    }
+
+    func stopHeadingUpdates() {
+        guard CLLocationManager.headingAvailable() else { return }
+        manager.stopUpdatingHeading()
+        Task { @MainActor in self.heading = nil }
     }
 
     // MARK: - 걷기 감지와 경로 기록
@@ -575,6 +599,20 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
                 )
             }
         }
+    }
+
+    /// 기기가 보는 방위가 바뀔 때마다.
+    ///
+    /// 정확도가 음수면 자기계가 아직 자리를 못 잡았거나 근처에 쇠붙이가 있다는 뜻이다.
+    /// 그 값을 그대로 쓰면 판이 엉뚱한 데를 위로 두고 서는데, 그건 방향을 모르는 것보다
+    /// 나쁘다. 그래서 버리고 이전 값을 그대로 둔다.
+    func locationManager(_ manager: CLLocationManager, didUpdateHeading newHeading: CLHeading) {
+        guard newHeading.headingAccuracy >= 0 else { return }
+        // 진북을 먼저 쓴다. 자북은 지역에 따라 몇 도씩 어긋나는데, 이 판은 지도 위의
+        // 방위를 말하므로 지도와 같은 북을 봐야 한다. 위치를 아직 못 잡아 진북을
+        // 모를 때만(-1) 자북으로 물러난다.
+        let direction = newHeading.trueHeading >= 0 ? newHeading.trueHeading : newHeading.magneticHeading
+        Task { @MainActor in self.heading = direction }
     }
 
     /// iOS가 '멈췄다'고 보고 스스로 위치 갱신을 멈췄을 때.

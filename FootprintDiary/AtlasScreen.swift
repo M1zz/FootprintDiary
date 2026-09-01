@@ -119,6 +119,7 @@ struct AtlasScreen: View {
     @State private var showSupport = false
     @State private var showFilm = false
     @State private var showStampList = false
+    @State private var showCompass = false
     /// 스탬프를 찍을 자리. 정해지면 고르는 화면이 열린다.
     @State private var pendingCoordinate: StampSpot?
     @State private var selectedStamp: MapStamp?
@@ -227,6 +228,14 @@ struct AtlasScreen: View {
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                        showCompass = true
+                    } label: {
+                        Image(systemName: "location.north.line")
+                    }
+                    .accessibilityLabel("개척 나침반")
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
                         showFilm = true
                     } label: {
                         Image(systemName: "play.rectangle")
@@ -251,6 +260,9 @@ struct AtlasScreen: View {
             }
             .sheet(isPresented: $showFilm) {
                 FilmScreen()
+            }
+            .sheet(isPresented: $showCompass) {
+                ExplorerCompassScreen()
             }
             .sheet(isPresented: $showStampList) {
                 // 목록에서 고른 자리로 지도를 데려간다. 목록은 이미 제 손으로 닫힌 뒤다.
