@@ -267,7 +267,9 @@ struct StampEditor: View {
         Form {
             Section {
                 HStack(spacing: 12) {
-                    StampSymbolBadge(stamp: stamp, side: 42, corner: 11)
+                    // 카메라로 찍은 심볼은 여기서만 크게 볼 수 있다. 지도의 44pt와
+                    // 같거나 작으면 '무엇을 찍었는지 확인하는 자리'가 못 된다.
+                    StampSymbolBadge(stamp: stamp, side: 56, corner: 14)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(headline).font(.headline)
                         Text(subtitle)
