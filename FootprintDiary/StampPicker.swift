@@ -267,8 +267,11 @@ struct StampEditor: View {
         Form {
             Section {
                 HStack(spacing: 12) {
-                    // 카메라로 찍은 심볼은 여기서만 크게 볼 수 있다. 지도의 44pt와
-                    // 같거나 작으면 '무엇을 찍었는지 확인하는 자리'가 못 된다.
+                    // 카메라로 찍은 심볼을 크게 볼 수 있는 곳은 여기뿐이다. 지도의
+                    // 도장은 30pt로 작게 서므로(그래야 자리마다 무게가 같다), 무엇을
+                    // 찍었는지 확인하는 일은 이 화면이 맡는다.
+                    // 갈래 그림도 같은 크기로 선다 — 한 화면 안에서 둘의 크기가 갈리면
+                    // 심볼을 넣은 자리가 더 대단한 것처럼 보인다.
                     StampSymbolBadge(stamp: stamp, side: 56, corner: 14)
                     VStack(alignment: .leading, spacing: 2) {
                         Text(headline).font(.headline)

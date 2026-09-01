@@ -42,18 +42,17 @@ final class StampAnnotation: NSObject, MKAnnotation {
 
 /// 낙관처럼 보이는 도장 그림. SF Symbol을 붉은 인장 안에 새긴다.
 enum StampSeal {
+    /// 지도에 서는 도장의 크기. 갈래 도장이든 카메라로 찍은 심볼이든 같다.
+    ///
+    /// 한때 심볼만 44로 키웠다가 되돌렸다. 심볼이 또렷하게는 보였지만, 지도 위에서
+    /// 그 자리만 유독 크게 서서 '더 중요한 자리'처럼 읽혔다. 이 지도에서 자리의
+    /// 무게는 다 같다 — 무엇을 찍었느냐로 크기가 갈리면, 심볼을 넣은 자리와 넣지
+    /// 않은 자리가 다른 등급의 것처럼 보인다.
+    ///
+    /// 심볼이 작아 보이던 진짜 까닭은 크기가 아니라 떼어 낸 것을 판 한구석에 그대로
+    /// 두고 있었던 것이다(StickerMaker.fitted). 알맹이가 판을 꽉 채우고 나면 30에서도
+    /// 무엇을 찍었는지 읽힌다.
     static let size = CGSize(width: 30, height: 30)
-
-    /// 카메라로 찍은 심볼이 서는 크기.
-    ///
-    /// 갈래 도장(30)보다 크다. 저쪽은 붉은 네모 안에 흰 획 하나라 30이면 넉넉히 읽히지만,
-    /// 이쪽은 사진에서 떼어 낸 것이라 안에 잔 것이 훨씬 많다. 같은 30에 앉히면 간판의
-    /// 글씨도, 사람의 얼굴도 뭉개져 '무언가 찍혀 있다'까지밖에 말하지 못한다.
-    ///
-    /// 44는 손가락으로 짚을 수 있는 가장 작은 크기이기도 하다. 심볼은 눌러서 그 자리를
-    /// 여는 단추이므로, 알아볼 수 있는 크기와 짚을 수 있는 크기가 여기서 만난다.
-    /// 더 키우면 스탬프 몇 개만 모여도 서로를 가린다.
-    static let stickerSize = CGSize(width: 44, height: 44)
 
     private static var cache: [String: UIImage] = [:]
 
@@ -71,11 +70,11 @@ enum StampSeal {
     static func image(sticker: UIImage) -> UIImage {
         let format = UIGraphicsImageRendererFormat()
         format.opaque = false
-        return UIGraphicsImageRenderer(size: stickerSize, format: format).image { ctx in
+        return UIGraphicsImageRenderer(size: size, format: format).image { ctx in
             ctx.cgContext.setShadow(offset: CGSize(width: 0, height: 0.5),
-                                    blur: 2,
+                                    blur: 1.5,
                                     color: UIColor.black.withAlphaComponent(0.28).cgColor)
-            sticker.draw(in: CGRect(origin: .zero, size: stickerSize))
+            sticker.draw(in: CGRect(origin: .zero, size: size))
         }
     }
 
