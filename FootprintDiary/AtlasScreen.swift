@@ -120,6 +120,7 @@ struct AtlasScreen: View {
     @State private var showFilm = false
     @State private var showStampList = false
     @State private var showCompass = false
+    @State private var showTimeline = false
     /// 스탬프를 찍을 자리. 정해지면 고르는 화면이 열린다.
     @State private var pendingCoordinate: StampSpot?
     @State private var selectedStamp: MapStamp?
@@ -264,6 +265,9 @@ struct AtlasScreen: View {
             .sheet(isPresented: $showCompass) {
                 ExplorerCompassScreen()
             }
+            .sheet(isPresented: $showTimeline) {
+                DayTimelineScreen()
+            }
             .sheet(isPresented: $showStampList) {
                 // 목록에서 고른 자리로 지도를 데려간다. 목록은 이미 제 손으로 닫힌 뒤다.
                 StampListScreen { coordinate in
@@ -328,34 +332,51 @@ struct AtlasScreen: View {
 
     // MARK: - 요약
 
+    /// 지도 위에 뜬 오늘의 요약. 누르면 오늘의 발자취로 들어간다.
+    ///
+    /// 도구 막대에 단추를 하나 더 다는 대신 이 판을 눌리게 했다. 막대에는 이미 다섯이
+    /// 걸려 있어 하나를 더하면 제목이 눌리고, 무엇보다 이 판이 이미 '오늘'을 말하고
+    /// 있다. 오늘 그은 길을 읽고 나서 오늘 어디를 갔었는지 궁금해지는 것이 순서다.
     private var summary: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 12) {
-            VStack(alignment: .leading, spacing: 2) {
-                Text(distanceText(state.atlasLength))
-                    .font(.system(size: 26, weight: .bold, design: .serif))
-                    .contentTransition(.numericText())
-                Text("내가 그린 길")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            }
+        Button {
+            showTimeline = true
+        } label: {
+            HStack(alignment: .firstTextBaseline, spacing: 12) {
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(distanceText(state.atlasLength))
+                        .font(.system(size: 26, weight: .bold, design: .serif))
+                        .contentTransition(.numericText())
+                    Text("내가 그린 길")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
 
-            Spacer(minLength: 0)
+                Spacer(minLength: 0)
 
-            VStack(alignment: .trailing, spacing: 2) {
-                Text(state.todayLength >= 1 ? "+\(distanceText(state.todayLength))" : "—")
-                    .font(.headline)
-                    .foregroundStyle(state.todayLength >= 1 ? Color(DotPalette.today) : .secondary)
-                    .contentTransition(.numericText())
-                Text("오늘 그은 길")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
+                VStack(alignment: .trailing, spacing: 2) {
+                    Text(state.todayLength >= 1 ? "+\(distanceText(state.todayLength))" : "—")
+                        .font(.headline)
+                        .foregroundStyle(state.todayLength >= 1 ? Color(DotPalette.today) : .secondary)
+                        .contentTransition(.numericText())
+                    Text("오늘 그은 길")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+
+                // 눌리는 판이라는 것을 알리는 것은 이 화살표 하나뿐이다. 판에 테를
+                // 두르거나 빛깔을 넣으면 지도 위에 뜬 종이가 단추 덩어리가 된다.
+                Image(systemName: "chevron.right")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.tertiary)
             }
+            .padding(.horizontal, 16)
+            .padding(.vertical, 12)
+            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 12)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
+        .buttonStyle(.plain)
         .accessibilityElement(children: .combine)
         .accessibilityLabel("내가 그린 길 \(distanceText(state.atlasLength)), 오늘 그은 길 \(distanceText(state.todayLength))")
+        .accessibilityHint("오늘의 발자취를 엽니다")
     }
 
     /// 배경 지도를 잠깐 비춰 본다. 누르고 있는 동안에만 비친다.

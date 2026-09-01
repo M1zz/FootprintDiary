@@ -51,6 +51,10 @@ enum FootprintUsage {
         case calendarOpened = "calendar_opened"
         /// 개척 나침반을 열어 어느 쪽이 얕은지 봤다
         case compassOpened = "compass_opened"
+        /// 오늘의 발자취를 열어 하루를 되짚었다
+        case timelineOpened = "timeline_opened"
+        /// 되짚어 물어본 자리에 '다녀왔다'고 답했다
+        case visitConfirmed = "visit_confirmed"
     }
 
     private static var reporter: LeeoUsageReporter {

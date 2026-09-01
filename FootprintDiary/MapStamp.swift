@@ -52,6 +52,17 @@ final class MapStamp {
     @Relationship(deleteRule: .cascade, inverse: \StampVisit.stamp)
     var revisits: [StampVisit]?
 
+    /// 이 자리를 두고 '오늘 다녀오셨죠?' 하고 마지막으로 물어본 때.
+    ///
+    /// 오늘의 발자취(DayTimeline)가 걸음에서 짚어 낸 자리를 물을 때만 적힌다.
+    /// '다녀왔어요'든 '아니에요'든 물어본 날짜가 남는다 — 남기는 것은 대답이 아니라
+    /// 물어봤다는 사실이다. 아니라고 한 자리를 다시 묻는 것이 가장 성가시고, 성가신
+    /// 물음은 한 번 겪으면 그다음부터 읽지도 않고 넘기게 된다. (Visit.askedAboutStamp와
+    /// 같은 뜻이되, 저쪽은 '스탬프를 찍을까'를 묻고 이쪽은 '다녀왔나'를 묻는다)
+    ///
+    /// 날마다 새로 묻는다. 어제 아니라고 한 자리에 오늘 진짜로 갔을 수 있다.
+    var visitAskedAt: Date?
+
     /// 이 자리의 심볼로 쓸 스티커 (투명 PNG).
     ///
     /// 비어 있으면 종류(kind)의 그림으로 찍는다. 카메라로 한 장 찍어 넣으면 그때부터
@@ -177,6 +188,16 @@ final class MapStamp {
     /// 며칠 동안의 발걸음으로 읽힌다.
     func canAddVisit(now: Date = .now, calendar: Calendar = .current) -> Bool {
         !hasVisited(on: now, calendar: calendar)
+    }
+
+    /// 오늘 다녀왔는지 물어볼 만한 자리인지.
+    ///
+    /// 이미 오늘 다녀온 것으로 남아 있으면(canAddVisit이 거짓) 물을 것이 없고,
+    /// 오늘 한 번 물어본 자리도 다시 묻지 않는다.
+    func canAskAboutVisit(now: Date = .now, calendar: Calendar = .current) -> Bool {
+        guard canAddVisit(now: now, calendar: calendar) else { return false }
+        guard let visitAskedAt else { return true }
+        return !calendar.isDate(visitAskedAt, inSameDayAs: now)
     }
 
     /// 지금 선 자리에서 이 스탬프까지의 거리(m)
