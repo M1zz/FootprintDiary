@@ -33,7 +33,8 @@ final class StampAnnotation: NSObject, MKAnnotation {
         // 모델이 지워져도 지도가 흔들리지 않도록 값을 복사해 둔다
         self.id = stamp.persistentModelID
         self.kind = stamp.kind
-        self.sticker = stamp.sticker.flatMap(UIImage.init(data:))
+        // 알맹이만 잘라 낸 것을 들고 있는다 — 빈 자리까지 도장으로 세면 작아 보인다
+        self.sticker = stamp.sticker.flatMap(StickerMaker.displayImage(from:))
         self.stickerBytes = stamp.sticker?.count ?? 0
         self.placeName = stamp.placeName
         self.coordinate = stamp.coordinate
@@ -42,21 +43,21 @@ final class StampAnnotation: NSObject, MKAnnotation {
 
 /// 낙관처럼 보이는 도장 그림. SF Symbol을 붉은 인장 안에 새긴다.
 enum StampSeal {
-    /// 지도에 서는 도장의 크기. 갈래 도장이든 카메라로 찍은 심볼이든 같다.
+    /// 지도에 서는 갈래 도장의 크기이자, 스티커가 설 자리의 넓이 기준.
     ///
     /// 한때 심볼만 44로 키웠다가 되돌렸다. 심볼이 또렷하게는 보였지만, 지도 위에서
     /// 그 자리만 유독 크게 서서 '더 중요한 자리'처럼 읽혔다. 이 지도에서 자리의
     /// 무게는 다 같다 — 무엇을 찍었느냐로 크기가 갈리면, 심볼을 넣은 자리와 넣지
     /// 않은 자리가 다른 등급의 것처럼 보인다.
-    ///
-    /// 심볼이 작아 보이던 진짜 까닭은 크기가 아니라 떼어 낸 것을 판 한구석에 그대로
-    /// 두고 있었던 것이다(StickerMaker.fitted). 알맹이가 판을 꽉 채우고 나면 30에서도
-    /// 무엇을 찍었는지 읽힌다.
     static let size = CGSize(width: 30, height: 30)
+
+    /// 스티커가 한쪽으로 길어질 수 있는 끝. 이보다 길면 지도에 걸린 현수막처럼 보여,
+    /// 넓이가 같아도 자리 하나보다 커진다.
+    static let maxStickerSide: CGFloat = 48
 
     private static var cache: [String: UIImage] = [:]
 
-    /// 카메라로 찍은 스티커를 도장 크기로 앉힌다.
+    /// 카메라로 찍은 스티커를 도장 자리에 앉힌다.
     ///
     /// 종이도 테두리도 깔지 않는다. 배경이 이미 지워져 있고 흰 테두리를 두르고
     /// 나온 그림이라(StickerMaker), 그대로 얹으면 지도에 붙여 놓은 것처럼 선다.
@@ -66,16 +67,47 @@ enum StampSeal {
     /// 그림자 한 겹이면 떠 있는 것으로 갈린다.
     ///
     /// 갈무리하지 않는다: 스티커는 스탬프마다 다르고, 갈래처럼 몇 백 개를 돌려쓰는
-    /// 물건이 아니다.
+    /// 물건이 아니다. (알맹이를 잘라 내는 셈은 StickerMaker가 갈무리해 둔다)
     static func image(sticker: UIImage) -> UIImage {
+        let drawn = sealSize(for: sticker.size)
+        // 그림자가 판 밖으로 잘리지 않게 둘레에 한 겹 여유를 둔다
+        let pad: CGFloat = 3
+        let canvas = CGSize(width: drawn.width + pad * 2, height: drawn.height + pad * 2)
+
         let format = UIGraphicsImageRendererFormat()
         format.opaque = false
-        return UIGraphicsImageRenderer(size: size, format: format).image { ctx in
+        return UIGraphicsImageRenderer(size: canvas, format: format).image { ctx in
             ctx.cgContext.setShadow(offset: CGSize(width: 0, height: 0.5),
                                     blur: 1.5,
                                     color: UIColor.black.withAlphaComponent(0.28).cgColor)
-            sticker.draw(in: CGRect(origin: .zero, size: size))
+            sticker.draw(in: CGRect(origin: CGPoint(x: pad, y: pad), size: drawn))
         }
+    }
+
+    /// 스티커가 설 자리의 크기. 갈래 도장과 '넓이'가 같아지도록 비를 지켜 늘린다.
+    ///
+    /// 30×30 네모에 맞춰 넣지 않는 까닭은 간판이 대개 옆으로 길기 때문이다. 셋 대 하나짜리
+    /// 간판을 정사각에 맞춰 넣으면 30×10이 되어, 옆에 선 꽉 찬 붉은 네모보다 한참 작아
+    /// 보인다. 같은 크기로 세웠는데 눈에는 작게 보이는 것이다 — 눈이 세는 것은 한 변이
+    /// 아니라 먹이 앉은 넓이다.
+    ///
+    /// 그래서 한 변이 아니라 넓이를 맞춘다. 비가 r일 때 √r을 곱하고 나누면 넓이는 그대로
+    /// 30×30이고, 셋 대 하나짜리 간판은 52×17로 선다. 자리의 무게는 같은 채로 간판만
+    /// 읽을 만해진다.
+    static func sealSize(for source: CGSize) -> CGSize {
+        guard source.width > 0, source.height > 0 else { return size }
+        let ratio = (source.width / source.height).squareRoot()
+        var width = size.width * ratio
+        var height = size.height / ratio
+        if width > maxStickerSide {
+            height *= maxStickerSide / width
+            width = maxStickerSide
+        }
+        if height > maxStickerSide {
+            width *= maxStickerSide / height
+            height = maxStickerSide
+        }
+        return CGSize(width: width, height: height)
     }
 
     static func image(for kind: StampKind) -> UIImage {

@@ -21,10 +21,14 @@ struct StampSymbolBadge: View {
     var corner: CGFloat = 8
 
     var body: some View {
-        if let data = stamp.sticker, let image = UIImage(data: data) {
+        if let data = stamp.sticker, let image = StickerMaker.displayImage(from: data) {
             // 배경이 지워진 그림이라 그대로 얹는다. 뒤에 색을 깔면 목록에서만
             // 네모가 되어, 지도에서 보던 것과 다른 물건처럼 보인다.
             // 흰 테두리가 흰 바탕에 묻히지 않도록 그림자만 옅게 준다.
+            //
+            // 담아 둔 것을 그대로 쓰지 않고 StickerMaker를 거치는 까닭은, 담긴 판이
+            // 정사각이라 넓적한 간판일수록 위아래가 비어 있기 때문이다. 그 빈 자리까지
+            // 딱지 크기로 세면 32pt 자리에 간판은 10pt로 앉는다.
             Image(uiImage: image)
                 .resizable()
                 .scaledToFit()

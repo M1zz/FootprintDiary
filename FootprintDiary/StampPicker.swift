@@ -258,6 +258,8 @@ struct StampEditor: View {
     @State private var isAddingPhotos = false
     /// 스티커를 찍는 카메라를 띄우고 있는지
     @State private var isMakingSticker = false
+    /// 찍어 둔 스티커를 크게 들여다보고 있는지
+    @State private var isViewingSticker = false
     /// 다녀온 날을 다 펼쳐 볼지 (여러 해 다닌 자리는 목록이 길어진다)
     @State private var showsAllVisits = false
     /// 이 화면에서 지웠는지. 지운 뒤에는 떠나면서 다시 쓰지 않는다.
@@ -267,12 +269,16 @@ struct StampEditor: View {
         Form {
             Section {
                 HStack(spacing: 12) {
-                    // 카메라로 찍은 심볼을 크게 볼 수 있는 곳은 여기뿐이다. 지도의
-                    // 도장은 30pt로 작게 서므로(그래야 자리마다 무게가 같다), 무엇을
-                    // 찍었는지 확인하는 일은 이 화면이 맡는다.
+                    // 지도의 도장은 30pt 남짓으로 작게 서므로(그래야 자리마다 무게가
+                    // 같다), 무엇을 찍었는지 확인하는 일은 이 화면이 맡는다.
                     // 갈래 그림도 같은 크기로 선다 — 한 화면 안에서 둘의 크기가 갈리면
                     // 심볼을 넣은 자리가 더 대단한 것처럼 보인다.
-                    StampSymbolBadge(stamp: stamp, side: 56, corner: 14)
+                    //
+                    // 56pt로도 모자라면 두드려서 화면 가득 펼친다. 찍어 놓고 무엇이
+                    // 찍혔는지 못 보는 일이 없어야 한다. 두드릴 것이 있다는 표는
+                    // 아래 '심볼' 칸의 '크게 보기'가 대신 세운다 — 딱지에 돋보기를
+                    // 얹으면 정작 심볼이 가려진다.
+                    stickerBadge
                     VStack(alignment: .leading, spacing: 2) {
                         Text(headline).font(.headline)
                         Text(subtitle)
@@ -341,6 +347,15 @@ struct StampEditor: View {
         }
         .onChange(of: picked) {
             Task { await addPhotos() }
+        }
+        .fullScreenCover(isPresented: $isViewingSticker) {
+            if let data = stamp.sticker, let image = StickerMaker.displayImage(from: data) {
+                StickerViewer(image: image, title: headline)
+            } else {
+                // 열려는 사이에 스티커가 지워졌으면 빈 창만 남는다. 닫을 것이 없는
+                // 검은 화면에 갇히지 않도록 그대로 물러선다.
+                Color.clear.onAppear { isViewingSticker = false }
+            }
         }
         .fullScreenCover(isPresented: $isMakingSticker) {
             // 전체 화면으로 띄운다. 카메라는 눈앞의 것을 겨누는 일이라 시트로 반쯤
@@ -487,6 +502,26 @@ struct StampEditor: View {
 
     // MARK: - 심볼
 
+    /// 머리에 서는 딱지. 스티커가 있으면 두드려서 크게 볼 수 있다.
+    ///
+    /// 갈래 그림뿐일 때는 두드려도 나올 것이 없다 — 이미 다 보이는 그림을 화면 가득
+    /// 펼쳐 봐야 그 그림 그대로다. 그때는 단추로 만들지 않는다. 눌리는데 아무 일도
+    /// 일어나지 않는 자리는, 눌리지 않는 자리보다 더 고장 난 것처럼 보인다.
+    @ViewBuilder
+    private var stickerBadge: some View {
+        if stamp.sticker != nil {
+            Button {
+                isViewingSticker = true
+            } label: {
+                StampSymbolBadge(stamp: stamp, side: 56, corner: 14)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("심볼 크게 보기")
+        } else {
+            StampSymbolBadge(stamp: stamp, side: 56, corner: 14)
+        }
+    }
+
     /// 지도에 얹히는 그림 한 장.
     ///
     /// 사진과 갈라 둔 까닭은 하는 일이 다르기 때문이다. 사진은 '거기가 어땠나'를 남기는
@@ -496,6 +531,15 @@ struct StampEditor: View {
     @ViewBuilder
     private var symbol: some View {
         Section {
+            if stamp.sticker != nil {
+                Button {
+                    isViewingSticker = true
+                } label: {
+                    Label("크게 보기", systemImage: "arrow.up.left.and.arrow.down.right")
+                }
+                .foregroundStyle(.primary)
+            }
+
             Button {
                 isMakingSticker = true
             } label: {

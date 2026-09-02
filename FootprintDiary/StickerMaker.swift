@@ -19,12 +19,16 @@
 //  어두운 지도에서든 밝은 종이에서든 실루엣이 배경에 먹히지 않게 잡아 준다.
 //
 //  떼어 낸 것은 제 자리에 그대로 두지 않고 판 가운데로 옮겨 꽉 채운다. 창을 겨눌 때
-//  간판이 창의 한구석에만 걸리는 일이 흔한데, 그대로 두면 360px 판의 한구석에만 그림이
+//  간판이 창의 한구석에만 걸리는 일이 흔한데, 그대로 두면 판의 한구석에만 그림이
 //  들어앉는다. 그 판이 지도에서는 30pt로 줄어드니, 정작 눈에 보이는 간판은 십 pt도
 //  안 되는 얼룩이 된다. 무엇을 찍었는지 알아볼 수 없으면 심볼이 아니다.
 //
 //  도장을 키워서 풀 일이 아니다. 심볼만 큼직하게 서면 지도에서 그 자리만 '더 중요한
-//  자리'처럼 읽힌다. 판을 꽉 채우는 것이 답이라, 크기는 갈래 도장과 같은 30에 둔다.
+//  자리'처럼 읽힌다. 판을 꽉 채우는 것이 답이라, 도장의 넓이는 갈래 도장과 같이 둔다.
+//
+//  담아 둔 것을 보여 줄 때는 한 번 더 손을 본다(displayImage). 이 셈이 생기기 전에 찍어
+//  둔 심볼이 이미 담겨 있고, 정사각 판에 앉힌 넓적한 간판은 빈 자리까지 도장으로 세면
+//  작아 보이기 때문이다.
 //
 //  그래서 떼어 내기까지는 큰 판(workingSide)에서 하고, 꽉 채워 앉힌 뒤에 담을 크기로
 //  줄인다. 작은 판에서 떼어 내 키우면 없던 해상도를 만들어 낼 수 없어 흐려진다.
@@ -37,30 +41,35 @@ enum StickerMaker {
 
     /// 지도에 얹을 심볼의 한 변 (픽셀).
     ///
-    /// 지도의 도장은 30pt이고 3배 화면에서 90px이다. 상세 화면은 56pt(168px)로 보여
-    /// 주므로 그쪽이 실제 상한이다. 360px이면 거기에도 두 배 여유가 있고,
-    /// 아이클라우드에 실어 나르기에도 가볍다.
-    /// 원본을 그대로 담으면 한 장에 수 MB가 되어 스탬프 몇 십 개만으로 동기화가 무거워진다.
-    static let outputSide: CGFloat = 360
+    /// 지도의 도장은 30pt이고 3배 화면에서 90px, 상세 화면의 딱지는 56pt(168px)다.
+    /// 그것만이면 360으로 넉넉했다. 그런데 이제 심볼을 화면 가득 펼쳐 볼 수 있어
+    /// (StickerViewer) 실제 상한은 화면 너비다 — 3배 화면에서 1100px 남짓이다.
+    /// 720이면 거기에 한 걸음 못 미치지만 눈으로는 거의 갈리지 않고, 아이클라우드로
+    /// 실어 나르기에도 아직 가볍다. 원본을 그대로 담으면 한 장에 수 MB가 되어
+    /// 스탬프 몇 십 개만으로 동기화가 무거워진다.
+    static let outputSide: CGFloat = 720
 
     /// 떼어 내기까지 다루는 판의 한 변 (픽셀).
     ///
-    /// 담을 크기(360)보다 크게 잡는다. 한구석에 걸린 것을 떼어 내 판 가득 키워야 하는데,
-    /// 360에서 떼어 낸 100px짜리를 332로 늘리면 없던 것을 만들어 내느라 뭉개진다.
-    /// 1080이면 판의 3분의 1에 걸린 것까지는 줄이는 셈이 되어 또렷함이 남는다.
+    /// 담을 크기의 두 배로 잡는다. 한구석에 걸린 것을 떼어 내 판 가득 키워야 하는데,
+    /// 담을 크기에서 떼어 낸 조각을 다시 늘리면 없던 것을 만들어 내느라 뭉개진다.
+    /// 두 배면 판의 3분의 1에 걸린 것까지는 줄이는 셈이 되어 또렷함이 남는다.
     /// 이보다 더 키워도 눈에 보이는 것은 없고 떼어 내는 셈만 무거워진다.
-    static let workingSide: CGFloat = 1080
+    static let workingSide: CGFloat = 1440
 
-    /// 꽉 채워 앉힐 때 판 가장자리에 남기는 여백 (출력 픽셀 기준).
+    /// 꽉 채워 앉힐 때 판 가장자리에 남기는 여백 (판 한 변에 대한 비율).
     ///
-    /// 테두리(outlineWidth)보다 넓어야 한다. 좁으면 테두리가 판 밖으로 잘려 나가
+    /// 테두리(outlineRatio)보다 넓어야 한다. 좁으면 테두리가 판 밖으로 잘려 나가
     /// 한쪽 면만 테두리가 없는 그림이 된다.
-    static let fitMargin: CGFloat = 14
+    ///
+    /// 픽셀이 아니라 비율로 둔다. 담는 크기를 바꿀 때마다 여백과 테두리를 같이 고쳐 주지
+    /// 않으면, 판만 커지고 테두리는 그대로여서 전에 찍은 것과 다른 그림이 나온다.
+    static let fitMarginRatio: CGFloat = 14.0 / 360
 
-    /// 떼어 낸 것 둘레에 두르는 흰 테두리의 두께 (출력 픽셀 기준).
+    /// 떼어 낸 것 둘레에 두르는 흰 테두리의 두께 (판 한 변에 대한 비율).
     /// 얇으면 어두운 지도에서 실루엣이 먹히고, 두꺼우면 무엇을 찍었는지보다
     /// 흰 덩어리가 먼저 보인다.
-    static let outlineWidth: CGFloat = 9
+    static let outlineRatio: CGFloat = 9.0 / 360
 
     /// 화면에서 겨눈 창을 사진에서 오려 내고, 그 안의 것만 남긴다.
     ///
@@ -89,6 +98,54 @@ enum StickerMaker {
         }
         return (outlined(fitted(lifted)), true)
     }
+
+    // MARK: - 담아 둔 것 보여 주기
+
+    /// 담아 둔 심볼을 화면에 얹기 전에 알맹이만 바짝 잘라 낸다. (그릴 것이 없으면 nil)
+    ///
+    /// 찍을 때 이미 판 가득 앉히는데도(fitted) 보여 줄 때 한 번 더 보는 까닭이 둘이다.
+    ///
+    /// 하나는 그 셈이 생기기 전에 찍어 둔 심볼이 이미 담겨 있기 때문이다. 그때 담긴 것은
+    /// 알맹이가 판 한구석에 그대로 앉아 있어, 30pt 도장 안에서는 십 pt도 안 되는 얼룩으로
+    /// 보인다. 다시 찍으라고 하는 대신 보여 줄 때 앉힌다 — 담아 둔 것은 그대로 두고
+    /// 눈에 보이는 것만 고치므로, 되돌릴 일도 옮길 일도 없다.
+    ///
+    /// 또 하나는 판이 정사각이기 때문이다. 간판은 대개 옆으로 길어서 정사각 판에 맞춰
+    /// 앉히면 위아래가 텅 빈 채로 담긴다. 그 빈 자리까지 도장 크기에 세면 정작 간판은
+    /// 도장의 3분의 1 높이로 서고, 옆에 선 갈래 도장(꽉 찬 붉은 네모)보다 한참 작아
+    /// 보인다. 빈 자리를 잘라 내면 부르는 쪽이 알맹이의 실제 비율을 알 수 있어,
+    /// 넓이를 맞춰 세울 수 있다 (StampSeal.sealSize).
+    ///
+    /// 알파를 훑는 일이라 갈무리해 둔다. 지도를 한 번 넘길 때 스탬프 수십 개가 한꺼번에
+    /// 다시 그려지는데, 그때마다 720×720을 훑으면 넘기는 손이 걸린다.
+    static func displayImage(from data: Data) -> UIImage? {
+        let key = data as NSData
+        if let cached = displayCache.object(forKey: key) { return cached }
+        guard let image = UIImage(data: data) else { return nil }
+
+        let trimmed = trimmedToSubject(image)
+        displayCache.setObject(trimmed, forKey: key,
+                               cost: Int(trimmed.size.width * trimmed.size.height) * 4)
+        return trimmed
+    }
+
+    /// 그려진 것이 없는 가장자리를 잘라 낸다. 잘라 낼 자리를 못 찾으면 그대로 돌려준다.
+    private static func trimmedToSubject(_ image: UIImage) -> UIImage {
+        guard let cgImage = image.cgImage,
+              let bounds = subjectBounds(of: cgImage),
+              let subject = cgImage.cropping(to: bounds) else { return image }
+        return UIImage(cgImage: subject, scale: 1, orientation: .up)
+    }
+
+    /// 잘라 낸 것을 담아 두는 곳. 담아 둔 그림이 바뀌면 열쇠(바이트)도 달라지므로
+    /// 스티커를 다시 찍어도 옛것이 나오지 않는다.
+    private static let displayCache: NSCache<NSData, UIImage> = {
+        let cache = NSCache<NSData, UIImage>()
+        // 지도 한 화면에 서는 스탬프보다 넉넉하되, 오래된 지도를 다 들고 있지는 않을 만큼.
+        cache.countLimit = 120
+        cache.totalCostLimit = 48 * 1024 * 1024
+        return cache
+    }()
 
     // MARK: - 오려 내기
 
@@ -185,7 +242,7 @@ enum StickerMaker {
             return resized(image, to: outputSide)
         }
 
-        let inner = max(outputSide - fitMargin * 2, 1)
+        let inner = max(outputSide - outputSide * fitMarginRatio * 2, 1)
         let scale = min(inner / bounds.width, inner / bounds.height)
         let drawn = CGSize(width: bounds.width * scale, height: bounds.height * scale)
         let origin = CGPoint(x: (outputSide - drawn.width) / 2,
@@ -286,13 +343,14 @@ enum StickerMaker {
         }
 
         return renderer.image { _ in
-            // 방향을 촘촘히 돌수록 테두리가 매끈해진다. 16이면 9px 두께에서
+            // 방향을 촘촘히 돌수록 테두리가 매끈해진다. 16이면 판의 40분의 1 두께에서
             // 이가 빠진 자리가 보이지 않는다.
+            let outline = size.width * outlineRatio
             let steps = 16
             for step in 0..<steps {
                 let angle = CGFloat(step) / CGFloat(steps) * 2 * .pi
-                silhouette.draw(in: rect.offsetBy(dx: cos(angle) * outlineWidth,
-                                                  dy: sin(angle) * outlineWidth))
+                silhouette.draw(in: rect.offsetBy(dx: cos(angle) * outline,
+                                                  dy: sin(angle) * outline))
             }
             image.draw(in: rect)
         }
