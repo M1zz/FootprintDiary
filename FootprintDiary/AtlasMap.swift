@@ -34,6 +34,23 @@ struct AtlasMapView: UIViewRepresentable {
     /// 확대·축소와 배율을 주고받는 손잡이
     let proxy: MapProxy
 
+    /// 열자마자 여기를 한가운데 놓는다.
+    ///
+    /// 정해 두면 내 위치가 도착해도 화면을 빼앗지 않는다. 안내에서 종이 한 조각을
+    /// 보여 줄 때처럼 '보여 줄 자리가 이미 정해져 있는' 지도에 쓴다.
+    var focus: CLLocationCoordinate2D?
+
+    /// 내 위치로 돌아가는 단추를 달지. 안내에서 보여 주는 종이에는 달지 않는다 —
+    /// 만질 수 없는 지도에 단추만 붙어 있으면 눌러 보고 고장 난 줄 안다.
+    var showsTrackingButton = true
+
+    /// 지금 내가 선 점을 그릴지.
+    ///
+    /// 이 점은 늘 도장보다 위에 선다(그래야 도장이 겹쳐도 지금 어디인지 안 묻힌다).
+    /// 그런데 안내에서 첫 도장을 보여 줄 때는 도장이 바로 그 자리에 찍히므로, 점이
+    /// 무엇을 찍었는지를 통째로 덮어 버린다. 보여 주려던 장면을 가리게 되는 그때만 끈다.
+    var showsUserLocation = true
+
     /// 화면이 밝은지 어두운지.
     /// 그리개는 만들어질 때 빛깔을 미리 뽑아 두므로, 바뀌면 우리가 다시 얹어 줘야 한다.
     @Environment(\.colorScheme) private var colorScheme
@@ -47,7 +64,7 @@ struct AtlasMapView: UIViewRepresentable {
     func makeUIView(context: Context) -> MKMapView {
         let mapView = MKMapView()
         mapView.delegate = context.coordinator
-        mapView.showsUserLocation = true
+        mapView.showsUserLocation = showsUserLocation
 
         // 종이로 덮을 때 지명이 비쳐 보이지 않도록 관심지점을 끈다
         let configuration = MKStandardMapConfiguration(emphasisStyle: .muted)
@@ -58,7 +75,7 @@ struct AtlasMapView: UIViewRepresentable {
             forAnnotationViewWithReuseIdentifier: StampAnnotationView.reuseIdentifier
         )
 
-        addTrackingButton(to: mapView)
+        if showsTrackingButton { addTrackingButton(to: mapView) }
         proxy.mapView = mapView
         context.coordinator.proxy = proxy
 
@@ -83,6 +100,10 @@ struct AtlasMapView: UIViewRepresentable {
             uniquingKeysWith: { first, _ in first }
         )
         coordinator.trails = trails
+        if mapView.showsUserLocation != showsUserLocation {
+            mapView.showsUserLocation = showsUserLocation
+        }
+        coordinator.focus(focus, on: mapView)
         coordinator.syncTheme(on: mapView, scheme: colorScheme)
         coordinator.syncPaper(on: mapView, showsBasemap: showsBasemap)
         coordinator.syncDots(on: mapView, cells: cells)
@@ -139,6 +160,12 @@ struct AtlasMapView: UIViewRepresentable {
         /// 막혔을 때 다시 해 보기까지 두는 시간(초). 서둘러 다시 조르면 더 오래 막힌다.
         static let terrainRetryDelay: TimeInterval = 4
         private var didCenterOnUser = false
+        /// 마지막으로 붙들어 놓은 자리 (focus로 받은 것)
+        private var focused: CLLocationCoordinate2D?
+
+        /// 붙들어 놓은 자리를 볼 때의 화면 너비(m).
+        /// 도장 하나를 보여 주는 자리라 동네가 아니라 골목이 보여야 한다.
+        static let focusMeters: CLLocationDistance = 500
 
         var proxy: MapProxy?
         var stampsByID: [PersistentIdentifier: MapStamp] = [:]
@@ -146,6 +173,30 @@ struct AtlasMapView: UIViewRepresentable {
         func stopFindingTerrain() {
             pendingTerrain?.cancel()
             terrainFinder.cancel()
+        }
+
+        /// 보여 줄 자리를 붙들어 놓는다.
+        ///
+        /// 자리를 잡은 것으로 쳐서(didCenterOnUser) 내 위치가 도착해도 화면을 빼앗기지
+        /// 않는다. 처음 잡을 때는 소리 없이 놓고, 자리가 옮겨질 때만 미끄러지듯 옮긴다 —
+        /// 열자마자 화면이 날아가면 무엇을 보고 있었는지 알 수 없다.
+        func focus(_ coordinate: CLLocationCoordinate2D?, on mapView: MKMapView) {
+            guard let coordinate else { return }
+            if let focused,
+               focused.latitude == coordinate.latitude,
+               focused.longitude == coordinate.longitude { return }
+            let isFirst = focused == nil
+            focused = coordinate
+            didCenterOnUser = true
+            mapView.setRegion(
+                MKCoordinateRegion(
+                    center: coordinate,
+                    latitudinalMeters: Self.focusMeters,
+                    longitudinalMeters: Self.focusMeters
+                ),
+                animated: !isFirst
+            )
+            proxy?.report(mapView)
         }
 
         /// 마지막으로 그린 화면 밝기

@@ -269,16 +269,37 @@ struct AtlasScreen: View {
                 VStack(alignment: .leading, spacing: 10) {
                     scaleBar
                     peekButton
-                    stampButton
+                    // 가운데 안내는 내 위치 점을 덮으므로 스스로 비켜난다. 그러고 나면
+                    // 다시 '무엇을 하지'가 되므로, 할 일 하나를 그 일을 하는 단추 옆에
+                    // 붙여 둔다 — 여기는 아무것도 가리지 않는 자리다.
+                    HStack(spacing: 8) {
+                        stampButton
+                        if isEmptyMap {
+                            Text("눌러서 지금 자리 찍기")
+                                .font(.caption)
+                                .foregroundStyle(Color(InkStyle.ink))
+                                .padding(.horizontal, 10)
+                                .padding(.vertical, 6)
+                                .background(.ultraThinMaterial, in: Capsule())
+                                .transition(.opacity.combined(with: .move(edge: .leading)))
+                                .allowsHitTesting(false)
+                        }
+                    }
+                    .animation(.easeOut(duration: 0.3), value: isEmptyMap)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
                 .padding(.leading, 16)
                 // 애플 지도 저작권 표기를 가리지 않도록 띄운다 (가리면 심사에서 걸린다)
                 .padding(.bottom, 52)
 
-                zoomButtons
-                    .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
-                    .padding(.trailing, 12)
+                // 안내가 떠 있는 동안에는 물러난다. 둘 다 화면 한가운데 높이에 서서
+                // 서로 겹치는데, 아직 아무것도 안 그려진 종이에서 확대·축소는 할 일이 없다.
+                if !(isEmptyMap && showsEmptyHint) {
+                    zoomButtons
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
+                        .padding(.trailing, 12)
+                        .transition(.opacity)
+                }
             }
             .navigationTitle("내 지도")
             .navigationBarTitleDisplayMode(.inline)
@@ -426,7 +447,10 @@ struct AtlasScreen: View {
     }
 
     /// 빈 지도 안내를 띄워 두는 시간(초). 한 번 읽을 만큼만.
-    private static let emptyHintDuration: TimeInterval = 5
+    ///
+    /// 할 수 있는 일 둘까지 적으면서 읽을 것이 늘었다. 다섯 셈으로는 첫 줄만 읽다가
+    /// 사라져, 정작 무엇을 하면 되는지는 못 본 채로 빈 종이만 남는다.
+    private static let emptyHintDuration: TimeInterval = 10
 
     // MARK: - 요약
 
@@ -598,23 +622,61 @@ struct AtlasScreen: View {
         .accessibilityLabel("지금 자리에 스탬프 찍기")
     }
 
+    /// 아직 아무 길도 그려지지 않은 지도에 띄우는 안내.
+    ///
+    /// 전에는 '아직 그린 길이 없어요'라고만 적어 두었다. 그것은 지금 없는 것을 말할 뿐,
+    /// 무엇을 하면 생기는지는 말하지 않는다. 백지도를 처음 연 사람에게 가장 막막한 것이
+    /// 바로 그 대목이라, 할 수 있는 일 둘을 그 일을 하는 물건과 함께 짚어 준다.
     private var emptyHint: some View {
-        VStack(spacing: 8) {
-            Image(systemName: "figure.walk")
-                .font(.largeTitle)
-                .foregroundStyle(.secondary)
-            Text("아직 그린 길이 없어요")
-                .font(.headline)
-            Text("걸으면 지나온 길이 이 지도에 그려집니다.\n차나 지하철로 지난 길은 그려지지 않아요.")
+        VStack(spacing: 14) {
+            VStack(spacing: 6) {
+                Image(systemName: "figure.walk")
+                    .font(.largeTitle)
+                    .foregroundStyle(.secondary)
+                Text("이제 걸어 보세요")
+                    .font(.headline)
+                Text("지나온 자리가 한 점씩 이 종이에 찍힙니다.\n차나 지하철로 지난 길은 그려지지 않아요.")
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .multilineTextAlignment(.center)
+            }
+
+            Divider()
+
+            VStack(alignment: .leading, spacing: 10) {
+                hintRow(
+                    symbol: "seal.fill",
+                    text: "왼쪽 아래 **도장**을 누르면 지금 선 자리가 남아요"
+                )
+                hintRow(
+                    symbol: "hand.point.up.left",
+                    text: "지도를 **길게 누르면** 가볼 곳을 미리 찍어 둘 수 있어요"
+                )
+            }
+        }
+        .padding(18)
+        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
+        .padding(.horizontal, 32)
+        .frame(maxHeight: .infinity)
+        // 다 읽었으면 바로 걷어 낼 수 있게 둔다. 이 판이 서는 자리가 곧 내 위치 점이
+        // 서는 자리라, 읽고 난 뒤에는 안내가 아니라 가림막이 된다.
+        .onTapGesture {
+            withAnimation(.easeOut(duration: 0.25)) { showsEmptyHint = false }
+        }
+    }
+
+    private func hintRow(symbol: String, text: String) -> some View {
+        HStack(alignment: .top, spacing: 10) {
+            Image(systemName: symbol)
+                .font(.footnote)
+                .foregroundStyle(Color(InkStyle.sealRed))
+                .frame(width: 18)
+            Text(.init(text))
                 .font(.footnote)
                 .foregroundStyle(.secondary)
-                .multilineTextAlignment(.center)
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 0)
         }
-        .padding(20)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 16))
-        .padding(.horizontal, 40)
-        .frame(maxHeight: .infinity)
-        .allowsHitTesting(false)
     }
 
     private func distanceText(_ meters: CLLocationDistance) -> String {
