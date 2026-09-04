@@ -68,7 +68,7 @@ final class StickerCamera: NSObject, ObservableObject {
     /// 기기가 내주는 상한은 100배를 넘기도 하는데, 그 끝은 픽셀을 늘려 놓은 것이라
     /// 무엇을 찍었는지 알아볼 수 없는 얼룩이 된다. 심볼은 알아보라고 만드는 것이니
     /// 알아볼 수 있는 데까지만 연다.
-    private static let zoomCeiling: CGFloat = 6
+    private nonisolated static let zoomCeiling: CGFloat = 6
 
     // MARK: - 권한
 

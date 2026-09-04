@@ -15,5 +15,5 @@
 // DeployBar가 배포할 때 아래 두 줄을 통째로 갈아 쓴다. 줄 끝에 주석을 붙이면 함께
 // 지워지므로 붙이지 말 것.
 
-MARKETING_VERSION = 1.0.4
-CURRENT_PROJECT_VERSION = 4
+MARKETING_VERSION = 1.0.5
+CURRENT_PROJECT_VERSION = 1
