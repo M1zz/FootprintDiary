@@ -19,6 +19,12 @@ import PhotosUI
 import CoreLocation
 
 struct StampPicker: View {
+    /// 지금 그 자리에 서서 찍는 것인지. 거짓이면 아직 가보지 않은 자리에 미리 찍는 것이다.
+    ///
+    /// 고르는 것은 똑같지만 묻는 말이 달라야 한다. 안 가본 자리를 두고 "여기에 무엇이
+    /// 있나요"라고 물으면 없는 것을 아는 척 답하게 되고, 무엇보다 지금 남기는 것이
+    /// 다녀온 기록이 아니라는 것을 고르기 전에 알아야 한다.
+    var isHere: Bool = true
     /// 고른 스탬프를 찍는다
     let onPick: (StampKind) -> Void
 
@@ -51,8 +57,11 @@ struct StampPicker: View {
                 .padding()
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("여기에 무엇이 있나요?")
+            .navigationTitle(isHere ? "여기에 무엇이 있나요?" : "저기에 무엇이 있나요?")
             .navigationBarTitleDisplayMode(.inline)
+            .safeAreaInset(edge: .top) {
+                if !isHere { plannedNotice }
+            }
             .searchable(text: $query, prompt: "스탬프 찾기")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
@@ -63,6 +72,25 @@ struct StampPicker: View {
                 StampGroupScreen(group: group, onPick: pick)
             }
         }
+    }
+
+    /// 아직 안 가본 자리에 찍는 중이라는 알림.
+    ///
+    /// 고르고 난 뒤에 알려 주면 늦다 — 다 찍고 나서야 다녀온 기록이 아니라는 것을
+    /// 알게 되면, 되돌리려고 지우는 수밖에 없다.
+    private var plannedNotice: some View {
+        HStack(spacing: 8) {
+            Image(systemName: "signpost.right.and.left")
+                .foregroundStyle(Color(InkStyle.sealRed))
+            Text("아직 가보지 않은 자리예요. ‘가볼 곳’으로 남고, 그 자리에 닿으면 다녀온 곳이 됩니다.")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+            Spacer(minLength: 0)
+        }
+        .padding(.horizontal, 16)
+        .padding(.vertical, 10)
+        .background(.bar)
     }
 
     // MARK: - 갈래
@@ -380,18 +408,41 @@ struct StampEditor: View {
     @ViewBuilder
     private var visiting: some View {
         Section {
-            LabeledContent("다녀온 횟수") {
-                Text("\(stamp.visitCount)번")
-                    .font(.body.weight(.semibold))
-                    .contentTransition(.numericText())
-            }
-            LabeledContent("마지막 방문") {
-                Text(visitDayText(stamp.lastVisitedAt))
+            if stamp.isUnvisited {
+                // 횟수도 마지막 방문도 적을 것이 없다. 0번이라고 적어 두면 다녀온
+                // 자리와 같은 칸에서 견주게 되어, 성격이 다른 기록이 '덜 간 곳'으로 읽힌다.
+                LabeledContent("아직") {
+                    Text("가보지 않은 곳")
+                        .font(.body.weight(.semibold))
+                        .foregroundStyle(Color(InkStyle.sealRed))
+                }
+                LabeledContent("찍어 둔 날") {
+                    Text(visitDayText(stamp.createdAt))
+                }
+            } else {
+                LabeledContent("다녀온 횟수") {
+                    Text("\(stamp.visitCount)번")
+                        .font(.body.weight(.semibold))
+                        .contentTransition(.numericText())
+                }
+                if let last = stamp.lastVisitedAt {
+                    LabeledContent("마지막 방문") {
+                        Text(visitDayText(last))
+                    }
+                }
+                // 가볼 곳으로 찍어 두었다가 정말로 간 자리는 그 이야기를 남긴다.
+                if stamp.isPlanned {
+                    LabeledContent("처음") {
+                        Text("가볼 곳으로 찍어 뒀던 자리")
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                    }
+                }
             }
             visitButton
             visitHistory
         } header: {
-            Text("방문")
+            Text(stamp.isUnvisited ? "가볼 곳" : "방문")
         } footer: {
             Text(visitFooter)
         }
@@ -401,13 +452,16 @@ struct StampEditor: View {
         Button {
             addVisit()
         } label: {
-            Label(
-                alreadyToday ? "오늘은 이미 남겼어요" : "여기 다녀왔어요",
-                systemImage: alreadyToday ? "checkmark.seal.fill" : "seal"
-            )
+            Label(visitButtonTitle, systemImage: alreadyToday ? "checkmark.seal.fill" : "seal")
         }
         .disabled(alreadyToday || !isHere)
         .accessibilityHint(visitFooter)
+    }
+
+    private var visitButtonTitle: String {
+        if alreadyToday { return "오늘은 이미 남겼어요" }
+        // 안 가본 자리의 첫 걸음은 '한 번 더'가 아니라 '가본 곳이 되는' 일이다.
+        return stamp.isUnvisited ? "여기 왔어요 — 가본 곳으로" : "여기 다녀왔어요"
     }
 
     /// 다녀온 날들. 가장 나중에 온 날이 위다 — 되짚어 볼 때 궁금한 것은 늘 최근 쪽이다.
@@ -421,8 +475,10 @@ struct StampEditor: View {
                     Text(visitDayText(date))
                         .font(.subheadline)
                     Spacer()
-                    // 마지막 칸이 곧 처음 찍은 날이다 (visitDates의 첫 자리를 뒤집어 놓은 것)
-                    Text(index == days.count - 1 ? "처음 찍은 날" : "\(days.count - index)번째")
+                    // 마지막 칸이 곧 처음 간 날이다 (visitDates의 첫 자리를 뒤집어 놓은 것).
+                    // '찍은 날'이라 하지 않는 까닭은, 가볼 곳으로 미리 찍어 둔 자리는
+                    // 찍은 날과 처음 간 날이 다르기 때문이다.
+                    Text(index == days.count - 1 ? "처음 간 날" : "\(days.count - index)번째")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -455,13 +511,19 @@ struct StampEditor: View {
         if alreadyToday {
             return "하루에 한 번만 셉니다. 내일 다시 오면 또 남길 수 있어요."
         }
+        let planned = stamp.isUnvisited
         guard let distanceFromHere else {
-            return "현재 위치를 찾는 중이에요. 위치를 켜고 이 자리 근처에 오면 남길 수 있습니다."
+            return planned
+                ? "아직 가보지 않은 자리라 다녀온 횟수를 세지 않습니다. 위치를 켜고 이 자리에 닿으면 가본 곳이 됩니다."
+                : "현재 위치를 찾는 중이에요. 위치를 켜고 이 자리 근처에 오면 남길 수 있습니다."
         }
         if distanceFromHere <= MapStamp.visitRadius {
-            return "지금 이 자리에 있어요. 눌러서 다녀온 것으로 남기세요."
+            return planned
+                ? "지금 이 자리에 있어요. 눌러서 가본 곳으로 굳히세요."
+                : "지금 이 자리에 있어요. 눌러서 다녀온 것으로 남기세요."
         }
-        return "여기서 \(distanceText(distanceFromHere)) 떨어져 있어요. \(Int(MapStamp.visitRadius))m 안에 들어가면 남길 수 있습니다."
+        let gap = "여기서 \(distanceText(distanceFromHere)) 떨어져 있어요. \(Int(MapStamp.visitRadius))m 안에 들어가면 "
+        return gap + (planned ? "가본 곳이 됩니다." : "남길 수 있습니다.")
     }
 
     private func addVisit() {

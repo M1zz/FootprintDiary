@@ -395,6 +395,7 @@ struct AtlasMapView: UIViewRepresentable {
                     || annotation.stickerBytes != (stamp.sticker?.count ?? 0)
                 if annotation.kind.id != stamp.kindID
                     || annotation.placeName != stamp.placeName
+                    || annotation.isUnvisited != stamp.isUnvisited
                     || stickerChanged {
                     stale.append(annotation)
                     continue

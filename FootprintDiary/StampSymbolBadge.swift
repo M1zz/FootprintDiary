@@ -34,6 +34,25 @@ struct StampSymbolBadge: View {
                 .scaledToFit()
                 .frame(width: side, height: side)
                 .shadow(color: .black.opacity(0.18), radius: 1, y: 0.5)
+                .opacity(stamp.isUnvisited ? StampSeal.unvisitedAlpha : 1)
+        } else if stamp.isUnvisited {
+            // 지도와 같은 규칙으로 — 채우지 않고 점선 테두리만 두른다. 목록에서만
+            // 꽉 찬 도장으로 나오면, 지도에서 흐리게 보던 자리를 같은 곳으로 알아보지 못한다.
+            Image(systemName: stamp.kind.symbolName)
+                .font(.system(size: side * 0.47, weight: .semibold))
+                .foregroundStyle(Color(InkStyle.sealRed).opacity(0.85))
+                .frame(width: side, height: side)
+                .background(
+                    RoundedRectangle(cornerRadius: corner)
+                        .fill(Color(InkStyle.sealRed).opacity(0.07))
+                )
+                .overlay(
+                    RoundedRectangle(cornerRadius: corner)
+                        .strokeBorder(
+                            Color(InkStyle.sealRed).opacity(0.85),
+                            style: StrokeStyle(lineWidth: 1.5, dash: [3, 2.5])
+                        )
+                )
         } else {
             Image(systemName: stamp.kind.symbolName)
                 .font(.system(size: side * 0.47, weight: .semibold))

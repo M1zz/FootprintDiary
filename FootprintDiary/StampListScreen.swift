@@ -172,12 +172,23 @@ struct StampListScreen: View {
     }
 
     /// 갈래별로 묶은 것. 갈래의 차례는 스탬프를 고를 때와 같다.
+    ///
+    /// 아직 가보지 않은 자리는 여기 섞이지 않는다 — 갈래는 '내가 무엇을 모았나'를
+    /// 묻는 자리인데, 가보지도 않은 곳을 함께 세면 그 답이 부풀려진다.
     private var sections: [(group: StampGroup, stamps: [MapStamp])] {
-        let shown = filtered
+        let shown = filtered.filter { !$0.isUnvisited }
         return StampCatalog.groups.compactMap { group in
             let mine = shown.filter { $0.kind.group == group.name }
             return mine.isEmpty ? nil : (group, mine)
         }
+    }
+
+    /// 아직 가보지 않은 자리. 갈래를 가리지 않고 한 묶음으로 맨 위에 세운다.
+    ///
+    /// 갈래별로 흩어 놓으면 '어디를 가보려 했더라'를 알려면 목록을 처음부터 끝까지
+    /// 훑어야 한다. 이 묶음이 묻는 것은 무엇을 모았나가 아니라 어디가 남았나다.
+    private var unvisited: [MapStamp] {
+        filtered.filter(\.isUnvisited)
     }
 
     /// 찾는 말과 고른 갈래로 거른 것. 이름으로도 종류로도 찾을 수 있게 둔다 —
@@ -196,7 +207,8 @@ struct StampListScreen: View {
     @ViewBuilder
     private var list: some View {
         let sections = sections
-        if sections.isEmpty {
+        let unvisited = unvisited
+        if sections.isEmpty && unvisited.isEmpty {
             hint(
                 symbol: "magnifyingglass",
                 title: "찾는 것이 없어요",
@@ -204,6 +216,31 @@ struct StampListScreen: View {
             )
         } else {
             List {
+                if !unvisited.isEmpty {
+                    Section {
+                        ForEach(unvisited) { stamp in
+                            NavigationLink(value: stamp) {
+                                StampRow(stamp: stamp)
+                            }
+                            .swipeActions(edge: .trailing) {
+                                Button(role: .destructive) {
+                                    delete(stamp)
+                                } label: {
+                                    Label("지우기", systemImage: "trash")
+                                }
+                            }
+                        }
+                    } header: {
+                        HStack {
+                            Label("아직 가보지 않은 곳", systemImage: "signpost.right.and.left")
+                            Spacer()
+                            Text("\(unvisited.count)곳")
+                        }
+                    } footer: {
+                        Text("지도에 미리 찍어 둔 자리예요. 그 자리에 닿으면 다녀온 곳이 됩니다.")
+                    }
+                }
+
                 ForEach(sections, id: \.group) { section in
                     Section {
                         ForEach(section.stamps) { stamp in
@@ -233,8 +270,15 @@ struct StampListScreen: View {
 
     // MARK: - 오늘 것 고르기
 
+    /// 오늘 줄에 세울 도장.
+    ///
+    /// 찍은 날이 아니라 다녀온 날로 고른다. 오늘 줄이 묻는 것은 '오늘 어디를 다녀왔나'라,
+    /// 오늘 미리 찍어 둔 '가볼 곳'은 서지 않고, 몇 주 전에 찍어 두었다가 오늘 닿은
+    /// 자리는 선다 — 오늘 일어난 일은 후자다.
     private var todayStamps: [MapStamp] {
-        stamps.filter { calendar.isDateInToday($0.createdAt) }
+        stamps.filter { stamp in
+            stamp.visitDates.contains { calendar.isDateInToday($0) }
+        }
     }
 
     private var todayVisits: [Visit] {
@@ -291,6 +335,21 @@ private struct StampRow: View {
                     Text(stamp.displayName)
                         .font(.body.weight(.medium))
                         .lineLimit(1)
+                    // 아직 안 가본 자리는 따로 묶여 있어도 표를 하나 단다.
+                    // 찾기로 걸러 보거나 지도에서 눌러 들어오면 묶음 밖에서도 나온다.
+                    if stamp.isUnvisited {
+                        Text("가볼 곳")
+                            .font(.caption2.weight(.semibold))
+                            .foregroundStyle(Color(InkStyle.sealRed))
+                            .padding(.horizontal, 6)
+                            .padding(.vertical, 2)
+                            .overlay(
+                                Capsule().strokeBorder(
+                                    Color(InkStyle.sealRed).opacity(0.6),
+                                    style: StrokeStyle(lineWidth: 1, dash: [3, 2.5])
+                                )
+                            )
+                    }
                     // 여러 번 다녀온 자리는 목록에서 바로 티가 나야 한다.
                     // 한 번만 간 곳에는 붙이지 않는다 — 다 붙으면 아무 말도 하지 않는 표가 된다.
                     if stamp.visitCount > 1 {
@@ -363,7 +422,10 @@ private struct TodayTimeline: View {
 
         var time: Date {
             switch self {
-            case .stamp(let stamp): return stamp.createdAt
+            case .stamp(let stamp):
+                // 오늘 다녀온 때에 세운다. 가볼 곳으로 미리 찍어 두었다가 오늘 닿은
+                // 자리는 찍은 날이 몇 주 전이라, 찍은 때로 세우면 아침보다 위에 선다.
+                return stamp.visitDates.last { Calendar.current.isDateInToday($0) } ?? stamp.createdAt
             case .visit(let visit): return visit.arrivalDate
             }
         }
@@ -616,10 +678,18 @@ private struct TodayTimeline: View {
 /// 목록과 줄에서 같은 규칙으로 쓰기 위한 한 곳.
 enum PlaceText {
     /// 이름을 붙였으면 무엇으로 찍었는지가 곁줄로 내려온다 (지도에서 쓰는 규칙과 같다)
+    ///
+    /// 날짜에 무엇을 한 날인지를 붙인다. 안 가본 자리의 날짜는 다녀온 날이 아니라
+    /// 지도에 찍어 둔 날인데, 숫자만 적어 두면 그 줄이 '그날 다녀왔다'로 읽힌다.
     static func subtitle(for stamp: MapStamp, includeDay: Bool = true) -> String {
         var parts: [String] = []
         if !stamp.placeName.isEmpty { parts.append(stamp.kind.title) }
-        parts.append(includeDay ? day.string(from: stamp.createdAt) : stamp.kind.group)
+        if includeDay {
+            let date = day.string(from: stamp.isUnvisited ? stamp.createdAt : (stamp.firstVisitedAt ?? stamp.createdAt))
+            parts.append(stamp.isUnvisited ? "\(date)에 찍어 둠" : date)
+        } else {
+            parts.append(stamp.kind.group)
+        }
         if !stamp.note.isEmpty { parts.append(stamp.note) }
         return parts.joined(separator: " · ")
     }

@@ -25,6 +25,8 @@ final class StampAnnotation: NSObject, MKAnnotation {
     let stickerBytes: Int
     /// 내가 붙인 이름 (없으면 빈 글). 도장 아래에 적힌다.
     let placeName: String
+    /// 아직 가보지 않은 자리인지. 참이면 찍힌 것이 아니라 그려 둔 것처럼 선다.
+    let isUnvisited: Bool
     /// 끌어서 옮길 수 있어야 하므로 MKAnnotation 규약대로 쓰기 가능해야 한다
     @objc dynamic var coordinate: CLLocationCoordinate2D
     var title: String? { placeName.isEmpty ? kind.title : placeName }
@@ -37,6 +39,7 @@ final class StampAnnotation: NSObject, MKAnnotation {
         self.sticker = stamp.sticker.flatMap(StickerMaker.displayImage(from:))
         self.stickerBytes = stamp.sticker?.count ?? 0
         self.placeName = stamp.placeName
+        self.isUnvisited = stamp.isUnvisited
         self.coordinate = stamp.coordinate
     }
 }
@@ -68,7 +71,11 @@ enum StampSeal {
     ///
     /// 갈무리하지 않는다: 스티커는 스탬프마다 다르고, 갈래처럼 몇 백 개를 돌려쓰는
     /// 물건이 아니다. (알맹이를 잘라 내는 셈은 StickerMaker가 갈무리해 둔다)
-    static func image(sticker: UIImage) -> UIImage {
+    ///
+    /// - Parameter unvisited: 아직 가보지 않은 자리면 옅게 얹는다. 간판은 그 자리에
+    ///   가야 찍을 수 있는 것이라 실제로는 거의 없지만, 찍어 둔 자리를 나중에 지도
+    ///   위에서 '가볼 곳'으로 옮겨 놓는 길이 있어 여기서도 갈라 둔다.
+    static func image(sticker: UIImage, unvisited: Bool = false) -> UIImage {
         let drawn = sealSize(for: sticker.size)
         // 그림자가 판 밖으로 잘리지 않게 둘레에 한 겹 여유를 둔다
         let pad: CGFloat = 3
@@ -80,9 +87,16 @@ enum StampSeal {
             ctx.cgContext.setShadow(offset: CGSize(width: 0, height: 0.5),
                                     blur: 1.5,
                                     color: UIColor.black.withAlphaComponent(0.28).cgColor)
+            if unvisited { ctx.cgContext.setAlpha(Self.unvisitedAlpha) }
             sticker.draw(in: CGRect(origin: CGPoint(x: pad, y: pad), size: drawn))
         }
     }
+
+    /// 가보지 않은 자리를 얼마나 옅게 둘지.
+    ///
+    /// 반쯤이다. 더 지우면 백지 위에서 있는지 없는지 모를 만큼 사라져 정작 '가볼 곳'을
+    /// 찾을 수 없고, 더 짙게 두면 다녀온 자리와 한눈에 갈리지 않는다.
+    static let unvisitedAlpha: CGFloat = 0.5
 
     /// 스티커가 설 자리의 크기. 갈래 도장과 '넓이'가 같아지도록 비를 지켜 늘린다.
     ///
@@ -110,23 +124,48 @@ enum StampSeal {
         return CGSize(width: width, height: height)
     }
 
-    static func image(for kind: StampKind) -> UIImage {
-        if let cached = cache[kind.id] { return cached }
+    /// 갈래 도장 하나.
+    ///
+    /// - Parameter unvisited: 아직 가보지 않은 자리면 채우지 않고 윤곽선만 긋는다.
+    ///
+    /// 찍은 것과 그려 둔 것을 크기가 아니라 '채웠는가'로 가른다. 도장은 눌러야 찍히는
+    /// 물건이라, 속이 꽉 찬 붉은 네모는 그 자리에 내가 섰다는 뜻이 된다. 아직 안 가본
+    /// 자리는 속을 비우고 테두리를 점선으로 끊어, 종이에 연필로 동그라미 쳐 둔 것처럼
+    /// 보이게 한다 — 아직 못 박지 않은 자리라는 것이 모양 하나로 읽힌다.
+    ///
+    /// 크기는 건드리지 않는다. 이 지도에서 자리의 무게는 다 같고, 작게 그리면
+    /// '덜 중요한 곳'으로 읽혀 정작 가려던 곳이 눈에서 밀려난다.
+    static func image(for kind: StampKind, unvisited: Bool = false) -> UIImage {
+        let key = unvisited ? "\(kind.id)|plan" : kind.id
+        if let cached = cache[key] { return cached }
 
         let renderer = UIGraphicsImageRenderer(size: size)
         let image = renderer.image { _ in
             let rect = CGRect(origin: .zero, size: size)
             // 옛 도장처럼 모서리가 둥근 네모로 찍는다
             let seal = UIBezierPath(roundedRect: rect.insetBy(dx: 1, dy: 1), cornerRadius: 8)
-            InkStyle.sealRed.setFill()
-            seal.fill()
-            UIColor.white.withAlphaComponent(0.9).setStroke()
-            seal.lineWidth = 1.5
-            seal.stroke()
+
+            if unvisited {
+                // 속은 종이빛으로 옅게만 깐다. 아주 비워 두면 걸음 점 위에 겹쳤을 때
+                // 그림이 점과 뒤엉켜 무슨 갈래인지 읽을 수 없다.
+                InkStyle.paper.withAlphaComponent(0.72).setFill()
+                seal.fill()
+                InkStyle.sealRed.withAlphaComponent(0.85).setStroke()
+                seal.lineWidth = 1.5
+                seal.setLineDash([3, 2.5], count: 2, phase: 0)
+                seal.stroke()
+            } else {
+                InkStyle.sealRed.setFill()
+                seal.fill()
+                UIColor.white.withAlphaComponent(0.9).setStroke()
+                seal.lineWidth = 1.5
+                seal.stroke()
+            }
 
             let configuration = UIImage.SymbolConfiguration(pointSize: 14, weight: .semibold)
+            let tint = unvisited ? InkStyle.sealRed.withAlphaComponent(0.85) : .white
             if let glyph = UIImage(systemName: kind.symbolName, withConfiguration: configuration)?
-                .withTintColor(.white, renderingMode: .alwaysOriginal) {
+                .withTintColor(tint, renderingMode: .alwaysOriginal) {
                 glyph.draw(in: CGRect(
                     x: (size.width - glyph.size.width) / 2,
                     y: (size.height - glyph.size.height) / 2,
@@ -135,7 +174,7 @@ enum StampSeal {
                 ))
             }
         }
-        cache[kind.id] = image
+        cache[key] = image
         return image
     }
 }
@@ -163,7 +202,8 @@ final class StampAnnotationView: MKAnnotationView {
     override var annotation: (any MKAnnotation)? {
         didSet {
             guard let stamp = annotation as? StampAnnotation else { return }
-            image = stamp.sticker.map(StampSeal.image(sticker:)) ?? StampSeal.image(for: stamp.kind)
+            image = stamp.sticker.map { StampSeal.image(sticker: $0, unvisited: stamp.isUnvisited) }
+                ?? StampSeal.image(for: stamp.kind, unvisited: stamp.isUnvisited)
             centerOffset = .zero
             canShowCallout = false
             isDraggable = true
@@ -173,6 +213,9 @@ final class StampAnnotationView: MKAnnotationView {
 
             nameLabel.text = stamp.placeName
             nameLabel.isHidden = stamp.placeName.isEmpty
+            // 이름표도 함께 물러선다. 도장만 옅게 두고 이름을 또렷하게 남기면
+            // 지도에서 가장 먼저 읽히는 글씨가 정작 안 가본 자리의 이름이 된다.
+            nameLabel.alpha = stamp.isUnvisited ? StampSeal.unvisitedAlpha + 0.25 : 1
             setNeedsLayout()
         }
     }

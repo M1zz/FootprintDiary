@@ -21,6 +21,12 @@
 //  원하는 지점에 찍을 수도 있다. 찍은 뒤에도 끌어서 자리를 고칠 수 있다.
 //  걸을 때는 한 손뿐이라 정확히 짚을 수 없고, 돌아와서 다듬는 편이 실제로 더 정확하다.
 //
+//  그래서 스탬프에는 성격이 다른 둘이 섞인다 — 다녀온 자리와, 아직 안 가본 자리.
+//  길게 눌러 찍은 자리가 내가 걸어 본 땅 밖이면 '가볼 곳'으로 남긴다(isPlanned).
+//  가보지 않은 자리는 다녀온 횟수로 세지 않고, 지도에서도 흐리게 서고, 그 자리에
+//  실제로 닿는 순간 '가본 곳'으로 굳는다. 가름이 없으면 백지도가 내 발로 그린 것과
+//  가고 싶은 곳의 뒤죽박죽이 되어, 지도가 하던 말을 잃는다.
+//
 
 import Foundation
 import SwiftData
@@ -33,6 +39,29 @@ final class MapStamp {
     var latitude: Double = 0
     var longitude: Double = 0
     var createdAt: Date = Date.now
+
+    /// 그 자리에 서 보지 않고 지도 위에 미리 찍어 둔 자리인지.
+    ///
+    /// 이 앱의 스탬프는 본디 '다녀온 자리'를 남기는 물건이지만, 지도를 길게 누르면
+    /// 한 번도 밟지 않은 자리에도 찍힌다. 그 둘을 같은 기록으로 두면 백지도가
+    /// '내가 간 곳'과 '가고 싶은 곳'의 뒤죽박죽이 되어, 지도를 펼쳐도 어디까지가
+    /// 내 발로 그린 것인지 알 수 없다. 그래서 찍는 순간에 갈라 둔다.
+    ///
+    /// 참이면 `createdAt`은 방문이 아니라 '찍어 둔 때'다. 다녀온 횟수를 셀 때
+    /// 그 날짜를 첫 방문으로 세면 가보지도 않은 자리가 한 번 다녀온 자리가 된다.
+    ///
+    /// 기본값이 거짓인 것은 이 속성이 생기기 전에 찍힌 스탬프 때문이다. 그때는
+    /// 가름이 없었으니 알 길이 없고, 모르는 것은 '가본 곳'으로 두어야 한다 —
+    /// 지난 기록이 어느 날 갑자기 안 가본 곳으로 뒤집히지 않는다.
+    var isPlanned: Bool = false
+
+    /// 미리 찍어 둔 자리에 실제로 처음 다녀온 때. 아직 안 갔으면 비어 있다.
+    ///
+    /// 이 값이 채워져도 `isPlanned`는 참으로 남는다. '가볼 곳으로 찍어 두었다가
+    /// 정말로 갔다'는 것은 지워 버리기 아까운 이야기이고, 무엇보다 `createdAt`이
+    /// 방문이 아니라는 사실은 다녀온 뒤에도 변하지 않는다.
+    var arrivedAt: Date?
+
     /// 덧붙인 한 줄 (없어도 된다)
     var note: String = ""
     /// 내가 붙인 이름 (없으면 종류 이름으로 부른다).
@@ -106,7 +135,8 @@ final class MapStamp {
         coordinate: CLLocationCoordinate2D,
         createdAt: Date = .now,
         note: String = "",
-        placeName: String = ""
+        placeName: String = "",
+        isPlanned: Bool = false
     ) {
         self.kindID = kind.id
         self.latitude = coordinate.latitude
@@ -114,6 +144,7 @@ final class MapStamp {
         self.createdAt = createdAt
         self.note = note
         self.placeName = placeName
+        self.isPlanned = isPlanned
     }
 
     var coordinate: CLLocationCoordinate2D {
@@ -162,19 +193,32 @@ final class MapStamp {
         (revisits ?? []).sorted { $0.date < $1.date }
     }
 
-    /// 처음 찍은 때부터 차례대로 늘어놓은 모든 방문
+    /// 아직 한 번도 가보지 않은 자리인지.
+    ///
+    /// 지도에서 흐리게 서고, 목록에서 따로 묶이고, 다녀온 곳을 세는 자리마다 빠진다.
+    /// 이것 하나로 갈리도록 묻는 곳마다 따로 셈하지 않고 여기 두었다.
+    var isUnvisited: Bool { isPlanned && arrivedAt == nil }
+
+    /// 이 자리에 처음 서 본 때. 아직 안 가봤으면 없다.
+    ///
+    /// 미리 찍어 둔 자리가 아니면 찍은 때가 곧 처음 간 때다 — 그 자리에 서서 찍은 것이다.
+    var firstVisitedAt: Date? {
+        isPlanned ? arrivedAt : createdAt
+    }
+
+    /// 처음 간 때부터 차례대로 늘어놓은 모든 방문. 안 가본 자리는 비어 있다.
     var visitDates: [Date] {
-        [createdAt] + revisitsInOrder.map(\.date)
+        (firstVisitedAt.map { [$0] } ?? []) + revisitsInOrder.map(\.date)
     }
 
-    /// 몇 번 다녀온 자리인지 (처음 찍은 날을 첫 번째로 센다)
+    /// 몇 번 다녀온 자리인지 (처음 간 날을 첫 번째로 센다). 안 가본 자리는 0이다.
     var visitCount: Int {
-        (revisits?.count ?? 0) + 1
+        visitDates.count
     }
 
-    /// 마지막으로 다녀온 때
-    var lastVisitedAt: Date {
-        revisitsInOrder.last?.date ?? createdAt
+    /// 마지막으로 다녀온 때. 안 가본 자리는 없다.
+    var lastVisitedAt: Date? {
+        visitDates.last
     }
 
     /// 그날 이미 다녀온 것으로 남아 있는지
@@ -212,7 +256,16 @@ final class MapStamp {
     }
 
     /// 다녀온 것으로 한 번 센다. 셀 수 있는 자리인지는 부르는 쪽에서 먼저 본다.
+    ///
+    /// 미리 찍어 둔 자리에 처음 닿은 것은 '한 번 더'가 아니라 '가본 곳이 되는' 순간이라
+    /// 다시 다녀온 목록이 아니라 도착한 때에 적는다. 여기서 갈라 두지 않으면 부르는
+    /// 쪽마다 '이번이 첫 걸음인가'를 따져야 하고, 한 군데만 빠뜨려도 가보지 않은 자리가
+    /// 두 번 다녀온 자리로 남는다.
     func addVisit(at date: Date = .now) {
+        if isPlanned, arrivedAt == nil {
+            arrivedAt = date
+            return
+        }
         revisits = (revisits ?? []) + [StampVisit(date: date)]
     }
 }

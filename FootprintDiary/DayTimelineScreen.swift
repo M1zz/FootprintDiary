@@ -362,8 +362,13 @@ struct DayTimelineScreen: View {
     /// 만들어 가는 눈금이라, 오늘 한 번을 더한 보람이 곧바로 눈에 보여야 한다.
     /// 그 밖의 자리에는 아무것도 적지 않는다 — 좌표를 적어 두면 읽히지도 않으면서
     /// 줄만 길어진다.
+    ///
+    /// 아직 안 가본 자리에는 그렇다고 적는다. 여기 물음 단추가 붙는 까닭이 그것이라,
+    /// 적어 두지 않으면 다녀온 자리에 왜 또 묻는지 알 수 없다.
     private func subtitle(of entry: Entry) -> String? {
-        guard let stamp = entry.stamp, stamp.visitCount > 1 else { return nil }
+        guard let stamp = entry.stamp else { return nil }
+        if stamp.isUnvisited { return "가볼 곳으로 찍어 둔 자리" }
+        guard stamp.visitCount > 1 else { return nil }
         return "\(stamp.visitCount)번째 다녀온 자리"
     }
 
