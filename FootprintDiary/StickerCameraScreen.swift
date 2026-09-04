@@ -13,6 +13,11 @@
 //  창은 정사각이다. 지도에 얹히는 자리가 정사각이라 여기서 가로로 길게 잡아 두면
 //  나중에 눌려서 다른 그림이 된다. 겨눈 것이 곧 얹히는 것이어야 한다.
 //
+//  창이 화면의 일부뿐이라, 멀리 있는 것은 창 안에서 점이 된다. 다가갈 수 있으면
+//  다가가는 것이 낫지만 길 건너 간판이나 유리 너머 물건은 그럴 수가 없어, 겨누는 동안
+//  배율을 바꿀 길을 둔다 — 손가락을 벌리거나, 아래에 선 배수를 누르거나. 배율은 기기에
+//  걸리므로(StickerCamera) 창에서 겨눈 것이 그대로 찍히는 것은 달라지지 않는다.
+//
 //  창에 톱니(우표 모양)를 두었다가 걷어 냈다. 찍고 나면 배경이 지워져 안에 든 것만
 //  남으므로, 테두리 모양은 결과에 아무 자국도 남기지 않는다. 남는 것은 겨누는 동안의
 //  성가심뿐이라 네모로 되돌렸다 — 창은 '여기까지 담긴다'만 말하면 된다.
@@ -38,6 +43,11 @@ struct StickerCameraScreen: View {
     @State private var previewSize: CGSize = .zero
     /// 창이 놓인 자리 (미리보기 안에서의 좌표)
     @State private var windowRect: CGRect = .zero
+
+    /// 집게질을 시작할 때의 배율. 손가락이 벌어진 몫을 여기에 곱한다.
+    /// 매번 지금 배율에 곱하면 조금만 벌려도 끝까지 튀어 오른다.
+    @State private var pinchAnchor: CGFloat = 1
+    @State private var pinching = false
 
     /// 날아가는 중인지 (0: 제자리, 1: 단추 속)
     @State private var flight: Flight = .idle
@@ -132,7 +142,19 @@ struct StickerCameraScreen: View {
                         .frame(width: rect.width, height: rect.height)
                         .position(x: rect.midX, y: rect.midY)
                         .allowsHitTesting(false)
+
+                    if camera.isAuthorized && camera.canZoom {
+                        VStack {
+                            Spacer()
+                            zoomBar
+                                .padding(.bottom, 18)
+                        }
+                    }
                 }
+                // 집게질은 창 안팎을 가리지 않고 화면 어디서나 받는다. 창 안에서만 받으면
+                // 정작 손가락이 겨누는 것을 가리게 된다.
+                .contentShape(Rectangle())
+                .gesture(pinch)
                 .onAppear {
                     previewSize = size
                     windowRect = rect
@@ -145,6 +167,67 @@ struct StickerCameraScreen: View {
 
             shutterBar
         }
+    }
+
+    // MARK: - 배율
+
+    /// 손가락을 벌린 만큼 배율을 옮긴다.
+    private var pinch: some Gesture {
+        MagnifyGesture()
+            .onChanged { value in
+                if !pinching {
+                    pinching = true
+                    pinchAnchor = camera.zoom
+                }
+                camera.setZoom(pinchAnchor * value.magnification)
+            }
+            .onEnded { _ in pinching = false }
+    }
+
+    /// 아래에 서는 배수 단추. 지금 서 있는 자리는 실제 값을 그대로 적는다 —
+    /// 1.7배로 벌려 놓고 단추에는 '1'이 적혀 있으면 어디쯤인지 알 수 없다.
+    private var zoomBar: some View {
+        HStack(spacing: 6) {
+            ForEach(camera.zoomStops, id: \.self) { stop in
+                let isCurrent = stop == currentStop
+                Button {
+                    withAnimation(.easeOut(duration: 0.18)) { camera.setZoom(stop) }
+                } label: {
+                    Text(isCurrent ? zoomLabel(camera.zoom) : shortLabel(stop))
+                        .font(.caption.weight(isCurrent ? .bold : .medium))
+                        .monospacedDigit()
+                        .foregroundStyle(isCurrent ? .white : .white.opacity(0.6))
+                        .frame(minWidth: isCurrent ? 44 : 34, minHeight: 34)
+                        .background {
+                            Circle()
+                                .fill(.white.opacity(isCurrent ? 0.22 : 0))
+                                .frame(width: 34, height: 34)
+                        }
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel("\(shortLabel(stop))배")
+                .accessibilityAddTraits(isCurrent ? [.isSelected] : [])
+            }
+        }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .background(Capsule().fill(.black.opacity(0.4)))
+    }
+
+    /// 지금 배율이 어느 단추 자리에 서 있는지. 그 아래로는 못 내려가면 첫 단추다.
+    private var currentStop: CGFloat? {
+        camera.zoomStops.last { $0 <= camera.zoom + 0.0001 } ?? camera.zoomStops.first
+    }
+
+    private func zoomLabel(_ value: CGFloat) -> String {
+        let rounded = (value * 10).rounded() / 10
+        return rounded == rounded.rounded()
+            ? "\(Int(rounded))×"
+            : String(format: "%.1f×", rounded)
+    }
+
+    private func shortLabel(_ value: CGFloat) -> String {
+        value == value.rounded() ? "\(Int(value))" : String(format: "%.1f", value)
     }
 
     private func window(in size: CGSize) -> CGRect {
