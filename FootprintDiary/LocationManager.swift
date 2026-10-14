@@ -24,6 +24,10 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     private var isCountingSteps = false
     /// 마지막으로 걸음이 늘어난 시각
     private var lastStepAt: Date?
+    /// 걸음 계측기가 직전에 알려 준 누적 걸음 수 (늘어난 만큼만 세려고 들고 있는다)
+    private var lastStepCount = 0
+    /// 최근에 늘어난 걸음들 (시각, 늘어난 수). 꾸준히 걷는지 보는 데 쓴다.
+    private var recentSteps: [(at: Date, steps: Int)] = []
     /// 모션이 한 번이라도 대답했는지
     private var didReceiveMotion = false
 
@@ -206,6 +210,48 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     /// 잘못 저장된 점 하나 때문에 그 뒤의 멀쩡한 점이 영원히 막히는 걸 막는다.
     static let maxConsecutiveJumpRejections = 3
 
+    // MARK: 탈것에서 내렸는지
+
+    /// 차·자전거를 탔다는 증거가 나온 뒤로 기록을 붙들어 두는 기한.
+    ///
+    /// 속도만으로는 신호 대기 중인 차와 서 있는 사람을 가를 수 없다. 둘 다 0이다.
+    /// 거기에 차 진동이 걸음 몇 개로 잘못 세어지면 걷기 판정이 켜지고, 신호등 자리가
+    /// 그대로 산책길로 남는다. 그래서 한 번 탈것으로 보았으면 '내려서 걷는다'는 확실한
+    /// 증거가 나올 때까지 기록하지 않는다.
+    ///
+    /// 모션이 차량이라고 했으면 기한이 없다 (모션이 걷기라고 하거나 꾸준한 걸음이 잡혀야 풀린다).
+    /// 모션을 쓸 수 없어 속도로만 알아챘으면 이 기한이 지나면 풀린다.
+    private var vehicleHoldUntil: Date?
+    /// 속도로만 탈것을 알아챘을 때 붙드는 시간(초). 웬만한 신호 대기보다 길게 잡는다.
+    static let speedVehicleHold: TimeInterval = 3 * 60
+    /// 이만큼 연달아 걷기보다 빠른 점이 나와야 탈것으로 본다. GPS 속도가 한 번 튀는 건 흔하다.
+    static let fastFixesForVehicle = 2
+    /// GPS 속도를 믿을 오차 상한(m/s)
+    static let maxSpeedAccuracy: CLLocationSpeed = 2
+    /// 연달아 걷기보다 빨랐던 점의 수
+    private var fastFixStreak = 0
+
+    /// 꾸준히 걷는지 볼 때 되짚는 시간(초)
+    static let sustainedStepWindow: TimeInterval = 20
+    /// 그 시간 안에 이만큼 걸어야 '내려서 걷는다'고 본다.
+    /// 사람은 20초에 서른~마흔 걸음을 걷고, 차 진동이 세는 헛걸음은 많아야 몇 개다.
+    static let sustainedStepCount = 16
+
+    /// 탈것으로 판명 났을 때 이만큼(초) 거슬러 올라가 이미 남긴 점을 지운다.
+    /// 모션이 차량을 확정하기까지 수십 초가 걸리는데, 그사이 서행·정차하며 남은 점들이다.
+    static let vehiclePurgeLookback: TimeInterval = 3 * 60
+    /// 마지막으로 '걸어서 움직였다'는 확실한 증거가 나온 시각.
+    /// 지울 때 이보다 앞선 점은 건드리지 않는다 — 차에 타기 전까지는 진짜 산책이다.
+    private var lastFootEvidenceAt: Date?
+
+    /// 지금 탈것을 탄 것으로 보고 기록을 붙들고 있는지
+    private var isInVehicleHold: Bool {
+        guard let vehicleHoldUntil else { return false }
+        if Date() < vehicleHoldUntil { return true }
+        self.vehicleHoldUntil = nil
+        return false
+    }
+
     /// 위치 갱신을 켠 시각. 그 이전에 찍힌(=iOS가 들고 있던) 점을 걸러내는 기준이 된다.
     private var trackingStartedAt: Date?
     /// 점프로 판정해 연달아 버린 횟수
@@ -247,12 +293,21 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
                 self.diagnostics.motionState = Self.describe(activity)
             }
             guard activity.confidence != .low else { return }
-            if activity.walking || activity.running {
-                self.addUpdateReason(.walking)
-            } else if activity.automotive || activity.cycling {
+            // 차량과 걷기가 함께 켜져 오는 일이 있다. 그때는 차량을 먼저 믿는다 —
+            // 잘못 걷기로 보면 길에 없는 선이 생기지만, 잘못 차량으로 보면 몇 초 늦을 뿐이다.
+            if activity.automotive || activity.cycling {
                 // 차·자전거는 곧바로 끈다 — 이 앱의 기록은 걷기에서만 나온다
+                self.noteVehicle(until: .distantFuture)
                 self.removeUpdateReason(.walking)
+            } else if activity.walking || activity.running {
+                self.noteOnFoot()
+                self.addUpdateReason(.walking)
             } else if activity.stationary {
+                // 차에 타고 있었다면 신호 대기다. 걸음이 조금 섞였어도 봐주지 않는다.
+                if self.isInVehicleHold {
+                    self.removeUpdateReason(.walking)
+                    return
+                }
                 // 방금까지 걸음이 있었다면 신호 대기일 뿐이다. 그때마다 끄면
                 // 다시 켜질 때의 첫 위치 지연이 쌓여 산책이 조각난다.
                 if let lastStepAt = self.lastStepAt,
@@ -293,13 +348,76 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         guard trackingMode.usesPedometer else { return }
         guard CMPedometer.isStepCountingAvailable(), !isCountingSteps else { return }
         isCountingSteps = true
+        lastStepCount = 0
+        recentSteps = []
         pedometer.startUpdates(from: Date()) { [weak self] data, _ in
-            guard let self, let data, data.numberOfSteps.intValue > 0 else { return }
+            guard let self, let data else { return }
+            let total = data.numberOfSteps.intValue
             Task { @MainActor in
-                self.lastStepAt = Date()
-                self.addUpdateReason(.walking)
+                // 누적 수가 오므로 늘어난 만큼만 센다. 누적이 0보다 큰지로 보면 한 번 걸은
+                // 뒤로는 차 안에서 오는 갱신까지 모두 '걷는 중'이 된다.
+                let added = total - self.lastStepCount
+                self.lastStepCount = total
+                guard added > 0 else { return }
+                self.noteSteps(added)
             }
         }
+    }
+
+    /// 걸음이 늘었을 때.
+    @MainActor
+    private func noteSteps(_ added: Int) {
+        let now = Date()
+        recentSteps.append((now, added))
+        recentSteps.removeAll { now.timeIntervalSince($0.at) > Self.sustainedStepWindow }
+        let isSustained = recentSteps.reduce(0) { $0 + $1.steps } >= Self.sustainedStepCount
+
+        if isInVehicleHold {
+            // 차에 타고 있는 동안 몇 걸음 잡히는 건 진동이다. 꾸준히 걸어야 내린 것으로 본다.
+            guard isSustained else {
+                diagnostics.motionState = "탈것에서 내렸는지 확인 중 — 걸음 \(recentSteps.reduce(0) { $0 + $1.steps })"
+                return
+            }
+        }
+        if isSustained { noteOnFoot() }
+        lastStepAt = now
+        addUpdateReason(.walking)
+    }
+
+    /// 걸어서 움직인다는 확실한 증거가 나왔을 때. 탈것 붙들기를 푼다.
+    private func noteOnFoot() {
+        lastFootEvidenceAt = Date()
+        vehicleHoldUntil = nil
+        fastFixStreak = 0
+    }
+
+    /// 탈것을 탔다는 증거가 나왔을 때.
+    ///
+    /// 새로 붙들기 시작하는 순간이면, 모션이 판정을 내리기 전에 서행·정차하며 이미 남겨 버린
+    /// 점들을 지운다. 차가 막 출발하거나 신호에 걸린 자리는 속도로 걸러지지 않는다.
+    private func noteVehicle(until deadline: Date) {
+        let wasHolding = isInVehicleHold
+        // 이미 더 길게 붙들고 있다면 줄이지 않는다 (모션의 판정이 속도보다 강하다)
+        if let current = vehicleHoldUntil, current > deadline { return }
+        vehicleHoldUntil = deadline
+        recentSteps = []
+        guard !wasHolding else { return }
+        Task { @MainActor in self.purgeTrackPointsBeforeVehicle() }
+    }
+
+    /// 탈것으로 판명 나기 직전까지 남긴 점을 지운다.
+    @MainActor
+    private func purgeTrackPointsBeforeVehicle() {
+        guard let modelContainer else { return }
+        var since = Date().addingTimeInterval(-Self.vehiclePurgeLookback)
+        if let lastFootEvidenceAt, lastFootEvidenceAt > since { since = lastFootEvidenceAt }
+        let context = modelContainer.mainContext
+        let descriptor = FetchDescriptor<TrackPoint>(predicate: #Predicate { $0.timestamp > since })
+        guard let points = try? context.fetch(descriptor), !points.isEmpty else { return }
+        points.forEach(context.delete)
+        try? context.save()
+        diagnostics.note(.vehiclePurged, count: points.count)
+        // 위젯에 이미 붙인 점은 앱을 다음에 열어 지도를 다시 셈할 때 제 값으로 맞춰진다.
     }
 
     private func stopStepDetection() {
@@ -330,6 +448,9 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         guard isDetectingActivity else { return }
         isDetectingActivity = false
         didReceiveMotion = false
+        // 다시 켤 때는 모션이 처음부터 다시 말해 준다. 묵은 판정에 걸려 기록이 막히지 않게 푼다.
+        vehicleHoldUntil = nil
+        fastFixStreak = 0
         activityManager.stopActivityUpdates()
         removeUpdateReason(.walking)
     }
@@ -423,8 +544,20 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         }
 
         if location.speed >= 0, location.speed > Self.maxWalkingSpeed {
+            // 믿을 만한 속도가 연달아 나오면 탈것에 탄 것이다. 이 점 하나만 버리고 끝내면
+            // 신호에 걸려 멈춘 다음 점부터는 다시 걷기 속도라 그대로 통과해 버린다.
+            if location.speedAccuracy >= 0, location.speedAccuracy <= Self.maxSpeedAccuracy {
+                fastFixStreak += 1
+                if fastFixStreak >= Self.fastFixesForVehicle {
+                    noteVehicle(until: Date().addingTimeInterval(Self.speedVehicleHold))
+                }
+            }
             diagnostics.note(.tooFast); return
         }
+        fastFixStreak = 0
+
+        // 탈것에서 내렸다는 증거가 아직 없다. 속도가 걷기만큼 느려도 신호 대기일 수 있다.
+        guard !isInVehicleHold else { diagnostics.note(.vehicleHold); return }
 
         let context = modelContainer.mainContext
         var descriptor = FetchDescriptor<TrackPoint>(

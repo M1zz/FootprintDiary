@@ -21,6 +21,8 @@ enum TrackRejection: String, CaseIterable, Identifiable {
     case warmupAccuracy = "켠 직후라 정확도 부족"
     case accuracy = "정확도 부족"
     case tooFast = "걷기보다 빠름"
+    case vehicleHold = "탈것에서 내린 것이 확인되지 않음"
+    case vehiclePurged = "탈것으로 판명 나 지운 점"
     case jump = "걸어서 닿을 수 없는 점프"
     case tooClose = "직전 점과 너무 가까움"
     case systemPaused = "iOS가 갱신을 멈춤"
@@ -36,6 +38,8 @@ enum TrackRejection: String, CaseIterable, Identifiable {
         case .warmupAccuracy: return "켠 직후 기준이 너무 엄해요"
         case .accuracy: return "정확도 기준(25m)이 이 동네엔 너무 엄해요"
         case .tooFast: return "차·자전거로 판정됐어요"
+        case .vehicleHold: return "정상 — 차를 탄 뒤 신호 대기 자리를 걸러 낸 것"
+        case .vehiclePurged: return "정상 — 차가 막 출발하거나 멈춘 자리를 나중에 지운 것"
         case .jump: return "위치가 크게 튀고 있어요"
         case .tooClose: return "정상 — 정해진 간격마다 한 점만 남긴다"
         case .systemPaused: return "iOS가 '멈췄다'고 보고 껐어요. 되살리기를 시도했습니다"
@@ -59,8 +63,8 @@ final class TrackingDiagnostics: ObservableObject {
     /// 마지막으로 모션이 알려 준 상태
     @Published var motionState = "아직 없음"
 
-    func note(_ rejection: TrackRejection) {
-        rejections[rejection, default: 0] += 1
+    func note(_ rejection: TrackRejection, count: Int = 1) {
+        rejections[rejection, default: 0] += count
     }
 
     func noteAccepted() {
