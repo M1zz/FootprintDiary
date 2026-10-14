@@ -9,9 +9,14 @@ import SwiftUI
 import LeeoKit
 
 struct FootprintDiarySupportView: View {
+    /// 모아 보기에서 고른 화면을 연다. 설정은 먼저 닫힌다 (AtlasScreen이 닫힌 뒤에 연다).
+    var onOpen: (AtlasDestination) -> Void = { _ in }
+
     @EnvironmentObject private var locationManager: LocationManager
     @EnvironmentObject private var cloudSync: CloudSync
+    @Environment(\.dismiss) private var dismiss
     @State private var showDiagnostics = false
+    @State private var showWhatsNew = false
     /// 개발자 모드. 버전 줄을 일곱 번 두드리면 켜진다 (LeeoSupportSection이 맡는다).
     /// 여기서는 그 값을 읽어 통계 화면 입구만 함께 연다.
     @AppStorage("dev.masterMode") private var devMode = false
@@ -19,6 +24,10 @@ struct FootprintDiarySupportView: View {
     var body: some View {
         NavigationStack {
             List {
+                gallery
+
+                mapControls
+
                 Section {
                     ForEach(TrackingMode.allCases) { mode in
                         Button {
@@ -80,6 +89,26 @@ struct FootprintDiarySupportView: View {
                 cloud
 
                 Section {
+                    Button {
+                        showWhatsNew = true
+                    } label: {
+                        HStack {
+                            Label("새로 생긴 것", systemImage: "sparkles")
+                            Spacer()
+                            Text("버전 \(WhatsNew.version)")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                            Image(systemName: "chevron.right")
+                                .font(.caption.bold())
+                                .foregroundStyle(.tertiary)
+                        }
+                    }
+                    .foregroundStyle(.primary)
+                } header: {
+                    Text("안내")
+                }
+
+                Section {
                     LeeoSupportSection<FootprintDiarySpec>()
                     if devMode {
                         NavigationLink {
@@ -97,12 +126,63 @@ struct FootprintDiarySupportView: View {
             .sheet(isPresented: $showDiagnostics) {
                 TrackingDiagnosticsView()
             }
+            .sheet(isPresented: $showWhatsNew) {
+                WhatsNewView { destination in open(destination) }
+            }
             .task { await cloudSync.refresh() }
             .navigationTitle("설정")
             #if os(iOS)
             .navigationBarTitleDisplayMode(.inline)
             #endif
         }
+    }
+
+    /// 지도에서 내려온 화면들. 지도에 단추가 없어도 여기서는 늘 열 수 있다.
+    private var gallery: some View {
+        Section {
+            ForEach(AtlasDestination.allCases) { destination in
+                Button {
+                    open(destination)
+                } label: {
+                    HStack(spacing: 12) {
+                        Image(systemName: destination.symbol)
+                            .foregroundStyle(Color.accentColor)
+                            .frame(width: 24)
+                        VStack(alignment: .leading, spacing: 2) {
+                            Text(destination.title)
+                            Text(destination.summary)
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                        Spacer()
+                        Image(systemName: "chevron.right")
+                            .font(.caption.bold())
+                            .foregroundStyle(.tertiary)
+                    }
+                }
+                .foregroundStyle(.primary)
+            }
+        } header: {
+            Text("모아 보기")
+        }
+    }
+
+    /// 지도 위에 띄워 둘 것 고르기
+    private var mapControls: some View {
+        Section {
+            ForEach(MapControl.allCases) { control in
+                MapControlToggle(control: control)
+            }
+        } header: {
+            Text("지도에 보이기")
+        } footer: {
+            Text("꺼 둔 화면도 위 '모아 보기'에서 언제든 열 수 있어요. 도장과 설정 단추는 늘 보여요.")
+        }
+    }
+
+    private func open(_ destination: AtlasDestination) {
+        onOpen(destination)
+        dismiss()
     }
 
     /// 아이클라우드가 지금 어떤지.
@@ -132,6 +212,33 @@ struct FootprintDiarySupportView: View {
     }
 }
 
+
+/// 지도 위 하나를 켜고 끄는 줄. 열쇠가 줄마다 달라 @AppStorage를 줄 안에 둔다.
+private struct MapControlToggle: View {
+    let control: MapControl
+    @AppStorage private var isOn: Bool
+
+    init(control: MapControl) {
+        self.control = control
+        _isOn = AppStorage(wrappedValue: control.isVisibleByDefault, control.storageKey)
+    }
+
+    var body: some View {
+        Toggle(isOn: $isOn) {
+            HStack(spacing: 12) {
+                Image(systemName: control.symbol)
+                    .foregroundStyle(Color.accentColor)
+                    .frame(width: 24)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(control.title)
+                    Text(control.summary)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+        }
+    }
+}
 
 /// 앞에 작은 점을 찍는 목록 표시
 struct BulletLabelStyle: LabelStyle {

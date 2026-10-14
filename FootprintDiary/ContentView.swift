@@ -22,7 +22,11 @@ struct ContentView: View {
                 // 안내는 지도 '위에 띄우는' 것이 아니라 지도를 '대신한다'.
                 // 반드시 거쳐야 하는 관문이라 덮개로 두면 뒤의 지도가 비치고,
                 // 한 화면에 시트와 덮개를 여럿 걸면 SwiftUI가 서로를 닫아 버린다.
-                OnboardingView { hasOnboarded = true }
+                OnboardingView {
+                    // 막 시작한 사람에게는 모든 것이 새것이라 '새로 생긴 것'을 따로 띄우지 않는다.
+                    WhatsNew.markSeen()
+                    hasOnboarded = true
+                }
             }
         }
         .onAppear {

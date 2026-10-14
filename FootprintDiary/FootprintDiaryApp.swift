@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import LeeoKit
+import TipKit
 
 @main
 struct FootprintDiaryApp: App {
@@ -64,6 +65,8 @@ struct FootprintDiaryApp: App {
         manager.startMonitoringIfAuthorized()
         _locationManager = StateObject(wrappedValue: manager)
         LeeoEngagement.shared.registerLaunch()
+        // 지도 단추 안내는 하루에 하나만 (AtlasTips.swift)
+        try? Tips.configure([.displayFrequency(.daily)])
     }
 
     var body: some Scene {

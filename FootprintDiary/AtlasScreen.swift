@@ -11,6 +11,7 @@
 import SwiftUI
 import SwiftData
 import CoreLocation
+import TipKit
 
 /// 지도가 그릴 것들을 한 번만 계산해 들고 있는 상자.
 /// 점이 쌓일수록 계산이 무거워지므로 본문에서 매번 하지 않고 백그라운드에서 만든다.
@@ -147,6 +148,24 @@ struct AtlasScreen: View {
     @State private var showStampList = false
     @State private var showCompass = false
     @State private var showTimeline = false
+    @State private var showWhatsNew = false
+    /// 설정·새 기능 안내에서 고른 화면. 그 장이 다 닫힌 뒤에 연다 —
+    /// 닫히는 중인 시트 위에 다른 시트를 올리면 SwiftUI가 둘 중 하나를 버린다.
+    @State private var pendingDestination: AtlasDestination?
+
+    // 지도 위에 무엇을 띄울지. 설정의 '지도에 보이기'와 같은 열쇠를 본다 (MapControls.swift)
+    @AppStorage(MapControl.summary.storageKey) private var showsSummary = MapControl.summary.isVisibleByDefault
+    @AppStorage(MapControl.diary.storageKey) private var showsDiaryButton = MapControl.diary.isVisibleByDefault
+    @AppStorage(MapControl.stampList.storageKey) private var showsStampListButton = MapControl.stampList.isVisibleByDefault
+    @AppStorage(MapControl.compass.storageKey) private var showsCompassButton = MapControl.compass.isVisibleByDefault
+    @AppStorage(MapControl.film.storageKey) private var showsFilmButton = MapControl.film.isVisibleByDefault
+    @AppStorage(MapControl.peek.storageKey) private var showsPeekButton = MapControl.peek.isVisibleByDefault
+    @AppStorage(MapControl.scaleBar.storageKey) private var showsScaleBar = MapControl.scaleBar.isVisibleByDefault
+    @AppStorage(MapControl.zoom.storageKey) private var showsZoomButtons = MapControl.zoom.isVisibleByDefault
+
+    private let peekTip = PeekTip()
+    private let summaryTip = SummaryTip()
+    private let mapControlsTip = MapControlsTip()
     /// 스탬프를 찍을 자리. 정해지면 고르는 화면이 열린다.
     @State private var pendingCoordinate: StampSpot?
     @State private var selectedStamp: MapStamp?
@@ -249,7 +268,9 @@ struct AtlasScreen: View {
                 .ignoresSafeArea(edges: .bottom)
 
                 VStack(spacing: 8) {
-                    summary
+                    if showsSummary {
+                        summary
+                    }
                     // 가볼 곳으로 찍어 둔 자리에 닿았을 때만 선다. 지도를 가리지 않도록
                     // 요약 바로 아래, 한 자리에만.
                     if let arriving {
@@ -267,8 +288,12 @@ struct AtlasScreen: View {
                 }
 
                 VStack(alignment: .leading, spacing: 10) {
-                    scaleBar
-                    peekButton
+                    if showsScaleBar {
+                        scaleBar
+                    }
+                    if showsPeekButton {
+                        peekButton
+                    }
                     // 가운데 안내는 내 위치 점을 덮으므로 스스로 비켜난다. 그러고 나면
                     // 다시 '무엇을 하지'가 되므로, 할 일 하나를 그 일을 하는 단추 옆에
                     // 붙여 둔다 — 여기는 아무것도 가리지 않는 자리다.
@@ -294,7 +319,7 @@ struct AtlasScreen: View {
 
                 // 안내가 떠 있는 동안에는 물러난다. 둘 다 화면 한가운데 높이에 서서
                 // 서로 겹치는데, 아직 아무것도 안 그려진 종이에서 확대·축소는 할 일이 없다.
-                if !(isEmptyMap && showsEmptyHint) {
+                if showsZoomButtons && !(isEmptyMap && showsEmptyHint) {
                     zoomButtons
                         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
                         .padding(.trailing, 12)
@@ -304,54 +329,59 @@ struct AtlasScreen: View {
             .navigationTitle("내 지도")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        showDiary = true
-                    } label: {
-                        Image(systemName: "book.closed")
+                // 단추는 설정에서 고른 것만 단다. 꺼 둔 화면은 설정의 '모아 보기'에서 연다.
+                ToolbarItemGroup(placement: .topBarLeading) {
+                    if showsDiaryButton {
+                        Button {
+                            showDiary = true
+                        } label: {
+                            Image(systemName: "book.closed")
+                        }
+                        .accessibilityLabel("일지")
                     }
-                    .accessibilityLabel("일지")
-                }
-                ToolbarItem(placement: .topBarLeading) {
-                    Button {
-                        showStampList = true
-                    } label: {
-                        Image(systemName: "list.bullet")
-                            // 물어볼 자리가 있으면 작은 점 하나로만 알린다.
-                            // 알림을 띄우면 걷는 중에 끼어들고, 아무 표시도 없으면 영영 안 본다.
-                            .overlay(alignment: .topTrailing) {
-                                if !asking.isEmpty {
-                                    Circle()
-                                        .fill(Color(InkStyle.sealRed))
-                                        .frame(width: 7, height: 7)
-                                        .offset(x: 5, y: -3)
+                    if showsStampListButton {
+                        Button {
+                            showStampList = true
+                        } label: {
+                            Image(systemName: "list.bullet")
+                                // 물어볼 자리가 있으면 작은 점 하나로만 알린다.
+                                // 알림을 띄우면 걷는 중에 끼어들고, 아무 표시도 없으면 영영 안 본다.
+                                .overlay(alignment: .topTrailing) {
+                                    if !asking.isEmpty {
+                                        Circle()
+                                            .fill(Color(InkStyle.sealRed))
+                                            .frame(width: 7, height: 7)
+                                            .offset(x: 5, y: -3)
+                                    }
                                 }
-                            }
+                        }
+                        .accessibilityLabel(asking.isEmpty ? "내가 찍은 곳" : "내가 찍은 곳, 물어볼 것 있음")
                     }
-                    .accessibilityLabel(asking.isEmpty ? "내가 찍은 곳" : "내가 찍은 곳, 물어볼 것 있음")
                 }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showCompass = true
-                    } label: {
-                        Image(systemName: "location.north.line")
+                ToolbarItemGroup(placement: .topBarTrailing) {
+                    if showsCompassButton {
+                        Button {
+                            showCompass = true
+                        } label: {
+                            Image(systemName: "location.north.line")
+                        }
+                        .accessibilityLabel("개척 나침반")
                     }
-                    .accessibilityLabel("개척 나침반")
-                }
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        showFilm = true
-                    } label: {
-                        Image(systemName: "play.rectangle")
+                    if showsFilmButton {
+                        Button {
+                            showFilm = true
+                        } label: {
+                            Image(systemName: "play.rectangle")
+                        }
+                        .accessibilityLabel("그려지는 것 보기")
                     }
-                    .accessibilityLabel("그려지는 것 보기")
-                }
-                ToolbarItem(placement: .topBarTrailing) {
                     Button {
+                        mapControlsTip.invalidate(reason: .actionPerformed)
                         showSupport = true
                     } label: {
                         Image(systemName: "gearshape")
                     }
+                    .popoverTip(mapControlsTip)
                     .accessibilityLabel("설정")
                 }
             }
@@ -359,8 +389,11 @@ struct AtlasScreen: View {
                 // DiaryScreen이 NavigationStack을 자체적으로 갖는다 (여기서 또 감싸면 바가 두 개가 된다)
                 DiaryScreen()
             }
-            .sheet(isPresented: $showSupport) {
-                FootprintDiarySupportView()
+            .sheet(isPresented: $showSupport, onDismiss: openPendingDestination) {
+                FootprintDiarySupportView { pendingDestination = $0 }
+            }
+            .sheet(isPresented: $showWhatsNew, onDismiss: openPendingDestination) {
+                WhatsNewView { pendingDestination = $0 }
             }
             .sheet(isPresented: $showFilm) {
                 FilmScreen()
@@ -415,7 +448,19 @@ struct AtlasScreen: View {
                     diaries: diaryCount
                 )
             }
-            .onAppear { rebuildAtlas() }
+            .onAppear {
+                rebuildAtlas()
+                AtlasTips.isMapIdle = isMapIdle
+            }
+            .onChange(of: isMapIdle) { AtlasTips.isMapIdle = isMapIdle }
+            // 이 판에서 새로 생긴 것을 처음 여는 한 번만 띄운다. 지도가 다 그려진 뒤에 띄워야
+            // 닫았을 때 빈 종이가 아니라 내 지도가 기다리고 있다.
+            .task(id: state.isReady) {
+                guard state.isReady, WhatsNew.hasUnseen else { return }
+                try? await Task.sleep(for: .seconds(0.6))
+                guard !Task.isCancelled, !isPresentingSheet else { return }
+                showWhatsNew = true
+            }
             .onChange(of: track.count) { rebuildAtlas() }
             // 머무름이 늘면 밟아 본 땅도 넓어진다. 걸음이 끊긴 채 남은 자리에
             // 나중에 스탬프를 찍을 때 '안 가본 곳'으로 잘못 굳지 않게 함께 본다.
@@ -429,6 +474,30 @@ struct AtlasScreen: View {
                 guard !Task.isCancelled else { return }
                 withAnimation(.easeOut(duration: 0.4)) { showsEmptyHint = false }
             }
+        }
+    }
+
+    /// 지도 위에 무엇이든 한 장이 덮여 있는지
+    private var isPresentingSheet: Bool {
+        showDiary || showSupport || showFilm || showStampList || showCompass || showTimeline
+            || showWhatsNew || pendingCoordinate != nil || selectedStamp != nil
+    }
+
+    /// 단추 안내를 띄워도 되는 때. 가운데 안내가 서 있거나 다른 장이 덮여 있으면 미룬다.
+    private var isMapIdle: Bool {
+        state.isReady && !isEmptyMap && !isPresentingSheet
+    }
+
+    /// 설정·새 기능 안내가 닫힌 뒤, 거기서 고른 화면을 연다.
+    private func openPendingDestination() {
+        guard let destination = pendingDestination else { return }
+        pendingDestination = nil
+        switch destination {
+        case .diary: showDiary = true
+        case .stampList: showStampList = true
+        case .timeline: showTimeline = true
+        case .compass: showCompass = true
+        case .film: showFilm = true
         }
     }
 
@@ -456,11 +525,11 @@ struct AtlasScreen: View {
 
     /// 지도 위에 뜬 오늘의 요약. 누르면 오늘의 발자취로 들어간다.
     ///
-    /// 도구 막대에 단추를 하나 더 다는 대신 이 판을 눌리게 했다. 막대에는 이미 다섯이
-    /// 걸려 있어 하나를 더하면 제목이 눌리고, 무엇보다 이 판이 이미 '오늘'을 말하고
-    /// 있다. 오늘 그은 길을 읽고 나서 오늘 어디를 갔었는지 궁금해지는 것이 순서다.
+    /// 도구 막대에 단추를 하나 더 다는 대신 이 판을 눌리게 했다. 막대는 가벼울수록 좋고,
+    /// 무엇보다 이 판이 이미 '오늘'을 말하고 있다. 오늘 그은 길을 읽고 나서 오늘 어디를 갔었는지 궁금해지는 것이 순서다.
     private var summary: some View {
         Button {
+            summaryTip.invalidate(reason: .actionPerformed)
             showTimeline = true
         } label: {
             HStack(alignment: .firstTextBaseline, spacing: 12) {
@@ -499,6 +568,7 @@ struct AtlasScreen: View {
         .accessibilityElement(children: .combine)
         .accessibilityLabel("내가 그린 길 \(distanceText(state.atlasLength)), 오늘 그은 길 \(distanceText(state.todayLength))")
         .accessibilityHint("오늘의 발자취를 엽니다")
+        .popoverTip(summaryTip, arrowEdge: .top)
     }
 
     // MARK: - 도착
@@ -550,11 +620,17 @@ struct AtlasScreen: View {
             // 눌렀다 떼는 것을 바로 알아야 해서 단추가 아니라 몸짓으로 받는다
             .gesture(
                 DragGesture(minimumDistance: 0)
-                    .onChanged { _ in if !isPeeking { isPeeking = true } }
+                    .onChanged { _ in
+                        if !isPeeking {
+                            isPeeking = true
+                            peekTip.invalidate(reason: .actionPerformed)
+                        }
+                    }
                     .onEnded { _ in isPeeking = false }
             )
             .accessibilityLabel("누르고 있는 동안 지도 비춰보기")
             .accessibilityHint("손을 떼면 다시 종이로 돌아갑니다")
+            .popoverTip(peekTip, arrowEdge: .leading)
     }
 
     /// 지금 배율. 막대 길이가 곧 그 거리다.
