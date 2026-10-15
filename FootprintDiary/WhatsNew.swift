@@ -30,6 +30,16 @@ enum WhatsNew {
 
     static let items: [Item] = [
         Item(
+            symbol: "mountain.2",
+            title: "그림지도",
+            detail: "산과 나무, 물결을 그려 넣은 지도로 바꿔 볼 수 있어요. 걸은 자리에는 숲 사이로 오솔길이 트여요."
+        ),
+        Item(
+            symbol: "calendar",
+            title: "기간으로 좁혀 보기",
+            detail: "이번 주, 이번 달, 올해처럼 기간을 골라 그때 걸은 길과 도장만 볼 수 있어요."
+        ),
+        Item(
             symbol: "sparkles",
             title: "지도가 한결 비었어요",
             detail: "가끔 쓰는 단추는 설정으로 옮겼어요. 설정의 '지도에 보이기'에서 원하는 것만 다시 꺼내 둘 수 있어요."
@@ -86,9 +96,9 @@ struct WhatsNewView: View {
 
                     if let onOpen {
                         VStack(alignment: .leading, spacing: 12) {
-                            Text("설정으로 옮긴 화면")
+                            Text("설정에서도 열 수 있어요")
                                 .font(.headline)
-                            ForEach([AtlasDestination.compass, .film, .timeline]) { destination in
+                            ForEach([AtlasDestination.compass, .film, .timeline, .period]) { destination in
                                 Button {
                                     dismiss()
                                     onOpen(destination)

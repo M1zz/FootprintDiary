@@ -45,6 +45,10 @@ struct TerrainMask {
     /// 산의 본이 덮는 범위 (넉넉히 물러난 자리라 물보다 넓다)
     let hillRect: MKMapRect
     let hills: CGImage?
+    /// 그림지도에서 물가에 두르는 테두리 (물을 조금 부풀린 것)
+    var waterShore: CGImage? = nil
+    /// 그림지도에서 물가의 흰 거품 띠 안쪽 (물을 조금 깎은 것)
+    var waterCore: CGImage? = nil
 
     var isEmpty: Bool { water == nil && hills == nil }
     /// 둘을 다 품는 범위
@@ -104,6 +108,10 @@ final class TerrainFinder {
     /// 무늬에 온통 둘러싸인 조각이 이 넓이(전체 대비)보다 작으면 흠으로 보고 메운다.
     /// 여의도처럼 진짜 섬은 이보다 훨씬 크므로 살아남는다.
     static let markAreaRatio = 0.003
+    /// 뭍 한가운데 동그마니 뜬 물 조각이 이 넓이(전체 대비)보다 작으면 지운다.
+    /// 고속도로 번호 표지(파란 육각형)가 물빛이라 물로 잘못 잡히는 것이 여기 걸린다.
+    /// 화면에서 손톱만 한 웅덩이도 함께 사라지지만, 그 정도는 지도에서 읽히지도 않는다.
+    static let speckAreaRatio = 0.0006
 
     /// 아직 그리고 있는 것들. 끝날 때까지 붙들고 있는다.
     ///
@@ -126,13 +134,26 @@ final class TerrainFinder {
 
         let hillRect = Self.widened(rect, toAtLeast: Self.minimumHillMeters)
         var water: CGImage?
+        var waterShore: CGImage?
+        var waterCore: CGImage?
         var hills: CGImage?
         var stumbled = false
         let group = DispatchGroup()
 
         group.enter()
         snapshot(of: rect, coarserThan: nil) { image in
-            if let image { water = Self.stencil(of: image, keeping: .water) } else { stumbled = true }
+            if let image {
+                water = Self.stencil(of: image, keeping: .water)
+                // 그림지도의 물가 테두리와 거품 띠. 화소를 훑는 일이라 여기(뒤쪽)서 미리 굽는다.
+                // 기기에 따라 본이 1배로도 3배로도 찍히므로 두께를 본의 배율에 맞춘다
+                if let water {
+                    let scale = max(1, Double(water.width) / Double(Self.stencilWidth))
+                    waterShore = StencilShape.grown(water, by: Int((Double(TerrainSkin.shoreWidth) * scale).rounded()))
+                    waterCore = StencilShape.shrunk(water, by: Int((Double(TerrainSkin.foamWidth) * scale).rounded()))
+                }
+            } else {
+                stumbled = true
+            }
             group.leave()
         }
 
@@ -155,7 +176,14 @@ final class TerrainFinder {
             guard !stumbled else { completion(.failed); return }
             self.heldHills = (rect: hillRect, stencil: hills)
 
-            let mask = TerrainMask(waterRect: rect, water: water, hillRect: hillRect, hills: hills)
+            let mask = TerrainMask(
+                waterRect: rect,
+                water: water,
+                hillRect: hillRect,
+                hills: hills,
+                waterShore: waterShore,
+                waterCore: waterCore
+            )
             completion(mask.isEmpty ? .bare : .found(mask))
         }
     }
@@ -291,14 +319,30 @@ final class TerrainFinder {
             of: area,
             width: width,
             height: height,
-            feather: feature == .hill ? hillFeather : 0
+            feather: feature == .hill ? hillFeather : 0,
+            dropsSpecks: feature == .water
         )
     }
 
     /// 흠을 메운 뒤 CoreGraphics가 쓸 수 있는 스텐실로 굽는다
-    private static func stencil(of area: [Bool], width: Int, height: Int, feather: Int) -> CGImage? {
+    private static func stencil(
+        of area: [Bool],
+        width: Int,
+        height: Int,
+        feather: Int,
+        dropsSpecks: Bool
+    ) -> CGImage? {
         var mended = mendingThinMarks(area, width: width, height: height)
         mended = fillingTrappedMarks(mended, width: width, height: height)
+        if dropsSpecks {
+            // 뒤집어서 '뭍에 갇힌 작은 빈자리'를 메우면, 곧 뭍 위의 작은 물 조각을 지우는 것이다
+            mended = fillingTrappedMarks(
+                mended.map { !$0 },
+                width: width,
+                height: height,
+                ratio: speckAreaRatio
+            ).map { !$0 }
+        }
 
         // 스텐실은 0인 자리에 칠한다. 그래서 바깥을 255로 두고 무늬만 0으로 뚫는다.
         let bytes: [UInt8]
@@ -390,9 +434,14 @@ final class TerrainFinder {
     /// 도로 번호 표지처럼 강 한복판에 동그마니 얹힌 것이 여기 걸린다. 가장자리에 닿아 있는
     /// 빈자리는 바깥과 이어져 있다는 뜻이므로 건드리지 않고, 갇힌 것 중에서도 넓은 것은
     /// 진짜 섬이거나 산속 마을이므로 남긴다 — 여의도를 지워 버리면 안 된다.
-    private static func fillingTrappedMarks(_ area: [Bool], width: Int, height: Int) -> [Bool] {
+    private static func fillingTrappedMarks(
+        _ area: [Bool],
+        width: Int,
+        height: Int,
+        ratio: Double = markAreaRatio
+    ) -> [Bool] {
         let total = width * height
-        let maxArea = max(1, Int(Double(total) * markAreaRatio))
+        let maxArea = max(1, Int(Double(total) * ratio))
         var filled = area
         var visited = [Bool](repeating: false, count: total)
         var stack: [Int] = []
@@ -487,14 +536,37 @@ final class TerrainOverlay: NSObject, MKOverlay {
     var coordinate: CLLocationCoordinate2D { mask.bounds.origin.coordinate }
 }
 
-final class TerrainRenderer: MKOverlayRenderer {
+final class TerrainRenderer: MKOverlayRenderer, WalkAwareRenderer {
+    /// 그림지도의 봉우리·나무가 비켜 설 걸은 자리
+    let walked = WalkedBox()
     /// 미리 뽑아 둔 빛깔 (그리는 중에는 화면 설정을 물어볼 수 없다)
     private let waterColor: UIColor
     private let hillColor: UIColor
+    /// 그림지도의 물가 테두리와 거품 빛 (먹일 때는 쓰지 않는다)
+    private let shoreColor: UIColor?
+    private let foamColor: UIColor?
+    /// 그림지도일 때만 있다. 봉우리·나무·물결을 뿌린다 (TerrainSkin.swift)
+    private let scatter: TerrainScatter?
 
-    init(overlay: TerrainOverlay, traits: UITraitCollection) {
-        waterColor = InkStyle.water.resolvedColor(with: traits)
-        hillColor = InkStyle.hill.resolvedColor(with: traits)
+    init(overlay: TerrainOverlay, traits: UITraitCollection, skin: TerrainSkin = .ink) {
+        switch skin {
+        case .ink:
+            waterColor = InkStyle.water.resolvedColor(with: traits)
+            hillColor = InkStyle.hill.resolvedColor(with: traits)
+            shoreColor = nil
+            foamColor = nil
+            scatter = nil
+        case .picture:
+            waterColor = InkStyle.pictureWater.resolvedColor(with: traits)
+            hillColor = InkStyle.pictureHill.resolvedColor(with: traits)
+            shoreColor = InkStyle.pictureShore.resolvedColor(with: traits)
+            foamColor = InkStyle.pictureFoam.resolvedColor(with: traits)
+            scatter = TerrainScatter(
+                hills: StencilSampler(stencil: overlay.mask.hills, rect: overlay.mask.hillRect),
+                water: StencilSampler(stencil: overlay.mask.water, rect: overlay.mask.waterRect),
+                sprites: TerrainSprites(traits: traits)
+            )
+        }
         super.init(overlay: overlay)
     }
 
@@ -503,7 +575,15 @@ final class TerrainRenderer: MKOverlayRenderer {
         // 산을 먼저 깔고 물을 그 위에 얹는다 (산속 저수지가 숲에 묻히지 않게).
         // 둘은 덮는 범위가 달라서 저마다 제 자리에 인쇄한다.
         paint(overlay.mask.hills, with: hillColor, in: overlay.mask.hillRect, on: context)
-        paint(overlay.mask.water, with: waterColor, in: overlay.mask.waterRect, on: context)
+        if let shoreColor, let foamColor, let core = overlay.mask.waterCore {
+            // 그림지도의 물: 진한 테두리 → 흰 거품 띠 → 물빛 순으로 겹쳐 안내도의 물가를 만든다
+            paint(overlay.mask.waterShore, with: shoreColor, in: overlay.mask.waterRect, on: context)
+            paint(overlay.mask.water, with: foamColor, in: overlay.mask.waterRect, on: context)
+            paint(core, with: waterColor, in: overlay.mask.waterRect, on: context)
+        } else {
+            paint(overlay.mask.water, with: waterColor, in: overlay.mask.waterRect, on: context)
+        }
+        scatter?.draw(mapRect, zoomScale: zoomScale, in: context, renderer: self, walked: walked.current)
     }
 
     private func paint(_ stencil: CGImage?, with color: UIColor, in mapRect: MKMapRect, on context: CGContext) {

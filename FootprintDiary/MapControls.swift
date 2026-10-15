@@ -24,7 +24,9 @@ enum MapControl: String, CaseIterable, Identifiable {
     case stampList
     case compass
     case film
+    case period
     case peek
+    case skin
     case scaleBar
     case zoom
 
@@ -39,7 +41,8 @@ enum MapControl: String, CaseIterable, Identifiable {
     /// 이미 되는 일을 단추로 한 번 더 둔 것이라 꺼 두었다.
     var isVisibleByDefault: Bool {
         switch self {
-        case .summary, .diary, .stampList, .peek: return true
+        // 기간·그림지도는 막 생긴 기능이라 우선 보이게 둔다
+        case .summary, .diary, .stampList, .peek, .period, .skin: return true
         case .compass, .film, .scaleBar, .zoom: return false
         }
     }
@@ -51,6 +54,8 @@ enum MapControl: String, CaseIterable, Identifiable {
         case .stampList: return "내가 찍은 곳 단추"
         case .compass: return "개척 나침반 단추"
         case .film: return "그려지는 것 보기 단추"
+        case .period: return "기간 단추"
+        case .skin: return "그림지도 단추"
         case .peek: return "비춰보기 단추"
         case .scaleBar: return "배율 막대"
         case .zoom: return "확대·축소 단추"
@@ -64,6 +69,8 @@ enum MapControl: String, CaseIterable, Identifiable {
         case .stampList: return "왼쪽 위. 찍은 자리를 목록으로 봐요."
         case .compass: return "오른쪽 위. 어느 쪽이 아직 하얀지 가리켜요."
         case .film: return "오른쪽 위. 내 지도가 그려지는 것을 영상으로 봐요."
+        case .period: return "왼쪽 아래. 이번 주, 이번 달처럼 기간으로 좁혀 봐요."
+        case .skin: return "왼쪽 아래. 먹 지도와 그림지도를 오가요."
         case .peek: return "왼쪽 아래. 누르고 있는 동안 배경 지도가 비쳐요."
         case .scaleBar: return "왼쪽 아래. 지금 배율을 막대로 보여 줘요."
         case .zoom: return "오른쪽. 두 손가락 대신 눌러서 확대·축소해요."
@@ -77,6 +84,8 @@ enum MapControl: String, CaseIterable, Identifiable {
         case .stampList: return "list.bullet"
         case .compass: return "location.north.line"
         case .film: return "play.rectangle"
+        case .period: return "calendar"
+        case .skin: return "mountain.2"
         case .peek: return "map"
         case .scaleBar: return "ruler"
         case .zoom: return "plus.magnifyingglass"
@@ -91,6 +100,7 @@ enum AtlasDestination: String, CaseIterable, Identifiable {
     case timeline
     case compass
     case film
+    case period
 
     var id: String { rawValue }
 
@@ -101,6 +111,7 @@ enum AtlasDestination: String, CaseIterable, Identifiable {
         case .timeline: return "오늘의 발자취"
         case .compass: return "개척 나침반"
         case .film: return "그려지는 것 보기"
+        case .period: return "기간으로 좁혀 보기"
         }
     }
 
@@ -111,6 +122,7 @@ enum AtlasDestination: String, CaseIterable, Identifiable {
         case .timeline: return "오늘 들른 곳을 차례대로"
         case .compass: return "어느 쪽으로 걸어야 새 자리가 나오는지"
         case .film: return "내 지도가 그려지는 과정을 영상으로"
+        case .period: return "이번 주, 이번 달, 올해만 골라서"
         }
     }
 
@@ -121,6 +133,7 @@ enum AtlasDestination: String, CaseIterable, Identifiable {
         case .timeline: return "clock"
         case .compass: return "location.north.line"
         case .film: return "play.rectangle"
+        case .period: return "calendar"
         }
     }
 }

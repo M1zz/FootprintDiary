@@ -17,6 +17,8 @@ struct FootprintDiarySupportView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showDiagnostics = false
     @State private var showWhatsNew = false
+    /// 지도 모양. 지도 위 그림지도 단추와 같은 열쇠다 (단추를 꺼 둔 사람도 여기서 바꾼다)
+    @AppStorage("footprint.terrainSkin") private var terrainSkinRaw = TerrainSkin.ink.rawValue
     /// 개발자 모드. 버전 줄을 일곱 번 두드리면 켜진다 (LeeoSupportSection이 맡는다).
     /// 여기서는 그 값을 읽어 통계 화면 입구만 함께 연다.
     @AppStorage("dev.masterMode") private var devMode = false
@@ -170,6 +172,12 @@ struct FootprintDiarySupportView: View {
     /// 지도 위에 띄워 둘 것 고르기
     private var mapControls: some View {
         Section {
+            Picker(selection: $terrainSkinRaw) {
+                Text("먹 지도").tag(TerrainSkin.ink.rawValue)
+                Text("그림지도").tag(TerrainSkin.picture.rawValue)
+            } label: {
+                Label("지도 모양", systemImage: "mountain.2")
+            }
             ForEach(MapControl.allCases) { control in
                 MapControlToggle(control: control)
             }
