@@ -32,6 +32,7 @@
 
 import Foundation
 import MapKit
+import os
 import UIKit
 
 /// 뜬 본 한 장 — 어느 범위를 어떤 모양으로 덮는지.
@@ -124,6 +125,16 @@ final class TerrainFinder {
     private var generation = 0
     /// 뜬 산의 본을 들고 있는다. 넓게 떠 두므로 웬만큼 걸어 다녀도 다시 찍을 일이 없다.
     private var heldHills: (rect: MKMapRect, stencil: CGImage?)?
+    /// 화소를 훑는 일은 한 번에 하나씩만 한다. 지도를 이리저리 밀면 찍기가 줄줄이 쌓이는데,
+    /// 그것들이 동시에 수십 MB씩 잡으면 기기가 메모리를 내주지 못해 앱이 멎는다.
+    private let work = DispatchQueue(label: "TerrainFinder.work", qos: .userInitiated)
+    /// 가장 최근 요청의 번호. 뒤쪽 줄에서도 읽어야 해서 잠가 둔다.
+    private let latest = OSAllocatedUnfairLock(initialState: 0)
+
+    /// 이 요청이 이미 지난 것인지. 지났으면 무거운 셈을 시작하지 않는다.
+    private func isStale(_ token: Int) -> Bool {
+        latest.withLock { $0 != token }
+    }
 
     /// 주어진 범위의 물과 산을 찾는다. 앞선 요청의 결과는 버린다.
     ///
@@ -131,6 +142,7 @@ final class TerrainFinder {
     func find(in rect: MKMapRect, completion: @escaping (TerrainSearch) -> Void) {
         generation += 1
         let token = generation
+        latest.withLock { $0 = token }
 
         let hillRect = Self.widened(rect, toAtLeast: Self.minimumHillMeters)
         var water: CGImage?
@@ -141,8 +153,10 @@ final class TerrainFinder {
         let group = DispatchGroup()
 
         group.enter()
-        snapshot(of: rect, coarserThan: nil) { image in
-            if let image {
+        snapshot(of: rect, coarserThan: nil) { [weak self] image in
+            if self?.isStale(token) ?? true {
+                // 이미 다른 자리를 보고 있다 — 결과는 어차피 버려지므로 훑지 않는다
+            } else if let image {
                 water = Self.stencil(of: image, keeping: .water)
                 // 그림지도의 물가 테두리와 거품 띠. 화소를 훑는 일이라 여기(뒤쪽)서 미리 굽는다.
                 // 기기에 따라 본이 1배로도 3배로도 찍히므로 두께를 본의 배율에 맞춘다
@@ -163,8 +177,14 @@ final class TerrainFinder {
             hills = heldHills.stencil
         } else {
             group.enter()
-            snapshot(of: hillRect, coarserThan: Self.hillMetersPerPixel) { image in
-                if let image { hills = Self.stencil(of: image, keeping: .hill) } else { stumbled = true }
+            snapshot(of: hillRect, coarserThan: Self.hillMetersPerPixel) { [weak self] image in
+                if self?.isStale(token) ?? true {
+                    // 지난 요청 — 훑지 않는다
+                } else if let image {
+                    hills = Self.stencil(of: image, keeping: .hill)
+                } else {
+                    stumbled = true
+                }
                 group.leave()
             }
         }
@@ -194,6 +214,8 @@ final class TerrainFinder {
     /// 그림은 제 속도로 끝나게 두고, 다 되면 아무도 받지 않아 조용히 버려진다.
     func cancel() {
         generation += 1
+        let token = generation
+        latest.withLock { $0 = token }
     }
 
     /// 한 범위를 찍는다. 화소를 훑는 일은 메인에서 하면 지도가 뚝뚝 끊기므로 뒤로 물린다.
@@ -238,7 +260,8 @@ final class TerrainFinder {
         let snapshotter = MKMapSnapshotter(options: options)
         // 끝날 때까지 붙들어 둔다. 그리는 중에 놓아 버리면 걷어 내는 것과 다를 바 없다.
         running.append(snapshotter)
-        snapshotter.start(with: DispatchQueue.global(qos: .userInitiated)) { [weak self] snapshot, _ in
+        // 결과 처리는 한 줄로 세운다. 물과 산의 결과가 같은 변수를 동시에 고치는 일도 함께 막힌다.
+        snapshotter.start(with: work) { [weak self] snapshot, _ in
             handle(snapshot?.image)
             DispatchQueue.main.async { self?.running.removeAll { $0 === snapshotter } }
         }
@@ -282,28 +305,38 @@ final class TerrainFinder {
     /// 찍은 그림에서 한 갈래의 무늬만 골라 스텐실로 굽는다
     private static func stencil(of image: UIImage, keeping feature: Feature) -> CGImage? {
         guard let source = image.cgImage else { return nil }
-        let width = source.width, height = source.height
+        // 찍은 그림의 '점' 크기로 읽는다. 기기는 배율을 1로 달라고 해도 화면 배율(3배)로
+        // 찍어 주는데, 그대로 훑으면 칸이 아홉 배가 되어 뒤따르는 셈이 수백 MB를 잡는다.
+        // 그 메모리를 못 얻는 순간 앱이 백그라운드 스레드에서 통째로 멎었다(abort).
+        // 본은 덩어리 모양만 있으면 되므로 1배로 충분하다.
+        let width = min(source.width, Int(image.size.width.rounded()))
+        let height = min(source.height, Int(image.size.height.rounded()))
         guard width > 0, height > 0 else { return nil }
 
-        // 화소를 직접 읽으려면 배치를 우리가 아는 꼴로 한 번 다시 그려야 한다
-        var pixels = [UInt8](repeating: 0, count: width * height * 4)
-        guard let context = pixels.withUnsafeMutableBytes({ buffer in
-            CGContext(
-                data: buffer.baseAddress,
-                width: width,
-                height: height,
-                bitsPerComponent: 8,
-                bytesPerRow: width * 4,
-                space: CGColorSpaceCreateDeviceRGB(),
-                bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
-            )
-        }) else { return nil }
+        // 화소를 직접 읽으려면 배치를 우리가 아는 꼴로 한 번 다시 그려야 한다.
+        // 그림판의 메모리는 그림판이 갖게 둔다 — 배열의 주소를 클로저 밖으로 빼 쓰면
+        // 그 주소가 언제든 무효가 될 수 있다.
+        guard let context = CGContext(
+            data: nil,
+            width: width,
+            height: height,
+            bitsPerComponent: 8,
+            bytesPerRow: width * 4,
+            space: CGColorSpaceCreateDeviceRGB(),
+            bitmapInfo: CGImageAlphaInfo.premultipliedLast.rawValue
+        ) else { return nil }
+        context.interpolationQuality = .medium
         context.draw(source, in: CGRect(x: 0, y: 0, width: width, height: height))
+        guard let raw = context.data else { return nil }
+        let pixels = UnsafeBufferPointer(
+            start: raw.assumingMemoryBound(to: UInt8.self),
+            count: context.bytesPerRow * height
+        )
 
         var area = [Bool](repeating: false, count: width * height)
         var found = 0
         for index in 0..<(width * height) {
-            let offset = index * 4
+            let offset = (index / width) * context.bytesPerRow + (index % width) * 4
             if feature.matches(
                 Double(pixels[offset]) / 255,
                 Double(pixels[offset + 1]) / 255,

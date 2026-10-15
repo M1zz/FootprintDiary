@@ -67,7 +67,7 @@ enum StencilShape {
             let spanY = min(y + radius, height - 1) - max(y - radius, 0) + 1
             for x in 0..<width {
                 let spanX = min(x + radius, width - 1) - max(x - radius, 0) + 1
-                if keep(counts[y * width + x], spanX * spanY) { output[y * width + x] = 0 }
+                if keep(Int(counts[y * width + x]), spanX * spanY) { output[y * width + x] = 0 }
             }
         }
 
@@ -85,11 +85,12 @@ enum StencilShape {
     }
 
     /// 둘레 안에 든 참의 개수. 가로로 한 번, 세로로 한 번 창을 밀며 센다.
-    private static func boxCounts(_ source: [Bool], width: Int, height: Int, radius: Int) -> [Int] {
-        var rows = [Int](repeating: 0, count: width * height)
+    /// 칸 수가 많아 Int(8바이트) 대신 Int32로 센다. 둘레 안의 개수라 넘칠 일이 없다.
+    private static func boxCounts(_ source: [Bool], width: Int, height: Int, radius: Int) -> [Int32] {
+        var rows = [Int32](repeating: 0, count: width * height)
         for y in 0..<height {
             let base = y * width
-            var running = 0
+            var running: Int32 = 0
             for x in 0...min(radius, width - 1) where source[base + x] { running += 1 }
             for x in 0..<width {
                 rows[base + x] = running
@@ -98,9 +99,9 @@ enum StencilShape {
                 if entering < width, source[base + entering] { running += 1 }
             }
         }
-        var counts = [Int](repeating: 0, count: width * height)
+        var counts = [Int32](repeating: 0, count: width * height)
         for x in 0..<width {
-            var running = 0
+            var running: Int32 = 0
             for y in 0...min(radius, height - 1) { running += rows[y * width + x] }
             for y in 0..<height {
                 counts[y * width + x] = running
