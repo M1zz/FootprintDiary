@@ -343,7 +343,8 @@ struct AtlasScreen: View {
                         try? modelContext.save()
                     }
                 )
-                .ignoresSafeArea(edges: .bottom)
+                // 위로도 끝까지 깐다. 막대 아래에서 지도가 잘리면 종이 위에 까만 띠가 하나 얹힌 꼴이 된다.
+                .ignoresSafeArea()
 
                 VStack(spacing: 8) {
                     if showsSummary {
@@ -417,6 +418,8 @@ struct AtlasScreen: View {
             }
             .navigationTitle("내 지도")
             .navigationBarTitleDisplayMode(.inline)
+            // 막대는 바탕 없이 단추만 지도 위에 띄운다. 단추는 저마다 유리 바탕을 이미 갖고 있다.
+            .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
                 // 단추는 설정에서 고른 것만 단다. 꺼 둔 화면은 설정의 '모아 보기'에서 연다.
                 ToolbarItemGroup(placement: .topBarLeading) {
