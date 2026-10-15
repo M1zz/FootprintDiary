@@ -40,6 +40,17 @@ final class AtlasState: ObservableObject {
     /// 내가 밟아 본 땅. 길게 눌러 찍는 자리가 '가본 곳'인지 가리는 데 쓴다.
     @Published private(set) var ground = VisitedGround()
     @Published private(set) var isReady = false
+    /// 고른 기간에 처음 그은 길이(m). 기간을 고르지 않았으면 atlasLength와 같다.
+    @Published private(set) var periodLength: CLLocationDistance = 0
+
+    /// 마지막으로 셈한 하루치 걸음들. 기간을 바꿀 때 다듬기부터 다시 하지 않으려고 들고 있다.
+    private var walks: [DayWalk] = []
+    /// 날마다 처음 그은 길이(m)
+    private var novelty: [Date: CLLocationDistance] = [:]
+    /// 지금 보고 있는 기간. nil이면 전체다.
+    private var period: DateInterval?
+    /// 나중에 시작한 셈이 먼저 끝난 셈을 덮지 않게 매기는 번호
+    private var drawGeneration = 0
 
     /// 다시 셈할 만큼 기록이 늘었는지 가리는 표. 걸음과 머무름을 함께 본다 —
     /// 밟아 본 땅은 걸은 길만이 아니라 머문 자리로도 넓어진다.
@@ -80,6 +91,9 @@ final class AtlasState: ObservableObject {
                 )
             }
         let startOfToday = calendar.startOfDay(for: .now)
+        let period = self.period
+        drawGeneration += 1
+        let generation = drawGeneration
 
         Task.detached(priority: .userInitiated) {
             // 저장된 점은 그대로 두고, 그릴 값만 다듬는다.
@@ -90,11 +104,7 @@ final class AtlasState: ObservableObject {
             }
             let walks = DayWalk.build(from: points, calendar: calendar)
             let novelty = WalkNovelty.newDistances(for: walks)
-
-            let segments = walks.flatMap(\.segments)
-            let cells = WalkHeatmap.cells(passes: segments, calendar: calendar)
-            // 길게 눌러 붙일 때만 쓰는 선. 모서리를 깎아 두면 손가락이 길에 더 잘 붙는다.
-            let trails = segments.map { TrackSmoothing.rounded($0.map(\.coordinate)) }
+            let drawing = Self.drawing(walks: walks, novelty: novelty, in: period, calendar: calendar)
             // 다듬은 뒤의 점으로 담는다. 크게 밀린 점까지 '가 본 자리'로 세면
             // 건물 저편 골목이 걸어 본 곳이 되어, 거기 찍는 자리가 잘못 굳는다.
             let ground = VisitedGround(walked: points.map(\.coordinate), stayed: stays)
@@ -118,8 +128,9 @@ final class AtlasState: ObservableObject {
             )
 
             await MainActor.run {
-                self.cells = cells
-                self.trails = trails
+                self.walks = walks
+                self.novelty = novelty
+                if generation == self.drawGeneration { self.apply(drawing) }
                 self.atlasLength = total
                 self.todayLength = todayNew
                 self.walkedDays = walks.count
@@ -127,6 +138,58 @@ final class AtlasState: ObservableObject {
                 self.isReady = true
             }
         }
+    }
+
+    /// 지도에 남길 것을 이 기간으로 좁힌다. nil이면 전체를 그린다.
+    ///
+    /// 기록을 다시 다듬지 않고 들고 있던 하루치 걸음에서 고르기만 한다.
+    /// 밟아 본 땅(ground)과 위젯은 건드리지 않는다 — 기간은 보는 방법일 뿐, 가 본
+    /// 자리가 줄어드는 것은 아니다.
+    func show(period: DateInterval?, calendar: Calendar) {
+        guard self.period != period else { return }
+        self.period = period
+        guard isReady else { return }
+        drawGeneration += 1
+        let generation = drawGeneration
+        let walks = self.walks
+        let novelty = self.novelty
+        Task.detached(priority: .userInitiated) {
+            let drawing = Self.drawing(walks: walks, novelty: novelty, in: period, calendar: calendar)
+            await MainActor.run {
+                guard generation == self.drawGeneration else { return }
+                self.apply(drawing)
+            }
+        }
+    }
+
+    private struct Drawing {
+        let cells: [HeatCell]
+        let trails: [[CLLocationCoordinate2D]]
+        let length: CLLocationDistance
+    }
+
+    private func apply(_ drawing: Drawing) {
+        cells = drawing.cells
+        trails = drawing.trails
+        periodLength = drawing.length
+    }
+
+    /// 기간 안의 날에 걸은 것만 칸으로 센다.
+    nonisolated private static func drawing(
+        walks: [DayWalk],
+        novelty: [Date: CLLocationDistance],
+        in period: DateInterval?,
+        calendar: Calendar
+    ) -> Drawing {
+        // 칸은 '마지막으로 밟은 때' 하나만 들고 있어서, 다 셈한 칸을 기간으로 거르면
+        // 그 기간에 걸었더라도 나중에 다시 밟은 자리가 빠진다. 그래서 걸음부터 고른다.
+        let chosen = period.map { period in walks.filter { $0.day >= period.start && $0.day < period.end } } ?? walks
+        let segments = chosen.flatMap(\.segments)
+        let cells = WalkHeatmap.cells(passes: segments, calendar: calendar)
+        // 길게 눌러 붙일 때만 쓰는 선. 모서리를 깎아 두면 손가락이 길에 더 잘 붙는다.
+        let trails = segments.map { TrackSmoothing.rounded($0.map(\.coordinate)) }
+        let length = chosen.reduce(0) { $0 + (novelty[$1.day] ?? 0) }
+        return Drawing(cells: cells, trails: trails, length: length)
     }
 }
 
@@ -147,6 +210,10 @@ struct AtlasScreen: View {
     @State private var showStampList = false
     @State private var showCompass = false
     @State private var showTimeline = false
+    @State private var showPeriodPicker = false
+    /// 지도를 좁혀 보는 기간. 앱을 다시 열면 전체로 돌아온다 — 좁혀 둔 것을 잊고
+    /// 다음에 열었을 때 길이 사라진 줄 아는 것이 더 나쁘다.
+    @State private var period: AtlasPeriod = .all
     /// 스탬프를 찍을 자리. 정해지면 고르는 화면이 열린다.
     @State private var pendingCoordinate: StampSpot?
     @State private var selectedStamp: MapStamp?
@@ -157,6 +224,8 @@ struct AtlasScreen: View {
     /// 그러면 이 앱은 그냥 '지도 위에 선 긋는 앱'이 된다. 손가락을 하나 붙들고 있어야
     /// 보이게 해 두면 비춰보기는 잠깐 확인하는 일로 남는다.
     @State private var isPeeking = false
+    /// 물과 산을 무엇으로 칠할지. 한 번 고르면 다음에 열어도 그대로다.
+    @AppStorage("footprint.terrainSkin") private var terrainSkinRaw = TerrainSkin.ink.rawValue
     /// 빈 지도 안내를 아직 띄우고 있는지.
     ///
     /// 이 안내는 화면 한가운데에 서는데, 거기가 마침 내 위치 점이 서는 자리다. 걷기 시작한
@@ -180,6 +249,12 @@ struct AtlasScreen: View {
     /// 오늘 오래 머물렀는데 아직 지도에 남기지 않은 자리
     private var asking: [Visit] {
         StayPrompt.candidates(visits: visits, stamps: stamps, calendar: calendar)
+    }
+
+    /// 지도에 올릴 도장. 기간을 골랐으면 그 기간에 찍은 것만.
+    private var shownStamps: [MapStamp] {
+        guard let interval = period.interval(calendar: calendar) else { return stamps }
+        return stamps.filter { interval.contains($0.createdAt) }
     }
 
     /// 실제로 다녀온 자리만. 익명 통계에 세는 것은 이쪽이다 —
@@ -231,8 +306,9 @@ struct AtlasScreen: View {
                     cells: state.cells,
                     trails: state.trails,
                     showsBasemap: isPeeking,
-                    stamps: stamps,
+                    stamps: shownStamps,
                     proxy: mapProxy,
+                    terrainSkin: terrainSkin,
                     onSelectStamp: { selectedStamp = $0 },
                     onPickCoordinate: { coordinate in
                         pendingCoordinate = StampSpot(
@@ -250,6 +326,10 @@ struct AtlasScreen: View {
 
                 VStack(spacing: 8) {
                     summary
+                    if !period.isAll {
+                        periodChip
+                            .transition(.move(edge: .top).combined(with: .opacity))
+                    }
                     // 가볼 곳으로 찍어 둔 자리에 닿았을 때만 선다. 지도를 가리지 않도록
                     // 요약 바로 아래, 한 자리에만.
                     if let arriving {
@@ -260,6 +340,7 @@ struct AtlasScreen: View {
                 .padding(.horizontal)
                 .padding(.top, 8)
                 .animation(.easeOut(duration: 0.25), value: arriving?.persistentModelID)
+                .animation(.easeOut(duration: 0.25), value: period)
 
                 if isEmptyMap && showsEmptyHint {
                     emptyHint
@@ -268,7 +349,9 @@ struct AtlasScreen: View {
 
                 VStack(alignment: .leading, spacing: 10) {
                     scaleBar
+                    periodButton
                     peekButton
+                    skinButton
                     // 가운데 안내는 내 위치 점을 덮으므로 스스로 비켜난다. 그러고 나면
                     // 다시 '무엇을 하지'가 되므로, 할 일 하나를 그 일을 하는 단추 옆에
                     // 붙여 둔다 — 여기는 아무것도 가리지 않는 자리다.
@@ -368,6 +451,9 @@ struct AtlasScreen: View {
             .sheet(isPresented: $showCompass) {
                 ExplorerCompassScreen()
             }
+            .sheet(isPresented: $showPeriodPicker) {
+                AtlasPeriodPicker(period: $period)
+            }
             .sheet(isPresented: $showTimeline) {
                 DayTimelineScreen()
             }
@@ -416,6 +502,9 @@ struct AtlasScreen: View {
                 )
             }
             .onAppear { rebuildAtlas() }
+            .onChange(of: period) { showPeriod() }
+            // '이번 주'처럼 지금을 기준으로 잡는 기간은 날이 바뀌면 범위도 바뀐다
+            .onReceive(NotificationCenter.default.publisher(for: .NSCalendarDayChanged)) { _ in showPeriod() }
             .onChange(of: track.count) { rebuildAtlas() }
             // 머무름이 늘면 밟아 본 땅도 넓어진다. 걸음이 끊긴 채 남은 자리에
             // 나중에 스탬프를 찍을 때 '안 가본 곳'으로 잘못 굳지 않게 함께 본다.
@@ -439,6 +528,10 @@ struct AtlasScreen: View {
             newPlacesToday: newPlacesToday,
             calendar: calendar
         )
+    }
+
+    private func showPeriod() {
+        state.show(period: period.interval(calendar: calendar), calendar: calendar)
     }
 
     /// 아직 한 걸음도 그려지지 않은 지도인지
@@ -465,10 +558,10 @@ struct AtlasScreen: View {
         } label: {
             HStack(alignment: .firstTextBaseline, spacing: 12) {
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(distanceText(state.atlasLength))
+                    Text(distanceText(period.isAll ? state.atlasLength : state.periodLength))
                         .font(.system(size: 26, weight: .bold, design: .serif))
                         .contentTransition(.numericText())
-                    Text("내가 그린 길")
+                    Text(period.isAll ? "내가 그린 길" : "이 기간에 그린 길")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
@@ -497,7 +590,7 @@ struct AtlasScreen: View {
         }
         .buttonStyle(.plain)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("내가 그린 길 \(distanceText(state.atlasLength)), 오늘 그은 길 \(distanceText(state.todayLength))")
+        .accessibilityLabel("\(period.isAll ? "내가 그린 길" : "이 기간에 그린 길") \(distanceText(period.isAll ? state.atlasLength : state.periodLength)), 오늘 그은 길 \(distanceText(state.todayLength))")
         .accessibilityHint("오늘의 발자취를 엽니다")
     }
 
@@ -555,6 +648,77 @@ struct AtlasScreen: View {
             )
             .accessibilityLabel("누르고 있는 동안 지도 비춰보기")
             .accessibilityHint("손을 떼면 다시 종이로 돌아갑니다")
+    }
+
+    private var terrainSkin: TerrainSkin {
+        TerrainSkin(rawValue: terrainSkinRaw) ?? .ink
+    }
+
+    /// 먹 지도와 그림지도를 오간다
+    private var skinButton: some View {
+        Button {
+            terrainSkinRaw = (terrainSkin == .picture ? TerrainSkin.ink : .picture).rawValue
+        } label: {
+            Image(systemName: terrainSkin == .picture ? "mountain.2.fill" : "mountain.2")
+                .font(.title3)
+                .foregroundStyle(terrainSkin == .picture ? Color(InkStyle.sealRed) : .secondary)
+                .frame(width: 44, height: 44)
+                .background(.ultraThinMaterial, in: Circle())
+        }
+        .accessibilityLabel("그림지도")
+        .accessibilityValue(terrainSkin == .picture ? "켬" : "끔")
+    }
+
+    /// 기간으로 좁혀 보기
+    private var periodButton: some View {
+        Button {
+            showPeriodPicker = true
+        } label: {
+            Image(systemName: period.isAll ? "calendar" : "calendar.badge.checkmark")
+                .font(.title3)
+                .foregroundStyle(period.isAll ? Color.secondary : Color(InkStyle.sealRed))
+                .frame(width: 44, height: 44)
+                .background(.ultraThinMaterial, in: Circle())
+        }
+        .accessibilityLabel("기간으로 보기")
+        .accessibilityValue(Text(period.title))
+    }
+
+    /// 지금 기간으로 좁혀 보고 있다는 표시. 잊고 지나가면 길이 사라진 줄 안다.
+    private var periodChip: some View {
+        HStack(spacing: 8) {
+            Button {
+                showPeriodPicker = true
+            } label: {
+                HStack(spacing: 6) {
+                    Image(systemName: "calendar")
+                    Text(period.title)
+                        .fontWeight(.semibold)
+                    if let range = period.rangeText(calendar: calendar) {
+                        Text(range)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                            .minimumScaleFactor(0.8)
+                    }
+                }
+                .font(.body)
+                .foregroundStyle(Color(InkStyle.ink))
+            }
+            .buttonStyle(.plain)
+
+            Button {
+                period = .all
+            } label: {
+                Image(systemName: "xmark.circle.fill")
+                    .font(.body)
+                    .foregroundStyle(.secondary)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("전체 기간으로 돌아가기")
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 8)
+        .background(.ultraThinMaterial, in: Capsule())
     }
 
     /// 지금 배율. 막대 길이가 곧 그 거리다.

@@ -33,6 +33,8 @@ struct AtlasMapView: UIViewRepresentable {
     let stamps: [MapStamp]
     /// 확대·축소와 배율을 주고받는 손잡이
     let proxy: MapProxy
+    /// 물과 산을 먹 한 빛으로 칠할지, 봉우리·나무를 그려 넣을지
+    var terrainSkin: TerrainSkin = .ink
 
     /// 열자마자 여기를 한가운데 놓는다.
     ///
@@ -105,6 +107,7 @@ struct AtlasMapView: UIViewRepresentable {
         }
         coordinator.focus(focus, on: mapView)
         coordinator.syncTheme(on: mapView, scheme: colorScheme)
+        coordinator.syncSkin(on: mapView, skin: terrainSkin)
         coordinator.syncPaper(on: mapView, showsBasemap: showsBasemap)
         coordinator.syncDots(on: mapView, cells: cells)
         coordinator.syncStamps(on: mapView, stamps: stamps)
@@ -141,6 +144,9 @@ struct AtlasMapView: UIViewRepresentable {
         private var dotOverlay: DotGridOverlay?
         private var dotSignature: String?
         private var terrainOverlay: TerrainOverlay?
+        private var terrainSkin: TerrainSkin = .ink
+        /// 걸은 자리. 그림지도의 그림이 이 자리를 비켜 선다.
+        private var walkedGround: WalkedGround?
         /// 떠 둔 본. 지도를 비추는 동안에도 들고 있다가 손을 떼면 곧바로 다시 얹는다.
         private var terrainMask: TerrainMask?
         /// 마지막으로 물을 찾아본 범위 (물이 없던 자리도 여기 남는다 — 헛되이 다시 찍지 않으려고)
@@ -228,6 +234,18 @@ struct AtlasMapView: UIViewRepresentable {
         var onPickCoordinate: (CLLocationCoordinate2D) -> Void = { _ in }
         var onMoveStamp: (MapStamp, CLLocationCoordinate2D) -> Void = { _, _ in }
 
+        /// 칠하는 법이 바뀌면 본은 그대로 두고 지도에 올린 것만 갈아 끼운다
+        func syncSkin(on mapView: MKMapView, skin: TerrainSkin) {
+            guard skin != terrainSkin else { return }
+            terrainSkin = skin
+            detachTerrain(from: mapView)
+            attachTerrain(to: mapView)
+            // 종이도 갈아 끼운다. 걷어 두면 바로 뒤의 syncPaper가 새 종이를 맨 아래에 깐다.
+            if let paperOverlay { mapView.removeOverlay(paperOverlay) }
+            paperOverlay = nil
+            paperRect = nil
+        }
+
         // MARK: 종이
 
         /// 배경 지도를 덮는 종이.
@@ -275,6 +293,7 @@ struct AtlasMapView: UIViewRepresentable {
             paperOverlay = paper
             // 맨 아래에 깔아야 점이 그 위로 온다 (다시 만들어도 순서가 지켜진다)
             mapView.insertOverlay(paper, at: 0, level: .aboveLabels)
+            redrawSoon(paper, on: mapView)
         }
 
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
@@ -368,6 +387,26 @@ struct AtlasMapView: UIViewRepresentable {
             } else {
                 mapView.insertOverlay(overlay, at: 0, level: .aboveLabels)
             }
+            redrawSoon(overlay, on: mapView)
+        }
+
+        /// 지도가 이미 다 그려져 멎어 있을 때 얹으면 MapKit이 손수 만든 그리개를 한 번도 부르지 않는다.
+        /// 다시 열었을 때처럼 타일이 이미 들어와 있는 경우가 바로 그렇다 — 화면을 한 번 밀어야
+        /// 그제야 물과 산이 나타난다. 얹은 다음 차례에 한 번 다시 그리라고 일러 둔다.
+        private func redrawSoon(_ overlay: MKOverlay, on mapView: MKMapView) {
+            DispatchQueue.main.async { [weak mapView] in
+                mapView?.renderer(for: overlay)?.setNeedsDisplay()
+            }
+        }
+
+        /// 걸은 자리가 바뀌었으면 그림지도의 그리개들에게 알려 다시 그리게 한다
+        private func syncWalked(on mapView: MKMapView, cells: [HeatCell]) {
+            walkedGround = cells.isEmpty ? nil : WalkedGround(cells: cells)
+            for overlay in [terrainOverlay as MKOverlay?, paperOverlay].compactMap({ $0 }) {
+                guard let renderer = mapView.renderer(for: overlay) as? WalkAwareRenderer else { continue }
+                renderer.walked.current = walkedGround
+                renderer.setNeedsDisplay()
+            }
         }
 
         /// 지도에서 걷어 내기만 한다. 본은 그대로 들고 있는다.
@@ -385,6 +424,7 @@ struct AtlasMapView: UIViewRepresentable {
             let signature = "\(cells.count)-\(cells.reduce(0) { $0 + $1.passes })-\(Int(latest.timeIntervalSinceReferenceDate))"
             guard signature != dotSignature else { return }
             dotSignature = signature
+            syncWalked(on: mapView, cells: cells)
 
             if let dotOverlay { mapView.removeOverlay(dotOverlay) }
             dotOverlay = nil
@@ -402,7 +442,14 @@ struct AtlasMapView: UIViewRepresentable {
                 return DotGridRenderer(overlay: dots, traits: mapView.traitCollection)
             }
             if let terrain = overlay as? TerrainOverlay {
-                return TerrainRenderer(overlay: terrain, traits: mapView.traitCollection)
+                let renderer = TerrainRenderer(overlay: terrain, traits: mapView.traitCollection, skin: terrainSkin)
+                renderer.walked.current = walkedGround
+                return renderer
+            }
+            if let paper = overlay as? MKPolygon, terrainSkin == .picture {
+                let renderer = PicturePaperRenderer(overlay: paper, traits: mapView.traitCollection)
+                renderer.walked.current = walkedGround
+                return renderer
             }
             if let paper = overlay as? MKPolygon {
                 let renderer = MKPolygonRenderer(polygon: paper)

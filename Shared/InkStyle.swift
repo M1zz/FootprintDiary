@@ -60,6 +60,41 @@ enum InkStyle {
         : UIColor(red: 0.91, green: 0.92, blue: 0.85, alpha: 1)
     }
 
+    /// 그림지도의 종이. 먹 지도의 닥종이보다 조금 더 따뜻한 크림빛이다.
+    static let picturePaper = UIColor { traits in
+        traits.userInterfaceStyle == .dark
+        ? UIColor(red: 0.10, green: 0.10, blue: 0.12, alpha: 1)
+        : UIColor(red: 0.98, green: 0.96, blue: 0.89, alpha: 1)
+    }
+
+    /// 그림지도의 물빛. 관광 안내도처럼 맑은 하늘빛이다 — 먹의 물빛보다 한참 또렷하다.
+    static let pictureWater = UIColor { traits in
+        traits.userInterfaceStyle == .dark
+        ? UIColor(red: 0.12, green: 0.23, blue: 0.32, alpha: 1)
+        : UIColor(red: 0.62, green: 0.83, blue: 0.93, alpha: 1)
+    }
+
+    /// 그림지도의 물가 테두리. 안내도처럼 물과 뭍을 또렷이 가른다.
+    static let pictureShore = UIColor { traits in
+        traits.userInterfaceStyle == .dark
+        ? UIColor(red: 0.32, green: 0.50, blue: 0.62, alpha: 1)
+        : UIColor(red: 0.38, green: 0.64, blue: 0.80, alpha: 1)
+    }
+
+    /// 그림지도의 물가 거품 띠
+    static let pictureFoam = UIColor { traits in
+        traits.userInterfaceStyle == .dark
+        ? UIColor(red: 0.20, green: 0.33, blue: 0.43, alpha: 1)
+        : UIColor(red: 0.92, green: 0.97, blue: 0.99, alpha: 1)
+    }
+
+    /// 그림지도의 산·숲 바탕. 그 위에 봉우리와 나무를 얹으므로 바탕은 옅게 둔다.
+    static let pictureHill = UIColor { traits in
+        traits.userInterfaceStyle == .dark
+        ? UIColor(red: 0.14, green: 0.20, blue: 0.14, alpha: 1)
+        : UIColor(red: 0.84, green: 0.91, blue: 0.74, alpha: 1)
+    }
+
     /// 낙관을 찍는 인주 빛. 주묵보다 짙어 점과 도장이 섞이지 않는다.
     static let sealRed = UIColor { traits in
         traits.userInterfaceStyle == .dark
