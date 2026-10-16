@@ -362,6 +362,10 @@ struct AtlasMapView: UIViewRepresentable {
                 guard let self, let mapView else { return }
                 switch result {
                 case .found(let mask):
+                    // 적어 둔 본을 받으면 찾은 범위와 다를 수 있다. 본이 실제로 덮는 범위를 기억해 둬야
+                    // 그 밖으로 나갔을 때 다시 뜨고, 너무 성글어지기 전에 다시 뜬다.
+                    self.terrainRect = mask.waterRect
+                    self.terrainSpan = mask.waterRect.size.width / 2
                     self.terrainMask = mask
                     self.detachTerrain(from: mapView)
                     self.attachTerrain(to: mapView)

@@ -139,12 +139,31 @@ final class TerrainFinder {
     /// 주어진 범위의 물과 산을 찾는다. 앞선 요청의 결과는 버린다.
     ///
     /// 물은 준 범위 그대로, 산은 넉넉히 물러난 범위에서 뜬다. 둘을 함께 찍고 다 모이면 알린다.
+    ///
+    /// 한 번 뜬 자리는 기기에 적어 두었다가(TerrainCache) 찍지 않고 곧바로 읽어 온다.
     func find(in rect: MKMapRect, completion: @escaping (TerrainSearch) -> Void) {
         generation += 1
         let token = generation
         latest.withLock { $0 = token }
 
-        let hillRect = Self.widened(rect, toAtLeast: Self.minimumHillMeters)
+        TerrainCache.shared.lookup(rect) { [weak self] cached in
+            DispatchQueue.main.async {
+                guard let self, token == self.generation else { return }
+                guard let cached else {
+                    self.capture(rect, token: token, completion: completion)
+                    return
+                }
+                if case .found(let mask) = cached {
+                    self.heldHills = (rect: mask.hillRect, stencil: mask.hills)
+                }
+                completion(cached)
+            }
+        }
+    }
+
+    /// 지도를 찍어 본을 새로 뜨고, 다 되면 적어 둔다
+    private func capture(_ rect: MKMapRect, token: Int, completion: @escaping (TerrainSearch) -> Void) {
+        var hillRect = Self.widened(rect, toAtLeast: Self.minimumHillMeters)
         var water: CGImage?
         var waterShore: CGImage?
         var waterCore: CGImage?
@@ -173,8 +192,10 @@ final class TerrainFinder {
 
         // 들고 있는 산의 본이 지금 자리를 아직 덮고 있으면 다시 찍지 않는다.
         // 산은 5km 너비로 떠 두므로 한 번 뜨면 오래 간다 — 걸어서 벗어나기 어렵다.
+        // 들고 있던 본을 쓰면 범위도 그 본의 것을 쓴다 (새로 넓힌 범위에 옛 본을 앉히면 어긋난다)
         if let heldHills, heldHills.rect.contains(rect) {
             hills = heldHills.stencil
+            hillRect = heldHills.rect
         } else {
             group.enter()
             snapshot(of: hillRect, coarserThan: Self.hillMetersPerPixel) { [weak self] image in
@@ -204,7 +225,9 @@ final class TerrainFinder {
                 waterShore: waterShore,
                 waterCore: waterCore
             )
-            completion(mask.isEmpty ? .bare : .found(mask))
+            let result: TerrainSearch = mask.isEmpty ? .bare : .found(mask)
+            TerrainCache.shared.store(result, for: rect)
+            completion(result)
         }
     }
 
@@ -597,7 +620,7 @@ final class TerrainRenderer: MKOverlayRenderer, WalkAwareRenderer {
             scatter = TerrainScatter(
                 hills: StencilSampler(stencil: overlay.mask.hills, rect: overlay.mask.hillRect),
                 water: StencilSampler(stencil: overlay.mask.water, rect: overlay.mask.waterRect),
-                sprites: TerrainSprites(traits: traits)
+                sprites: TerrainSprites.shared(for: traits)
             )
         }
         super.init(overlay: overlay)

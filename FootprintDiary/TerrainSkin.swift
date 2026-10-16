@@ -196,6 +196,17 @@ struct TerrainSprites {
         flower = asset("TerrainFlower") ?? Self.drawFlower(palette: palette)
     }
 
+    /// 밝은 벌·어두운 벌을 한 번씩만 그린다. 본을 새로 얹을 때마다 그림을 다시 그릴 까닭이 없다. (메인에서 부른다)
+    private static var made: [Bool: TerrainSprites] = [:]
+
+    static func shared(for traits: UITraitCollection) -> TerrainSprites {
+        let dark = traits.userInterfaceStyle == .dark
+        if let sprites = made[dark] { return sprites }
+        let sprites = TerrainSprites(traits: traits)
+        made[dark] = sprites
+        return sprites
+    }
+
     func mountain(_ kind: Mountain) -> UIImage { mountains[kind.rawValue] }
     func tree(_ kind: Tree) -> UIImage { trees[kind.rawValue] }
 
@@ -918,7 +929,7 @@ final class PicturePaperRenderer: MKOverlayRenderer, WalkAwareRenderer {
         warmGradient = fading(warm)
         coolGradient = fading(cool)
         grain = dark ? UIColor(white: 1, alpha: 0.05) : UIColor(red: 0.45, green: 0.35, blue: 0.2, alpha: 0.08)
-        sprites = TerrainSprites(traits: traits)
+        sprites = TerrainSprites.shared(for: traits)
         super.init(overlay: overlay)
     }
 
