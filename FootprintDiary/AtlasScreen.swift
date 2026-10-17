@@ -796,7 +796,8 @@ struct AtlasScreen: View {
                         .fontWeight(.semibold)
                     if let range = period.rangeText(calendar: calendar) {
                         Text(range)
-                            .foregroundStyle(.secondary)
+                            .monospacedDigit()
+                            .foregroundStyle(Color(InkStyle.ink).opacity(0.7))
                             .lineLimit(1)
                             .minimumScaleFactor(0.8)
                     }

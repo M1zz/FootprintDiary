@@ -110,6 +110,7 @@ struct AtlasPeriodPicker: View {
                                 detail: preset.rangeText(),
                                 isSelected: !isCustom && period == preset)
                         }
+                        .buttonStyle(.plain)
                     }
                     Button {
                         withAnimation { isCustom = true }
@@ -118,9 +119,10 @@ struct AtlasPeriodPicker: View {
                             detail: nil,
                             isSelected: isCustom)
                     }
+                    .buttonStyle(.plain)
                 } footer: {
                     Text("고른 기간에 걸은 길과 그 기간에 찍은 도장만 지도에 남습니다.")
-                        .font(.body)
+                        .font(.subheadline)
                 }
 
                 if isCustom {
@@ -132,8 +134,12 @@ struct AtlasPeriodPicker: View {
                             dismiss()
                         } label: {
                             Text("이 기간으로 보기")
+                                .fontWeight(.semibold)
                                 .frame(maxWidth: .infinity)
                         }
+                        .buttonStyle(.borderedProminent)
+                        .listRowBackground(Color.clear)
+                        .listRowInsets(EdgeInsets())
                     }
                     .font(.body)
                 }
@@ -149,19 +155,24 @@ struct AtlasPeriodPicker: View {
                 if customEnd < customStart { customEnd = customStart }
             }
         }
+        // 앱의 강조색은 옅은 살구빛이라 시트의 반투명 바탕 위에서 글자가 묻힌다.
+        // 단추·날짜 고르개·체크는 도장과 같은 주묵으로 칠한다.
+        .tint(Color(InkStyle.sealRed))
         .presentationDetents([.medium, .large])
     }
 
+    /// 행은 강조색에 물들지 않는 단추(.plain)로 그린다. 기본 단추는 글자를 강조색으로 칠해,
+    /// 먹색으로 정한 글자가 옅은 살구빛으로 바래 읽히지 않았다.
     private func row(title: LocalizedStringKey, detail: String?, isSelected: Bool) -> some View {
         HStack {
             Text(title)
-                .font(.body)
-                .foregroundStyle(.primary)
+                .font(.body.weight(isSelected ? .semibold : .regular))
+                .foregroundStyle(Color(InkStyle.ink))
             Spacer()
             if let detail {
                 Text(detail)
-                    .font(.body)
-                    .foregroundStyle(.secondary)
+                    .font(.body.monospacedDigit())
+                    .foregroundStyle(Color(InkStyle.ink).opacity(0.7))
             }
             Image(systemName: "checkmark")
                 .font(.body.weight(.semibold))
