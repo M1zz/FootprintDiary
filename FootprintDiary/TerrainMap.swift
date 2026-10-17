@@ -72,8 +72,10 @@ enum TerrainSearch {
 /// 지도를 한 장 찍어 물과 산의 본을 뜬다.
 final class TerrainFinder {
 
-    /// 물빛으로 볼 색상의 범위(도). 애플 지도의 물은 195도 언저리 한 가지다.
-    static let waterHue: ClosedRange<Double> = 185...235
+    /// 물빛으로 볼 색상의 범위(도). 애플 지도의 물은 195~205도 언저리 한 가지다.
+    /// 고속도로 번호 표지(육각형)는 215~221도의 보랏빛 파랑이라 210에서 끊으면 물에 섞이지 않는다.
+    /// 전에는 표지를 '작은 물 조각'으로 보고 넓이로 지웠는데, 그러면 작은 호수까지 함께 사라졌다.
+    static let waterHue: ClosedRange<Double> = 185...210
     /// 물빛은 뚜렷하다. 옅은 회색 길이 파랑으로 새지 않도록 이만큼은 요구한다.
     static let waterSaturation = 0.15
 
@@ -109,10 +111,9 @@ final class TerrainFinder {
     /// 무늬에 온통 둘러싸인 조각이 이 넓이(전체 대비)보다 작으면 흠으로 보고 메운다.
     /// 여의도처럼 진짜 섬은 이보다 훨씬 크므로 살아남는다.
     static let markAreaRatio = 0.003
-    /// 뭍 한가운데 동그마니 뜬 물 조각이 이 넓이(전체 대비)보다 작으면 지운다.
-    /// 고속도로 번호 표지(파란 육각형)가 물빛이라 물로 잘못 잡히는 것이 여기 걸린다.
-    /// 화면에서 손톱만 한 웅덩이도 함께 사라지지만, 그 정도는 지도에서 읽히지도 않는다.
-    static let speckAreaRatio = 0.0006
+    /// 뭍 한가운데 뜬 물 조각이 이 화소 수보다 작으면 지운다. 표지 가장자리에 번진 몇 점 같은
+    /// 티끌만 걸리도록 아주 작게 둔다 — 크게 잡으면 작은 호수가 함께 사라진다.
+    static let speckMaxPixels = 12
 
     /// 아직 그리고 있는 것들. 끝날 때까지 붙들고 있는다.
     ///
@@ -396,7 +397,7 @@ final class TerrainFinder {
                 mended.map { !$0 },
                 width: width,
                 height: height,
-                ratio: speckAreaRatio
+                maxArea: speckMaxPixels
             ).map { !$0 }
         }
 
@@ -494,10 +495,10 @@ final class TerrainFinder {
         _ area: [Bool],
         width: Int,
         height: Int,
-        ratio: Double = markAreaRatio
+        maxArea fixedArea: Int? = nil
     ) -> [Bool] {
         let total = width * height
-        let maxArea = max(1, Int(Double(total) * ratio))
+        let maxArea = fixedArea ?? max(1, Int(Double(total) * markAreaRatio))
         var filled = area
         var visited = [Bool](repeating: false, count: total)
         var stack: [Int] = []
@@ -578,18 +579,75 @@ final class TerrainFinder {
     }
 }
 
+// MARK: - 바둑판 조각
+
+/// 물·산의 본을 뜨는 바둑판 조각 하나. 온 세상을 2의 거듭제곱으로 쪼갠 칸이라 자리가 늘 같다.
+struct TerrainTileKey: Hashable {
+    let level: Int
+    let x: Int
+    let y: Int
+
+    var size: Double { MKMapSize.world.width / pow(2, Double(level)) }
+    var rect: MKMapRect { MKMapRect(x: Double(x) * size, y: Double(y) * size, width: size, height: size) }
+
+    func distance(to point: MKMapPoint) -> Double {
+        hypot(rect.midX - point.x, rect.midY - point.y)
+    }
+
+    /// 화면에 맞는 조각 크기. 조각 한 변이 화면 긴 변의 절반을 넘는 가장 작은 칸이다 —
+    /// 본은 조각마다 같은 화소 수로 뜨므로, 조각이 화면보다 너무 크면 물가가 뭉개진다.
+    static func level(for visible: MKMapRect) -> Int {
+        let longest = max(visible.size.width, visible.size.height) * 0.5
+        guard longest > 0 else { return 0 }
+        let level = Int(floor(log2(MKMapSize.world.width / longest)))
+        return min(max(level, 2), 20)
+    }
+
+    /// 범위를 덮는 조각들. padding만큼 둘레로 더 잡는다.
+    static func keys(covering rect: MKMapRect, level: Int, padding: Int = 0) -> [TerrainTileKey] {
+        let size = MKMapSize.world.width / pow(2, Double(level))
+        let count = 1 << level
+        let clipped = rect.intersection(.world)
+        guard !clipped.isNull else { return [] }
+        let minX = max(0, Int(clipped.minX / size) - padding)
+        let maxX = min(count - 1, Int((clipped.maxX - 1) / size) + padding)
+        let minY = max(0, Int(clipped.minY / size) - padding)
+        let maxY = min(count - 1, Int((clipped.maxY - 1) / size) + padding)
+        guard minX <= maxX, minY <= maxY else { return [] }
+        var keys: [TerrainTileKey] = []
+        for y in minY...maxY {
+            for x in minX...maxX { keys.append(TerrainTileKey(level: level, x: x, y: y)) }
+        }
+        return keys
+    }
+}
+
+/// 조각 하나를 떠 본 결과
+enum TerrainTileState {
+    case found(TerrainMask)
+    /// 물도 산도 없는 조각
+    case bare
+}
+
 // MARK: - 지도에 올리는 것
 
 final class TerrainOverlay: NSObject, MKOverlay {
     let mask: TerrainMask
+    /// 이 오버레이가 맡은 바둑판 조각. 본이 이보다 넓어도(기기에 적어 둔 더 큰 본을 받았을 때)
+    /// 칠과 그림은 이 안에서만 한다 — 이웃 조각과 겹쳐 두 번 칠하지 않게.
+    let owned: MKMapRect
 
-    init(mask: TerrainMask) {
+    init(mask: TerrainMask, owned: MKMapRect) {
         self.mask = mask
+        self.owned = owned.intersection(mask.waterRect)
         super.init()
     }
 
-    var boundingMapRect: MKMapRect { mask.bounds }
-    var coordinate: CLLocationCoordinate2D { mask.bounds.origin.coordinate }
+    /// 제 조각에 그림이 걸쳐 나갈 몫만큼 둘레를 더한다.
+    var boundingMapRect: MKMapRect {
+        owned.insetBy(dx: -owned.size.width * 0.06, dy: -owned.size.height * 0.06)
+    }
+    var coordinate: CLLocationCoordinate2D { owned.origin.coordinate }
 }
 
 final class TerrainRenderer: MKOverlayRenderer, WalkAwareRenderer {
@@ -626,10 +684,26 @@ final class TerrainRenderer: MKOverlayRenderer, WalkAwareRenderer {
         super.init(overlay: overlay)
     }
 
+    private let tiles = TileCache()
+
     override func draw(_ mapRect: MKMapRect, zoomScale: MKZoomScale, in context: CGContext) {
+        // 먹 지도는 무늬 두 장을 찍을 뿐이라 갈무리할 만큼 무겁지 않다
+        guard scatter != nil else {
+            paint(mapRect, zoomScale: zoomScale, in: context)
+            return
+        }
+        tiles.draw(mapRect, zoomScale: zoomScale, in: context, renderer: self, version: walked.version) { target in
+            paint(mapRect, zoomScale: zoomScale, in: target)
+        }
+    }
+
+    private func paint(_ mapRect: MKMapRect, zoomScale: MKZoomScale, in context: CGContext) {
         guard let overlay = overlay as? TerrainOverlay else { return }
         // 산을 먼저 깔고 물을 그 위에 얹는다 (산속 저수지가 숲에 묻히지 않게).
-        // 둘은 덮는 범위가 달라서 저마다 제 자리에 인쇄한다.
+        // 둘은 덮는 범위가 달라서 저마다 제 자리에 인쇄한다. 산의 본은 조각보다 넓으므로
+        // 제 조각 안에만 칠한다 — 이웃 조각과 겹쳐 두 번 칠하면 그 자리만 짙어진다.
+        context.saveGState()
+        context.clip(to: rect(for: overlay.owned))
         paint(overlay.mask.hills, with: hillColor, in: overlay.mask.hillRect, on: context)
         if let shoreColor, let foamColor, let core = overlay.mask.waterCore {
             // 그림지도의 물: 진한 테두리 → 흰 거품 띠 → 물빛 순으로 겹쳐 안내도의 물가를 만든다
@@ -639,7 +713,8 @@ final class TerrainRenderer: MKOverlayRenderer, WalkAwareRenderer {
         } else {
             paint(overlay.mask.water, with: waterColor, in: overlay.mask.waterRect, on: context)
         }
-        scatter?.draw(mapRect, zoomScale: zoomScale, in: context, renderer: self, walked: walked.current)
+        context.restoreGState()
+        scatter?.draw(mapRect, zoomScale: zoomScale, in: context, renderer: self, walked: walked.current, owned: overlay.owned)
     }
 
     private func paint(_ stencil: CGImage?, with color: UIColor, in mapRect: MKMapRect, on context: CGContext) {

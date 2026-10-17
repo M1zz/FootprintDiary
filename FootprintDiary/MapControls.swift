@@ -19,7 +19,6 @@ import Foundation
 
 /// 지도 위에 켜고 끌 수 있는 것들.
 enum MapControl: String, CaseIterable, Identifiable {
-    case summary
     case diary
     case stampList
     case compass
@@ -27,6 +26,7 @@ enum MapControl: String, CaseIterable, Identifiable {
     case period
     case peek
     case skin
+    case neighborhood
     case scaleBar
     case zoom
 
@@ -42,20 +42,20 @@ enum MapControl: String, CaseIterable, Identifiable {
     var isVisibleByDefault: Bool {
         switch self {
         // 기간·그림지도는 막 생긴 기능이라 우선 보이게 둔다
-        case .summary, .diary, .stampList, .peek, .period, .skin: return true
+        case .diary, .stampList, .peek, .period, .skin, .neighborhood: return true
         case .compass, .film, .scaleBar, .zoom: return false
         }
     }
 
     var title: String {
         switch self {
-        case .summary: return "오늘 요약"
         case .diary: return "일지 단추"
         case .stampList: return "내가 찍은 곳 단추"
         case .compass: return "개척 나침반 단추"
         case .film: return "그려지는 것 보기 단추"
         case .period: return "기간 단추"
         case .skin: return "그림지도 단추"
+        case .neighborhood: return "내 동네 테두리"
         case .peek: return "비춰보기 단추"
         case .scaleBar: return "배율 막대"
         case .zoom: return "확대·축소 단추"
@@ -64,14 +64,14 @@ enum MapControl: String, CaseIterable, Identifiable {
 
     var summary: String {
         switch self {
-        case .summary: return "내가 그린 길과 오늘 그은 길. 누르면 오늘의 발자취가 열려요."
         case .diary: return "왼쪽 위. 날마다 쓴 일기를 모아 봐요."
         case .stampList: return "왼쪽 위. 찍은 자리를 목록으로 봐요."
         case .compass: return "오른쪽 위. 어느 쪽이 아직 하얀지 가리켜요."
         case .film: return "오른쪽 위. 내 지도가 그려지는 것을 영상으로 봐요."
         case .period: return "왼쪽 아래. 이번 주, 이번 달처럼 기간으로 좁혀 봐요."
         case .skin: return "왼쪽 아래. 먹 지도와 그림지도를 오가요."
-        case .peek: return "왼쪽 아래. 누르고 있는 동안 배경 지도가 비쳐요."
+        case .neighborhood: return "걸은 자리로 내 동네가 어디까지인지 점선으로 그려요. 왼쪽 아래 단추로도 켜고 꺼요."
+        case .peek: return "왼쪽 아래. 누르면 배경 지도가 비치고, 다시 누르면 종이로 돌아가요."
         case .scaleBar: return "왼쪽 아래. 지금 배율을 막대로 보여 줘요."
         case .zoom: return "오른쪽. 두 손가락 대신 눌러서 확대·축소해요."
         }
@@ -79,13 +79,13 @@ enum MapControl: String, CaseIterable, Identifiable {
 
     var symbol: String {
         switch self {
-        case .summary: return "rectangle.topthird.inset.filled"
         case .diary: return "book.closed"
         case .stampList: return "list.bullet"
         case .compass: return "location.north.line"
         case .film: return "play.rectangle"
         case .period: return "calendar"
         case .skin: return "mountain.2"
+        case .neighborhood: return "circle.dashed"
         case .peek: return "map"
         case .scaleBar: return "ruler"
         case .zoom: return "plus.magnifyingglass"

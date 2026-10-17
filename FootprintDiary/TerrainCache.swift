@@ -24,9 +24,10 @@ final class TerrainCache {
     static let shared = TerrainCache()
 
     /// 본 뜨는 법을 바꾸면 올린다. 옛 법으로 뜬 본은 버린다.
-    static let formatVersion = 1
-    /// 적어 두는 본의 수. 넘으면 오래 안 본 것부터 지운다.
-    static let maxEntries = 60
+    /// 2: 물빛 범위를 좁히고 작은 호수를 지우지 않게 했다
+    static let formatVersion = 2
+    /// 적어 두는 본의 수. 넘으면 오래 안 본 것부터 지운다. 바둑판 조각마다 하나씩 적으므로 넉넉히 둔다.
+    static let maxEntries = 300
     /// 이보다 오래된 본은 다시 뜬다
     static let lifetime: TimeInterval = 30 * 24 * 60 * 60
     /// 적어 둔 본이 지금 보려는 범위보다 이만큼 넘게 넓으면 성겨 보이므로 쓰지 않는다.

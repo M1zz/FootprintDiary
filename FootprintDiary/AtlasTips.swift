@@ -23,19 +23,9 @@ enum AtlasTips {
 }
 
 struct PeekTip: Tip {
-    var title: Text { Text("누르고 있는 동안 지도가 비쳐요") }
-    var message: Text? { Text("손을 떼면 다시 종이로 돌아가요. 지금 어디쯤인지 잠깐 확인할 때 써 보세요.") }
+    var title: Text { Text("누르면 지도가 비쳐요") }
+    var message: Text? { Text("다시 누르면 종이로 돌아가요. 지금 어디쯤인지 확인할 때 써 보세요.") }
     var image: Image? { Image(systemName: "map") }
-
-    var rules: [Rule] {
-        #Rule(AtlasTips.$isMapIdle) { $0 == true }
-    }
-}
-
-struct SummaryTip: Tip {
-    var title: Text { Text("오늘 들른 곳 보기") }
-    var message: Text? { Text("이 판을 누르면 오늘 어디어디를 갔는지 차례대로 보여 드려요.") }
-    var image: Image? { Image(systemName: "clock") }
 
     var rules: [Rule] {
         #Rule(AtlasTips.$isMapIdle) { $0 == true }

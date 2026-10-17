@@ -9,6 +9,14 @@ import SwiftUI
 import LeeoKit
 
 struct FootprintDiarySupportView: View {
+    /// 지금까지 그린 길이. 지도 위에 늘 띄워 두던 것을 여기로 옮겼다.
+    struct Record {
+        let atlasMeters: Double
+        let todayMeters: Double
+    }
+
+    /// 지도에서 열었을 때만 있다
+    var record: Record? = nil
     /// 모아 보기에서 고른 화면을 연다. 설정은 먼저 닫힌다 (AtlasScreen이 닫힌 뒤에 연다).
     var onOpen: (AtlasDestination) -> Void = { _ in }
 
@@ -142,6 +150,29 @@ struct FootprintDiarySupportView: View {
     /// 지도에서 내려온 화면들. 지도에 단추가 없어도 여기서는 늘 열 수 있다.
     private var gallery: some View {
         Section {
+            if let record {
+                HStack(alignment: .firstTextBaseline) {
+                    VStack(alignment: .leading, spacing: 2) {
+                        Text(DayTimeline.distanceText(record.atlasMeters))
+                            .font(.title2.weight(.bold).monospacedDigit())
+                            .fontDesign(.serif)
+                        Text("내가 그린 길")
+                            .font(.body)
+                            .foregroundStyle(.secondary)
+                    }
+                    Spacer()
+                    VStack(alignment: .trailing, spacing: 2) {
+                        Text(record.todayMeters >= 1 ? "+\(DayTimeline.distanceText(record.todayMeters))" : "—")
+                            .font(.title3.weight(.semibold).monospacedDigit())
+                            .foregroundStyle(record.todayMeters >= 1 ? Color(DotPalette.today) : .secondary)
+                        Text("오늘 그은 길")
+                            .font(.body)
+                            .foregroundStyle(.secondary)
+                    }
+                }
+                .padding(.vertical, 4)
+                .accessibilityElement(children: .combine)
+            }
             ForEach(AtlasDestination.allCases) { destination in
                 Button {
                     open(destination)

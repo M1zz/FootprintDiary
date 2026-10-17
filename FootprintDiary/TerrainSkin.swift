@@ -16,7 +16,8 @@
 //  어느 배율에서나 그림의 크기와 촘촘함이 같다.
 //
 //  그림은 에셋 카탈로그에 같은 이름이 있으면 그것을 쓰고, 없으면 여기서 그린 것을 쓴다.
-//  이름: TerrainMountain1~5, TerrainTree1~5, TerrainWave, TerrainBoat, TerrainDuck
+//  이름: TerrainMountain1~5, TerrainTree1~5, TerrainWave, TerrainBoat, TerrainDuck, TerrainTuft, TerrainFlower
+//  지금 들어 있는 것은 scripts/make_terrain_art.py 가 그린 SVG(밝은/어두운 두 벌)다.
 //  (투명 배경, 아래 가운데가 발 딛는 자리)
 //
 
@@ -86,7 +87,7 @@ enum StencilShape {
 
     /// 둘레 안에 든 참의 개수. 가로로 한 번, 세로로 한 번 창을 밀며 센다.
     /// 칸 수가 많아 Int(8바이트) 대신 Int32로 센다. 둘레 안의 개수라 넘칠 일이 없다.
-    private static func boxCounts(_ source: [Bool], width: Int, height: Int, radius: Int) -> [Int32] {
+    static func boxCounts(_ source: [Bool], width: Int, height: Int, radius: Int) -> [Int32] {
         var rows = [Int32](repeating: 0, count: width * height)
         for y in 0..<height {
             let base = y * width
@@ -181,7 +182,13 @@ struct TerrainSprites {
     init(traits: UITraitCollection) {
         let palette = Palette(dark: traits.userInterfaceStyle == .dark)
         func asset(_ name: String) -> UIImage? {
-            UIImage(named: name, in: nil, compatibleWith: traits)
+            guard let vector = UIImage(named: name, in: nil, compatibleWith: traits) else { return nil }
+            // 벡터 그림을 타일마다 다시 풀면 느리다. 크게 키워 그려도 흐리지 않게 넉넉한 해상도로 한 번 굽는다.
+            let format = UIGraphicsImageRendererFormat(for: traits)
+            format.scale = 6
+            return UIGraphicsImageRenderer(size: vector.size, format: format).image { _ in
+                vector.draw(in: CGRect(origin: .zero, size: vector.size))
+            }
         }
         mountains = (0..<5).map { index in
             asset("TerrainMountain\(index + 1)") ?? Self.drawMountain(Mountain(rawValue: index)!, palette: palette)
@@ -648,11 +655,15 @@ final class WalkedGround {
 final class WalkedBox {
     private let lock = NSLock()
     private var value: WalkedGround?
+    private var changes = 0
 
     var current: WalkedGround? {
         get { lock.withLock { value } }
-        set { lock.withLock { value = newValue } }
+        set { lock.withLock { value = newValue; changes += 1 } }
     }
+
+    /// 걸은 자리를 몇 번 갈아 끼웠는지. 타일 갈무리의 열쇠에 넣어 낡은 그림을 쓰지 않게 한다.
+    var version: Int { lock.withLock { changes } }
 }
 
 /// 걸은 자리를 비켜 그리는 그리개
@@ -715,7 +726,10 @@ enum MapGrid {
         let point = MKMapPoint(x: bounds.midX, y: bounds.midY)
         let metersPerPoint = unit / MKMapPointsPerMeterAtLatitude(point.coordinate.latitude)
         guard metersPerPoint > 0, metersPerPoint.isFinite else { return 1 }
-        return min(1.5, max(0.65, pow(2 / metersPerPoint, 0.3)))
+        let growth = min(1.5, max(0.65, pow(2 / metersPerPoint, 0.3)))
+        // 바둑판 조각마다 위도가 조금씩 달라 값이 미세하게 갈린다. 눈금을 굵게 끊어 두면 이웃 조각이
+        // 같은 값을 받아 격자가 맞물린다 — 갈리면 경계에서 그림 간격이 어긋난다.
+        return (growth * 20).rounded() / 20
     }
 
     /// splitmix64 — 같은 씨앗이면 늘 같은 수를 낸다
@@ -803,8 +817,11 @@ struct TerrainScatter {
         zoomScale: MKZoomScale,
         in context: CGContext,
         renderer: MKOverlayRenderer,
-        walked: WalkedGround?
+        walked: WalkedGround?,
+        owned: MKMapRect
     ) {
+        // 본은 바둑판 조각마다 따로 뜬다. 그림은 발 딛는 자리가 제 조각 안일 때만 세운다 —
+        // 그래야 이웃 조각과 같은 자리에 두 번 서지 않고, 경계 너머로 삐져나온 그림도 잘리지 않는다.
         // 화면 1pt가 지도 좌표로 얼마인지
         let unit = 1 / Double(zoomScale)
         let grow = MapGrid.growth(unit: unit, for: renderer.overlay)
@@ -815,7 +832,7 @@ struct TerrainScatter {
         if let water {
             let width = Self.waveWidth * unit * grow
             MapGrid.forEachSpot(spacing: Self.waveSpacing * unit * grow, in: mapRect, margin: width * 2, salt: 3) { point, roll, pick in
-                guard roll < 0.7 else { return }
+                guard roll < 0.7, owned.contains(point) else { return }
                 if water.isDeep(at: point, reach: width * 1.6, threshold: 0.5) {
                     // 넓은 물 한가운데에는 가끔 돛단배와 오리가 떠 있다
                     if pick < 0.025 {
@@ -837,7 +854,7 @@ struct TerrainScatter {
             /// 세운 봉우리들 — 나무가 그 발치를 파고들지 않도록 기억해 둔다
             var standing: [MKMapRect] = []
             MapGrid.forEachSpot(spacing: Self.mountainSpacing * unit * grow, in: mapRect, margin: width * 1.6, salt: 1) { point, roll, pick in
-                guard hills.isDeep(at: point, reach: width * 0.5), !wet(point) else { return }
+                guard owned.contains(point), hills.isDeep(at: point, reach: width * 0.5), !wet(point) else { return }
 
                 // 산이 넓게 이어질수록 봉우리가 커진다. 한복판에는 눈 덮인 큰 산이 선다.
                 let image: UIImage
@@ -865,7 +882,7 @@ struct TerrainScatter {
             let treeWidth = Self.treeWidth * unit * grow
             MapGrid.forEachSpot(spacing: Self.treeSpacing * unit * grow, in: mapRect, margin: treeWidth * 2, salt: 2) { point, roll, pick in
                 let cover = hills.coverage(at: point)
-                guard roll < 0.75, cover > 0.5, !wet(point) else { return }
+                guard roll < 0.75, owned.contains(point), cover > 0.5, !wet(point) else { return }
                 // 봉우리가 선 자리는 비워 둔다. 걸어서 봉우리가 걷힌 자리에는 나무가 대신 선다.
                 guard !standing.contains(where: { $0.contains(point) }) else { return }
 
@@ -933,7 +950,15 @@ final class PicturePaperRenderer: MKOverlayRenderer, WalkAwareRenderer {
         super.init(overlay: overlay)
     }
 
+    private let tiles = TileCache()
+
     override func draw(_ mapRect: MKMapRect, zoomScale: MKZoomScale, in context: CGContext) {
+        tiles.draw(mapRect, zoomScale: zoomScale, in: context, renderer: self, version: walked.version) { target in
+            paint(mapRect, zoomScale: zoomScale, in: target)
+        }
+    }
+
+    private func paint(_ mapRect: MKMapRect, zoomScale: MKZoomScale, in context: CGContext) {
         let area = mapRect.intersection(overlay.boundingMapRect)
         guard !area.isNull, area.size.width > 0 else { return }
         let unit = 1 / Double(zoomScale)
@@ -988,6 +1013,100 @@ final class PicturePaperRenderer: MKOverlayRenderer, WalkAwareRenderer {
         context.saveGState()
         context.clip(to: rect(for: area))
         batch.draw(in: context, renderer: self)
+        context.restoreGState()
+    }
+}
+
+// MARK: - 타일 갈무리
+
+/// 한 번 그린 타일을 그림으로 기억해 둔다.
+///
+/// MapKit은 확대·축소할 때마다 그 배율의 타일을 처음부터 다시 그리라고 한다. 그림지도는
+/// 타일 하나에 봉우리·나무·종이 결을 수백 개씩 놓으므로, 줌을 오갈 때마다 같은 타일을
+/// 다시 그리느라 화면이 버벅였다. 그린 것을 배율과 자리로 적어 두면 같은 배율로 돌아올 때
+/// 그림 한 장을 찍기만 하면 된다.
+///
+/// 곳간은 모든 그리개가 함께 쓰되 열쇠에 그리개마다 다른 표를 붙인다. 그리개가 새로 만들어지면
+/// (본·빛깔·칠하는 법이 바뀌면) 표가 달라 낡은 그림을 쓰지 않는다. 걸은 자리는 그리개를 그대로 둔 채
+/// 바뀌므로 열쇠에 넣는다.
+final class TileCache {
+    /// 모든 그리개가 함께 쓰는 곳간. 물·산은 바둑판 조각마다 그리개가 따로라 하나씩 두면 메모리가 넘친다.
+    private static let images: NSCache<NSString, CGImage> = {
+        let cache = NSCache<NSString, CGImage>()
+        cache.totalCostLimit = costLimit
+        return cache
+    }()
+    private var images: NSCache<NSString, CGImage> { Self.images }
+    /// 이 그리개의 그림을 다른 그리개의 것과 가르는 표
+    private let owner = UUID().uuidString
+    /// 이 그리개가 지금까지 기억해 둔 열쇠들 — 버릴 때 제 것만 버린다
+    private var keys = Set<NSString>()
+    private let lock = NSLock()
+
+    /// 모두 합쳐 쥐는 메모리(바이트). 넘치면 오래 안 쓴 것부터 버린다.
+    static let costLimit = 96 * 1024 * 1024
+    /// 한 변이 이보다 큰 타일은 기억하지 않는다 (드물게 커다란 조각으로 그리라고 할 때)
+    static let maxSide = 1_400
+
+    deinit {
+        // 걷어 낸 그리개의 그림은 다시 쓰일 일이 없다
+        for key in keys { Self.images.removeObject(forKey: key) }
+    }
+
+    /// 기억해 둔 그림이 있으면 그것을 찍고, 없으면 `render`로 그려 기억해 두고 찍는다.
+    func draw(
+        _ mapRect: MKMapRect,
+        zoomScale: MKZoomScale,
+        in context: CGContext,
+        renderer: MKOverlayRenderer,
+        version: Int,
+        render: (CGContext) -> Void
+    ) {
+        let target = renderer.rect(for: mapRect)
+        let device = context.userSpaceToDeviceSpaceTransform
+        let pixelsPerUnit = hypot(device.a, device.b)
+        let width = Int((target.width * pixelsPerUnit).rounded(.up))
+        let height = Int((target.height * pixelsPerUnit).rounded(.up))
+        guard width > 0, height > 0, width <= Self.maxSide, height <= Self.maxSide else {
+            render(context)
+            return
+        }
+
+        let level = Int((log2(Double(zoomScale)) * 8).rounded())
+        let key = "\(owner):\(version):\(level):\(Int(mapRect.minX)):\(Int(mapRect.minY)):\(Int(mapRect.size.width))" as NSString
+        let image: CGImage
+        if let cached = images.object(forKey: key) {
+            image = cached
+        } else {
+            guard let offscreen = CGContext(
+                data: nil,
+                width: width,
+                height: height,
+                bitsPerComponent: 8,
+                bytesPerRow: 0,
+                space: CGColorSpace(name: CGColorSpace.sRGB) ?? CGColorSpaceCreateDeviceRGB(),
+                bitmapInfo: CGImageAlphaInfo.premultipliedFirst.rawValue | CGBitmapInfo.byteOrder32Little.rawValue
+            ) else {
+                render(context)
+                return
+            }
+            // 지도의 그림판처럼 위에서 아래로 내려가게 뒤집고, 그리개 좌표를 그대로 쓰게 옮긴다
+            offscreen.translateBy(x: 0, y: CGFloat(height))
+            offscreen.scaleBy(x: 1, y: -1)
+            offscreen.scaleBy(x: CGFloat(width) / target.width, y: CGFloat(height) / target.height)
+            offscreen.translateBy(x: -target.minX, y: -target.minY)
+            render(offscreen)
+            guard let made = offscreen.makeImage() else { return }
+            images.setObject(made, forKey: key, cost: width * height * 4)
+            lock.withLock { _ = keys.insert(key) }
+            image = made
+        }
+
+        context.saveGState()
+        // 그림은 아래에서 위로 찍히므로 제 자리를 축으로 뒤집는다 (TerrainRenderer.paint와 같다)
+        context.translateBy(x: 0, y: target.maxY + target.minY)
+        context.scaleBy(x: 1, y: -1)
+        context.draw(image, in: target)
         context.restoreGState()
     }
 }

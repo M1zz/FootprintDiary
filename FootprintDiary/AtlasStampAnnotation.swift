@@ -58,6 +58,22 @@ enum StampSeal {
     /// 넓이가 같아도 자리 하나보다 커진다.
     static let maxStickerSide: CGFloat = 48
 
+    /// 확대했을 때 스티커가 커질 수 있는 끝. 골목까지 들어가면 세 배(한 변 90pt 남짓)가 된다.
+    static let maxStickerScale: CGFloat = 3
+    /// 이보다 넓게 보는 동안(화면 1pt가 이만큼의 m)은 제 크기 그대로다. 동네를 한눈에 보는 배율이다.
+    static let stickerRestMetersPerPoint: Double = 3
+
+    /// 지금 배율에서 스티커를 키울 배수.
+    ///
+    /// 도장(갈래 낙관)은 자리의 표시라 늘 같은 크기로 두지만, 스티커는 내가 찍은 그림이라
+    /// 가까이 들어가면 그림이 보여야 한다. 확대한 만큼 그대로 키우면 골목 하나를 덮으므로
+    /// 제곱근으로 무디게 따라간다 — 네 배 확대하면 두 배 커진다. 축소할 때는 줄이지 않는다.
+    static func stickerScale(metersPerPoint: Double) -> CGFloat {
+        guard metersPerPoint > 0 else { return 1 }
+        let scale = (stickerRestMetersPerPoint / metersPerPoint).squareRoot()
+        return CGFloat(min(Double(maxStickerScale), max(1, scale)))
+    }
+
     private static var cache: [String: UIImage] = [:]
 
     /// 카메라로 찍은 스티커를 도장 자리에 앉힌다.
@@ -75,17 +91,21 @@ enum StampSeal {
     /// - Parameter unvisited: 아직 가보지 않은 자리면 옅게 얹는다. 간판은 그 자리에
     ///   가야 찍을 수 있는 것이라 실제로는 거의 없지만, 찍어 둔 자리를 나중에 지도
     ///   위에서 '가볼 곳'으로 옮겨 놓는 길이 있어 여기서도 갈라 둔다.
-    static func image(sticker: UIImage, unvisited: Bool = false) -> UIImage {
-        let drawn = sealSize(for: sticker.size)
+    ///
+    /// - Parameter magnified: 이만큼 키워 그린다. 지도를 확대하면 스티커가 따라 커지는데,
+    ///   작게 그린 것을 늘리면 흐려지므로 가장 크게 설 때의 크기로 미리 그려 둔다.
+    static func image(sticker: UIImage, unvisited: Bool = false, magnified: CGFloat = 1) -> UIImage {
+        let base = sealSize(for: sticker.size)
+        let drawn = CGSize(width: base.width * magnified, height: base.height * magnified)
         // 그림자가 판 밖으로 잘리지 않게 둘레에 한 겹 여유를 둔다
-        let pad: CGFloat = 3
+        let pad: CGFloat = 3 * magnified
         let canvas = CGSize(width: drawn.width + pad * 2, height: drawn.height + pad * 2)
 
         let format = UIGraphicsImageRendererFormat()
         format.opaque = false
         return UIGraphicsImageRenderer(size: canvas, format: format).image { ctx in
-            ctx.cgContext.setShadow(offset: CGSize(width: 0, height: 0.5),
-                                    blur: 1.5,
+            ctx.cgContext.setShadow(offset: CGSize(width: 0, height: 0.5 * magnified),
+                                    blur: 1.5 * magnified,
                                     color: UIColor.black.withAlphaComponent(0.28).cgColor)
             if unvisited { ctx.cgContext.setAlpha(Self.unvisitedAlpha) }
             sticker.draw(in: CGRect(origin: CGPoint(x: pad, y: pad), size: drawn))
@@ -187,10 +207,25 @@ final class StampAnnotationView: MKAnnotationView {
     /// 이름을 붙인 스탬프만 도장 아래에 이름을 단다.
     /// 종류 이름까지 모두 달면 백지 지도가 글씨로 덮인다 — 내가 부르는 이름만 남긴다.
     private let nameLabel = StampNameLabel()
+    /// 스티커는 지도 배율을 따라 커지므로 image 대신 이 판에 크게 그려 두고 판의 크기만 바꾼다
+    private let stickerView = UIImageView()
+    /// 배율이 1일 때 스티커가 서는 크기. 스티커가 아니면 0이다.
+    private var stickerBaseSize: CGSize = .zero
+
+    /// 확대했을 때 스티커를 키우는 배수. 지도가 정해 준다(`StampSeal.stickerScale`).
+    var stickerScale: CGFloat = 1 {
+        didSet {
+            guard stickerScale != oldValue else { return }
+            applyStickerSize()
+        }
+    }
 
     override init(annotation: (any MKAnnotation)?, reuseIdentifier: String?) {
         super.init(annotation: annotation, reuseIdentifier: reuseIdentifier)
         nameLabel.isUserInteractionEnabled = false
+        stickerView.isUserInteractionEnabled = false
+        stickerView.contentMode = .scaleAspectFit
+        addSubview(stickerView)
         addSubview(nameLabel)
     }
 
@@ -202,14 +237,28 @@ final class StampAnnotationView: MKAnnotationView {
     override var annotation: (any MKAnnotation)? {
         didSet {
             guard let stamp = annotation as? StampAnnotation else { return }
-            image = stamp.sticker.map { StampSeal.image(sticker: $0, unvisited: stamp.isUnvisited) }
-                ?? StampSeal.image(for: stamp.kind, unvisited: stamp.isUnvisited)
+            if let sticker = stamp.sticker {
+                let largest = StampSeal.maxStickerScale
+                let drawn = StampSeal.image(sticker: sticker, unvisited: stamp.isUnvisited, magnified: largest)
+                image = nil
+                stickerView.image = drawn
+                stickerView.isHidden = false
+                stickerBaseSize = CGSize(width: drawn.size.width / largest, height: drawn.size.height / largest)
+                applyStickerSize()
+            } else {
+                stickerView.image = nil
+                stickerView.isHidden = true
+                stickerBaseSize = .zero
+                image = StampSeal.image(for: stamp.kind, unvisited: stamp.isUnvisited)
+            }
             centerOffset = .zero
             canShowCallout = false
             isDraggable = true
             // 내 위치 점보다 아래에 깔린다. 스탬프가 여러 개 겹쳐도 지금 내가 어디인지는
             // 늘 보여야 한다 — 백지 지도에서는 그것이 유일한 '지금'의 기준이다.
             zPriority = Self.stampPriority
+            // 멀리 물러나 서로 겹쳐도 도장은 숨지 않는다 — 다녀온 곳을 찾는 표지다
+            displayPriority = .required
 
             nameLabel.text = stamp.placeName
             nameLabel.isHidden = stamp.placeName.isEmpty
@@ -220,8 +269,18 @@ final class StampAnnotationView: MKAnnotationView {
         }
     }
 
+    private func applyStickerSize() {
+        guard stickerBaseSize != .zero else { return }
+        let size = CGSize(width: stickerBaseSize.width * stickerScale, height: stickerBaseSize.height * stickerScale)
+        // 가운데를 지킨 채 크기만 바꾼다 — 스티커가 붙은 자리가 흔들리지 않게
+        bounds = CGRect(origin: .zero, size: size)
+        stickerView.frame = bounds
+        setNeedsLayout()
+    }
+
     override func layoutSubviews() {
         super.layoutSubviews()
+        stickerView.frame = bounds
         guard !nameLabel.isHidden else { return }
         let width = bounds.width > 0 ? bounds.width : StampSeal.size.width
         let height = bounds.height > 0 ? bounds.height : StampSeal.size.height

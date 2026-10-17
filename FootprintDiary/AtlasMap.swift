@@ -35,6 +35,8 @@ struct AtlasMapView: UIViewRepresentable {
     let proxy: MapProxy
     /// 물과 산을 먹 한 빛으로 칠할지, 봉우리·나무를 그려 넣을지
     var terrainSkin: TerrainSkin = .ink
+    /// 걸은 자리로 뜬 내 동네 테두리를 그릴지
+    var showsNeighborhood = true
 
     /// 열자마자 여기를 한가운데 놓는다.
     ///
@@ -76,6 +78,10 @@ struct AtlasMapView: UIViewRepresentable {
             StampAnnotationView.self,
             forAnnotationViewWithReuseIdentifier: StampAnnotationView.reuseIdentifier
         )
+        mapView.register(
+            WalkSpotView.self,
+            forAnnotationViewWithReuseIdentifier: WalkSpotView.reuseIdentifier
+        )
 
         if showsTrackingButton { addTrackingButton(to: mapView) }
         proxy.mapView = mapView
@@ -109,6 +115,7 @@ struct AtlasMapView: UIViewRepresentable {
         coordinator.syncTheme(on: mapView, scheme: colorScheme)
         coordinator.syncSkin(on: mapView, skin: terrainSkin)
         coordinator.syncPaper(on: mapView, showsBasemap: showsBasemap)
+        coordinator.syncNeighborhood(on: mapView, shows: showsNeighborhood)
         coordinator.syncDots(on: mapView, cells: cells)
         coordinator.syncStamps(on: mapView, stamps: stamps)
     }
@@ -143,28 +150,37 @@ struct AtlasMapView: UIViewRepresentable {
         private var showsBasemap = false
         private var dotOverlay: DotGridOverlay?
         private var dotSignature: String?
-        private var terrainOverlay: TerrainOverlay?
         private var terrainSkin: TerrainSkin = .ink
+        /// 내 동네 테두리. 뜨는 데 시간이 걸려 뒤쪽에서 뜨고, 다 뜬 것만 올린다.
+        private var neighborhoodOverlay: NeighborhoodOverlay?
+        private var neighborhoodAreas: [NeighborhoodArea] = []
+        private var showsNeighborhood = true
+        /// 늦게 끝난 옛 셈이 새 테두리를 덮지 않도록 차례를 센다
+        private var neighborhoodGeneration = 0
+        /// 멀리 물러났을 때 세우는 발자국 표지들 (WalkSpots.swift)
+        private var walkSpots: [WalkSpotAnnotation] = []
+        /// 지금 멀리 물러나 있는지. 표지와 동네 이름표가 이것으로 갈린다.
+        private var isFarAway = false
         /// 걸은 자리. 그림지도의 그림이 이 자리를 비켜 선다.
         private var walkedGround: WalkedGround?
-        /// 떠 둔 본. 지도를 비추는 동안에도 들고 있다가 손을 떼면 곧바로 다시 얹는다.
-        private var terrainMask: TerrainMask?
-        /// 마지막으로 물을 찾아본 범위 (물이 없던 자리도 여기 남는다 — 헛되이 다시 찍지 않으려고)
-        private var terrainRect: MKMapRect?
-        /// 그 본을 뜰 때의 화면 너비. 이보다 훨씬 좁혀 들어가면 본이 성겨 보여 다시 뜬다.
-        private var terrainSpan: Double = 0
+        /// 물·산의 본은 바둑판 조각마다 뜬다 (아래 '물과 산'). 뜬 조각과 지도에 얹은 조각.
+        private var terrainTiles: [TerrainTileKey: TerrainTileState] = [:]
+        private var terrainOverlays: [TerrainTileKey: TerrainOverlay] = [:]
+        /// 뜰 차례를 기다리는 조각. 보이는 것이 앞, 둘레가 뒤다.
+        private var terrainQueue: [TerrainTileKey] = []
+        /// 지금 뜨고 있는 조각. 한 번에 하나씩만 뜬다.
+        private var terrainBusy: TerrainTileKey?
+        /// 지금 화면에 맞는 조각의 크기 단계
+        private var terrainLevel: Int?
         private let terrainFinder = TerrainFinder()
-        /// 아직 기다리고 있는 본 뜨기
-        private var pendingTerrain: DispatchWorkItem?
 
-        /// 지도가 이만큼(초) 잠잠해진 뒤에야 본을 뜬다.
-        ///
-        /// 화면이 움직이는 동안에는 지역 바뀜이 수십 번 들어온다. 그때마다 찍겠다고 달려들면
-        /// 앞선 요청을 계속 취소하게 되고, 애플은 그렇게 몰아치는 앱을 잠시 막아 버린다.
-        /// 한 번 막히면 본이 통째로 비어 물도 산도 나오지 않는다.
-        static let terrainSettleDelay: TimeInterval = 0.45
+        /// 조각 하나를 뜨고 다음 조각을 뜨기까지 두는 틈(초).
+        /// 애플은 지도 찍기를 몰아치는 앱을 잠시 막아 버린다. 한 번 막히면 본이 통째로 빈다.
+        static let terrainGap: TimeInterval = 0.15
         /// 막혔을 때 다시 해 보기까지 두는 시간(초). 서둘러 다시 조르면 더 오래 막힌다.
         static let terrainRetryDelay: TimeInterval = 4
+        /// 지도에 얹어 두는 조각의 수. 넘치면 화면에서 먼 것부터 내린다 (뜬 본은 기기에 남아 있다).
+        static let maxTerrainOverlays = 30
         private var didCenterOnUser = false
         /// 마지막으로 붙들어 놓은 자리 (focus로 받은 것)
         private var focused: CLLocationCoordinate2D?
@@ -177,7 +193,8 @@ struct AtlasMapView: UIViewRepresentable {
         var stampsByID: [PersistentIdentifier: MapStamp] = [:]
 
         func stopFindingTerrain() {
-            pendingTerrain?.cancel()
+            terrainQueue.removeAll()
+            terrainBusy = nil
             terrainFinder.cancel()
         }
 
@@ -228,6 +245,10 @@ struct AtlasMapView: UIViewRepresentable {
             if let dotOverlay { mapView.removeOverlay(dotOverlay) }
             dotOverlay = nil
             dotSignature = nil
+
+            // 테두리는 다 뜬 고리를 그대로 들고 있다가, 점이 다시 올라가면 새 빛깔로 다시 얹는다
+            if let neighborhoodOverlay { mapView.removeOverlay(neighborhoodOverlay) }
+            neighborhoodOverlay = nil
         }
         var trails: [[CLLocationCoordinate2D]] = []
         var onSelectStamp: (MapStamp) -> Void = { _ in }
@@ -239,7 +260,7 @@ struct AtlasMapView: UIViewRepresentable {
             guard skin != terrainSkin else { return }
             terrainSkin = skin
             detachTerrain(from: mapView)
-            attachTerrain(to: mapView)
+            attachTerrainTiles(to: mapView)
             // 종이도 갈아 끼운다. 걷어 두면 바로 뒤의 syncPaper가 새 종이를 맨 아래에 깐다.
             if let paperOverlay { mapView.removeOverlay(paperOverlay) }
             paperOverlay = nil
@@ -255,18 +276,25 @@ struct AtlasMapView: UIViewRepresentable {
         func syncPaper(on mapView: MKMapView, showsBasemap: Bool) {
             let changed = showsBasemap != self.showsBasemap
             self.showsBasemap = showsBasemap
-            rebuildPaper(on: mapView, force: changed)
+            if changed { applyCover(on: mapView) }
+            rebuildPaper(on: mapView, force: false)
             refreshTerrain(on: mapView)
         }
 
-        private func rebuildPaper(on mapView: MKMapView, force: Bool) {
-            guard !showsBasemap else {
-                if let paperOverlay { mapView.removeOverlay(paperOverlay) }
-                paperOverlay = nil
-                paperRect = nil
-                return
-            }
+        /// 비춰 볼 때 종이와 물·산을 걷어 내지 않고 투명하게만 둔다.
+        ///
+        /// 전에는 통째로 걷었다가 다시 얹었다. 그러면 돌아올 때마다 타일을 처음부터 다시
+        /// 그려야 해서 — 그림지도는 봉우리·나무를 일일이 놓는다 — 화면이 한참 버벅였다.
+        /// 얹어 둔 채 투명도만 바꾸면 이미 그려 둔 타일을 그대로 다시 보여 준다.
+        private var coverAlpha: CGFloat { showsBasemap ? 0 : 1 }
 
+        private func applyCover(on mapView: MKMapView) {
+            for overlay in [paperOverlay as MKOverlay?].compactMap({ $0 }) + Array(terrainOverlays.values) {
+                mapView.renderer(for: overlay)?.alpha = coverAlpha
+            }
+        }
+
+        private func rebuildPaper(on mapView: MKMapView, force: Bool) {
             let visible = mapView.visibleMapRect
             guard visible.size.width > 0 else { return }
             if !force, let paperRect, paperRect.contains(visible) { return }
@@ -296,7 +324,20 @@ struct AtlasMapView: UIViewRepresentable {
             redrawSoon(paper, on: mapView)
         }
 
+        /// 멀리 물러났는지 가까이 들어왔는지가 바뀌면 발자국 표지를 세우거나 걷는다
+        private func syncDistance(on mapView: MKMapView) {
+            let far = metersPerPoint(on: mapView) > WalkSpots.showAboveMetersPerPoint
+            guard far != isFarAway else { return }
+            isFarAway = far
+            if far {
+                mapView.addAnnotations(walkSpots)
+            } else {
+                mapView.removeAnnotations(walkSpots)
+            }
+        }
+
         func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
+            syncDistance(on: mapView)
             rebuildPaper(on: mapView, force: false)
             refreshTerrain(on: mapView)
             proxy?.report(mapView)
@@ -304,94 +345,110 @@ struct AtlasMapView: UIViewRepresentable {
 
         // MARK: 물과 산
 
-        /// 종이보다 좁게 덮는다.
+        /// 물·산은 바둑판 조각으로 미리 떠 둔다.
         ///
-        /// 본은 픽셀 수가 정해져 있어서, 넓게 덮을수록 같은 픽셀로 더 넓은 땅을 담아
-        /// 물가가 뭉개진다. 종이는 한 번 크게 깔아 두면 그만이지만 물은 그렇지 않다.
+        /// 전에는 보이는 범위의 두 배만 한 장으로 떴다. 그러면 조금만 밀어도 범위를 벗어났고,
+        /// 지도가 멎은 뒤에야 새로 떠서 나무와 물이 뒤늦게 돋았다. 이제는 땅을 배율에 맞는
+        /// 정해진 조각으로 나눠, 보이는 조각과 그 둘레를 미리 떠서 얹어 둔다. 지도를 밀면
+        /// 이미 그려진 곳으로 들어가게 된다. 조각의 자리가 늘 같으므로 기기에 적어 둔 본
+        /// (TerrainCache)도 그대로 다시 쓰인다.
         private func refreshTerrain(on mapView: MKMapView) {
-            guard !showsBasemap else {
-                // 비추는 동안에는 진짜 물과 산이 보인다. 그 위에 겹쳐 칠할 까닭이 없어 걷어 둔다.
-                // 다만 걷어 두기만 하고 본은 그대로 들고 있는다. 여기서 본까지 버리면 손을 뗄 때
-                // 지도를 다시 찍어야 하는데, 이어 찍기는 곧잘 막히고 그러면 무늬가 사라진 채 남는다.
-                detachTerrain(from: mapView)
-                pendingTerrain?.cancel()
-                terrainFinder.cancel()
-                return
-            }
-
-            let visible = mapView.visibleMapRect
-            guard visible.size.width > 0 else { return }
-
-            // 지난번에 찾아본 범위가 지금 보는 자리를 아직 덮고 있으면 다시 찍지 않는다.
-            // 너무 깊이 확대해 들어가면 본이 성겨 보이므로 그때는 다시 뜬다.
-            if let terrainRect, terrainRect.contains(visible), visible.size.width > terrainSpan * 0.4 {
-                // 비추다 돌아온 참이면 들고 있던 본을 여기서 곧바로 되얹는다
-                attachTerrain(to: mapView)
-                return
-            }
-
-            scheduleTerrain(on: mapView, after: Self.terrainSettleDelay)
-        }
-
-        /// 지도가 멎기를 기다렸다가 본을 뜬다
-        private func scheduleTerrain(on mapView: MKMapView, after delay: TimeInterval) {
-            pendingTerrain?.cancel()
-            let work = DispatchWorkItem { [weak self, weak mapView] in
-                guard let self, let mapView else { return }
-                self.findTerrain(on: mapView)
-            }
-            pendingTerrain = work
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay, execute: work)
-        }
-
-        private func findTerrain(on mapView: MKMapView) {
+            // 비추는 동안에는 진짜 물과 산이 보인다. 얹어 둔 조각은 투명하게 그대로 두고(applyCover)
+            // 새로 뜨지만 않는다. 돌아오면 그 자리에서 곧바로 다시 보인다.
             guard !showsBasemap else { return }
             let visible = mapView.visibleMapRect
             guard visible.size.width > 0 else { return }
 
-            // 종이보다 좁게 덮는다. 본은 픽셀 수가 정해져 있어서, 넓게 덮을수록
-            // 같은 픽셀로 더 넓은 땅을 담아 물가가 뭉개진다.
-            let target = visible
-                .insetBy(dx: -visible.size.width / 2, dy: -visible.size.height / 2)
-                .intersection(.world)
-            guard !target.isNull, target.size.width > 0 else { return }
-            terrainRect = target
-            terrainSpan = visible.size.width
+            let level = TerrainTileKey.level(for: visible)
+            if level != terrainLevel {
+                terrainLevel = level
+                // 다른 크기의 조각은 이제 성글거나 너무 잘다. 본은 기기에 남아 있으니 들고 있지 않는다.
+                terrainTiles = terrainTiles.filter { $0.key.level == level }
+            }
 
-            terrainFinder.find(in: target) { [weak self, weak mapView] result in
+            let showing = TerrainTileKey.keys(covering: visible, level: level)
+            // 보이는 범위 둘레로 한 조각씩 더 — 밀어 들어갈 곳을 미리 떠 둔다
+            let around = TerrainTileKey.keys(covering: visible, level: level, padding: 1)
+            let center = MKMapPoint(x: visible.midX, y: visible.midY)
+
+            terrainQueue = around
+                .filter { terrainTiles[$0] == nil && $0 != terrainBusy }
+                .sorted { a, b in
+                    let aShown = showing.contains(a), bShown = showing.contains(b)
+                    if aShown != bShown { return aShown }
+                    return a.distance(to: center) < b.distance(to: center)
+                }
+
+            attachTerrainTiles(to: mapView)
+            // 보이는 조각이 모두 이 크기로 갖춰졌으면, 앞서 얹어 둔 다른 크기의 조각을 내린다.
+            // 갖춰지기 전에 내리면 그사이 물과 산이 통째로 비어 보인다.
+            if showing.allSatisfy({ terrainTiles[$0] != nil }) {
+                for (key, overlay) in terrainOverlays where key.level != level {
+                    mapView.removeOverlay(overlay)
+                    terrainOverlays[key] = nil
+                }
+            }
+            trimTerrainOverlays(on: mapView, around: center)
+            pumpTerrain(on: mapView)
+        }
+
+        /// 줄 맨 앞 조각을 뜬다. 다 뜨면 얹고 다음 조각으로 넘어간다.
+        private func pumpTerrain(on mapView: MKMapView) {
+            guard terrainBusy == nil, !showsBasemap, !terrainQueue.isEmpty else { return }
+            let key = terrainQueue.removeFirst()
+            terrainBusy = key
+            terrainFinder.find(in: key.rect) { [weak self, weak mapView] result in
                 guard let self, let mapView else { return }
+                self.terrainBusy = nil
                 switch result {
                 case .found(let mask):
-                    // 적어 둔 본을 받으면 찾은 범위와 다를 수 있다. 본이 실제로 덮는 범위를 기억해 둬야
-                    // 그 밖으로 나갔을 때 다시 뜨고, 너무 성글어지기 전에 다시 뜬다.
-                    self.terrainRect = mask.waterRect
-                    self.terrainSpan = mask.waterRect.size.width / 2
-                    self.terrainMask = mask
-                    self.detachTerrain(from: mapView)
-                    self.attachTerrain(to: mapView)
+                    self.terrainTiles[key] = .found(mask)
+                    if key.level == self.terrainLevel { self.attachTerrainTiles(to: mapView) }
+                    self.continueTerrain(on: mapView, after: Self.terrainGap)
                 case .bare:
-                    self.terrainMask = nil
-                    self.detachTerrain(from: mapView)
+                    self.terrainTiles[key] = .bare
+                    self.continueTerrain(on: mapView, after: Self.terrainGap)
                 case .failed:
-                    // 찾아본 것으로 쳐 두면 이 자리에서는 두 번 다시 시도하지 않는다.
-                    // 표시를 지우고, 좀 뜸을 들였다가 다시 해 본다.
-                    self.terrainRect = nil
-                    self.scheduleTerrain(on: mapView, after: Self.terrainRetryDelay)
+                    // 막혔다. 이 조각은 줄 끝에 다시 세우고 좀 뜸을 들였다가 이어 간다.
+                    self.terrainQueue.append(key)
+                    self.continueTerrain(on: mapView, after: Self.terrainRetryDelay)
                 }
             }
         }
 
-        /// 들고 있는 본을 지도에 얹는다. 종이 바로 위, 발자국 바로 아래 — 물은 배경이지 기록이 아니다.
-        private func attachTerrain(to mapView: MKMapView) {
-            guard !showsBasemap, terrainOverlay == nil, let terrainMask else { return }
-            let overlay = TerrainOverlay(mask: terrainMask)
-            terrainOverlay = overlay
-            if let paperOverlay {
-                mapView.insertOverlay(overlay, above: paperOverlay)
-            } else {
-                mapView.insertOverlay(overlay, at: 0, level: .aboveLabels)
+        private func continueTerrain(on mapView: MKMapView, after delay: TimeInterval) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) { [weak self, weak mapView] in
+                guard let self, let mapView else { return }
+                self.pumpTerrain(on: mapView)
             }
-            redrawSoon(overlay, on: mapView)
+        }
+
+        /// 떠 둔 조각 가운데 아직 지도에 없는 것을 얹는다. 종이 바로 위, 발자국 바로 아래 — 물은 배경이지 기록이 아니다.
+        private func attachTerrainTiles(to mapView: MKMapView) {
+            for (key, state) in terrainTiles where terrainOverlays[key] == nil {
+                guard case .found(let mask) = state else { continue }
+                let overlay = TerrainOverlay(mask: mask, owned: key.rect)
+                terrainOverlays[key] = overlay
+                if let paperOverlay {
+                    mapView.insertOverlay(overlay, above: paperOverlay)
+                } else {
+                    mapView.insertOverlay(overlay, at: 0, level: .aboveLabels)
+                }
+                redrawSoon(overlay, on: mapView)
+            }
+        }
+
+        /// 얹어 둔 조각이 너무 많으면 화면에서 먼 것부터 내린다
+        private func trimTerrainOverlays(on mapView: MKMapView, around center: MKMapPoint) {
+            guard terrainOverlays.count > Self.maxTerrainOverlays else { return }
+            let far = terrainOverlays.keys
+                .sorted { $0.distance(to: center) > $1.distance(to: center) }
+                .prefix(terrainOverlays.count - Self.maxTerrainOverlays)
+            for key in far {
+                if let overlay = terrainOverlays[key] { mapView.removeOverlay(overlay) }
+                terrainOverlays[key] = nil
+                terrainTiles[key] = nil
+            }
         }
 
         /// 지도가 이미 다 그려져 멎어 있을 때 얹으면 MapKit이 손수 만든 그리개를 한 번도 부르지 않는다.
@@ -406,7 +463,7 @@ struct AtlasMapView: UIViewRepresentable {
         /// 걸은 자리가 바뀌었으면 그림지도의 그리개들에게 알려 다시 그리게 한다
         private func syncWalked(on mapView: MKMapView, cells: [HeatCell]) {
             walkedGround = cells.isEmpty ? nil : WalkedGround(cells: cells)
-            for overlay in [terrainOverlay as MKOverlay?, paperOverlay].compactMap({ $0 }) {
+            for overlay in Array(terrainOverlays.values) as [MKOverlay] + [paperOverlay].compactMap({ $0 }) {
                 guard let renderer = mapView.renderer(for: overlay) as? WalkAwareRenderer else { continue }
                 renderer.walked.current = walkedGround
                 renderer.setNeedsDisplay()
@@ -415,13 +472,23 @@ struct AtlasMapView: UIViewRepresentable {
 
         /// 지도에서 걷어 내기만 한다. 본은 그대로 들고 있는다.
         private func detachTerrain(from mapView: MKMapView) {
-            if let terrainOverlay { mapView.removeOverlay(terrainOverlay) }
-            terrainOverlay = nil
+            mapView.removeOverlays(Array(terrainOverlays.values))
+            terrainOverlays.removeAll()
         }
 
         // MARK: 점
 
+        /// 지난번에 받은 칸 배열의 자리. 같은 배열이 다시 오면 칸 수만 개를 훑지 않고 넘긴다 —
+        /// 배율 눈금이 바뀌는 것처럼 지도와 상관없는 일로도 화면이 자주 다시 맞춰지기 때문이다.
+        /// 배열을 쥐고 있어야 그 자리가 다른 배열에 다시 쓰이지 않는다 (자리만 견주면 헷갈린다).
+        private var lastCells: [HeatCell] = []
+
         func syncDots(on mapView: MKMapView, cells: [HeatCell]) {
+            if dotSignature != nil, !cells.isEmpty, cells.count == lastCells.count,
+               cells.withUnsafeBufferPointer({ $0.baseAddress }) == lastCells.withUnsafeBufferPointer({ $0.baseAddress }) {
+                return
+            }
+            lastCells = cells
             // 마지막으로 밟은 때까지 지문에 넣는다. 같은 칸을 다시 밟으면 칸 수도 통과 수도
             // 그대로인 채 빛깔만 바뀌는 날이 있는데, 그것까지 봐야 다시 그린다.
             let latest = cells.map(\.lastVisit).max() ?? .distantPast
@@ -429,6 +496,7 @@ struct AtlasMapView: UIViewRepresentable {
             guard signature != dotSignature else { return }
             dotSignature = signature
             syncWalked(on: mapView, cells: cells)
+            findNeighborhood(from: cells, on: mapView)
 
             if let dotOverlay { mapView.removeOverlay(dotOverlay) }
             dotOverlay = nil
@@ -439,20 +507,67 @@ struct AtlasMapView: UIViewRepresentable {
             mapView.addOverlay(dots, level: .aboveLabels)
         }
 
+        // MARK: 내 동네
+
+        func syncNeighborhood(on mapView: MKMapView, shows: Bool) {
+            guard shows != showsNeighborhood else { return }
+            showsNeighborhood = shows
+            placeNeighborhood(on: mapView)
+        }
+
+        /// 걸은 자리가 바뀌면 테두리를 다시 뜬다. 칸을 훑는 일이라 뒤쪽에서 한다.
+        private func findNeighborhood(from cells: [HeatCell], on mapView: MKMapView) {
+            neighborhoodGeneration += 1
+            let generation = neighborhoodGeneration
+            let points = cells.map { MKMapPoint($0.center) }
+            DispatchQueue.global(qos: .utility).async { [weak self, weak mapView] in
+                let areas = Neighborhood.outlines(of: points)
+                let spots = WalkSpots.spots(of: points)
+                DispatchQueue.main.async {
+                    guard let self, let mapView, generation == self.neighborhoodGeneration else { return }
+                    mapView.removeAnnotations(self.walkSpots)
+                    self.walkSpots = spots
+                    if self.isFarAway { mapView.addAnnotations(spots) }
+                    self.neighborhoodAreas = areas
+                    self.placeNeighborhood(on: mapView)
+                }
+            }
+        }
+
+        private func placeNeighborhood(on mapView: MKMapView) {
+            if let neighborhoodOverlay { mapView.removeOverlay(neighborhoodOverlay) }
+            neighborhoodOverlay = nil
+            guard showsNeighborhood, !neighborhoodAreas.isEmpty else { return }
+            let overlay = NeighborhoodOverlay(areas: neighborhoodAreas)
+            neighborhoodOverlay = overlay
+            // 발자국 점 바로 밑 — 점이 선에 가리지 않게
+            if let dotOverlay {
+                mapView.insertOverlay(overlay, below: dotOverlay)
+            } else {
+                mapView.addOverlay(overlay, level: .aboveLabels)
+            }
+            redrawSoon(overlay, on: mapView)
+        }
+
         // MARK: 그리기
 
         func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
             if let dots = overlay as? DotGridOverlay {
                 return DotGridRenderer(overlay: dots, traits: mapView.traitCollection)
             }
+            if let neighborhood = overlay as? NeighborhoodOverlay {
+                return NeighborhoodRenderer(overlay: neighborhood, traits: mapView.traitCollection)
+            }
             if let terrain = overlay as? TerrainOverlay {
                 let renderer = TerrainRenderer(overlay: terrain, traits: mapView.traitCollection, skin: terrainSkin)
                 renderer.walked.current = walkedGround
+                renderer.alpha = coverAlpha
                 return renderer
             }
             if let paper = overlay as? MKPolygon, terrainSkin == .picture {
                 let renderer = PicturePaperRenderer(overlay: paper, traits: mapView.traitCollection)
                 renderer.walked.current = walkedGround
+                renderer.alpha = coverAlpha
                 return renderer
             }
             if let paper = overlay as? MKPolygon {
@@ -460,6 +575,7 @@ struct AtlasMapView: UIViewRepresentable {
                 renderer.fillColor = InkStyle.paper.resolvedColor(with: mapView.traitCollection)
                 renderer.strokeColor = .clear
                 renderer.lineWidth = 0
+                renderer.alpha = coverAlpha
                 return renderer
             }
             return MKOverlayRenderer(overlay: overlay)
@@ -518,10 +634,62 @@ struct AtlasMapView: UIViewRepresentable {
         }
 
         func mapView(_ mapView: MKMapView, viewFor annotation: any MKAnnotation) -> MKAnnotationView? {
+            if annotation is WalkSpotAnnotation
+                || (annotation as? MKClusterAnnotation)?.memberAnnotations.first is WalkSpotAnnotation {
+                return mapView.dequeueReusableAnnotationView(
+                    withIdentifier: WalkSpotView.reuseIdentifier,
+                    for: annotation
+                )
+            }
             guard annotation is StampAnnotation else { return nil }
-            return mapView.dequeueReusableAnnotationView(
+            let view = mapView.dequeueReusableAnnotationView(
                 withIdentifier: StampAnnotationView.reuseIdentifier,
                 for: annotation
+            )
+            (view as? StampAnnotationView)?.stickerScale = stickerScale(on: mapView)
+            return view
+        }
+
+        /// 확대·축소하는 동안 스티커가 손가락을 따라 커지고 작아진다
+        func mapViewDidChangeVisibleRegion(_ mapView: MKMapView) {
+            let scale = stickerScale(on: mapView)
+            guard abs(scale - lastStickerScale) > 0.01 else { return }
+            lastStickerScale = scale
+            for annotation in mapView.annotations where annotation is StampAnnotation {
+                (mapView.view(for: annotation) as? StampAnnotationView)?.stickerScale = scale
+            }
+        }
+
+        private var lastStickerScale: CGFloat = 1
+
+        private func stickerScale(on mapView: MKMapView) -> CGFloat {
+            StampSeal.stickerScale(metersPerPoint: metersPerPoint(on: mapView))
+        }
+
+        /// 화면 1pt가 덮는 땅(m)
+        private func metersPerPoint(on mapView: MKMapView) -> Double {
+            let visible = mapView.visibleMapRect
+            guard mapView.bounds.width > 0, visible.size.width > 0 else { return 0 }
+            let center = MKMapPoint(x: visible.midX, y: visible.midY).coordinate
+            return visible.size.width / Double(mapView.bounds.width)
+                / MKMapPointsPerMeterAtLatitude(center.latitude)
+        }
+
+        /// 무리들이 한눈에 들어오게 옮긴다. 무리 하나면 동네가 보일 만큼은 들어간다.
+        private func fly(to spots: [WalkSpotAnnotation], on mapView: MKMapView) {
+            var rect = spots.reduce(MKMapRect.null) { $0.union($1.area) }
+            guard !rect.isNull else { return }
+            let perMeter = MKMapPointsPerMeterAtLatitude(MKMapPoint(x: rect.midX, y: rect.midY).coordinate.latitude)
+            let least = 1_500 * perMeter
+            if rect.size.width < least || rect.size.height < least {
+                let grow = max(least - rect.size.width, least - rect.size.height, 0) / 2
+                rect = rect.insetBy(dx: -grow, dy: -grow)
+            }
+            mapView.setUserTrackingMode(.none, animated: false)
+            mapView.setVisibleMapRect(
+                rect,
+                edgePadding: UIEdgeInsets(top: 120, left: 60, bottom: 140, right: 60),
+                animated: true
             )
         }
 
@@ -535,6 +703,20 @@ struct AtlasMapView: UIViewRepresentable {
         }
 
         func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
+            // 발자국 표지를 누르면 그 무리가 한눈에 들어오게 날아간다
+            let spots: [WalkSpotAnnotation]
+            if let spot = view.annotation as? WalkSpotAnnotation {
+                spots = [spot]
+            } else if let cluster = view.annotation as? MKClusterAnnotation {
+                spots = cluster.memberAnnotations.compactMap { $0 as? WalkSpotAnnotation }
+            } else {
+                spots = []
+            }
+            if !spots.isEmpty, let annotation = view.annotation {
+                mapView.deselectAnnotation(annotation, animated: false)
+                fly(to: spots, on: mapView)
+                return
+            }
             guard let annotation = view.annotation as? StampAnnotation else { return }
             // 고른 표시를 남겨 두면 다음에 같은 걸 눌러도 반응하지 않는다
             mapView.deselectAnnotation(annotation, animated: false)
