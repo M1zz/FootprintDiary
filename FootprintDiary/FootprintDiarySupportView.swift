@@ -120,6 +120,7 @@ struct FootprintDiarySupportView: View {
 
                 Section {
                     LeeoSupportSection<FootprintDiarySpec>()
+                    NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
                     if devMode {
                         NavigationLink {
                             LeeoUsageStatsView<FootprintDiarySpec>()
