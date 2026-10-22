@@ -68,6 +68,12 @@
             "state" : "translated",
             "value" : "%@ · Pegadas %lld/%lld"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Следы %lld/%lld"
+          }
         }
       }
     },
@@ -137,6 +143,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ a pé em %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пройдено %@ за %@"
           }
         }
       }
@@ -208,6 +220,12 @@
             "state" : "translated",
             "value" : "%@ a pé"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пройдено %@"
+          }
         }
       }
     },
@@ -277,6 +295,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ coletado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Собрано: %@"
           }
         }
       }
@@ -348,6 +372,12 @@
             "state" : "translated",
             "value" : "Símbolo de %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Символ: %@"
+          }
         }
       }
     },
@@ -417,6 +447,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, %lld tipos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, видов: %lld"
           }
         }
       }
@@ -488,6 +524,12 @@
             "state" : "translated",
             "value" : "%@×"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×%@"
+          }
         }
       }
     },
@@ -557,6 +599,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Na direção %@ você caminhou menos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Меньше всего вы ходили в направлении: %@"
           }
         }
       }
@@ -628,6 +676,12 @@
             "state" : "translated",
             "value" : "A %lld m de distância"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "До места %lld м"
+          }
         }
       }
     },
@@ -697,6 +751,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A menos de %lld m o obturador abre"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В пределах %lld м затвор открывается"
           }
         }
       }
@@ -768,6 +828,12 @@
             "state" : "translated",
             "value" : "%lld tipos"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Видов: %lld"
+          }
         }
       }
     },
@@ -837,6 +903,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld lugares"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Мест: %lld"
           }
         }
       }
@@ -908,6 +980,12 @@
             "state" : "translated",
             "value" : "%lld vezes"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld раз"
+          }
         }
       }
     },
@@ -977,6 +1055,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saiu %lld vezes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выходов: %lld"
           }
         }
       }
@@ -1048,6 +1132,12 @@
             "state" : "translated",
             "value" : "Descoberta n.º %lld"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открытие № %lld"
+          }
         }
       }
     },
@@ -1117,6 +1207,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ir com RA"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дойти с AR"
           }
         }
       }
@@ -1189,6 +1285,12 @@
             "state" : "translated",
             "value" : "Bloqueio com Face ID"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Блокировка Face ID"
+          }
         }
       }
     },
@@ -1259,6 +1361,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bloqueie o app com Face ID ou Touch ID para proteger onde você andou e seu diário."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заблокируйте приложение с помощью Face ID или Touch ID, чтобы защитить свои маршруты и дневник."
           }
         }
       }
@@ -1331,6 +1439,12 @@
             "state" : "translated",
             "value" : "Pergunte à Siri quanto você caminhou hoje."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Спросите Siri, сколько вы сегодня прошли."
+          }
         }
       }
     },
@@ -1401,6 +1515,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri e Atalhos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri и Команды"
           }
         }
       }
@@ -1473,6 +1593,12 @@
             "state" : "translated",
             "value" : "O VoiceOver lê todos os botões e detalhes do seu mapa e dos registros, na ordem certa."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver зачитывает все кнопки и подробности карты и записей без пропусков и в правильном порядке."
+          }
         }
       }
     },
@@ -1544,6 +1670,12 @@
             "state" : "translated",
             "value" : "VoiceOver mais confortável"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver удобнее"
+          }
         }
       }
     },
@@ -1613,6 +1745,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nenhum carimbo corresponde a «%@»"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет штампов, подходящих к «%@»"
           }
         }
       }
@@ -1684,6 +1822,12 @@
             "state" : "translated",
             "value" : "Era um lugar aonde você queria ir. Marcar como visitado?"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы собирались сюда. Отметить как посещённое?"
+          }
         }
       }
     },
@@ -1753,6 +1897,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ainda não visitado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ещё не посещено"
           }
         }
       }
@@ -1824,6 +1974,12 @@
             "state" : "translated",
             "value" : "Para visitar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хочу посетить"
+          }
         }
       }
     },
@@ -1893,6 +2049,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Um lugar carimbado como para visitar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Место, отмеченное штампом как «хочу посетить»"
           }
         }
       }
@@ -1964,6 +2126,12 @@
             "state" : "translated",
             "value" : "Motivo mais frequente: %@ (%lld vezes). %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чаще всего отбрасывалось из-за: %@ (%lld раз). %@"
+          }
         }
       }
     },
@@ -2033,6 +2201,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Categoria"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Категория"
           }
         }
       }
@@ -2104,6 +2278,12 @@
             "state" : "translated",
             "value" : "Bússola dos pioneiros"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Компас первопроходца"
+          }
         }
       }
     },
@@ -2173,6 +2353,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pular"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пропустить"
           }
         }
       }
@@ -2244,6 +2430,12 @@
             "state" : "translated",
             "value" : "Registro de caminhadas"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запись прогулок"
+          }
         }
       }
     },
@@ -2313,6 +2505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O registro de caminhadas está desligado. Mesmo caminhando, não ficará rastro."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Запись прогулок выключена. Даже если вы идёте, след не останется."
           }
         }
       }
@@ -2384,6 +2582,12 @@
             "state" : "translated",
             "value" : "Os carimbos colocados ao caminhar se acumulam aqui em ordem cronológica.\nLugares onde você fica parado são guardados sozinhos, sem carimbo."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Штампы, поставленные на прогулке, накапливаются здесь по порядку времени.\nМеста, где вы задержались, сохраняются сами, даже без штампа."
+          }
         }
       }
     },
@@ -2453,6 +2657,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lugares alcançados a pé"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Места, куда дошли пешком"
           }
         }
       }
@@ -2524,6 +2734,12 @@
             "state" : "translated",
             "value" : "Ao chegar a pé, você poderá tirar uma foto no local"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дойдя пешком, вы сможете сделать там фото"
+          }
         }
       }
     },
@@ -2594,6 +2810,12 @@
             "state" : "translated",
             "value" : "Se você caminhou e nenhuma linha apareceu no mapa, aqui dá para ver o motivo."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если вы прошли путь, а линия на карте не появилась, здесь можно узнать причину."
+          }
         }
       }
     },
@@ -2663,6 +2885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Conforme você caminha, os caminhos percorridos vão se empilhando em ordem."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока вы идёте, пройденные пути накладываются друг на друга по порядку."
           }
         }
       }
@@ -2735,6 +2963,12 @@
             "state" : "translated",
             "value" : "Salve seus caminhos e seu diário em um arquivo e recupere-os depois."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохраняйте пути и дневник в файл и восстанавливайте их позже."
+          }
         }
       }
     },
@@ -2804,6 +3038,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No mapa ficam só os caminhos percorridos e os carimbos colocados no período escolhido."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На карте остаются только пройденные пути и штампы за выбранный период."
           }
         }
       }
@@ -2875,6 +3115,12 @@
             "state" : "translated",
             "value" : "Sem interesse"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не интересно"
+          }
         }
       }
     },
@@ -2944,6 +3190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tudo bem"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не нужно"
           }
         }
       }
@@ -3015,6 +3267,12 @@
             "state" : "translated",
             "value" : "Ver sendo desenhado"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смотреть, как рисуется"
+          }
         }
       }
     },
@@ -3084,6 +3342,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mapa ilustrado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Карта-рисунок"
           }
         }
       }
@@ -3156,6 +3420,12 @@
             "state" : "translated",
             "value" : "Mesmo com texto maior, as telas se reorganizam direitinho, sem cortar."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Даже при увеличенном шрифте экраны аккуратно перестраиваются, а не обрезаются."
+          }
         }
       }
     },
@@ -3225,6 +3495,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ver por período"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смотреть за период"
           }
         }
       }
@@ -3296,6 +3572,12 @@
             "state" : "translated",
             "value" : "Modo de registro"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Режим записи"
+          }
         }
       }
     },
@@ -3365,6 +3647,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estado do registro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Состояние записи"
           }
         }
       }
@@ -3436,6 +3724,12 @@
             "state" : "translated",
             "value" : "Ver estado do registro"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Посмотреть состояние записи"
+          }
         }
       }
     },
@@ -3505,6 +3799,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voltar à imagem padrão"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вернуть картинку по умолчанию"
           }
         }
       }
@@ -3576,6 +3876,12 @@
             "state" : "translated",
             "value" : "As telas desativadas podem ser abertas a qualquer momento em «Ver tudo junto», acima. Os botões de carimbo e de ajustes sempre aparecem."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выключенные экраны всегда можно открыть через «Смотреть всё вместе» выше. Кнопки штампов и настроек видны всегда."
+          }
         }
       }
     },
@@ -3645,6 +3951,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fim"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Конец"
           }
         }
       }
@@ -3716,6 +4028,12 @@
             "state" : "translated",
             "value" : "Depois"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Позже"
+          }
         }
       }
     },
@@ -3785,6 +4103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fica guardado apenas no seu iCloud pessoal. Ninguém mais pode ver."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Хранится только в вашем личном iCloud. Другие люди этого не видят."
           }
         }
       }
@@ -3857,6 +4181,12 @@
             "state" : "translated",
             "value" : "Apagar todos os meus registros de uma vez"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стереть все мои записи разом"
+          }
         }
       }
     },
@@ -3926,6 +4256,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Contorno do meu bairro"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Контур моего района"
           }
         }
       }
@@ -3997,6 +4333,12 @@
             "state" : "translated",
             "value" : "Meu mapa"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Моя карта"
+          }
         }
       }
     },
@@ -4066,6 +4408,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abrir meu mapa"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть мою карту"
           }
         }
       }
@@ -4137,6 +4485,12 @@
             "state" : "translated",
             "value" : "Veja seu mapa sendo desenhado"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Как рисуется ваша карта"
+          }
         }
       }
     },
@@ -4206,6 +4560,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prévia do desenho do seu mapa"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Предпросмотр рисования вашей карты"
           }
         }
       }
@@ -4277,6 +4637,12 @@
             "state" : "translated",
             "value" : "Caminhos que desenhei"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пути, которые я нарисовал"
+          }
         }
       }
     },
@@ -4346,6 +4712,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lugares que carimbei"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Места, где я ставил штампы"
           }
         }
       }
@@ -4417,6 +4789,12 @@
             "state" : "translated",
             "value" : "Toque para ver o mapa por transparência"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите, чтобы увидеть карту сквозь бумагу"
+          }
         }
       }
     },
@@ -4486,6 +4864,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toque para carimbar sua posição atual"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите, чтобы поставить штамп на текущем месте"
           }
         }
       }
@@ -4557,6 +4941,12 @@
             "state" : "translated",
             "value" : "Confirmar se você esteve em %lld lugares"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нужно подтвердить, были ли вы в %lld местах"
+          }
         }
       }
     },
@@ -4626,6 +5016,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visitas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Посещений"
           }
         }
       }
@@ -4697,6 +5093,12 @@
             "state" : "translated",
             "value" : "Eu fui"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Был там"
+          }
         }
       }
     },
@@ -4766,6 +5168,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toque de novo para voltar ao papel. Útil para ver onde você está."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите ещё раз, чтобы вернуться к бумаге. Удобно, когда нужно понять, где вы."
           }
         }
       }
@@ -4837,6 +5245,12 @@
             "state" : "translated",
             "value" : "Tirar de novo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Переснять"
+          }
         }
       }
     },
@@ -4906,6 +5320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Um lugar a que você voltou"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Место, куда вы вернулись"
           }
         }
       }
@@ -4977,6 +5397,12 @@
             "state" : "translated",
             "value" : "Este é um lugar frequente"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Это место отмечено как постоянное"
+          }
         }
       }
     },
@@ -5046,6 +5472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fechar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Закрыть"
           }
         }
       }
@@ -5118,6 +5550,12 @@
             "state" : "translated",
             "value" : "Mesmo com mais contraste ou dificuldade para distinguir cores, você reconhece os caminhos e carimbos do mapa."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Даже при повышенной контрастности или трудностях с различением цветов вы разглядите пути и штампы на карте."
+          }
         }
       }
     },
@@ -5188,6 +5626,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Use o app em mais idiomas."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пользуйтесь приложением на большем числе языков."
           }
         }
       }
@@ -5260,6 +5704,12 @@
             "state" : "translated",
             "value" : "Mais idiomas"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Больше языков"
+          }
         }
       }
     },
@@ -5329,6 +5779,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Acrescente algo (opcional)"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавьте пару слов (необязательно)"
           }
         }
       }
@@ -5400,6 +5856,12 @@
             "state" : "translated",
             "value" : "Na coleção você vê as pegadas reunidas até agora"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В коллекции можно посмотреть собранные до сих пор следы"
+          }
         }
       }
     },
@@ -5469,6 +5931,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Não é possível desfazer."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Это нельзя отменить."
           }
         }
       }
@@ -5540,6 +6008,12 @@
             "state" : "translated",
             "value" : "Toque para pausar ou continuar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нажмите, чтобы поставить на паузу или продолжить"
+          }
         }
       }
     },
@@ -5609,6 +6083,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld lugares visitados"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Посещено мест: %lld"
           }
         }
       }
@@ -5680,6 +6160,12 @@
             "state" : "translated",
             "value" : "Não foi encontrado nada nítido e o fundo não pôde ser removido. Chegue mais perto do objeto e tire de novo."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чётких объектов не найдено, поэтому фон убрать не удалось. Подойдите ближе к предмету и снимите ещё раз."
+          }
         }
       }
     },
@@ -5749,6 +6235,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Última visita"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Последнее посещение"
           }
         }
       }
@@ -5820,6 +6312,12 @@
             "state" : "translated",
             "value" : "Mapa de tinta"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Карта тушью"
+          }
         }
       }
     },
@@ -5889,6 +6387,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nota"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Заметка"
           }
         }
       }
@@ -5960,6 +6464,12 @@
             "state" : "translated",
             "value" : "Ver tudo junto"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смотреть всё вместе"
+          }
         }
       }
     },
@@ -6029,6 +6539,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Colocando água e montanhas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Размещаем воду и горы"
           }
         }
       }
@@ -6100,6 +6616,12 @@
             "state" : "translated",
             "value" : "Não descoberto"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не открыто"
+          }
         }
       }
     },
@@ -6169,6 +6691,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pegadas"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Следы"
           }
         }
       }
@@ -6240,6 +6768,12 @@
             "state" : "translated",
             "value" : "Timelapse das pegadas"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Таймлапс следов"
+          }
         }
       }
     },
@@ -6310,6 +6844,12 @@
             "state" : "translated",
             "value" : "Terreno revelado: %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открытая территория: %@"
+          }
         }
       }
     },
@@ -6379,6 +6919,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mostrar o mapa de fundo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать карту под бумагой"
           }
         }
       }
@@ -6451,6 +6997,12 @@
             "state" : "translated",
             "value" : "Backup e exportação"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Резервное копирование и экспорт"
+          }
         }
       }
     },
@@ -6520,6 +7072,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Motivos do descarte"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Причины отбраковки"
           }
         }
       }
@@ -6591,6 +7149,12 @@
             "state" : "translated",
             "value" : "Versão %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Версия %@"
+          }
         }
       }
     },
@@ -6660,6 +7224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visualização"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вид"
           }
         }
       }
@@ -6732,6 +7302,12 @@
             "state" : "translated",
             "value" : "Cores e contraste confortáveis"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удобные цвета и контраст"
+          }
         }
       }
     },
@@ -6801,6 +7377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Caminhos exibidos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показываемые пути"
           }
         }
       }
@@ -6872,6 +7454,12 @@
             "state" : "translated",
             "value" : "Uma folha em branco sozinha não sabe o que é o quê.\nO lugar onde você está agora vira o **primeiro ponto de referência**."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чистый лист сам не знает, что где находится.\nВаше нынешнее местоположение станет **первой точкой отсчёта**."
+          }
         }
       }
     },
@@ -6941,6 +7529,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Começando de uma folha em branco"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начинаем с чистого листа"
           }
         }
       }
@@ -7012,6 +7606,12 @@
             "state" : "translated",
             "value" : "Estatísticas de uso (desenvolvedor)"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Статистика использования (для разработчика)"
+          }
         }
       }
     },
@@ -7081,6 +7681,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotos"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фото"
           }
         }
       }
@@ -7152,6 +7758,12 @@
             "state" : "translated",
             "value" : "Excluir foto"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить фото"
+          }
         }
       }
     },
@@ -7221,6 +7833,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tirar foto"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сделать снимок"
           }
         }
       }
@@ -7292,6 +7910,12 @@
             "state" : "translated",
             "value" : "Adicionar foto"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить фото"
+          }
         }
       }
     },
@@ -7361,6 +7985,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inserindo a foto"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавляем фото"
           }
         }
       }
@@ -7432,6 +8062,12 @@
             "state" : "translated",
             "value" : "Não foi possível salvar a foto"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не удалось сохранить фото"
+          }
         }
       }
     },
@@ -7501,6 +8137,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Excluir"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить"
           }
         }
       }
@@ -7573,6 +8215,12 @@
             "state" : "translated",
             "value" : "Lembrete de caminhada"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Напоминание о прогулке"
+          }
         }
       }
     },
@@ -7642,6 +8290,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Os %lld lugares recém-alcançados são marcados no caminho"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Новых мест, куда вы дошли: %lld — они отметятся на маршруте"
           }
         }
       }
@@ -7713,6 +8367,12 @@
             "state" : "translated",
             "value" : "Novidades"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что нового"
+          }
         }
       }
     },
@@ -7782,6 +8442,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ajustes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Настройки"
           }
         }
       }
@@ -7853,6 +8519,12 @@
             "state" : "translated",
             "value" : "Ative a câmera em Ajustes > 벅뚜벅뚜."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включите камеру в Настройки > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -7922,6 +8594,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abrir Ajustes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Открыть настройки"
           }
         }
       }
@@ -7993,6 +8671,12 @@
             "state" : "translated",
             "value" : "Ativar permissões nos Ajustes"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включить разрешения в настройках"
+          }
         }
       }
     },
@@ -8062,6 +8746,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Também dá para abrir nos Ajustes"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Можно открыть и в настройках"
           }
         }
       }
@@ -8133,6 +8823,12 @@
             "state" : "translated",
             "value" : "Zerar contagem"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сбросить подсчёт"
+          }
         }
       }
     },
@@ -8202,6 +8898,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "O mundo já foi desenhado por outros mapas.\nAqui fica **só onde você passou com os próprios pés**."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Весь мир уже нарисовали другие карты.\nЗдесь останутся **только места, где вы прошли своими ногами**."
           }
         }
       }
@@ -8273,6 +8975,12 @@
             "state" : "translated",
             "value" : "Spots coletados"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Собранные споты"
+          }
         }
       }
     },
@@ -8342,6 +9050,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Carimbo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Штамп"
           }
         }
       }
@@ -8413,6 +9127,12 @@
             "state" : "translated",
             "value" : "Início"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начало"
+          }
         }
       }
     },
@@ -8482,6 +9202,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Começar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Начать"
           }
         }
       }
@@ -8553,6 +9279,12 @@
             "state" : "translated",
             "value" : "Símbolo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Символ"
+          }
         }
       }
     },
@@ -8622,6 +9354,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ampliar símbolo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Увеличить символ"
           }
         }
       }
@@ -8694,6 +9432,12 @@
             "state" : "translated",
             "value" : "Continuar um diário que ficou pela metade"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дописать начатый дневник"
+          }
         }
       }
     },
@@ -8763,6 +9507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deslize para passar como cartas e toque duas vezes para ampliar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смахивайте, как карточки, и дважды нажмите, чтобы увеличить"
           }
         }
       }
@@ -8834,6 +9584,12 @@
             "state" : "translated",
             "value" : "Não"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Нет"
+          }
         }
       }
     },
@@ -8900,6 +9656,12 @@
           }
         },
         "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "ru" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -8974,6 +9736,12 @@
             "state" : "translated",
             "value" : "Ainda não"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пока нет"
+          }
         }
       }
     },
@@ -9043,6 +9811,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ainda não visitados"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ещё не посещены"
           }
         }
       }
@@ -9114,6 +9888,12 @@
             "state" : "translated",
             "value" : "Você ainda não esteve aqui. Ele fica como «Para visitar» e vira um lugar visitado quando você chegar."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы здесь ещё не были. Место останется в «Хочу посетить» и станет посещённым, когда вы дойдёте."
+          }
         }
       }
     },
@@ -9183,6 +9963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ainda não há pontos descartados"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отброшенных точек пока нет"
           }
         }
       }
@@ -9254,6 +10040,12 @@
             "state" : "translated",
             "value" : "Ainda não"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ещё нет"
+          }
         }
       }
     },
@@ -9323,6 +10115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guia"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подсказки"
           }
         }
       }
@@ -9395,6 +10193,12 @@
             "state" : "translated",
             "value" : "Você também pode usar o app em inglês."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Приложением можно пользоваться и на английском."
+          }
         }
       }
     },
@@ -9464,6 +10268,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abra o app uma vez"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Откройте приложение один раз"
           }
         }
       }
@@ -9535,6 +10345,12 @@
             "state" : "translated",
             "value" : "Qual dia"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Какой день"
+          }
         }
       }
     },
@@ -9604,6 +10420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Em qualquer caso, todas as posições recebidas são salvas. Só os pontos pouco precisos não são desenhados no mapa."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В любом случае все полученные координаты сохраняются. Просто неточные точки не рисуются на карте."
           }
         }
       }
@@ -9675,6 +10497,12 @@
             "state" : "translated",
             "value" : "Só se conta, de forma anônima, quais telas são usadas. Os lugares por onde você anda e o texto do diário não são enviados."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Анонимно считается только то, какие экраны используются. Места, где вы ходили, и записи дневника не отправляются."
+          }
         }
       }
     },
@@ -9744,6 +10572,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Você ficou aqui %@"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы пробыли здесь %@"
           }
         }
       }
@@ -9815,6 +10649,12 @@
             "state" : "translated",
             "value" : "Guardar este lugar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Оставить это место"
+          }
         }
       }
     },
@@ -9884,6 +10724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Marcar aqui"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отметить здесь"
           }
         }
       }
@@ -9955,6 +10801,12 @@
             "state" : "translated",
             "value" : "Tudo bem não registrar este lugar?"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Не записывать это место?"
+          }
         }
       }
     },
@@ -10024,6 +10876,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Onde era aqui?"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Что это было за место?"
           }
         }
       }
@@ -10095,6 +10953,12 @@
             "state" : "translated",
             "value" : "Exportar como vídeo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экспорт в видео"
+          }
         }
       }
     },
@@ -10164,6 +11028,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Criando o vídeo %lld%%"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Создание видео %lld%%"
           }
         }
       }
@@ -10236,6 +11106,12 @@
             "state" : "translated",
             "value" : "Suporte a inglês"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддержка английского"
+          }
         }
       }
     },
@@ -10305,6 +11181,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ex.: casa, trabalho, cafeteria de sempre"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Например: дом, работа, любимое кафе"
           }
         }
       }
@@ -10376,6 +11258,12 @@
             "state" : "translated",
             "value" : "Hoje %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сегодня %@"
+          }
         }
       }
     },
@@ -10445,6 +11333,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Caminho de hoje"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Путь за сегодня"
           }
         }
       }
@@ -10516,6 +11410,12 @@
             "state" : "translated",
             "value" : "Uma foto foi adicionada ao diário de hoje"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Фото добавлено в сегодняшний дневник"
+          }
         }
       }
     },
@@ -10585,6 +11485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Reproduzir hoje"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Воспроизвести сегодня"
           }
         }
       }
@@ -10656,6 +11562,12 @@
             "state" : "translated",
             "value" : "Hoje você ainda não visitou nenhum lugar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сегодня вы ещё нигде не были"
+          }
         }
       }
     },
@@ -10725,6 +11637,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hoje você ainda não parou em nenhum lugar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сегодня остановок пока не было"
           }
         }
       }
@@ -10796,6 +11714,12 @@
             "state" : "translated",
             "value" : "Onde você explorou hoje?"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Где вы сегодня побывали?"
+          }
         }
       }
     },
@@ -10865,6 +11789,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pegadas de hoje"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Следы сегодня"
           }
         }
       }
@@ -10936,6 +11866,12 @@
             "state" : "translated",
             "value" : "Exploração de hoje"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Исследования сегодня"
+          }
         }
       }
     },
@@ -11005,6 +11941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Concluir"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово"
           }
         }
       }
@@ -11077,6 +12019,12 @@
             "state" : "translated",
             "value" : "Reduzir movimento"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Уменьшение движения"
+          }
         }
       }
     },
@@ -11147,6 +12095,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Com Reduzir Movimento ativado, o mapa e os efeitos de tela ficam mais calmos."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "С включённым «Уменьшением движения» карта и эффекты на экране становятся спокойнее."
           }
         }
       }
@@ -11219,6 +12173,12 @@
             "state" : "translated",
             "value" : "Se quiser, você pode apagar no app todos os seus caminhos e o diário."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "При желании можно стереть в приложении все пройденные пути и дневник."
+          }
         }
       }
     },
@@ -11288,6 +12248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Com a localização em «Sempre» e Movimento e Condicionamento ativados, suas caminhadas são registradas sem abrir o app."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если выбрать для геопозиции «Всегда» и включить «Движение и фитнес», прогулки записываются, даже когда приложение закрыто."
           }
         }
       }
@@ -11359,6 +12325,12 @@
             "state" : "translated",
             "value" : "Não há pegadas neste período"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "За этот период нет следов"
+          }
         }
       }
     },
@@ -11428,6 +12400,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ver este período"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Смотреть этот период"
           }
         }
       }
@@ -11499,6 +12477,12 @@
             "state" : "translated",
             "value" : "Lugares fotografados neste dia"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Места, снятые в этот день"
+          }
         }
       }
     },
@@ -11568,6 +12552,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nenhum passo foi registrado neste dia"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В этот день шаги не записаны"
           }
         }
       }
@@ -11639,6 +12629,12 @@
             "state" : "translated",
             "value" : "Não há pegadas neste dia"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В этот день нет следов"
+          }
         }
       }
     },
@@ -11708,6 +12704,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Excluir este carimbo"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Удалить этот штамп"
           }
         }
       }
@@ -11779,6 +12781,12 @@
             "state" : "translated",
             "value" : "Usar este símbolo"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Использовать этот символ"
+          }
         }
       }
     },
@@ -11848,6 +12856,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apagar as pegadas deste lugar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стереть следы в этом месте"
           }
         }
       }
@@ -11919,6 +12933,12 @@
             "state" : "translated",
             "value" : "Nome deste lugar (ex.: trabalho, cafeteria de sempre)"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название этого места (например: работа, любимое кафе)"
+          }
         }
       }
     },
@@ -11988,6 +13008,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coloque o primeiro carimbo nesta folha"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поставьте первый штамп на этот лист"
           }
         }
       }
@@ -12059,6 +13085,12 @@
             "state" : "translated",
             "value" : "Nome"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Название"
+          }
         }
       }
     },
@@ -12128,6 +13160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dar um nome"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дать название"
           }
         }
       }
@@ -12199,6 +13237,12 @@
             "state" : "translated",
             "value" : "Adicionar imagem"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Добавить изображение"
+          }
         }
       }
     },
@@ -12269,6 +13313,12 @@
             "state" : "translated",
             "value" : "Agora vá caminhar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "А теперь отправляйтесь гулять"
+          }
         }
       }
     },
@@ -12338,6 +13388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Agora vá caminhar.\nOs lugares por onde você passa são marcados nesta folha, um ponto de cada vez."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "А теперь отправляйтесь гулять.\nМеста, где вы проходите, ложатся на этот лист точка за точкой."
           }
         }
       }
@@ -12410,6 +13466,12 @@
             "state" : "translated",
             "value" : "Se o app fechar enquanto você escreve o diário, o que já foi escrito continua lá."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если приложение закроется во время записи дневника, написанное сохранится."
+          }
         }
       }
     },
@@ -12479,6 +13541,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diário"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Журнал"
           }
         }
       }
@@ -12550,6 +13618,12 @@
             "state" : "translated",
             "value" : "Quando **chegar a um lugar que você frequenta, carimbe lá mais uma vez**.\nCom duas referências, até uma folha em branco encontra a direção."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Когда **придёте в место, где бываете часто, поставьте там штамп ещё раз**.\nС двумя точками отсчёта даже чистый лист находит направление."
+          }
         }
       }
     },
@@ -12619,6 +13693,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tente de novo daqui a pouco, ou mantenha o mapa pressionado para carimbar onde quiser."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Попробуйте чуть позже или нажмите на карту и удерживайте, чтобы поставить штамп где угодно."
           }
         }
       }
@@ -12690,6 +13770,12 @@
             "state" : "translated",
             "value" : "Salvar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Сохранить"
+          }
         }
       }
     },
@@ -12759,6 +13845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voltar a todo o período"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вернуться ко всему периоду"
           }
         }
       }
@@ -12830,6 +13922,12 @@
             "state" : "translated",
             "value" : "Contagem de pontos"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Подсчёт точек"
+          }
         }
       }
     },
@@ -12899,6 +13997,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pontos com pouca precisão também são salvos. Por ora não são desenhados no mapa, mas poderão ser usados quando a correção melhorar."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Точки с низкой точностью тоже сохраняются. Сейчас они не рисуются на карте, но пригодятся, когда коррекция улучшится."
           }
         }
       }
@@ -12970,6 +14074,12 @@
             "state" : "translated",
             "value" : "Estado atual"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Текущее состояние"
+          }
         }
       }
     },
@@ -13039,6 +14149,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Procurando sua localização"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ищем ваше местоположение"
           }
         }
       }
@@ -13110,6 +14226,12 @@
             "state" : "translated",
             "value" : "Marcar este lugar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отметить это место"
+          }
         }
       }
     },
@@ -13179,6 +14301,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Carimbar onde você está"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поставить штамп на текущем месте"
           }
         }
       }
@@ -13250,6 +14378,12 @@
             "state" : "translated",
             "value" : "Carimbar aqui"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поставить штамп здесь"
+          }
         }
       }
     },
@@ -13319,6 +14453,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Os lugares por onde você passa são marcados nesta folha, um ponto de cada vez.\nCaminhos feitos de carro ou metrô não são desenhados."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Места, где вы проходите, ложатся на этот лист точка за точкой.\nПути, пройденные на машине или в метро, не рисуются."
           }
         }
       }
@@ -13390,6 +14530,12 @@
             "state" : "translated",
             "value" : "Escolha os botões do mapa nos Ajustes"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Кнопки карты выбираются в настройках"
+          }
         }
       }
     },
@@ -13459,6 +14605,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Estilo do mapa"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стиль карты"
           }
         }
       }
@@ -13530,6 +14682,12 @@
             "state" : "translated",
             "value" : "Escala do mapa. Uma barra equivale a %@"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Масштаб карты. Одно деление — %@"
+          }
         }
       }
     },
@@ -13599,6 +14757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Escolha quais botões flutuam no mapa e abra direto nos Ajustes as telas desativadas."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите, какие кнопки показывать на карте; выключенные экраны можно открыть прямо из настроек."
           }
         }
       }
@@ -13670,6 +14834,12 @@
             "state" : "translated",
             "value" : "Lugares carimbados com antecedência no mapa. Ao chegar, viram lugares visitados."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Места, отмеченные на карте заранее. Когда вы дойдёте, они станут посещёнными."
+          }
         }
       }
     },
@@ -13739,6 +14909,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mostrar no mapa"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показывать на карте"
           }
         }
       }
@@ -13810,6 +14986,12 @@
             "state" : "translated",
             "value" : "Ver no mapa"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Показать на карте"
+          }
         }
       }
     },
@@ -13879,6 +15061,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Assim aparece no mapa"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Так это выглядит на карте"
           }
         }
       }
@@ -13950,6 +15138,12 @@
             "state" : "translated",
             "value" : "Apagar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Стереть"
+          }
         }
       }
     },
@@ -14019,6 +15213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Suporte"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Поддержка"
           }
         }
       }
@@ -14090,6 +15290,12 @@
             "state" : "translated",
             "value" : "Escolha algo que sirva de referência, como casa ou trabalho."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Выберите что-нибудь, что может служить ориентиром, например дом или работу."
+          }
         }
       }
     },
@@ -14159,6 +15365,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Capturar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Снять"
           }
         }
       }
@@ -14230,6 +15442,12 @@
             "state" : "translated",
             "value" : "Carimbado em"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дата штампа"
+          }
         }
       }
     },
@@ -14299,6 +15517,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Carimbado!"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Готово"
           }
         }
       }
@@ -14370,6 +15594,12 @@
             "state" : "translated",
             "value" : "Caminhos feitos de carro ou metrô não são desenhados.\nSó caminhando surge um ponto de cada vez."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Пути, пройденные на машине или в метро, не рисуются.\nТолько ходьба оставляет точку за точкой."
+          }
         }
       }
     },
@@ -14439,6 +15669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Só o que está dentro da moldura fica; o fundo é apagado"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Остаётся только то, что в рамке, а фон стирается"
           }
         }
       }
@@ -14510,6 +15746,12 @@
             "state" : "translated",
             "value" : "Primeira"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Первое"
+          }
         }
       }
     },
@@ -14579,6 +15821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Caminhos percorridos pela primeira vez"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Впервые пройденные пути"
           }
         }
       }
@@ -14650,6 +15898,12 @@
             "state" : "translated",
             "value" : "É um lugar onde você pisa pela primeira vez"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Вы впервые ступаете на это место"
+          }
         }
       }
     },
@@ -14719,6 +15973,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancelar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Отмена"
           }
         }
       }
@@ -14790,6 +16050,12 @@
             "state" : "translated",
             "value" : "Ativar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Включить"
+          }
         }
       }
     },
@@ -14859,6 +16125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ampliar"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Увеличить"
           }
         }
       }
@@ -14931,6 +16203,12 @@
             "state" : "translated",
             "value" : "Telas para texto grande"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экраны для крупного шрифта"
+          }
         }
       }
     },
@@ -15000,6 +16278,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Таймлапс"
           }
         }
       }
@@ -15071,6 +16355,12 @@
             "state" : "translated",
             "value" : "Explorar"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Исследовать"
+          }
         }
       }
     },
@@ -15141,6 +16431,12 @@
             "state" : "translated",
             "value" : "Registro de exploração"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Журнал исследований"
+          }
         }
       }
     },
@@ -15210,6 +16506,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diário de exploração"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Дневник исследований"
           }
         }
       }
@@ -15282,6 +16584,12 @@
             "state" : "translated",
             "value" : "Tela de iPhone dobrável"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Экран складного iPhone"
+          }
         }
       }
     },
@@ -15353,6 +16661,12 @@
             "state" : "translated",
             "value" : "Em um iPhone dobrável, veja o mapa e os registros em dois painéis."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "На складном iPhone карта и записи делятся на две панели."
+          }
         }
       }
     },
@@ -15422,6 +16736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse do dia"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Таймлапс дня"
           }
         }
       }
@@ -15494,6 +16814,12 @@
             "state" : "translated",
             "value" : "No fim do dia, uma notificação lembra o caminho que você fez hoje."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "В конце дня уведомление расскажет, какой путь вы прошли сегодня."
+          }
         }
       }
     },
@@ -15563,6 +16889,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se você ficar mais de %lld minutos no mesmo lugar,\nele aparece nas pegadas de hoje."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Если вы пробудете на одном месте больше %lld мин.,\nэто место появится в сегодняшних следах."
           }
         }
       }
@@ -15634,6 +16966,12 @@
             "state" : "translated",
             "value" : "Sua localização ainda não foi encontrada"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ваше местоположение пока не найдено"
+          }
         }
       }
     },
@@ -15703,6 +17041,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ОК"
           }
         }
       }

@@ -68,6 +68,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -137,6 +143,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usa a câmera para guardar uma foto do lugar e recortar o que você fotografar, transformando em um adesivo para colocar no mapa."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Камера нужна, чтобы сохранить фото места и вырезать снятое в стикер, который можно поставить на карту."
           }
         }
       }
@@ -208,6 +220,12 @@
             "state" : "translated",
             "value" : "Para registrar suas pegadas automaticamente a cada mudança de lugar, é preciso a permissão «Sempre»."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Чтобы автоматически записывать следы при каждой смене места, нужно разрешение «Всегда»."
+          }
         }
       }
     },
@@ -278,6 +296,12 @@
             "state" : "translated",
             "value" : "A permissão de localização é necessária para registrar sua posição atual como pegada no mapa."
           }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Разрешение на геопозицию нужно, чтобы записывать ваше текущее положение на карту как след."
+          }
         }
       }
     },
@@ -347,6 +371,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usa dados de movimento para verificar se você se deslocou a pé ou correndo e não registrar trajetos de veículo."
+          }
+        },
+        "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Данные о движении нужны, чтобы определить, шли вы пешком или бежали, и не записывать поездки на транспорте."
           }
         }
       }
