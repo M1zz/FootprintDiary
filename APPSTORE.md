@@ -1471,3 +1471,67 @@ Välj mellan noggrannhet först och batteri först. Med noggrannhet först logga
 Dina loggar i din iCloud
 Steg, stämplar, dagbok och foton sparas i din personliga iCloud och följer med när du byter enhet.
 Anonym användningsstatistik innehåller aldrig positionskoordinater, dagbokstext, platsnamn eller foton.
+
+## tr
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/tr/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/tr/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/tr/
+
+### 이름
+
+벅뚜벅뚜: Adımlarla Harita
+
+### 부제
+
+Yalnızca yeni yollar boyanır
+
+### 키워드
+
+yürüyüş,gezi,doğa yürüyüşü,gps,takip,günlük,seyahat,adım,keşif,damga,mahalle,şehir,rota
+
+### 프로모션 텍스트
+
+Arabayla ya da metroyla geçilen yolların hiç çizilmediği boş bir harita. Onu yalnızca ilk kez yürüdüğün yollar genişletir. Bugün hangi yöne yeni bir yol çizeceksin?
+
+### 설명
+
+Boş bir kâğıtla başlayan bir harita. Yalnızca kendi ayaklarınla yürüdüğün yerler nokta nokta dolar.
+Arabayla veya metroyla geçilen yollar çizilmez; aynı yolu yüz kez yürüsen de harita genişlemez. Genişletmek için yeni yollara çıkmak gerekir.
+
+Bugün ve geçmiş adımlar, ayrı renklerde
+Bugün yürüdüğün yerler kırmızı mürekkeple, geçmiş adımların çivit mavisiyle damgalanır. Bir yerden ne kadar çok geçersen o kadar koyulaşır; böylece günlük çevren kendiliğinden ortaya çıkar.
+Üç aydan uzun süredir basmadığın yerler silinmez, griye solar.
+
+Gidilen ve gidilecek yerler için damgalar
+Bulunduğun yere damga bas ya da haritaya uzun basarak istediğin yere damga koy. Kategorilere ayrılmış 212 damga arasından seçebilirsin.
+Hiç yürümediğin bir yere basılan damga gidilecek yer olarak kalır; gerçekten yaklaştığında gidilmiş yere dönüşür.
+Kamerayla bir dükkân tabelasını çekersen arka plan kesilir ve tabela yalnızca o yere ait bir çıkartma olarak haritada dikilir.
+
+Bugünün ayak izleri
+Bugün durduğun yerler zaman sırasıyla dizilir; aralarında ne kadar yürüdüğün de yazılır. Adımlarının durduğu yerde damga varsa uygulama oraya gidip gitmediğini sorar ve ziyareti sayar.
+
+Öncü pusulası
+Bulunduğun yerin çevresini sekiz yöne böler ve en az yürüdüğün yönü gösterir. Bir sonraki yürüyüşünün yönünü seçerken kullan.
+
+Film ve takvim
+Bir dönem seç; haritanın nasıl çizildiğini video olarak izle ve dışa aktar.
+Takvim, her günün üzerine sayı yerine o gün yürüdüğün şekli çizer. Her gün yazı ve fotoğrafla günlük de tutabilirsin.
+
+Widget'lar
+Ana ekran bugün çizilen yolun şeklini ve uzunluğunu, kilit ekranı ise bugünkü mesafeyi tek satır sayıyla gösterir.
+
+Kayıt yöntemi
+Doğruluk öncelikli ile pil öncelikli arasında seçim yap. Doğruluk öncelikliyken uygulama kapalıyken bile adımların kaydedilir.
+
+Kayıtların kendi iCloud'unda
+Adımlar, damgalar, günlük ve fotoğraflar kişisel iCloud'unda saklanır ve cihaz değiştirdiğinde seninle gelir.
+Anonim kullanım istatistikleri konum koordinatlarını, günlük yazılarını, yer adlarını ve fotoğrafları asla içermez.

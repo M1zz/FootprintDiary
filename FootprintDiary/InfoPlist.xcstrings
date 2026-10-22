@@ -140,6 +140,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -281,6 +287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kameran används för att spara ett foto av platsen och klippa ut det du fotograferar till ett klistermärke som kan läggas på kartan."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamera, yerin fotoğrafını kaydetmek ve çektiğin nesneyi haritaya koyabileceğin bir çıkartmaya dönüştürmek için kullanılır."
           }
         }
       }
@@ -424,6 +436,12 @@
             "state" : "translated",
             "value" : "Behörigheten ”Alltid” behövs för att automatiskt logga dina fotspår varje gång du byter plats."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yer değiştirdiğinde ayak izlerini otomatik kaydetmek için “Her Zaman” izni gerekir."
+          }
         }
       }
     },
@@ -566,6 +584,12 @@
             "state" : "translated",
             "value" : "Platsbehörighet behövs för att logga din nuvarande position som ett fotspår på kartan."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şu anki konumunu haritaya ayak izi olarak kaydetmek için konum izni gerekir."
+          }
         }
       }
     },
@@ -707,6 +731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rörelsedata används för att se om du rörde dig till fots eller springande, så att färd i fordon inte loggas."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taşıtla yapılan yolculukları kaydetmemek için yürüyerek mi koşarak mı hareket ettiğini anlamak amacıyla hareket verileri kullanılır."
           }
         }
       }

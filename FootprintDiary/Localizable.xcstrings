@@ -140,6 +140,12 @@
             "state" : "translated",
             "value" : "%@ · Fotspår %lld/%lld"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Ayak izi %lld/%lld"
+          }
         }
       }
     },
@@ -281,6 +287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gick %@ på %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ yürüdün, süre %@"
           }
         }
       }
@@ -424,6 +436,12 @@
             "state" : "translated",
             "value" : "Gick %@"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ yürüdün"
+          }
         }
       }
     },
@@ -565,6 +583,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ samlad"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ toplandı"
           }
         }
       }
@@ -708,6 +732,12 @@
             "state" : "translated",
             "value" : "Symbol: %@"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ sembolü"
+          }
         }
       }
     },
@@ -850,6 +880,12 @@
             "state" : "translated",
             "value" : "%@, %lld sorter"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld çeşit"
+          }
         }
       }
     },
@@ -988,6 +1024,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
+        },
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@×"
@@ -1134,6 +1176,12 @@
             "state" : "translated",
             "value" : "Åt %@ har du gått minst"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ yönünde en az yürüdün"
+          }
         }
       }
     },
@@ -1275,6 +1323,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld m bort"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m uzaklıkta"
           }
         }
       }
@@ -1418,6 +1472,12 @@
             "state" : "translated",
             "value" : "Inom %lld m öppnas slutaren"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m içine girince deklanşör açılır"
+          }
         }
       }
     },
@@ -1559,6 +1619,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld sorter"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld çeşit"
           }
         }
       }
@@ -1702,6 +1768,12 @@
             "state" : "translated",
             "value" : "%lld platser"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld yer"
+          }
         }
       }
     },
@@ -1843,6 +1915,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld gånger"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kez"
           }
         }
       }
@@ -1986,6 +2064,12 @@
             "state" : "translated",
             "value" : "Gick ut %lld gånger"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kez dışarı çıktın"
+          }
         }
       }
     },
@@ -2128,6 +2212,12 @@
             "state" : "translated",
             "value" : "Upptäckt nr %lld"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld. keşif"
+          }
         }
       }
     },
@@ -2269,6 +2359,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hitta dit med AR"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AR ile Git"
           }
         }
       }
@@ -2413,6 +2509,12 @@
             "state" : "translated",
             "value" : "Face ID-lås"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID Kilidi"
+          }
         }
       }
     },
@@ -2555,6 +2657,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lås appen med Face ID eller Touch ID för att skydda var du varit och din dagbok."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulamayı Face ID veya Touch ID ile kilitleyip yürüdüğün yerleri ve günlüğünü koru."
           }
         }
       }
@@ -2699,6 +2807,12 @@
             "state" : "translated",
             "value" : "Fråga Siri hur långt du gått i dag."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri'ye sorup bugün ne kadar yürüdüğünü hemen öğren."
+          }
         }
       }
     },
@@ -2841,6 +2955,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri och Genvägar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri ve Kısayollar"
           }
         }
       }
@@ -2985,6 +3105,12 @@
             "state" : "translated",
             "value" : "VoiceOver läser upp alla knappar och detaljer på kartan och i loggarna, i rätt ordning."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver, haritandaki ve kayıtlarındaki tüm düğmeleri ve ayrıntıları doğru sırayla eksiksiz okur."
+          }
         }
       }
     },
@@ -3128,6 +3254,12 @@
             "state" : "translated",
             "value" : "Bättre VoiceOver"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daha Rahat VoiceOver"
+          }
         }
       }
     },
@@ -3269,6 +3401,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inga stämplar matchar ”%@”"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "“%@” ile eşleşen damga yok"
           }
         }
       }
@@ -3412,6 +3550,12 @@
             "state" : "translated",
             "value" : "Det var en plats du tänkte besöka. Ska den sparas som besökt?"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gitmek istediğin bir yerdi. Gidilmiş olarak kaydedilsin mi?"
+          }
         }
       }
     },
@@ -3553,6 +3697,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inte besökt än"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz gidilmedi"
           }
         }
       }
@@ -3696,6 +3846,12 @@
             "state" : "translated",
             "value" : "Vill besöka"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gitmek İstediğim"
+          }
         }
       }
     },
@@ -3837,6 +3993,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "En plats du stämplat som besöksmål"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gidilecek yer olarak damgalanmış bir yer"
           }
         }
       }
@@ -3980,6 +4142,12 @@
             "state" : "translated",
             "value" : "Vanligaste orsak: %@ (%lld gånger). %@"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En sık engellenme nedeni: %@ (%lld kez). %@"
+          }
         }
       }
     },
@@ -4118,6 +4286,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori"
+          }
+        },
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategori"
@@ -4264,6 +4438,12 @@
             "state" : "translated",
             "value" : "Pionjärkompass"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öncü Pusulası"
+          }
         }
       }
     },
@@ -4405,6 +4585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hoppa över"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atla"
           }
         }
       }
@@ -4548,6 +4734,12 @@
             "state" : "translated",
             "value" : "Promenadlogg"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yürüyüş Kaydı"
+          }
         }
       }
     },
@@ -4689,6 +4881,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Promenadloggen är avstängd. Även om du går lämnas inget spår."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yürüyüş kaydı kapalı. Yürüsen de iz kalmaz."
           }
         }
       }
@@ -4832,6 +5030,12 @@
             "state" : "translated",
             "value" : "Stämplar du sätter medan du går samlas här i tidsordning.\nPlatser där du stannar sparas av sig själva, utan stämpel."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yürürken bastığın damgalar burada zaman sırasıyla birikir.\nDurduğun yerler damga basmasan da kendiliğinden kaydedilir."
+          }
         }
       }
     },
@@ -4973,6 +5177,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Platser du nått till fots"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yürüyerek ulaşılan yerler"
           }
         }
       }
@@ -5116,6 +5326,12 @@
             "state" : "translated",
             "value" : "När du kommer fram till fots kan du ta ett foto på platsen"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yürüyerek vardığında orada fotoğraf çekebilirsin"
+          }
         }
       }
     },
@@ -5258,6 +5474,12 @@
             "state" : "translated",
             "value" : "Om du gick men ingen linje ritades på kartan kan du se orsaken här."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yürüdün ama haritada çizgi çizilmediyse nedenini buradan görebilirsin."
+          }
         }
       }
     },
@@ -5399,6 +5621,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "När du går läggs vägarna du passerat på varandra i ordning."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yürüdükçe geçtiğin yollar sırayla üst üste biner."
           }
         }
       }
@@ -5543,6 +5771,12 @@
             "state" : "translated",
             "value" : "Spara vägarna du gått och din dagbok i en fil och hämta tillbaka dem senare."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yürüdüğün yolları ve günlüğünü dosyaya kaydet, sonra geri yükle."
+          }
         }
       }
     },
@@ -5684,6 +5918,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "På kartan blir bara vägarna du gått och stämplarna du satt under vald period kvar."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritada yalnızca seçilen dönemde yürüdüğün yollar ve bastığın damgalar kalır."
           }
         }
       }
@@ -5827,6 +6067,12 @@
             "state" : "translated",
             "value" : "Inte intresserad"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlgilenmiyorum"
+          }
         }
       }
     },
@@ -5968,6 +6214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Det går bra"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sorun değil"
           }
         }
       }
@@ -6111,6 +6363,12 @@
             "state" : "translated",
             "value" : "Se hur den ritas"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çizilişini Gör"
+          }
         }
       }
     },
@@ -6252,6 +6510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ritad karta"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resimli Harita"
           }
         }
       }
@@ -6396,6 +6660,12 @@
             "state" : "translated",
             "value" : "Även med större text ordnas skärmarna snyggt om i stället för att klippas av."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yazıyı büyütsen de ekranlar kesilmeden düzgünce yeniden yerleşir."
+          }
         }
       }
     },
@@ -6537,6 +6807,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visa per period"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Döneme Göre Gör"
           }
         }
       }
@@ -6680,6 +6956,12 @@
             "state" : "translated",
             "value" : "Loggningssätt"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kayıt Yöntemi"
+          }
         }
       }
     },
@@ -6821,6 +7103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loggningsstatus"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kayıt Durumu"
           }
         }
       }
@@ -6964,6 +7252,12 @@
             "state" : "translated",
             "value" : "Visa loggningsstatus"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kayıt Durumunu Gör"
+          }
         }
       }
     },
@@ -7105,6 +7399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Återställ standardbilden"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Varsayılan Resme Dön"
           }
         }
       }
@@ -7248,6 +7548,12 @@
             "state" : "translated",
             "value" : "Avstängda skärmar kan alltid öppnas via ”Visa allt samlat” ovan. Knapparna för stämplar och inställningar syns alltid."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kapattığın ekranları yukarıdaki “Hepsini Birlikte Gör” bölümünden her zaman açabilirsin. Damga ve ayar düğmeleri her zaman görünür."
+          }
         }
       }
     },
@@ -7389,6 +7695,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slut"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitiş"
           }
         }
       }
@@ -7532,6 +7844,12 @@
             "state" : "translated",
             "value" : "Senare"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sonra"
+          }
         }
       }
     },
@@ -7673,6 +7991,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sparas bara i din personliga iCloud. Ingen annan kan se det."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca kişisel iCloud'unda saklanır. Başkaları göremez."
           }
         }
       }
@@ -7817,6 +8141,12 @@
             "state" : "translated",
             "value" : "Radera alla mina loggar på en gång"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tüm Kayıtlarımı Tek Seferde Sil"
+          }
         }
       }
     },
@@ -7958,6 +8288,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kontur av mitt område"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mahallemin Sınırı"
           }
         }
       }
@@ -8101,6 +8437,12 @@
             "state" : "translated",
             "value" : "Min karta"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritam"
+          }
         }
       }
     },
@@ -8242,6 +8584,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Öppna min karta"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritamı Aç"
           }
         }
       }
@@ -8385,6 +8733,12 @@
             "state" : "translated",
             "value" : "Se hur din karta ritas"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritanın Çizilişini İzle"
+          }
         }
       }
     },
@@ -8526,6 +8880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Förhandsvisning av hur din karta ritas"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritanın çizilişinin önizlemesi"
           }
         }
       }
@@ -8669,6 +9029,12 @@
             "state" : "translated",
             "value" : "Vägar jag ritat"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çizdiğim Yollar"
+          }
         }
       }
     },
@@ -8810,6 +9176,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Platser jag stämplat"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Damga Bastığım Yerler"
           }
         }
       }
@@ -8953,6 +9325,12 @@
             "state" : "translated",
             "value" : "Tryck så syns kartan igenom"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritanın görünmesi için dokun"
+          }
         }
       }
     },
@@ -9094,6 +9472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tryck för att stämpla din nuvarande position"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şu anki konuma damga basmak için dokun"
           }
         }
       }
@@ -9237,6 +9621,12 @@
             "state" : "translated",
             "value" : "Bekräfta om du varit på %lld platser"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld yere gerçekten gidip gitmediğin sorulacak"
+          }
         }
       }
     },
@@ -9378,6 +9768,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Antal besök"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ziyaret Sayısı"
           }
         }
       }
@@ -9521,6 +9917,12 @@
             "state" : "translated",
             "value" : "Jag var där"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gittim"
+          }
         }
       }
     },
@@ -9662,6 +10064,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tryck igen för att gå tillbaka till pappret. Bra när du vill se var du ungefär är."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kâğıda dönmek için tekrar dokun. Yaklaşık nerede olduğunu görmek istediğinde işe yarar."
           }
         }
       }
@@ -9805,6 +10213,12 @@
             "state" : "translated",
             "value" : "Ta om"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeniden Çek"
+          }
         }
       }
     },
@@ -9946,6 +10360,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "En plats du kommit tillbaka till"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeniden Geldiğin Bir Yer"
           }
         }
       }
@@ -10089,6 +10509,12 @@
             "state" : "translated",
             "value" : "Det här är registrerat som en stamplats"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Burası sık gidilen yer olarak kayıtlı"
+          }
         }
       }
     },
@@ -10230,6 +10656,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stäng"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kapat"
           }
         }
       }
@@ -10374,6 +10806,12 @@
             "state" : "translated",
             "value" : "Även med högre kontrast eller svårt att skilja färger kan du känna igen vägarna och stämplarna på kartan."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontrastı artırsan ya da renkleri ayırt etmekte zorlansan da haritadaki yolları ve damgaları seçebilirsin."
+          }
         }
       }
     },
@@ -10516,6 +10954,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Använd appen på fler språk."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulamayı daha fazla dilde kullan."
           }
         }
       }
@@ -10660,6 +11104,12 @@
             "state" : "translated",
             "value" : "Fler språk"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Daha Fazla Dil"
+          }
         }
       }
     },
@@ -10801,6 +11251,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lägg till några ord (valfritt)"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Birkaç söz ekle (isteğe bağlı)"
           }
         }
       }
@@ -10944,6 +11400,12 @@
             "state" : "translated",
             "value" : "I samlingen ser du fotspåren du samlat hittills"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koleksiyonda şimdiye kadar topladığın ayak izlerini görebilirsin"
+          }
         }
       }
     },
@@ -11085,6 +11547,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Det går inte att ångra."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu işlem geri alınamaz."
           }
         }
       }
@@ -11228,6 +11696,12 @@
             "state" : "translated",
             "value" : "Tryck för att pausa eller fortsätta"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Duraklatmak veya devam ettirmek için dokun"
+          }
         }
       }
     },
@@ -11369,6 +11843,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld platser besökta"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld yer ziyaret edildi"
           }
         }
       }
@@ -11512,6 +11992,12 @@
             "state" : "translated",
             "value" : "Inget tydligt hittades, så bakgrunden gick inte att ta bort. Gå närmare föremålet och ta om bilden."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belirgin bir şey bulunamadığı için arka plan silinemedi. Nesneye yaklaşıp tekrar çek."
+          }
         }
       }
     },
@@ -11653,6 +12139,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Senaste besök"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Son Ziyaret"
           }
         }
       }
@@ -11796,6 +12288,12 @@
             "state" : "translated",
             "value" : "Bläckkarta"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mürekkep Haritası"
+          }
         }
       }
     },
@@ -11937,6 +12435,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anteckning"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not"
           }
         }
       }
@@ -12080,6 +12584,12 @@
             "state" : "translated",
             "value" : "Visa allt samlat"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hepsini Birlikte Gör"
+          }
         }
       }
     },
@@ -12221,6 +12731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Placerar vatten och berg"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Su ve dağlar yerleştiriliyor"
           }
         }
       }
@@ -12364,6 +12880,12 @@
             "state" : "translated",
             "value" : "Ej upptäckt"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keşfedilmedi"
+          }
         }
       }
     },
@@ -12505,6 +13027,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotspår"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayak İzleri"
           }
         }
       }
@@ -12648,6 +13176,12 @@
             "state" : "translated",
             "value" : "Fotspårens timelapse"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayak İzi Hızlandırılmış Videosu"
+          }
         }
       }
     },
@@ -12790,6 +13324,12 @@
             "state" : "translated",
             "value" : "Avtäckt mark %@"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Açılan topraklar %@"
+          }
         }
       }
     },
@@ -12931,6 +13471,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Låt bakgrundskartan synas igenom"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arka Plan Haritasını Göster"
           }
         }
       }
@@ -13075,6 +13621,12 @@
             "state" : "translated",
             "value" : "Säkerhetskopiering och export"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yedekleme ve Dışa Aktarma"
+          }
         }
       }
     },
@@ -13216,6 +13768,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Orsaker till att punkter kasseras"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atılma Nedenleri"
           }
         }
       }
@@ -13359,6 +13917,12 @@
             "state" : "translated",
             "value" : "Version %@"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sürüm %@"
+          }
         }
       }
     },
@@ -13500,6 +14064,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visning"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Görünüm"
           }
         }
       }
@@ -13644,6 +14214,12 @@
             "state" : "translated",
             "value" : "Sköna färger och kontrast"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rahat Renkler ve Kontrast"
+          }
         }
       }
     },
@@ -13785,6 +14361,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visade vägar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gösterilen Yollar"
           }
         }
       }
@@ -13928,6 +14510,12 @@
             "state" : "translated",
             "value" : "Ett tomt papper vet inte själv vad som är vad.\nPlatsen du står på nu blir **första referenspunkten**."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boş bir kâğıt tek başına neyin nerede olduğunu bilemez.\nŞu an bulunduğun yer **ilk referans noktası** olur."
+          }
         }
       }
     },
@@ -14069,6 +14657,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vi börjar med ett tomt papper"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boş Bir Kâğıtla Başlıyoruz"
           }
         }
       }
@@ -14212,6 +14806,12 @@
             "state" : "translated",
             "value" : "Användningsstatistik (utvecklare)"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kullanım İstatistikleri (Geliştirici)"
+          }
         }
       }
     },
@@ -14353,6 +14953,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Foton"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoğraflar"
           }
         }
       }
@@ -14496,6 +15102,12 @@
             "state" : "translated",
             "value" : "Radera foto"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoğrafı Sil"
+          }
         }
       }
     },
@@ -14637,6 +15249,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ta bild"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoğraf Çek"
           }
         }
       }
@@ -14780,6 +15398,12 @@
             "state" : "translated",
             "value" : "Lägg till foto"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoğraf Ekle"
+          }
         }
       }
     },
@@ -14921,6 +15545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lägger in foto"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoğraf ekleniyor"
           }
         }
       }
@@ -15064,6 +15694,12 @@
             "state" : "translated",
             "value" : "Fotot kunde inte sparas"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoğraf kaydedilemedi"
+          }
         }
       }
     },
@@ -15205,6 +15841,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Radera"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sil"
           }
         }
       }
@@ -15349,6 +15991,12 @@
             "state" : "translated",
             "value" : "Promenadpåminnelse"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yürüyüş Hatırlatıcısı"
+          }
         }
       }
     },
@@ -15490,6 +16138,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld nyligen nådda platser stämplas på vägen du gick"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yeni ulaşılan %lld yer, geçilen yola damgalanır"
           }
         }
       }
@@ -15633,6 +16287,12 @@
             "state" : "translated",
             "value" : "Nyheter"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yenilikler"
+          }
         }
       }
     },
@@ -15774,6 +16434,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inställningar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarlar"
           }
         }
       }
@@ -15917,6 +16583,12 @@
             "state" : "translated",
             "value" : "Slå på kameran i Inställningar > 벅뚜벅뚜."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarlar > 벅뚜벅뚜 bölümünden kamerayı aç."
+          }
         }
       }
     },
@@ -16058,6 +16730,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Öppna Inställningar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarlar'ı Aç"
           }
         }
       }
@@ -16201,6 +16879,12 @@
             "state" : "translated",
             "value" : "Slå på behörigheter i Inställningar"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İzinleri Ayarlar'dan Aç"
+          }
         }
       }
     },
@@ -16342,6 +17026,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Går också att öppna från Inställningar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ayarlar'dan da açılabilir"
           }
         }
       }
@@ -16485,6 +17175,12 @@
             "state" : "translated",
             "value" : "Nollställ räkningen"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sayımı Sıfırla"
+          }
         }
       }
     },
@@ -16626,6 +17322,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Världen har redan ritats av andra kartor.\nHär blir **bara platserna du gått på med egna fötter** kvar."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dünyayı diğer haritalar çoktan çizdi.\nBurada **yalnızca kendi ayaklarınla geçtiğin yerler** kalır."
           }
         }
       }
@@ -16769,6 +17471,12 @@
             "state" : "translated",
             "value" : "Samlade spots"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toplanan Noktalar"
+          }
         }
       }
     },
@@ -16910,6 +17618,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stämpel"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Damga"
           }
         }
       }
@@ -17053,6 +17767,12 @@
             "state" : "translated",
             "value" : "Start"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Başlangıç"
+          }
         }
       }
     },
@@ -17194,6 +17914,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kom igång"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Başla"
           }
         }
       }
@@ -17337,6 +18063,12 @@
             "state" : "translated",
             "value" : "Symbol"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sembol"
+          }
         }
       }
     },
@@ -17478,6 +18210,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Förstora symbol"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sembolü Büyüt"
           }
         }
       }
@@ -17622,6 +18360,12 @@
             "state" : "translated",
             "value" : "Skriv vidare på en påbörjad dagbok"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yarım Kalan Günlüğe Devam Et"
+          }
         }
       }
     },
@@ -17763,6 +18507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Svep för att bläddra som kort, tryck två gånger för att förstora"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kart gibi çevirmek için kaydır, büyütmek için çift dokun"
           }
         }
       }
@@ -17906,6 +18656,12 @@
             "state" : "translated",
             "value" : "Nej"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hayır"
+          }
         }
       }
     },
@@ -18044,6 +18800,12 @@
           }
         },
         "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "tr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -18190,6 +18952,12 @@
             "state" : "translated",
             "value" : "Inte än"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz yok"
+          }
         }
       }
     },
@@ -18331,6 +19099,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inte besökta än"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz gidilmedi"
           }
         }
       }
@@ -18474,6 +19248,12 @@
             "state" : "translated",
             "value" : "Du har inte varit här än. Den blir kvar som ”Vill besöka” och blir en besökt plats när du kommer fram."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Burada henüz bulunmadın. “Gitmek İstediğim” olarak kalır, vardığında gidilmiş yer olur."
+          }
         }
       }
     },
@@ -18615,6 +19395,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Inga punkter har kasserats än"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz atılan nokta yok"
           }
         }
       }
@@ -18758,6 +19544,12 @@
             "state" : "translated",
             "value" : "Inte än"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Henüz değil"
+          }
         }
       }
     },
@@ -18899,6 +19691,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guide"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rehber"
           }
         }
       }
@@ -19043,6 +19841,12 @@
             "state" : "translated",
             "value" : "Du kan också använda appen på engelska."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulamayı İngilizce de kullanabilirsin."
+          }
         }
       }
     },
@@ -19184,6 +19988,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Öppna appen en gång"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uygulamayı bir kez aç"
           }
         }
       }
@@ -19327,6 +20137,12 @@
             "state" : "translated",
             "value" : "Vilken dag"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hangi gün"
+          }
         }
       }
     },
@@ -19468,6 +20284,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Oavsett sparas alla mottagna positioner. Det är bara punkter med låg noggrannhet som inte ritas på kartan."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hangisini seçersen seç, alınan tüm konumlar kaydedilir. Yalnızca doğruluğu düşük noktalar haritaya çizilmez."
           }
         }
       }
@@ -19611,6 +20433,12 @@
             "state" : "translated",
             "value" : "Det räknas bara anonymt vilka skärmar som används. Var du går och vad du skriver i dagboken skickas inte."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca hangi ekranların kullanıldığı anonim olarak sayılır. Yürüdüğün yerler ve günlük yazıların gönderilmez."
+          }
         }
       }
     },
@@ -19752,6 +20580,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Du stannade här i %@"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Burada %@ kaldın"
           }
         }
       }
@@ -19895,6 +20729,12 @@
             "state" : "translated",
             "value" : "Behåll den här platsen"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Burayı Tut"
+          }
         }
       }
     },
@@ -20036,6 +20876,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spara här"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buraya Kaydet"
           }
         }
       }
@@ -20179,6 +21025,12 @@
             "state" : "translated",
             "value" : "Går det bra att inte registrera den här platsen?"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Burayı kaydetmesek olur mu?"
+          }
         }
       }
     },
@@ -20320,6 +21172,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Var var det här?"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Burası neresiydi?"
           }
         }
       }
@@ -20463,6 +21321,12 @@
             "state" : "translated",
             "value" : "Exportera som video"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video Olarak Dışa Aktar"
+          }
         }
       }
     },
@@ -20604,6 +21468,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skapar video %lld %%"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video oluşturuluyor %%%lld"
           }
         }
       }
@@ -20748,6 +21618,12 @@
             "state" : "translated",
             "value" : "Stöd för engelska"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İngilizce Desteği"
+          }
         }
       }
     },
@@ -20889,6 +21765,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "T.ex. hemma, jobbet, stamcaféet"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Örn. ev, iş, sürekli gittiğim kafe"
           }
         }
       }
@@ -21032,6 +21914,12 @@
             "state" : "translated",
             "value" : "I dag %@"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün %@"
+          }
         }
       }
     },
@@ -21173,6 +22061,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dagens väg"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün Çizilen Yol"
           }
         }
       }
@@ -21316,6 +22210,12 @@
             "state" : "translated",
             "value" : "Ett foto lades till i dagens dagbok"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugünün günlüğüne fotoğraf eklendi"
+          }
         }
       }
     },
@@ -21457,6 +22357,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spela upp i dag"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugünü Oynat"
           }
         }
       }
@@ -21600,6 +22506,12 @@
             "state" : "translated",
             "value" : "Du har inte besökt några platser än i dag"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün henüz gittiğin bir yer yok"
+          }
         }
       }
     },
@@ -21741,6 +22653,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Du har inte stannat på någon plats än i dag"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün henüz durduğun bir yer yok"
           }
         }
       }
@@ -21884,6 +22802,12 @@
             "state" : "translated",
             "value" : "Var utforskade du i dag?"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugün nerelerde keşfe çıktın?"
+          }
         }
       }
     },
@@ -22025,6 +22949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dagens fotspår"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugünün Ayak İzleri"
           }
         }
       }
@@ -22168,6 +23098,12 @@
             "state" : "translated",
             "value" : "Dagens upptäckter"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bugünkü Keşif"
+          }
         }
       }
     },
@@ -22309,6 +23245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klar"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bitti"
           }
         }
       }
@@ -22453,6 +23395,12 @@
             "state" : "translated",
             "value" : "Minska rörelse"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hareketi Azalt"
+          }
         }
       }
     },
@@ -22595,6 +23543,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Med Minska rörelse på blir kartan och skärmeffekterna lugnare."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hareketi Azalt açıkken harita ve ekran efektleri sakinleşir."
           }
         }
       }
@@ -22739,6 +23693,12 @@
             "state" : "translated",
             "value" : "Om du vill kan du radera alla vägar du gått och din dagbok i appen."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İstersen uygulama içinde yürüdüğün tüm yolları ve günlüğünü silebilirsin."
+          }
         }
       }
     },
@@ -22880,6 +23840,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ställ in plats på ”Alltid” och slå på Rörelse och kondition, så loggas dina promenader utan att du öppnar appen."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konumu “Her Zaman” yapıp Hareket ve Fitness'ı açarsan, uygulamayı açmadan da yürüyüşlerin kaydedilir."
           }
         }
       }
@@ -23023,6 +23989,12 @@
             "state" : "translated",
             "value" : "Under den här perioden finns inga fotspår"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu dönemde ayak izi yok"
+          }
         }
       }
     },
@@ -23164,6 +24136,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visa den här perioden"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu Dönemi Gör"
           }
         }
       }
@@ -23307,6 +24285,12 @@
             "state" : "translated",
             "value" : "Platser fotograferade denna dag"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu gün fotoğraflanan yerler"
+          }
         }
       }
     },
@@ -23448,6 +24432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Den här dagen finns inga steg registrerade"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu gün için kaydedilmiş adım yok"
           }
         }
       }
@@ -23591,6 +24581,12 @@
             "state" : "translated",
             "value" : "Den här dagen finns inga fotspår"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu günün ayak izi yok"
+          }
         }
       }
     },
@@ -23732,6 +24728,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Radera den här stämpeln"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu Damgayı Sil"
           }
         }
       }
@@ -23875,6 +24877,12 @@
             "state" : "translated",
             "value" : "Använd den här symbolen"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu Sembolü Kullan"
+          }
         }
       }
     },
@@ -24016,6 +25024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Radera fotspåren på den här platsen"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buradaki ayak izlerini sil"
           }
         }
       }
@@ -24159,6 +25173,12 @@
             "state" : "translated",
             "value" : "Platsens namn (t.ex. jobbet, stamcaféet)"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu yerin adı (örn. iş, sürekli gittiğim kafe)"
+          }
         }
       }
     },
@@ -24300,6 +25320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sätt den första stämpeln på det här pappret"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu Kâğıda İlk Damgayı Bas"
           }
         }
       }
@@ -24443,6 +25469,12 @@
             "state" : "translated",
             "value" : "Namn"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ad"
+          }
         }
       }
     },
@@ -24584,6 +25616,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ge namn"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ad Ver"
           }
         }
       }
@@ -24727,6 +25765,12 @@
             "state" : "translated",
             "value" : "Lägg till bild"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resim Ekle"
+          }
         }
       }
     },
@@ -24869,6 +25913,12 @@
             "state" : "translated",
             "value" : "Gå ut på en promenad nu"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şimdi Yürümeye Çık"
+          }
         }
       }
     },
@@ -25010,6 +26060,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gå ut på en promenad nu.\nPlatserna du passerar stämplas på det här pappret punkt för punkt."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şimdi yürümeye çık.\nGeçtiğin yerler bu kâğıda nokta nokta işlenir."
           }
         }
       }
@@ -25154,6 +26210,12 @@
             "state" : "translated",
             "value" : "Om appen stängs medan du skriver dagbok finns det du skrev kvar."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük yazarken uygulama kapansa bile yazdıkların kalır."
+          }
         }
       }
     },
@@ -25295,6 +26357,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dagbok"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günlük"
           }
         }
       }
@@ -25438,6 +26506,12 @@
             "state" : "translated",
             "value" : "När du **kommer fram till en plats du ofta besöker, stämpla där en gång till**.\nMed två referenspunkter hittar även ett tomt papper riktning."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sık gittiğin bir yere **vardığında orada bir damga daha bas**.\nİki referans noktasıyla boş kâğıt bile yönünü bulur."
+          }
         }
       }
     },
@@ -25579,6 +26653,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Försök igen om en stund, eller håll ned på kartan för att stämpla där du vill."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Biraz sonra tekrar dene veya haritaya uzun basarak istediğin yere damga bas."
           }
         }
       }
@@ -25722,6 +26802,12 @@
             "state" : "translated",
             "value" : "Spara"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaydet"
+          }
         }
       }
     },
@@ -25863,6 +26949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tillbaka till hela perioden"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tüm Döneme Dön"
           }
         }
       }
@@ -26006,6 +27098,12 @@
             "state" : "translated",
             "value" : "Punkträkning"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nokta Sayımı"
+          }
         }
       }
     },
@@ -26147,6 +27245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Punkter med låg noggrannhet sparas också. De ritas inte på kartan nu, men kan användas när korrigeringen blir bättre."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Doğruluğu düşük noktalar da kaydedilir. Şimdilik haritaya çizilmez ama düzeltme iyileşince kullanılabilir."
           }
         }
       }
@@ -26290,6 +27394,12 @@
             "state" : "translated",
             "value" : "Aktuell status"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şu Anki Durum"
+          }
         }
       }
     },
@@ -26431,6 +27541,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Söker efter din position"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konumun aranıyor"
           }
         }
       }
@@ -26574,6 +27690,12 @@
             "state" : "translated",
             "value" : "Sätt märke här"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bu Yeri İşaretle"
+          }
         }
       }
     },
@@ -26715,6 +27837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sätt en stämpel där du står"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Şu Anki Konuma Damga Bas"
           }
         }
       }
@@ -26858,6 +27986,12 @@
             "state" : "translated",
             "value" : "Stämpla här"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buraya Bas"
+          }
         }
       }
     },
@@ -26999,6 +28133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Platserna du passerar stämplas på det här pappret punkt för punkt.\nVägar du åkt med bil eller tunnelbana ritas inte."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geçtiğin yerler bu kâğıda nokta nokta işlenir.\nArabayla veya metroyla geçtiğin yollar çizilmez."
           }
         }
       }
@@ -27142,6 +28282,12 @@
             "state" : "translated",
             "value" : "Välj kartknappar i Inställningar"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harita düğmelerini Ayarlar'dan seç"
+          }
         }
       }
     },
@@ -27283,6 +28429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kartstil"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harita Stili"
           }
         }
       }
@@ -27426,6 +28578,12 @@
             "state" : "translated",
             "value" : "Kartskala. Ett streck motsvarar %@"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Harita ölçeği. Bir çubuk %@"
+          }
         }
       }
     },
@@ -27567,6 +28725,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Välj vilka knappar som svävar på kartan och öppna avstängda skärmar direkt från Inställningar."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritada duracak düğmeleri seç; kapattığın ekranları doğrudan Ayarlar'dan açabilirsin."
           }
         }
       }
@@ -27710,6 +28874,12 @@
             "state" : "translated",
             "value" : "Platser du stämplat i förväg på kartan. När du kommer fram blir de besökta platser."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritaya önceden damgaladığın yerler. Vardığında gidilmiş yer olurlar."
+          }
         }
       }
     },
@@ -27851,6 +29021,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visa på kartan"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritada Göster"
           }
         }
       }
@@ -27994,6 +29170,12 @@
             "state" : "translated",
             "value" : "Visa på kartan"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritada Gör"
+          }
         }
       }
     },
@@ -28135,6 +29317,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Så här ser det ut på kartan"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haritada böyle görünür"
           }
         }
       }
@@ -28278,6 +29466,12 @@
             "state" : "translated",
             "value" : "Rensa"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temizle"
+          }
         }
       }
     },
@@ -28419,6 +29613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Support"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Destek"
           }
         }
       }
@@ -28562,6 +29762,12 @@
             "state" : "translated",
             "value" : "Välj något som kan fungera som referens, till exempel hemmet eller jobbet."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ev veya iş gibi referans olabilecek bir yer seç."
+          }
         }
       }
     },
@@ -28703,6 +29909,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ta"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Çek"
           }
         }
       }
@@ -28846,6 +30058,12 @@
             "state" : "translated",
             "value" : "Stämplad"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Damga Tarihi"
+          }
         }
       }
     },
@@ -28987,6 +30205,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stämplat"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Basıldı"
           }
         }
       }
@@ -29130,6 +30354,12 @@
             "state" : "translated",
             "value" : "Vägar du åkt med bil eller tunnelbana ritas inte.\nBara när du går sätts en punkt i taget."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arabayla veya metroyla geçtiğin yollar çizilmez.\nYalnızca yürüyünce nokta nokta işlenir."
+          }
         }
       }
     },
@@ -29271,6 +30501,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bara det som är inom ramen blir kvar; bakgrunden raderas"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yalnızca çerçevenin içindekiler kalır, arka plan silinir"
           }
         }
       }
@@ -29414,6 +30650,12 @@
             "state" : "translated",
             "value" : "Första"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlk"
+          }
         }
       }
     },
@@ -29555,6 +30797,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vägar du gått för första gången"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "İlk Kez Yürünen Yollar"
           }
         }
       }
@@ -29698,6 +30946,12 @@
             "state" : "translated",
             "value" : "Det här är en plats du kliver på för första gången"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Burası ilk kez bastığın bir yer"
+          }
         }
       }
     },
@@ -29839,6 +31093,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avbryt"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vazgeç"
           }
         }
       }
@@ -29982,6 +31242,12 @@
             "state" : "translated",
             "value" : "Slå på"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aç"
+          }
         }
       }
     },
@@ -30123,6 +31389,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Förstora"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Büyüt"
           }
         }
       }
@@ -30267,6 +31539,12 @@
             "state" : "translated",
             "value" : "Skärmar för stor text"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Büyük Yazı İçin Ekranlar"
+          }
         }
       }
     },
@@ -30408,6 +31686,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hızlandırılmış Video"
           }
         }
       }
@@ -30551,6 +31835,12 @@
             "state" : "translated",
             "value" : "Utforska"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keşfet"
+          }
         }
       }
     },
@@ -30693,6 +31983,12 @@
             "state" : "translated",
             "value" : "Upptäcktslogg"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keşif Kaydı"
+          }
         }
       }
     },
@@ -30834,6 +32130,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Upptäcktsdagbok"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keşif Günlüğü"
           }
         }
       }
@@ -30978,6 +32280,12 @@
             "state" : "translated",
             "value" : "Vikbar iPhone-skärm"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Katlanabilir iPhone Ekranı"
+          }
         }
       }
     },
@@ -31121,6 +32429,12 @@
             "state" : "translated",
             "value" : "På en vikbar iPhone ser du kartan och loggarna i två paneler."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Katlanabilir iPhone'da haritayı ve kayıtları iki bölmede gör."
+          }
         }
       }
     },
@@ -31262,6 +32576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dagens timelapse"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günün Hızlandırılmış Videosu"
           }
         }
       }
@@ -31406,6 +32726,12 @@
             "state" : "translated",
             "value" : "I slutet av dagen berättar en avisering vilken väg du gick i dag."
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Günün sonunda bildirim, bugün yürüdüğün yolu hatırlatır."
+          }
         }
       }
     },
@@ -31547,6 +32873,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Om du stannar längre än %lld minuter på samma plats\nsyns den i dagens fotspår."
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bir yerde %lld dakikadan uzun kalırsan,\nburası bugünün ayak izlerinde görünür."
           }
         }
       }
@@ -31690,6 +33022,12 @@
             "state" : "translated",
             "value" : "Din position har inte hittats än"
           }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konumun henüz bulunamadı"
+          }
         }
       }
     },
@@ -31831,6 +33169,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "tr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamam"
           }
         }
       }

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gizlilik Politikası · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --border: #e5e7eb; --note-bg: #eef7ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36; --note-bg: #1a2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; padding-top: 8px; }
+    p, li { color: var(--text); }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    .note {
+      background: var(--note-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+    }
+    .note strong { color: var(--accent); }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--card); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/tr/privacy.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/privacy.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/privacy.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/FootprintDiary/zh-Hant/privacy.html">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/FootprintDiary/ru/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/FootprintDiary/es/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/FootprintDiary/de/privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/FootprintDiary/fr/privacy.html">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/FootprintDiary/it/privacy.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/FootprintDiary/pt-BR/privacy.html">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/FootprintDiary/th/privacy.html">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/FootprintDiary/vi/privacy.html">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/FootprintDiary/cs/privacy.html">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/FootprintDiary/da/privacy.html">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/FootprintDiary/el/privacy.html">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/FootprintDiary/fi/privacy.html">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/FootprintDiary/id/privacy.html">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/FootprintDiary/nb/privacy.html">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/FootprintDiary/nl/privacy.html">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/privacy.html">
+  <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/privacy.html">
+  <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../privacy.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/privacy.html" hreflang="en" lang="en">English</a> · <a href="../ja/privacy.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/privacy.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/privacy.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/privacy.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/privacy.html" hreflang="es" lang="es">Español</a> · <a href="../de/privacy.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/privacy.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/privacy.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/privacy.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/privacy.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/privacy.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/privacy.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/privacy.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/privacy.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/privacy.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/privacy.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/privacy.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/privacy.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/privacy.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/privacy.html" hreflang="sv" lang="sv">Svenska</a> · <a href="privacy.html" hreflang="tr" lang="tr" aria-current="true">Türkçe</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← 벅뚜벅뚜 ana sayfa</a>
+    <h1>Gizlilik Politikası</h1>
+    <p class="updated">Yürürlük tarihi: 27 Ağustos 2026</p>
+
+    <p>
+      <strong>벅뚜벅뚜 (FootprintDiary)</strong> (bundan sonra “Uygulama”), kullanıcıların kişisel verilerine önem verir.
+      Uygulama, hareket geçmişini ve günlüğünü <strong>yalnızca kendi cihazında ve kendi iCloud hesabında</strong>
+      saklayacak şekilde tasarlanmıştır. Uygulama geliştiricisi konumuna, fotoğraflarına veya günlüğüne erişemez.
+    </p>
+
+    <div class="note">
+      <strong>Özet</strong> — Uygulamada üyelik ve hesap yoktur.
+      Konum, fotoğraf ve günlük yalnızca cihazında ve <strong>kendi iCloud'unda</strong> saklanır; geliştirici bunları göremez.
+      Ancak uygulamayı geliştirmeye devam etmek için geliştirici, <strong>kim olduğunu belli etmeyen kullanım istatistiklerini</strong>
+      (uygulamanın kaç kez açıldığı, hangi ekranların kullanıldığı gibi) anonim olarak toplar. Bunlar asla konum veya yazı içermez;
+      ayrıntılar aşağıdaki 4. maddededir.
+    </div>
+
+    <h2>1. Toplanan Bilgiler</h2>
+    <p>Uygulama aşağıdaki bilgileri <strong>yalnızca cihazının içinde</strong> işler; geliştiriciye veya üçüncü taraf sunuculara göndermez.</p>
+    <table>
+      <tr><th>Öğe</th><th>Amaç</th><th>Saklandığı yer</th></tr>
+      <tr><td>Konum verileri (ziyaret edilen noktalar, hareket koordinatları)</td><td>Ayak izlerini haritada göstermek, hareket rotasını kaydetmek</td><td>Cihazın içinde (SwiftData)</td></tr>
+      <tr><td>Hareket verileri</td><td>Yürüyüşü taşıtla yolculuktan ayırmak (taşıtla yolculuklar kayıttan çıkarılır)</td><td>Cihazda anında kullanılır, saklanmaz</td></tr>
+      <tr><td>Fotoğraflar</td><td>Günlüğe eklemek</td><td>Cihazın içinde (SwiftData)</td></tr>
+      <tr><td>Kamera (çekilen fotoğraflar)</td><td>Yerin fotoğrafını kaydetmek ve çekilen nesneyi kesip haritaya koyulacak bir çıkartma yapmak (kesme işlemi cihazda yapılır)</td><td>Cihazın içinde (SwiftData)</td></tr>
+      <tr><td>Günlük metni, yer adları</td><td>Kullanıcının kendi yazdığı kayıtlar</td><td>Cihazın içinde (SwiftData)</td></tr>
+    </table>
+    <p>
+      iCloud eşitlemesini açarsan yukarıdaki kayıtlar <strong>kendi özel iCloud veritabanında</strong> da saklanır
+      ve aynı Apple Hesabı kullanan diğer cihazlara aktarılır. Bu depolama alanı sana aittir
+      ve geliştiricinin erişimi yoktur.
+    </p>
+    <p>
+      Yukarıdakilerden ayrı olarak geliştirici, 4. maddede açıklanan <strong>anonim kullanım istatistiklerini</strong> toplar.
+    </p>
+
+    <h2>2. Konum Verilerinin Kullanımı</h2>
+    <ul>
+      <li>Uygulama, iOS'un <strong>ziyaret algılama (Visit)</strong> ve <strong>önemli konum değişikliği</strong> özelliklerini kullanarak
+          pili en az tüketecek şekilde yer değiştirmelerini otomatik kaydeder.</li>
+      <li>Otomatik kayıt için Uygulama “Her Zaman” konum izni isteyebilir. Bu izni istediğin zaman
+          iOS Ayarlar uygulamasından değiştirebilir veya geri alabilirsin.</li>
+      <li>Konum iznini vermezsen otomatik kayıt çalışmaz, ancak diğer özellikler kullanılabilir.</li>
+    </ul>
+
+    <h2>3. Üçüncü Taraf Hizmetler (Apple)</h2>
+    <p>
+      Koordinatları okunabilir adres ve yer adlarına çevirmek için Uygulama, Apple'ın sunduğu
+      <strong>ters coğrafi kodlama (CLGeocoder)</strong> ve harita gösterimini (MapKit) kullanır.
+      Bu süreçte ilgili koordinatlar işlenmek üzere Apple'a gönderilebilir ve bu durum
+      <a href="https://www.apple.com/legal/privacy/">Apple Gizlilik Politikası</a>'na tabidir.
+      Uygulama geliştiricisi bu verilere erişemez.
+    </p>
+
+    <h2>4. Anonim Kullanım İstatistikleri</h2>
+    <p>
+      Geliştirici, uygulamayı iyileştirebilmek için hangi özelliklerin gerçekten kullanıldığını bilmelidir; bu nedenle aşağıdaki bilgileri
+      <strong>seni tanımlamayan bir biçimde</strong> toplar. Bilgiler, kayıtlarının saklandığı kişisel iCloud'dan ayrı olan
+      geliştiricinin kendi Apple CloudKit alanında saklanır.
+    </p>
+    <table>
+      <tr><th>Topladıklarımız</th><th>Toplamadıklarımız</th></tr>
+      <tr>
+        <td>
+          Uygulamanın açılma sayısı, kurulumdan bu yana geçen gün, uygulama sürümü, iOS sürümü, cihaz dili ayarı<br>
+          Hangi özelliklerin kullanıldığı (damga basma, video dışa aktarma, günlük yazma, yerlere ad verme, takvimi açma)<br>
+          Yaklaşık ölçek (yürünerek çizilen toplam mesafe (km), adım kaydedilen gün sayısı, damga, yer ve günlük sayısı)
+        </td>
+        <td>
+          Konum koordinatları (tek biri bile gönderilmez)<br>
+          Günlük yazıları, yer adları, fotoğraflar<br>
+          Ad, e-posta, telefon numarası, Apple Hesabı gibi seni tanıtabilecek bilgiler<br>
+          Reklam tanımlayıcısı (IDFA), cihaza özgü tanımlayıcılar
+        </td>
+      </tr>
+    </table>
+    <ul>
+      <li>Kurulumları birbirinden ayırmak için Uygulama, kurulum sırasında <strong>rastgele üretilen tek bir değer</strong> kullanır.
+          Bu değerin cihazınla veya Apple Hesabınla ilgisi yoktur; uygulamayı silip yeniden kurarsan
+          önceki değerle bağlantılı olmaz.</li>
+      <li>Uygulama <strong>reklam SDK'sı, üçüncü taraf analiz SDK'sı veya izleme aracı kullanmaz.</strong>
+          Yukarıdaki istatistikler yalnızca geliştiricinin kendi yazdığı kodla Apple CloudKit'te saklanır.</li>
+      <li>Bu istatistikler yalnızca uygulamayı iyileştirmek için kullanılır; satılmaz veya üçüncü taraflara verilmez.</li>
+    </ul>
+
+    <h2>5. Geri Bildirim Gönderme</h2>
+    <p>
+      Uygulama ayarlarındaki <strong>Geri Bildirim Gönder</strong> yalnızca sen kendin yazıp gönderdiğinde çalışır.
+      Gönderdiklerin geliştiricinin Apple CloudKit alanında saklanır ve yalnızca geliştiricinin okuyup yanıtlaması için kullanılır.
+    </p>
+    <ul>
+      <li>Gönderilenler: seçtiğin geri bildirim türü ve yazdığın metin, uygulama sürümü, iOS sürümü, cihaz türü ve cihaz dili ayarı</li>
+      <li>Ad ve e-posta yalnızca kendin yazarsan birlikte gönderilir ve yalnızca sana yanıt vermek için kullanılır.</li>
+      <li>Geliştiricinin yanıtlarını uygulama içinde okuyabilirsin.</li>
+      <li>Gönderdiğin geri bildirimin silinmesini istersen aşağıdaki iletişim bilgilerinden bize bildir.</li>
+    </ul>
+
+    <h2>6. Üçüncü Taraflara Verme ve Reklam</h2>
+    <ul>
+      <li>Uygulama kişisel bilgilerini satmaz ve üçüncü taraflara vermez.</li>
+      <li>Uygulama reklam göstermez ve seni izlemez.</li>
+    </ul>
+
+    <h2>7. Verilerin Saklanması ve Silinmesi</h2>
+    <ul>
+      <li>Tüm kayıtlar cihazında ve kendi iCloud'unda saklanır; ayak izlerini ve günlüklerini
+          uygulama içinde kendin silebilirsin.</li>
+      <li><strong>Uygulamayı silersen</strong> cihazda saklanan tüm veriler (konum, fotoğraf, günlük) de silinir.
+          iCloud'da saklanan kopyalar iOS Ayarlar uygulamasındaki iCloud yönetim ekranından silinebilir.</li>
+      <li>Geliştirici konumunu, fotoğraflarını veya günlüğünü saklamadığı için bu verileri görüntüleyemez ya da
+          geri getiremez.</li>
+      <li>Anonim kullanım istatistikleri seninle ilişkilendirilebilecek bir bilgi içermediğinden tek tek silme talepleri işleme alınamaz.
+          Ancak uygulamayı sildiğin andan itibaren hiçbir şey toplanmaz.</li>
+    </ul>
+
+    <h2>8. Çocukların Kişisel Verileri</h2>
+    <p>
+      Uygulama seni tanımlayabilecek bilgi toplamaz; bu nedenle belirli bir yaş grubuna yönelik veri toplamaz.
+      Tüm veriler yalnızca cihazında kalır.
+    </p>
+
+    <h2>9. Politikadaki Değişiklikler</h2>
+    <p>
+      Bu politika, mevzuattaki veya uygulama özelliklerindeki değişikliklere göre güncellenebilir; değişiklik olduğunda bu sayfa güncellenerek duyurulur.
+    </p>
+
+    <h2>10. İletişim</h2>
+    <p>
+      Kişisel verilerin işlenmesiyle ilgili sorularını aşağıdan iletebilirsin.<br />
+      E-posta: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a><br />
+      Destek sayfası: <a href="support.html">Destek / İletişim</a>
+    </p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) · 27 Ağustos 2026 tarihinden itibaren geçerli
+    </footer>
+  </div>
+</body>
+</html>
