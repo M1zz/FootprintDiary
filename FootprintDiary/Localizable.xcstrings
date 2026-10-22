@@ -74,6 +74,12 @@
             "state" : "translated",
             "value" : "%@ · Следы %lld/%lld"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · รอยเท้า %lld/%lld"
+          }
         }
       }
     },
@@ -149,6 +155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пройдено %@ за %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เดิน %@ ใช้เวลา %@"
           }
         }
       }
@@ -226,6 +238,12 @@
             "state" : "translated",
             "value" : "Пройдено %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เดิน %@"
+          }
         }
       }
     },
@@ -301,6 +319,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Собрано: %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เก็บ %@ แล้ว"
           }
         }
       }
@@ -378,6 +402,12 @@
             "state" : "translated",
             "value" : "Символ: %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สัญลักษณ์ %@"
+          }
         }
       }
     },
@@ -453,6 +483,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, видов: %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ %lld แบบ"
           }
         }
       }
@@ -530,6 +566,12 @@
             "state" : "translated",
             "value" : "×%@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ เท่า"
+          }
         }
       }
     },
@@ -605,6 +647,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Меньше всего вы ходили в направлении: %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทิศ%@เดินน้อยที่สุด"
           }
         }
       }
@@ -682,6 +730,12 @@
             "state" : "translated",
             "value" : "До места %lld м"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ห่างออกไป %lld ม."
+          }
         }
       }
     },
@@ -757,6 +811,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "В пределах %lld м затвор открывается"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่ออยู่ในระยะ %lld ม. ชัตเตอร์จะเปิด"
           }
         }
       }
@@ -834,6 +894,12 @@
             "state" : "translated",
             "value" : "Видов: %lld"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld แบบ"
+          }
         }
       }
     },
@@ -909,6 +975,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Мест: %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld แห่ง"
           }
         }
       }
@@ -986,6 +1058,12 @@
             "state" : "translated",
             "value" : "%lld раз"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ครั้ง"
+          }
         }
       }
     },
@@ -1061,6 +1139,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выходов: %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ออกไป %lld ครั้ง"
           }
         }
       }
@@ -1138,6 +1222,12 @@
             "state" : "translated",
             "value" : "Открытие № %lld"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การค้นพบครั้งที่ %lld"
+          }
         }
       }
     },
@@ -1213,6 +1303,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дойти с AR"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไปด้วย AR"
           }
         }
       }
@@ -1291,6 +1387,12 @@
             "state" : "translated",
             "value" : "Блокировка Face ID"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ล็อกด้วย Face ID"
+          }
         }
       }
     },
@@ -1367,6 +1469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Заблокируйте приложение с помощью Face ID или Touch ID, чтобы защитить свои маршруты и дневник."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ล็อกแอปด้วย Face ID หรือ Touch ID เพื่อปกป้องที่ที่คุณเดินและไดอารี่"
           }
         }
       }
@@ -1445,6 +1553,12 @@
             "state" : "translated",
             "value" : "Спросите Siri, сколько вы сегодня прошли."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ถาม Siri เพื่อดูระยะทางที่เดินวันนี้ได้ทันที"
+          }
         }
       }
     },
@@ -1521,6 +1635,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri и Команды"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri และคำสั่งลัด"
           }
         }
       }
@@ -1599,6 +1719,12 @@
             "state" : "translated",
             "value" : "VoiceOver зачитывает все кнопки и подробности карты и записей без пропусков и в правильном порядке."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver อ่านปุ่มและเนื้อหาในแผนที่และบันทึกให้ครบถ้วนตามลำดับที่เหมาะสม"
+          }
         }
       }
     },
@@ -1676,6 +1802,12 @@
             "state" : "translated",
             "value" : "VoiceOver удобнее"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้ VoiceOver ได้สะดวกขึ้น"
+          }
         }
       }
     },
@@ -1751,6 +1883,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нет штампов, подходящих к «%@»"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่มีตราประทับที่ตรงกับ \"%@\""
           }
         }
       }
@@ -1828,6 +1966,12 @@
             "state" : "translated",
             "value" : "Вы собирались сюда. Отметить как посещённое?"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่นี่คือที่ที่คุณตั้งใจจะไป ให้บันทึกเป็นที่ที่ไปมาแล้วไหม"
+          }
         }
       }
     },
@@ -1903,6 +2047,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ещё не посещено"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่ที่ยังไม่เคยไป"
           }
         }
       }
@@ -1980,6 +2130,12 @@
             "state" : "translated",
             "value" : "Хочу посетить"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่อยากไป"
+          }
         }
       }
     },
@@ -2055,6 +2211,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Место, отмеченное штампом как «хочу посетить»"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่ที่เคยประทับไว้ว่าอยากไป"
           }
         }
       }
@@ -2132,6 +2294,12 @@
             "state" : "translated",
             "value" : "Чаще всего отбрасывалось из-за: %@ (%lld раз). %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สาเหตุที่ถูกกันออกมากที่สุด: %@ (%lld ครั้ง) %@"
+          }
         }
       }
     },
@@ -2207,6 +2375,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Категория"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หมวดหมู่"
           }
         }
       }
@@ -2284,6 +2458,12 @@
             "state" : "translated",
             "value" : "Компас первопроходца"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เข็มทิศนักบุกเบิก"
+          }
         }
       }
     },
@@ -2359,6 +2539,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пропустить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ข้าม"
           }
         }
       }
@@ -2436,6 +2622,12 @@
             "state" : "translated",
             "value" : "Запись прогулок"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกการเดิน"
+          }
         }
       }
     },
@@ -2511,6 +2703,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Запись прогулок выключена. Даже если вы идёте, след не останется."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การบันทึกการเดินปิดอยู่ ต่อให้เดินก็จะไม่เหลือเส้นทาง"
           }
         }
       }
@@ -2588,6 +2786,12 @@
             "state" : "translated",
             "value" : "Штампы, поставленные на прогулке, накапливаются здесь по порядку времени.\nМеста, где вы задержались, сохраняются сами, даже без штампа."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตราประทับที่ประทับระหว่างเดินจะสะสมที่นี่ตามลำดับเวลา\nที่ที่แวะอยู่จะถูกเก็บไว้เองโดยไม่ต้องประทับ"
+          }
         }
       }
     },
@@ -2663,6 +2867,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Места, куда дошли пешком"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สถานที่ที่เดินไปถึง"
           }
         }
       }
@@ -2740,6 +2950,12 @@
             "state" : "translated",
             "value" : "Дойдя пешком, вы сможете сделать там фото"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อเดินไปถึง จะถ่ายรูปไว้ที่นั่นได้"
+          }
         }
       }
     },
@@ -2816,6 +3032,12 @@
             "state" : "translated",
             "value" : "Если вы прошли путь, а линия на карте не появилась, здесь можно узнать причину."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หากเดินแล้วแต่แผนที่ไม่มีเส้นปรากฏ ดูสาเหตุได้ที่นี่"
+          }
         }
       }
     },
@@ -2891,6 +3113,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пока вы идёте, пройденные пути накладываются друг на друга по порядку."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อเดิน เส้นทางที่ผ่านมาจะซ้อนทับกันตามลำดับ"
           }
         }
       }
@@ -2969,6 +3197,12 @@
             "state" : "translated",
             "value" : "Сохраняйте пути и дневник в файл и восстанавливайте их позже."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกเส้นทางที่เดินและไดอารี่เป็นไฟล์ แล้วนำกลับมาใช้ภายหลังได้"
+          }
         }
       }
     },
@@ -3044,6 +3278,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "На карте остаются только пройденные пути и штампы за выбранный период."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บนแผนที่จะเหลือเฉพาะเส้นทางที่เดินและตราประทับที่ประทับในช่วงเวลาที่เลือก"
           }
         }
       }
@@ -3121,6 +3361,12 @@
             "state" : "translated",
             "value" : "Не интересно"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่สนใจ"
+          }
         }
       }
     },
@@ -3196,6 +3442,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Не нужно"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่เป็นไร"
           }
         }
       }
@@ -3273,6 +3525,12 @@
             "state" : "translated",
             "value" : "Смотреть, как рисуется"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูการวาด"
+          }
         }
       }
     },
@@ -3348,6 +3606,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Карта-рисунок"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แผนที่ภาพวาด"
           }
         }
       }
@@ -3426,6 +3690,12 @@
             "state" : "translated",
             "value" : "Даже при увеличенном шрифте экраны аккуратно перестраиваются, а не обрезаются."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แม้ขยายขนาดตัวอักษร หน้าจอก็ไม่ถูกตัด แต่จัดวางใหม่ให้ดูสบายตา"
+          }
         }
       }
     },
@@ -3501,6 +3771,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Смотреть за период"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูตามช่วงเวลา"
           }
         }
       }
@@ -3578,6 +3854,12 @@
             "state" : "translated",
             "value" : "Режим записи"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วิธีบันทึก"
+          }
         }
       }
     },
@@ -3653,6 +3935,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Состояние записи"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สถานะการบันทึก"
           }
         }
       }
@@ -3730,6 +4018,12 @@
             "state" : "translated",
             "value" : "Посмотреть состояние записи"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูสถานะการบันทึก"
+          }
         }
       }
     },
@@ -3805,6 +4099,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вернуть картинку по умолчанию"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กลับไปใช้ภาพเริ่มต้น"
           }
         }
       }
@@ -3882,6 +4182,12 @@
             "state" : "translated",
             "value" : "Выключенные экраны всегда можно открыть через «Смотреть всё вместе» выше. Кнопки штампов и настроек видны всегда."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หน้าจอที่ปิดไว้ยังเปิดได้ตลอดจาก \"ดูรวม\" ด้านบน ปุ่มตราประทับและปุ่มตั้งค่าจะแสดงเสมอ"
+          }
         }
       }
     },
@@ -3957,6 +4263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Конец"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สิ้นสุด"
           }
         }
       }
@@ -4034,6 +4346,12 @@
             "state" : "translated",
             "value" : "Позже"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไว้ทีหลัง"
+          }
         }
       }
     },
@@ -4109,6 +4427,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Хранится только в вашем личном iCloud. Другие люди этого не видят."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จัดเก็บไว้ใน iCloud ส่วนตัวของคุณเท่านั้น คนอื่นมองไม่เห็น"
           }
         }
       }
@@ -4187,6 +4511,12 @@
             "state" : "translated",
             "value" : "Стереть все мои записи разом"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลบบันทึกของฉันทั้งหมดในครั้งเดียว"
+          }
         }
       }
     },
@@ -4262,6 +4592,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Контур моего района"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เส้นขอบย่านของฉัน"
           }
         }
       }
@@ -4339,6 +4675,12 @@
             "state" : "translated",
             "value" : "Моя карта"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แผนที่ของฉัน"
+          }
         }
       }
     },
@@ -4414,6 +4756,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Открыть мою карту"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดแผนที่ของฉัน"
           }
         }
       }
@@ -4491,6 +4839,12 @@
             "state" : "translated",
             "value" : "Как рисуется ваша карта"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูแผนที่ของฉันถูกวาด"
+          }
         }
       }
     },
@@ -4566,6 +4920,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Предпросмотр рисования вашей карты"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตัวอย่างการวาดแผนที่ของฉัน"
           }
         }
       }
@@ -4643,6 +5003,12 @@
             "state" : "translated",
             "value" : "Пути, которые я нарисовал"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เส้นทางที่ฉันวาด"
+          }
         }
       }
     },
@@ -4718,6 +5084,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Места, где я ставил штампы"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่ที่ฉันประทับตราไว้"
           }
         }
       }
@@ -4795,6 +5167,12 @@
             "state" : "translated",
             "value" : "Нажмите, чтобы увидеть карту сквозь бумагу"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะเพื่อให้เห็นแผนที่ทะลุขึ้นมา"
+          }
         }
       }
     },
@@ -4870,6 +5248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажмите, чтобы поставить штамп на текущем месте"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะเพื่อประทับตำแหน่งปัจจุบัน"
           }
         }
       }
@@ -4947,6 +5331,12 @@
             "state" : "translated",
             "value" : "Нужно подтвердить, были ли вы в %lld местах"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ขอให้ยืนยันว่าไปจริงหรือไม่ %lld แห่ง"
+          }
         }
       }
     },
@@ -5022,6 +5412,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Посещений"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จำนวนครั้งที่ไป"
           }
         }
       }
@@ -5099,6 +5495,12 @@
             "state" : "translated",
             "value" : "Был там"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไปมาแล้ว"
+          }
         }
       }
     },
@@ -5174,6 +5576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Нажмите ещё раз, чтобы вернуться к бумаге. Удобно, когда нужно понять, где вы."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะอีกครั้งเพื่อกลับเป็นกระดาษ ใช้ตอนอยากเช็กว่าตอนนี้อยู่แถวไหน"
           }
         }
       }
@@ -5251,6 +5659,12 @@
             "state" : "translated",
             "value" : "Переснять"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ถ่ายใหม่"
+          }
         }
       }
     },
@@ -5326,6 +5740,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Место, куда вы вернулись"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่ที่กลับมาอีกครั้ง"
           }
         }
       }
@@ -5403,6 +5823,12 @@
             "state" : "translated",
             "value" : "Это место отмечено как постоянное"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่นี่ถูกลงทะเบียนเป็นที่ประจำ"
+          }
         }
       }
     },
@@ -5478,6 +5904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Закрыть"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปิด"
           }
         }
       }
@@ -5556,6 +5988,12 @@
             "state" : "translated",
             "value" : "Даже при повышенной контрастности или трудностях с различением цветов вы разглядите пути и штампы на карте."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แม้เพิ่มคอนทราสต์หรือแยกสีได้ยาก ก็ยังมองเห็นเส้นทางและตราประทับบนแผนที่ได้"
+          }
         }
       }
     },
@@ -5632,6 +6070,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Пользуйтесь приложением на большем числе языков."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ให้ใช้แอปได้หลายภาษามากขึ้น"
           }
         }
       }
@@ -5710,6 +6154,12 @@
             "state" : "translated",
             "value" : "Больше языков"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ภาษาเพิ่มเติม"
+          }
         }
       }
     },
@@ -5785,6 +6235,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Добавьте пару слов (необязательно)"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มข้อความ (ไม่ใส่ก็ได้)"
           }
         }
       }
@@ -5862,6 +6318,12 @@
             "state" : "translated",
             "value" : "В коллекции можно посмотреть собранные до сих пор следы"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูรอยเท้าที่สะสมมาจนถึงตอนนี้ได้ในคอลเลกชัน"
+          }
         }
       }
     },
@@ -5937,6 +6399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Это нельзя отменить."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ย้อนกลับไม่ได้"
           }
         }
       }
@@ -6014,6 +6482,12 @@
             "state" : "translated",
             "value" : "Нажмите, чтобы поставить на паузу или продолжить"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แตะเพื่อหยุดชั่วคราวหรือเล่นต่อ"
+          }
         }
       }
     },
@@ -6089,6 +6563,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Посещено мест: %lld"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แวะ %lld แห่ง"
           }
         }
       }
@@ -6166,6 +6646,12 @@
             "state" : "translated",
             "value" : "Чётких объектов не найдено, поэтому фон убрать не удалось. Подойдите ближе к предмету и снимите ещё раз."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่พบสิ่งที่ชัดเจนจึงลบพื้นหลังไม่ได้ ลองถ่ายใหม่โดยเข้าใกล้วัตถุมากขึ้น"
+          }
         }
       }
     },
@@ -6241,6 +6727,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Последнее посещение"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ครั้งล่าสุดที่ไป"
           }
         }
       }
@@ -6318,6 +6810,12 @@
             "state" : "translated",
             "value" : "Карта тушью"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แผนที่หมึก"
+          }
         }
       }
     },
@@ -6393,6 +6891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Заметка"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกช่วยจำ"
           }
         }
       }
@@ -6470,6 +6974,12 @@
             "state" : "translated",
             "value" : "Смотреть всё вместе"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูรวม"
+          }
         }
       }
     },
@@ -6545,6 +7055,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Размещаем воду и горы"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังวางแหล่งน้ำและภูเขา"
           }
         }
       }
@@ -6622,6 +7138,12 @@
             "state" : "translated",
             "value" : "Не открыто"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยังไม่พบ"
+          }
         }
       }
     },
@@ -6697,6 +7219,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Следы"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รอยเท้า"
           }
         }
       }
@@ -6774,6 +7302,12 @@
             "state" : "translated",
             "value" : "Таймлапс следов"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไทม์แลปส์รอยเท้า"
+          }
         }
       }
     },
@@ -6850,6 +7384,12 @@
             "state" : "translated",
             "value" : "Открытая территория: %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "พื้นที่ที่เปิดแล้ว %@"
+          }
         }
       }
     },
@@ -6925,6 +7465,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Показать карту под бумагой"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ให้เห็นแผนที่พื้นหลัง"
           }
         }
       }
@@ -7003,6 +7549,12 @@
             "state" : "translated",
             "value" : "Резервное копирование и экспорт"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สำรองและส่งออก"
+          }
         }
       }
     },
@@ -7078,6 +7630,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Причины отбраковки"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เหตุผลที่ถูกทิ้ง"
           }
         }
       }
@@ -7155,6 +7713,12 @@
             "state" : "translated",
             "value" : "Версия %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เวอร์ชัน %@"
+          }
         }
       }
     },
@@ -7230,6 +7794,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вид"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มุมมอง"
           }
         }
       }
@@ -7308,6 +7878,12 @@
             "state" : "translated",
             "value" : "Удобные цвета и контраст"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สีและคอนทราสต์ที่สบายตา"
+          }
         }
       }
     },
@@ -7383,6 +7959,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Показываемые пути"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เส้นทางที่แสดง"
           }
         }
       }
@@ -7460,6 +8042,12 @@
             "state" : "translated",
             "value" : "Чистый лист сам не знает, что где находится.\nВаше нынешнее местоположение станет **первой точкой отсчёта**."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กระดาษเปล่าไม่อาจรู้เองว่าตรงไหนคือที่ไหน\nตำแหน่งที่คุณอยู่ตอนนี้จะกลายเป็น **จุดอ้างอิงแรก**"
+          }
         }
       }
     },
@@ -7535,6 +8123,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Начинаем с чистого листа"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เริ่มจากกระดาษเปล่า"
           }
         }
       }
@@ -7612,6 +8206,12 @@
             "state" : "translated",
             "value" : "Статистика использования (для разработчика)"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สถิติการใช้งาน (สำหรับนักพัฒนา)"
+          }
         }
       }
     },
@@ -7687,6 +8287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Фото"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รูปภาพ"
           }
         }
       }
@@ -7764,6 +8370,12 @@
             "state" : "translated",
             "value" : "Удалить фото"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลบรูปภาพ"
+          }
         }
       }
     },
@@ -7839,6 +8451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сделать снимок"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ถ่ายภาพ"
           }
         }
       }
@@ -7916,6 +8534,12 @@
             "state" : "translated",
             "value" : "Добавить фото"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มรูปภาพ"
+          }
         }
       }
     },
@@ -7991,6 +8615,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Добавляем фото"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังใส่รูปภาพ"
           }
         }
       }
@@ -8068,6 +8698,12 @@
             "state" : "translated",
             "value" : "Не удалось сохранить фото"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกรูปภาพไม่ได้"
+          }
         }
       }
     },
@@ -8143,6 +8779,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Удалить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลบ"
           }
         }
       }
@@ -8221,6 +8863,12 @@
             "state" : "translated",
             "value" : "Напоминание о прогулке"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แจ้งเตือนการเดินเล่น"
+          }
         }
       }
     },
@@ -8296,6 +8944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Новых мест, куда вы дошли: %lld — они отметятся на маршруте"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สถานที่ที่เพิ่งไปถึง %lld แห่งจะถูกประทับบนเส้นทางที่ผ่าน"
           }
         }
       }
@@ -8373,6 +9027,12 @@
             "state" : "translated",
             "value" : "Что нового"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มีอะไรใหม่"
+          }
         }
       }
     },
@@ -8448,6 +9108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Настройки"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การตั้งค่า"
           }
         }
       }
@@ -8525,6 +9191,12 @@
             "state" : "translated",
             "value" : "Включите камеру в Настройки > 벅뚜벅뚜."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โปรดเปิดกล้องที่แอปการตั้งค่า > 벅뚜벅뚜"
+          }
         }
       }
     },
@@ -8600,6 +9272,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Открыть настройки"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดการตั้งค่า"
           }
         }
       }
@@ -8677,6 +9355,12 @@
             "state" : "translated",
             "value" : "Включить разрешения в настройках"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดสิทธิ์ในการตั้งค่า"
+          }
         }
       }
     },
@@ -8752,6 +9436,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Можно открыть и в настройках"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิดจากการตั้งค่าได้เช่นกัน"
           }
         }
       }
@@ -8829,6 +9519,12 @@
             "state" : "translated",
             "value" : "Сбросить подсчёт"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รีเซ็ตการนับ"
+          }
         }
       }
     },
@@ -8904,6 +9600,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Весь мир уже нарисовали другие карты.\nЗдесь останутся **только места, где вы прошли своими ногами**."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โลกถูกแผนที่อื่นวาดไว้หมดแล้ว\nที่นี่จะเหลือ **เพียงที่ที่คุณก้าวผ่านด้วยสองเท้าของตัวเอง**"
           }
         }
       }
@@ -8981,6 +9683,12 @@
             "state" : "translated",
             "value" : "Собранные споты"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สปอตที่สะสมไว้"
+          }
         }
       }
     },
@@ -9056,6 +9764,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Штамп"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตราประทับ"
           }
         }
       }
@@ -9133,6 +9847,12 @@
             "state" : "translated",
             "value" : "Начало"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เริ่ม"
+          }
         }
       }
     },
@@ -9208,6 +9928,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Начать"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เริ่มต้น"
           }
         }
       }
@@ -9285,6 +10011,12 @@
             "state" : "translated",
             "value" : "Символ"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สัญลักษณ์"
+          }
         }
       }
     },
@@ -9360,6 +10092,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Увеличить символ"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูสัญลักษณ์ขยาย"
           }
         }
       }
@@ -9438,6 +10176,12 @@
             "state" : "translated",
             "value" : "Дописать начатый дневник"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เขียนไดอารี่ที่ค้างอยู่ต่อ"
+          }
         }
       }
     },
@@ -9513,6 +10257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Смахивайте, как карточки, и дважды нажмите, чтобы увеличить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปัดเพื่อพลิกเหมือนไพ่ แตะสองครั้งเพื่อดูขยาย"
           }
         }
       }
@@ -9590,6 +10340,12 @@
             "state" : "translated",
             "value" : "Нет"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่ใช่"
+          }
         }
       }
     },
@@ -9662,6 +10418,12 @@
           }
         },
         "ru" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "th" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -9742,6 +10504,12 @@
             "state" : "translated",
             "value" : "Пока нет"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยังไม่"
+          }
         }
       }
     },
@@ -9817,6 +10585,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ещё не посещены"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่ที่ยังไม่เคยไป"
           }
         }
       }
@@ -9894,6 +10668,12 @@
             "state" : "translated",
             "value" : "Вы здесь ещё не были. Место останется в «Хочу посетить» и станет посещённым, когда вы дойдёте."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยังไม่เคยไปที่นี่ จะเหลือเป็น \"ที่อยากไป\" และเมื่อไปถึงจะกลายเป็นที่ที่ไปมาแล้ว"
+          }
         }
       }
     },
@@ -9969,6 +10749,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отброшенных точек пока нет"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยังไม่มีจุดที่ถูกทิ้ง"
           }
         }
       }
@@ -10046,6 +10832,12 @@
             "state" : "translated",
             "value" : "Ещё нет"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยังก่อน"
+          }
         }
       }
     },
@@ -10121,6 +10913,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Подсказки"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คำแนะนำ"
           }
         }
       }
@@ -10199,6 +10997,12 @@
             "state" : "translated",
             "value" : "Приложением можно пользоваться и на английском."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้แอปเป็นภาษาอังกฤษได้ด้วย"
+          }
         }
       }
     },
@@ -10274,6 +11078,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Откройте приложение один раз"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "โปรดเปิดแอปสักครั้ง"
           }
         }
       }
@@ -10351,6 +11161,12 @@
             "state" : "translated",
             "value" : "Какой день"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วันไหน"
+          }
         }
       }
     },
@@ -10426,6 +11242,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "В любом случае все полученные координаты сохраняются. Просто неточные точки не рисуются на карте."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่ว่าจะเลือกแบบไหน ตำแหน่งที่ได้รับมาทั้งหมดจะถูกบันทึกไว้ เพียงแต่จุดที่แม่นยำต่ำจะไม่ถูกวาดบนแผนที่"
           }
         }
       }
@@ -10503,6 +11325,12 @@
             "state" : "translated",
             "value" : "Анонимно считается только то, какие экраны используются. Места, где вы ходили, и записи дневника не отправляются."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "นับเฉพาะว่ามีการใช้หน้าจอใดบ้างแบบไม่ระบุตัวตน ที่ที่คุณเดินและข้อความในไดอารี่จะไม่ถูกส่ง"
+          }
         }
       }
     },
@@ -10578,6 +11406,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вы пробыли здесь %@"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "คุณอยู่ที่นี่ %@"
           }
         }
       }
@@ -10655,6 +11489,12 @@
             "state" : "translated",
             "value" : "Оставить это место"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เก็บที่นี่ไว้"
+          }
         }
       }
     },
@@ -10730,6 +11570,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отметить здесь"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกไว้ตรงนี้"
           }
         }
       }
@@ -10807,6 +11653,12 @@
             "state" : "translated",
             "value" : "Не записывать это место?"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไม่บันทึกที่นี่ได้ไหม"
+          }
         }
       }
     },
@@ -10882,6 +11734,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Что это было за место?"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่นี่คือที่ไหนนะ"
           }
         }
       }
@@ -10959,6 +11817,12 @@
             "state" : "translated",
             "value" : "Экспорт в видео"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ส่งออกเป็นวิดีโอ"
+          }
         }
       }
     },
@@ -11034,6 +11898,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Создание видео %lld%%"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังสร้างวิดีโอ %lld%%"
           }
         }
       }
@@ -11112,6 +11982,12 @@
             "state" : "translated",
             "value" : "Поддержка английского"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รองรับภาษาอังกฤษ"
+          }
         }
       }
     },
@@ -11187,6 +12063,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Например: дом, работа, любимое кафе"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เช่น บ้าน ที่ทำงาน ร้านกาแฟประจำ"
           }
         }
       }
@@ -11264,6 +12146,12 @@
             "state" : "translated",
             "value" : "Сегодня %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วันนี้ %@"
+          }
         }
       }
     },
@@ -11339,6 +12227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Путь за сегодня"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เส้นทางที่ขีดวันนี้"
           }
         }
       }
@@ -11416,6 +12310,12 @@
             "state" : "translated",
             "value" : "Фото добавлено в сегодняшний дневник"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มรูปภาพลงในไดอารี่วันนี้แล้ว"
+          }
         }
       }
     },
@@ -11491,6 +12391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Воспроизвести сегодня"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เล่นของวันนี้"
           }
         }
       }
@@ -11568,6 +12474,12 @@
             "state" : "translated",
             "value" : "Сегодня вы ещё нигде не были"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วันนี้ยังไม่มีที่ที่ไปมา"
+          }
         }
       }
     },
@@ -11643,6 +12555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Сегодня остановок пока не было"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วันนี้ยังไม่มีที่ที่หยุดอยู่"
           }
         }
       }
@@ -11720,6 +12638,12 @@
             "state" : "translated",
             "value" : "Где вы сегодня побывали?"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วันนี้คุณไปสำรวจที่ไหนมาบ้าง"
+          }
         }
       }
     },
@@ -11795,6 +12719,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Следы сегодня"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รอยเท้าวันนี้"
           }
         }
       }
@@ -11872,6 +12802,12 @@
             "state" : "translated",
             "value" : "Исследования сегодня"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "การสำรวจวันนี้"
+          }
         }
       }
     },
@@ -11947,6 +12883,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Готово"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เสร็จสิ้น"
           }
         }
       }
@@ -12025,6 +12967,12 @@
             "state" : "translated",
             "value" : "Уменьшение движения"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลดการเคลื่อนไหว"
+          }
         }
       }
     },
@@ -12101,6 +13049,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "С включённым «Уменьшением движения» карта и эффекты на экране становятся спокойнее."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อเปิด \"ลดการเคลื่อนไหว\" แผนที่และเอฟเฟกต์บนหน้าจอจะนุ่มนวลขึ้น"
           }
         }
       }
@@ -12179,6 +13133,12 @@
             "state" : "translated",
             "value" : "При желании можно стереть в приложении все пройденные пути и дневник."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หากต้องการ ลบเส้นทางที่เดินและไดอารี่ทั้งหมดได้ในแอป"
+          }
         }
       }
     },
@@ -12254,6 +13214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Если выбрать для геопозиции «Всегда» и включить «Движение и фитнес», прогулки записываются, даже когда приложение закрыто."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตั้งตำแหน่งเป็น \"เสมอ\" และเปิด \"การเคลื่อนไหวและฟิตเนส\" แล้ว แม้ไม่ได้เปิดแอปก็จะบันทึกการเดินให้"
           }
         }
       }
@@ -12331,6 +13297,12 @@
             "state" : "translated",
             "value" : "За этот период нет следов"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ช่วงเวลานี้ไม่มีรอยเท้า"
+          }
         }
       }
     },
@@ -12406,6 +13378,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Смотреть этот период"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูช่วงเวลานี้"
           }
         }
       }
@@ -12483,6 +13461,12 @@
             "state" : "translated",
             "value" : "Места, снятые в этот день"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สถานที่ที่ถ่ายในวันนี้"
+          }
         }
       }
     },
@@ -12558,6 +13542,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "В этот день шаги не записаны"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วันนี้ไม่มีบันทึกการเดิน"
           }
         }
       }
@@ -12635,6 +13625,12 @@
             "state" : "translated",
             "value" : "В этот день нет следов"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วันนี้ไม่มีรอยเท้า"
+          }
         }
       }
     },
@@ -12710,6 +13706,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Удалить этот штамп"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลบตราประทับนี้"
           }
         }
       }
@@ -12787,6 +13789,12 @@
             "state" : "translated",
             "value" : "Использовать этот символ"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ใช้สัญลักษณ์นี้"
+          }
         }
       }
     },
@@ -12862,6 +13870,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Стереть следы в этом месте"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลบรอยเท้าของที่นี่"
           }
         }
       }
@@ -12939,6 +13953,12 @@
             "state" : "translated",
             "value" : "Название этого места (например: работа, любимое кафе)"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ชื่อของที่นี่ (เช่น ที่ทำงาน ร้านกาแฟประจำ)"
+          }
         }
       }
     },
@@ -13014,6 +14034,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поставьте первый штамп на этот лист"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ประทับตราแรกลงบนกระดาษแผ่นนี้"
           }
         }
       }
@@ -13091,6 +14117,12 @@
             "state" : "translated",
             "value" : "Название"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ชื่อ"
+          }
         }
       }
     },
@@ -13166,6 +14198,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дать название"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตั้งชื่อ"
           }
         }
       }
@@ -13243,6 +14281,12 @@
             "state" : "translated",
             "value" : "Добавить изображение"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เพิ่มรูปภาพ"
+          }
         }
       }
     },
@@ -13319,6 +14363,12 @@
             "state" : "translated",
             "value" : "А теперь отправляйтесь гулять"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทีนี้ลองออกไปเดินดู"
+          }
         }
       }
     },
@@ -13394,6 +14444,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "А теперь отправляйтесь гулять.\nМеста, где вы проходите, ложатся на этот лист точка за точкой."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ทีนี้ลองออกไปเดินดู\nที่ที่ผ่านจะถูกประทับลงบนกระดาษแผ่นนี้ทีละจุด"
           }
         }
       }
@@ -13472,6 +14528,12 @@
             "state" : "translated",
             "value" : "Если приложение закроется во время записи дневника, написанное сохранится."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หากแอปปิดขณะเขียนไดอารี่ สิ่งที่เขียนไว้ยังอยู่"
+          }
         }
       }
     },
@@ -13547,6 +14609,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Журнал"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึก"
           }
         }
       }
@@ -13624,6 +14692,12 @@
             "state" : "translated",
             "value" : "Когда **придёте в место, где бываете часто, поставьте там штамп ещё раз**.\nС двумя точками отсчёта даже чистый лист находит направление."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อ **ไปถึงที่ที่ไปบ่อยแล้ว ให้ประทับตราที่นั่นอีกครั้ง**\nเมื่อมีจุดอ้างอิงสองจุด แม้เป็นกระดาษเปล่าก็รู้ทิศทาง"
+          }
         }
       }
     },
@@ -13699,6 +14773,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Попробуйте чуть позже или нажмите на карту и удерживайте, чтобы поставить штамп где угодно."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ลองใหม่อีกครั้งในอีกสักครู่ หรือกดแผนที่ค้างไว้เพื่อประทับตรงจุดที่ต้องการ"
           }
         }
       }
@@ -13776,6 +14856,12 @@
             "state" : "translated",
             "value" : "Сохранить"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึก"
+          }
         }
       }
     },
@@ -13851,6 +14937,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Вернуться ко всему периоду"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กลับไปที่ทั้งช่วงเวลา"
           }
         }
       }
@@ -13928,6 +15020,12 @@
             "state" : "translated",
             "value" : "Подсчёт точек"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "นับจุด"
+          }
         }
       }
     },
@@ -14003,6 +15101,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Точки с низкой точностью тоже сохраняются. Сейчас они не рисуются на карте, но пригодятся, когда коррекция улучшится."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "จุดที่มีความแม่นยำต่ำก็ยังถูกบันทึกไว้ ตอนนี้ยังไม่วาดบนแผนที่ แต่จะนำมาใช้ได้เมื่อการปรับแก้ดีขึ้น"
           }
         }
       }
@@ -14080,6 +15184,12 @@
             "state" : "translated",
             "value" : "Текущее состояние"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สถานะปัจจุบัน"
+          }
         }
       }
     },
@@ -14155,6 +15265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ищем ваше местоположение"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "กำลังค้นหาตำแหน่งปัจจุบัน"
           }
         }
       }
@@ -14232,6 +15348,12 @@
             "state" : "translated",
             "value" : "Отметить это место"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ปักหมุดตรงนี้"
+          }
         }
       }
     },
@@ -14307,6 +15429,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поставить штамп на текущем месте"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ประทับตราที่ตำแหน่งปัจจุบัน"
           }
         }
       }
@@ -14384,6 +15512,12 @@
             "state" : "translated",
             "value" : "Поставить штамп здесь"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ประทับตรงนี้"
+          }
         }
       }
     },
@@ -14459,6 +15593,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Места, где вы проходите, ложатся на этот лист точка за точкой.\nПути, пройденные на машине или в метро, не рисуются."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่ที่ผ่านจะถูกประทับลงบนกระดาษแผ่นนี้ทีละจุด\nเส้นทางที่ผ่านด้วยรถยนต์หรือรถไฟใต้ดินจะไม่ถูกวาด"
           }
         }
       }
@@ -14536,6 +15676,12 @@
             "state" : "translated",
             "value" : "Кнопки карты выбираются в настройках"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกปุ่มแผนที่ในการตั้งค่า"
+          }
         }
       }
     },
@@ -14611,6 +15757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Стиль карты"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "รูปแบบแผนที่"
           }
         }
       }
@@ -14688,6 +15840,12 @@
             "state" : "translated",
             "value" : "Масштаб карты. Одно деление — %@"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "มาตราส่วนแผนที่ แถบหนึ่งเท่ากับ %@"
+          }
         }
       }
     },
@@ -14763,6 +15921,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Выберите, какие кнопки показывать на карте; выключенные экраны можно открыть прямо из настроек."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกปุ่มที่จะลอยบนแผนที่ และเปิดหน้าจอที่ปิดไว้ได้ทันทีจากการตั้งค่า"
           }
         }
       }
@@ -14840,6 +16004,12 @@
             "state" : "translated",
             "value" : "Места, отмеченные на карте заранее. Когда вы дойдёте, они станут посещёнными."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ที่ที่ประทับไว้ล่วงหน้าบนแผนที่ เมื่อไปถึงจะกลายเป็นที่ที่ไปมาแล้ว"
+          }
         }
       }
     },
@@ -14915,6 +16085,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Показывать на карте"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "แสดงบนแผนที่"
           }
         }
       }
@@ -14992,6 +16168,12 @@
             "state" : "translated",
             "value" : "Показать на карте"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูบนแผนที่"
+          }
         }
       }
     },
@@ -15067,6 +16249,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Так это выглядит на карте"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บนแผนที่จะมีหน้าตาแบบนี้"
           }
         }
       }
@@ -15144,6 +16332,12 @@
             "state" : "translated",
             "value" : "Стереть"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ล้าง"
+          }
         }
       }
     },
@@ -15219,6 +16413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Поддержка"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ช่วยเหลือ"
           }
         }
       }
@@ -15296,6 +16496,12 @@
             "state" : "translated",
             "value" : "Выберите что-нибудь, что может служить ориентиром, например дом или работу."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เลือกสิ่งที่เป็นจุดอ้างอิงได้ เช่น บ้านหรือที่ทำงาน"
+          }
         }
       }
     },
@@ -15371,6 +16577,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Снять"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ถ่าย"
           }
         }
       }
@@ -15448,6 +16660,12 @@
             "state" : "translated",
             "value" : "Дата штампа"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "วันที่ประทับ"
+          }
         }
       }
     },
@@ -15523,6 +16741,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Готово"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ประทับแล้ว"
           }
         }
       }
@@ -15600,6 +16824,12 @@
             "state" : "translated",
             "value" : "Пути, пройденные на машине или в метро, не рисуются.\nТолько ходьба оставляет точку за точкой."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เส้นทางที่ผ่านด้วยรถยนต์หรือรถไฟใต้ดินจะไม่ถูกวาด\nต้องเดินเท่านั้นจึงจะประทับทีละจุด"
+          }
         }
       }
     },
@@ -15675,6 +16905,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Остаётся только то, что в рамке, а фон стирается"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เหลือเฉพาะสิ่งที่อยู่ในกรอบ ส่วนพื้นหลังจะถูกลบ"
           }
         }
       }
@@ -15752,6 +16988,12 @@
             "state" : "translated",
             "value" : "Первое"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ครั้งแรก"
+          }
         }
       }
     },
@@ -15827,6 +17069,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Впервые пройденные пути"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เส้นทางที่เดินเป็นครั้งแรก"
           }
         }
       }
@@ -15904,6 +17152,12 @@
             "state" : "translated",
             "value" : "Вы впервые ступаете на это место"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เป็นที่ที่คุณมาเหยียบเป็นครั้งแรก"
+          }
         }
       }
     },
@@ -15979,6 +17233,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Отмена"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยกเลิก"
           }
         }
       }
@@ -16056,6 +17316,12 @@
             "state" : "translated",
             "value" : "Включить"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เปิด"
+          }
         }
       }
     },
@@ -16131,6 +17397,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Увеличить"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ดูขยาย"
           }
         }
       }
@@ -16209,6 +17481,12 @@
             "state" : "translated",
             "value" : "Экраны для крупного шрифта"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หน้าจอสำหรับตัวอักษรขนาดใหญ่"
+          }
         }
       }
     },
@@ -16284,6 +17562,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Таймлапс"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไทม์แลปส์"
           }
         }
       }
@@ -16361,6 +17645,12 @@
             "state" : "translated",
             "value" : "Исследовать"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "สำรวจ"
+          }
         }
       }
     },
@@ -16437,6 +17727,12 @@
             "state" : "translated",
             "value" : "Журнал исследований"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกการสำรวจ"
+          }
         }
       }
     },
@@ -16512,6 +17808,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Дневник исследований"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บันทึกการสำรวจ"
           }
         }
       }
@@ -16590,6 +17892,12 @@
             "state" : "translated",
             "value" : "Экран складного iPhone"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หน้าจอ iPhone แบบพับได้"
+          }
         }
       }
     },
@@ -16667,6 +17975,12 @@
             "state" : "translated",
             "value" : "На складном iPhone карта и записи делятся на две панели."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "บน iPhone แบบพับได้ ดูแผนที่และบันทึกแบ่งเป็นสองส่วนได้"
+          }
         }
       }
     },
@@ -16742,6 +18056,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Таймлапс дня"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ไทม์แลปส์ประจำวัน"
           }
         }
       }
@@ -16820,6 +18140,12 @@
             "state" : "translated",
             "value" : "В конце дня уведомление расскажет, какой путь вы прошли сегодня."
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "เมื่อสิ้นสุดวัน จะแจ้งเตือนเส้นทางที่คุณเดินวันนี้"
+          }
         }
       }
     },
@@ -16895,6 +18221,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Если вы пробудете на одном месте больше %lld мин.,\nэто место появится в сегодняшних следах."
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "หากอยู่ที่เดิมนานเกิน %lld นาที\nที่นั่นจะปรากฏในรอยเท้าวันนี้"
           }
         }
       }
@@ -16972,6 +18304,12 @@
             "state" : "translated",
             "value" : "Ваше местоположение пока не найдено"
           }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ยังหาตำแหน่งปัจจุบันไม่พบ"
+          }
         }
       }
     },
@@ -17047,6 +18385,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ОК"
+          }
+        },
+        "th" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ตกลง"
           }
         }
       }
