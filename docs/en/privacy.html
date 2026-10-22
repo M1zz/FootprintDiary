@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --border: #e5e7eb; --note-bg: #eef7ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36; --note-bg: #1a2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; padding-top: 8px; }
+    p, li { color: var(--text); }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    .note {
+      background: var(--note-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+    }
+    .note strong { color: var(--accent); }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--card); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../privacy.html" hreflang="ko" lang="ko">한국어</a> · <a href="privacy.html" hreflang="en" lang="en" aria-current="true">English</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← 벅뚜벅뚜 Home</a>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective date: August 27, 2026</p>
+
+    <p>
+      <strong>벅뚜벅뚜 (FootprintDiary)</strong> (the "App") takes your privacy seriously.
+      The App is designed to store your movement history and diary <strong>only on your own device and in your own iCloud account</strong>.
+      The App's developer cannot access your location, photos, or diary.
+    </p>
+
+    <div class="note">
+      <strong>Key summary</strong> — The App has no sign-up and no accounts.
+      Location, photos, and diary entries are stored only on your device and in <strong>your own iCloud</strong>, and the developer cannot see them.
+      To keep improving the App, however, the developer collects <strong>anonymous usage statistics</strong> that cannot identify you
+      (such as how many times the App is opened and which screens are used). These never include location or anything you write;
+      see section 4 below for details.
+    </div>
+
+    <h2>1. Information We Collect</h2>
+    <p>The App processes the information below <strong>only inside your device</strong> and does not send it to the developer or to third-party servers.</p>
+    <table>
+      <tr><th>Item</th><th>Purpose</th><th>Where it is stored</th></tr>
+      <tr><td>Location data (visited spots, movement coordinates)</td><td>Showing footprints on the map and recording your route</td><td>On your device (SwiftData)</td></tr>
+      <tr><td>Motion data</td><td>Telling walking from vehicle travel (vehicle travel is left out of the record)</td><td>Used immediately on your device and not stored</td></tr>
+      <tr><td>Photos</td><td>Attaching to diary entries</td><td>On your device (SwiftData)</td></tr>
+      <tr><td>Camera (photos you take)</td><td>Saving a photo of a spot, and cutting out what you photograph to make a sticker for your map (the cut-out is done on your device)</td><td>On your device (SwiftData)</td></tr>
+      <tr><td>Diary text, place names</td><td>Records you write yourself</td><td>On your device (SwiftData)</td></tr>
+    </table>
+    <p>
+      If you turn on iCloud sync, the records above are also stored in <strong>your own private iCloud database</strong>
+      and carry over to other devices signed in to the same Apple account. This storage belongs to you,
+      and the developer has no access to it.
+    </p>
+    <p>
+      Separately from the items above, the developer collects the <strong>anonymous usage statistics</strong> described in section 4 below.
+    </p>
+
+    <h2>2. Use of Location Data</h2>
+    <ul>
+      <li>The App uses iOS's <strong>Visit detection</strong> and <strong>significant location change</strong> features
+          to record your movements between places automatically while using as little battery as possible.</li>
+      <li>For automatic recording, the App may ask for "Always" location permission. You can change or withdraw
+          this permission at any time in the iOS Settings app.</li>
+      <li>If you don't allow location permission, automatic recording won't work, but the rest of the App's features remain available.</li>
+    </ul>
+
+    <h2>3. Third-Party Services (Apple)</h2>
+    <p>
+      To turn coordinates into human-readable addresses and place names, the App uses Apple's
+      <strong>reverse geocoding (CLGeocoder)</strong> and map display (MapKit).
+      In this process, the relevant coordinates may be sent to Apple for processing, which is governed by
+      <a href="https://www.apple.com/legal/privacy/">Apple's Privacy Policy</a>.
+      The App's developer has no access to this data.
+    </p>
+
+    <h2>4. Anonymous Usage Statistics</h2>
+    <p>
+      To improve the App, the developer needs to know which features are actually used, so the information below is collected
+      <strong>in a form that cannot identify you</strong>. It is stored in the developer's own
+      Apple CloudKit space, which is separate from the personal iCloud where your records are kept.
+    </p>
+    <table>
+      <tr><th>What we collect</th><th>What we do not collect</th></tr>
+      <tr>
+        <td>
+          Number of App launches, days since installation, App version, iOS version, device language setting<br>
+          Which features were used (placing stamps, exporting video, writing diary entries, naming places, opening the calendar)<br>
+          Rough scale (total distance walked in km, number of days with recorded steps, counts of stamps, places, and diary entries)
+        </td>
+        <td>
+          Location coordinates (not a single one is sent)<br>
+          Diary text, place names, photos<br>
+          Name, email, phone number, Apple account, or anything else that could identify you<br>
+          Advertising identifier (IDFA), device unique identifiers
+        </td>
+      </tr>
+    </table>
+    <ul>
+      <li>To tell installations apart, the App uses a single <strong>randomly generated value</strong> created at installation.
+          This value has no connection to your device or Apple account, and if you delete and reinstall the App,
+          it will not link to the previous value.</li>
+      <li>The App <strong>uses no advertising SDKs, third-party analytics SDKs, or tracking tools.</strong>
+          The statistics above are stored only in Apple CloudKit by code the developer wrote.</li>
+      <li>These statistics are used only to improve the App, and are never sold or provided to third parties.</li>
+    </ul>
+
+    <h2>5. Sending Feedback</h2>
+    <p>
+      <strong>Send Feedback</strong> in the App's settings works only when you write and send something yourself.
+      What you send is stored in the developer's Apple CloudKit space and is used only for the developer to read and reply.
+    </p>
+    <ul>
+      <li>What is sent: the feedback type you chose and the text you wrote, plus App version, iOS version, device type, and device language setting</li>
+      <li>Your name and email are sent only if you enter them yourself, and are used only to reply to you.</li>
+      <li>Replies from the developer can be read inside the App.</li>
+      <li>If you want feedback you sent to be deleted, let us know through the contact below.</li>
+    </ul>
+
+    <h2>6. Third-Party Disclosure and Advertising</h2>
+    <ul>
+      <li>The App does not sell your personal information or provide it to third parties.</li>
+      <li>The App shows no ads and does not track you.</li>
+    </ul>
+
+    <h2>7. Data Retention and Deletion</h2>
+    <ul>
+      <li>All records are stored on your device and in your own iCloud, and you can delete footprints and
+          diary entries yourself inside the App.</li>
+      <li><strong>If you delete the App</strong>, all data stored on the device (location, photos, diary) is deleted with it.
+          Copies stored in iCloud can be removed from the iCloud management screen in the iOS Settings app.</li>
+      <li>Because the developer holds none of your location, photos, or diary, we cannot view or
+          recover that data for you.</li>
+      <li>Anonymous usage statistics contain nothing that can be linked to you, so individual deletion requests cannot be handled.
+          However, once you delete the App, nothing further is collected from that point on.</li>
+    </ul>
+
+    <h2>8. Children's Privacy</h2>
+    <p>
+      The App collects no information that can identify you, so it does not collect data targeted at any particular age group.
+      All data stays on your own device.
+    </p>
+
+    <h2>9. Changes to This Policy</h2>
+    <p>
+      This policy may be revised to reflect changes in law or App features. When it changes, we will update this page to announce it.
+    </p>
+
+    <h2>10. Contact</h2>
+    <p>
+      For questions about how personal information is handled, please contact us below.<br />
+      Email: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a><br />
+      Support page: <a href="support.html">Support / Contact</a>
+    </p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) · Effective August 27, 2026
+    </footer>
+  </div>
+</body>
+</html>

@@ -64,3 +64,66 @@ https://m1zz.github.io/FootprintDiary/
 걸음과 도장, 일기와 사진은 내 개인 iCloud에 담겨 기기를 바꿔도 따라옵니다.
 익명 사용 통계에는 위치 좌표, 일기 글, 장소 이름, 사진을 보내지 않습니다.
 
+## en
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/en/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/en/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/en/
+
+### 이름
+
+벅뚜벅뚜: Walk-Drawn Map
+
+### 부제
+
+Only new paths fill the page
+
+### 키워드
+
+fog of war,hiking,route tracker,gps,trip log,steps,explore,stamps,neighborhood,journal,city,travel
+
+### 프로모션 텍스트
+
+A blank map where roads passed by car or subway are never drawn. Only paths you walk for the first time widen it. Which way will you draw a new path today?
+
+### 설명
+
+A map that begins as one blank sheet of paper. Only the places you've walked on your own two feet fill in, one dot at a time.
+Roads passed by car or subway aren't drawn, and walking the same road a hundred times doesn't widen the map. To widen it, you have to take a new path.
+
+Today and your past steps, in different colors
+Where you walked today is stamped in red ink, and past steps in indigo. The more often you pass a spot, the darker it grows, so your everyday radius shows on its own.
+Places you haven't revisited in over three months aren't erased; they fade to grey.
+
+Stamps for places visited and places to visit
+Stand where you are, or long-press the map, to place a stamp anywhere you like. There are 212 stamps to choose from, sorted by category.
+A stamp placed where you've never walked stays as a place to visit, then turns into a visited place once you actually get close.
+Snap a shop sign with the camera and the background is cut away, standing up as a sticker unique to that spot.
+
+Today's Footprints
+The places you stopped at today line up in time order, along with how far you walked between them. If a stamp sits where your steps paused, the app asks whether you went there and counts the visit.
+
+Pioneer Compass
+Splits the area around you into eight directions and points to the one you've walked least. Use it to decide where to take your next walk.
+
+Film and calendar
+Pick a period and watch your map being drawn as a video you can export.
+The calendar draws the shape of each day's walk instead of a number. You can also keep a daily diary with text and photos.
+
+Widgets
+The Home Screen shows the shape and length of the path you drew today, and the Lock Screen shows today's distance as a single line of numbers.
+
+Tracking mode
+Choose between prioritizing accuracy and prioritizing battery. With accuracy first, your steps are recorded even when the app is closed.
+
+Your records stay in your iCloud
+Steps, stamps, diary entries, and photos are kept in your own private iCloud and follow you when you change devices.
+Anonymous usage statistics never include location coordinates, diary text, place names, or photos.

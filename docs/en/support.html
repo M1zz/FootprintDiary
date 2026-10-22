@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --accent2: #00c2a8; --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 24px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; }
+    .contact {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff; border-radius: 16px; padding: 24px; margin-bottom: 8px;
+    }
+    .contact h2 { margin-top: 0; color: #fff; }
+    .contact a { color: #fff; font-weight: 600; }
+    .faq {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; margin: 12px 0; padding: 4px 18px;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 600; padding: 14px 0; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "＋"; color: var(--muted); font-weight: 400; }
+    .faq[open] summary::after { content: "－"; }
+    .faq p { margin: 0 0 16px; color: var(--muted); }
+    a { color: var(--accent); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/en/support.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/support.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/support.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/support.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../support.html" hreflang="ko" lang="ko">한국어</a> · <a href="support.html" hreflang="en" lang="en" aria-current="true">English</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← 벅뚜벅뚜 Home</a>
+    <h1>Support / Contact</h1>
+
+    <div class="contact">
+      <h2>💬 Contact Us</h2>
+      <p>Send bug reports, feature suggestions, and any other questions by email. We'll reply as quickly as we can.</p>
+      <p>Email: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+      <p>GitHub Issues: <a href="https://github.com/M1zz/FootprintDiary/issues">github.com/M1zz/FootprintDiary/issues</a></p>
+    </div>
+
+    <h2>Frequently Asked Questions (FAQ)</h2>
+
+    <details class="faq">
+      <summary>My footprints aren't being recorded automatically.</summary>
+      <p>
+        Automatic recording only works when iOS location permission is set to <strong>"Always"</strong>.
+        Go to Settings → 벅뚜벅뚜 → Location and choose "Always". Also, visit detection records a place only
+        after you've stayed there for a while and then moved on, so entries may not appear right away.
+        To save one immediately, use the ➕ button at the top right of the map screen.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Is my location data sent anywhere?</summary>
+      <p>
+        It is not sent to the developer. Footprints, diary entries, and photos are stored only on your device and in
+        <strong>your own personal iCloud</strong> (so your records follow you when you change devices). The developer
+        cannot see any of it. All the app sends to the developer is anonymous counts, such as how far you've walked
+        or how many diary entries you've written, and <strong>not a single coordinate is sent</strong>.
+        Separately, Apple's maps and geocoding services are used to turn coordinates into place names.
+        For details, see the <a href="privacy.html">Privacy Policy</a>.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Are trips by vehicle recorded too?</summary>
+      <p>
+        The app uses motion data to record mainly walking and running, and tries to leave out
+        stretches that look like travel by vehicle. Depending on the situation, there may be some errors.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Will my data move over if I change devices?</summary>
+      <p>
+        Your records are stored on your device and in your own iCloud. Sign in with the same Apple account on the
+        new device and keep iCloud turned on, and your footprints, diary, and photos carry over.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>I want to delete footprints or diary entries.</summary>
+      <p>
+        You can delete individual footprints by tapping a footprint marker or the list on the map screen, and
+        diary entries from the diary screen. Deleting the app deletes all of its data along with it.
+      </p>
+    </details>
+
+    <h2>Requirements</h2>
+    <p>iOS 17.0 or later · iPhone</p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) ·
+      <a href="privacy.html">Privacy Policy</a> ·
+      <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>

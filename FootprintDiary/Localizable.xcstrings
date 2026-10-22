@@ -1,13 +1,269 @@
 {
   "sourceLanguage" : "ko",
   "strings" : {
+    "%@ · 발자국 %lld/%lld" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · 발자국 %lld/%lld"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Footprints %lld/%lld"
+          }
+        }
+      }
+    },
+    "%@ 걸어서 %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 걸어서 %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walked %@ in %@"
+          }
+        }
+      }
+    },
+    "%@ 걸음" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 걸음"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walked %@"
+          }
+        }
+      }
+    },
+    "%@ 수집 완료" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 수집 완료"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ collected"
+          }
+        }
+      }
+    },
+    "%@ 심볼" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 심볼"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ symbol"
+          }
+        }
+      }
+    },
+    "%@, %lld가지" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld가지"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld kinds"
+          }
+        }
+      }
+    },
+    "%@배" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@배"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
+        }
+      }
+    },
+    "%@쪽이 가장 얕습니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@쪽이 가장 얕습니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ is the least explored"
+          }
+        }
+      }
+    },
+    "%lldm 떨어져 있어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldm 떨어져 있어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldm away"
+          }
+        }
+      }
+    },
+    "%lldm 안으로 들어가면 셔터가 열려요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldm 안으로 들어가면 셔터가 열려요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The shutter opens within %lldm"
+          }
+        }
+      }
+    },
+    "%lld가지" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld가지"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kinds"
+          }
+        }
+      }
+    },
+    "%lld곳" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld곳"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld places"
+          }
+        }
+      }
+    },
+    "%lld번" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld번"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld times"
+          }
+        }
+      }
+    },
+    "%lld번 나갔어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld번 나갔어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Went out %lld times"
+          }
+        }
+      }
+    },
+    "%lld번째 발견" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld번째 발견"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discovery #%lld"
+          }
+        }
+      }
+    },
+    "AR로 찾아가기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AR로 찾아가기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find with AR"
+          }
+        }
+      }
+    },
     "Face ID 잠금" : {
       "comment" : "Roadmap item: Face ID lock",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Face ID lock"
+            "value" : "Face ID Lock"
           }
         },
         "ko" : {
@@ -24,7 +280,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Lock the app with Face ID or Touch ID to keep where you’ve been and your diary private."
+            "value" : "Lock the app with Face ID or Touch ID to keep where you've been and your diary private."
           }
         },
         "ko" : {
@@ -41,7 +297,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Ask Siri how far you’ve walked today."
+            "value" : "Ask Siri how far you've walked today."
           }
         },
         "ko" : {
@@ -92,13 +348,269 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Better VoiceOver support"
+            "value" : "Better VoiceOver Support"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "VoiceOver로 더 편하게"
+          }
+        }
+      }
+    },
+    "‘%@’에 맞는 스탬프가 없어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "‘%@’에 맞는 스탬프가 없어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No stamps match \"%@\""
+          }
+        }
+      }
+    },
+    "가보려던 곳이에요. 다녀온 곳으로 남길까요?" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가보려던 곳이에요. 다녀온 곳으로 남길까요?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You were planning to visit this place. Mark it as visited?"
+          }
+        }
+      }
+    },
+    "가보지 않은 곳" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가보지 않은 곳"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not yet visited"
+          }
+        }
+      }
+    },
+    "가볼 곳" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가볼 곳"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Want to Visit"
+          }
+        }
+      }
+    },
+    "가볼 곳으로 찍어 뒀던 자리" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가볼 곳으로 찍어 뒀던 자리"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A spot you stamped as a place to visit"
+          }
+        }
+      }
+    },
+    "가장 많이 막힌 곳: %@ (%lld번). %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "가장 많이 막힌 곳: %@ (%lld번). %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Most common blocker: %@ (%lld times). %@"
+          }
+        }
+      }
+    },
+    "갈래" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "갈래"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category"
+          }
+        }
+      }
+    },
+    "개척 나침반" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "개척 나침반"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pioneer Compass"
+          }
+        }
+      }
+    },
+    "건너뛰기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "건너뛰기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
+          }
+        }
+      }
+    },
+    "걷기 기록" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "걷기 기록"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walk Tracking"
+          }
+        }
+      }
+    },
+    "걷기 기록이 꺼져 있어요. 걸어도 길이 남지 않아요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "걷기 기록이 꺼져 있어요. 걸어도 길이 남지 않아요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walk tracking is off. Your path won't be saved as you walk."
+          }
+        }
+      }
+    },
+    "걷다가 스탬프를 찍으면 여기에 시간 순서대로 쌓입니다.\n머문 자리는 찍지 않아도 저절로 남습니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "걷다가 스탬프를 찍으면 여기에 시간 순서대로 쌓입니다.\n머문 자리는 찍지 않아도 저절로 남습니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamps you place while walking pile up here in time order.\nPlaces you stay at are saved on their own, no stamp needed."
+          }
+        }
+      }
+    },
+    "걸어서 닿은 곳" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "걸어서 닿은 곳"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Places Reached on Foot"
+          }
+        }
+      }
+    },
+    "걸어서 도착하면 그 자리에서 사진을 남길 수 있어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "걸어서 도착하면 그 자리에서 사진을 남길 수 있어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walk there and you can take a photo on the spot"
+          }
+        }
+      }
+    },
+    "걸었는데 지도에 선이 그어지지 않으면 여기서 까닭을 볼 수 있어요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "걸었는데 지도에 선이 그어지지 않으면 여기서 까닭을 볼 수 있어요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you walked but no line was drawn on the map, you can find out why here."
+          }
+        }
+      }
+    },
+    "걸으면 지나온 길이 순서대로 쌓입니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "걸으면 지나온 길이 순서대로 쌓입니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As you walk, the paths you've passed stack up in order."
           }
         }
       }
@@ -120,6 +632,86 @@
         }
       }
     },
+    "고른 기간에 걸은 길과 그 기간에 찍은 도장만 지도에 남습니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "고른 기간에 걸은 길과 그 기간에 찍은 도장만 지도에 남습니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Only paths walked and stamps placed during the chosen period stay on the map."
+          }
+        }
+      }
+    },
+    "관심 없어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "관심 없어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not interested"
+          }
+        }
+      }
+    },
+    "괜찮아요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "괜찮아요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It's okay"
+          }
+        }
+      }
+    },
+    "그려지는 것 보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "그려지는 것 보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watch It Being Drawn"
+          }
+        }
+      }
+    },
+    "그림지도" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "그림지도"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Illustrated Map"
+          }
+        }
+      }
+    },
     "글자 크기를 키워도 잘리지 않고 보기 좋게 다시 배치돼요." : {
       "comment" : "Roadmap item detail: layouts for larger text",
       "localizations" : {
@@ -137,13 +729,157 @@
         }
       }
     },
+    "기간으로 보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기간으로 보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View by Period"
+          }
+        }
+      }
+    },
+    "기록 방식" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기록 방식"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tracking Mode"
+          }
+        }
+      }
+    },
+    "기록 상태" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기록 상태"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tracking Status"
+          }
+        }
+      }
+    },
+    "기록 상태 보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기록 상태 보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View Tracking Status"
+          }
+        }
+      }
+    },
+    "기본 그림으로 되돌리기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "기본 그림으로 되돌리기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore Default Image"
+          }
+        }
+      }
+    },
+    "꺼 둔 화면도 위 '모아 보기'에서 언제든 열 수 있어요. 도장과 설정 단추는 늘 보여요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "꺼 둔 화면도 위 '모아 보기'에서 언제든 열 수 있어요. 도장과 설정 단추는 늘 보여요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Screens you've turned off can still be opened from \"Browse\" above at any time. Stamp and settings buttons always show."
+          }
+        }
+      }
+    },
+    "끝" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "끝"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End"
+          }
+        }
+      }
+    },
+    "나중에" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나중에"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Later"
+          }
+        }
+      }
+    },
+    "내 개인 아이클라우드에만 담깁니다. 다른 사람에게 보이지 않아요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 개인 아이클라우드에만 담깁니다. 다른 사람에게 보이지 않아요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stored only in your personal iCloud. No one else can see it."
+          }
+        }
+      }
+    },
     "내 기록 한 번에 지우기" : {
       "comment" : "Roadmap item: delete all my data",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Delete all my records"
+            "value" : "Erase All My Data at Once"
           }
         },
         "ko" : {
@@ -154,13 +890,285 @@
         }
       }
     },
+    "내 동네 테두리" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 동네 테두리"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Neighborhood Outline"
+          }
+        }
+      }
+    },
+    "내 지도" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 지도"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Map"
+          }
+        }
+      }
+    },
+    "내 지도 열기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 지도 열기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open My Map"
+          }
+        }
+      }
+    },
+    "내 지도가 그려지는 것" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 지도가 그려지는 것"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watch Your Map Take Shape"
+          }
+        }
+      }
+    },
+    "내 지도가 그려지는 미리보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내 지도가 그려지는 미리보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preview of your map being drawn"
+          }
+        }
+      }
+    },
+    "내가 그린 길" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내가 그린 길"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paths You've Drawn"
+          }
+        }
+      }
+    },
+    "내가 찍은 곳" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "내가 찍은 곳"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Places I've Stamped"
+          }
+        }
+      }
+    },
+    "누르면 지도가 비쳐요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "누르면 지도가 비쳐요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to see the map beneath"
+          }
+        }
+      }
+    },
+    "눌러서 지금 자리 찍기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "눌러서 지금 자리 찍기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to stamp your current spot"
+          }
+        }
+      }
+    },
+    "다녀오신 게 맞는지 %lld곳 여쭤볼게요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다녀오신 게 맞는지 %lld곳 여쭤볼게요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Asking whether you really visited %lld places"
+          }
+        }
+      }
+    },
+    "다녀온 횟수" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다녀온 횟수"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visits"
+          }
+        }
+      }
+    },
+    "다녀왔어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다녀왔어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I went there"
+          }
+        }
+      }
+    },
+    "다시 누르면 종이로 돌아가요. 지금 어디쯤인지 확인할 때 써 보세요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 누르면 종이로 돌아가요. 지금 어디쯤인지 확인할 때 써 보세요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap again to return to paper. Handy for checking where you are."
+          }
+        }
+      }
+    },
+    "다시 찍기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 찍기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retake"
+          }
+        }
+      }
+    },
+    "다시 찾은 자리" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다시 찾은 자리"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A Spot You've Revisited"
+          }
+        }
+      }
+    },
+    "단골로 등록된 자리예요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "단골로 등록된 자리예요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is one of your regular spots"
+          }
+        }
+      }
+    },
+    "닫기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "닫기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        }
+      }
+    },
     "대비를 높이거나 색을 구별하기 어려워도 지도의 길과 스탬프를 알아볼 수 있어요." : {
       "comment" : "Roadmap item detail: better colors and contrast",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Make out your paths and stamps on the map, even with Increase Contrast on or if colors are hard to tell apart."
+            "value" : "Even with higher contrast or difficulty telling colors apart, you can still make out the paths and stamps on your map."
           }
         },
         "ko" : {
@@ -194,7 +1202,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "More languages"
+            "value" : "More Languages"
           }
         },
         "ko" : {
@@ -205,13 +1213,269 @@
         }
       }
     },
+    "덧붙일 말 (없어도 됩니다)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "덧붙일 말 (없어도 됩니다)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a note (optional)"
+          }
+        }
+      }
+    },
+    "도감에서 지금까지 모은 발자국을 볼 수 있어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "도감에서 지금까지 모은 발자국을 볼 수 있어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See the footprints you've collected so far in your collection"
+          }
+        }
+      }
+    },
+    "되돌릴 수 없어요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "되돌릴 수 없어요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This can't be undone."
+          }
+        }
+      }
+    },
+    "두드리면 멈추거나 다시 재생합니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "두드리면 멈추거나 다시 재생합니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to pause or resume playback"
+          }
+        }
+      }
+    },
+    "들른 곳 %lld곳" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "들른 곳 %lld곳"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld places visited"
+          }
+        }
+      }
+    },
+    "또렷한 것이 없어 배경을 지우지 못했어요. 물건에 가까이 대고 다시 찍어 보세요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "또렷한 것이 없어 배경을 지우지 못했어요. 물건에 가까이 대고 다시 찍어 보세요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't find anything distinct to cut out. Get closer to the object and try again."
+          }
+        }
+      }
+    },
+    "마지막 방문" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "마지막 방문"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last Visit"
+          }
+        }
+      }
+    },
+    "먹 지도" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "먹 지도"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ink Map"
+          }
+        }
+      }
+    },
+    "메모" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메모"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note"
+          }
+        }
+      }
+    },
+    "모아 보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "모아 보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Browse"
+          }
+        }
+      }
+    },
+    "물과 산을 앉히는 중" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "물과 산을 앉히는 중"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placing water and mountains"
+          }
+        }
+      }
+    },
+    "미발견" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "미발견"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undiscovered"
+          }
+        }
+      }
+    },
+    "발자국" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "발자국"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Footprints"
+          }
+        }
+      }
+    },
+    "발자국 타임랩스" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "발자국 타임랩스"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Footprint Time-lapse"
+          }
+        }
+      }
+    },
+    "밝힌 땅 %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "밝힌 땅 %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cleared area %@"
+          }
+        }
+      }
+    },
+    "배경 지도 비춰보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "배경 지도 비춰보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Background Map"
+          }
+        }
+      }
+    },
     "백업과 내보내기" : {
       "comment" : "Roadmap item: backup and export",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Backup and export"
+            "value" : "Backup and Export"
           }
         },
         "ko" : {
@@ -222,13 +1486,61 @@
         }
       }
     },
+    "버려진 까닭" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버려진 까닭"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why Points Were Discarded"
+          }
+        }
+      }
+    },
+    "버전 %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "버전 %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
+          }
+        }
+      }
+    },
+    "보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View"
+          }
+        }
+      }
+    },
     "보기 편한 색과 대비" : {
       "comment" : "Roadmap item: better colors and contrast",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Easier colors and contrast"
+            "value" : "Comfortable Colors and Contrast"
           }
         },
         "ko" : {
@@ -239,13 +1551,189 @@
         }
       }
     },
+    "보는 길" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "보는 길"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View Paths"
+          }
+        }
+      }
+    },
+    "빈 종이는 그것만으로는 어디가 어딘지 알 수 없어요.\n지금 계신 자리가 **첫 기준점**이 됩니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빈 종이는 그것만으로는 어디가 어딘지 알 수 없어요.\n지금 계신 자리가 **첫 기준점**이 됩니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A blank sheet can't tell where is where on its own.\nYour current spot becomes the **first reference point**."
+          }
+        }
+      }
+    },
+    "빈 종이에서 시작합니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "빈 종이에서 시작합니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starting from a Blank Sheet"
+          }
+        }
+      }
+    },
+    "사용 통계 (개발자)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사용 통계 (개발자)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usage Stats (Developer)"
+          }
+        }
+      }
+    },
+    "사진" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos"
+          }
+        }
+      }
+    },
+    "사진 지우기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진 지우기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Photo"
+          }
+        }
+      }
+    },
+    "사진 찍기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진 찍기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take Photo"
+          }
+        }
+      }
+    },
+    "사진 추가" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진 추가"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Photo"
+          }
+        }
+      }
+    },
+    "사진을 넣는 중" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진을 넣는 중"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adding photo"
+          }
+        }
+      }
+    },
+    "사진을 저장하지 못했어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "사진을 저장하지 못했어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't save the photo"
+          }
+        }
+      }
+    },
+    "삭제" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "삭제"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        }
+      }
+    },
     "산책 알림" : {
       "comment" : "Roadmap item: notifications",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Walk reminders"
+            "value" : "Walk Reminders"
           }
         },
         "ko" : {
@@ -256,13 +1744,253 @@
         }
       }
     },
+    "새로 닿은 자리 %lld곳이 지나는 길에 찍힙니다" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로 닿은 자리 %lld곳이 지나는 길에 찍힙니다"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld newly reached spots are stamped along the route"
+          }
+        }
+      }
+    },
+    "새로 생긴 것" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로 생긴 것"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's New"
+          }
+        }
+      }
+    },
+    "설정" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        }
+      }
+    },
+    "설정 앱 > 벅뚜벅뚜 > 카메라를 켜 주세요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정 앱 > 벅뚜벅뚜 > 카메라를 켜 주세요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please turn on the camera in Settings > 벅뚜벅뚜."
+          }
+        }
+      }
+    },
+    "설정 열기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정 열기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Settings"
+          }
+        }
+      }
+    },
+    "설정에서 권한 켜기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정에서 권한 켜기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn On Permissions in Settings"
+          }
+        }
+      }
+    },
+    "설정에서도 열 수 있어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "설정에서도 열 수 있어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can also open this in Settings"
+          }
+        }
+      }
+    },
+    "세기 초기화" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세기 초기화"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset Counts"
+          }
+        }
+      }
+    },
+    "세상은 이미 다른 지도가 다 그려 두었어요.\n여기에는 **당신이 두 발로 지난 자리만** 남습니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "세상은 이미 다른 지도가 다 그려 두었어요.\n여기에는 **당신이 두 발로 지난 자리만** 남습니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Other maps have already drawn the whole world.\nHere, only **the places you've walked** remain."
+          }
+        }
+      }
+    },
+    "수집한 스팟" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "수집한 스팟"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collected Spots"
+          }
+        }
+      }
+    },
+    "스탬프" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "스탬프"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamp"
+          }
+        }
+      }
+    },
+    "시작" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시작"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
+        }
+      }
+    },
+    "시작하기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "시작하기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get Started"
+          }
+        }
+      }
+    },
+    "심볼" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "심볼"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
+          }
+        }
+      }
+    },
+    "심볼 크게 보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "심볼 크게 보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View Symbol Larger"
+          }
+        }
+      }
+    },
     "쓰던 일기 이어 쓰기" : {
       "comment" : "Roadmap item: keep unsaved drafts",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Pick up your diary where you left off"
+            "value" : "Resume Unfinished Diary Entries"
           }
         },
         "ko" : {
@@ -273,13 +2001,157 @@
         }
       }
     },
+    "쓸면 카드처럼 넘어가고, 두 번 두드리면 크게 볼 수 있어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "쓸면 카드처럼 넘어가고, 두 번 두드리면 크게 볼 수 있어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swipe to flip through like cards, double-tap to view larger"
+          }
+        }
+      }
+    },
+    "아니에요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아니에요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No, I didn't"
+          }
+        }
+      }
+    },
+    "아이클라우드" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아이클라우드"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        }
+      }
+    },
+    "아직" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not yet"
+          }
+        }
+      }
+    },
+    "아직 가보지 않은 곳" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 가보지 않은 곳"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not yet visited"
+          }
+        }
+      }
+    },
+    "아직 가보지 않은 자리예요. ‘가볼 곳’으로 남고, 그 자리에 닿으면 다녀온 곳이 됩니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 가보지 않은 자리예요. ‘가볼 곳’으로 남고, 그 자리에 닿으면 다녀온 곳이 됩니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You haven't been here yet. It stays as a \"Want to Visit\" spot and becomes a visited place once you arrive."
+          }
+        }
+      }
+    },
+    "아직 버려진 점이 없어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직 버려진 점이 없어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No discarded points yet"
+          }
+        }
+      }
+    },
+    "아직요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "아직요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not yet"
+          }
+        }
+      }
+    },
+    "안내" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "안내"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guide"
+          }
+        }
+      }
+    },
     "앱을 영어로도 쓸 수 있어요." : {
       "comment" : "Roadmap item detail: English language",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Use the whole app in English."
+            "value" : "Use the app in English too."
           }
         },
         "ko" : {
@@ -290,19 +2162,371 @@
         }
       }
     },
+    "앱을 한 번 열어 주세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "앱을 한 번 열어 주세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please open the app once"
+          }
+        }
+      }
+    },
+    "어느 날" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어느 날"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Which Day"
+          }
+        }
+      }
+    },
+    "어느 쪽이든 받은 위치는 모두 저장합니다. 정확도가 낮은 점은 지도에 그리지 않을 뿐이에요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어느 쪽이든 받은 위치는 모두 저장합니다. 정확도가 낮은 점은 지도에 그리지 않을 뿐이에요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Either way, every location received is saved. Low-accuracy points just aren't drawn on the map."
+          }
+        }
+      }
+    },
+    "어떤 화면이 쓰이는지 익명으로만 셉니다. 걸은 자리와 일기 글은 보내지 않아요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어떤 화면이 쓰이는지 익명으로만 셉니다. 걸은 자리와 일기 글은 보내지 않아요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We only count which screens are used, anonymously. Where you walked and your diary entries are never sent."
+          }
+        }
+      }
+    },
+    "여기 %@ 머무셨어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기 %@ 머무셨어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You stayed here for %@"
+          }
+        }
+      }
+    },
+    "여기 남기기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기 남기기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep This Place"
+          }
+        }
+      }
+    },
+    "여기 찍어 두기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기 찍어 두기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mark Here"
+          }
+        }
+      }
+    },
+    "여기는 기록 안 해도 괜찮을까요?" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기는 기록 안 해도 괜찮을까요?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Is it okay not to record this place?"
+          }
+        }
+      }
+    },
+    "여기는 어디였나요?" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "여기는 어디였나요?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Where was this?"
+          }
+        }
+      }
+    },
+    "영상으로 내보내기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "영상으로 내보내기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Export as Video"
+          }
+        }
+      }
+    },
+    "영상을 만드는 중 %lld%%" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "영상을 만드는 중 %lld%%"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creating video %lld%%"
+          }
+        }
+      }
+    },
     "영어 지원" : {
       "comment" : "Roadmap item: English language",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Full English support"
+            "value" : "English Support"
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "영어 지원"
+          }
+        }
+      }
+    },
+    "예: 집, 회사, 단골 카페" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "예: 집, 회사, 단골 카페"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "e.g. Home, Work, Favorite café"
+          }
+        }
+      }
+    },
+    "오늘 %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today %@"
+          }
+        }
+      }
+    },
+    "오늘 그은 길" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 그은 길"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Path"
+          }
+        }
+      }
+    },
+    "오늘 일기에 사진이 담겼어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 일기에 사진이 담겼어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A photo was added to today's diary"
+          }
+        }
+      }
+    },
+    "오늘 재생" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘 재생"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play Today"
+          }
+        }
+      }
+    },
+    "오늘은 아직 다녀온 곳이 없어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘은 아직 다녀온 곳이 없어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No places visited yet today"
+          }
+        }
+      }
+    },
+    "오늘은 아직 머문 자리가 없어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘은 아직 머문 자리가 없어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No stops yet today"
+          }
+        }
+      }
+    },
+    "오늘은 어디를 탐험했나요?" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘은 어디를 탐험했나요?"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Where did you explore today?"
+          }
+        }
+      }
+    },
+    "오늘의 발자취" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘의 발자취"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Footprints"
+          }
+        }
+      }
+    },
+    "오늘의 탐험" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "오늘의 탐험"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Exploration"
+          }
+        }
+      }
+    },
+    "완료" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "완료"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
           }
         }
       }
@@ -330,7 +2554,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "With Reduce Motion on, the map and screen effects calm down."
+            "value" : "Turn on Reduce Motion to calm the map and on-screen effects."
           }
         },
         "ko" : {
@@ -347,7 +2571,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Erase all your walks and diary entries right in the app whenever you want."
+            "value" : "If you like, erase all your walks and diary from inside the app."
           }
         },
         "ko" : {
@@ -358,13 +2582,269 @@
         }
       }
     },
+    "위치를 '항상 허용'으로, 동작 및 피트니스를 켜 두면 앱을 열지 않고 걸어도 기록됩니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "위치를 '항상 허용'으로, 동작 및 피트니스를 켜 두면 앱을 열지 않고 걸어도 기록됩니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set location to \"Always\" and turn on Motion & Fitness, and your walks are recorded even without opening the app."
+          }
+        }
+      }
+    },
+    "이 기간에는 발자국이 없어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 기간에는 발자국이 없어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No footprints in this period"
+          }
+        }
+      }
+    },
+    "이 기간으로 보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 기간으로 보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View This Period"
+          }
+        }
+      }
+    },
+    "이 날 찍은 자리" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 날 찍은 자리"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spots Photographed This Day"
+          }
+        }
+      }
+    },
+    "이 날은 걸음이 남지 않았어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 날은 걸음이 남지 않았어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No steps were recorded on this day"
+          }
+        }
+      }
+    },
+    "이 날의 발자국이 없어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 날의 발자국이 없어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No footprints on this day"
+          }
+        }
+      }
+    },
+    "이 스탬프 지우기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 스탬프 지우기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete This Stamp"
+          }
+        }
+      }
+    },
+    "이 심볼 쓰기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 심볼 쓰기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use This Symbol"
+          }
+        }
+      }
+    },
+    "이 자리의 발자국 지우기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 자리의 발자국 지우기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear Footprints Here"
+          }
+        }
+      }
+    },
+    "이 자리의 이름 (예: 회사, 단골 카페)" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 자리의 이름 (예: 회사, 단골 카페)"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name for this spot (e.g. Work, Favorite café)"
+          }
+        }
+      }
+    },
+    "이 종이에 첫 도장을 찍어 주세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이 종이에 첫 도장을 찍어 주세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place Your First Stamp on This Sheet"
+          }
+        }
+      }
+    },
+    "이름" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이름"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
+        }
+      }
+    },
+    "이름 붙이기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이름 붙이기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Name"
+          }
+        }
+      }
+    },
+    "이미지 추가하기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이미지 추가하기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Image"
+          }
+        }
+      }
+    },
+    "이제 걸어 보세요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이제 걸어 보세요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now Go for a Walk"
+          }
+        }
+      }
+    },
+    "이제 걸어 보세요.\n지나온 자리가 한 점씩 이 종이에 찍힙니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이제 걸어 보세요.\n지나온 자리가 한 점씩 이 종이에 찍힙니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now go for a walk.\nThe places you pass are marked on this sheet, one dot at a time."
+          }
+        }
+      }
+    },
     "일기를 쓰다가 앱이 꺼져도 쓰던 내용이 남아 있어요." : {
       "comment" : "Roadmap item detail: keep unsaved drafts",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "What you were writing stays put, even if the app closes mid-entry."
+            "value" : "If the app closes while you're writing a diary entry, what you wrote is still there."
           }
         },
         "ko" : {
@@ -375,13 +2855,573 @@
         }
       }
     },
+    "일지" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "일지"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journal"
+          }
+        }
+      }
+    },
+    "자주 가는 곳에 **도착하면 그 자리에서 한 번 더** 찍어 주세요.\n기준이 둘이 되면 백지에서도 방향이 잡힙니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "자주 가는 곳에 **도착하면 그 자리에서 한 번 더** 찍어 주세요.\n기준이 둘이 되면 백지에서도 방향이 잡힙니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When you **arrive somewhere you visit often, stamp it once more.**\nWith two reference points, even a blank sheet knows its direction."
+          }
+        }
+      }
+    },
+    "잠시 뒤 다시 시도하거나, 지도를 길게 눌러 원하는 자리에 찍어 주세요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잠시 뒤 다시 시도하거나, 지도를 길게 눌러 원하는 자리에 찍어 주세요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again in a moment, or long-press the map to stamp wherever you like."
+          }
+        }
+      }
+    },
+    "저장" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저장"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
+        }
+      }
+    },
+    "전체 기간으로 돌아가기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "전체 기간으로 돌아가기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to All Time"
+          }
+        }
+      }
+    },
+    "점 세기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "점 세기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Point Count"
+          }
+        }
+      }
+    },
+    "정확도가 모자란 점도 저장은 해 둡니다. 지금은 지도에 그리지 않지만, 보정이 나아지면 그때 쓸 수 있어요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "정확도가 모자란 점도 저장은 해 둡니다. 지금은 지도에 그리지 않지만, 보정이 나아지면 그때 쓸 수 있어요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Points with low accuracy are still saved. They aren't drawn on the map for now, but can be used once the correction improves."
+          }
+        }
+      }
+    },
+    "지금 상태" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금 상태"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current Status"
+          }
+        }
+      }
+    },
+    "지금 위치를 찾고 있어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금 위치를 찾고 있어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finding your location"
+          }
+        }
+      }
+    },
+    "지금 자리 남기기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금 자리 남기기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mark This Spot"
+          }
+        }
+      }
+    },
+    "지금 자리에 스탬프 찍기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금 자리에 스탬프 찍기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamp Your Current Spot"
+          }
+        }
+      }
+    },
+    "지금 자리에 찍기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금 자리에 찍기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamp Here"
+          }
+        }
+      }
+    },
+    "지나온 자리가 한 점씩 이 종이에 찍힙니다.\n차나 지하철로 지난 길은 그려지지 않아요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지나온 자리가 한 점씩 이 종이에 찍힙니다.\n차나 지하철로 지난 길은 그려지지 않아요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The places you pass are marked on this sheet, one dot at a time.\nRoads you pass by car or subway aren't drawn."
+          }
+        }
+      }
+    },
+    "지도 단추는 설정에서 골라요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도 단추는 설정에서 골라요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose map buttons in Settings"
+          }
+        }
+      }
+    },
+    "지도 모양" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도 모양"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map Style"
+          }
+        }
+      }
+    },
+    "지도 배율. 막대 하나가 %@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도 배율. 막대 하나가 %@"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map scale. One bar equals %@"
+          }
+        }
+      }
+    },
+    "지도에 띄워 둘 단추를 고르고, 꺼 둔 화면도 설정에서 바로 열 수 있어요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도에 띄워 둘 단추를 고르고, 꺼 둔 화면도 설정에서 바로 열 수 있어요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick which buttons float on the map, and open screens you've turned off right from Settings."
+          }
+        }
+      }
+    },
+    "지도에 미리 찍어 둔 자리예요. 그 자리에 닿으면 다녀온 곳이 됩니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도에 미리 찍어 둔 자리예요. 그 자리에 닿으면 다녀온 곳이 됩니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spots you stamped ahead of time. They become visited places once you arrive."
+          }
+        }
+      }
+    },
+    "지도에 보이기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도에 보이기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show on Map"
+          }
+        }
+      }
+    },
+    "지도에서 보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도에서 보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View on Map"
+          }
+        }
+      }
+    },
+    "지도에서는 이렇게 보여요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지도에서는 이렇게 보여요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is how it looks on the map"
+          }
+        }
+      }
+    },
+    "지우기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지우기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear"
+          }
+        }
+      }
+    },
+    "지원" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지원"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
+        }
+      }
+    },
+    "집·일터처럼 기준이 될 만한 것으로 골라 주세요." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "집·일터처럼 기준이 될 만한 것으로 골라 주세요."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick something that can serve as a reference, like home or work."
+          }
+        }
+      }
+    },
+    "찍기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "찍기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Capture"
+          }
+        }
+      }
+    },
+    "찍어 둔 날" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "찍어 둔 날"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamped On"
+          }
+        }
+      }
+    },
+    "찍혔어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "찍혔어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamped!"
+          }
+        }
+      }
+    },
+    "차나 지하철로 지난 길은 그려지지 않아요.\n걸어야만 한 점씩 찍힙니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "차나 지하철로 지난 길은 그려지지 않아요.\n걸어야만 한 점씩 찍힙니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Roads you pass by car or subway aren't drawn.\nOnly walking puts down a dot at a time."
+          }
+        }
+      }
+    },
+    "창 안에 담긴 것만 남고 배경은 지워져요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "창 안에 담긴 것만 남고 배경은 지워져요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Only what's inside the frame stays; the background is erased"
+          }
+        }
+      }
+    },
+    "처음" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "처음"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First"
+          }
+        }
+      }
+    },
+    "처음 걷는 길" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "처음 걷는 길"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First-Time Paths"
+          }
+        }
+      }
+    },
+    "처음 밟아 본 자리예요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "처음 밟아 본 자리예요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is a spot you're visiting for the first time"
+          }
+        }
+      }
+    },
+    "취소" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "취소"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        }
+      }
+    },
+    "켜기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "켜기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn On"
+          }
+        }
+      }
+    },
+    "크게 보기" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "크게 보기"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View Larger"
+          }
+        }
+      }
+    },
     "큰 글씨에 맞춘 화면" : {
       "comment" : "Roadmap item: layouts for larger text",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Layouts for larger text"
+            "value" : "Screens for Large Text"
           }
         },
         "ko" : {
@@ -392,13 +3432,77 @@
         }
       }
     },
+    "타임랩스" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "타임랩스"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time-lapse"
+          }
+        }
+      }
+    },
+    "탐험" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탐험"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explore"
+          }
+        }
+      }
+    },
+    "탐험 기록" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탐험 기록"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exploration Log"
+          }
+        }
+      }
+    },
+    "탐험 일지" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "탐험 일지"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exploration Log"
+          }
+        }
+      }
+    },
     "펼치는 아이폰 화면" : {
       "comment" : "Roadmap item: foldable iPhone layout",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Foldable iPhone layout"
+            "value" : "Foldable iPhone Layout"
           }
         },
         "ko" : {
@@ -415,7 +3519,7 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "See your map and records side by side on a foldable iPhone."
+            "value" : "On a foldable iPhone, see your map and records side by side in two panes."
           }
         },
         "ko" : {
@@ -426,19 +3530,83 @@
         }
       }
     },
+    "하루 타임랩스" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "하루 타임랩스"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day Time-lapse"
+          }
+        }
+      }
+    },
     "하루를 마칠 때 오늘 걸은 길을 알림으로 알려 줘요." : {
       "comment" : "Roadmap item detail: notifications",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Get a notification about today’s walks as your day winds down."
+            "value" : "At the end of the day, get a notification about the path you walked today."
           }
         },
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "하루를 마칠 때 오늘 걸은 길을 알림으로 알려 줘요."
+          }
+        }
+      }
+    },
+    "한 곳에 %lld분 넘게 머물면\n그 자리가 오늘의 발자취에 섭니다." : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "한 곳에 %lld분 넘게 머물면\n그 자리가 오늘의 발자취에 섭니다."
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When you stay in one place for over %lld minutes,\nit's added to today's footprints."
+          }
+        }
+      }
+    },
+    "현재 위치를 아직 못 찾았어요" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 위치를 아직 못 찾았어요"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't find your location yet"
+          }
+        }
+      }
+    },
+    "확인" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "확인"
+          }
+        },
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         }
       }
