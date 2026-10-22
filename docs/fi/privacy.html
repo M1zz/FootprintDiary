@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tietosuojaseloste · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --border: #e5e7eb; --note-bg: #eef7ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36; --note-bg: #1a2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; padding-top: 8px; }
+    p, li { color: var(--text); }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    .note {
+      background: var(--note-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+    }
+    .note strong { color: var(--accent); }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--card); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/fi/privacy.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/privacy.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/privacy.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/FootprintDiary/zh-Hant/privacy.html">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/FootprintDiary/ru/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/FootprintDiary/es/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/FootprintDiary/de/privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/FootprintDiary/fr/privacy.html">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/FootprintDiary/it/privacy.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/FootprintDiary/pt-BR/privacy.html">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/FootprintDiary/th/privacy.html">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/FootprintDiary/vi/privacy.html">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/FootprintDiary/cs/privacy.html">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/FootprintDiary/da/privacy.html">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/FootprintDiary/el/privacy.html">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/FootprintDiary/fi/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../privacy.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/privacy.html" hreflang="en" lang="en">English</a> · <a href="../ja/privacy.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/privacy.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/privacy.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/privacy.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/privacy.html" hreflang="es" lang="es">Español</a> · <a href="../de/privacy.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/privacy.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/privacy.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/privacy.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/privacy.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/privacy.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/privacy.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/privacy.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/privacy.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="privacy.html" hreflang="fi" lang="fi" aria-current="true">Suomi</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← 벅뚜벅뚜 etusivu</a>
+    <h1>Tietosuojaseloste</h1>
+    <p class="updated">Voimassa alkaen: 27. elokuuta 2026</p>
+
+    <p>
+      <strong>벅뚜벅뚜 (FootprintDiary)</strong> (jäljempänä ”appi”) arvostaa käyttäjän henkilötietoja.
+      Appi on suunniteltu niin, että liikehistoriasi ja päiväkirjasi tallentuvat <strong>vain omalle laitteellesi ja omalle iCloud-tilillesi</strong>.
+      Apin kehittäjällä ei ole pääsyä sijaintiisi, kuviisi tai päiväkirjaasi.
+    </p>
+
+    <div class="note">
+      <strong>Tiivistelmä</strong> — Apissa ei ole rekisteröitymistä eikä tilejä.
+      Sijainti, kuvat ja päiväkirja tallentuvat vain laitteellesi ja <strong>omaan iCloudiisi</strong>, eikä kehittäjä näe niitä.
+      Apin kehittämiseksi kehittäjä kuitenkin kerää anonyymisti <strong>käyttötilastoja, joista ei voi päätellä, kuka olet</strong>
+      (esim. kuinka monta kertaa appi avataan ja mitä näkymiä käytetään). Niihin ei kuulu sijaintia eikä tekstejä;
+      tarkemmat tiedot ovat alla kohdassa 4.
+    </div>
+
+    <h2>1. Kerättävät tiedot</h2>
+    <p>Appi käsittelee alla olevia tietoja <strong>vain laitteesi sisällä</strong> eikä lähetä niitä kehittäjälle tai kolmansien osapuolten palvelimille.</p>
+    <table>
+      <tr><th>Tieto</th><th>Käyttötarkoitus</th><th>Tallennuspaikka</th></tr>
+      <tr><td>Sijaintitiedot (käydyt paikat, liikekoordinaatit)</td><td>Jalanjälkien näyttäminen kartalla, reitin tallennus</td><td>Laitteella (SwiftData)</td></tr>
+      <tr><td>Liiketiedot</td><td>Kävelyn erottaminen ajoneuvolla kuljetusta matkasta (ajoneuvomatkat jätetään pois tallenteesta)</td><td>Käytetään heti laitteella eikä tallenneta</td></tr>
+      <tr><td>Kuvat</td><td>Liittäminen päiväkirjaan</td><td>Laitteella (SwiftData)</td></tr>
+      <tr><td>Kamera (otetut kuvat)</td><td>Kuvan tallentaminen paikasta ja kuvatun kohteen leikkaaminen tarraksi kartalle (leikkaus tehdään laitteella)</td><td>Laitteella (SwiftData)</td></tr>
+      <tr><td>Päiväkirjateksti, paikannimet</td><td>Itse kirjoittamasi tallenteet</td><td>Laitteella (SwiftData)</td></tr>
+    </table>
+    <p>
+      Jos otat iCloud-synkronoinnin käyttöön, yllä olevat tallenteet tallentuvat myös <strong>omaan yksityiseen iCloud-tietokantaasi</strong>
+      ja siirtyvät muille samalla Apple-tilillä oleville laitteille. Tämä tallennustila on sinun,
+      eikä kehittäjällä ole siihen pääsyä.
+    </p>
+    <p>
+      Edellä mainitusta riippumatta kehittäjä kerää kohdassa 4 kuvatut <strong>anonyymit käyttötilastot</strong>.
+    </p>
+
+    <h2>2. Sijaintitietojen käyttö</h2>
+    <ul>
+      <li>Appi käyttää iOS:n <strong>käyntien tunnistusta (Visit)</strong> ja <strong>merkittävien sijaintimuutosten seurantaa</strong>
+          tallentaakseen liikkumisesi paikasta toiseen automaattisesti mahdollisimman pienellä akunkulutuksella.</li>
+      <li>Automaattista tallennusta varten appi voi pyytää ”Aina”-sijaintilupaa. Voit muuttaa tai peruuttaa
+          luvan milloin tahansa iOS:n Asetukset-apissa.</li>
+      <li>Jos et anna sijaintilupaa, automaattinen tallennus ei toimi, mutta muut toiminnot ovat käytettävissä.</li>
+    </ul>
+
+    <h2>3. Kolmansien osapuolten palvelut (Apple)</h2>
+    <p>
+      Muuttaakseen koordinaatit luettaviksi osoitteiksi ja paikannimiksi appi käyttää Applen tarjoamaa
+      <strong>käänteistä geokoodausta (CLGeocoder)</strong> ja karttanäkymää (MapKit).
+      Tässä yhteydessä kyseiset koordinaatit voidaan lähettää Applelle käsiteltäväksi, ja siihen sovelletaan
+      <a href="https://www.apple.com/legal/privacy/">Applen tietosuojakäytäntöä</a>.
+      Apin kehittäjällä ei ole pääsyä näihin tietoihin.
+    </p>
+
+    <h2>4. Anonyymit käyttötilastot</h2>
+    <p>
+      Appia voi parantaa vain, kun tiedetään, mitä toimintoja todella käytetään, joten kehittäjä kerää alla olevat tiedot
+      <strong>muodossa, josta sinua ei voi tunnistaa</strong>. Ne tallennetaan kehittäjän omaan
+      Apple CloudKit -tilaan, joka on erillään henkilökohtaisesta iCloudistasi, jossa tallenteesi säilyvät.
+    </p>
+    <table>
+      <tr><th>Mitä keräämme</th><th>Mitä emme kerää</th></tr>
+      <tr>
+        <td>
+          Apin avauskerrat, asennuksesta kuluneet päivät, apin versio, iOS-versio, laitteen kielivalinta<br>
+          Mitä toimintoja on käytetty (leimojen asettaminen, videon vienti, päiväkirjan kirjoittaminen, paikkojen nimeäminen, kalenterin avaaminen)<br>
+          Suuruusluokat (kävelty kokonaismatka km, päivät joilta askeleita on tallennettu, leimojen, paikkojen ja päiväkirjamerkintöjen määrä)
+        </td>
+        <td>
+          Sijaintikoordinaatit (yhtäkään ei lähetetä)<br>
+          Päiväkirjatekstit, paikannimet, kuvat<br>
+          Nimi, sähköposti, puhelinnumero, Apple-tili tai muut tiedot, joista sinut voisi tunnistaa<br>
+          Mainostunniste (IDFA), laitteen yksilölliset tunnisteet
+        </td>
+      </tr>
+    </table>
+    <ul>
+      <li>Asennusten erottamiseksi appi käyttää asennuksen yhteydessä yhtä <strong>satunnaisesti luotua arvoa</strong>.
+          Arvolla ei ole yhteyttä laitteeseesi tai Apple-tiliisi, eikä se yhdisty aiempaan arvoon,
+          jos poistat apin ja asennat sen uudelleen.</li>
+      <li>Appi <strong>ei käytä mainos-SDK:ita, kolmansien osapuolten analytiikka-SDK:ita eikä seurantatyökaluja.</strong>
+          Yllä olevat tilastot tallennetaan vain Apple CloudKitiin kehittäjän itse kirjoittamalla koodilla.</li>
+      <li>Näitä tilastoja käytetään vain apin parantamiseen, eikä niitä myydä tai luovuteta kolmansille osapuolille.</li>
+    </ul>
+
+    <h2>5. Palautteen lähettäminen</h2>
+    <p>
+      Apin asetusten <strong>Lähetä palautetta</strong> toimii vain, kun kirjoitat ja lähetät jotakin itse.
+      Lähettämäsi sisältö tallentuu kehittäjän Apple CloudKit -tilaan ja sitä käytetään vain siihen, että kehittäjä lukee ja vastaa.
+    </p>
+    <ul>
+      <li>Lähetettävät tiedot: valitsemasi palautteen tyyppi ja kirjoittamasi teksti sekä apin versio, iOS-versio, laitetyyppi ja laitteen kielivalinta</li>
+      <li>Nimi ja sähköposti lähetetään vain, jos kirjoitat ne itse, ja niitä käytetään vain vastaamiseen.</li>
+      <li>Kehittäjän vastaukset voi lukea apissa.</li>
+      <li>Jos haluat lähettämäsi palautteen poistettavan, ilmoita siitä alla olevilla yhteystiedoilla.</li>
+    </ul>
+
+    <h2>6. Luovutus kolmansille osapuolille ja mainonta</h2>
+    <ul>
+      <li>Appi ei myy henkilötietojasi eikä luovuta niitä kolmansille osapuolille.</li>
+      <li>Appi ei näytä mainoksia eikä seuraa sinua.</li>
+    </ul>
+
+    <h2>7. Tietojen säilytys ja poistaminen</h2>
+    <ul>
+      <li>Kaikki tallenteet säilyvät laitteellasi ja omassa iCloudissasi, ja voit itse poistaa
+          jalanjäljet ja päiväkirjamerkinnät apissa.</li>
+      <li><strong>Kun poistat apin</strong>, kaikki laitteelle tallennetut tiedot (sijainti, kuvat, päiväkirja) poistuvat samalla.
+          iCloudiin tallennetut kopiot voi poistaa iOS:n Asetukset-apin iCloud-hallinnasta.</li>
+      <li>Koska kehittäjä ei säilytä sijaintiasi, kuviasi tai päiväkirjaasi, hän ei voi katsoa eikä
+          palauttaa näitä tietoja.</li>
+      <li>Anonyymit käyttötilastot eivät sisällä mitään, minkä voisi yhdistää sinuun, joten yksittäisiä poistopyyntöjä ei voi käsitellä.
+          Kun kuitenkin poistat apin, siitä hetkestä lähtien mitään ei enää kerätä.</li>
+    </ul>
+
+    <h2>8. Lasten henkilötiedot</h2>
+    <p>
+      Appi ei kerää tietoja, joista sinut voisi tunnistaa, joten se ei kerää tietoja kohdennetusti mihinkään ikäryhmään.
+      Kaikki tiedot jäävät vain laitteellesi.
+    </p>
+
+    <h2>9. Selosteen muutokset</h2>
+    <p>
+      Tätä selostetta voidaan muuttaa lainsäädännön tai apin toimintojen muuttuessa; muutoksista ilmoitetaan päivittämällä tämä sivu.
+    </p>
+
+    <h2>10. Yhteystiedot</h2>
+    <p>
+      Henkilötietojen käsittelyä koskevissa kysymyksissä ota yhteyttä:<br />
+      Sähköposti: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a><br />
+      Tukisivu: <a href="support.html">Tuki / Yhteydenotto</a>
+    </p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) · Voimassa 27. elokuuta 2026 alkaen
+    </footer>
+  </div>
+</body>
+</html>

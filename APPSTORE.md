@@ -1087,3 +1087,67 @@ Widget
 Οι καταγραφές σας στο iCloud σας
 Βήματα, σφραγίδες, ημερολόγιο και φωτογραφίες φυλάσσονται στο προσωπικό σας iCloud και σας ακολουθούν όταν αλλάζετε συσκευή.
 Τα ανώνυμα στατιστικά χρήσης δεν περιλαμβάνουν ποτέ συντεταγμένες τοποθεσίας, κείμενο ημερολογίου, ονόματα μερών ή φωτογραφίες.
+
+## fi
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/fi/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/fi/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/fi/
+
+### 이름
+
+벅뚜벅뚜: Askelin piirretty kartta
+
+### 부제
+
+Vain uudet tiet värjäytyvät
+
+### 키워드
+
+kävely,lenkki,retkeily,gps,seuranta,päiväkirja,matkailu,askeleet,tutkiminen,leimat,kaupunki,reitti
+
+### 프로모션 텍스트
+
+Tyhjä kartta, johon ei piirry autolla tai metrolla kuljetut tiet. Vain ensimmäistä kertaa kävelemäsi tiet kasvattavat sitä. Mihin suuntaan piirrät tänään uuden tien?
+
+### 설명
+
+Kartta, joka alkaa tyhjästä paperista. Vain omin jaloin kulkemasi paikat täyttyvät, piste kerrallaan.
+Autolla tai metrolla kuljettuja teitä ei piirretä, eikä kartta kasva, vaikka kävelisit saman tien sata kertaa. Kasvattaaksesi sitä sinun on valittava uusia teitä.
+
+Tämä päivä ja menneet askeleet eri väreillä
+Tänään kävelemäsi paikat painautuvat punaisella musteella ja menneet askeleet indigonsinisellä. Mitä useammin ohitat paikan, sitä tummemmaksi se muuttuu, ja arkipiirisi piirtyy esiin itsestään.
+Paikat, joissa et ole käynyt yli kolmeen kuukauteen, eivät katoa vaan haalistuvat harmaiksi.
+
+Leimat käydyille ja käytäville paikoille
+Leimaa siinä, missä seisot, tai paina karttaa pitkään ja aseta leima, mihin haluat. Leimoja on 212, ja ne on lajiteltu luokkiin.
+Paikkaan, jossa et ole koskaan kävellyt, asetettu leima jää käyntikohteeksi ja muuttuu käydyksi paikaksi, kun todella lähestyt sitä.
+Ota kameralla kuva kaupan kyltistä, niin tausta leikataan pois ja kyltti nousee kartalle tarrana, joka kuuluu vain sille paikalle.
+
+Päivän jalanjäljet
+Tänään pysähtymäsi paikat asettuvat aikajärjestykseen, ja niiden välillä kävelty matka kirjataan. Jos askeltesi pysähdyspaikalla on leima, appi kysyy, kävitkö siellä, ja laskee käynnin.
+
+Pioneerin kompassi
+Jakaa sijaintisi ympäristön kahdeksaan suuntaan ja osoittaa sen, jossa olet kulkenut vähiten. Käytä sitä valitessasi seuraavan kävelyn suuntaa.
+
+Filmi ja kalenteri
+Valitse jakso ja katso videona, jonka voit myös viedä, kuinka karttasi piirtyy.
+Kalenteri piirtää numeron sijaan päivän kävelyn muodon. Voit myös pitää päiväkirjaa joka päivä tekstillä ja kuvilla.
+
+Widgetit
+Koti-valikko näyttää tänään piirretyn tien muodon ja pituuden, lukitusnäyttö päivän matkan yhtenä numerorivinä.
+
+Tallennustapa
+Valitse tarkkuus ensin tai akku ensin. Tarkkuus ensin -tilassa askeleesi tallentuvat, vaikka appi olisi suljettu.
+
+Tallenteesi omassa iCloudissasi
+Askeleet, leimat, päiväkirja ja kuvat säilyvät omassa iCloudissasi ja seuraavat mukanasi laitetta vaihtaessasi.
+Anonyymit käyttötilastot eivät koskaan sisällä sijaintikoordinaatteja, päiväkirjatekstejä, paikannimiä tai kuvia.

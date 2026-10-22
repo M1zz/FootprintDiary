@@ -104,6 +104,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -209,6 +215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Η κάμερα χρησιμοποιείται για να κρατήσετε φωτογραφία του μέρους και να αποκόψετε ό,τι φωτογραφίζετε σε αυτοκόλλητο για τον χάρτη."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kameralla tallennetaan kuva paikasta ja leikataan kuvaamasi kohde tarraksi, jonka voi asettaa kartalle."
           }
         }
       }
@@ -316,6 +328,12 @@
             "state" : "translated",
             "value" : "Για να καταγράφονται αυτόματα τα αποτυπώματα σε κάθε αλλαγή μέρους, χρειάζεται η άδεια «Πάντα»."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "”Aina”-lupa tarvitaan, jotta jalanjälkesi tallentuvat automaattisesti aina paikkaa vaihtaessasi."
+          }
         }
       }
     },
@@ -422,6 +440,12 @@
             "state" : "translated",
             "value" : "Χρειάζεται η άδεια τοποθεσίας για να καταγράφεται η τρέχουσα θέση σας ως αποτύπωμα στον χάρτη."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sijaintilupa tarvitaan, jotta nykyinen sijaintisi voidaan tallentaa jalanjäljeksi karttaan."
+          }
         }
       }
     },
@@ -527,6 +551,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χρησιμοποιούνται δεδομένα κίνησης για να διαπιστωθεί αν μετακινηθήκατε περπατώντας ή τρέχοντας, ώστε να μην καταγράφονται οι μετακινήσεις με όχημα."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liiketietoja käytetään tunnistamaan, liikuitko kävellen vai juosten, jotta ajoneuvolla kuljettuja matkoja ei tallenneta."
           }
         }
       }

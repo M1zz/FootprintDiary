@@ -104,6 +104,12 @@
             "state" : "translated",
             "value" : "%@ · Αποτυπώματα %lld/%lld"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Jalanjäljet %lld/%lld"
+          }
         }
       }
     },
@@ -209,6 +215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Περπατήσατε %@ σε %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käveltiin %@ ajassa %@"
           }
         }
       }
@@ -316,6 +328,12 @@
             "state" : "translated",
             "value" : "Περπατήσατε %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käveltiin %@"
+          }
         }
       }
     },
@@ -421,6 +439,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Συλλέχθηκε: %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ kerätty"
           }
         }
       }
@@ -528,6 +552,12 @@
             "state" : "translated",
             "value" : "Σύμβολο %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symboli: %@"
+          }
         }
       }
     },
@@ -634,6 +664,12 @@
             "state" : "translated",
             "value" : "%@, %lld είδη"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld lajia"
+          }
         }
       }
     },
@@ -736,6 +772,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@×"
@@ -846,6 +888,12 @@
             "state" : "translated",
             "value" : "Προς %@ έχετε περπατήσει λιγότερο"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suuntaan %@ olet kulkenut vähiten"
+          }
         }
       }
     },
@@ -951,6 +999,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Απόσταση %lld μ."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m päässä"
           }
         }
       }
@@ -1058,6 +1112,12 @@
             "state" : "translated",
             "value" : "Σε απόσταση έως %lld μ. ανοίγει το κλείστρο"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld metrin sisällä suljin avautuu"
+          }
         }
       }
     },
@@ -1163,6 +1223,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld είδη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld lajia"
           }
         }
       }
@@ -1270,6 +1336,12 @@
             "state" : "translated",
             "value" : "%lld μέρη"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld paikkaa"
+          }
         }
       }
     },
@@ -1375,6 +1447,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld φορές"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kertaa"
           }
         }
       }
@@ -1482,6 +1560,12 @@
             "state" : "translated",
             "value" : "Βγήκατε %lld φορές"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lähdit ulos %lld kertaa"
+          }
         }
       }
     },
@@ -1588,6 +1672,12 @@
             "state" : "translated",
             "value" : "Ανακάλυψη #%lld"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld. löytö"
+          }
         }
       }
     },
@@ -1693,6 +1783,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φτάστε με AR"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etsi AR:llä"
           }
         }
       }
@@ -1801,6 +1897,12 @@
             "state" : "translated",
             "value" : "Κλείδωμα με Face ID"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID -lukitus"
+          }
         }
       }
     },
@@ -1907,6 +2009,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κλειδώστε την εφαρμογή με Face ID ή Touch ID για να προστατεύσετε τα μέρη που πήγατε και το ημερολόγιό σας."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lukitse appi Face ID:llä tai Touch ID:llä suojataksesi kulkemasi paikat ja päiväkirjasi."
           }
         }
       }
@@ -2015,6 +2123,12 @@
             "state" : "translated",
             "value" : "Ρωτήστε τη Siri πόσο περπατήσατε σήμερα."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kysy Siriltä, kuinka pitkälle olet tänään kävellyt."
+          }
         }
       }
     },
@@ -2121,6 +2235,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri και Συντομεύσεις"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri ja Pikakomennot"
           }
         }
       }
@@ -2229,6 +2349,12 @@
             "state" : "translated",
             "value" : "Το VoiceOver διαβάζει όλα τα κουμπιά και τις λεπτομέρειες του χάρτη και των καταγραφών, με τη σωστή σειρά."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver lukee kartan ja tallenteiden kaikki painikkeet ja tiedot oikeassa järjestyksessä."
+          }
         }
       }
     },
@@ -2336,6 +2462,12 @@
             "state" : "translated",
             "value" : "Πιο άνετο VoiceOver"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Helpompi VoiceOver"
+          }
         }
       }
     },
@@ -2441,6 +2573,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεν υπάρχουν σφραγίδες που να ταιριάζουν με «%@»"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "”%@” ei vastaa mitään leimaa"
           }
         }
       }
@@ -2548,6 +2686,12 @@
             "state" : "translated",
             "value" : "Ήταν ένα μέρος που θέλατε να πάτε. Να καταγραφεί ως επισκέψιμο;"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aioit mennä tänne. Merkitäänkö käydyksi?"
+          }
         }
       }
     },
@@ -2653,6 +2797,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεν έχετε πάει ακόμα"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei vielä käyty"
           }
         }
       }
@@ -2760,6 +2910,12 @@
             "state" : "translated",
             "value" : "Θέλω να πάω"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Haluan käydä"
+          }
         }
       }
     },
@@ -2865,6 +3021,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ένα μέρος που σφραγίσατε ως προορισμό"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käyntikohteeksi leimattu paikka"
           }
         }
       }
@@ -2972,6 +3134,12 @@
             "state" : "translated",
             "value" : "Συχνότερος λόγος: %@ (%lld φορές). %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yleisin syy: %@ (%lld kertaa). %@"
+          }
         }
       }
     },
@@ -3077,6 +3245,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κατηγορία"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luokka"
           }
         }
       }
@@ -3184,6 +3358,12 @@
             "state" : "translated",
             "value" : "Πυξίδα πρωτοπόρου"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pioneerin kompassi"
+          }
         }
       }
     },
@@ -3289,6 +3469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Παράλειψη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ohita"
           }
         }
       }
@@ -3396,6 +3582,12 @@
             "state" : "translated",
             "value" : "Καταγραφή περπατήματος"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kävelyn tallennus"
+          }
         }
       }
     },
@@ -3501,6 +3693,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Η καταγραφή περπατήματος είναι απενεργοποιημένη. Ακόμα κι αν περπατήσετε, δεν θα μείνει ίχνος."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kävelyn tallennus on pois päältä. Vaikka kävelisit, jälkeä ei jää."
           }
         }
       }
@@ -3608,6 +3806,12 @@
             "state" : "translated",
             "value" : "Οι σφραγίδες που βάζετε περπατώντας στοιβάζονται εδώ με σειρά χρόνου.\nΤα μέρη όπου σταματάτε αποθηκεύονται μόνα τους, χωρίς σφραγίδα."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kävellessä asettamasi leimat kasaantuvat tähän aikajärjestyksessä.\nPaikat, joissa viivyt, tallentuvat itsestään ilman leimaa."
+          }
         }
       }
     },
@@ -3713,6 +3917,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μέρη που φτάσατε με τα πόδια"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kävellen saavutetut paikat"
           }
         }
       }
@@ -3820,6 +4030,12 @@
             "state" : "translated",
             "value" : "Όταν φτάσετε με τα πόδια, μπορείτε να τραβήξετε φωτογραφία εκεί"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kun saavut kävellen, voit ottaa siellä kuvan"
+          }
         }
       }
     },
@@ -3926,6 +4142,12 @@
             "state" : "translated",
             "value" : "Αν περπατήσατε αλλά δεν σχεδιάστηκε γραμμή στον χάρτη, εδώ μπορείτε να δείτε τον λόγο."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jos kävelit mutta karttaan ei piirtynyt viivaa, näet syyn täältä."
+          }
         }
       }
     },
@@ -4031,6 +4253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Καθώς περπατάτε, οι διαδρομές που περνάτε στοιβάζονται με τη σειρά."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kun kävelet, kulkemasi tiet kasautuvat järjestyksessä."
           }
         }
       }
@@ -4139,6 +4367,12 @@
             "state" : "translated",
             "value" : "Αποθηκεύστε τους δρόμους και το ημερολόγιό σας σε αρχείο και φέρτε τα πίσω αργότερα."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna kulkemasi tiet ja päiväkirja tiedostoon ja tuo ne takaisin myöhemmin."
+          }
         }
       }
     },
@@ -4244,6 +4478,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Στον χάρτη μένουν μόνο οι δρόμοι που περπατήσατε και οι σφραγίδες που βάλατε στην επιλεγμένη περίοδο."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karttaan jäävät vain valitun jakson aikana kävellyt tiet ja asetetut leimat."
           }
         }
       }
@@ -4351,6 +4591,12 @@
             "state" : "translated",
             "value" : "Δεν με ενδιαφέρει"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei kiinnosta"
+          }
         }
       }
     },
@@ -4456,6 +4702,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεν πειράζει"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sopii"
           }
         }
       }
@@ -4563,6 +4815,12 @@
             "state" : "translated",
             "value" : "Δείτε πώς σχεδιάζεται"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Katso piirtymistä"
+          }
         }
       }
     },
@@ -4668,6 +4926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ζωγραφισμένος χάρτης"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuvakartta"
           }
         }
       }
@@ -4776,6 +5040,12 @@
             "state" : "translated",
             "value" : "Ακόμα και με μεγαλύτερο κείμενο, οι οθόνες αναδιατάσσονται σωστά αντί να κόβονται."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaikka suurennat tekstiä, näkymät järjestyvät siististi uudelleen eivätkä leikkaudu."
+          }
         }
       }
     },
@@ -4881,6 +5151,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προβολή ανά περίοδο"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä jakson mukaan"
           }
         }
       }
@@ -4988,6 +5264,12 @@
             "state" : "translated",
             "value" : "Τρόπος καταγραφής"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallennustapa"
+          }
         }
       }
     },
@@ -5093,6 +5375,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κατάσταση καταγραφής"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallennuksen tila"
           }
         }
       }
@@ -5200,6 +5488,12 @@
             "state" : "translated",
             "value" : "Προβολή κατάστασης καταγραφής"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä tallennuksen tila"
+          }
         }
       }
     },
@@ -5305,6 +5599,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Επαναφορά στην προεπιλεγμένη εικόνα"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Palauta oletuskuva"
           }
         }
       }
@@ -5412,6 +5712,12 @@
             "state" : "translated",
             "value" : "Οι απενεργοποιημένες οθόνες ανοίγουν πάντα από το «Προβολή όλων μαζί» παραπάνω. Τα κουμπιά σφραγίδων και ρυθμίσεων φαίνονται πάντα."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pois kytketyt näkymät voi aina avata yllä olevasta ”Näytä kaikki yhdessä” -kohdasta. Leimojen ja asetusten painikkeet näkyvät aina."
+          }
         }
       }
     },
@@ -5517,6 +5823,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Λήξη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loppu"
           }
         }
       }
@@ -5624,6 +5936,12 @@
             "state" : "translated",
             "value" : "Αργότερα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Myöhemmin"
+          }
         }
       }
     },
@@ -5729,6 +6047,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αποθηκεύεται μόνο στο προσωπικό σας iCloud. Κανείς άλλος δεν το βλέπει."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallentuu vain omaan iCloudiisi. Muut eivät näe sitä."
           }
         }
       }
@@ -5837,6 +6161,12 @@
             "state" : "translated",
             "value" : "Διαγραφή όλων των καταγραφών μου με μία κίνηση"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista kaikki tallenteeni kerralla"
+          }
         }
       }
     },
@@ -5942,6 +6272,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Περίγραμμα της γειτονιάς μου"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naapurustoni ääriviiva"
           }
         }
       }
@@ -6049,6 +6385,12 @@
             "state" : "translated",
             "value" : "Ο χάρτης μου"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Karttani"
+          }
         }
       }
     },
@@ -6154,6 +6496,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Άνοιγμα του χάρτη μου"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa karttani"
           }
         }
       }
@@ -6261,6 +6609,12 @@
             "state" : "translated",
             "value" : "Δείτε τον χάρτη σας να σχεδιάζεται"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Katso, kuinka karttasi piirtyy"
+          }
         }
       }
     },
@@ -6366,6 +6720,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προεπισκόπηση της σχεδίασης του χάρτη σας"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esikatselu kartan piirtymisestä"
           }
         }
       }
@@ -6473,6 +6833,12 @@
             "state" : "translated",
             "value" : "Οι δρόμοι που έχω σχεδιάσει"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Piirtämäni tiet"
+          }
         }
       }
     },
@@ -6578,6 +6944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μέρη που έχω σφραγίσει"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leimaamani paikat"
           }
         }
       }
@@ -6685,6 +7057,12 @@
             "state" : "translated",
             "value" : "Πατήστε για να φανεί ο χάρτης από κάτω"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta, niin kartta kuultaa läpi"
+          }
         }
       }
     },
@@ -6790,6 +7168,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πατήστε για να σφραγίσετε την τρέχουσα θέση"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta leimataksesi nykyisen sijainnin"
           }
         }
       }
@@ -6897,6 +7281,12 @@
             "state" : "translated",
             "value" : "Επιβεβαιώστε αν πήγατε σε %lld μέρη"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vahvista, oletko käynyt %lld paikassa"
+          }
         }
       }
     },
@@ -7002,6 +7392,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φορές που πήγατε"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käyntikertoja"
           }
         }
       }
@@ -7109,6 +7505,12 @@
             "state" : "translated",
             "value" : "Πήγα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kävin siellä"
+          }
         }
       }
     },
@@ -7214,6 +7616,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πατήστε ξανά για να επιστρέψετε στο χαρτί. Χρήσιμο όταν θέλετε να δείτε πού βρίσκεστε."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta uudelleen palataksesi paperiin. Kätevä, kun haluat tietää, missä olet."
           }
         }
       }
@@ -7321,6 +7729,12 @@
             "state" : "translated",
             "value" : "Νέα λήψη"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ota uudelleen"
+          }
         }
       }
     },
@@ -7426,6 +7840,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ένα μέρος που ξαναβρήκατε"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paikka, jossa kävit uudelleen"
           }
         }
       }
@@ -7533,6 +7953,12 @@
             "state" : "translated",
             "value" : "Αυτό είναι δηλωμένο ως σταθερό μέρος"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tämä on kirjattu vakiopaikaksi"
+          }
         }
       }
     },
@@ -7638,6 +8064,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Κλείσιμο"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sulje"
           }
         }
       }
@@ -7746,6 +8178,12 @@
             "state" : "translated",
             "value" : "Ακόμα και με υψηλότερη αντίθεση ή δυσκολία στη διάκριση χρωμάτων, ξεχωρίζετε τους δρόμους και τις σφραγίδες στον χάρτη."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vaikka nostaisit kontrastia tai värien erottaminen olisi vaikeaa, tunnistat kartan tiet ja leimat."
+          }
         }
       }
     },
@@ -7852,6 +8290,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Χρησιμοποιήστε την εφαρμογή σε περισσότερες γλώσσες."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käytä appia useammalla kielellä."
           }
         }
       }
@@ -7960,6 +8404,12 @@
             "state" : "translated",
             "value" : "Περισσότερες γλώσσες"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lisää kieliä"
+          }
         }
       }
     },
@@ -8065,6 +8515,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προσθέστε δυο λόγια (προαιρετικό)"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lisää pari sanaa (valinnainen)"
           }
         }
       }
@@ -8172,6 +8628,12 @@
             "state" : "translated",
             "value" : "Στη συλλογή βλέπετε τα αποτυπώματα που έχετε μαζέψει μέχρι τώρα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kokoelmasta näet tähän mennessä keräämäsi jalanjäljet"
+          }
         }
       }
     },
@@ -8277,6 +8739,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεν μπορεί να αναιρεθεί."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tätä ei voi perua."
           }
         }
       }
@@ -8384,6 +8852,12 @@
             "state" : "translated",
             "value" : "Πατήστε για παύση ή συνέχεια"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Napauta keskeyttääksesi tai jatkaaksesi"
+          }
         }
       }
     },
@@ -8489,6 +8963,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld μέρη επισκέψεων"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käyty %lld paikassa"
           }
         }
       }
@@ -8596,6 +9076,12 @@
             "state" : "translated",
             "value" : "Δεν βρέθηκε κάτι ευδιάκριτο, οπότε το φόντο δεν αφαιρέθηκε. Πλησιάστε το αντικείμενο και δοκιμάστε ξανά."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selvää kohdetta ei löytynyt, joten taustaa ei voitu poistaa. Mene lähemmäs esinettä ja yritä uudelleen."
+          }
         }
       }
     },
@@ -8701,6 +9187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τελευταία επίσκεψη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viimeisin käynti"
           }
         }
       }
@@ -8808,6 +9300,12 @@
             "state" : "translated",
             "value" : "Χάρτης με μελάνι"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mustekartta"
+          }
         }
       }
     },
@@ -8913,6 +9411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σημείωση"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muistiinpano"
           }
         }
       }
@@ -9020,6 +9524,12 @@
             "state" : "translated",
             "value" : "Προβολή όλων μαζί"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä kaikki yhdessä"
+          }
         }
       }
     },
@@ -9125,6 +9635,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τοποθετούνται νερά και βουνά"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Asetetaan vesistöjä ja vuoria"
           }
         }
       }
@@ -9232,6 +9748,12 @@
             "state" : "translated",
             "value" : "Δεν έχει ανακαλυφθεί"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Löytämättä"
+          }
         }
       }
     },
@@ -9337,6 +9859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αποτυπώματα"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jalanjäljet"
           }
         }
       }
@@ -9444,6 +9972,12 @@
             "state" : "translated",
             "value" : "Time-lapse αποτυπωμάτων"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jalanjälkien time-lapse"
+          }
         }
       }
     },
@@ -9550,6 +10084,12 @@
             "state" : "translated",
             "value" : "Ξεκαθαρισμένη γη %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paljastettu maa %@"
+          }
         }
       }
     },
@@ -9655,6 +10195,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Διαφάνεια για τον χάρτη στο φόντο"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä taustakartta läpi"
           }
         }
       }
@@ -9763,6 +10309,12 @@
             "state" : "translated",
             "value" : "Αντίγραφο ασφαλείας και εξαγωγή"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Varmuuskopiointi ja vienti"
+          }
         }
       }
     },
@@ -9868,6 +10420,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Λόγοι απόρριψης"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hylkäämisen syyt"
           }
         }
       }
@@ -9975,6 +10533,12 @@
             "state" : "translated",
             "value" : "Έκδοση %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versio %@"
+          }
         }
       }
     },
@@ -10080,6 +10644,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προβολή"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näkymä"
           }
         }
       }
@@ -10188,6 +10758,12 @@
             "state" : "translated",
             "value" : "Άνετα χρώματα και αντίθεση"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miellyttävät värit ja kontrasti"
+          }
         }
       }
     },
@@ -10293,6 +10869,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εμφανιζόμενοι δρόμοι"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytettävät tiet"
           }
         }
       }
@@ -10400,6 +10982,12 @@
             "state" : "translated",
             "value" : "Ένα λευκό χαρτί από μόνο του δεν ξέρει τι είναι πού.\nΗ θέση όπου βρίσκεστε τώρα γίνεται το **πρώτο σημείο αναφοράς**."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tyhjä paperi ei itse tiedä, mikä on missä.\nNykyinen sijaintisi on **ensimmäinen vertailupiste**."
+          }
         }
       }
     },
@@ -10505,6 +11093,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ξεκινάμε από λευκό χαρτί"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aloitetaan tyhjältä paperilta"
           }
         }
       }
@@ -10612,6 +11206,12 @@
             "state" : "translated",
             "value" : "Στατιστικά χρήσης (προγραμματιστής)"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käyttötilastot (kehittäjä)"
+          }
         }
       }
     },
@@ -10717,6 +11317,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Φωτογραφίες"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuvat"
           }
         }
       }
@@ -10824,6 +11430,12 @@
             "state" : "translated",
             "value" : "Διαγραφή φωτογραφίας"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista kuva"
+          }
         }
       }
     },
@@ -10929,6 +11541,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Λήψη φωτογραφίας"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ota kuva"
           }
         }
       }
@@ -11036,6 +11654,12 @@
             "state" : "translated",
             "value" : "Προσθήκη φωτογραφίας"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lisää kuva"
+          }
         }
       }
     },
@@ -11141,6 +11765,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προσθήκη φωτογραφίας"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lisätään kuvaa"
           }
         }
       }
@@ -11248,6 +11878,12 @@
             "state" : "translated",
             "value" : "Δεν ήταν δυνατή η αποθήκευση της φωτογραφίας"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuvan tallennus epäonnistui"
+          }
         }
       }
     },
@@ -11353,6 +11989,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Διαγραφή"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista"
           }
         }
       }
@@ -11461,6 +12103,12 @@
             "state" : "translated",
             "value" : "Υπενθύμιση βόλτας"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kävelymuistutus"
+          }
         }
       }
     },
@@ -11566,6 +12214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τα %lld νέα μέρη που φτάσατε σφραγίζονται στη διαδρομή"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uudet saavutetut paikat (%lld) leimataan kulkemallesi reitille"
           }
         }
       }
@@ -11673,6 +12327,12 @@
             "state" : "translated",
             "value" : "Τι νέο υπάρχει"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uutta"
+          }
         }
       }
     },
@@ -11778,6 +12438,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ρυθμίσεις"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Asetukset"
           }
         }
       }
@@ -11885,6 +12551,12 @@
             "state" : "translated",
             "value" : "Ενεργοποιήστε την κάμερα στις Ρυθμίσεις > 벅뚜벅뚜."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ota kamera käyttöön kohdassa Asetukset > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -11990,6 +12662,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Άνοιγμα Ρυθμίσεων"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa Asetukset"
           }
         }
       }
@@ -12097,6 +12775,12 @@
             "state" : "translated",
             "value" : "Ενεργοποίηση αδειών στις Ρυθμίσεις"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ota käyttöoikeudet käyttöön Asetuksissa"
+          }
         }
       }
     },
@@ -12202,6 +12886,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ανοίγει και από τις Ρυθμίσεις"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voit avata tämän myös Asetuksista"
           }
         }
       }
@@ -12309,6 +12999,12 @@
             "state" : "translated",
             "value" : "Μηδενισμός μέτρησης"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nollaa laskenta"
+          }
         }
       }
     },
@@ -12414,6 +13110,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τον κόσμο τον έχουν ήδη σχεδιάσει άλλοι χάρτες.\nΕδώ μένουν **μόνο τα μέρη που περάσατε με τα ίδια σας τα πόδια**."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Muut kartat ovat jo piirtäneet maailman.\nTähän jäävät **vain paikat, joissa olet kulkenut omin jaloin**."
           }
         }
       }
@@ -12521,6 +13223,12 @@
             "state" : "translated",
             "value" : "Συλλεγμένα σημεία"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kerätyt spotit"
+          }
         }
       }
     },
@@ -12626,6 +13334,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σφραγίδα"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leima"
           }
         }
       }
@@ -12733,6 +13447,12 @@
             "state" : "translated",
             "value" : "Έναρξη"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alku"
+          }
         }
       }
     },
@@ -12838,6 +13558,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Έναρξη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aloita"
           }
         }
       }
@@ -12945,6 +13671,12 @@
             "state" : "translated",
             "value" : "Σύμβολο"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symboli"
+          }
         }
       }
     },
@@ -13050,6 +13782,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μεγέθυνση συμβόλου"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suurenna symboli"
           }
         }
       }
@@ -13158,6 +13896,12 @@
             "state" : "translated",
             "value" : "Συνέχιση ημερολογίου που έμεινε μισό"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jatka keskeneräistä päiväkirjaa"
+          }
         }
       }
     },
@@ -13263,6 +14007,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σύρετε για να γυρίσετε σαν κάρτες, πατήστε δύο φορές για μεγέθυνση"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pyyhkäise selataksesi kuin kortteja, kaksoisnapauta suurentaaksesi"
           }
         }
       }
@@ -13370,6 +14120,12 @@
             "state" : "translated",
             "value" : "Όχι"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En"
+          }
         }
       }
     },
@@ -13472,6 +14228,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -13582,6 +14344,12 @@
             "state" : "translated",
             "value" : "Όχι ακόμα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei vielä"
+          }
         }
       }
     },
@@ -13687,6 +14455,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεν έχετε πάει ακόμα"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei vielä käyty"
           }
         }
       }
@@ -13794,6 +14568,12 @@
             "state" : "translated",
             "value" : "Δεν έχετε πάει ακόμα εδώ. Μένει ως «Θέλω να πάω» και γίνεται επισκέψιμο μέρος όταν φτάσετε."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Et ole vielä käynyt täällä. Se jää ”Haluan käydä” -paikaksi ja muuttuu käydyksi, kun saavut."
+          }
         }
       }
     },
@@ -13899,6 +14679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δεν έχει απορριφθεί ακόμα κανένα σημείο"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hylättyjä pisteitä ei vielä ole"
           }
         }
       }
@@ -14006,6 +14792,12 @@
             "state" : "translated",
             "value" : "Όχι ακόμα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ei vielä"
+          }
         }
       }
     },
@@ -14111,6 +14903,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Οδηγός"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opas"
           }
         }
       }
@@ -14219,6 +15017,12 @@
             "state" : "translated",
             "value" : "Μπορείτε να χρησιμοποιείτε την εφαρμογή και στα αγγλικά."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Appia voi käyttää myös englanniksi."
+          }
         }
       }
     },
@@ -14324,6 +15128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ανοίξτε την εφαρμογή μία φορά"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avaa appi kerran"
           }
         }
       }
@@ -14431,6 +15241,12 @@
             "state" : "translated",
             "value" : "Ποια μέρα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mikä päivä"
+          }
         }
       }
     },
@@ -14536,6 +15352,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σε κάθε περίπτωση αποθηκεύονται όλες οι τοποθεσίες που λαμβάνονται. Απλώς τα σημεία χαμηλής ακρίβειας δεν σχεδιάζονται στον χάρτη."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kummin tahansa kaikki vastaanotetut sijainnit tallennetaan. Vain heikon tarkkuuden pisteitä ei piirretä karttaan."
           }
         }
       }
@@ -14643,6 +15465,12 @@
             "state" : "translated",
             "value" : "Μετριέται μόνο ανώνυμα ποιες οθόνες χρησιμοποιούνται. Τα μέρη που περπατάτε και το κείμενο του ημερολογίου δεν στέλνονται."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anonyymisti lasketaan vain, mitä näkymiä käytetään. Kävelemiäsi paikkoja ja päiväkirjatekstejä ei lähetetä."
+          }
         }
       }
     },
@@ -14748,6 +15576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μείνατε εδώ %@"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viivyit täällä %@"
           }
         }
       }
@@ -14855,6 +15689,12 @@
             "state" : "translated",
             "value" : "Κράτησε αυτό το μέρος"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säilytä tämä paikka"
+          }
         }
       }
     },
@@ -14960,6 +15800,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σημείωσε εδώ"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Merkitse tähän"
           }
         }
       }
@@ -15067,6 +15913,12 @@
             "state" : "translated",
             "value" : "Δεν πειράζει να μην καταγραφεί αυτό το μέρος;"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sopiiko, ettei tätä paikkaa tallenneta?"
+          }
         }
       }
     },
@@ -15172,6 +16024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Πού ήταν αυτό εδώ;"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Missä tämä oli?"
           }
         }
       }
@@ -15279,6 +16137,12 @@
             "state" : "translated",
             "value" : "Εξαγωγή ως βίντεο"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vie videona"
+          }
         }
       }
     },
@@ -15384,6 +16248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δημιουργία βίντεο %lld%%"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luodaan videota %lld %%"
           }
         }
       }
@@ -15492,6 +16362,12 @@
             "state" : "translated",
             "value" : "Υποστήριξη αγγλικών"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Englannin tuki"
+          }
         }
       }
     },
@@ -15597,6 +16473,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Π.χ. σπίτι, δουλειά, στέκι καφέ"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Esim. koti, työ, kantakahvila"
           }
         }
       }
@@ -15704,6 +16586,12 @@
             "state" : "translated",
             "value" : "Σήμερα %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tänään %@"
+          }
         }
       }
     },
@@ -15809,6 +16697,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Η σημερινή διαδρομή"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tämän päivän tie"
           }
         }
       }
@@ -15916,6 +16810,12 @@
             "state" : "translated",
             "value" : "Προστέθηκε φωτογραφία στο σημερινό ημερολόγιο"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kuva lisättiin tämän päivän päiväkirjaan"
+          }
         }
       }
     },
@@ -16021,6 +16921,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αναπαραγωγή σημερινής"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toista tämä päivä"
           }
         }
       }
@@ -16128,6 +17034,12 @@
             "state" : "translated",
             "value" : "Σήμερα δεν έχετε επισκεφθεί ακόμα κανένα μέρος"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tänään et ole vielä käynyt missään"
+          }
         }
       }
     },
@@ -16233,6 +17145,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σήμερα δεν έχετε σταματήσει ακόμα πουθενά"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tänään et ole vielä pysähtynyt missään"
           }
         }
       }
@@ -16340,6 +17258,12 @@
             "state" : "translated",
             "value" : "Πού εξερευνήσατε σήμερα;"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Missä tutkit tänään?"
+          }
         }
       }
     },
@@ -16445,6 +17369,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τα σημερινά αποτυπώματα"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivän jalanjäljet"
           }
         }
       }
@@ -16552,6 +17482,12 @@
             "state" : "translated",
             "value" : "Η σημερινή εξερεύνηση"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivän tutkimukset"
+          }
         }
       }
     },
@@ -16657,6 +17593,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τέλος"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valmis"
           }
         }
       }
@@ -16765,6 +17707,12 @@
             "state" : "translated",
             "value" : "Μείωση κίνησης"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vähennä liikettä"
+          }
         }
       }
     },
@@ -16871,6 +17819,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Με ενεργή τη «Μείωση κίνησης», ο χάρτης και τα εφέ της οθόνης γίνονται πιο ήρεμα."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kun Vähennä liikettä on päällä, kartta ja näytön tehosteet rauhoittuvat."
           }
         }
       }
@@ -16979,6 +17933,12 @@
             "state" : "translated",
             "value" : "Αν θέλετε, μπορείτε να διαγράψετε στην εφαρμογή όλους τους δρόμους και το ημερολόγιό σας."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Halutessasi voit poistaa apissa kaikki kulkemasi tiet ja päiväkirjan."
+          }
         }
       }
     },
@@ -17084,6 +18044,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αν ορίσετε την τοποθεσία σε «Πάντα» και ενεργοποιήσετε το «Κίνηση και φυσική κατάσταση», το περπάτημα καταγράφεται χωρίς να ανοίξετε την εφαρμογή."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kun asetat sijainnin tilaan ”Aina” ja otat käyttöön Liike ja kunto, kävelysi tallentuu ilman että avaat appia."
           }
         }
       }
@@ -17191,6 +18157,12 @@
             "state" : "translated",
             "value" : "Σε αυτή την περίοδο δεν υπάρχουν αποτυπώματα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tältä jaksolta ei ole jalanjälkiä"
+          }
         }
       }
     },
@@ -17296,6 +18268,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Προβολή αυτής της περιόδου"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä tämä jakso"
           }
         }
       }
@@ -17403,6 +18381,12 @@
             "state" : "translated",
             "value" : "Μέρη που φωτογραφίστηκαν αυτή τη μέρα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tänä päivänä kuvatut paikat"
+          }
         }
       }
     },
@@ -17508,6 +18492,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αυτή τη μέρα δεν καταγράφηκαν βήματα"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tältä päivältä ei ole kirjattu askelia"
           }
         }
       }
@@ -17615,6 +18605,12 @@
             "state" : "translated",
             "value" : "Αυτή τη μέρα δεν υπάρχουν αποτυπώματα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tältä päivältä ei ole jalanjälkiä"
+          }
         }
       }
     },
@@ -17720,6 +18716,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Διαγραφή αυτής της σφραγίδας"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista tämä leima"
           }
         }
       }
@@ -17827,6 +18829,12 @@
             "state" : "translated",
             "value" : "Χρήση αυτού του συμβόλου"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Käytä tätä symbolia"
+          }
         }
       }
     },
@@ -17932,6 +18940,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Διαγραφή των αποτυπωμάτων εδώ"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poista jalanjäljet tästä paikasta"
           }
         }
       }
@@ -18039,6 +19053,12 @@
             "state" : "translated",
             "value" : "Όνομα αυτού του μέρους (π.χ. δουλειά, στέκι καφέ)"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paikan nimi (esim. työ, kantakahvila)"
+          }
         }
       }
     },
@@ -18144,6 +19164,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Βάλτε την πρώτη σφραγίδα σε αυτό το χαρτί"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aseta ensimmäinen leima tälle paperille"
           }
         }
       }
@@ -18251,6 +19277,12 @@
             "state" : "translated",
             "value" : "Όνομα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nimi"
+          }
         }
       }
     },
@@ -18356,6 +19388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ονομασία"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anna nimi"
           }
         }
       }
@@ -18463,6 +19501,12 @@
             "state" : "translated",
             "value" : "Προσθήκη εικόνας"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lisää kuva"
+          }
         }
       }
     },
@@ -18569,6 +19613,12 @@
             "state" : "translated",
             "value" : "Τώρα βγείτε για περπάτημα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lähde nyt kävelemään"
+          }
         }
       }
     },
@@ -18674,6 +19724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τώρα βγείτε για περπάτημα.\nΤα μέρη απ' όπου περνάτε αποτυπώνονται σε αυτό το χαρτί ένα σημείο τη φορά."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lähde nyt kävelemään.\nPaikat, joiden ohi kuljet, painautuvat tälle paperille piste kerrallaan."
           }
         }
       }
@@ -18782,6 +19838,12 @@
             "state" : "translated",
             "value" : "Αν η εφαρμογή κλείσει ενώ γράφετε στο ημερολόγιο, όσα γράψατε μένουν."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jos appi sulkeutuu päiväkirjaa kirjoittaessasi, kirjoittamasi säilyy."
+          }
         }
       }
     },
@@ -18887,6 +19949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ημερολόγιο"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päiväkirja"
           }
         }
       }
@@ -18994,6 +20062,12 @@
             "state" : "translated",
             "value" : "Όταν **φτάσετε σε ένα μέρος που πηγαίνετε συχνά, σφραγίστε εκεί άλλη μια φορά**.\nΜε δύο σημεία αναφοράς, ακόμα και ένα λευκό χαρτί βρίσκει κατεύθυνση."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kun **saavut paikkaan, jossa käyt usein, leimaa siellä vielä kerran**.\nKahdella vertailupisteellä tyhjäkin paperi löytää suunnan."
+          }
         }
       }
     },
@@ -19099,6 +20173,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δοκιμάστε ξανά σε λίγο ή πατήστε παρατεταμένα στον χάρτη για να σφραγίσετε όπου θέλετε."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yritä hetken kuluttua uudelleen tai paina karttaa pitkään ja leimaa, mihin haluat."
           }
         }
       }
@@ -19206,6 +20286,12 @@
             "state" : "translated",
             "value" : "Αποθήκευση"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tallenna"
+          }
         }
       }
     },
@@ -19311,6 +20397,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Επιστροφή σε όλη την περίοδο"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Takaisin koko jaksoon"
           }
         }
       }
@@ -19418,6 +20510,12 @@
             "state" : "translated",
             "value" : "Μέτρηση σημείων"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pisteiden laskenta"
+          }
         }
       }
     },
@@ -19523,6 +20621,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τα σημεία με χαμηλή ακρίβεια αποθηκεύονται κι αυτά. Προς το παρόν δεν σχεδιάζονται στον χάρτη, αλλά θα χρησιμοποιηθούν όταν βελτιωθεί η διόρθωση."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Myös heikon tarkkuuden pisteet tallennetaan. Nyt niitä ei piirretä karttaan, mutta ne voi ottaa käyttöön, kun korjaus paranee."
           }
         }
       }
@@ -19630,6 +20734,12 @@
             "state" : "translated",
             "value" : "Τρέχουσα κατάσταση"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nykytila"
+          }
         }
       }
     },
@@ -19735,6 +20845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αναζήτηση της θέσης σας"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etsitään sijaintiasi"
           }
         }
       }
@@ -19842,6 +20958,12 @@
             "state" : "translated",
             "value" : "Σημάδεψε αυτό το σημείο"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jätä merkki tähän"
+          }
         }
       }
     },
@@ -19947,6 +21069,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σφράγισμα της θέσης σας"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leimaa nykyiseen sijaintiin"
           }
         }
       }
@@ -20054,6 +21182,12 @@
             "state" : "translated",
             "value" : "Σφράγισμα εδώ"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leimaa tähän"
+          }
         }
       }
     },
@@ -20159,6 +21293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Τα μέρη απ' όπου περνάτε αποτυπώνονται σε αυτό το χαρτί ένα σημείο τη φορά.\nΟι δρόμοι που περνάτε με αυτοκίνητο ή μετρό δεν σχεδιάζονται."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paikat, joiden ohi kuljet, painautuvat tälle paperille piste kerrallaan.\nAutolla tai metrolla kuljettuja teitä ei piirretä."
           }
         }
       }
@@ -20266,6 +21406,12 @@
             "state" : "translated",
             "value" : "Επιλέξτε τα κουμπιά του χάρτη στις Ρυθμίσεις"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse kartan painikkeet Asetuksissa"
+          }
         }
       }
     },
@@ -20371,6 +21517,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Στιλ χάρτη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartan tyyli"
           }
         }
       }
@@ -20478,6 +21630,12 @@
             "state" : "translated",
             "value" : "Κλίμακα χάρτη. Μία μπάρα ισοδυναμεί με %@"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartan mittakaava. Yksi palkki vastaa %@"
+          }
         }
       }
     },
@@ -20583,6 +21741,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Διαλέξτε ποια κουμπιά επιπλέουν στον χάρτη και ανοίξτε τις απενεργοποιημένες οθόνες απευθείας από τις Ρυθμίσεις."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse, mitkä painikkeet leijuvat kartalla, ja avaa pois kytketyt näkymät suoraan Asetuksista."
           }
         }
       }
@@ -20690,6 +21854,12 @@
             "state" : "translated",
             "value" : "Μέρη που σφραγίσατε από πριν στον χάρτη. Όταν φτάσετε, γίνονται επισκέψιμα μέρη."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Etukäteen kartalle leimaamiasi paikkoja. Kun saavut, niistä tulee käytyjä paikkoja."
+          }
         }
       }
     },
@@ -20795,6 +21965,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Εμφάνιση στον χάρτη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä kartalla"
           }
         }
       }
@@ -20902,6 +22078,12 @@
             "state" : "translated",
             "value" : "Προβολή στον χάρτη"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näytä kartalla"
+          }
         }
       }
     },
@@ -21007,6 +22189,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Έτσι φαίνεται στον χάρτη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartalla se näyttää tältä"
           }
         }
       }
@@ -21114,6 +22302,12 @@
             "state" : "translated",
             "value" : "Εκκαθάριση"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tyhjennä"
+          }
         }
       }
     },
@@ -21219,6 +22413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Υποστήριξη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuki"
           }
         }
       }
@@ -21326,6 +22526,12 @@
             "state" : "translated",
             "value" : "Διαλέξτε κάτι που μπορεί να λειτουργήσει ως σημείο αναφοράς, όπως το σπίτι ή η δουλειά."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Valitse jokin, mikä kelpaa vertailupisteeksi, esim. koti tai työ."
+          }
         }
       }
     },
@@ -21431,6 +22637,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Λήψη"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ota"
           }
         }
       }
@@ -21538,6 +22750,12 @@
             "state" : "translated",
             "value" : "Ημερομηνία σφραγίδας"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leimauspäivä"
+          }
         }
       }
     },
@@ -21643,6 +22861,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Σφραγίστηκε"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Leimattu"
           }
         }
       }
@@ -21750,6 +22974,12 @@
             "state" : "translated",
             "value" : "Οι δρόμοι που περνάτε με αυτοκίνητο ή μετρό δεν σχεδιάζονται.\nΜόνο όταν περπατάτε μπαίνει ένα σημείο τη φορά."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Autolla tai metrolla kuljettuja teitä ei piirretä.\nVain kävely painaa pisteen kerrallaan."
+          }
         }
       }
     },
@@ -21855,6 +23085,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μένει μόνο ό,τι είναι μέσα στο πλαίσιο· το φόντο σβήνεται"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vain kehyksen sisällä oleva jää jäljelle, tausta häviää"
           }
         }
       }
@@ -21962,6 +23198,12 @@
             "state" : "translated",
             "value" : "Πρώτη"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ensimmäinen"
+          }
         }
       }
     },
@@ -22067,6 +23309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Δρόμοι που περπατήσατε για πρώτη φορά"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ensimmäistä kertaa kuljetut tiet"
           }
         }
       }
@@ -22174,6 +23422,12 @@
             "state" : "translated",
             "value" : "Είναι ένα μέρος που πατάτε για πρώτη φορά"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tähän paikkaan astut ensimmäistä kertaa"
+          }
         }
       }
     },
@@ -22279,6 +23533,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ακύρωση"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peruuta"
           }
         }
       }
@@ -22386,6 +23646,12 @@
             "state" : "translated",
             "value" : "Ενεργοποίηση"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ota käyttöön"
+          }
         }
       }
     },
@@ -22491,6 +23757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Μεγέθυνση"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suurenna"
           }
         }
       }
@@ -22599,6 +23871,12 @@
             "state" : "translated",
             "value" : "Οθόνες για μεγάλο κείμενο"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Näkymät suurelle tekstille"
+          }
         }
       }
     },
@@ -22701,6 +23979,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time-lapse"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Time-lapse"
@@ -22811,6 +24095,12 @@
             "state" : "translated",
             "value" : "Εξερεύνηση"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutki"
+          }
         }
       }
     },
@@ -22917,6 +24207,12 @@
             "state" : "translated",
             "value" : "Αρχείο εξερεύνησης"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutkimusloki"
+          }
         }
       }
     },
@@ -23022,6 +24318,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ημερολόγιο εξερεύνησης"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutkimuspäiväkirja"
           }
         }
       }
@@ -23130,6 +24432,12 @@
             "state" : "translated",
             "value" : "Οθόνη αναδιπλούμενου iPhone"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taitettavan iPhonen näyttö"
+          }
         }
       }
     },
@@ -23237,6 +24545,12 @@
             "state" : "translated",
             "value" : "Σε αναδιπλούμενο iPhone, δείτε τον χάρτη και τις καταγραφές σε δύο τμήματα."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Taitettavalla iPhonella näet kartan ja tallenteet kahdessa osassa."
+          }
         }
       }
     },
@@ -23342,6 +24656,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Time-lapse της ημέρας"
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivän time-lapse"
           }
         }
       }
@@ -23450,6 +24770,12 @@
             "state" : "translated",
             "value" : "Στο τέλος της ημέρας, μια ειδοποίηση σας λέει τη διαδρομή που περπατήσατε σήμερα."
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Päivän päätteeksi ilmoitus kertoo tänään kulkemasi reitin."
+          }
         }
       }
     },
@@ -23555,6 +24881,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Αν μείνετε πάνω από %lld λεπτά σε ένα μέρος,\nθα εμφανιστεί στα σημερινά αποτυπώματα."
+          }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jos viivyt samassa paikassa yli %lld minuuttia,\npaikka ilmestyy päivän jalanjälkiin."
           }
         }
       }
@@ -23662,6 +24994,12 @@
             "state" : "translated",
             "value" : "Η θέση σας δεν βρέθηκε ακόμα"
           }
+        },
+        "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sijaintiasi ei ole vielä löydetty"
+          }
         }
       }
     },
@@ -23764,6 +25102,12 @@
           }
         },
         "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "fi" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
