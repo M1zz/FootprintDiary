@@ -1279,3 +1279,67 @@ Velg mellom nøyaktighet først og batteri først. Med nøyaktighet først regis
 Registreringene dine i din iCloud
 Skritt, stempler, dagbok og bilder lagres i din personlige iCloud og følger med når du bytter enhet.
 Anonym bruksstatistikk inneholder aldri posisjonskoordinater, dagbokstekst, stedsnavn eller bilder.
+
+## nl
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/nl/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/nl/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/nl/
+
+### 이름
+
+벅뚜벅뚜: Kaart van je stappen
+
+### 부제
+
+Alleen nieuwe wegen kleuren
+
+### 키워드
+
+wandelen,wandeling,hiken,gps,tracker,dagboek,reizen,stappen,verkennen,stempels,buurt,stad,route
+
+### 프로모션 텍스트
+
+Een lege kaart waarop ritten met auto of metro nooit worden getekend. Alleen wegen die je voor het eerst loopt maken hem groter. Waar trek je vandaag een nieuwe weg?
+
+### 설명
+
+Een kaart die begint als een leeg vel papier. Alleen de plekken waar je met je eigen voeten bent geweest, worden ingevuld, punt voor punt.
+Wegen die je met de auto of metro aflegt, worden niet getekend, en ook als je honderd keer dezelfde weg loopt, groeit de kaart niet. Om hem te vergroten, moet je nieuwe wegen nemen.
+
+Vandaag en eerdere stappen, in verschillende kleuren
+Waar je vandaag liep, wordt met rode inkt afgestempeld, eerdere stappen in indigo. Hoe vaker je ergens langskomt, hoe donkerder het wordt, zodat je dagelijkse straal vanzelf zichtbaar wordt.
+Plekken waar je al meer dan drie maanden niet bent geweest, worden niet gewist, maar vervagen tot grijs.
+
+Stempels voor bezochte plekken en plekken die je wilt bezoeken
+Stempel waar je staat, of houd de kaart ingedrukt om een stempel te zetten waar je wilt. Er zijn 212 stempels om uit te kiezen, gesorteerd per categorie.
+Een stempel op een plek waar je nog nooit hebt gelopen, blijft staan als plek om te bezoeken en wordt een bezochte plek zodra je er echt in de buurt komt.
+Fotografeer met de camera het uithangbord van een winkel: de achtergrond wordt weggeknipt en het bord komt rechtop te staan als een sticker die alleen bij die plek hoort.
+
+Voetafdrukken van vandaag
+De plekken waar je vandaag stilstond, staan in tijdsvolgorde op een rij, met erbij hoe ver je ertussen liep. Als er een stempel staat waar je stappen stilvielen, vraagt de app of je er was en telt het bezoek mee.
+
+Pionierskompas
+Verdeelt de omgeving van waar je staat in acht richtingen en wijst de richting aan waar je het minst bent geweest. Gebruik het om de richting van je volgende wandeling te kiezen.
+
+Film en kalender
+Kies een periode om als video te bekijken, of te exporteren, hoe je kaart wordt getekend.
+De kalender tekent in plaats van een getal de vorm van de wandeling van die dag. Je kunt ook elke dag een dagboek bijhouden met tekst en foto's.
+
+Widgets
+Het beginscherm toont de vorm en lengte van de weg die je vandaag tekende, het toegangsscherm de afstand van vandaag op één regel cijfers.
+
+Registratiewijze
+Kies tussen nauwkeurigheid eerst en batterij eerst. Met nauwkeurigheid eerst worden je stappen ook vastgelegd als de app gesloten is.
+
+Je registraties in je eigen iCloud
+Stappen, stempels, dagboek en foto's worden bewaard in je persoonlijke iCloud en volgen je als je van apparaat wisselt.
+Anonieme gebruiksstatistieken bevatten nooit locatiecoördinaten, dagboekteksten, plaatsnamen of foto's.
