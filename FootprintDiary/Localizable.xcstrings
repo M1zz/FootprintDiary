@@ -116,6 +116,12 @@
             "state" : "translated",
             "value" : "%@ · Jejak kaki %lld/%lld"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Fotspor %lld/%lld"
+          }
         }
       }
     },
@@ -233,6 +239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Berjalan %@ dalam %@"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gikk %@ på %@"
           }
         }
       }
@@ -352,6 +364,12 @@
             "state" : "translated",
             "value" : "Berjalan %@"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gikk %@"
+          }
         }
       }
     },
@@ -469,6 +487,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ terkumpul"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ samlet"
           }
         }
       }
@@ -588,6 +612,12 @@
             "state" : "translated",
             "value" : "Simbol %@"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol: %@"
+          }
         }
       }
     },
@@ -706,6 +736,12 @@
             "state" : "translated",
             "value" : "%@, %lld jenis"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld slag"
+          }
         }
       }
     },
@@ -820,6 +856,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
+        },
+        "nb" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@×"
@@ -942,6 +984,12 @@
             "state" : "translated",
             "value" : "Arah %@ paling sedikit kamu jalani"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I retning %@ har du gått minst"
+          }
         }
       }
     },
@@ -1059,6 +1107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Berjarak %lld m"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m unna"
           }
         }
       }
@@ -1178,6 +1232,12 @@
             "state" : "translated",
             "value" : "Dalam jarak %lld m, rana terbuka"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Innen %lld m åpner lukkeren seg"
+          }
         }
       }
     },
@@ -1295,6 +1355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld jenis"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld slag"
           }
         }
       }
@@ -1414,6 +1480,12 @@
             "state" : "translated",
             "value" : "%lld tempat"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld steder"
+          }
         }
       }
     },
@@ -1531,6 +1603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld kali"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld ganger"
           }
         }
       }
@@ -1650,6 +1728,12 @@
             "state" : "translated",
             "value" : "Keluar %lld kali"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gikk ut %lld ganger"
+          }
         }
       }
     },
@@ -1768,6 +1852,12 @@
             "state" : "translated",
             "value" : "Temuan ke-%lld"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oppdagelse nr. %lld"
+          }
         }
       }
     },
@@ -1885,6 +1975,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tuju dengan AR"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finn fram med AR"
           }
         }
       }
@@ -2005,6 +2101,12 @@
             "state" : "translated",
             "value" : "Kunci Face ID"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID-lås"
+          }
         }
       }
     },
@@ -2123,6 +2225,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kunci aplikasi dengan Face ID atau Touch ID untuk menjaga tempat yang kamu lalui dan catatan harianmu."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås appen med Face ID eller Touch ID for å beskytte stedene du har vært og dagboken din."
           }
         }
       }
@@ -2243,6 +2351,12 @@
             "state" : "translated",
             "value" : "Tanya Siri untuk langsung tahu jarak yang kamu tempuh hari ini."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spør Siri hvor langt du har gått i dag."
+          }
         }
       }
     },
@@ -2361,6 +2475,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri dan Pintasan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri og Snarveier"
           }
         }
       }
@@ -2481,6 +2601,12 @@
             "state" : "translated",
             "value" : "VoiceOver membacakan semua tombol dan isi peta serta catatanmu, dalam urutan yang tepat."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver leser opp alle knapper og detaljer på kartet og i registreringene i riktig rekkefølge."
+          }
         }
       }
     },
@@ -2600,6 +2726,12 @@
             "state" : "translated",
             "value" : "VoiceOver Lebih Nyaman"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedre VoiceOver"
+          }
         }
       }
     },
@@ -2717,6 +2849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tidak ada stempel yang cocok dengan \"%@\""
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen stempler passer med «%@»"
           }
         }
       }
@@ -2836,6 +2974,12 @@
             "state" : "translated",
             "value" : "Ini tempat yang ingin kamu kunjungi. Catat sebagai sudah dikunjungi?"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dette var et sted du ville til. Skal det lagres som besøkt?"
+          }
         }
       }
     },
@@ -2953,6 +3097,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Belum dikunjungi"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke besøkt ennå"
           }
         }
       }
@@ -3072,6 +3222,12 @@
             "state" : "translated",
             "value" : "Ingin Dikunjungi"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vil besøke"
+          }
         }
       }
     },
@@ -3189,6 +3345,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempat yang dicap sebagai tujuan kunjungan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Et sted du stemplet som besøksmål"
           }
         }
       }
@@ -3308,6 +3470,12 @@
             "state" : "translated",
             "value" : "Alasan paling sering: %@ (%lld kali). %@"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vanligste årsak: %@ (%lld ganger). %@"
+          }
         }
       }
     },
@@ -3422,6 +3590,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori"
+          }
+        },
+        "nb" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategori"
@@ -3544,6 +3718,12 @@
             "state" : "translated",
             "value" : "Kompas Perintis"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pionerkompass"
+          }
         }
       }
     },
@@ -3661,6 +3841,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lewati"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hopp over"
           }
         }
       }
@@ -3780,6 +3966,12 @@
             "state" : "translated",
             "value" : "Pencatatan Jalan Kaki"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gåregistrering"
+          }
         }
       }
     },
@@ -3897,6 +4089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pencatatan jalan kaki mati. Meski kamu berjalan, tidak ada jejak yang tersimpan."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gåregistrering er slått av. Selv om du går, blir det ikke igjen noe spor."
           }
         }
       }
@@ -4016,6 +4214,12 @@
             "state" : "translated",
             "value" : "Stempel yang kamu bubuhkan saat berjalan menumpuk di sini berurutan waktu.\nTempat yang kamu singgahi tersimpan sendiri tanpa stempel."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempler du setter mens du går, hoper seg opp her i tidsrekkefølge.\nSteder der du stopper, lagres av seg selv uten stempel."
+          }
         }
       }
     },
@@ -4133,6 +4337,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempat yang dicapai dengan berjalan kaki"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steder nådd til fots"
           }
         }
       }
@@ -4252,6 +4462,12 @@
             "state" : "translated",
             "value" : "Jika tiba dengan berjalan kaki, kamu bisa mengambil foto di tempat"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når du kommer fram til fots, kan du ta et bilde på stedet"
+          }
         }
       }
     },
@@ -4370,6 +4586,12 @@
             "state" : "translated",
             "value" : "Jika kamu berjalan tetapi tidak ada garis di peta, kamu bisa melihat alasannya di sini."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis du gikk, men det ikke kom noen strek på kartet, kan du se årsaken her."
+          }
         }
       }
     },
@@ -4487,6 +4709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Saat kamu berjalan, jalan yang dilalui menumpuk berurutan."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når du går, legger veiene du har gått seg oppå hverandre i rekkefølge."
           }
         }
       }
@@ -4607,6 +4835,12 @@
             "state" : "translated",
             "value" : "Simpan jalan yang kamu lalui dan catatan harian ke berkas lalu muat kembali nanti."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lagre veiene du har gått og dagboken i en fil, og hent dem tilbake senere."
+          }
         }
       }
     },
@@ -4724,6 +4958,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hanya jalan yang dilalui dan stempel yang dibubuhkan pada periode terpilih yang tersisa di peta."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På kartet blir bare veiene du har gått og stemplene du har satt i den valgte perioden."
           }
         }
       }
@@ -4843,6 +5083,12 @@
             "state" : "translated",
             "value" : "Tidak tertarik"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke interessert"
+          }
         }
       }
     },
@@ -4960,6 +5206,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tidak apa-apa"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det går bra"
           }
         }
       }
@@ -5079,6 +5331,12 @@
             "state" : "translated",
             "value" : "Lihat Cara Digambar"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se hvordan det tegnes"
+          }
         }
       }
     },
@@ -5196,6 +5454,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Peta Gambar"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Illustrert kart"
           }
         }
       }
@@ -5316,6 +5580,12 @@
             "state" : "translated",
             "value" : "Meski teks diperbesar, layar tersusun ulang rapi dan tidak terpotong."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selv med større tekst blir skjermene ordnet pent i stedet for å bli kuttet."
+          }
         }
       }
     },
@@ -5433,6 +5703,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lihat per Periode"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se etter periode"
           }
         }
       }
@@ -5552,6 +5828,12 @@
             "state" : "translated",
             "value" : "Cara Pencatatan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registreringsmåte"
+          }
         }
       }
     },
@@ -5669,6 +5951,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Status Pencatatan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registreringsstatus"
           }
         }
       }
@@ -5788,6 +6076,12 @@
             "state" : "translated",
             "value" : "Lihat Status Pencatatan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se registreringsstatus"
+          }
         }
       }
     },
@@ -5905,6 +6199,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kembalikan ke Gambar Awal"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gjenopprett standardbildet"
           }
         }
       }
@@ -6024,6 +6324,12 @@
             "state" : "translated",
             "value" : "Layar yang dimatikan tetap bisa dibuka kapan saja lewat \"Lihat Semua Sekaligus\" di atas. Tombol stempel dan pengaturan selalu terlihat."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skjermer du har slått av, kan alltid åpnes via «Se alt samlet» over. Knappene for stempler og innstillinger vises alltid."
+          }
         }
       }
     },
@@ -6141,6 +6447,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selesai"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slutt"
           }
         }
       }
@@ -6260,6 +6572,12 @@
             "state" : "translated",
             "value" : "Nanti"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senere"
+          }
         }
       }
     },
@@ -6377,6 +6695,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hanya tersimpan di iCloud pribadimu. Orang lain tidak bisa melihatnya."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lagres bare i din personlige iCloud. Andre kan ikke se det."
           }
         }
       }
@@ -6497,6 +6821,12 @@
             "state" : "translated",
             "value" : "Hapus Semua Catatanku Sekaligus"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slett alle registreringene mine på én gang"
+          }
         }
       }
     },
@@ -6614,6 +6944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Garis Tepi Lingkunganku"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omriss av nabolaget mitt"
           }
         }
       }
@@ -6733,6 +7069,12 @@
             "state" : "translated",
             "value" : "Peta Saya"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartet mitt"
+          }
         }
       }
     },
@@ -6850,6 +7192,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Buka Peta Saya"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne kartet mitt"
           }
         }
       }
@@ -6969,6 +7317,12 @@
             "state" : "translated",
             "value" : "Lihat Peta Kamu Digambar"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se kartet ditt bli tegnet"
+          }
         }
       }
     },
@@ -7086,6 +7440,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pratinjau peta kamu yang sedang digambar"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forhåndsvisning av kartet ditt mens det tegnes"
           }
         }
       }
@@ -7205,6 +7565,12 @@
             "state" : "translated",
             "value" : "Jalan yang Kugambar"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veiene jeg har tegnet"
+          }
         }
       }
     },
@@ -7322,6 +7688,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempat yang Kucap"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steder jeg har stemplet"
           }
         }
       }
@@ -7441,6 +7813,12 @@
             "state" : "translated",
             "value" : "Ketuk agar peta tembus pandang"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trykk for å la kartet skinne gjennom"
+          }
         }
       }
     },
@@ -7558,6 +7936,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketuk untuk mencap lokasi saat ini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trykk for å stemple din nåværende posisjon"
           }
         }
       }
@@ -7677,6 +8061,12 @@
             "state" : "translated",
             "value" : "Konfirmasi apakah kamu benar ke %lld tempat"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekreft om du har vært på %lld steder"
+          }
         }
       }
     },
@@ -7794,6 +8184,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jumlah Kunjungan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antall besøk"
           }
         }
       }
@@ -7913,6 +8309,12 @@
             "state" : "translated",
             "value" : "Saya ke sana"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeg var der"
+          }
         }
       }
     },
@@ -8030,6 +8432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ketuk lagi untuk kembali ke kertas. Berguna saat ingin tahu kamu ada di mana."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trykk igjen for å gå tilbake til papiret. Nyttig når du vil se hvor du er."
           }
         }
       }
@@ -8149,6 +8557,12 @@
             "state" : "translated",
             "value" : "Foto Ulang"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta på nytt"
+          }
         }
       }
     },
@@ -8266,6 +8680,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempat yang Kamu Datangi Lagi"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Et sted du har kommet tilbake til"
           }
         }
       }
@@ -8385,6 +8805,12 @@
             "state" : "translated",
             "value" : "Tempat ini terdaftar sebagai tempat langganan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dette stedet er registrert som et fast sted"
+          }
         }
       }
     },
@@ -8502,6 +8928,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tutup"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lukk"
           }
         }
       }
@@ -8622,6 +9054,12 @@
             "state" : "translated",
             "value" : "Meski kontras ditingkatkan atau sulit membedakan warna, kamu tetap bisa mengenali jalan dan stempel di peta."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selv med høyere kontrast eller vansker med å skille farger kan du kjenne igjen veiene og stemplene på kartet."
+          }
         }
       }
     },
@@ -8740,6 +9178,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gunakan aplikasi dalam lebih banyak bahasa."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk appen på flere språk."
           }
         }
       }
@@ -8860,6 +9304,12 @@
             "state" : "translated",
             "value" : "Lebih Banyak Bahasa"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flere språk"
+          }
         }
       }
     },
@@ -8977,6 +9427,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tambahkan beberapa kata (opsional)"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til noen ord (valgfritt)"
           }
         }
       }
@@ -9096,6 +9552,12 @@
             "state" : "translated",
             "value" : "Di koleksi kamu bisa melihat jejak kaki yang sudah terkumpul sejauh ini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I samlingen ser du fotsporene du har samlet så langt"
+          }
         }
       }
     },
@@ -9213,6 +9675,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tidak dapat dibatalkan."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dette kan ikke angres."
           }
         }
       }
@@ -9332,6 +9800,12 @@
             "state" : "translated",
             "value" : "Ketuk untuk jeda atau lanjutkan pemutaran"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Trykk for å sette på pause eller fortsette"
+          }
         }
       }
     },
@@ -9449,6 +9923,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld tempat dikunjungi"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld steder besøkt"
           }
         }
       }
@@ -9568,6 +10048,12 @@
             "state" : "translated",
             "value" : "Tidak ada benda yang jelas sehingga latar tidak bisa dihapus. Dekatkan ke benda dan foto lagi."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fant ikke noe tydelig, så bakgrunnen kunne ikke fjernes. Gå nærmere gjenstanden og ta bildet på nytt."
+          }
         }
       }
     },
@@ -9685,6 +10171,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kunjungan Terakhir"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siste besøk"
           }
         }
       }
@@ -9804,6 +10296,12 @@
             "state" : "translated",
             "value" : "Peta Tinta"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blekkkart"
+          }
         }
       }
     },
@@ -9921,6 +10419,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Catatan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notat"
           }
         }
       }
@@ -10040,6 +10544,12 @@
             "state" : "translated",
             "value" : "Lihat Semua Sekaligus"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se alt samlet"
+          }
         }
       }
     },
@@ -10157,6 +10667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Menempatkan air dan gunung"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plasserer vann og fjell"
           }
         }
       }
@@ -10276,6 +10792,12 @@
             "state" : "translated",
             "value" : "Belum Ditemukan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke oppdaget"
+          }
         }
       }
     },
@@ -10393,6 +10915,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jejak Kaki"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotspor"
           }
         }
       }
@@ -10512,6 +11040,12 @@
             "state" : "translated",
             "value" : "Timelapse Jejak Kaki"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse av fotspor"
+          }
         }
       }
     },
@@ -10630,6 +11164,12 @@
             "state" : "translated",
             "value" : "Wilayah terbuka %@"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avdekket land %@"
+          }
         }
       }
     },
@@ -10747,6 +11287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tembus Pandang Peta Latar"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "La bakgrunnskartet skinne gjennom"
           }
         }
       }
@@ -10867,6 +11413,12 @@
             "state" : "translated",
             "value" : "Cadangan dan Ekspor"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sikkerhetskopi og eksport"
+          }
         }
       }
     },
@@ -10984,6 +11536,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alasan Dibuang"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Årsaker til forkasting"
           }
         }
       }
@@ -11103,6 +11661,12 @@
             "state" : "translated",
             "value" : "Versi %@"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versjon %@"
+          }
         }
       }
     },
@@ -11220,6 +11784,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tampilan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visning"
           }
         }
       }
@@ -11340,6 +11910,12 @@
             "state" : "translated",
             "value" : "Warna dan Kontras yang Nyaman"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behagelige farger og kontrast"
+          }
         }
       }
     },
@@ -11457,6 +12033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jalan yang Ditampilkan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viste veier"
           }
         }
       }
@@ -11576,6 +12158,12 @@
             "state" : "translated",
             "value" : "Kertas kosong tidak tahu sendiri mana yang mana.\nTempat kamu berada sekarang menjadi **titik acuan pertama**."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Et blankt ark vet ikke selv hva som er hva.\nStedet du står nå, blir **det første holdepunktet**."
+          }
         }
       }
     },
@@ -11693,6 +12281,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mulai dari Kertas Kosong"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vi begynner med et blankt ark"
           }
         }
       }
@@ -11812,6 +12406,12 @@
             "state" : "translated",
             "value" : "Statistik Penggunaan (Pengembang)"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruksstatistikk (utvikler)"
+          }
         }
       }
     },
@@ -11929,6 +12529,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Foto"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bilder"
           }
         }
       }
@@ -12048,6 +12654,12 @@
             "state" : "translated",
             "value" : "Hapus Foto"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slett bilde"
+          }
         }
       }
     },
@@ -12165,6 +12777,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ambil Foto"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta bilde"
           }
         }
       }
@@ -12284,6 +12902,12 @@
             "state" : "translated",
             "value" : "Tambah Foto"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til bilde"
+          }
         }
       }
     },
@@ -12401,6 +13025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Memasukkan foto"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legger inn bilde"
           }
         }
       }
@@ -12520,6 +13150,12 @@
             "state" : "translated",
             "value" : "Foto tidak dapat disimpan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bildet kunne ikke arkiveres"
+          }
         }
       }
     },
@@ -12637,6 +13273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hapus"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slett"
           }
         }
       }
@@ -12757,6 +13399,12 @@
             "state" : "translated",
             "value" : "Pengingat Jalan Santai"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turpåminnelse"
+          }
         }
       }
     },
@@ -12874,6 +13522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld tempat yang baru dicapai dicap di jalur yang dilalui"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld nylig nådde steder stemples på veien du gikk"
           }
         }
       }
@@ -12993,6 +13647,12 @@
             "state" : "translated",
             "value" : "Yang Baru"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nytt"
+          }
         }
       }
     },
@@ -13110,6 +13770,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pengaturan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Innstillinger"
           }
         }
       }
@@ -13229,6 +13895,12 @@
             "state" : "translated",
             "value" : "Aktifkan kamera di Pengaturan > 벅뚜벅뚜."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå på kameraet i Innstillinger > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -13346,6 +14018,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Buka Pengaturan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne Innstillinger"
           }
         }
       }
@@ -13465,6 +14143,12 @@
             "state" : "translated",
             "value" : "Aktifkan Izin di Pengaturan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå på tillatelser i Innstillinger"
+          }
         }
       }
     },
@@ -13582,6 +14266,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bisa juga dibuka dari Pengaturan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan også åpnes fra Innstillinger"
           }
         }
       }
@@ -13701,6 +14391,12 @@
             "state" : "translated",
             "value" : "Setel Ulang Hitungan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nullstill telling"
+          }
         }
       }
     },
@@ -13818,6 +14514,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dunia sudah digambar oleh peta-peta lain.\nDi sini hanya tersisa **tempat yang kamu lalui dengan kakimu sendiri**."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verden er allerede tegnet av andre kart.\nHer blir **bare stedene du har gått med dine egne føtter**."
           }
         }
       }
@@ -13937,6 +14639,12 @@
             "state" : "translated",
             "value" : "Spot yang Terkumpul"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Samlede spots"
+          }
         }
       }
     },
@@ -14051,6 +14759,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempel"
+          }
+        },
+        "nb" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stempel"
@@ -14173,6 +14887,12 @@
             "state" : "translated",
             "value" : "Mulai"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
         }
       }
     },
@@ -14290,6 +15010,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mulai"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom i gang"
           }
         }
       }
@@ -14409,6 +15135,12 @@
             "state" : "translated",
             "value" : "Simbol"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
+          }
         }
       }
     },
@@ -14526,6 +15258,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perbesar Simbol"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forstørr symbol"
           }
         }
       }
@@ -14646,6 +15384,12 @@
             "state" : "translated",
             "value" : "Lanjutkan Catatan Harian yang Belum Selesai"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv videre på en påbegynt dagbok"
+          }
         }
       }
     },
@@ -14763,6 +15507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geser untuk membalik seperti kartu, ketuk dua kali untuk memperbesar"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sveip for å bla som kort, dobbelttrykk for å forstørre"
           }
         }
       }
@@ -14882,6 +15632,12 @@
             "state" : "translated",
             "value" : "Bukan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nei"
+          }
         }
       }
     },
@@ -14996,6 +15752,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "nb" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -15118,6 +15880,12 @@
             "state" : "translated",
             "value" : "Belum"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke ennå"
+          }
         }
       }
     },
@@ -15235,6 +16003,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Belum dikunjungi"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke besøkt ennå"
           }
         }
       }
@@ -15354,6 +16128,12 @@
             "state" : "translated",
             "value" : "Kamu belum pernah ke sini. Tetap tercatat sebagai \"Ingin Dikunjungi\" dan menjadi tempat yang dikunjungi saat kamu tiba."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har ikke vært her ennå. Det blir stående som «Vil besøke» og blir et besøkt sted når du kommer fram."
+          }
         }
       }
     },
@@ -15471,6 +16251,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Belum ada titik yang dibuang"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen punkter er forkastet ennå"
           }
         }
       }
@@ -15590,6 +16376,12 @@
             "state" : "translated",
             "value" : "Belum"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke ennå"
+          }
         }
       }
     },
@@ -15707,6 +16499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Panduan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veiledning"
           }
         }
       }
@@ -15827,6 +16625,12 @@
             "state" : "translated",
             "value" : "Aplikasi juga bisa dipakai dalam bahasa Inggris."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kan også bruke appen på engelsk."
+          }
         }
       }
     },
@@ -15944,6 +16748,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Buka aplikasi sekali"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åpne appen én gang"
           }
         }
       }
@@ -16063,6 +16873,12 @@
             "state" : "translated",
             "value" : "Hari yang mana"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvilken dag"
+          }
         }
       }
     },
@@ -16180,6 +16996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Apa pun pilihannya, semua lokasi yang diterima tetap disimpan. Hanya titik dengan akurasi rendah yang tidak digambar di peta."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uansett lagres alle mottatte posisjoner. Det er bare punkter med lav nøyaktighet som ikke tegnes på kartet."
           }
         }
       }
@@ -16299,6 +17121,12 @@
             "state" : "translated",
             "value" : "Hanya dihitung secara anonim layar mana yang dipakai. Tempat yang kamu lalui dan isi catatan harian tidak dikirim."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det telles bare anonymt hvilke skjermer som brukes. Stedene du går og det du skriver i dagboken, sendes ikke."
+          }
         }
       }
     },
@@ -16416,6 +17244,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kamu berada di sini selama %@"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du var her i %@"
           }
         }
       }
@@ -16535,6 +17369,12 @@
             "state" : "translated",
             "value" : "Simpan Tempat Ini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behold dette stedet"
+          }
         }
       }
     },
@@ -16652,6 +17492,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Catat di Sini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lagre her"
           }
         }
       }
@@ -16771,6 +17617,12 @@
             "state" : "translated",
             "value" : "Tidak apa-apa jika tempat ini tidak dicatat?"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Går det bra å ikke registrere dette stedet?"
+          }
         }
       }
     },
@@ -16888,6 +17740,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ini di mana ya?"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvor var dette?"
           }
         }
       }
@@ -17007,6 +17865,12 @@
             "state" : "translated",
             "value" : "Ekspor sebagai Video"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eksporter som video"
+          }
         }
       }
     },
@@ -17124,6 +17988,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Membuat video %lld%%"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lager video %lld %%"
           }
         }
       }
@@ -17244,6 +18114,12 @@
             "state" : "translated",
             "value" : "Dukungan Bahasa Inggris"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Støtte for engelsk"
+          }
         }
       }
     },
@@ -17361,6 +18237,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mis. rumah, kantor, kafe langganan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "F.eks. hjem, jobb, stamkafé"
           }
         }
       }
@@ -17480,6 +18362,12 @@
             "state" : "translated",
             "value" : "Hari ini %@"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I dag %@"
+          }
         }
       }
     },
@@ -17597,6 +18485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jalan yang Ditarik Hari Ini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens vei"
           }
         }
       }
@@ -17716,6 +18610,12 @@
             "state" : "translated",
             "value" : "Foto ditambahkan ke catatan harian hari ini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Et bilde er lagt til i dagens dagbok"
+          }
         }
       }
     },
@@ -17833,6 +18733,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Putar Hari Ini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spill av i dag"
           }
         }
       }
@@ -17952,6 +18858,12 @@
             "state" : "translated",
             "value" : "Hari ini belum ada tempat yang dikunjungi"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I dag har du ikke besøkt noen steder ennå"
+          }
         }
       }
     },
@@ -18069,6 +18981,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hari ini belum ada tempat yang disinggahi"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I dag har du ikke stoppet noe sted ennå"
           }
         }
       }
@@ -18188,6 +19106,12 @@
             "state" : "translated",
             "value" : "Ke mana kamu menjelajah hari ini?"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvor utforsket du i dag?"
+          }
         }
       }
     },
@@ -18305,6 +19229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jejak Kaki Hari Ini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens fotspor"
           }
         }
       }
@@ -18424,6 +19354,12 @@
             "state" : "translated",
             "value" : "Penjelajahan Hari Ini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens utforskning"
+          }
         }
       }
     },
@@ -18541,6 +19477,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Selesai"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ferdig"
           }
         }
       }
@@ -18661,6 +19603,12 @@
             "state" : "translated",
             "value" : "Kurangi Gerakan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reduser bevegelse"
+          }
         }
       }
     },
@@ -18779,6 +19727,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dengan Kurangi Gerakan aktif, peta dan efek layar menjadi lebih tenang."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Med Reduser bevegelse på blir kartet og skjermeffektene roligere."
           }
         }
       }
@@ -18899,6 +19853,12 @@
             "state" : "translated",
             "value" : "Jika mau, kamu bisa menghapus semua jalan yang dilalui dan catatan harian di dalam aplikasi."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis du vil, kan du slette alle veiene du har gått og dagboken i appen."
+          }
         }
       }
     },
@@ -19016,6 +19976,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Atur lokasi ke \"Selalu\" dan aktifkan Gerakan & Kebugaran, maka jalan kakimu tercatat tanpa membuka aplikasi."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sett posisjon til «Alltid» og slå på Bevegelse og form, så registreres turene dine uten at du åpner appen."
           }
         }
       }
@@ -19135,6 +20101,12 @@
             "state" : "translated",
             "value" : "Tidak ada jejak kaki pada periode ini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen fotspor i denne perioden"
+          }
         }
       }
     },
@@ -19252,6 +20224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lihat Periode Ini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se denne perioden"
           }
         }
       }
@@ -19371,6 +20349,12 @@
             "state" : "translated",
             "value" : "Tempat yang difoto pada hari ini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steder fotografert denne dagen"
+          }
         }
       }
     },
@@ -19488,6 +20472,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tidak ada langkah tercatat pada hari ini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne dagen er det ikke registrert noen skritt"
           }
         }
       }
@@ -19607,6 +20597,12 @@
             "state" : "translated",
             "value" : "Tidak ada jejak kaki pada hari ini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen fotspor denne dagen"
+          }
         }
       }
     },
@@ -19724,6 +20720,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hapus Stempel Ini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slett dette stempelet"
           }
         }
       }
@@ -19843,6 +20845,12 @@
             "state" : "translated",
             "value" : "Pakai Simbol Ini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bruk dette symbolet"
+          }
         }
       }
     },
@@ -19960,6 +20968,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hapus Jejak Kaki di Tempat Ini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slett fotsporene på dette stedet"
           }
         }
       }
@@ -20079,6 +21093,12 @@
             "state" : "translated",
             "value" : "Nama tempat ini (mis. kantor, kafe langganan)"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navn på dette stedet (f.eks. jobb, stamkafé)"
+          }
         }
       }
     },
@@ -20196,6 +21216,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bubuhkan Stempel Pertama di Kertas Ini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sett det første stempelet på dette arket"
           }
         }
       }
@@ -20315,6 +21341,12 @@
             "state" : "translated",
             "value" : "Nama"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navn"
+          }
         }
       }
     },
@@ -20432,6 +21464,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beri Nama"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gi navn"
           }
         }
       }
@@ -20551,6 +21589,12 @@
             "state" : "translated",
             "value" : "Tambah Gambar"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Legg til bilde"
+          }
         }
       }
     },
@@ -20669,6 +21713,12 @@
             "state" : "translated",
             "value" : "Sekarang Cobalah Berjalan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gå en tur nå"
+          }
         }
       }
     },
@@ -20786,6 +21836,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sekarang cobalah berjalan.\nTempat yang kamu lalui tercap di kertas ini satu titik demi satu titik."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gå en tur nå.\nStedene du passerer, stemples på dette arket ett punkt om gangen."
           }
         }
       }
@@ -20906,6 +21962,12 @@
             "state" : "translated",
             "value" : "Jika aplikasi tertutup saat menulis catatan harian, tulisanmu tetap ada."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis appen lukkes mens du skriver dagbok, blir det du har skrevet, stående."
+          }
         }
       }
     },
@@ -21023,6 +22085,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Catatan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagbok"
           }
         }
       }
@@ -21142,6 +22210,12 @@
             "state" : "translated",
             "value" : "Saat **tiba di tempat yang sering kamu datangi, cap sekali lagi di sana**.\nDengan dua titik acuan, kertas kosong pun tahu arah."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når du **kommer til et sted du ofte besøker, stempler du der en gang til**.\nMed to holdepunkter finner selv et blankt ark retningen."
+          }
         }
       }
     },
@@ -21259,6 +22333,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Coba lagi sebentar lagi, atau tekan lama peta untuk mencap di tempat yang kamu mau."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv igjen om litt, eller trykk og hold på kartet for å stemple der du vil."
           }
         }
       }
@@ -21378,6 +22458,12 @@
             "state" : "translated",
             "value" : "Simpan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arkiver"
+          }
         }
       }
     },
@@ -21495,6 +22581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kembali ke Seluruh Periode"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbake til hele perioden"
           }
         }
       }
@@ -21614,6 +22706,12 @@
             "state" : "translated",
             "value" : "Hitung Titik"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punkttelling"
+          }
         }
       }
     },
@@ -21731,6 +22829,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Titik dengan akurasi rendah tetap disimpan. Saat ini belum digambar di peta, tetapi bisa dipakai saat koreksinya membaik."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punkter med lav nøyaktighet lagres også. De tegnes ikke på kartet nå, men kan brukes når korrigeringen blir bedre."
           }
         }
       }
@@ -21850,6 +22954,12 @@
             "state" : "translated",
             "value" : "Status Saat Ini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nåværende status"
+          }
         }
       }
     },
@@ -21967,6 +23077,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mencari lokasimu"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finner posisjonen din"
           }
         }
       }
@@ -22086,6 +23202,12 @@
             "state" : "translated",
             "value" : "Tandai Tempat Ini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sett merke her"
+          }
         }
       }
     },
@@ -22203,6 +23325,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bubuhkan Stempel di Lokasi Saat Ini"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sett et stempel der du står"
           }
         }
       }
@@ -22322,6 +23450,12 @@
             "state" : "translated",
             "value" : "Cap di Sini"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemple her"
+          }
         }
       }
     },
@@ -22439,6 +23573,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tempat yang kamu lalui tercap di kertas ini satu titik demi satu titik.\nJalan yang dilalui dengan mobil atau kereta bawah tanah tidak digambar."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stedene du passerer, stemples på dette arket ett punkt om gangen.\nVeier du kjører i bil eller T-bane tegnes ikke."
           }
         }
       }
@@ -22558,6 +23698,12 @@
             "state" : "translated",
             "value" : "Pilih tombol peta di Pengaturan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg kartknapper i Innstillinger"
+          }
         }
       }
     },
@@ -22675,6 +23821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gaya Peta"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartstil"
           }
         }
       }
@@ -22794,6 +23946,12 @@
             "state" : "translated",
             "value" : "Skala peta. Satu batang sama dengan %@"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartskala. Én strek tilsvarer %@"
+          }
         }
       }
     },
@@ -22911,6 +24069,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pilih tombol yang melayang di peta, dan buka layar yang dimatikan langsung dari Pengaturan."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg hvilke knapper som svever på kartet, og åpne avslåtte skjermer direkte fra Innstillinger."
           }
         }
       }
@@ -23030,6 +24194,12 @@
             "state" : "translated",
             "value" : "Tempat yang kamu cap lebih dulu di peta. Saat kamu tiba, jadi tempat yang dikunjungi."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steder du har stemplet på forhånd på kartet. Når du kommer fram, blir de besøkte steder."
+          }
         }
       }
     },
@@ -23147,6 +24317,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tampilkan di Peta"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vis på kartet"
           }
         }
       }
@@ -23266,6 +24442,12 @@
             "state" : "translated",
             "value" : "Lihat di Peta"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se på kartet"
+          }
         }
       }
     },
@@ -23383,6 +24565,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beginilah tampilannya di peta"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slik ser det ut på kartet"
           }
         }
       }
@@ -23502,6 +24690,12 @@
             "state" : "translated",
             "value" : "Hapus"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fjern"
+          }
         }
       }
     },
@@ -23619,6 +24813,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dukungan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Støtte"
           }
         }
       }
@@ -23738,6 +24938,12 @@
             "state" : "translated",
             "value" : "Pilih sesuatu yang bisa jadi acuan, seperti rumah atau kantor."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Velg noe som kan være holdepunkt, for eksempel hjem eller jobb."
+          }
         }
       }
     },
@@ -23855,6 +25061,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ambil"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta"
           }
         }
       }
@@ -23974,6 +25186,12 @@
             "state" : "translated",
             "value" : "Tanggal Cap"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemplet"
+          }
         }
       }
     },
@@ -24091,6 +25309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tercap"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemplet"
           }
         }
       }
@@ -24210,6 +25434,12 @@
             "state" : "translated",
             "value" : "Jalan yang dilalui dengan mobil atau kereta bawah tanah tidak digambar.\nHanya berjalan kaki yang mencap satu titik demi satu titik."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veier du kjører i bil eller T-bane tegnes ikke.\nBare når du går, settes det ett punkt om gangen."
+          }
         }
       }
     },
@@ -24327,6 +25557,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hanya yang ada di dalam bingkai yang tersisa, latarnya dihapus"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bare det som er innenfor rammen, blir igjen; bakgrunnen fjernes"
           }
         }
       }
@@ -24446,6 +25682,12 @@
             "state" : "translated",
             "value" : "Pertama"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Første"
+          }
         }
       }
     },
@@ -24563,6 +25805,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jalan yang Pertama Kali Dilalui"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veier gått for første gang"
           }
         }
       }
@@ -24682,6 +25930,12 @@
             "state" : "translated",
             "value" : "Ini tempat yang baru pertama kali kamu injak"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dette er et sted du setter foten på for første gang"
+          }
         }
       }
     },
@@ -24799,6 +26053,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Batal"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avbryt"
           }
         }
       }
@@ -24918,6 +26178,12 @@
             "state" : "translated",
             "value" : "Aktifkan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå på"
+          }
         }
       }
     },
@@ -25035,6 +26301,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Perbesar"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forstørr"
           }
         }
       }
@@ -25155,6 +26427,12 @@
             "state" : "translated",
             "value" : "Layar untuk Teks Besar"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skjermer for stor tekst"
+          }
         }
       }
     },
@@ -25269,6 +26547,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse"
+          }
+        },
+        "nb" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse"
@@ -25391,6 +26675,12 @@
             "state" : "translated",
             "value" : "Jelajah"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utforsk"
+          }
         }
       }
     },
@@ -25509,6 +26799,12 @@
             "state" : "translated",
             "value" : "Catatan Penjelajahan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utforskningslogg"
+          }
         }
       }
     },
@@ -25626,6 +26922,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Catatan Penjelajahan"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utforskningsdagbok"
           }
         }
       }
@@ -25746,6 +27048,12 @@
             "state" : "translated",
             "value" : "Layar iPhone Lipat"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skjerm på foldbar iPhone"
+          }
         }
       }
     },
@@ -25865,6 +27173,12 @@
             "state" : "translated",
             "value" : "Di iPhone lipat, lihat peta dan catatan dalam dua panel."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På en foldbar iPhone ser du kartet og registreringene i to ruter."
+          }
         }
       }
     },
@@ -25982,6 +27296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse Sehari"
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse for dagen"
           }
         }
       }
@@ -26102,6 +27422,12 @@
             "state" : "translated",
             "value" : "Di akhir hari, notifikasi memberi tahu jalan yang kamu lalui hari ini."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På slutten av dagen forteller et varsel deg om veien du gikk i dag."
+          }
         }
       }
     },
@@ -26219,6 +27545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jika kamu berada di satu tempat lebih dari %lld menit,\ntempat itu muncul di jejak kaki hari ini."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis du blir mer enn %lld minutter på samme sted,\nvises det i dagens fotspor."
           }
         }
       }
@@ -26338,6 +27670,12 @@
             "state" : "translated",
             "value" : "Lokasi belum ditemukan"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posisjonen din er ikke funnet ennå"
+          }
         }
       }
     },
@@ -26452,6 +27790,12 @@
           }
         },
         "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "nb" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"

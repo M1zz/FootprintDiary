@@ -116,6 +116,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -233,6 +239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kamera dipakai untuk menyimpan foto tempat dan memotong benda yang kamu foto menjadi stiker untuk ditaruh di peta."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kameraet brukes til å arkivere et bilde av stedet og klippe ut det du fotograferer som et klistremerke til kartet."
           }
         }
       }
@@ -352,6 +364,12 @@
             "state" : "translated",
             "value" : "Izin \"Selalu\" diperlukan untuk mencatat jejak kakimu secara otomatis setiap kali berpindah tempat."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillatelsen «Alltid» trengs for å registrere fotsporene dine automatisk hver gang du skifter sted."
+          }
         }
       }
     },
@@ -470,6 +488,12 @@
             "state" : "translated",
             "value" : "Izin lokasi diperlukan untuk mencatat posisimu saat ini sebagai jejak kaki di peta."
           }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posisjonstillatelse trengs for å registrere din nåværende posisjon som et fotspor på kartet."
+          }
         }
       }
     },
@@ -587,6 +611,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Data gerakan dipakai untuk memastikan apakah kamu bergerak dengan berjalan atau berlari, agar perjalanan dengan kendaraan tidak dicatat."
+          }
+        },
+        "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bevegelsesdata brukes for å se om du beveget deg til fots eller løpende, slik at kjøring i kjøretøy ikke registreres."
           }
         }
       }
