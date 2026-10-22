@@ -18,7 +18,7 @@ W, H = 1242, 2688   # 이 계정의 iPhone 제출 규격
 
 # ── 앱마다 고치는 곳 ──────────────────────────────────────────────
 # 앱 언어 → App Store 로케일 (스토어 폴더 이름)
-STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans"}
+STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant"}
 # 바탕 · 포인트 색 (헤더·검색 결과 그림과 맞춘다)
 BG, ACCENT, INK, SUB = "#F3EFE4", "#B8322A", "#1F3358", "#6B6458"
 # 언어 → [(원본 파일, 레이아웃, 헤드라인, 서브카피)]
@@ -29,6 +29,13 @@ SHOTS = {
         ("03-stamps.png",   "text-bottom", "가본 곳, 가볼 곳에 도장", "212가지 스탬프로 동네를 기록해요"),
         ("04-calendar.png", "flat-rotate", "날마다<br>걸은 모양 그대로", "달력에 숫자 대신 그날의 길이 남아요"),
         ("05-diary.png",    "dark",        "처음 걷는 길이<br>얼마였는지", "같은 길만 걸으면 지도는 자라지 않아요"),
+    ],
+    "zh-Hant": [
+        ("01-map.png",      "hero-bleed",  "只留下親腳走過的路<br>的白地圖", "搭車經過的路不會被畫出"),
+        ("02-compass.png",  "left-text",   "今天<br>往哪邊走？", "羅盤指向你走得最少的方向"),
+        ("03-stamps.png",   "text-bottom", "為去過和想去的地方蓋章", "用212種印章記錄你的社區"),
+        ("04-calendar.png", "flat-rotate", "每一天<br>都是走過的樣子", "月曆上留下的是當天的路，而不是數字"),
+        ("05-diary.png",    "dark",        "第一次走的路<br>有多長？", "總走同一條路，地圖是不會變大的"),
     ],
     "zh-Hans": [
         ("01-map.png",      "hero-bleed",  "只留下亲脚走过的路<br>的白地图", "乘车经过的路不会被画出"),

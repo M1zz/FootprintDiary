@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>벅뚜벅뚜 (FootprintDiary)</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #1c1d21;
+      --muted: #6b7280;
+      --accent: #4facfe;
+      --accent2: #00c2a8;
+      --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b;
+        --card: #1f2126;
+        --text: #f2f3f5;
+        --muted: #9ca3af;
+        --border: #2c2f36;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero {
+      text-align: center;
+      padding: 72px 24px 48px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+    }
+    .hero .emoji { font-size: 64px; line-height: 1; }
+    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
+    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
+    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      text-decoration: none;
+      color: var(--text);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+      transition: transform .15s ease, box-shadow .15s ease;
+      display: block;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
+    .card .ico { font-size: 28px; }
+    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+    .features { margin-top: 40px; }
+    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
+    .features ul { padding-left: 20px; color: var(--muted); }
+    .features li { margin: 8px 0; }
+    .features strong { color: var(--text); }
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/zh-Hant/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/FootprintDiary/zh-Hant/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="index.html" hreflang="zh-Hant" lang="zh-Hant" aria-current="true">繁體中文</a></nav>
+  <div class="hero">
+    <div class="emoji">👣</div>
+    <h1>벅뚜벅뚜</h1>
+    <p>只留下你親腳走過之處的白地圖</p>
+  </div>
+
+  <div class="wrap">
+    <div class="cards">
+      <a class="card" href="privacy.html">
+        <div class="ico">🔒</div>
+        <h3>隱私政策</h3>
+        <p>瞭解我們處理哪些資料、如何處理。</p>
+      </a>
+      <a class="card" href="support.html">
+        <div class="ico">💬</div>
+        <h3>支援 / 聯絡我們</h3>
+        <p>幫助、常見問題與聯絡方式。</p>
+      </a>
+    </div>
+
+    <div class="features">
+      <h2>什麼是 벅뚜벅뚜？</h2>
+      <p>世界早已被別的地圖畫滿。벅뚜벅뚜 的地圖從一張什麼都沒畫的紙開始，
+         <strong>只有你親自走過</strong>，才會一點一點被填滿。
+         乘車或地鐵經過的路不會被畫出。</p>
+      <ul>
+        <li><strong>越走越大的地圖</strong> — 經過的地方會一點一點印在紙上。
+            經常走的路會變深，三個月沒再踏足就會褪成灰色</li>
+        <li><strong>我畫出的路</strong> — 衡量的不是走了多遠，而是<em>第一次走</em>的路有多長。
+            同一條路走上一百遍，地圖也不會變大</li>
+        <li><strong>蓋圖章</strong> — 站在那個地方，從212種圖章中選一個蓋下。
+            用相機拍下店鋪招牌，那塊招牌就會立在地圖上</li>
+        <li><strong>去過的和想去的地方</strong> — 還沒去過的地方會以虛線圖章保留，
+            走到那裡後就變成去過的地方</li>
+        <li><strong>開拓羅盤</strong> — 從你所在的位置，指出哪個方向還是一片空白</li>
+        <li><strong>影片</strong> — 把你的地圖是如何畫成的過程匯出為影片</li>
+        <li><strong>只在你自己的 iCloud 中</strong> — 腳步、日記和照片都儲存在不會被他人看到的
+            個人 iCloud 中。一個座標也不會傳送給開發者</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 벅뚜벅뚜 (FootprintDiary) ·
+    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+  </footer>
+</body>
+</html>

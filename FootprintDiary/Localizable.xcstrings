@@ -32,6 +32,12 @@
             "state" : "translated",
             "value" : "%@ · 足迹 %lld/%lld"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · 足跡 %lld/%lld"
+          }
         }
       }
     },
@@ -66,6 +72,12 @@
             "state" : "translated",
             "value" : "步行%@，用时%@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行%@，花了%@"
+          }
         }
       }
     },
@@ -96,6 +108,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行%@"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "步行%@"
@@ -134,6 +152,12 @@
             "state" : "translated",
             "value" : "已收集%@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已蒐集%@"
+          }
         }
       }
     },
@@ -167,6 +191,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@图标"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@圖示"
           }
         }
       }
@@ -202,6 +232,12 @@
             "state" : "translated",
             "value" : "%@，%lld种"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，%lld種"
+          }
         }
       }
     },
@@ -232,6 +268,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@倍"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@倍"
@@ -270,6 +312,12 @@
             "state" : "translated",
             "value" : "%@方向走得最少"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@方向走得最少"
+          }
         }
       }
     },
@@ -303,6 +351,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "相距%lld米"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相距%lld公尺"
           }
         }
       }
@@ -338,6 +392,12 @@
             "state" : "translated",
             "value" : "进入%lld米范围内，快门才会开启"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "進入%lld公尺範圍內，快門才會開啟"
+          }
         }
       }
     },
@@ -371,6 +431,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld种"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld種"
           }
         }
       }
@@ -406,6 +472,12 @@
             "state" : "translated",
             "value" : "%lld处"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld處"
+          }
         }
       }
     },
@@ -436,6 +508,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld次"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld次"
@@ -474,6 +552,12 @@
             "state" : "translated",
             "value" : "出门%lld次"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出門%lld次"
+          }
         }
       }
     },
@@ -508,6 +592,12 @@
             "state" : "translated",
             "value" : "第%lld次发现"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第%lld次發現"
+          }
         }
       }
     },
@@ -541,6 +631,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "用 AR 寻找"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用 AR 尋找"
           }
         }
       }
@@ -577,6 +673,12 @@
             "state" : "translated",
             "value" : "Face ID 锁定"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID 鎖定"
+          }
         }
       }
     },
@@ -611,6 +713,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "用 Face ID 或 Touch ID 锁定 App，守护你走过的地方和日记。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用 Face ID 或 Touch ID 鎖定 App，守護你走過的地方和日記。"
           }
         }
       }
@@ -647,6 +755,12 @@
             "state" : "translated",
             "value" : "询问 Siri，立刻查看今天走了多远。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "詢問 Siri，立刻查看今天走了多遠。"
+          }
         }
       }
     },
@@ -681,6 +795,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri 与快捷指令"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri 與捷徑"
           }
         }
       }
@@ -717,6 +837,12 @@
             "state" : "translated",
             "value" : "VoiceOver 会按合适的顺序，完整朗读地图和记录里的按钮与内容。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver 會依合適的順序，完整朗讀地圖和紀錄裡的按鈕與內容。"
+          }
         }
       }
     },
@@ -752,6 +878,12 @@
             "state" : "translated",
             "value" : "更便捷的 VoiceOver"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更便利的 VoiceOver"
+          }
         }
       }
     },
@@ -785,6 +917,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "没有与“%@”匹配的图章"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有符合「%@」的印章"
           }
         }
       }
@@ -820,6 +958,12 @@
             "state" : "translated",
             "value" : "这是你想去的地方。要标记为已去过吗？"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這是你想去的地方。要標記為已去過嗎？"
+          }
         }
       }
     },
@@ -854,6 +998,12 @@
             "state" : "translated",
             "value" : "还没去过的地方"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "還沒去過的地方"
+          }
         }
       }
     },
@@ -884,6 +1034,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "想去的地方"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "想去的地方"
@@ -922,6 +1078,12 @@
             "state" : "translated",
             "value" : "曾作为想去的地方盖下的位置"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "曾作為想去的地方蓋下的位置"
+          }
         }
       }
     },
@@ -955,6 +1117,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "拦截最多的原因：%@（%lld次）。%@"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "攔截最多的原因：%@（%lld次）。%@"
           }
         }
       }
@@ -990,6 +1158,12 @@
             "state" : "translated",
             "value" : "类别"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "類別"
+          }
         }
       }
     },
@@ -1023,6 +1197,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "开拓罗盘"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開拓羅盤"
           }
         }
       }
@@ -1058,6 +1238,12 @@
             "state" : "translated",
             "value" : "跳过"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "略過"
+          }
         }
       }
     },
@@ -1091,6 +1277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "步行记录"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行紀錄"
           }
         }
       }
@@ -1126,6 +1318,12 @@
             "state" : "translated",
             "value" : "步行记录已关闭。走再多路也不会留下轨迹。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行紀錄已關閉。走再多路也不會留下軌跡。"
+          }
         }
       }
     },
@@ -1159,6 +1357,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "步行时盖下的图章会按时间顺序堆叠在这里。\n停留过的地方即使不盖章也会自动保留。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行時蓋下的印章會依時間順序堆疊在這裡。\n停留過的地方即使不蓋章也會自動保留。"
           }
         }
       }
@@ -1194,6 +1398,12 @@
             "state" : "translated",
             "value" : "步行到达的地方"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行抵達的地方"
+          }
         }
       }
     },
@@ -1227,6 +1437,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "步行抵达后，就能在那里留下照片"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行抵達後，就能在那裡留下照片"
           }
         }
       }
@@ -1262,6 +1478,12 @@
             "state" : "translated",
             "value" : "如果走了路但地图上没有画出线，可以在这里查看原因。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果走了路但地圖上沒有畫出線，可以在這裡查看原因。"
+          }
         }
       }
     },
@@ -1295,6 +1517,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "一路走来，经过的路会依次叠加。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一路走來，經過的路會依序疊加。"
           }
         }
       }
@@ -1331,6 +1559,12 @@
             "state" : "translated",
             "value" : "把走过的路和日记存成文件，之后还能再导入。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "把走過的路和日記存成檔案，之後還能再匯入。"
+          }
         }
       }
     },
@@ -1364,6 +1598,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "只有所选时间段内走过的路和盖下的图章会留在地图上。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只有所選期間內走過的路和蓋下的印章會留在地圖上。"
           }
         }
       }
@@ -1399,6 +1639,12 @@
             "state" : "translated",
             "value" : "不感兴趣"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒興趣"
+          }
         }
       }
     },
@@ -1432,6 +1678,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "没关系"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒關係"
           }
         }
       }
@@ -1467,6 +1719,12 @@
             "state" : "translated",
             "value" : "查看绘制过程"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看繪製過程"
+          }
         }
       }
     },
@@ -1500,6 +1758,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "绘本地图"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "繪本地圖"
           }
         }
       }
@@ -1536,6 +1800,12 @@
             "state" : "translated",
             "value" : "即使放大字体，页面也不会被截断，而是重新排布得清清楚楚。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即使放大字級，畫面也不會被截斷，而是重新排版得清清楚楚。"
+          }
         }
       }
     },
@@ -1569,6 +1839,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "按时间段查看"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "依期間檢視"
           }
         }
       }
@@ -1604,6 +1880,12 @@
             "state" : "translated",
             "value" : "记录方式"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "紀錄方式"
+          }
         }
       }
     },
@@ -1637,6 +1919,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "记录状态"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "紀錄狀態"
           }
         }
       }
@@ -1672,6 +1960,12 @@
             "state" : "translated",
             "value" : "查看记录状态"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "檢視紀錄狀態"
+          }
         }
       }
     },
@@ -1705,6 +1999,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "恢复为默认图案"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "還原為預設圖案"
           }
         }
       }
@@ -1740,6 +2040,12 @@
             "state" : "translated",
             "value" : "关闭的页面仍可随时从上方“汇总查看”中打开。图章和设置按钮始终显示。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關閉的畫面仍可隨時從上方「彙整檢視」中開啟。印章和設定按鈕一律顯示。"
+          }
         }
       }
     },
@@ -1773,6 +2079,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "结束"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "結束"
           }
         }
       }
@@ -1808,6 +2120,12 @@
             "state" : "translated",
             "value" : "以后再说"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "稍後再說"
+          }
         }
       }
     },
@@ -1841,6 +2159,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "仅保存在你个人的 iCloud 中，其他人看不到。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "僅儲存在你個人的 iCloud 中，其他人看不到。"
           }
         }
       }
@@ -1877,6 +2201,12 @@
             "state" : "translated",
             "value" : "一键清除我的全部记录"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一次清除我的全部紀錄"
+          }
         }
       }
     },
@@ -1910,6 +2240,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "我的街区轮廓"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的社區輪廓"
           }
         }
       }
@@ -1945,6 +2281,12 @@
             "state" : "translated",
             "value" : "我的地图"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的地圖"
+          }
         }
       }
     },
@@ -1978,6 +2320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "打开我的地图"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟我的地圖"
           }
         }
       }
@@ -2013,6 +2361,12 @@
             "state" : "translated",
             "value" : "看地图如何一点点绘成"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "看地圖如何一點一點畫成"
+          }
         }
       }
     },
@@ -2046,6 +2400,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地图绘制过程预览"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地圖繪製過程預覽"
           }
         }
       }
@@ -2081,6 +2441,12 @@
             "state" : "translated",
             "value" : "我画出的路"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我畫出的路"
+          }
         }
       }
     },
@@ -2114,6 +2480,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "我盖过章的地方"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我蓋過章的地方"
           }
         }
       }
@@ -2149,6 +2521,12 @@
             "state" : "translated",
             "value" : "轻点即可透出地图"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輕點即可透出地圖"
+          }
         }
       }
     },
@@ -2182,6 +2560,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "轻点即可在当前位置盖章"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輕點即可在目前位置蓋章"
           }
         }
       }
@@ -2217,6 +2601,12 @@
             "state" : "translated",
             "value" : "有%lld处需要确认你是否去过"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有%lld處需要確認你是否去過"
+          }
         }
       }
     },
@@ -2250,6 +2640,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "到访次数"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "造訪次數"
           }
         }
       }
@@ -2285,6 +2681,12 @@
             "state" : "translated",
             "value" : "我去过"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我去過"
+          }
         }
       }
     },
@@ -2319,6 +2721,12 @@
             "state" : "translated",
             "value" : "再次轻点就回到白纸。想确认自己大概在哪儿时可以用。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再次輕點就回到白紙。想確認自己大概在哪裡時可以用。"
+          }
         }
       }
     },
@@ -2349,6 +2757,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重拍"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "重拍"
@@ -2387,6 +2801,12 @@
             "state" : "translated",
             "value" : "再次到访的地方"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再次造訪的地方"
+          }
         }
       }
     },
@@ -2421,6 +2841,12 @@
             "state" : "translated",
             "value" : "这是已登记的常去地点"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這是已登錄的常去地點"
+          }
         }
       }
     },
@@ -2454,6 +2880,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "关闭"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "關閉"
           }
         }
       }
@@ -2490,6 +2922,12 @@
             "state" : "translated",
             "value" : "即使调高对比度或难以分辨颜色，也能认出地图上的路和图章。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即使調高對比或難以分辨顏色，也能認出地圖上的路和印章。"
+          }
         }
       }
     },
@@ -2524,6 +2962,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "让你用更多语言使用 App。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "讓你用更多語言使用 App。"
           }
         }
       }
@@ -2560,6 +3004,12 @@
             "state" : "translated",
             "value" : "更多语言"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更多語言"
+          }
         }
       }
     },
@@ -2593,6 +3043,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "补充几句（可不填）"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "補充幾句（可不填）"
           }
         }
       }
@@ -2628,6 +3084,12 @@
             "state" : "translated",
             "value" : "可在图鉴中查看至今收集的足迹"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可在圖鑑中查看至今蒐集的足跡"
+          }
         }
       }
     },
@@ -2661,6 +3123,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "此操作无法撤销。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此動作無法復原。"
           }
         }
       }
@@ -2696,6 +3164,12 @@
             "state" : "translated",
             "value" : "轻点可暂停或继续播放"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "輕點即可暫停或繼續播放"
+          }
         }
       }
     },
@@ -2729,6 +3203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "到访%lld处"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "造訪%lld處"
           }
         }
       }
@@ -2764,6 +3244,12 @@
             "state" : "translated",
             "value" : "没有找到清晰的主体，无法去除背景。请靠近物体再拍一次。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有找到清楚的主體，無法去除背景。請靠近物體再拍一次。"
+          }
         }
       }
     },
@@ -2797,6 +3283,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最近一次到访"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近一次造訪"
           }
         }
       }
@@ -2832,6 +3324,12 @@
             "state" : "translated",
             "value" : "水墨地图"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "水墨地圖"
+          }
         }
       }
     },
@@ -2865,6 +3363,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "备注"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "備註"
           }
         }
       }
@@ -2900,6 +3404,12 @@
             "state" : "translated",
             "value" : "汇总查看"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "彙整檢視"
+          }
         }
       }
     },
@@ -2933,6 +3443,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在安放水域与山峦"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在安放水域與山巒"
           }
         }
       }
@@ -2968,6 +3484,12 @@
             "state" : "translated",
             "value" : "未发现"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未發現"
+          }
         }
       }
     },
@@ -3001,6 +3523,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "足迹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "足跡"
           }
         }
       }
@@ -3036,6 +3564,12 @@
             "state" : "translated",
             "value" : "足迹延时回放"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "足跡縮時回放"
+          }
         }
       }
     },
@@ -3070,6 +3604,12 @@
             "state" : "translated",
             "value" : "已点亮的土地 %@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已點亮的土地 %@"
+          }
         }
       }
     },
@@ -3103,6 +3643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "透出底图"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "透出底圖"
           }
         }
       }
@@ -3139,6 +3685,12 @@
             "state" : "translated",
             "value" : "备份与导出"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "備份與匯出"
+          }
         }
       }
     },
@@ -3173,6 +3725,12 @@
             "state" : "translated",
             "value" : "被舍弃的原因"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "被捨棄的原因"
+          }
         }
       }
     },
@@ -3203,6 +3761,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版本 %@"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "版本 %@"
@@ -3241,6 +3805,12 @@
             "state" : "translated",
             "value" : "查看方式"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "檢視方式"
+          }
         }
       }
     },
@@ -3276,6 +3846,12 @@
             "state" : "translated",
             "value" : "更舒适的色彩与对比度"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更舒適的色彩與對比"
+          }
         }
       }
     },
@@ -3309,6 +3885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "查看的路"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "檢視的路"
           }
         }
       }
@@ -3344,6 +3926,12 @@
             "state" : "translated",
             "value" : "一张白纸，本身分不清哪里是哪里。\n你现在所在的位置会成为**第一个基准点**。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一張白紙，本身分不清哪裡是哪裡。\n你現在所在的位置會成為**第一個基準點**。"
+          }
         }
       }
     },
@@ -3377,6 +3965,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "从一张白纸开始"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "從一張白紙開始"
           }
         }
       }
@@ -3412,6 +4006,12 @@
             "state" : "translated",
             "value" : "使用统计（开发者）"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用統計（開發者）"
+          }
         }
       }
     },
@@ -3442,6 +4042,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "照片"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "照片"
@@ -3480,6 +4086,12 @@
             "state" : "translated",
             "value" : "删除照片"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除照片"
+          }
         }
       }
     },
@@ -3510,6 +4122,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拍照"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "拍照"
@@ -3548,6 +4166,12 @@
             "state" : "translated",
             "value" : "添加照片"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入照片"
+          }
         }
       }
     },
@@ -3578,6 +4202,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在放入照片"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在放入照片"
@@ -3616,6 +4246,12 @@
             "state" : "translated",
             "value" : "无法存储照片"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無法儲存照片"
+          }
         }
       }
     },
@@ -3650,6 +4286,12 @@
             "state" : "translated",
             "value" : "删除"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除"
+          }
         }
       }
     },
@@ -3681,6 +4323,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "散步提醒"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "散步提醒"
@@ -3719,6 +4367,12 @@
             "state" : "translated",
             "value" : "新到达的%lld处地点会印在途经的路上"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新抵達的%lld處地點會印在途經的路上"
+          }
         }
       }
     },
@@ -3749,6 +4403,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新功能"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "新功能"
@@ -3787,6 +4447,12 @@
             "state" : "translated",
             "value" : "设置"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
         }
       }
     },
@@ -3820,6 +4486,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "请在“设置”App > 벅뚜벅뚜 中开启相机。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請在「設定」App > 벅뚜벅뚜 中開啟相機。"
           }
         }
       }
@@ -3855,6 +4527,12 @@
             "state" : "translated",
             "value" : "打开设置"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟設定"
+          }
         }
       }
     },
@@ -3888,6 +4566,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在设置中开启权限"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在設定中開啟權限"
           }
         }
       }
@@ -3923,6 +4607,12 @@
             "state" : "translated",
             "value" : "也可以在设置中打开"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "也可以在設定中開啟"
+          }
         }
       }
     },
@@ -3956,6 +4646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "重置统计"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重設統計"
           }
         }
       }
@@ -3991,6 +4687,12 @@
             "state" : "translated",
             "value" : "世界早已被别的地图画满。\n而这里只留下**你亲脚走过的地方**。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "世界早已被別的地圖畫滿。\n而這裡只留下**你親腳走過的地方**。"
+          }
         }
       }
     },
@@ -4024,6 +4726,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已收集的地点"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已蒐集的地點"
           }
         }
       }
@@ -4059,6 +4767,12 @@
             "state" : "translated",
             "value" : "图章"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "印章"
+          }
         }
       }
     },
@@ -4092,6 +4806,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "开始"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始"
           }
         }
       }
@@ -4127,6 +4847,12 @@
             "state" : "translated",
             "value" : "开始使用"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始使用"
+          }
         }
       }
     },
@@ -4161,6 +4887,12 @@
             "state" : "translated",
             "value" : "图标"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "圖示"
+          }
         }
       }
     },
@@ -4194,6 +4926,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "放大查看图标"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放大檢視圖示"
           }
         }
       }
@@ -4230,6 +4968,12 @@
             "state" : "translated",
             "value" : "接着写没写完的日记"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接著寫沒寫完的日記"
+          }
         }
       }
     },
@@ -4263,6 +5007,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "滑动可像卡片一样翻页，双击可放大查看"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "滑動可像卡片一樣翻頁，連點兩下可放大檢視"
           }
         }
       }
@@ -4298,6 +5048,12 @@
             "state" : "translated",
             "value" : "没有"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "沒有"
+          }
         }
       }
     },
@@ -4328,6 +5084,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -4366,6 +5128,12 @@
             "state" : "translated",
             "value" : "尚未"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未"
+          }
         }
       }
     },
@@ -4399,6 +5167,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "还没去过的地方"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "還沒去過的地方"
           }
         }
       }
@@ -4434,6 +5208,12 @@
             "state" : "translated",
             "value" : "这是你还没去过的地方。它会作为“想去的地方”保留，走到那里后就变成去过的地方。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這是你還沒去過的地方。它會作為「想去的地方」保留，走到那裡後就變成去過的地方。"
+          }
         }
       }
     },
@@ -4467,6 +5247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "还没有被舍弃的点位"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "還沒有被捨棄的點位"
           }
         }
       }
@@ -4502,6 +5288,12 @@
             "state" : "translated",
             "value" : "还没有"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "還沒有"
+          }
         }
       }
     },
@@ -4536,6 +5328,12 @@
             "state" : "translated",
             "value" : "指南"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "導覽"
+          }
         }
       }
     },
@@ -4567,6 +5365,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App 也可以用英文了。"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "App 也可以用英文了。"
@@ -4605,6 +5409,12 @@
             "state" : "translated",
             "value" : "请先打开一次 App"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請先開啟一次 App"
+          }
         }
       }
     },
@@ -4635,6 +5445,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "哪一天"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "哪一天"
@@ -4673,6 +5489,12 @@
             "state" : "translated",
             "value" : "无论选哪一种，收到的位置都会全部保存。只是精度较低的点位不会绘制到地图上。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "無論選哪一種，收到的位置都會全部儲存。只是精準度較低的點位不會繪製到地圖上。"
+          }
         }
       }
     },
@@ -4706,6 +5528,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "仅以匿名方式统计哪些页面被使用。不会发送你走过的地点和日记内容。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "僅以匿名方式統計哪些畫面被使用。不會傳送你走過的地點和日記內容。"
           }
         }
       }
@@ -4741,6 +5569,12 @@
             "state" : "translated",
             "value" : "你在这里待了%@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你在這裡待了%@"
+          }
         }
       }
     },
@@ -4774,6 +5608,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "留下这里"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "留下這裡"
           }
         }
       }
@@ -4809,6 +5649,12 @@
             "state" : "translated",
             "value" : "记在这里"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記在這裡"
+          }
         }
       }
     },
@@ -4842,6 +5688,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "这里不记录也没关系吗？"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這裡不記錄也沒關係嗎？"
           }
         }
       }
@@ -4877,6 +5729,12 @@
             "state" : "translated",
             "value" : "这里是哪里？"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這裡是哪裡？"
+          }
         }
       }
     },
@@ -4911,6 +5769,12 @@
             "state" : "translated",
             "value" : "导出为视频"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "匯出為影片"
+          }
         }
       }
     },
@@ -4944,6 +5808,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在生成视频 %lld%%"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在產生影片 %lld%%"
           }
         }
       }
@@ -4980,6 +5850,12 @@
             "state" : "translated",
             "value" : "支持英文"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支援英文"
+          }
         }
       }
     },
@@ -5014,6 +5890,12 @@
             "state" : "translated",
             "value" : "例如：家、公司、常去的咖啡馆"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例如：家、公司、常去的咖啡廳"
+          }
         }
       }
     },
@@ -5044,6 +5926,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天 %@"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "今天 %@"
@@ -5082,6 +5970,12 @@
             "state" : "translated",
             "value" : "今天画的路"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天畫的路"
+          }
         }
       }
     },
@@ -5116,6 +6010,12 @@
             "state" : "translated",
             "value" : "照片已加入今天的日记"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "照片已加入今天的日記"
+          }
         }
       }
     },
@@ -5146,6 +6046,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回放今天"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "回放今天"
@@ -5184,6 +6090,12 @@
             "state" : "translated",
             "value" : "今天还没有去过的地方"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天還沒有去過的地方"
+          }
         }
       }
     },
@@ -5217,6 +6129,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今天还没有停留过的地点"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天還沒有停留過的地點"
           }
         }
       }
@@ -5252,6 +6170,12 @@
             "state" : "translated",
             "value" : "今天去哪里探索了？"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天去哪裡探索了？"
+          }
         }
       }
     },
@@ -5285,6 +6209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日足迹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日足跡"
           }
         }
       }
@@ -5320,6 +6250,12 @@
             "state" : "translated",
             "value" : "今日探索"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日探索"
+          }
         }
       }
     },
@@ -5350,6 +6286,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "完成"
@@ -5389,6 +6331,12 @@
             "state" : "translated",
             "value" : "减少动态效果"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "減少動態效果"
+          }
         }
       }
     },
@@ -5423,6 +6371,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "开启“减少动态效果”后，地图和页面效果会更平静。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟「減少動態效果」後，地圖和畫面效果會更平靜。"
           }
         }
       }
@@ -5459,6 +6413,12 @@
             "state" : "translated",
             "value" : "如有需要，可以在 App 内清除所有走过的路和日记。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如有需要，可以在 App 內清除所有走過的路和日記。"
+          }
         }
       }
     },
@@ -5492,6 +6452,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "将定位设为“始终”，并开启“运动与健身”，即使不打开 App 步行也会被记录。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "將定位設為「永遠」，並開啟「體能活動」，即使不開啟 App 步行也會被記錄。"
           }
         }
       }
@@ -5527,6 +6493,12 @@
             "state" : "translated",
             "value" : "这段时间没有足迹"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這段期間沒有足跡"
+          }
         }
       }
     },
@@ -5560,6 +6532,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "查看此时间段"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "檢視此期間"
           }
         }
       }
@@ -5595,6 +6573,12 @@
             "state" : "translated",
             "value" : "这天拍下的地点"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這天拍下的地點"
+          }
         }
       }
     },
@@ -5628,6 +6612,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "这天没有留下步行记录"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這天沒有留下步行紀錄"
           }
         }
       }
@@ -5663,6 +6653,12 @@
             "state" : "translated",
             "value" : "这天没有足迹"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這天沒有足跡"
+          }
         }
       }
     },
@@ -5696,6 +6692,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "删除此图章"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "刪除此印章"
           }
         }
       }
@@ -5731,6 +6733,12 @@
             "state" : "translated",
             "value" : "使用此图标"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用此圖示"
+          }
         }
       }
     },
@@ -5764,6 +6772,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "清除此处的足迹"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除此處的足跡"
           }
         }
       }
@@ -5799,6 +6813,12 @@
             "state" : "translated",
             "value" : "这个地点的名称（例如：公司、常去的咖啡馆）"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這個地點的名稱（例如：公司、常去的咖啡廳）"
+          }
         }
       }
     },
@@ -5832,6 +6852,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在这张纸上盖下第一个图章"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在這張紙上蓋下第一個印章"
           }
         }
       }
@@ -5867,6 +6893,12 @@
             "state" : "translated",
             "value" : "名称"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名稱"
+          }
         }
       }
     },
@@ -5897,6 +6929,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "命名"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "命名"
@@ -5935,6 +6973,12 @@
             "state" : "translated",
             "value" : "添加图片"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "加入圖片"
+          }
         }
       }
     },
@@ -5969,6 +7013,12 @@
             "state" : "translated",
             "value" : "现在出发走走吧"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在出發走走吧"
+          }
         }
       }
     },
@@ -6002,6 +7052,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "现在出发走走吧。\n经过的地方会一点点印在这张纸上。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在出發走走吧。\n經過的地方會一點一點印在這張紙上。"
           }
         }
       }
@@ -6038,6 +7094,12 @@
             "state" : "translated",
             "value" : "写日记时即使 App 被关闭，写到一半的内容也会保留。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "寫日記時即使 App 被關閉，寫到一半的內容也會保留。"
+          }
         }
       }
     },
@@ -6071,6 +7133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "日志"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日誌"
           }
         }
       }
@@ -6106,6 +7174,12 @@
             "state" : "translated",
             "value" : "到达常去的地方时，**请在那里再盖一次**。\n有了两个基准点，即使是白纸也能确定方向。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到達常去的地方時，**請在那裡再蓋一次**。\n有了兩個基準點，即使是白紙也能確定方向。"
+          }
         }
       }
     },
@@ -6139,6 +7213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "请稍后再试，或长按地图，在想要的位置盖章。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請稍後再試，或長按地圖，在想要的位置蓋章。"
           }
         }
       }
@@ -6174,6 +7254,12 @@
             "state" : "translated",
             "value" : "存储"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "儲存"
+          }
         }
       }
     },
@@ -6207,6 +7293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "返回全部时间段"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回到全部期間"
           }
         }
       }
@@ -6242,6 +7334,12 @@
             "state" : "translated",
             "value" : "点位统计"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "點位統計"
+          }
         }
       }
     },
@@ -6275,6 +7373,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "精度不足的点位也会保存。目前不会绘制到地图上，等校准改善后就能派上用场。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "精準度不足的點位也會儲存。目前不會繪製到地圖上，等校正改善後就能派上用場。"
           }
         }
       }
@@ -6310,6 +7414,12 @@
             "state" : "translated",
             "value" : "当前状态"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目前狀態"
+          }
         }
       }
     },
@@ -6340,6 +7450,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在定位"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在定位"
@@ -6378,6 +7494,12 @@
             "state" : "translated",
             "value" : "留下此刻的位置"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "留下目前的位置"
+          }
         }
       }
     },
@@ -6411,6 +7533,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在当前位置盖图章"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在目前位置蓋印章"
           }
         }
       }
@@ -6446,6 +7574,12 @@
             "state" : "translated",
             "value" : "在当前位置盖章"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在目前位置蓋章"
+          }
         }
       }
     },
@@ -6479,6 +7613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "经过的地方会一点点印在这张纸上。\n乘车或地铁经过的路不会被画出。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "經過的地方會一點一點印在這張紙上。\n搭車或捷運經過的路不會被畫出。"
           }
         }
       }
@@ -6514,6 +7654,12 @@
             "state" : "translated",
             "value" : "在设置中选择地图按钮"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在設定中選擇地圖按鈕"
+          }
         }
       }
     },
@@ -6547,6 +7693,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地图样式"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地圖樣式"
           }
         }
       }
@@ -6582,6 +7734,12 @@
             "state" : "translated",
             "value" : "地图比例尺。一格表示%@"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地圖比例尺。一格代表%@"
+          }
         }
       }
     },
@@ -6615,6 +7773,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "选择要浮在地图上的按钮，关闭的页面也能直接从设置里打开。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選擇要浮在地圖上的按鈕，關閉的畫面也能直接從設定裡開啟。"
           }
         }
       }
@@ -6650,6 +7814,12 @@
             "state" : "translated",
             "value" : "这是你提前在地图上盖好章的地方。走到那里后就变成去过的地方。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這是你事先在地圖上蓋好章的地方。走到那裡後就變成去過的地方。"
+          }
         }
       }
     },
@@ -6683,6 +7853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在地图上显示"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在地圖上顯示"
           }
         }
       }
@@ -6718,6 +7894,12 @@
             "state" : "translated",
             "value" : "在地图上查看"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在地圖上查看"
+          }
         }
       }
     },
@@ -6752,6 +7934,12 @@
             "state" : "translated",
             "value" : "在地图上会是这样"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在地圖上會是這樣"
+          }
         }
       }
     },
@@ -6782,6 +7970,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "清除"
@@ -6820,6 +8014,12 @@
             "state" : "translated",
             "value" : "支持"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支援"
+          }
         }
       }
     },
@@ -6853,6 +8053,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "请选择家、公司这类可以作为基准的地方。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請選擇家、公司這類可以作為基準的地方。"
           }
         }
       }
@@ -6888,6 +8094,12 @@
             "state" : "translated",
             "value" : "拍摄"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拍攝"
+          }
         }
       }
     },
@@ -6921,6 +8133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "盖章日期"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "蓋章日期"
           }
         }
       }
@@ -6956,6 +8174,12 @@
             "state" : "translated",
             "value" : "已盖章"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已蓋章"
+          }
         }
       }
     },
@@ -6989,6 +8213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "乘车或地铁经过的路不会被画出。\n只有步行，才会一点一点落下印记。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "搭車或捷運經過的路不會被畫出。\n只有步行，才會一點一點落下印記。"
           }
         }
       }
@@ -7024,6 +8254,12 @@
             "state" : "translated",
             "value" : "只保留框内的内容，背景会被抹去"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只保留框內的內容，背景會被抹去"
+          }
         }
       }
     },
@@ -7054,6 +8290,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "首次"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "首次"
@@ -7092,6 +8334,12 @@
             "state" : "translated",
             "value" : "首次走过的路"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "首次走過的路"
+          }
         }
       }
     },
@@ -7126,6 +8374,12 @@
             "state" : "translated",
             "value" : "这是你第一次踏足的地方"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "這是你第一次踏足的地方"
+          }
         }
       }
     },
@@ -7156,6 +8410,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
@@ -7194,6 +8454,12 @@
             "state" : "translated",
             "value" : "开启"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開啟"
+          }
         }
       }
     },
@@ -7227,6 +8493,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "放大查看"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放大檢視"
           }
         }
       }
@@ -7263,6 +8535,12 @@
             "state" : "translated",
             "value" : "适配大字体的页面"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "適配大字級的畫面"
+          }
         }
       }
     },
@@ -7297,6 +8575,12 @@
             "state" : "translated",
             "value" : "延时回放"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "縮時回放"
+          }
         }
       }
     },
@@ -7327,6 +8611,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探索"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "探索"
@@ -7365,6 +8655,12 @@
             "state" : "translated",
             "value" : "探索记录"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探索紀錄"
+          }
         }
       }
     },
@@ -7398,6 +8694,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "探索日志"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探索日誌"
           }
         }
       }
@@ -7434,6 +8736,12 @@
             "state" : "translated",
             "value" : "适配折叠屏 iPhone"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "適配摺疊式 iPhone"
+          }
         }
       }
     },
@@ -7469,6 +8777,12 @@
             "state" : "translated",
             "value" : "在折叠屏 iPhone 上，把地图和记录分成两栏并排查看。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在摺疊式 iPhone 上，把地圖和紀錄分成兩欄並排檢視。"
+          }
         }
       }
     },
@@ -7502,6 +8816,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "一日延时回放"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一日縮時回放"
           }
         }
       }
@@ -7538,6 +8858,12 @@
             "state" : "translated",
             "value" : "每天结束时，用通知告诉你今天走过的路。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每天結束時，用通知告訴你今天走過的路。"
+          }
         }
       }
     },
@@ -7571,6 +8897,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在同一处停留超过%lld分钟，\n这个地方就会出现在今日足迹中。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在同一處停留超過%lld分鐘，\n這個地方就會出現在今日足跡中。"
           }
         }
       }
@@ -7606,6 +8938,12 @@
             "state" : "translated",
             "value" : "暂时无法定位"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暫時無法定位"
+          }
         }
       }
     },
@@ -7636,6 +8974,12 @@
           }
         },
         "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好"
+          }
+        },
+        "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "好"

@@ -32,6 +32,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -65,6 +71,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "用于拍下当地的照片，并把拍到的物体抠出来，做成可放在地图上的贴纸，因此需要使用相机。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用於拍下當地的照片，並把拍到的物體去背，製作可放在地圖上的貼圖，因此需要使用相機。"
           }
         }
       }
@@ -100,6 +112,12 @@
             "state" : "translated",
             "value" : "若要在你每次换地方时自动记录足迹，需要“始终允许”的权限。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "若要在你每次換地方時自動記錄足跡，需要「永遠允許」的權限。"
+          }
         }
       }
     },
@@ -134,6 +152,12 @@
             "state" : "translated",
             "value" : "需要定位权限，才能把你当前的位置作为足迹记录到地图上。"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要定位權限，才能把你目前的位置作為足跡記錄到地圖上。"
+          }
         }
       }
     },
@@ -167,6 +191,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "使用运动数据来确认你是步行或跑步移动，以免记录乘车的移动。"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用動作資料來確認你是步行或跑步移動，以免記錄搭乘交通工具的移動。"
           }
         }
       }
