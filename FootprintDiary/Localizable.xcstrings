@@ -26,6 +26,12 @@
             "state" : "translated",
             "value" : "%@ · 足あと %lld/%lld"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · 足迹 %lld/%lld"
+          }
         }
       }
     },
@@ -53,6 +59,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@を歩いて%@"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行%@，用时%@"
           }
         }
       }
@@ -82,6 +94,12 @@
             "state" : "translated",
             "value" : "%@ 歩きました"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行%@"
+          }
         }
       }
     },
@@ -109,6 +127,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ を収集しました"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已收集%@"
           }
         }
       }
@@ -138,6 +162,12 @@
             "state" : "translated",
             "value" : "%@のシンボル"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@图标"
+          }
         }
       }
     },
@@ -166,6 +196,12 @@
             "state" : "translated",
             "value" : "%@、%lld種類"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@，%lld种"
+          }
         }
       }
     },
@@ -190,6 +226,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@倍"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@倍"
@@ -222,6 +264,12 @@
             "state" : "translated",
             "value" : "%@方面がいちばん手薄です"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@方向走得最少"
+          }
         }
       }
     },
@@ -249,6 +297,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lldm離れています"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相距%lld米"
           }
         }
       }
@@ -278,6 +332,12 @@
             "state" : "translated",
             "value" : "%lldm以内に入るとシャッターが開きます"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "进入%lld米范围内，快门才会开启"
+          }
         }
       }
     },
@@ -305,6 +365,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld種類"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld种"
           }
         }
       }
@@ -334,6 +400,12 @@
             "state" : "translated",
             "value" : "%lld件"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld处"
+          }
         }
       }
     },
@@ -361,6 +433,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld回"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld次"
           }
         }
       }
@@ -390,6 +468,12 @@
             "state" : "translated",
             "value" : "%lld回出かけました"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "出门%lld次"
+          }
         }
       }
     },
@@ -418,6 +502,12 @@
             "state" : "translated",
             "value" : "%lld番目の発見"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "第%lld次发现"
+          }
         }
       }
     },
@@ -445,6 +535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ARで探しに行く"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用 AR 寻找"
           }
         }
       }
@@ -475,6 +571,12 @@
             "state" : "translated",
             "value" : "Face IDロック"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID 锁定"
+          }
         }
       }
     },
@@ -503,6 +605,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Face IDまたはTouch IDでアプリをロックして、歩いた場所と日記を守ります。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用 Face ID 或 Touch ID 锁定 App，守护你走过的地方和日记。"
           }
         }
       }
@@ -533,6 +641,12 @@
             "state" : "translated",
             "value" : "Siriに聞いて、今日歩いた距離をすぐに確認できます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "询问 Siri，立刻查看今天走了多远。"
+          }
         }
       }
     },
@@ -561,6 +675,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siriとショートカット"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri 与快捷指令"
           }
         }
       }
@@ -591,6 +711,12 @@
             "state" : "translated",
             "value" : "VoiceOverが地図と記録のボタンや内容を、漏れなく適切な順序で読み上げます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver 会按合适的顺序，完整朗读地图和记录里的按钮与内容。"
+          }
         }
       }
     },
@@ -620,6 +746,12 @@
             "state" : "translated",
             "value" : "VoiceOverをもっと使いやすく"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更便捷的 VoiceOver"
+          }
         }
       }
     },
@@ -647,6 +779,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "「%@」に合うスタンプがありません"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有与“%@”匹配的图章"
           }
         }
       }
@@ -676,6 +814,12 @@
             "state" : "translated",
             "value" : "行こうとしていた場所です。行った場所として残しますか？"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是你想去的地方。要标记为已去过吗？"
+          }
         }
       }
     },
@@ -703,6 +847,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "未訪問の場所"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没去过的地方"
           }
         }
       }
@@ -732,6 +882,12 @@
             "state" : "translated",
             "value" : "行きたい場所"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "想去的地方"
+          }
         }
       }
     },
@@ -759,6 +915,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "行きたい場所として押しておいた場所"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "曾作为想去的地方盖下的位置"
           }
         }
       }
@@ -788,6 +950,12 @@
             "state" : "translated",
             "value" : "いちばん多く弾かれた理由：%@（%lld回）。%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拦截最多的原因：%@（%lld次）。%@"
+          }
         }
       }
     },
@@ -815,6 +983,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "カテゴリ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "类别"
           }
         }
       }
@@ -844,6 +1018,12 @@
             "state" : "translated",
             "value" : "開拓コンパス"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开拓罗盘"
+          }
         }
       }
     },
@@ -871,6 +1051,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "スキップ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "跳过"
           }
         }
       }
@@ -900,6 +1086,12 @@
             "state" : "translated",
             "value" : "歩行記録"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行记录"
+          }
         }
       }
     },
@@ -927,6 +1119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "歩行記録がオフです。歩いても道は残りません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行记录已关闭。走再多路也不会留下轨迹。"
           }
         }
       }
@@ -956,6 +1154,12 @@
             "state" : "translated",
             "value" : "歩きながらスタンプを押すと、ここに時間順に積み重なります。\n滞在した場所は、押さなくても自動で残ります。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行时盖下的图章会按时间顺序堆叠在这里。\n停留过的地方即使不盖章也会自动保留。"
+          }
         }
       }
     },
@@ -983,6 +1187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "歩いて着いた場所"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行到达的地方"
           }
         }
       }
@@ -1012,6 +1222,12 @@
             "state" : "translated",
             "value" : "歩いて着くと、その場所で写真を残せます"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "步行抵达后，就能在那里留下照片"
+          }
         }
       }
     },
@@ -1040,6 +1256,12 @@
             "state" : "translated",
             "value" : "歩いたのに地図に線が引かれないときは、ここで理由を確認できます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如果走了路但地图上没有画出线，可以在这里查看原因。"
+          }
         }
       }
     },
@@ -1067,6 +1289,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "歩くと、通った道が順に重なっていきます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一路走来，经过的路会依次叠加。"
           }
         }
       }
@@ -1097,6 +1325,12 @@
             "state" : "translated",
             "value" : "歩いた道と日記をファイルに保存して、あとから読み込めます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "把走过的路和日记存成文件，之后还能再导入。"
+          }
         }
       }
     },
@@ -1124,6 +1358,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選んだ期間に歩いた道と、その期間に押したスタンプだけが地図に残ります。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只有所选时间段内走过的路和盖下的图章会留在地图上。"
           }
         }
       }
@@ -1153,6 +1393,12 @@
             "state" : "translated",
             "value" : "興味がありません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "不感兴趣"
+          }
         }
       }
     },
@@ -1180,6 +1426,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "大丈夫です"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没关系"
           }
         }
       }
@@ -1209,6 +1461,12 @@
             "state" : "translated",
             "value" : "描かれる様子を見る"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看绘制过程"
+          }
         }
       }
     },
@@ -1236,6 +1494,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "絵地図"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "绘本地图"
           }
         }
       }
@@ -1266,6 +1530,12 @@
             "state" : "translated",
             "value" : "文字サイズを大きくしても、切れずに見やすく配置し直されます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即使放大字体，页面也不会被截断，而是重新排布得清清楚楚。"
+          }
         }
       }
     },
@@ -1293,6 +1563,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "期間で見る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "按时间段查看"
           }
         }
       }
@@ -1322,6 +1598,12 @@
             "state" : "translated",
             "value" : "記録方法"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记录方式"
+          }
         }
       }
     },
@@ -1349,6 +1631,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "記録の状態"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记录状态"
           }
         }
       }
@@ -1378,6 +1666,12 @@
             "state" : "translated",
             "value" : "記録の状態を見る"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看记录状态"
+          }
         }
       }
     },
@@ -1405,6 +1699,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "初期の絵に戻す"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "恢复为默认图案"
           }
         }
       }
@@ -1434,6 +1734,12 @@
             "state" : "translated",
             "value" : "オフにした画面も、上の「まとめて見る」からいつでも開けます。スタンプと設定のボタンは常に表示されます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭的页面仍可随时从上方“汇总查看”中打开。图章和设置按钮始终显示。"
+          }
         }
       }
     },
@@ -1461,6 +1767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "終了"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "结束"
           }
         }
       }
@@ -1490,6 +1802,12 @@
             "state" : "translated",
             "value" : "あとで"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "以后再说"
+          }
         }
       }
     },
@@ -1517,6 +1835,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "あなた個人のiCloudにのみ保存されます。ほかの人には見えません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅保存在你个人的 iCloud 中，其他人看不到。"
           }
         }
       }
@@ -1547,6 +1871,12 @@
             "state" : "translated",
             "value" : "自分の記録をまとめて消去"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一键清除我的全部记录"
+          }
         }
       }
     },
@@ -1574,6 +1904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "マイエリアの輪郭"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的街区轮廓"
           }
         }
       }
@@ -1603,6 +1939,12 @@
             "state" : "translated",
             "value" : "マイマップ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我的地图"
+          }
         }
       }
     },
@@ -1630,6 +1972,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "マイマップを開く"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开我的地图"
           }
         }
       }
@@ -1659,6 +2007,12 @@
             "state" : "translated",
             "value" : "地図が描かれていく様子"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "看地图如何一点点绘成"
+          }
         }
       }
     },
@@ -1686,6 +2040,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地図が描かれていくプレビュー"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地图绘制过程预览"
           }
         }
       }
@@ -1715,6 +2075,12 @@
             "state" : "translated",
             "value" : "自分が描いた道"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我画出的路"
+          }
         }
       }
     },
@@ -1742,6 +2108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "自分が押した場所"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我盖过章的地方"
           }
         }
       }
@@ -1771,6 +2143,12 @@
             "state" : "translated",
             "value" : "タップすると地図が透けます"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轻点即可透出地图"
+          }
         }
       }
     },
@@ -1798,6 +2176,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "タップして今いる場所に押す"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轻点即可在当前位置盖章"
           }
         }
       }
@@ -1827,6 +2211,12 @@
             "state" : "translated",
             "value" : "行った場所かどうか%lld件を確認します"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有%lld处需要确认你是否去过"
+          }
         }
       }
     },
@@ -1854,6 +2244,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "訪問回数"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到访次数"
           }
         }
       }
@@ -1883,6 +2279,12 @@
             "state" : "translated",
             "value" : "行きました"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "我去过"
+          }
         }
       }
     },
@@ -1910,6 +2312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "もう一度タップすると紙に戻ります。今どのあたりか確かめるときに使ってください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再次轻点就回到白纸。想确认自己大概在哪儿时可以用。"
           }
         }
       }
@@ -1939,6 +2347,12 @@
             "state" : "translated",
             "value" : "撮り直す"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重拍"
+          }
         }
       }
     },
@@ -1966,6 +2380,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "再訪した場所"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再次到访的地方"
           }
         }
       }
@@ -1995,6 +2415,12 @@
             "state" : "translated",
             "value" : "よく行く場所として登録されています"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是已登记的常去地点"
+          }
         }
       }
     },
@@ -2022,6 +2448,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "閉じる"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "关闭"
           }
         }
       }
@@ -2052,6 +2484,12 @@
             "state" : "translated",
             "value" : "コントラストを上げたり色の区別がつきにくくても、地図の道とスタンプを見分けられます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "即使调高对比度或难以分辨颜色，也能认出地图上的路和图章。"
+          }
         }
       }
     },
@@ -2080,6 +2518,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "より多くの言語でアプリを使えるようにします。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "让你用更多语言使用 App。"
           }
         }
       }
@@ -2110,6 +2554,12 @@
             "state" : "translated",
             "value" : "さらに多くの言語"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更多语言"
+          }
         }
       }
     },
@@ -2137,6 +2587,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ひとこと添える（なくてもOK）"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "补充几句（可不填）"
           }
         }
       }
@@ -2166,6 +2622,12 @@
             "state" : "translated",
             "value" : "図鑑でこれまで集めた足あとを見られます"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "可在图鉴中查看至今收集的足迹"
+          }
         }
       }
     },
@@ -2193,6 +2655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "元に戻せません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "此操作无法撤销。"
           }
         }
       }
@@ -2222,6 +2690,12 @@
             "state" : "translated",
             "value" : "タップで一時停止または再生します"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "轻点可暂停或继续播放"
+          }
         }
       }
     },
@@ -2249,6 +2723,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "立ち寄り %lld件"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到访%lld处"
           }
         }
       }
@@ -2278,6 +2758,12 @@
             "state" : "translated",
             "value" : "はっきりした被写体がなく、背景を消せませんでした。物に近づけて撮り直してください。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有找到清晰的主体，无法去除背景。请靠近物体再拍一次。"
+          }
         }
       }
     },
@@ -2305,6 +2791,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最後の訪問"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近一次到访"
           }
         }
       }
@@ -2334,6 +2826,12 @@
             "state" : "translated",
             "value" : "墨の地図"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "水墨地图"
+          }
         }
       }
     },
@@ -2361,6 +2859,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "メモ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "备注"
           }
         }
       }
@@ -2390,6 +2894,12 @@
             "state" : "translated",
             "value" : "まとめて見る"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "汇总查看"
+          }
         }
       }
     },
@@ -2417,6 +2927,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "水と山を配置しています"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在安放水域与山峦"
           }
         }
       }
@@ -2446,6 +2962,12 @@
             "state" : "translated",
             "value" : "未発見"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未发现"
+          }
         }
       }
     },
@@ -2473,6 +2995,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "足あと"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "足迹"
           }
         }
       }
@@ -2502,6 +3030,12 @@
             "state" : "translated",
             "value" : "足あとタイムラプス"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "足迹延时回放"
+          }
         }
       }
     },
@@ -2530,6 +3064,12 @@
             "state" : "translated",
             "value" : "晴らした土地 %@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已点亮的土地 %@"
+          }
         }
       }
     },
@@ -2557,6 +3097,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "背景の地図を透かす"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "透出底图"
           }
         }
       }
@@ -2587,6 +3133,12 @@
             "state" : "translated",
             "value" : "バックアップと書き出し"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "备份与导出"
+          }
         }
       }
     },
@@ -2614,6 +3166,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "破棄された理由"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "被舍弃的原因"
           }
         }
       }
@@ -2643,6 +3201,12 @@
             "state" : "translated",
             "value" : "バージョン %@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "版本 %@"
+          }
         }
       }
     },
@@ -2670,6 +3234,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "表示"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看方式"
           }
         }
       }
@@ -2700,6 +3270,12 @@
             "state" : "translated",
             "value" : "見やすい色とコントラスト"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "更舒适的色彩与对比度"
+          }
         }
       }
     },
@@ -2727,6 +3303,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "表示する道"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看的路"
           }
         }
       }
@@ -2756,6 +3338,12 @@
             "state" : "translated",
             "value" : "白紙のままでは、どこがどこなのかわかりません。\n今いる場所が**最初の基準点**になります。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一张白纸，本身分不清哪里是哪里。\n你现在所在的位置会成为**第一个基准点**。"
+          }
         }
       }
     },
@@ -2783,6 +3371,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "白紙から始めます"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "从一张白纸开始"
           }
         }
       }
@@ -2812,6 +3406,12 @@
             "state" : "translated",
             "value" : "利用統計（開発者向け）"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用统计（开发者）"
+          }
         }
       }
     },
@@ -2839,6 +3439,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "写真"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "照片"
           }
         }
       }
@@ -2868,6 +3474,12 @@
             "state" : "translated",
             "value" : "写真を削除"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除照片"
+          }
         }
       }
     },
@@ -2895,6 +3507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "写真を撮る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拍照"
           }
         }
       }
@@ -2924,6 +3542,12 @@
             "state" : "translated",
             "value" : "写真を追加"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加照片"
+          }
         }
       }
     },
@@ -2951,6 +3575,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "写真を入れています"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在放入照片"
           }
         }
       }
@@ -2980,6 +3610,12 @@
             "state" : "translated",
             "value" : "写真を保存できませんでした"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无法存储照片"
+          }
         }
       }
     },
@@ -3007,6 +3643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "削除"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除"
           }
         }
       }
@@ -3037,6 +3679,12 @@
             "state" : "translated",
             "value" : "散歩のお知らせ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "散步提醒"
+          }
         }
       }
     },
@@ -3064,6 +3712,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新しく着いた場所%lld件が、通った道に刻まれます"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新到达的%lld处地点会印在途经的路上"
           }
         }
       }
@@ -3093,6 +3747,12 @@
             "state" : "translated",
             "value" : "新機能"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新功能"
+          }
         }
       }
     },
@@ -3120,6 +3780,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "设置"
           }
         }
       }
@@ -3149,6 +3815,12 @@
             "state" : "translated",
             "value" : "設定アプリ > 벅뚜벅뚜 > カメラをオンにしてください。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请在“设置”App > 벅뚜벅뚜 中开启相机。"
+          }
         }
       }
     },
@@ -3176,6 +3848,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定を開く"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "打开设置"
           }
         }
       }
@@ -3205,6 +3883,12 @@
             "state" : "translated",
             "value" : "設定で権限をオンにする"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在设置中开启权限"
+          }
         }
       }
     },
@@ -3232,6 +3916,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定からも開けます"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "也可以在设置中打开"
           }
         }
       }
@@ -3261,6 +3951,12 @@
             "state" : "translated",
             "value" : "カウントをリセット"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置统计"
+          }
         }
       }
     },
@@ -3288,6 +3984,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "世界はもう、ほかの地図が描き終えています。\nここに残るのは、**あなたが自分の足で通った場所だけ**です。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "世界早已被别的地图画满。\n而这里只留下**你亲脚走过的地方**。"
           }
         }
       }
@@ -3317,6 +4019,12 @@
             "state" : "translated",
             "value" : "集めたスポット"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已收集的地点"
+          }
         }
       }
     },
@@ -3344,6 +4052,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "スタンプ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图章"
           }
         }
       }
@@ -3373,6 +4087,12 @@
             "state" : "translated",
             "value" : "開始"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始"
+          }
         }
       }
     },
@@ -3400,6 +4120,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "はじめる"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开始使用"
           }
         }
       }
@@ -3429,6 +4155,12 @@
             "state" : "translated",
             "value" : "シンボル"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "图标"
+          }
         }
       }
     },
@@ -3456,6 +4188,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "シンボルを大きく見る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放大查看图标"
           }
         }
       }
@@ -3486,6 +4224,12 @@
             "state" : "translated",
             "value" : "書きかけの日記の続きを書く"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "接着写没写完的日记"
+          }
         }
       }
     },
@@ -3513,6 +4257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "スワイプでカードのようにめくれ、ダブルタップで大きく見られます"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "滑动可像卡片一样翻页，双击可放大查看"
           }
         }
       }
@@ -3542,6 +4292,12 @@
             "state" : "translated",
             "value" : "違います"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "没有"
+          }
         }
       }
     },
@@ -3566,6 +4322,12 @@
           }
         },
         "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "zh-Hans" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -3598,6 +4360,12 @@
             "state" : "translated",
             "value" : "まだ"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未"
+          }
         }
       }
     },
@@ -3625,6 +4393,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "未訪問の場所"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没去过的地方"
           }
         }
       }
@@ -3654,6 +4428,12 @@
             "state" : "translated",
             "value" : "まだ行ったことのない場所です。「行きたい場所」として残り、そこに着くと行った場所になります。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是你还没去过的地方。它会作为“想去的地方”保留，走到那里后就变成去过的地方。"
+          }
         }
       }
     },
@@ -3681,6 +4461,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "破棄されたポイントはまだありません"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没有被舍弃的点位"
           }
         }
       }
@@ -3710,6 +4496,12 @@
             "state" : "translated",
             "value" : "まだです"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "还没有"
+          }
         }
       }
     },
@@ -3737,6 +4529,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "案内"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "指南"
           }
         }
       }
@@ -3767,6 +4565,12 @@
             "state" : "translated",
             "value" : "アプリを英語でも使えます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App 也可以用英文了。"
+          }
         }
       }
     },
@@ -3794,6 +4598,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "アプリを一度開いてください"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请先打开一次 App"
           }
         }
       }
@@ -3823,6 +4633,12 @@
             "state" : "translated",
             "value" : "どの日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "哪一天"
+          }
         }
       }
     },
@@ -3850,6 +4666,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "どちらを選んでも、受け取った位置情報はすべて保存します。精度の低いポイントを地図に描かないだけです。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "无论选哪一种，收到的位置都会全部保存。只是精度较低的点位不会绘制到地图上。"
           }
         }
       }
@@ -3879,6 +4701,12 @@
             "state" : "translated",
             "value" : "どの画面が使われたかを匿名で数えるだけです。歩いた場所や日記の文章は送信しません。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "仅以匿名方式统计哪些页面被使用。不会发送你走过的地点和日记内容。"
+          }
         }
       }
     },
@@ -3906,6 +4734,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ここに%@滞在しました"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "你在这里待了%@"
           }
         }
       }
@@ -3935,6 +4769,12 @@
             "state" : "translated",
             "value" : "ここを残す"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "留下这里"
+          }
         }
       }
     },
@@ -3962,6 +4802,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ここに残す"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "记在这里"
           }
         }
       }
@@ -3991,6 +4837,12 @@
             "state" : "translated",
             "value" : "ここは記録しなくても大丈夫ですか？"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这里不记录也没关系吗？"
+          }
         }
       }
     },
@@ -4018,6 +4870,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ここはどこでしたか？"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这里是哪里？"
           }
         }
       }
@@ -4047,6 +4905,12 @@
             "state" : "translated",
             "value" : "動画で書き出す"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "导出为视频"
+          }
         }
       }
     },
@@ -4074,6 +4938,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "動画を作成中 %lld%%"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在生成视频 %lld%%"
           }
         }
       }
@@ -4104,6 +4974,12 @@
             "state" : "translated",
             "value" : "英語に対応"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持英文"
+          }
         }
       }
     },
@@ -4131,6 +5007,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "例：自宅、職場、行きつけのカフェ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例如：家、公司、常去的咖啡馆"
           }
         }
       }
@@ -4160,6 +5042,12 @@
             "state" : "translated",
             "value" : "今日 %@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天 %@"
+          }
         }
       }
     },
@@ -4187,6 +5075,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日引いた道"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天画的路"
           }
         }
       }
@@ -4216,6 +5110,12 @@
             "state" : "translated",
             "value" : "今日の日記に写真が追加されました"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "照片已加入今天的日记"
+          }
         }
       }
     },
@@ -4243,6 +5143,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日を再生"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回放今天"
           }
         }
       }
@@ -4272,6 +5178,12 @@
             "state" : "translated",
             "value" : "今日はまだ訪れた場所がありません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天还没有去过的地方"
+          }
         }
       }
     },
@@ -4299,6 +5211,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日はまだ滞在した場所がありません"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天还没有停留过的地点"
           }
         }
       }
@@ -4328,6 +5246,12 @@
             "state" : "translated",
             "value" : "今日はどこを探検しましたか？"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今天去哪里探索了？"
+          }
         }
       }
     },
@@ -4355,6 +5279,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日の足あと"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日足迹"
           }
         }
       }
@@ -4384,6 +5314,12 @@
             "state" : "translated",
             "value" : "今日の探検"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日探索"
+          }
         }
       }
     },
@@ -4411,6 +5347,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "完了"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完成"
           }
         }
       }
@@ -4441,6 +5383,12 @@
             "state" : "translated",
             "value" : "視差効果を減らす"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "减少动态效果"
+          }
         }
       }
     },
@@ -4469,6 +5417,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "視差効果を減らすをオンにすると、地図と画面効果が落ち着きます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启“减少动态效果”后，地图和页面效果会更平静。"
           }
         }
       }
@@ -4499,6 +5453,12 @@
             "state" : "translated",
             "value" : "希望すれば、アプリ内で歩いた道と日記をすべて消去できます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "如有需要，可以在 App 内清除所有走过的路和日记。"
+          }
         }
       }
     },
@@ -4526,6 +5486,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "位置情報を「常に許可」にして、モーションとフィットネスをオンにしておくと、アプリを開かずに歩いても記録されます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "将定位设为“始终”，并开启“运动与健身”，即使不打开 App 步行也会被记录。"
           }
         }
       }
@@ -4555,6 +5521,12 @@
             "state" : "translated",
             "value" : "この期間には足あとがありません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这段时间没有足迹"
+          }
         }
       }
     },
@@ -4582,6 +5554,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "この期間で見る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "查看此时间段"
           }
         }
       }
@@ -4611,6 +5589,12 @@
             "state" : "translated",
             "value" : "この日に撮った場所"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这天拍下的地点"
+          }
         }
       }
     },
@@ -4638,6 +5622,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "この日は歩いた記録がありません"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这天没有留下步行记录"
           }
         }
       }
@@ -4667,6 +5657,12 @@
             "state" : "translated",
             "value" : "この日の足あとがありません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这天没有足迹"
+          }
         }
       }
     },
@@ -4694,6 +5690,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "このスタンプを削除"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "删除此图章"
           }
         }
       }
@@ -4723,6 +5725,12 @@
             "state" : "translated",
             "value" : "このシンボルを使う"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用此图标"
+          }
         }
       }
     },
@@ -4750,6 +5758,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "この場所の足あとを消す"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除此处的足迹"
           }
         }
       }
@@ -4779,6 +5793,12 @@
             "state" : "translated",
             "value" : "この場所の名前（例：職場、行きつけのカフェ）"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这个地点的名称（例如：公司、常去的咖啡馆）"
+          }
         }
       }
     },
@@ -4806,6 +5826,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "この紙に最初のスタンプを押してください"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在这张纸上盖下第一个图章"
           }
         }
       }
@@ -4835,6 +5861,12 @@
             "state" : "translated",
             "value" : "名前"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名称"
+          }
         }
       }
     },
@@ -4862,6 +5894,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "名前をつける"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "命名"
           }
         }
       }
@@ -4891,6 +5929,12 @@
             "state" : "translated",
             "value" : "画像を追加"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "添加图片"
+          }
         }
       }
     },
@@ -4919,6 +5963,12 @@
             "state" : "translated",
             "value" : "さあ、歩いてみましょう"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "现在出发走走吧"
+          }
         }
       }
     },
@@ -4946,6 +5996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "さあ、歩いてみましょう。\n通った場所が一点ずつこの紙に刻まれます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "现在出发走走吧。\n经过的地方会一点点印在这张纸上。"
           }
         }
       }
@@ -4976,6 +6032,12 @@
             "state" : "translated",
             "value" : "日記を書いている途中でアプリが終了しても、書きかけの内容が残ります。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "写日记时即使 App 被关闭，写到一半的内容也会保留。"
+          }
         }
       }
     },
@@ -5003,6 +6065,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "日誌"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日志"
           }
         }
       }
@@ -5032,6 +6100,12 @@
             "state" : "translated",
             "value" : "よく行く場所に**着いたら、そこでもう一度**押してください。\n基準が2つになると、白紙でも方角がわかります。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "到达常去的地方时，**请在那里再盖一次**。\n有了两个基准点，即使是白纸也能确定方向。"
+          }
         }
       }
     },
@@ -5059,6 +6133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "しばらくしてからもう一度試すか、地図を長押しして好きな場所に押してください。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请稍后再试，或长按地图，在想要的位置盖章。"
           }
         }
       }
@@ -5088,6 +6168,12 @@
             "state" : "translated",
             "value" : "保存"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "存储"
+          }
         }
       }
     },
@@ -5115,6 +6201,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "全期間に戻る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "返回全部时间段"
           }
         }
       }
@@ -5144,6 +6236,12 @@
             "state" : "translated",
             "value" : "ポイント数"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "点位统计"
+          }
         }
       }
     },
@@ -5171,6 +6269,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "精度が足りないポイントも保存しています。今は地図に描きませんが、補正が良くなれば使えます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "精度不足的点位也会保存。目前不会绘制到地图上，等校准改善后就能派上用场。"
           }
         }
       }
@@ -5200,6 +6304,12 @@
             "state" : "translated",
             "value" : "現在の状態"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当前状态"
+          }
         }
       }
     },
@@ -5227,6 +6337,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "現在地を探しています"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在定位"
           }
         }
       }
@@ -5256,6 +6372,12 @@
             "state" : "translated",
             "value" : "今いる場所を残す"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "留下此刻的位置"
+          }
         }
       }
     },
@@ -5283,6 +6405,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今いる場所にスタンプを押す"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在当前位置盖图章"
           }
         }
       }
@@ -5312,6 +6440,12 @@
             "state" : "translated",
             "value" : "今いる場所に押す"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在当前位置盖章"
+          }
         }
       }
     },
@@ -5339,6 +6473,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "通った場所が一点ずつこの紙に刻まれます。\n車や地下鉄で通った道は描かれません。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "经过的地方会一点点印在这张纸上。\n乘车或地铁经过的路不会被画出。"
           }
         }
       }
@@ -5368,6 +6508,12 @@
             "state" : "translated",
             "value" : "地図のボタンは設定で選べます"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在设置中选择地图按钮"
+          }
         }
       }
     },
@@ -5395,6 +6541,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地図のスタイル"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地图样式"
           }
         }
       }
@@ -5424,6 +6576,12 @@
             "state" : "translated",
             "value" : "地図の縮尺。バー1本が%@"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地图比例尺。一格表示%@"
+          }
         }
       }
     },
@@ -5451,6 +6609,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地図に出すボタンを選べます。オフにした画面も設定からすぐ開けます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "选择要浮在地图上的按钮，关闭的页面也能直接从设置里打开。"
           }
         }
       }
@@ -5480,6 +6644,12 @@
             "state" : "translated",
             "value" : "地図にあらかじめ押しておいた場所です。そこに着くと行った場所になります。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是你提前在地图上盖好章的地方。走到那里后就变成去过的地方。"
+          }
         }
       }
     },
@@ -5507,6 +6677,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地図に表示"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在地图上显示"
           }
         }
       }
@@ -5536,6 +6712,12 @@
             "state" : "translated",
             "value" : "地図で見る"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在地图上查看"
+          }
         }
       }
     },
@@ -5563,6 +6745,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地図ではこう見えます"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在地图上会是这样"
           }
         }
       }
@@ -5592,6 +6780,12 @@
             "state" : "translated",
             "value" : "消去"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "清除"
+          }
         }
       }
     },
@@ -5619,6 +6813,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "サポート"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "支持"
           }
         }
       }
@@ -5648,6 +6848,12 @@
             "state" : "translated",
             "value" : "自宅や職場など、基準になりそうな場所を選んでください。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "请选择家、公司这类可以作为基准的地方。"
+          }
         }
       }
     },
@@ -5675,6 +6881,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "撮る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "拍摄"
           }
         }
       }
@@ -5704,6 +6916,12 @@
             "state" : "translated",
             "value" : "押した日"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "盖章日期"
+          }
         }
       }
     },
@@ -5731,6 +6949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "押しました"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "已盖章"
           }
         }
       }
@@ -5760,6 +6984,12 @@
             "state" : "translated",
             "value" : "車や地下鉄で通った道は描かれません。\n歩いたときだけ、一点ずつ刻まれます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "乘车或地铁经过的路不会被画出。\n只有步行，才会一点一点落下印记。"
+          }
         }
       }
     },
@@ -5787,6 +7017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "枠の中に入ったものだけが残り、背景は消えます"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "只保留框内的内容，背景会被抹去"
           }
         }
       }
@@ -5816,6 +7052,12 @@
             "state" : "translated",
             "value" : "初回"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "首次"
+          }
         }
       }
     },
@@ -5843,6 +7085,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "はじめて歩く道"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "首次走过的路"
           }
         }
       }
@@ -5872,6 +7120,12 @@
             "state" : "translated",
             "value" : "はじめて訪れた場所です"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "这是你第一次踏足的地方"
+          }
         }
       }
     },
@@ -5899,6 +7153,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "キャンセル"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "取消"
           }
         }
       }
@@ -5928,6 +7188,12 @@
             "state" : "translated",
             "value" : "オンにする"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "开启"
+          }
         }
       }
     },
@@ -5955,6 +7221,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "大きく見る"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "放大查看"
           }
         }
       }
@@ -5985,6 +7257,12 @@
             "state" : "translated",
             "value" : "大きな文字に合わせた画面"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "适配大字体的页面"
+          }
         }
       }
     },
@@ -6012,6 +7290,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "タイムラプス"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "延时回放"
           }
         }
       }
@@ -6041,6 +7325,12 @@
             "state" : "translated",
             "value" : "探検"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探索"
+          }
         }
       }
     },
@@ -6069,6 +7359,12 @@
             "state" : "translated",
             "value" : "探検記録"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探索记录"
+          }
         }
       }
     },
@@ -6096,6 +7392,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "探検ログ"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探索日志"
           }
         }
       }
@@ -6126,6 +7428,12 @@
             "state" : "translated",
             "value" : "折りたたみiPhoneの画面"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "适配折叠屏 iPhone"
+          }
         }
       }
     },
@@ -6155,6 +7463,12 @@
             "state" : "translated",
             "value" : "折りたたみiPhoneで、地図と記録を2つのペインに分けて見られます。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在折叠屏 iPhone 上，把地图和记录分成两栏并排查看。"
+          }
         }
       }
     },
@@ -6182,6 +7496,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1日のタイムラプス"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一日延时回放"
           }
         }
       }
@@ -6212,6 +7532,12 @@
             "state" : "translated",
             "value" : "1日の終わりに、今日歩いた道を通知でお知らせします。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "每天结束时，用通知告诉你今天走过的路。"
+          }
         }
       }
     },
@@ -6239,6 +7565,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "1か所に%lld分以上とどまると、\nその場所が今日の足あとに並びます。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "在同一处停留超过%lld分钟，\n这个地方就会出现在今日足迹中。"
           }
         }
       }
@@ -6268,6 +7600,12 @@
             "state" : "translated",
             "value" : "現在地がまだ見つかりません"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暂时无法定位"
+          }
         }
       }
     },
@@ -6295,6 +7633,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "好"
           }
         }
       }

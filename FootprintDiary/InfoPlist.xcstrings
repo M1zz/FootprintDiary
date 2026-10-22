@@ -26,6 +26,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -53,6 +59,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "その場所の写真を残し、撮ったものを切り抜いて地図に載せるステッカーにするため、カメラを使用します。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "用于拍下当地的照片，并把拍到的物体抠出来，做成可放在地图上的贴纸，因此需要使用相机。"
           }
         }
       }
@@ -82,6 +94,12 @@
             "state" : "translated",
             "value" : "場所を移動するたびに足あとを自動で記録するには、「常に許可」の権限が必要です。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "若要在你每次换地方时自动记录足迹，需要“始终允许”的权限。"
+          }
         }
       }
     },
@@ -110,6 +128,12 @@
             "state" : "translated",
             "value" : "現在地を足あととして地図に記録するために、位置情報の権限が必要です。"
           }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "需要定位权限，才能把你当前的位置作为足迹记录到地图上。"
+          }
         }
       }
     },
@@ -137,6 +161,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "徒歩やランニングで移動したかを確認し、乗り物での移動を記録しないために、モーションデータを使用します。"
+          }
+        },
+        "zh-Hans" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "使用运动数据来确认你是步行或跑步移动，以免记录乘车的移动。"
           }
         }
       }

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>支持 · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --accent2: #00c2a8; --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 24px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; }
+    .contact {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff; border-radius: 16px; padding: 24px; margin-bottom: 8px;
+    }
+    .contact h2 { margin-top: 0; color: #fff; }
+    .contact a { color: #fff; font-weight: 600; }
+    .faq {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; margin: 12px 0; padding: 4px 18px;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 600; padding: 14px 0; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "＋"; color: var(--muted); font-weight: 400; }
+    .faq[open] summary::after { content: "－"; }
+    .faq p { margin: 0 0 16px; color: var(--muted); }
+    a { color: var(--accent); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/zh-Hans/support.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/support.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/support.html">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/support.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/support.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/support.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../support.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/support.html" hreflang="en" lang="en">English</a> · <a href="../ja/support.html" hreflang="ja" lang="ja">日本語</a> · <a href="support.html" hreflang="zh-Hans" lang="zh-Hans" aria-current="true">简体中文</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← 벅뚜벅뚜 首页</a>
+    <h1>支持 / 联系我们</h1>
+
+    <div class="contact">
+      <h2>💬 联系我们</h2>
+      <p>错误反馈、功能建议及其他咨询，请发送电子邮件给我们。我们会尽快回复。</p>
+      <p>邮箱：<a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+      <p>GitHub Issues：<a href="https://github.com/M1zz/FootprintDiary/issues">github.com/M1zz/FootprintDiary/issues</a></p>
+    </div>
+
+    <h2>常见问题（FAQ）</h2>
+
+    <details class="faq">
+      <summary>足迹没有自动记录。</summary>
+      <p>
+        自动记录需要将 iOS 的定位权限设为<strong>“始终”</strong>才能工作。
+        请在“设置”App → 벅뚜벅뚜 → 位置 中选择“始终”。另外，到访检测要在
+        一个地方停留一段时间后再离开才会记录，所以可能不会立即显示。
+        想马上留下记录，请使用地图页面右上角的 ➕ 按钮。
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>我的位置信息会被发送到外部吗？</summary>
+      <p>
+        不会发送给开发者。足迹、日记和照片只保存在你的设备以及<strong>你个人的
+        iCloud</strong> 中（这样换设备后记录也能跟着你）。开发者无法查看这些
+        内容。App 发送给开发者的只有走了多远、写了多少篇日记之类的匿名计数，
+        <strong>一个坐标也不会发送</strong>。
+        此外，为了把坐标转换为地址名称，会使用 Apple 的地图 / 地理编码服务。
+        详情请查看<a href="privacy.html">隐私政策</a>。
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>乘坐交通工具的路线也会被记录吗？</summary>
+      <p>
+        App 会参考运动数据，主要记录步行和跑步的移动，
+        并尽量把判断为乘车移动的路段从足迹中排除。
+        视具体情况，可能会有一些误差。
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>换设备后数据会迁移吗？</summary>
+      <p>
+        记录会同时保存在设备和你自己的 iCloud 中。在新设备上登录同一个 Apple 账户
+        并保持 iCloud 开启，足迹、日记和照片就会接续。
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>我想删除足迹或日记。</summary>
+      <p>
+        在地图页面轻点足迹标记或列表即可逐条删除，
+        日记可以在日记页面删除。删除 App 时，所有数据也会一并删除。
+      </p>
+    </details>
+
+    <h2>系统要求</h2>
+    <p>iOS 17.0 或更高版本 · iPhone</p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) ·
+      <a href="privacy.html">隐私政策</a> ·
+      <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>

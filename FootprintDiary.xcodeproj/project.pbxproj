@@ -177,6 +177,7 @@
 				ko,
 				"en-GB",
 				ja,
+				"zh-Hans",
 			);
 			mainGroup = A10000000000000000000003;
 			minimizedProjectReferenceProxies = 1;
