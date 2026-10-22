@@ -1151,3 +1151,67 @@ Valitse tarkkuus ensin tai akku ensin. Tarkkuus ensin -tilassa askeleesi tallent
 Tallenteesi omassa iCloudissasi
 Askeleet, leimat, päiväkirja ja kuvat säilyvät omassa iCloudissasi ja seuraavat mukanasi laitetta vaihtaessasi.
 Anonyymit käyttötilastot eivät koskaan sisällä sijaintikoordinaatteja, päiväkirjatekstejä, paikannimiä tai kuvia.
+
+## id
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/id/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/id/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/id/
+
+### 이름
+
+벅뚜벅뚜: Peta dari Langkah
+
+### 부제
+
+Hanya jalan baru yang diwarnai
+
+### 키워드
+
+jalan kaki,jalan santai,hiking,gps,pelacak,jurnal,wisata,langkah,eksplorasi,stempel,kota,rute
+
+### 프로모션 텍스트
+
+Peta kosong yang tidak menggambar perjalanan dengan mobil atau kereta. Hanya jalan yang pertama kali kamu lalui yang memperluasnya. Ke arah mana jalan barumu hari ini?
+
+### 설명
+
+Peta yang dimulai dari selembar kertas kosong. Hanya tempat yang kamu lalui dengan kakimu sendiri yang terisi, satu titik demi satu titik.
+Perjalanan dengan mobil atau kereta bawah tanah tidak digambar, dan meski kamu menyusuri jalan yang sama seratus kali, peta tidak bertambah luas. Untuk memperluasnya, kamu harus menempuh jalan baru.
+
+Hari ini dan langkah masa lalu dibedakan warna
+Tempat yang kamu jalani hari ini dicap dengan tinta merah, langkah sebelumnya dengan biru nila. Makin sering dilalui, makin pekat, sehingga lingkup kesehari-harianmu terlihat dengan sendirinya.
+Tempat yang tidak dipijak lagi lebih dari tiga bulan tidak terhapus, melainkan memudar menjadi abu-abu.
+
+Stempel untuk tempat yang dikunjungi dan ingin dikunjungi
+Cap di tempat kamu berdiri, atau tekan lama peta untuk membubuhkan stempel di mana pun yang kamu mau. Tersedia 212 stempel yang bisa dipilih, dikelompokkan per kategori.
+Stempel yang dibubuhkan di tempat yang belum pernah kamu jalani tetap menjadi tempat yang ingin dikunjungi, lalu menjadi tempat yang dikunjungi saat kamu benar-benar mendekat.
+Foto papan nama toko dengan kamera, latarnya dipotong dan papan itu berdiri sebagai stiker khusus untuk tempat tersebut.
+
+Jejak Kaki Hari Ini
+Tempat yang kamu singgahi hari ini berjajar berurutan waktu, lengkap dengan jarak yang ditempuh di antaranya. Jika ada stempel di tempat langkahmu berhenti, aplikasi menanyakan apakah kamu ke sana dan menghitung kunjungannya.
+
+Kompas Perintis
+Membagi sekeliling tempatmu berada menjadi delapan arah dan menunjuk arah yang paling sedikit kamu jalani. Pakai untuk menentukan arah jalan santai berikutnya.
+
+Film dan Kalender
+Pilih periode untuk menonton proses petamu digambar sebagai video, dan ekspor jika mau.
+Kalender menggambar bentuk jalan yang kamu lalui hari itu sebagai ganti angka. Kamu juga bisa menulis catatan harian dengan teks dan foto.
+
+Widget
+Layar Utama menampilkan bentuk dan panjang jalan yang digambar hari ini, dan Layar Kunci menampilkan jarak hari ini dalam satu baris angka.
+
+Cara Pencatatan
+Pilih antara mengutamakan akurasi atau baterai. Dengan akurasi diutamakan, langkahmu tercatat meski aplikasi ditutup.
+
+Catatanmu di iCloud-mu
+Langkah, stempel, catatan harian, dan foto tersimpan di iCloud pribadimu dan ikut saat kamu berganti perangkat.
+Statistik penggunaan anonim tidak pernah menyertakan koordinat lokasi, teks catatan harian, nama tempat, atau foto.

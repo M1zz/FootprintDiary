@@ -50,6 +50,7 @@ SEARCH = {
     "da": ("gåture log", "Et kort, der vokser<br>for hvert <mark>skridt</mark>", "Det udvides kun på veje, du aldrig har gået"),
     "el": ("καταγραφή περπατήματος", "Ένας χάρτης που μεγαλώνει<br>με κάθε <mark>βήμα</mark>", "Μεγαλώνει μόνο σε δρόμους που δεν έχετε περπατήσει"),
     "fi": ("kävelyloki", "Kartta, joka kasvaa<br>jokaisella <mark>askeleella</mark>", "Se laajenee vain teillä, joita et ole kävellyt"),
+    "id": ("catatan jalan kaki", "Peta yang tumbuh<br>di setiap <mark>langkah</mark>", "Hanya meluas di jalan yang belum pernah kamu lalui"),
 }
 
 # 헤더: 처음 온 사람에게 한 가지 약속. 내 발로 걸은 자리만 지도에 남는다.
@@ -72,6 +73,7 @@ HEADER = {
     "da": ("Et kort tegnet til fods", "Kun de veje, du går,<br>bliver på <mark>kortet</mark>"),
     "el": ("Ένας χάρτης που σχεδιάζεται περπατώντας", "Μόνο οι δρόμοι που περπατάτε<br>μένουν στον <mark>χάρτη</mark>"),
     "fi": ("Kävellen piirretty kartta", "Vain kävelemäsi tiet<br>jäävät <mark>karttaan</mark>"),
+    "id": ("Peta yang digambar dengan berjalan", "Hanya jalan yang kamu lalui<br>yang tersisa di <mark>peta</mark>"),
 }
 
 # 기기 화면(시뮬레이터 캡처, 가상의 두 달치 산책 기록으로 채움)

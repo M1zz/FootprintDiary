@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>벅뚜벅뚜 (FootprintDiary)</title>
+  <style>
+    :root {
+      --bg: #f7f8fa;
+      --card: #ffffff;
+      --text: #1c1d21;
+      --muted: #6b7280;
+      --accent: #4facfe;
+      --accent2: #00c2a8;
+      --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b;
+        --card: #1f2126;
+        --text: #f2f3f5;
+        --muted: #9ca3af;
+        --border: #2c2f36;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+    .hero {
+      text-align: center;
+      padding: 72px 24px 48px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff;
+    }
+    .hero .emoji { font-size: 64px; line-height: 1; }
+    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
+    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
+    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
+    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      text-decoration: none;
+      color: var(--text);
+      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
+      transition: transform .15s ease, box-shadow .15s ease;
+      display: block;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
+    .card .ico { font-size: 28px; }
+    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
+    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+    .features { margin-top: 40px; }
+    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
+    .features ul { padding-left: 20px; color: var(--muted); }
+    .features li { margin: 8px 0; }
+    .features strong { color: var(--text); }
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
+    footer a { color: var(--accent); text-decoration: none; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/id/">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/FootprintDiary/zh-Hant/">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/FootprintDiary/ru/">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/FootprintDiary/es/">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/FootprintDiary/de/">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/FootprintDiary/fr/">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/FootprintDiary/it/">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/FootprintDiary/pt-BR/">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/FootprintDiary/th/">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/FootprintDiary/vi/">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/FootprintDiary/cs/">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/FootprintDiary/da/">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/FootprintDiary/el/">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/FootprintDiary/fi/">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/FootprintDiary/id/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="index.html" hreflang="id" lang="id" aria-current="true">Bahasa Indonesia</a></nav>
+  <div class="hero">
+    <div class="emoji">👣</div>
+    <h1>벅뚜벅뚜</h1>
+    <p>Peta kosong yang hanya menyimpan tempat yang kamu lalui dengan berjalan kaki</p>
+  </div>
+
+  <div class="wrap">
+    <div class="cards">
+      <a class="card" href="privacy.html">
+        <div class="ico">🔒</div>
+        <h3>Kebijakan Privasi</h3>
+        <p>Lihat data apa yang kami olah dan bagaimana caranya.</p>
+      </a>
+      <a class="card" href="support.html">
+        <div class="ico">💬</div>
+        <h3>Dukungan / Kontak</h3>
+        <p>Bantuan, pertanyaan yang sering diajukan, dan cara menghubungi kami.</p>
+      </a>
+    </div>
+
+    <div class="features">
+      <h2>Apa itu 벅뚜벅뚜?</h2>
+      <p>Dunia sudah digambar oleh peta-peta lain. Peta di 벅뚜벅뚜 dimulai dari kertas yang belum tergambar apa pun
+         dan terisi satu titik demi satu titik, <strong>hanya saat kamu berjalan</strong>.
+         Jalan yang dilalui dengan mobil atau kereta bawah tanah tidak digambar.</p>
+      <ul>
+        <li><strong>Peta yang tumbuh bersama langkahmu</strong> — tempat yang kamu lalui tercap di kertas satu per satu.
+            Jalan yang sering dilalui makin pekat, dan yang tidak dipijak selama tiga bulan memudar menjadi abu-abu</li>
+        <li><strong>Jalan yang kamu gambar</strong> — yang diukur bukan jarak yang ditempuh, melainkan panjang jalan
+            <em>baru</em>. Menyusuri jalan yang sama seratus kali tidak membuat peta bertambah luas</li>
+        <li><strong>Stempel</strong> — berdirilah di suatu tempat dan bubuhkan salah satu dari 212 stempel.
+            Foto papan nama toko dengan kamera, dan papan itu berdiri di petamu</li>
+        <li><strong>Tempat yang dikunjungi dan ingin dikunjungi</strong> — tempat yang belum didatangi tetap berupa stempel bergaris putus-putus
+            dan menjadi tempat yang dikunjungi saat kamu tiba</li>
+        <li><strong>Kompas Perintis</strong> — dari tempatmu berdiri, menunjuk arah mana yang masih putih</li>
+        <li><strong>Film</strong> — ekspor proses petamu digambar sebagai video</li>
+        <li><strong>Hanya di iCloud-mu</strong> — langkah, catatan harian, dan foto tersimpan di iCloud pribadi
+            yang tidak terlihat orang lain. Satu koordinat pun tidak dikirim ke pengembang</li>
+      </ul>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 벅뚜벅뚜 (FootprintDiary) ·
+    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+  </footer>
+</body>
+</html>
