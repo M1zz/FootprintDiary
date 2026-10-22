@@ -575,3 +575,67 @@ Choisissez entre priorité à la précision et priorité à la batterie. Avec la
 Vos enregistrements dans votre iCloud
 Vos pas, tampons, journal et photos sont conservés dans votre iCloud personnel et vous suivent quand vous changez d’appareil.
 Les statistiques d’usage anonymes n’incluent jamais de coordonnées de position, de texte de journal, de noms de lieux ni de photos.
+
+## it
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/it/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/it/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/it/
+
+### 이름
+
+벅뚜벅뚜: la mappa a piedi
+
+### 부제
+
+Conta solo la strada nuova
+
+### 키워드
+
+camminata,passeggiata,trekking,gps,tracker,diario,viaggi,passi,esplorare,timbri,quartiere,città
+
+### 프로모션 텍스트
+
+Una mappa bianca dove i tragitti in auto o in metro non vengono disegnati. Solo i percorsi fatti per la prima volta la ampliano. Dove traccerai oggi una strada nuova?
+
+### 설명
+
+Una mappa che parte da un semplice foglio bianco. Si riempiono, un punto alla volta, solo i luoghi che hai percorso con i tuoi piedi.
+I tragitti in auto o in metro non vengono disegnati, e anche camminando cento volte lo stesso percorso la mappa non cresce. Per ampliarla bisogna prendere strade nuove.
+
+Oggi e i passi passati, in colori diversi
+Dove hai camminato oggi resta impresso in inchiostro rosso, i passi passati in indaco. Più passi da un punto, più si scurisce: il tuo raggio quotidiano si vede da solo.
+I luoghi che non calpesti da più di tre mesi non vengono cancellati, ma sbiadiscono fino al grigio.
+
+Timbri per i luoghi visitati e da visitare
+Timbra dove ti trovi, oppure tieni premuta la mappa per mettere un timbro dove vuoi. Ci sono 212 timbri tra cui scegliere, divisi per categoria.
+Un timbro messo dove non hai mai camminato resta come luogo da visitare e diventa un luogo visitato quando ti avvicini davvero.
+Fotografa l’insegna di un negozio con la fotocamera: lo sfondo viene ritagliato e l’insegna si alza come adesivo solo di quel posto.
+
+Impronte di oggi
+I luoghi in cui ti sei fermato oggi si dispongono in ordine di tempo, con la distanza percorsa tra l’uno e l’altro. Se c’è un timbro dove si sono fermati i tuoi passi, l’app ti chiede se ci sei stato e conta la visita.
+
+Bussola dei pionieri
+Divide l’area intorno a te in otto direzioni e indica quella che hai percorso meno. Usala per scegliere la direzione della prossima passeggiata.
+
+Film e calendario
+Scegli un periodo per guardare, o esportare come video, la tua mappa che si disegna.
+Il calendario disegna, al posto di un numero, la forma del percorso di ogni giorno. Puoi anche tenere un diario quotidiano con testo e foto.
+
+Widget
+La schermata Home mostra la forma e la lunghezza del percorso tracciato oggi, la schermata di blocco la distanza di oggi in una sola riga di numeri.
+
+Modalità di registrazione
+Scegli tra precisione prioritaria e batteria prioritaria. Con la precisione prioritaria, i tuoi passi vengono registrati anche con l’app chiusa.
+
+Le tue registrazioni nel tuo iCloud
+Passi, timbri, diario e foto sono conservati nel tuo iCloud personale e ti seguono quando cambi dispositivo.
+Le statistiche d’uso anonime non includono mai coordinate di posizione, testi del diario, nomi di luoghi o foto.

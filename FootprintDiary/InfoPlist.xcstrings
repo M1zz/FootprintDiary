@@ -56,6 +56,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -113,6 +119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "L’appareil photo sert à garder une photo du lieu et à détourer ce que vous photographiez pour en faire un sticker à poser sur la carte."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa la fotocamera per conservare una foto del luogo e ritagliare ciò che fotografi, così da farne un adesivo da mettere sulla mappa."
           }
         }
       }
@@ -172,6 +184,12 @@
             "state" : "translated",
             "value" : "Pour enregistrer automatiquement vos empreintes à chaque changement de lieu, l’autorisation « Toujours » est nécessaire."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Per registrare automaticamente le tue impronte a ogni cambio di luogo serve il permesso «Sempre»."
+          }
         }
       }
     },
@@ -230,6 +248,12 @@
             "state" : "translated",
             "value" : "L’autorisation de localisation est nécessaire pour enregistrer votre position actuelle comme empreinte sur la carte."
           }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serve il permesso di posizione per registrare la tua posizione attuale come impronta sulla mappa."
+          }
         }
       }
     },
@@ -287,6 +311,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Les données de mouvement servent à vérifier si vous vous êtes déplacé en marchant ou en courant, afin de ne pas enregistrer les trajets en véhicule."
+          }
+        },
+        "it" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa i dati di movimento per capire se ti sei spostato a piedi o correndo, così da non registrare gli spostamenti in veicolo."
           }
         }
       }
