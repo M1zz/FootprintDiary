@@ -80,6 +80,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -161,6 +167,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ใช้กล้องเพื่อบันทึกรูปของสถานที่ และตัดสิ่งที่ถ่ายออกมาทำเป็นสติกเกอร์วางบนแผนที่"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng máy ảnh để lưu ảnh nơi đó và cắt vật bạn chụp thành nhãn dán đặt lên bản đồ."
           }
         }
       }
@@ -244,6 +256,12 @@
             "state" : "translated",
             "value" : "ต้องใช้สิทธิ์ \"เสมอ\" เพื่อบันทึกรอยเท้าอัตโนมัติทุกครั้งที่ย้ายสถานที่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cần quyền \"Luôn luôn\" để tự động ghi dấu chân mỗi khi bạn đổi chỗ."
+          }
         }
       }
     },
@@ -326,6 +344,12 @@
             "state" : "translated",
             "value" : "ต้องใช้สิทธิ์ตำแหน่งเพื่อบันทึกตำแหน่งปัจจุบันเป็นรอยเท้าบนแผนที่"
           }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cần quyền vị trí để ghi vị trí hiện tại của bạn thành dấu chân trên bản đồ."
+          }
         }
       }
     },
@@ -407,6 +431,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "ใช้ข้อมูลการเคลื่อนไหวเพื่อตรวจสอบว่าเดินหรือวิ่ง จะได้ไม่บันทึกการเดินทางด้วยยานพาหนะ"
+          }
+        },
+        "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dùng dữ liệu chuyển động để xác định bạn đi bộ hay chạy, nhằm không ghi lại việc di chuyển bằng phương tiện."
           }
         }
       }

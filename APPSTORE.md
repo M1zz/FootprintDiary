@@ -831,3 +831,67 @@ https://m1zz.github.io/FootprintDiary/th/
 บันทึกของคุณอยู่ใน iCloud ของคุณ
 ก้าวเดิน ตราประทับ ไดอารี่ และรูปภาพถูกเก็บไว้ใน iCloud ส่วนตัวของคุณ และตามคุณไปเมื่อเปลี่ยนเครื่อง
 สถิติการใช้งานแบบไม่ระบุตัวตนไม่มีพิกัดตำแหน่ง ข้อความไดอารี่ ชื่อสถานที่ หรือรูปภาพ
+
+## vi
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/vi/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/vi/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/vi/
+
+### 이름
+
+벅뚜벅뚜: Bản đồ đi bộ
+
+### 부제
+
+Đường mới đến đâu, tô đến đó
+
+### 키워드
+
+đi dạo,leo núi,gps,theo dõi,nhật ký,du lịch,bước chân,khám phá,con dấu,khu phố,thành phố,lộ trình
+
+### 프로모션 텍스트
+
+Bản đồ trắng không vẽ những đoạn đi ô tô hay tàu điện ngầm. Chỉ đường bạn đặt chân lần đầu mới mở rộng nó. Hôm nay bạn sẽ vẽ đường mới về hướng nào?
+
+### 설명
+
+Bản đồ bắt đầu từ một tờ giấy trắng. Chỉ những nơi bạn đã đi qua bằng chính đôi chân mình mới được lấp đầy, từng điểm một.
+Những đoạn đi ô tô hay tàu điện ngầm không được vẽ, và dù đi cùng một con đường cả trăm lần, bản đồ cũng không rộng ra. Muốn mở rộng, bạn phải đi đường mới.
+
+Hôm nay và những bước chân đã qua, phân biệt bằng màu
+Nơi bạn đi hôm nay được in bằng mực đỏ, những bước chân trước đó màu chàm. Chỗ đi qua càng nhiều càng đậm, phạm vi sinh hoạt hằng ngày của bạn tự hiện ra.
+Nơi hơn ba tháng chưa quay lại không bị xóa mà phai dần thành màu xám.
+
+Đóng dấu những nơi đã tới và muốn tới
+Đóng dấu ngay chỗ bạn đứng, hoặc nhấn giữ bản đồ để đóng dấu ở nơi tùy ý. Có 212 con dấu để chọn, chia theo nhóm.
+Con dấu đóng ở nơi bạn chưa từng đi sẽ giữ làm nơi muốn tới, và khi bạn thật sự đến gần thì chuyển thành nơi đã tới.
+Chụp biển hiệu cửa hàng bằng máy ảnh, nền sẽ được cắt đi và biển hiệu dựng lên thành nhãn dán riêng của nơi đó.
+
+Dấu chân hôm nay
+Những nơi bạn đã dừng hôm nay xếp theo thứ tự thời gian, kèm quãng đã đi giữa các nơi. Nếu có con dấu ở chỗ bước chân dừng lại, ứng dụng sẽ hỏi bạn có tới không và đếm lượt ghé.
+
+La bàn tiên phong
+Chia quanh nơi bạn đứng thành tám hướng và chỉ ra hướng bạn đi ít nhất. Hãy dùng khi chọn hướng cho lần đi dạo tiếp theo.
+
+Phim và lịch
+Chọn một khoảng thời gian để xem và xuất thành video quá trình bản đồ của bạn được vẽ ra.
+Lịch không vẽ con số mà vẽ hình dạng đường bạn đã đi trong ngày. Bạn cũng có thể viết nhật ký mỗi ngày bằng chữ và ảnh.
+
+Widget
+Màn hình chính hiển thị hình dạng và độ dài đường đã vẽ hôm nay, còn màn hình khóa hiển thị quãng đường hôm nay trên một dòng số.
+
+Cách ghi
+Chọn giữa ưu tiên chính xác và ưu tiên pin. Khi ưu tiên chính xác, bước chân vẫn được ghi cả lúc ứng dụng đã tắt.
+
+Bản ghi của bạn nằm trong iCloud của bạn
+Bước chân, con dấu, nhật ký và ảnh được lưu trong iCloud cá nhân của bạn và đi theo khi bạn đổi thiết bị.
+Thống kê sử dụng ẩn danh không bao gồm tọa độ vị trí, nội dung nhật ký, tên địa điểm hay ảnh.

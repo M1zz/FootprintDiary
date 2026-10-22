@@ -18,7 +18,7 @@ W, H = 1242, 2688   # 이 계정의 iPhone 제출 규격
 
 # ── 앱마다 고치는 곳 ──────────────────────────────────────────────
 # 앱 언어 → App Store 로케일 (스토어 폴더 이름)
-STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "es": "es-ES", "de": "de-DE", "fr": "fr-FR", "it": "it", "pt-BR": "pt-BR", "ru": "ru", "th": "th"}
+STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "es": "es-ES", "de": "de-DE", "fr": "fr-FR", "it": "it", "pt-BR": "pt-BR", "ru": "ru", "th": "th", "vi": "vi"}
 # 바탕 · 포인트 색 (헤더·검색 결과 그림과 맞춘다)
 BG, ACCENT, INK, SUB = "#F3EFE4", "#B8322A", "#1F3358", "#6B6458"
 # 언어 → [(원본 파일, 레이아웃, 헤드라인, 서브카피)]
@@ -29,6 +29,13 @@ SHOTS = {
         ("03-stamps.png",   "text-bottom", "가본 곳, 가볼 곳에 도장", "212가지 스탬프로 동네를 기록해요"),
         ("04-calendar.png", "flat-rotate", "날마다<br>걸은 모양 그대로", "달력에 숫자 대신 그날의 길이 남아요"),
         ("05-diary.png",    "dark",        "처음 걷는 길이<br>얼마였는지", "같은 길만 걸으면 지도는 자라지 않아요"),
+    ],
+    "vi": [
+        ("01-map.png",      "hero-bleed",  "Bản đồ trắng chỉ giữ lại<br>những bước chân của bạn", "Đường đi bằng ô tô không được vẽ"),
+        ("02-compass.png",  "left-text",   "Hôm nay<br>đi hướng nào?", "La bàn chỉ hướng bạn đi ít nhất"),
+        ("03-stamps.png",   "text-bottom", "Đóng dấu nơi đã tới và muốn tới", "Ghi lại khu phố của bạn với 212 con dấu"),
+        ("04-calendar.png", "flat-rotate", "Mỗi ngày<br>đúng như bạn đã đi", "Lịch giữ lại con đường của ngày đó thay vì con số"),
+        ("05-diary.png",    "dark",        "Bao nhiêu trong đó<br>là đường mới?", "Chỉ đi lại những đường cũ thì bản đồ không lớn lên"),
     ],
     "th": [
         ("01-map.png",      "hero-bleed",  "แผนที่เปล่าที่เก็บไว้<br>เฉพาะก้าวเดินของคุณ", "เส้นทางที่ผ่านด้วยรถจะไม่ถูกวาด"),
