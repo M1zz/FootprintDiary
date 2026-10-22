@@ -50,6 +50,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -101,6 +107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Die Kamera wird genutzt, um ein Foto vom Ort zu sichern und das Fotografierte als Sticker für deine Karte freizustellen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’appareil photo sert à garder une photo du lieu et à détourer ce que vous photographiez pour en faire un sticker à poser sur la carte."
           }
         }
       }
@@ -154,6 +166,12 @@
             "state" : "translated",
             "value" : "Um deine Fußspuren bei jedem Ortswechsel automatisch aufzuzeichnen, ist die Berechtigung „Immer“ nötig."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pour enregistrer automatiquement vos empreintes à chaque changement de lieu, l’autorisation « Toujours » est nécessaire."
+          }
         }
       }
     },
@@ -206,6 +224,12 @@
             "state" : "translated",
             "value" : "Der Standortzugriff wird benötigt, um deinen aktuellen Standort als Fußspur auf der Karte aufzuzeichnen."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’autorisation de localisation est nécessaire pour enregistrer votre position actuelle comme empreinte sur la carte."
+          }
         }
       }
     },
@@ -257,6 +281,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bewegungsdaten werden genutzt, um zu erkennen, ob du zu Fuß oder laufend unterwegs warst, damit Fahrten im Fahrzeug nicht aufgezeichnet werden."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les données de mouvement servent à vérifier si vous vous êtes déplacé en marchant ou en courant, afin de ne pas enregistrer les trajets en véhicule."
           }
         }
       }

@@ -181,6 +181,7 @@
 				"zh-Hant",
 				es,
 				de,
+				fr,
 			);
 			mainGroup = A10000000000000000000003;
 			minimizedProjectReferenceProxies = 1;

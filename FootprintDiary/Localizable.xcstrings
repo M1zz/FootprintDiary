@@ -50,6 +50,12 @@
             "state" : "translated",
             "value" : "%@ · Fußspuren %lld/%lld"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Empreintes %lld/%lld"
+          }
         }
       }
     },
@@ -101,6 +107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ gegangen in %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ parcourus en %@"
           }
         }
       }
@@ -154,6 +166,12 @@
             "state" : "translated",
             "value" : "%@ gegangen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ parcourus"
+          }
         }
       }
     },
@@ -205,6 +223,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ gesammelt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ collecté"
           }
         }
       }
@@ -258,6 +282,12 @@
             "state" : "translated",
             "value" : "Symbol für %@"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbole de %@"
+          }
         }
       }
     },
@@ -309,6 +339,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, %lld Sorten"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld types"
           }
         }
       }
@@ -362,6 +398,12 @@
             "state" : "translated",
             "value" : "%@×"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×%@"
+          }
         }
       }
     },
@@ -413,6 +455,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Im Bereich %@ warst du am wenigsten unterwegs"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "C’est vers %@ que vous avez le moins marché"
           }
         }
       }
@@ -466,6 +514,12 @@
             "state" : "translated",
             "value" : "%lld m entfernt"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "À %lld m"
+          }
         }
       }
     },
@@ -517,6 +571,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Innerhalb von %lld m öffnet sich der Auslöser"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’obturateur s’ouvre à moins de %lld m"
           }
         }
       }
@@ -570,6 +630,12 @@
             "state" : "translated",
             "value" : "%lld Sorten"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld types"
+          }
         }
       }
     },
@@ -621,6 +687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld Orte"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld lieux"
           }
         }
       }
@@ -674,6 +746,12 @@
             "state" : "translated",
             "value" : "%lld Mal"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld fois"
+          }
         }
       }
     },
@@ -725,6 +803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld Mal unterwegs"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld sorties"
           }
         }
       }
@@ -778,6 +862,12 @@
             "state" : "translated",
             "value" : "%lld. Entdeckung"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Découverte n° %lld"
+          }
         }
       }
     },
@@ -829,6 +919,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mit AR hinfinden"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "S’y rendre en RA"
           }
         }
       }
@@ -883,6 +979,12 @@
             "state" : "translated",
             "value" : "Face-ID-Sperre"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verrouillage Face ID"
+          }
         }
       }
     },
@@ -935,6 +1037,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sperre die App mit Face ID oder Touch ID, um deine Wege und dein Tagebuch zu schützen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verrouillez l’app avec Face ID ou Touch ID pour protéger vos lieux et votre journal."
           }
         }
       }
@@ -989,6 +1097,12 @@
             "state" : "translated",
             "value" : "Frag Siri, wie weit du heute gegangen bist."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Demandez à Siri combien vous avez marché aujourd’hui."
+          }
         }
       }
     },
@@ -1041,6 +1155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri und Kurzbefehle"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri et Raccourcis"
           }
         }
       }
@@ -1095,6 +1215,12 @@
             "state" : "translated",
             "value" : "VoiceOver liest alle Knöpfe und Inhalte deiner Karte und Aufzeichnungen vollständig und in der richtigen Reihenfolge vor."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver lit tous les boutons et détails de votre carte et de vos enregistrements, dans le bon ordre."
+          }
         }
       }
     },
@@ -1148,6 +1274,12 @@
             "state" : "translated",
             "value" : "VoiceOver noch angenehmer"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver plus confortable"
+          }
         }
       }
     },
@@ -1199,6 +1331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Keine Stempel zu „%@“ gefunden"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun tampon ne correspond à « %@ »"
           }
         }
       }
@@ -1252,6 +1390,12 @@
             "state" : "translated",
             "value" : "Das war ein Ort, den du besuchen wolltest. Als besucht festhalten?"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous aviez prévu d’aller ici. Le marquer comme visité ?"
+          }
         }
       }
     },
@@ -1303,6 +1447,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noch nicht besucht"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lieu non visité"
           }
         }
       }
@@ -1356,6 +1506,12 @@
             "state" : "translated",
             "value" : "Möchte ich besuchen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "À visiter"
+          }
         }
       }
     },
@@ -1407,6 +1563,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ein Ort, den du als Besuchsziel gestempelt hast"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un lieu tamponné comme lieu à visiter"
           }
         }
       }
@@ -1460,6 +1622,12 @@
             "state" : "translated",
             "value" : "Häufigster Grund: %@ (%lld Mal). %@"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raison la plus fréquente : %@ (%lld fois). %@"
+          }
         }
       }
     },
@@ -1511,6 +1679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategorie"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catégorie"
           }
         }
       }
@@ -1564,6 +1738,12 @@
             "state" : "translated",
             "value" : "Pionierkompass"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Boussole des pionniers"
+          }
         }
       }
     },
@@ -1615,6 +1795,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Überspringen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Passer"
           }
         }
       }
@@ -1668,6 +1854,12 @@
             "state" : "translated",
             "value" : "Wegaufzeichnung"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrement des marches"
+          }
         }
       }
     },
@@ -1719,6 +1911,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Die Wegaufzeichnung ist aus. Auch wenn du gehst, bleibt keine Spur."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "L’enregistrement des marches est désactivé. Même en marchant, aucune trace ne sera gardée."
           }
         }
       }
@@ -1772,6 +1970,12 @@
             "state" : "translated",
             "value" : "Stempel, die du beim Gehen setzt, stapeln sich hier in zeitlicher Reihenfolge.\nOrte, an denen du verweilst, werden auch ohne Stempel von selbst festgehalten."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les tampons posés en marchant s’empilent ici par ordre chronologique.\nLes lieux où vous restez sont gardés tout seuls, sans tampon."
+          }
         }
       }
     },
@@ -1823,6 +2027,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zu Fuß erreichte Orte"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lieux atteints à pied"
           }
         }
       }
@@ -1876,6 +2086,12 @@
             "state" : "translated",
             "value" : "Wenn du zu Fuß ankommst, kannst du dort ein Foto aufnehmen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En arrivant à pied, vous pourrez prendre une photo sur place"
+          }
         }
       }
     },
@@ -1928,6 +2144,12 @@
             "state" : "translated",
             "value" : "Wenn du gegangen bist, aber keine Linie auf der Karte erscheint, findest du hier den Grund."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si vous avez marché mais qu’aucune ligne n’apparaît sur la carte, vous pouvez en voir la raison ici."
+          }
         }
       }
     },
@@ -1979,6 +2201,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beim Gehen stapeln sich die zurückgelegten Wege der Reihe nach."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En marchant, les chemins parcourus s’empilent dans l’ordre."
           }
         }
       }
@@ -2033,6 +2261,12 @@
             "state" : "translated",
             "value" : "Speichere deine Wege und dein Tagebuch in einer Datei und hole sie später zurück."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrez vos chemins et votre journal dans un fichier et rechargez-les plus tard."
+          }
         }
       }
     },
@@ -2084,6 +2318,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Auf der Karte bleiben nur die im gewählten Zeitraum gegangenen Wege und gesetzten Stempel."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seuls les chemins parcourus et les tampons posés pendant la période choisie restent sur la carte."
           }
         }
       }
@@ -2137,6 +2377,12 @@
             "state" : "translated",
             "value" : "Kein Interesse"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas intéressé"
+          }
         }
       }
     },
@@ -2188,6 +2434,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Passt so"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas besoin"
           }
         }
       }
@@ -2241,6 +2493,12 @@
             "state" : "translated",
             "value" : "Zusehen, wie es gezeichnet wird"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir comment elle se dessine"
+          }
         }
       }
     },
@@ -2292,6 +2550,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bildkarte"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carte illustrée"
           }
         }
       }
@@ -2346,6 +2610,12 @@
             "state" : "translated",
             "value" : "Auch bei größerer Schrift werden Bildschirme sauber neu angeordnet, statt abgeschnitten zu werden."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Même avec un texte plus grand, les écrans se réorganisent proprement au lieu d’être coupés."
+          }
         }
       }
     },
@@ -2397,6 +2667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nach Zeitraum ansehen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir par période"
           }
         }
       }
@@ -2450,6 +2726,12 @@
             "state" : "translated",
             "value" : "Aufzeichnungsmodus"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mode d’enregistrement"
+          }
         }
       }
     },
@@ -2501,6 +2783,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aufzeichnungsstatus"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "État de l’enregistrement"
           }
         }
       }
@@ -2554,6 +2842,12 @@
             "state" : "translated",
             "value" : "Aufzeichnungsstatus ansehen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir l’état de l’enregistrement"
+          }
         }
       }
     },
@@ -2605,6 +2899,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Auf das Standardbild zurücksetzen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revenir à l’image par défaut"
           }
         }
       }
@@ -2658,6 +2958,12 @@
             "state" : "translated",
             "value" : "Ausgeschaltete Bildschirme kannst du jederzeit über „Alles im Überblick“ oben öffnen. Stempel- und Einstellungsknopf sind immer sichtbar."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les écrans désactivés restent accessibles à tout moment depuis « Tout voir » ci-dessus. Les boutons tampon et réglages sont toujours visibles."
+          }
         }
       }
     },
@@ -2709,6 +3015,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ende"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fin"
           }
         }
       }
@@ -2762,6 +3074,12 @@
             "state" : "translated",
             "value" : "Später"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus tard"
+          }
         }
       }
     },
@@ -2813,6 +3131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wird nur in deiner persönlichen iCloud gespeichert. Niemand sonst kann es sehen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stocké uniquement dans votre iCloud personnel. Personne d’autre ne peut le voir."
           }
         }
       }
@@ -2867,6 +3191,12 @@
             "state" : "translated",
             "value" : "Alle meine Aufzeichnungen auf einmal löschen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effacer tous mes enregistrements d’un coup"
+          }
         }
       }
     },
@@ -2918,6 +3248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Umriss meiner Gegend"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contour de mon quartier"
           }
         }
       }
@@ -2971,6 +3307,12 @@
             "state" : "translated",
             "value" : "Meine Karte"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ma carte"
+          }
         }
       }
     },
@@ -3022,6 +3364,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Meine Karte öffnen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir ma carte"
           }
         }
       }
@@ -3075,6 +3423,12 @@
             "state" : "translated",
             "value" : "Zusehen, wie deine Karte entsteht"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir votre carte se dessiner"
+          }
         }
       }
     },
@@ -3126,6 +3480,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vorschau, wie deine Karte gezeichnet wird"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aperçu du dessin de votre carte"
           }
         }
       }
@@ -3179,6 +3539,12 @@
             "state" : "translated",
             "value" : "Meine gezeichneten Wege"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les chemins que j’ai dessinés"
+          }
         }
       }
     },
@@ -3230,6 +3596,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Orte, die ich gestempelt habe"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lieux que j’ai tamponnés"
           }
         }
       }
@@ -3283,6 +3655,12 @@
             "state" : "translated",
             "value" : "Tippen, um die Karte durchscheinen zu lassen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez pour voir la carte en transparence"
+          }
         }
       }
     },
@@ -3334,6 +3712,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tippen, um am aktuellen Ort zu stempeln"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez pour tamponner votre position actuelle"
           }
         }
       }
@@ -3387,6 +3771,12 @@
             "state" : "translated",
             "value" : "Bei %lld Orten nachfragen, ob du dort warst"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld lieux à confirmer : y êtes-vous allé ?"
+          }
         }
       }
     },
@@ -3438,6 +3828,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Besuche"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visites"
           }
         }
       }
@@ -3491,6 +3887,12 @@
             "state" : "translated",
             "value" : "War ich"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "J’y suis allé"
+          }
         }
       }
     },
@@ -3542,6 +3944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Erneut tippen, um zum Papier zurückzukehren. Praktisch, um zu sehen, wo du gerade bist."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez de nouveau pour revenir au papier. Pratique pour voir où vous en êtes."
           }
         }
       }
@@ -3595,6 +4003,12 @@
             "state" : "translated",
             "value" : "Neu aufnehmen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reprendre"
+          }
         }
       }
     },
@@ -3646,6 +4060,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ein Ort, den du wieder besucht hast"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un lieu où vous êtes revenu"
           }
         }
       }
@@ -3699,6 +4119,12 @@
             "state" : "translated",
             "value" : "Dieser Ort ist als Stammort gespeichert"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ce lieu est enregistré comme lieu habituel"
+          }
         }
       }
     },
@@ -3750,6 +4176,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Schließen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fermer"
           }
         }
       }
@@ -3804,6 +4236,12 @@
             "state" : "translated",
             "value" : "Auch bei höherem Kontrast oder Schwierigkeiten, Farben zu unterscheiden, erkennst du die Wege und Stempel auf der Karte."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Même avec un contraste renforcé ou une difficulté à distinguer les couleurs, vous reconnaissez les chemins et tampons de la carte."
+          }
         }
       }
     },
@@ -3856,6 +4294,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Die App in mehr Sprachen nutzen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utilisez l’app dans davantage de langues."
           }
         }
       }
@@ -3910,6 +4354,12 @@
             "state" : "translated",
             "value" : "Mehr Sprachen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plus de langues"
+          }
         }
       }
     },
@@ -3961,6 +4411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Etwas hinzufügen (optional)"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter un mot (facultatif)"
           }
         }
       }
@@ -4014,6 +4470,12 @@
             "state" : "translated",
             "value" : "In der Sammlung siehst du die bisher gesammelten Fußspuren"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retrouvez dans la collection les empreintes réunies jusqu’ici"
+          }
         }
       }
     },
@@ -4065,6 +4527,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Das lässt sich nicht rückgängig machen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cette action est irréversible."
           }
         }
       }
@@ -4118,6 +4586,12 @@
             "state" : "translated",
             "value" : "Tippen, um anzuhalten oder fortzusetzen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Touchez pour mettre en pause ou reprendre la lecture"
+          }
         }
       }
     },
@@ -4169,6 +4643,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld Orte besucht"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld lieux visités"
           }
         }
       }
@@ -4222,6 +4702,12 @@
             "state" : "translated",
             "value" : "Es wurde nichts Deutliches gefunden, daher ließ sich der Hintergrund nicht entfernen. Geh näher an das Objekt heran und versuche es noch einmal."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rien de net n’a été trouvé, l’arrière-plan n’a pas pu être effacé. Approchez-vous de l’objet et reprenez la photo."
+          }
         }
       }
     },
@@ -4273,6 +4759,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Letzter Besuch"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dernière visite"
           }
         }
       }
@@ -4326,6 +4818,12 @@
             "state" : "translated",
             "value" : "Tuschekarte"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Carte à l’encre"
+          }
         }
       }
     },
@@ -4377,6 +4875,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notiz"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note"
           }
         }
       }
@@ -4430,6 +4934,12 @@
             "state" : "translated",
             "value" : "Alles im Überblick"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tout voir"
+          }
         }
       }
     },
@@ -4481,6 +4991,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gewässer und Berge werden gesetzt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placement de l’eau et des montagnes"
           }
         }
       }
@@ -4534,6 +5050,12 @@
             "state" : "translated",
             "value" : "Unentdeckt"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non découvert"
+          }
         }
       }
     },
@@ -4585,6 +5107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fußspuren"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empreintes"
           }
         }
       }
@@ -4638,6 +5166,12 @@
             "state" : "translated",
             "value" : "Fußspuren-Zeitraffer"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accéléré des empreintes"
+          }
         }
       }
     },
@@ -4690,6 +5224,12 @@
             "state" : "translated",
             "value" : "Freigelegtes Land %@"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terrain dévoilé : %@"
+          }
         }
       }
     },
@@ -4741,6 +5281,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hintergrundkarte durchscheinen lassen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir la carte en transparence"
           }
         }
       }
@@ -4795,6 +5341,12 @@
             "state" : "translated",
             "value" : "Backup und Export"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sauvegarde et export"
+          }
         }
       }
     },
@@ -4847,6 +5399,12 @@
             "state" : "translated",
             "value" : "Gründe fürs Verwerfen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Raisons de l’écart"
+          }
         }
       }
     },
@@ -4895,6 +5453,12 @@
           }
         },
         "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
+          }
+        },
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Version %@"
@@ -4951,6 +5515,12 @@
             "state" : "translated",
             "value" : "Ansicht"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Affichage"
+          }
         }
       }
     },
@@ -5004,6 +5574,12 @@
             "state" : "translated",
             "value" : "Angenehme Farben und Kontraste"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couleurs et contraste confortables"
+          }
         }
       }
     },
@@ -5055,6 +5631,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Angezeigte Wege"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chemins affichés"
           }
         }
       }
@@ -5108,6 +5690,12 @@
             "state" : "translated",
             "value" : "Ein leeres Blatt weiß allein nicht, was wo ist.\nDein jetziger Standort wird zum **ersten Bezugspunkt**."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une feuille blanche ne peut pas, à elle seule, savoir où est quoi.\nVotre position actuelle devient le **premier point de repère**."
+          }
         }
       }
     },
@@ -5159,6 +5747,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wir beginnen mit einem leeren Blatt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On commence sur une feuille blanche"
           }
         }
       }
@@ -5212,6 +5806,12 @@
             "state" : "translated",
             "value" : "Nutzungsstatistik (Entwickler)"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistiques d’usage (développeur)"
+          }
         }
       }
     },
@@ -5263,6 +5863,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotos"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos"
           }
         }
       }
@@ -5316,6 +5922,12 @@
             "state" : "translated",
             "value" : "Foto löschen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer la photo"
+          }
         }
       }
     },
@@ -5367,6 +5979,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Foto aufnehmen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prendre une photo"
           }
         }
       }
@@ -5420,6 +6038,12 @@
             "state" : "translated",
             "value" : "Foto hinzufügen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter une photo"
+          }
         }
       }
     },
@@ -5471,6 +6095,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Foto wird eingefügt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajout de la photo"
           }
         }
       }
@@ -5524,6 +6154,12 @@
             "state" : "translated",
             "value" : "Das Foto konnte nicht gesichert werden"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Impossible d’enregistrer la photo"
+          }
         }
       }
     },
@@ -5575,6 +6211,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Löschen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer"
           }
         }
       }
@@ -5629,6 +6271,12 @@
             "state" : "translated",
             "value" : "Spaziergang-Erinnerung"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rappel de balade"
+          }
         }
       }
     },
@@ -5680,6 +6328,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld neu erreichte Orte werden auf den Weg gestempelt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld nouveaux lieux atteints sont marqués sur le chemin"
           }
         }
       }
@@ -5733,6 +6387,12 @@
             "state" : "translated",
             "value" : "Neuigkeiten"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nouveautés"
+          }
         }
       }
     },
@@ -5784,6 +6444,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Einstellungen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réglages"
           }
         }
       }
@@ -5837,6 +6503,12 @@
             "state" : "translated",
             "value" : "Aktiviere die Kamera unter Einstellungen > 벅뚜벅뚜."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activez l’appareil photo dans Réglages > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -5888,6 +6560,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Einstellungen öffnen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrir les Réglages"
           }
         }
       }
@@ -5941,6 +6619,12 @@
             "state" : "translated",
             "value" : "Berechtigungen in den Einstellungen aktivieren"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activer les autorisations dans les Réglages"
+          }
         }
       }
     },
@@ -5992,6 +6676,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lässt sich auch in den Einstellungen öffnen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous pouvez aussi l’ouvrir depuis les Réglages"
           }
         }
       }
@@ -6045,6 +6735,12 @@
             "state" : "translated",
             "value" : "Zählung zurücksetzen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réinitialiser le compte"
+          }
         }
       }
     },
@@ -6096,6 +6792,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Die Welt haben andere Karten längst gezeichnet.\nHier bleibt **nur, wo du mit deinen eigenen Füßen warst**."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le monde a déjà été dessiné par d’autres cartes.\nIci ne restent que **les lieux que vous avez foulés de vos propres pieds**."
           }
         }
       }
@@ -6149,6 +6851,12 @@
             "state" : "translated",
             "value" : "Gesammelte Spots"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spots collectés"
+          }
         }
       }
     },
@@ -6200,6 +6908,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stempel"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampon"
           }
         }
       }
@@ -6253,6 +6967,12 @@
             "state" : "translated",
             "value" : "Beginn"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Début"
+          }
         }
       }
     },
@@ -6304,6 +7024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Los geht’s"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Commencer"
           }
         }
       }
@@ -6357,6 +7083,12 @@
             "state" : "translated",
             "value" : "Symbol"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbole"
+          }
         }
       }
     },
@@ -6408,6 +7140,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Symbol vergrößern"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agrandir le symbole"
           }
         }
       }
@@ -6462,6 +7200,12 @@
             "state" : "translated",
             "value" : "Angefangene Tagebucheinträge fortsetzen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reprendre un journal inachevé"
+          }
         }
       }
     },
@@ -6513,6 +7257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wischen blättert wie Karten, doppeltes Tippen vergrößert"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Balayez pour feuilleter comme des cartes, touchez deux fois pour agrandir"
           }
         }
       }
@@ -6566,6 +7316,12 @@
             "state" : "translated",
             "value" : "Nein"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Non"
+          }
         }
       }
     },
@@ -6614,6 +7370,12 @@
           }
         },
         "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -6670,6 +7432,12 @@
             "state" : "translated",
             "value" : "Noch nicht"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas encore"
+          }
         }
       }
     },
@@ -6721,6 +7489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noch nicht besucht"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas encore visité"
           }
         }
       }
@@ -6774,6 +7548,12 @@
             "state" : "translated",
             "value" : "Du warst noch nicht hier. Der Ort bleibt als „Möchte ich besuchen“ erhalten und wird zum besuchten Ort, sobald du ihn erreichst."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous n’y êtes pas encore allé. Il reste dans « À visiter » et devient un lieu visité quand vous y arrivez."
+          }
         }
       }
     },
@@ -6825,6 +7605,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Noch keine verworfenen Punkte"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun point écarté pour l’instant"
           }
         }
       }
@@ -6878,6 +7664,12 @@
             "state" : "translated",
             "value" : "Noch nicht"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pas encore"
+          }
         }
       }
     },
@@ -6929,6 +7721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hinweise"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aide"
           }
         }
       }
@@ -6983,6 +7781,12 @@
             "state" : "translated",
             "value" : "Die App lässt sich auch auf Englisch nutzen."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous pouvez aussi utiliser l’app en anglais."
+          }
         }
       }
     },
@@ -7034,6 +7838,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bitte öffne die App einmal"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ouvrez l’app une fois"
           }
         }
       }
@@ -7087,6 +7897,12 @@
             "state" : "translated",
             "value" : "Welcher Tag"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quel jour"
+          }
         }
       }
     },
@@ -7138,6 +7954,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "So oder so werden alle empfangenen Standorte gespeichert. Nur Punkte mit geringer Genauigkeit werden nicht auf der Karte gezeichnet."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dans les deux cas, toutes les positions reçues sont enregistrées. Seuls les points peu précis ne sont pas dessinés sur la carte."
           }
         }
       }
@@ -7191,6 +8013,12 @@
             "state" : "translated",
             "value" : "Es wird nur anonym gezählt, welche Bildschirme genutzt werden. Wo du gegangen bist und was du ins Tagebuch schreibst, wird nicht gesendet."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seuls les écrans utilisés sont comptés, de façon anonyme. Les lieux où vous marchez et le texte de votre journal ne sont pas envoyés."
+          }
         }
       }
     },
@@ -7242,6 +8070,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Du warst hier %@"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vous êtes resté ici %@"
           }
         }
       }
@@ -7295,6 +8129,12 @@
             "state" : "translated",
             "value" : "Hier festhalten"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Garder cet endroit"
+          }
         }
       }
     },
@@ -7346,6 +8186,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hier festhalten"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marquer ici"
           }
         }
       }
@@ -7399,6 +8245,12 @@
             "state" : "translated",
             "value" : "Soll dieser Ort lieber nicht aufgezeichnet werden?"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ne pas enregistrer cet endroit, ça vous va ?"
+          }
         }
       }
     },
@@ -7450,6 +8302,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wo war das hier?"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "C’était où, ici ?"
           }
         }
       }
@@ -7503,6 +8361,12 @@
             "state" : "translated",
             "value" : "Als Video exportieren"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exporter en vidéo"
+          }
         }
       }
     },
@@ -7554,6 +8418,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Video wird erstellt %lld%%"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Création de la vidéo %lld %%"
           }
         }
       }
@@ -7608,6 +8478,12 @@
             "state" : "translated",
             "value" : "Englisch-Unterstützung"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prise en charge de l’anglais"
+          }
         }
       }
     },
@@ -7659,6 +8535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "z. B. Zuhause, Arbeit, Stammcafé"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ex. : maison, travail, café habituel"
           }
         }
       }
@@ -7712,6 +8594,12 @@
             "state" : "translated",
             "value" : "Heute %@"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aujourd’hui %@"
+          }
         }
       }
     },
@@ -7763,6 +8651,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heute gezogene Wege"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Le chemin d’aujourd’hui"
           }
         }
       }
@@ -7816,6 +8710,12 @@
             "state" : "translated",
             "value" : "Ein Foto wurde dem heutigen Tagebuch hinzugefügt"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Une photo a été ajoutée au journal d’aujourd’hui"
+          }
         }
       }
     },
@@ -7867,6 +8767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heute abspielen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lire aujourd’hui"
           }
         }
       }
@@ -7920,6 +8826,12 @@
             "state" : "translated",
             "value" : "Heute gibt es noch keine besuchten Orte"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun lieu visité pour l’instant aujourd’hui"
+          }
         }
       }
     },
@@ -7971,6 +8883,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heute gab es noch keinen Aufenthalt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun arrêt pour l’instant aujourd’hui"
           }
         }
       }
@@ -8024,6 +8942,12 @@
             "state" : "translated",
             "value" : "Wo warst du heute unterwegs?"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Où avez-vous exploré aujourd’hui ?"
+          }
         }
       }
     },
@@ -8075,6 +8999,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Heutige Fußspuren"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empreintes du jour"
           }
         }
       }
@@ -8128,6 +9058,12 @@
             "state" : "translated",
             "value" : "Heutige Entdeckungen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exploration du jour"
+          }
         }
       }
     },
@@ -8179,6 +9115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fertig"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
           }
         }
       }
@@ -8233,6 +9175,12 @@
             "state" : "translated",
             "value" : "Bewegung reduzieren"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réduire les animations"
+          }
         }
       }
     },
@@ -8285,6 +9233,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mit „Bewegung reduzieren“ werden Karte und Bildschirmeffekte ruhiger."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avec Réduire les animations, la carte et les effets d’écran deviennent plus calmes."
           }
         }
       }
@@ -8339,6 +9293,12 @@
             "state" : "translated",
             "value" : "Auf Wunsch kannst du in der App alle gegangenen Wege und dein Tagebuch löschen."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si vous le souhaitez, vous pouvez effacer dans l’app tous vos chemins et votre journal."
+          }
         }
       }
     },
@@ -8390,6 +9350,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stellst du den Standort auf „Immer“ und aktivierst Bewegung & Fitness, wird auch aufgezeichnet, ohne dass du die App öffnest."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si la localisation est sur « Toujours » et que Mouvement et forme est activé, vos marches sont enregistrées sans ouvrir l’app."
           }
         }
       }
@@ -8443,6 +9409,12 @@
             "state" : "translated",
             "value" : "In diesem Zeitraum gibt es keine Fußspuren"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune empreinte sur cette période"
+          }
         }
       }
     },
@@ -8494,6 +9466,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diesen Zeitraum ansehen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir cette période"
           }
         }
       }
@@ -8547,6 +9525,12 @@
             "state" : "translated",
             "value" : "An diesem Tag fotografierte Orte"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lieux photographiés ce jour-là"
+          }
         }
       }
     },
@@ -8598,6 +9582,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "An diesem Tag wurden keine Schritte aufgezeichnet"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucun pas enregistré ce jour-là"
           }
         }
       }
@@ -8651,6 +9641,12 @@
             "state" : "translated",
             "value" : "An diesem Tag gibt es keine Fußspuren"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aucune empreinte ce jour-là"
+          }
         }
       }
     },
@@ -8702,6 +9698,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Diesen Stempel löschen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Supprimer ce tampon"
           }
         }
       }
@@ -8755,6 +9757,12 @@
             "state" : "translated",
             "value" : "Dieses Symbol verwenden"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utiliser ce symbole"
+          }
         }
       }
     },
@@ -8806,6 +9814,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fußspuren an diesem Ort löschen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effacer les empreintes de ce lieu"
           }
         }
       }
@@ -8859,6 +9873,12 @@
             "state" : "translated",
             "value" : "Name dieses Ortes (z. B. Arbeit, Stammcafé)"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom de ce lieu (ex. : travail, café habituel)"
+          }
         }
       }
     },
@@ -8910,6 +9930,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Setze den ersten Stempel auf dieses Blatt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Posez le premier tampon sur cette feuille"
           }
         }
       }
@@ -8963,6 +9989,12 @@
             "state" : "translated",
             "value" : "Name"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nom"
+          }
         }
       }
     },
@@ -9014,6 +10046,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Namen vergeben"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Donner un nom"
           }
         }
       }
@@ -9067,6 +10105,12 @@
             "state" : "translated",
             "value" : "Bild hinzufügen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajouter une image"
+          }
         }
       }
     },
@@ -9119,6 +10163,12 @@
             "state" : "translated",
             "value" : "Jetzt geh los"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "À vous de marcher maintenant"
+          }
         }
       }
     },
@@ -9170,6 +10220,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jetzt geh los.\nDie Orte, an denen du vorbeikommst, werden Punkt für Punkt auf dieses Blatt gestempelt."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "À vous de marcher maintenant.\nLes lieux où vous passez se marquent sur cette feuille, un point après l’autre."
           }
         }
       }
@@ -9224,6 +10280,12 @@
             "state" : "translated",
             "value" : "Wenn die App beim Schreiben des Tagebuchs beendet wird, bleibt das Geschriebene erhalten."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si l’app se ferme pendant que vous écrivez votre journal, ce que vous aviez écrit est conservé."
+          }
         }
       }
     },
@@ -9275,6 +10337,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tagebuch"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journal"
           }
         }
       }
@@ -9328,6 +10396,12 @@
             "state" : "translated",
             "value" : "Wenn du an einem Ort ankommst, den du oft besuchst, **stempel dort noch einmal**.\nMit zwei Bezugspunkten findet auch ein leeres Blatt seine Richtung."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quand vous **arrivez dans un lieu que vous fréquentez, tamponnez-y une deuxième fois**.\nAvec deux repères, même une feuille blanche trouve son orientation."
+          }
         }
       }
     },
@@ -9379,6 +10453,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Versuche es gleich noch einmal oder halte die Karte gedrückt, um an einer beliebigen Stelle zu stempeln."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Réessayez dans un instant, ou appuyez longuement sur la carte pour tamponner où vous voulez."
           }
         }
       }
@@ -9432,6 +10512,12 @@
             "state" : "translated",
             "value" : "Sichern"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enregistrer"
+          }
         }
       }
     },
@@ -9483,6 +10569,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zurück zum gesamten Zeitraum"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Revenir à toute la période"
           }
         }
       }
@@ -9536,6 +10628,12 @@
             "state" : "translated",
             "value" : "Punkte zählen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compte des points"
+          }
         }
       }
     },
@@ -9587,6 +10685,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Auch Punkte mit zu geringer Genauigkeit werden gespeichert. Sie werden derzeit nicht auf der Karte gezeichnet, können aber genutzt werden, sobald die Korrektur besser wird."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les points trop imprécis sont tout de même enregistrés. Ils ne sont pas dessinés sur la carte pour l’instant, mais pourront servir quand la correction s’améliorera."
           }
         }
       }
@@ -9640,6 +10744,12 @@
             "state" : "translated",
             "value" : "Aktueller Status"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "État actuel"
+          }
         }
       }
     },
@@ -9691,6 +10801,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dein Standort wird gesucht"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recherche de votre position"
           }
         }
       }
@@ -9744,6 +10860,12 @@
             "state" : "translated",
             "value" : "Aktuellen Ort festhalten"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marquer cet endroit"
+          }
         }
       }
     },
@@ -9795,6 +10917,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Am aktuellen Ort stempeln"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poser un tampon à votre position"
           }
         }
       }
@@ -9848,6 +10976,12 @@
             "state" : "translated",
             "value" : "Hier stempeln"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamponner ici"
+          }
         }
       }
     },
@@ -9899,6 +11033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Die Orte, an denen du vorbeikommst, werden Punkt für Punkt auf dieses Blatt gestempelt.\nWege mit Auto oder U-Bahn werden nicht gezeichnet."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les lieux où vous passez se marquent sur cette feuille, un point après l’autre.\nLes chemins parcourus en voiture ou en métro ne sont pas dessinés."
           }
         }
       }
@@ -9952,6 +11092,12 @@
             "state" : "translated",
             "value" : "Kartenknöpfe in den Einstellungen wählen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisir les boutons de la carte dans les Réglages"
+          }
         }
       }
     },
@@ -10003,6 +11149,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kartenstil"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Style de carte"
           }
         }
       }
@@ -10056,6 +11208,12 @@
             "state" : "translated",
             "value" : "Kartenmaßstab. Ein Balken entspricht %@"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Échelle de la carte. Une barre équivaut à %@"
+          }
         }
       }
     },
@@ -10107,6 +11265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wähle, welche Knöpfe auf der Karte schweben, und öffne ausgeschaltete Bildschirme direkt in den Einstellungen."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez les boutons qui flottent sur la carte et ouvrez directement depuis les Réglages les écrans désactivés."
           }
         }
       }
@@ -10160,6 +11324,12 @@
             "state" : "translated",
             "value" : "Orte, die du im Voraus auf der Karte gestempelt hast. Wenn du sie erreichst, werden sie zu besuchten Orten."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lieux tamponnés à l’avance sur la carte. En y arrivant, ils deviennent des lieux visités."
+          }
         }
       }
     },
@@ -10211,6 +11381,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Auf der Karte anzeigen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afficher sur la carte"
           }
         }
       }
@@ -10264,6 +11440,12 @@
             "state" : "translated",
             "value" : "Auf der Karte ansehen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voir sur la carte"
+          }
         }
       }
     },
@@ -10315,6 +11497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "So sieht es auf der Karte aus"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voilà ce que ça donne sur la carte"
           }
         }
       }
@@ -10368,6 +11556,12 @@
             "state" : "translated",
             "value" : "Löschen"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Effacer"
+          }
         }
       }
     },
@@ -10419,6 +11613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Support"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Assistance"
           }
         }
       }
@@ -10472,6 +11672,12 @@
             "state" : "translated",
             "value" : "Wähle etwas als Bezugspunkt, zum Beispiel Zuhause oder Arbeit."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choisissez un repère possible, comme la maison ou le travail."
+          }
         }
       }
     },
@@ -10523,6 +11729,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aufnehmen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Capturer"
           }
         }
       }
@@ -10576,6 +11788,12 @@
             "state" : "translated",
             "value" : "Gestempelt am"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamponné le"
+          }
         }
       }
     },
@@ -10627,6 +11845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gestempelt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tamponné !"
           }
         }
       }
@@ -10680,6 +11904,12 @@
             "state" : "translated",
             "value" : "Wege, die du mit dem Auto oder der U-Bahn zurücklegst, werden nicht gezeichnet.\nNur beim Gehen entsteht Punkt für Punkt."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Les chemins parcourus en voiture ou en métro ne sont pas dessinés.\nSeule la marche fait apparaître un point après l’autre."
+          }
         }
       }
     },
@@ -10731,6 +11961,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nur was im Rahmen liegt, bleibt; der Hintergrund wird entfernt"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seul ce qui est dans le cadre est conservé ; l’arrière-plan est effacé"
           }
         }
       }
@@ -10784,6 +12020,12 @@
             "state" : "translated",
             "value" : "Erster"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Première"
+          }
         }
       }
     },
@@ -10835,6 +12077,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zum ersten Mal gegangene Wege"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chemins parcourus pour la première fois"
           }
         }
       }
@@ -10888,6 +12136,12 @@
             "state" : "translated",
             "value" : "Du betrittst diesen Ort zum ersten Mal"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "C’est un lieu que vous foulez pour la première fois"
+          }
         }
       }
     },
@@ -10939,6 +12193,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Abbrechen"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuler"
           }
         }
       }
@@ -10992,6 +12252,12 @@
             "state" : "translated",
             "value" : "Einschalten"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activer"
+          }
         }
       }
     },
@@ -11043,6 +12309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vergrößern"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Agrandir"
           }
         }
       }
@@ -11097,6 +12369,12 @@
             "state" : "translated",
             "value" : "Bildschirme für große Schrift"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écrans adaptés aux grands textes"
+          }
         }
       }
     },
@@ -11148,6 +12426,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zeitraffer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accéléré"
           }
         }
       }
@@ -11201,6 +12485,12 @@
             "state" : "translated",
             "value" : "Entdecken"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorer"
+          }
         }
       }
     },
@@ -11253,6 +12543,12 @@
             "state" : "translated",
             "value" : "Entdeckerprotokoll"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journal d’exploration"
+          }
         }
       }
     },
@@ -11304,6 +12600,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Entdeckertagebuch"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journal d’exploration"
           }
         }
       }
@@ -11358,6 +12660,12 @@
             "state" : "translated",
             "value" : "Faltbares iPhone"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Écran d’iPhone pliant"
+          }
         }
       }
     },
@@ -11411,6 +12719,12 @@
             "state" : "translated",
             "value" : "Auf einem faltbaren iPhone siehst du Karte und Aufzeichnungen in zwei Bereichen nebeneinander."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sur un iPhone pliant, affichez la carte et les enregistrements en deux volets."
+          }
         }
       }
     },
@@ -11462,6 +12776,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tages-Zeitraffer"
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Accéléré de la journée"
           }
         }
       }
@@ -11516,6 +12836,12 @@
             "state" : "translated",
             "value" : "Am Ende des Tages erhältst du eine Mitteilung über den Weg, den du heute gegangen bist."
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En fin de journée, une notification vous rappelle le chemin parcouru aujourd’hui."
+          }
         }
       }
     },
@@ -11567,6 +12893,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bleibst du länger als %lld Minuten an einem Ort,\nerscheint er in den heutigen Fußspuren."
+          }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si vous restez plus de %lld minutes au même endroit,\nil apparaît dans les empreintes du jour."
           }
         }
       }
@@ -11620,6 +12952,12 @@
             "state" : "translated",
             "value" : "Dein Standort wurde noch nicht gefunden"
           }
+        },
+        "fr" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Votre position n’a pas encore été trouvée"
+          }
         }
       }
     },
@@ -11668,6 +13006,12 @@
           }
         },
         "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "fr" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"

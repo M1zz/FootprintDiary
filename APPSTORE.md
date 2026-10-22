@@ -511,3 +511,67 @@ Du kannst zwischen Genauigkeit zuerst und Akku zuerst wählen. Bei Genauigkeit z
 Deine Aufzeichnungen in deiner iCloud
 Schritte, Stempel, Tagebuch und Fotos liegen in deiner persönlichen iCloud und folgen dir beim Gerätewechsel.
 Die anonyme Nutzungsstatistik enthält keine Standortkoordinaten, keine Tagebuchtexte, keine Ortsnamen und keine Fotos.
+
+## fr
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/fr/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/fr/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/fr/
+
+### 이름
+
+벅뚜벅뚜 : carte à pied
+
+### 부제
+
+Chaque nouveau chemin compte
+
+### 키워드
+
+randonnée,balade,gps,traceur,carnet,voyage,pas,exploration,tampons,quartier,ville,itinéraire,sentier
+
+### 프로모션 텍스트
+
+Une carte blanche où les trajets en voiture ou en métro ne se dessinent pas. Seuls les chemins foulés pour la première fois l’agrandissent. Où irez-vous aujourd’hui ?
+
+### 설명
+
+Une carte qui commence sur une simple feuille blanche. Seuls les lieux que vous avez parcourus de vos propres pieds se remplissent, un point après l’autre.
+Les trajets en voiture ou en métro ne sont pas dessinés, et même si vous refaites cent fois le même chemin, la carte ne s’agrandit pas. Pour l’agrandir, il faut prendre de nouveaux chemins.
+
+Aujourd’hui et vos pas passés, en couleurs différentes
+Ce que vous avez marché aujourd’hui est imprimé à l’encre rouge, vos pas passés en indigo. Plus vous passez par un endroit, plus il fonce : votre rayon de vie quotidienne se dessine tout seul.
+Les lieux que vous n’avez pas refoulés depuis plus de trois mois ne sont pas effacés : ils pâlissent jusqu’au gris.
+
+Des tampons pour les lieux visités et à visiter
+Tamponnez là où vous vous trouvez, ou appuyez longuement sur la carte pour poser un tampon où vous voulez. 212 tampons au choix, classés par catégorie.
+Un tampon posé là où vous n’avez jamais marché reste comme lieu à visiter, puis devient un lieu visité quand vous en approchez vraiment.
+Photographiez l’enseigne d’un commerce avec l’appareil photo : l’arrière-plan est détouré et elle se dresse comme un sticker propre à cet endroit.
+
+Empreintes du jour
+Les lieux où vous vous êtes arrêté aujourd’hui s’alignent par ordre chronologique, avec la distance parcourue entre eux. Si un tampon se trouve là où vos pas se sont arrêtés, l’app vous demande si vous y êtes allé et compte la visite.
+
+Boussole des pionniers
+Elle divise les environs de votre position en huit directions et indique celle que vous avez le moins parcourue. Utilisez-la pour choisir la direction de votre prochaine balade.
+
+Film et calendrier
+Choisissez une période pour regarder, sous forme de vidéo exportable, votre carte se dessiner.
+Le calendrier dessine, à la place d’un chiffre, la forme de ce que vous avez marché chaque jour. Vous pouvez aussi tenir un journal quotidien avec texte et photos.
+
+Widgets
+L’écran d’accueil montre la forme et la longueur du chemin tracé aujourd’hui, l’écran verrouillé la distance du jour en une seule ligne de chiffres.
+
+Mode d’enregistrement
+Choisissez entre priorité à la précision et priorité à la batterie. Avec la priorité à la précision, vos pas sont enregistrés même quand l’app est fermée.
+
+Vos enregistrements dans votre iCloud
+Vos pas, tampons, journal et photos sont conservés dans votre iCloud personnel et vous suivent quand vous changez d’appareil.
+Les statistiques d’usage anonymes n’incluent jamais de coordonnées de position, de texte de journal, de noms de lieux ni de photos.
