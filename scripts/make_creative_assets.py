@@ -47,6 +47,7 @@ SEARCH = {
     "th": ("บันทึกการเดิน", "แผนที่ที่โตขึ้น<br>ตามทุก<mark>ก้าว</mark>", "กว้างขึ้นเมื่อเดินทางที่ไม่เคยเดินเท่านั้น"),
     "vi": ("nhật ký đi bộ", "Bản đồ lớn dần<br>theo từng <mark>bước chân</mark>", "Chỉ rộng ra khi bạn đi đường chưa từng đi"),
     "cs": ("záznam procházek", "Mapa, která roste<br>s každým <mark>krokem</mark>", "Rozšíří se jen cestami, kudy jsi ještě nešel"),
+    "da": ("gåture log", "Et kort, der vokser<br>for hvert <mark>skridt</mark>", "Det udvides kun på veje, du aldrig har gået"),
 }
 
 # 헤더: 처음 온 사람에게 한 가지 약속. 내 발로 걸은 자리만 지도에 남는다.
@@ -66,6 +67,7 @@ HEADER = {
     "th": ("แผนที่ที่เดินวาด", "มีเพียงทางที่เดินผ่านเท่านั้น<br>ที่อยู่บน<mark>แผนที่</mark>"),
     "vi": ("Bản đồ vẽ bằng đôi chân", "Chỉ những con đường bạn đã đi<br>mới còn trên <mark>bản đồ</mark>"),
     "cs": ("Mapa nakreslená chůzí", "Na <mark>mapě</mark> zůstanou jen cesty,<br>kudy jsi šel"),
+    "da": ("Et kort tegnet til fods", "Kun de veje, du går,<br>bliver på <mark>kortet</mark>"),
 }
 
 # 기기 화면(시뮬레이터 캡처, 가상의 두 달치 산책 기록으로 채움)

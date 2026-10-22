@@ -959,3 +959,67 @@ Vybírej mezi přesností a šetřením baterie. Při přednosti přesnosti se k
 Tvé záznamy v tvém iCloudu
 Kroky, razítka, deník a fotky jsou uložené v tvém osobním iCloudu a při výměně zařízení jdou s tebou.
 Anonymní statistiky používání nikdy neobsahují souřadnice polohy, text deníku, názvy míst ani fotky.
+
+## da
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/da/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/da/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/da/
+
+### 이름
+
+벅뚜벅뚜: Kort af dine skridt
+
+### 부제
+
+Kun nye veje farves
+
+### 키워드
+
+gåtur,vandring,gps,tracker,dagbog,rejse,skridt,udforsk,stempler,kvarter,by,rute,fodspor,motion
+
+### 프로모션 텍스트
+
+Et tomt kort, hvor ture i bil eller metro aldrig tegnes. Kun veje, du går for første gang, gør det større. Hvilken retning tegner du en ny vej i i dag?
+
+### 설명
+
+Et kort, der begynder som et blankt stykke papir. Kun de steder, du har gået med dine egne fødder, udfyldes, et punkt ad gangen.
+Veje, du kører i bil eller metro, tegnes ikke, og selv om du går samme vej hundrede gange, vokser kortet ikke. For at udvide det må du tage nye veje.
+
+I dag og tidligere skridt i hver sin farve
+Hvor du gik i dag, stemples med rødt blæk, og tidligere skridt med indigo. Jo oftere du kommer forbi et sted, jo mørkere bliver det, så din daglige radius viser sig af sig selv.
+Steder, du ikke har betrådt i over tre måneder, slettes ikke, men falmer til grå.
+
+Stempler til besøgte steder og steder, du vil besøge
+Stemple, hvor du står, eller tryk og hold på kortet for at sætte et stempel, hvor du vil. Der er 212 stempler at vælge imellem, sorteret efter kategori.
+Et stempel sat et sted, du aldrig har gået, bliver stående som et sted, du vil besøge, og bliver til et besøgt sted, når du virkelig kommer i nærheden.
+Fotografér et butiksskilt med kameraet, så frilægges motivet, og skiltet rejser sig som et klistermærke, der kun hører til det sted.
+
+Dagens fodspor
+De steder, du har holdt stille i dag, stilles op i tidsrækkefølge sammen med, hvor langt du gik imellem dem. Hvis der er et stempel, hvor dine skridt standsede, spørger appen, om du var der, og tæller besøget med.
+
+Pionerkompas
+Deler området omkring dig i otte retninger og peger på den, du har gået mindst i. Brug det, når du skal vælge retning på din næste gåtur.
+
+Film og kalender
+Vælg en periode, og se dit kort blive tegnet som en video, du kan eksportere.
+Kalenderen tegner i stedet for et tal formen på dagens tur. Du kan også føre en daglig dagbog med tekst og fotos.
+
+Widgets
+Hjemmeskærmen viser formen og længden på den vej, du tegnede i dag, og låseskærmen viser dagens distance på én linje med tal.
+
+Registreringsmåde
+Vælg mellem nøjagtighed først og batteri først. Med nøjagtighed først registreres dine skridt, selv når appen er lukket.
+
+Dine registreringer i din iCloud
+Skridt, stempler, dagbog og fotos gemmes i din personlige iCloud og følger med, når du skifter enhed.
+Anonym brugsstatistik indeholder aldrig positionskoordinater, dagbogstekst, stednavne eller fotos.

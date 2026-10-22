@@ -92,6 +92,12 @@
             "state" : "translated",
             "value" : "%@ · Stopy %lld/%lld"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Fodspor %lld/%lld"
+          }
         }
       }
     },
@@ -185,6 +191,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ušel jsi %@ za %@"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gik %@ på %@"
           }
         }
       }
@@ -280,6 +292,12 @@
             "state" : "translated",
             "value" : "Ušel jsi %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gik %@"
+          }
         }
       }
     },
@@ -374,6 +392,12 @@
             "state" : "translated",
             "value" : "Nasbíráno: %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ samlet"
+          }
         }
       }
     },
@@ -464,6 +488,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol: %@"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Symbol: %@"
@@ -562,6 +592,12 @@
             "state" : "translated",
             "value" : "%@, druhů: %lld"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld slags"
+          }
         }
       }
     },
@@ -652,6 +688,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@×"
@@ -750,6 +792,12 @@
             "state" : "translated",
             "value" : "Směrem %@ jsi chodil nejméně"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I retning %@ har du gået mindst"
+          }
         }
       }
     },
@@ -843,6 +891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vzdálenost %lld m"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m væk"
           }
         }
       }
@@ -938,6 +992,12 @@
             "state" : "translated",
             "value" : "Do %lld m se otevře závěrka"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inden for %lld m åbner lukkeren"
+          }
         }
       }
     },
@@ -1031,6 +1091,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Druhů: %lld"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld slags"
           }
         }
       }
@@ -1126,6 +1192,12 @@
             "state" : "translated",
             "value" : "Míst: %lld"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld steder"
+          }
         }
       }
     },
@@ -1219,6 +1291,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld×"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld gange"
           }
         }
       }
@@ -1314,6 +1392,12 @@
             "state" : "translated",
             "value" : "Vyšel jsi %lld×"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gik ud %lld gange"
+          }
         }
       }
     },
@@ -1408,6 +1492,12 @@
             "state" : "translated",
             "value" : "%lld. objev"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opdagelse nr. %lld"
+          }
         }
       }
     },
@@ -1501,6 +1591,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dojít s AR"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find vej med AR"
           }
         }
       }
@@ -1597,6 +1693,12 @@
             "state" : "translated",
             "value" : "Zámek Face ID"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID-lås"
+          }
         }
       }
     },
@@ -1691,6 +1793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zamkni aplikaci pomocí Face ID nebo Touch ID a ochraň, kudy jsi chodil, i svůj deník."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås appen med Face ID eller Touch ID for at beskytte, hvor du har gået, og din dagbog."
           }
         }
       }
@@ -1787,6 +1895,12 @@
             "state" : "translated",
             "value" : "Zeptej se Siri, kolik jsi dnes ušel."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spørg Siri, hvor langt du har gået i dag."
+          }
         }
       }
     },
@@ -1881,6 +1995,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri a Zkratky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri og Genveje"
           }
         }
       }
@@ -1977,6 +2097,12 @@
             "state" : "translated",
             "value" : "VoiceOver přečte všechna tlačítka a podrobnosti mapy i záznamů, a to ve správném pořadí."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver læser alle knapper og detaljer på dit kort og dine registreringer op i den rigtige rækkefølge."
+          }
         }
       }
     },
@@ -2072,6 +2198,12 @@
             "state" : "translated",
             "value" : "Pohodlnější VoiceOver"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bedre VoiceOver"
+          }
         }
       }
     },
@@ -2165,6 +2297,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Žádná razítka neodpovídají „%@“"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingen stempler matcher „%@“"
           }
         }
       }
@@ -2260,6 +2398,12 @@
             "state" : "translated",
             "value" : "Chtěl jsi sem zajít. Označit jako navštívené?"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det var et sted, du ville hen. Skal det gemmes som besøgt?"
+          }
         }
       }
     },
@@ -2353,6 +2497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zatím nenavštíveno"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke besøgt endnu"
           }
         }
       }
@@ -2448,6 +2598,12 @@
             "state" : "translated",
             "value" : "Chci navštívit"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vil besøge"
+          }
         }
       }
     },
@@ -2541,6 +2697,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Místo označené razítkem jako cíl návštěvy"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Et sted, du stemplede som besøgsmål"
           }
         }
       }
@@ -2636,6 +2798,12 @@
             "state" : "translated",
             "value" : "Nejčastější důvod: %@ (%lld×). %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hyppigste årsag: %@ (%lld gange). %@"
+          }
         }
       }
     },
@@ -2729,6 +2897,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategorie"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori"
           }
         }
       }
@@ -2824,6 +2998,12 @@
             "state" : "translated",
             "value" : "Kompas průkopníka"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pionerkompas"
+          }
         }
       }
     },
@@ -2917,6 +3097,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přeskočit"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spring over"
           }
         }
       }
@@ -3012,6 +3198,12 @@
             "state" : "translated",
             "value" : "Záznam chůze"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gangregistrering"
+          }
         }
       }
     },
@@ -3105,6 +3297,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Záznam chůze je vypnutý. I když půjdeš, žádná stopa nezůstane."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gangregistrering er slået fra. Selv hvis du går, efterlades der intet spor."
           }
         }
       }
@@ -3200,6 +3398,12 @@
             "state" : "translated",
             "value" : "Razítka otištěná při chůzi se tu skládají v pořadí času.\nMísta, kde se zdržíš, se uloží sama, i bez razítka."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempler, du sætter, mens du går, hober sig op her i tidsrækkefølge.\nSteder, hvor du holder pause, gemmes af sig selv uden stempel."
+          }
         }
       }
     },
@@ -3293,6 +3497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Místa, kam jsi došel pěšky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steder nået til fods"
           }
         }
       }
@@ -3388,6 +3598,12 @@
             "state" : "translated",
             "value" : "Když dojdeš pěšky, můžeš tam pořídit fotku"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når du når frem til fods, kan du tage et foto på stedet"
+          }
         }
       }
     },
@@ -3482,6 +3698,12 @@
             "state" : "translated",
             "value" : "Pokud jsi šel, ale v mapě se nevykreslila čára, důvod najdeš tady."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis du gik, men der ikke kom en streg på kortet, kan du se årsagen her."
+          }
         }
       }
     },
@@ -3575,6 +3797,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jak jdeš, projité cesty se vrství v pořadí."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når du går, lægger de gennemgåede veje sig oven på hinanden i rækkefølge."
           }
         }
       }
@@ -3671,6 +3899,12 @@
             "state" : "translated",
             "value" : "Ulož své cesty a deník do souboru a později je zase načti."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem dine veje og din dagbog i en fil, og hent dem frem igen senere."
+          }
         }
       }
     },
@@ -3764,6 +3998,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Na mapě zůstanou jen cesty, které jsi v tomto období prošel, a razítka, která jsi v něm otiskl."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På kortet bliver kun de veje, du har gået, og de stempler, du har sat i den valgte periode."
           }
         }
       }
@@ -3859,6 +4099,12 @@
             "state" : "translated",
             "value" : "Nezajímá mě to"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke interesseret"
+          }
         }
       }
     },
@@ -3952,6 +4198,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nevadí"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det er fint"
           }
         }
       }
@@ -4047,6 +4299,12 @@
             "state" : "translated",
             "value" : "Sledovat kreslení"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se det blive tegnet"
+          }
         }
       }
     },
@@ -4140,6 +4398,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kreslená mapa"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tegnet kort"
           }
         }
       }
@@ -4236,6 +4500,12 @@
             "state" : "translated",
             "value" : "I při větším písmu se obrazovky přehledně uspořádají, místo aby se oříznuly."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selv med større tekst bliver skærmene ordnet pænt i stedet for at blive skåret af."
+          }
         }
       }
     },
@@ -4329,6 +4599,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobrazit podle období"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se efter periode"
           }
         }
       }
@@ -4424,6 +4700,12 @@
             "state" : "translated",
             "value" : "Způsob záznamu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registreringsmåde"
+          }
         }
       }
     },
@@ -4517,6 +4799,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stav záznamu"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registreringsstatus"
           }
         }
       }
@@ -4612,6 +4900,12 @@
             "state" : "translated",
             "value" : "Zobrazit stav záznamu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se registreringsstatus"
+          }
         }
       }
     },
@@ -4705,6 +4999,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vrátit výchozí obrázek"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gendan standardbilledet"
           }
         }
       }
@@ -4800,6 +5100,12 @@
             "state" : "translated",
             "value" : "Vypnuté obrazovky můžeš kdykoli otevřít přes „Zobrazit vše“ výše. Tlačítka razítek a nastavení jsou vidět vždy."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skærme, du har slået fra, kan altid åbnes via „Se alt samlet“ ovenfor. Knapperne til stempler og indstillinger vises altid."
+          }
         }
       }
     },
@@ -4893,6 +5199,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Do"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slut"
           }
         }
       }
@@ -4988,6 +5300,12 @@
             "state" : "translated",
             "value" : "Později"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senere"
+          }
         }
       }
     },
@@ -5081,6 +5399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ukládá se jen do tvého osobního iCloudu. Nikdo jiný to nevidí."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gemmes kun i din personlige iCloud. Andre kan ikke se det."
           }
         }
       }
@@ -5177,6 +5501,12 @@
             "state" : "translated",
             "value" : "Smazat všechny mé záznamy najednou"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet alle mine registreringer på én gang"
+          }
         }
       }
     },
@@ -5270,6 +5600,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Obrys mé čtvrti"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omrids af mit kvarter"
           }
         }
       }
@@ -5365,6 +5701,12 @@
             "state" : "translated",
             "value" : "Moje mapa"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mit kort"
+          }
         }
       }
     },
@@ -5458,6 +5800,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otevřít mou mapu"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn mit kort"
           }
         }
       }
@@ -5553,6 +5901,12 @@
             "state" : "translated",
             "value" : "Sleduj, jak se kreslí tvá mapa"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se dit kort blive tegnet"
+          }
         }
       }
     },
@@ -5646,6 +6000,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Náhled kreslení tvé mapy"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forhåndsvisning af dit kort, mens det tegnes"
           }
         }
       }
@@ -5741,6 +6101,12 @@
             "state" : "translated",
             "value" : "Cesty, které jsem nakreslil"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veje, jeg har tegnet"
+          }
         }
       }
     },
@@ -5834,6 +6200,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Místa, kam jsem otiskl razítko"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steder, jeg har stemplet"
           }
         }
       }
@@ -5929,6 +6301,12 @@
             "state" : "translated",
             "value" : "Klepnutím prosvítne mapa"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk for at lade kortet skinne igennem"
+          }
         }
       }
     },
@@ -6022,6 +6400,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klepnutím otiskneš razítko na aktuální místo"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk for at stemple din nuværende position"
           }
         }
       }
@@ -6117,6 +6501,12 @@
             "state" : "translated",
             "value" : "K potvrzení, zda jsi tam byl: %lld míst"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekræft om du har været på %lld steder"
+          }
         }
       }
     },
@@ -6210,6 +6600,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Počet návštěv"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antal besøg"
           }
         }
       }
@@ -6305,6 +6701,12 @@
             "state" : "translated",
             "value" : "Byl jsem tam"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeg var der"
+          }
         }
       }
     },
@@ -6398,6 +6800,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dalším klepnutím se vrátíš k papíru. Hodí se, když chceš zjistit, kde asi jsi."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk igen for at vende tilbage til papiret. Praktisk, når du vil se, hvor du er."
           }
         }
       }
@@ -6493,6 +6901,12 @@
             "state" : "translated",
             "value" : "Vyfotit znovu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tag igen"
+          }
         }
       }
     },
@@ -6586,6 +7000,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Místo, kam ses vrátil"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Et sted, du er vendt tilbage til"
           }
         }
       }
@@ -6681,6 +7101,12 @@
             "state" : "translated",
             "value" : "Toto místo je uložené jako stálé"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dette sted er gemt som et fast sted"
+          }
         }
       }
     },
@@ -6774,6 +7200,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zavřít"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Luk"
           }
         }
       }
@@ -6870,6 +7302,12 @@
             "state" : "translated",
             "value" : "I při vyšším kontrastu nebo potížích s rozlišováním barev poznáš na mapě cesty a razítka."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selv med højere kontrast eller svært ved at skelne farver kan du genkende vejene og stemplerne på kortet."
+          }
         }
       }
     },
@@ -6964,6 +7402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Používej aplikaci ve více jazycích."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brug appen på flere sprog."
           }
         }
       }
@@ -7060,6 +7504,12 @@
             "state" : "translated",
             "value" : "Více jazyků"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Flere sprog"
+          }
         }
       }
     },
@@ -7153,6 +7603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Připiš pár slov (nepovinné)"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj et par ord (valgfrit)"
           }
         }
       }
@@ -7248,6 +7704,12 @@
             "state" : "translated",
             "value" : "V kolekci uvidíš stopy, které jsi doposud nasbíral"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I samlingen kan du se de fodspor, du har samlet indtil nu"
+          }
         }
       }
     },
@@ -7341,6 +7803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nelze vrátit zpět."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det kan ikke fortrydes."
           }
         }
       }
@@ -7436,6 +7904,12 @@
             "state" : "translated",
             "value" : "Klepnutím pozastavíš nebo obnovíš přehrávání"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryk for at sætte på pause eller fortsætte"
+          }
         }
       }
     },
@@ -7529,6 +8003,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Navštíveno míst: %lld"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld steder besøgt"
           }
         }
       }
@@ -7624,6 +8104,12 @@
             "state" : "translated",
             "value" : "Nenašlo se nic zřetelného, takže se pozadí nepodařilo odstranit. Přibliž se k předmětu a vyfoť znovu."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der blev ikke fundet noget tydeligt, så baggrunden kunne ikke fjernes. Gå tættere på genstanden og tag et nyt billede."
+          }
         }
       }
     },
@@ -7717,6 +8203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poslední návštěva"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Seneste besøg"
           }
         }
       }
@@ -7812,6 +8304,12 @@
             "state" : "translated",
             "value" : "Inkoustová mapa"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blækkort"
+          }
         }
       }
     },
@@ -7905,6 +8403,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poznámka"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notat"
           }
         }
       }
@@ -8000,6 +8504,12 @@
             "state" : "translated",
             "value" : "Zobrazit vše"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se alt samlet"
+          }
         }
       }
     },
@@ -8093,6 +8603,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Umisťuji vodu a hory"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placerer vand og bjerge"
           }
         }
       }
@@ -8188,6 +8704,12 @@
             "state" : "translated",
             "value" : "Neobjeveno"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke opdaget"
+          }
         }
       }
     },
@@ -8281,6 +8803,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stopy"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fodspor"
           }
         }
       }
@@ -8376,6 +8904,12 @@
             "state" : "translated",
             "value" : "Časosběr stop"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fodspor-timelapse"
+          }
         }
       }
     },
@@ -8470,6 +9004,12 @@
             "state" : "translated",
             "value" : "Odkrytá země: %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afdækket land: %@"
+          }
         }
       }
     },
@@ -8563,6 +9103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prosvítit podkladovou mapu"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lad baggrundskortet skinne igennem"
           }
         }
       }
@@ -8659,6 +9205,12 @@
             "state" : "translated",
             "value" : "Záloha a export"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sikkerhedskopi og eksport"
+          }
         }
       }
     },
@@ -8752,6 +9304,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Důvody zahození"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Årsager til kassering"
           }
         }
       }
@@ -8847,6 +9405,12 @@
             "state" : "translated",
             "value" : "Verze %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
+          }
         }
       }
     },
@@ -8940,6 +9504,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobrazení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visning"
           }
         }
       }
@@ -9036,6 +9606,12 @@
             "state" : "translated",
             "value" : "Příjemné barvy a kontrast"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behagelige farver og kontrast"
+          }
         }
       }
     },
@@ -9129,6 +9705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobrazené cesty"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Viste veje"
           }
         }
       }
@@ -9224,6 +9806,12 @@
             "state" : "translated",
             "value" : "Prázdný papír sám nepozná, co je kde.\nMísto, kde právě stojíš, se stane **prvním orientačním bodem**."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Et blankt papir kan ikke selv vide, hvad der er hvad.\nDet sted, du står nu, bliver det **første holdepunkt**."
+          }
         }
       }
     },
@@ -9317,6 +9905,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Začínáme s prázdným papírem"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vi starter med et blankt papir"
           }
         }
       }
@@ -9412,6 +10006,12 @@
             "state" : "translated",
             "value" : "Statistiky používání (vývojář)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brugsstatistik (udvikler)"
+          }
         }
       }
     },
@@ -9505,6 +10105,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos"
           }
         }
       }
@@ -9600,6 +10206,12 @@
             "state" : "translated",
             "value" : "Smazat fotku"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet foto"
+          }
         }
       }
     },
@@ -9693,6 +10305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vyfotit"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tag billede"
           }
         }
       }
@@ -9788,6 +10406,12 @@
             "state" : "translated",
             "value" : "Přidat fotku"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj foto"
+          }
         }
       }
     },
@@ -9881,6 +10505,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vkládám fotku"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lægger foto ind"
           }
         }
       }
@@ -9976,6 +10606,12 @@
             "state" : "translated",
             "value" : "Fotku se nepodařilo uložit"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoet kunne ikke gemmes"
+          }
         }
       }
     },
@@ -10069,6 +10705,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smazat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet"
           }
         }
       }
@@ -10165,6 +10807,12 @@
             "state" : "translated",
             "value" : "Upozornění na procházku"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gåturspåmindelse"
+          }
         }
       }
     },
@@ -10258,6 +10906,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nově dosažená místa (%lld) se otisknou na trase"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld nyligt nåede steder stemples på den vej, du gik"
           }
         }
       }
@@ -10353,6 +11007,12 @@
             "state" : "translated",
             "value" : "Novinky"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyheder"
+          }
         }
       }
     },
@@ -10446,6 +11106,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nastavení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Indstillinger"
           }
         }
       }
@@ -10541,6 +11207,12 @@
             "state" : "translated",
             "value" : "Zapni fotoaparát v Nastavení > 벅뚜벅뚜."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå kameraet til i Indstillinger > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -10634,6 +11306,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otevřít Nastavení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn Indstillinger"
           }
         }
       }
@@ -10729,6 +11407,12 @@
             "state" : "translated",
             "value" : "Zapnout oprávnění v Nastavení"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå tilladelser til i Indstillinger"
+          }
         }
       }
     },
@@ -10822,6 +11506,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otevřít jde i z Nastavení"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kan også åbnes fra Indstillinger"
           }
         }
       }
@@ -10917,6 +11607,12 @@
             "state" : "translated",
             "value" : "Vynulovat počty"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nulstil tælling"
+          }
         }
       }
     },
@@ -11010,6 +11706,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Svět už nakreslily jiné mapy.\nTady zůstane **jen to, kudy jsi prošel vlastníma nohama**."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verden er allerede tegnet af andre kort.\nHer bliver **kun de steder, du har gået med dine egne fødder**."
           }
         }
       }
@@ -11105,6 +11807,12 @@
             "state" : "translated",
             "value" : "Nasbírané spoty"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Samlede spots"
+          }
         }
       }
     },
@@ -11198,6 +11906,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Razítko"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempel"
           }
         }
       }
@@ -11293,6 +12007,12 @@
             "state" : "translated",
             "value" : "Od"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
         }
       }
     },
@@ -11387,6 +12107,12 @@
             "state" : "translated",
             "value" : "Začít"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom i gang"
+          }
         }
       }
     },
@@ -11477,6 +12203,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Symbol"
@@ -11575,6 +12307,12 @@
             "state" : "translated",
             "value" : "Zvětšit symbol"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forstør symbol"
+          }
         }
       }
     },
@@ -11670,6 +12408,12 @@
             "state" : "translated",
             "value" : "Dopsat rozepsaný deník"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv videre på en påbegyndt dagbog"
+          }
         }
       }
     },
@@ -11763,6 +12507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přejetím listuješ jako kartami, dvojitým klepnutím zvětšíš"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stryg for at bladre som kort, dobbelttryk for at forstørre"
           }
         }
       }
@@ -11858,6 +12608,12 @@
             "state" : "translated",
             "value" : "Nebyl"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nej"
+          }
         }
       }
     },
@@ -11948,6 +12704,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -12046,6 +12808,12 @@
             "state" : "translated",
             "value" : "Zatím ne"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Endnu ikke"
+          }
         }
       }
     },
@@ -12139,6 +12907,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zatím nenavštívená"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke besøgt endnu"
           }
         }
       }
@@ -12234,6 +13008,12 @@
             "state" : "translated",
             "value" : "Ještě jsi tu nebyl. Zůstane jako „Chci navštívit“ a po příchodu se z něj stane navštívené místo."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har ikke været her endnu. Det bliver stående som „Vil besøge“ og bliver et besøgt sted, når du når frem."
+          }
         }
       }
     },
@@ -12327,6 +13107,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zatím žádné zahozené body"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der er endnu ikke kasseret nogen punkter"
           }
         }
       }
@@ -12422,6 +13208,12 @@
             "state" : "translated",
             "value" : "Ještě ne"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ikke endnu"
+          }
         }
       }
     },
@@ -12515,6 +13307,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nápověda"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vejledning"
           }
         }
       }
@@ -12611,6 +13409,12 @@
             "state" : "translated",
             "value" : "Aplikaci můžeš používat i v angličtině."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kan også bruge appen på engelsk."
+          }
         }
       }
     },
@@ -12704,6 +13508,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otevři aplikaci jednou"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åbn appen én gang"
           }
         }
       }
@@ -12799,6 +13609,12 @@
             "state" : "translated",
             "value" : "Který den"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvilken dag"
+          }
         }
       }
     },
@@ -12892,6 +13708,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tak či tak se ukládají všechny přijaté polohy. Jen body s nízkou přesností se do mapy nekreslí."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uanset hvad gemmes alle modtagne positioner. Det er bare punkter med lav nøjagtighed, der ikke tegnes på kortet."
           }
         }
       }
@@ -12987,6 +13809,12 @@
             "state" : "translated",
             "value" : "Anonymně se počítá jen to, které obrazovky se používají. Kde chodíš a co píšeš do deníku, se neodesílá."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der tælles kun anonymt, hvilke skærme der bruges. Hvor du går, og hvad du skriver i dagbogen, sendes ikke."
+          }
         }
       }
     },
@@ -13080,6 +13908,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zdržel ses tu %@"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du var her i %@"
           }
         }
       }
@@ -13175,6 +14009,12 @@
             "state" : "translated",
             "value" : "Ponechat toto místo"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behold dette sted"
+          }
         }
       }
     },
@@ -13268,6 +14108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zanechat tady"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem her"
           }
         }
       }
@@ -13363,6 +14209,12 @@
             "state" : "translated",
             "value" : "Nevadí, že se toto místo nezaznamená?"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er det i orden ikke at registrere dette sted?"
+          }
         }
       }
     },
@@ -13456,6 +14308,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kde to bylo?"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvor var det her?"
           }
         }
       }
@@ -13551,6 +14409,12 @@
             "state" : "translated",
             "value" : "Exportovat jako video"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eksportér som video"
+          }
         }
       }
     },
@@ -13644,6 +14508,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vytvářím video %lld %%"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opretter video %lld %%"
           }
         }
       }
@@ -13740,6 +14610,12 @@
             "state" : "translated",
             "value" : "Podpora angličtiny"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Understøtter engelsk"
+          }
         }
       }
     },
@@ -13833,6 +14709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Např. domov, práce, oblíbená kavárna"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fx hjem, arbejde, stamcafé"
           }
         }
       }
@@ -13928,6 +14810,12 @@
             "state" : "translated",
             "value" : "Dnes %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I dag %@"
+          }
         }
       }
     },
@@ -14021,6 +14909,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dnešní cesta"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens vej"
           }
         }
       }
@@ -14116,6 +15010,12 @@
             "state" : "translated",
             "value" : "Fotka byla přidána do dnešního deníku"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Et foto er føjet til dagens dagbog"
+          }
         }
       }
     },
@@ -14209,6 +15109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Přehrát dnešek"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afspil i dag"
           }
         }
       }
@@ -14304,6 +15210,12 @@
             "state" : "translated",
             "value" : "Dnes jsi ještě nikde nebyl"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I dag har du endnu ikke besøgt nogen steder"
+          }
         }
       }
     },
@@ -14397,6 +15309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dnes ses ještě nikde nezastavil"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I dag har du endnu ikke stoppet nogen steder"
           }
         }
       }
@@ -14492,6 +15410,12 @@
             "state" : "translated",
             "value" : "Kde jsi dnes objevoval?"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvor har du udforsket i dag?"
+          }
         }
       }
     },
@@ -14585,6 +15509,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dnešní stopy"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens fodspor"
           }
         }
       }
@@ -14680,6 +15610,12 @@
             "state" : "translated",
             "value" : "Dnešní objevování"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens opdagelser"
+          }
         }
       }
     },
@@ -14773,6 +15709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hotovo"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Færdig"
           }
         }
       }
@@ -14869,6 +15811,12 @@
             "state" : "translated",
             "value" : "Omezit pohyb"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reducer bevægelse"
+          }
         }
       }
     },
@@ -14963,6 +15911,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Při zapnutém Omezení pohybu jsou mapa a efekty na obrazovce klidnější."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Med Reducer bevægelse slået til bliver kortet og skærmeffekterne mere rolige."
           }
         }
       }
@@ -15059,6 +16013,12 @@
             "state" : "translated",
             "value" : "Chceš-li, můžeš v aplikaci smazat všechny cesty i deník."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis du vil, kan du slette alle dine veje og din dagbog i appen."
+          }
         }
       }
     },
@@ -15152,6 +16112,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Když nastavíš polohu na „Vždy“ a zapneš Pohyb a kondici, chůze se zaznamenává i bez otevření aplikace."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sæt lokalitet til „Altid“ og slå Bevægelse og fitness til, så registreres dine ture, selv uden at åbne appen."
           }
         }
       }
@@ -15247,6 +16213,12 @@
             "state" : "translated",
             "value" : "V tomto období nejsou žádné stopy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der er ingen fodspor i denne periode"
+          }
         }
       }
     },
@@ -15340,6 +16312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobrazit toto období"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se denne periode"
           }
         }
       }
@@ -15435,6 +16413,12 @@
             "state" : "translated",
             "value" : "Místa vyfocená tento den"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steder fotograferet denne dag"
+          }
         }
       }
     },
@@ -15528,6 +16512,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tento den nebyly zaznamenány žádné kroky"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Denne dag blev der ikke registreret nogen skridt"
           }
         }
       }
@@ -15623,6 +16613,12 @@
             "state" : "translated",
             "value" : "Tento den nejsou žádné stopy"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der er ingen fodspor denne dag"
+          }
         }
       }
     },
@@ -15716,6 +16712,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smazat toto razítko"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet dette stempel"
           }
         }
       }
@@ -15811,6 +16813,12 @@
             "state" : "translated",
             "value" : "Použít tento symbol"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brug dette symbol"
+          }
         }
       }
     },
@@ -15904,6 +16912,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Smazat stopy na tomto místě"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slet fodspor på dette sted"
           }
         }
       }
@@ -15999,6 +17013,12 @@
             "state" : "translated",
             "value" : "Název tohoto místa (např. práce, oblíbená kavárna)"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navn på dette sted (fx arbejde, stamcafé)"
+          }
         }
       }
     },
@@ -16092,6 +17112,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otiskni první razítko na tento papír"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sæt det første stempel på dette papir"
           }
         }
       }
@@ -16187,6 +17213,12 @@
             "state" : "translated",
             "value" : "Název"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navn"
+          }
         }
       }
     },
@@ -16280,6 +17312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pojmenovat"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Giv navn"
           }
         }
       }
@@ -16375,6 +17413,12 @@
             "state" : "translated",
             "value" : "Přidat obrázek"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilføj billede"
+          }
         }
       }
     },
@@ -16469,6 +17513,12 @@
             "state" : "translated",
             "value" : "Teď si vyraz na procházku"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nu kan du gå en tur"
+          }
         }
       }
     },
@@ -16562,6 +17612,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teď si vyraz na procházku.\nMísta, kudy půjdeš, se otisknou na tento papír bod po bodu."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nu kan du gå en tur.\nDe steder, du kommer forbi, stemples på dette papir et punkt ad gangen."
           }
         }
       }
@@ -16658,6 +17714,12 @@
             "state" : "translated",
             "value" : "Pokud se aplikace při psaní deníku vypne, napsané zůstane."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis appen lukker, mens du skriver dagbog, bliver det skrevne stående."
+          }
         }
       }
     },
@@ -16751,6 +17813,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deník"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagbog"
           }
         }
       }
@@ -16846,6 +17914,12 @@
             "state" : "translated",
             "value" : "Až **dorazíš na místo, kam chodíš často, otiskni tam razítko ještě jednou**.\nSe dvěma orientačními body najde směr i prázdný papír."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når du **ankommer til et sted, du ofte kommer, så stemple der en gang til**.\nMed to holdepunkter finder selv et blankt papir retningen."
+          }
         }
       }
     },
@@ -16939,6 +18013,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zkus to za chvíli znovu, nebo dlouze stiskni mapu a otiskni razítko, kam chceš."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prøv igen om lidt, eller tryk og hold på kortet for at stemple, hvor du vil."
           }
         }
       }
@@ -17034,6 +18114,12 @@
             "state" : "translated",
             "value" : "Uložit"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gem"
+          }
         }
       }
     },
@@ -17127,6 +18213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zpět na celé období"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilbage til hele perioden"
           }
         }
       }
@@ -17222,6 +18314,12 @@
             "state" : "translated",
             "value" : "Počet bodů"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punkttælling"
+          }
         }
       }
     },
@@ -17315,6 +18413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Body s nízkou přesností se také ukládají. Teď se do mapy nekreslí, ale použít se dají, až se korekce zlepší."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punkter med lav nøjagtighed gemmes også. De tegnes ikke på kortet lige nu, men kan bruges, når korrektionen bliver bedre."
           }
         }
       }
@@ -17410,6 +18514,12 @@
             "state" : "translated",
             "value" : "Aktuální stav"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktuel status"
+          }
         }
       }
     },
@@ -17503,6 +18613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hledám tvou polohu"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finder din position"
           }
         }
       }
@@ -17598,6 +18714,12 @@
             "state" : "translated",
             "value" : "Zanechat značku tady"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sæt mærke her"
+          }
         }
       }
     },
@@ -17691,6 +18813,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otisknout razítko tam, kde jsi"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sæt et stempel, hvor du står"
           }
         }
       }
@@ -17786,6 +18914,12 @@
             "state" : "translated",
             "value" : "Otisknout tady"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemple her"
+          }
         }
       }
     },
@@ -17879,6 +19013,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Místa, kudy půjdeš, se otisknou na tento papír bod po bodu.\nCesty projeté autem nebo metrem se nekreslí."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De steder, du kommer forbi, stemples på dette papir et punkt ad gangen.\nVeje, du kører i bil eller metro, tegnes ikke."
           }
         }
       }
@@ -17974,6 +19114,12 @@
             "state" : "translated",
             "value" : "Tlačítka mapy se vybírají v Nastavení"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg kortknapper i Indstillinger"
+          }
         }
       }
     },
@@ -18067,6 +19213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Styl mapy"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kortstil"
           }
         }
       }
@@ -18162,6 +19314,12 @@
             "state" : "translated",
             "value" : "Měřítko mapy. Jeden pruh odpovídá %@"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kortskala. Én bjælke svarer til %@"
+          }
         }
       }
     },
@@ -18255,6 +19413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vyber tlačítka, která se mají na mapě objevit, a vypnuté obrazovky otevřeš přímo z Nastavení."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg, hvilke knapper der svæver på kortet, og åbn slåede-fra skærme direkte fra Indstillinger."
           }
         }
       }
@@ -18350,6 +19514,12 @@
             "state" : "translated",
             "value" : "Místa, kam jsi razítko otiskl předem. Po příchodu se z nich stanou navštívená místa."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Steder, du har stemplet på forhånd på kortet. Når du når frem, bliver de besøgte steder."
+          }
         }
       }
     },
@@ -18443,6 +19613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zobrazit na mapě"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vis på kortet"
           }
         }
       }
@@ -18538,6 +19714,12 @@
             "state" : "translated",
             "value" : "Zobrazit na mapě"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se på kortet"
+          }
         }
       }
     },
@@ -18631,6 +19813,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Na mapě to vypadá takto"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sådan ser det ud på kortet"
           }
         }
       }
@@ -18726,6 +19914,12 @@
             "state" : "translated",
             "value" : "Vymazat"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ryd"
+          }
         }
       }
     },
@@ -18819,6 +20013,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Podpora"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
           }
         }
       }
@@ -18914,6 +20114,12 @@
             "state" : "translated",
             "value" : "Vyber něco, co poslouží jako orientační bod, třeba domov nebo práci."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vælg noget, der kan fungere som holdepunkt, fx hjem eller arbejde."
+          }
         }
       }
     },
@@ -19007,6 +20213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vyfotit"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tag"
           }
         }
       }
@@ -19102,6 +20314,12 @@
             "state" : "translated",
             "value" : "Otištěno dne"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemplet den"
+          }
         }
       }
     },
@@ -19195,6 +20413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otištěno"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stemplet"
           }
         }
       }
@@ -19290,6 +20514,12 @@
             "state" : "translated",
             "value" : "Cesty projeté autem nebo metrem se nekreslí.\nJen chůze otiskuje bod po bodu."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veje, du kører i bil eller metro, tegnes ikke.\nKun når du går, sættes der et punkt ad gangen."
+          }
         }
       }
     },
@@ -19383,6 +20613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zůstane jen to, co je v rámečku; pozadí se vymaže"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kun det, der er inde i rammen, bliver tilbage; baggrunden slettes"
           }
         }
       }
@@ -19478,6 +20714,12 @@
             "state" : "translated",
             "value" : "První"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Første"
+          }
         }
       }
     },
@@ -19571,6 +20813,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cesty projité poprvé"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veje gået for første gang"
           }
         }
       }
@@ -19666,6 +20914,12 @@
             "state" : "translated",
             "value" : "Na tomto místě stojíš poprvé"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det er et sted, du træder på for første gang"
+          }
         }
       }
     },
@@ -19759,6 +21013,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zrušit"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuller"
           }
         }
       }
@@ -19854,6 +21114,12 @@
             "state" : "translated",
             "value" : "Zapnout"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå til"
+          }
         }
       }
     },
@@ -19947,6 +21213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zvětšit"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Forstør"
           }
         }
       }
@@ -20043,6 +21315,12 @@
             "state" : "translated",
             "value" : "Obrazovky pro velké písmo"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skærme til stor tekst"
+          }
         }
       }
     },
@@ -20136,6 +21414,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Časosběr"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse"
           }
         }
       }
@@ -20231,6 +21515,12 @@
             "state" : "translated",
             "value" : "Objevovat"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Udforsk"
+          }
         }
       }
     },
@@ -20325,6 +21615,12 @@
             "state" : "translated",
             "value" : "Záznam objevování"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opdagelseslog"
+          }
         }
       }
     },
@@ -20418,6 +21714,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deník objevování"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opdagelsesdagbog"
           }
         }
       }
@@ -20514,6 +21816,12 @@
             "state" : "translated",
             "value" : "Obrazovka skládacího iPhonu"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foldbar iPhone-skærm"
+          }
         }
       }
     },
@@ -20609,6 +21917,12 @@
             "state" : "translated",
             "value" : "Na skládacím iPhonu uvidíš mapu a záznamy ve dvou panelech."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På en foldbar iPhone ser du kort og registreringer i to ruder."
+          }
         }
       }
     },
@@ -20702,6 +22016,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Časosběr dne"
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens timelapse"
           }
         }
       }
@@ -20798,6 +22118,12 @@
             "state" : "translated",
             "value" : "Na konci dne ti oznámení připomene cestu, kterou jsi dnes ušel."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Når dagen er slut, fortæller en notifikation dig om den vej, du gik i dag."
+          }
         }
       }
     },
@@ -20891,6 +22217,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Když se na jednom místě zdržíš déle než %lld minut,\nobjeví se v dnešních stopách."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hvis du bliver mere end %lld minutter det samme sted,\nvises stedet i dagens fodspor."
           }
         }
       }
@@ -20986,6 +22318,12 @@
             "state" : "translated",
             "value" : "Tvou polohu se zatím nepodařilo najít"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din position er endnu ikke fundet"
+          }
         }
       }
     },
@@ -21076,6 +22414,12 @@
           }
         },
         "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "da" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"

@@ -92,6 +92,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -185,6 +191,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotoaparát slouží k uložení fotky místa a k vystřižení vyfoceného předmětu do nálepky, kterou položíš na mapu."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kameraet bruges til at gemme et foto af stedet og til at frilægge det, du fotograferer, som et klistermærke til kortet."
           }
         }
       }
@@ -280,6 +292,12 @@
             "state" : "translated",
             "value" : "K automatickému zaznamenávání stop při každé změně místa je potřeba oprávnění „Vždy“."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tilladelsen „Altid“ er nødvendig for automatisk at registrere dine fodspor, hver gang du skifter sted."
+          }
         }
       }
     },
@@ -374,6 +392,12 @@
             "state" : "translated",
             "value" : "Oprávnění k poloze je potřeba, aby se tvá aktuální poloha zaznamenala jako stopa na mapě."
           }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lokalitetstilladelse er nødvendig for at registrere din nuværende position som et fodspor på kortet."
+          }
         }
       }
     },
@@ -467,6 +491,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Údaje o pohybu slouží ke zjištění, zda ses pohyboval pěšky nebo během, aby se nezaznamenávaly jízdy vozidlem."
+          }
+        },
+        "da" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bevægelsesdata bruges til at se, om du bevægede dig til fods eller løbende, så færd i køretøj ikke registreres."
           }
         }
       }

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privatlivspolitik · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --border: #e5e7eb; --note-bg: #eef7ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36; --note-bg: #1a2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; padding-top: 8px; }
+    p, li { color: var(--text); }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    .note {
+      background: var(--note-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+    }
+    .note strong { color: var(--accent); }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--card); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/da/privacy.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/privacy.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/privacy.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/FootprintDiary/zh-Hant/privacy.html">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/FootprintDiary/ru/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/FootprintDiary/es/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/FootprintDiary/de/privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/FootprintDiary/fr/privacy.html">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/FootprintDiary/it/privacy.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/FootprintDiary/pt-BR/privacy.html">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/FootprintDiary/th/privacy.html">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/FootprintDiary/vi/privacy.html">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/FootprintDiary/cs/privacy.html">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/FootprintDiary/da/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../privacy.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/privacy.html" hreflang="en" lang="en">English</a> · <a href="../ja/privacy.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/privacy.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/privacy.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/privacy.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/privacy.html" hreflang="es" lang="es">Español</a> · <a href="../de/privacy.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/privacy.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/privacy.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/privacy.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/privacy.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/privacy.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/privacy.html" hreflang="cs" lang="cs">Čeština</a> · <a href="privacy.html" hreflang="da" lang="da" aria-current="true">Dansk</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← 벅뚜벅뚜 forside</a>
+    <h1>Privatlivspolitik</h1>
+    <p class="updated">Gælder fra: 27. august 2026</p>
+
+    <p>
+      <strong>벅뚜벅뚜 (FootprintDiary)</strong> (herefter „appen“) værner om brugerens personlige oplysninger.
+      Appen er udformet, så din bevægelseshistorik og din dagbog <strong>kun gemmes på din egen enhed og i din egen iCloud-konto</strong>.
+      Appens udvikler kan ikke få adgang til din lokalitet, dine fotos eller din dagbog.
+    </p>
+
+    <div class="note">
+      <strong>Kort fortalt</strong> — Appen har ingen tilmelding og ingen konti.
+      Lokalitet, fotos og dagbog gemmes kun på din enhed og i <strong>din egen iCloud</strong>, og udvikleren kan ikke se dem.
+      For at kunne forbedre appen indsamler udvikleren dog anonymt <strong>brugsstatistik, som ikke kan afsløre, hvem du er</strong>
+      (fx hvor mange gange appen åbnes, og hvilke skærme der bruges). Den indeholder aldrig lokalitet eller tekst;
+      se detaljerne i punkt 4 nedenfor.
+    </div>
+
+    <h2>1. Oplysninger, vi indsamler</h2>
+    <p>Appen behandler nedenstående oplysninger <strong>kun inde på din enhed</strong> og sender dem ikke til udvikleren eller til tredjepartsservere.</p>
+    <table>
+      <tr><th>Oplysning</th><th>Formål</th><th>Hvor den gemmes</th></tr>
+      <tr><td>Lokalitetsdata (besøgte steder, bevægelseskoordinater)</td><td>Vise fodspor på kortet og registrere din rute</td><td>På enheden (SwiftData)</td></tr>
+      <tr><td>Bevægelsesdata</td><td>Skelne gang fra færd i køretøj (færd i køretøj udelades af registreringen)</td><td>Bruges straks på enheden og gemmes ikke</td></tr>
+      <tr><td>Fotos</td><td>Vedhæftes dagbogen</td><td>På enheden (SwiftData)</td></tr>
+      <tr><td>Kamera (fotos, du tager)</td><td>Gemme et foto af stedet og frilægge det, du fotograferer, så der kan laves et klistermærke til kortet (frilægningen sker på enheden)</td><td>På enheden (SwiftData)</td></tr>
+      <tr><td>Dagbogstekst, stednavne</td><td>Registreringer, du selv skriver</td><td>På enheden (SwiftData)</td></tr>
+    </table>
+    <p>
+      Slår du iCloud-synkronisering til, gemmes ovenstående registreringer også i <strong>din private iCloud-database</strong>
+      og føres videre til andre enheder med samme Apple-id. Denne lagerplads tilhører dig,
+      og udvikleren har ikke adgang til den.
+    </p>
+    <p>
+      Uafhængigt af ovenstående indsamler udvikleren den <strong>anonyme brugsstatistik</strong>, der er beskrevet i punkt 4.
+    </p>
+
+    <h2>2. Brug af lokalitetsdata</h2>
+    <ul>
+      <li>Appen bruger iOS-funktionerne <strong>besøgsregistrering (Visit)</strong> og <strong>væsentlige lokalitetsændringer</strong>
+          til automatisk at registrere dine bevægelser mellem steder med så lidt batteriforbrug som muligt.</li>
+      <li>Til den automatiske registrering kan appen bede om lokalitetstilladelsen „Altid“. Du kan til enhver tid ændre eller trække
+          tilladelsen tilbage i appen Indstillinger i iOS.</li>
+      <li>Hvis du ikke giver lokalitetstilladelse, virker den automatiske registrering ikke, men de øvrige funktioner kan stadig bruges.</li>
+    </ul>
+
+    <h2>3. Tredjepartstjenester (Apple)</h2>
+    <p>
+      For at omsætte koordinater til læsbare adresser og stednavne bruger appen Apples
+      <strong>omvendte geokodning (CLGeocoder)</strong> og kortvisning (MapKit).
+      Herved kan de pågældende koordinater blive sendt til Apple til behandling, hvilket er omfattet af
+      <a href="https://www.apple.com/legal/privacy/">Apples privatlivspolitik</a>.
+      Appens udvikler har ikke adgang til disse data.
+    </p>
+
+    <h2>4. Anonym brugsstatistik</h2>
+    <p>
+      For at forbedre appen skal udvikleren vide, hvilke funktioner der faktisk bruges, og indsamler derfor følgende oplysninger
+      <strong>i en form, der ikke kan identificere dig</strong>. De gemmes i udviklerens eget
+      Apple CloudKit-område, som er adskilt fra den personlige iCloud, hvor dine registreringer ligger.
+    </p>
+    <table>
+      <tr><th>Det indsamler vi</th><th>Det indsamler vi ikke</th></tr>
+      <tr>
+        <td>
+          Antal gange appen er åbnet, dage siden installation, appversion, iOS-version, enhedens sprogindstilling<br>
+          Hvilke funktioner der er brugt (sætte stempler, eksportere video, skrive dagbog, give steder navn, åbne kalenderen)<br>
+          Omtrentlig størrelsesorden (samlet gået distance i km, dage med registrerede skridt, antal stempler, steder og dagbogsindlæg)
+        </td>
+        <td>
+          Lokalitetskoordinater (der sendes ikke en eneste)<br>
+          Dagbogstekst, stednavne, fotos<br>
+          Navn, e-mail, telefonnummer, Apple-id eller andre oplysninger, der kan identificere dig<br>
+          Reklameidentifikator (IDFA), enhedens unikke identifikatorer
+        </td>
+      </tr>
+    </table>
+    <ul>
+      <li>For at kunne skelne installationer fra hinanden bruger appen ved installation én <strong>tilfældigt genereret værdi</strong>.
+          Værdien har ingen forbindelse til din enhed eller dit Apple-id, og hvis du sletter appen og installerer den igen,
+          bliver den ikke koblet til den tidligere værdi.</li>
+      <li>Appen <strong>bruger ingen reklame-SDK'er, tredjeparts analyse-SDK'er eller sporingsværktøjer.</strong>
+          Ovenstående statistik gemmes kun i Apple CloudKit med kode, udvikleren selv har skrevet.</li>
+      <li>Statistikken bruges kun til at forbedre appen og sælges eller udleveres aldrig til tredjeparter.</li>
+    </ul>
+
+    <h2>5. Afsendelse af feedback</h2>
+    <p>
+      <strong>Send feedback</strong> i appens indstillinger virker kun, når du selv skriver og sender noget.
+      Det, du sender, gemmes i udviklerens Apple CloudKit-område og bruges kun til, at udvikleren kan læse og svare.
+    </p>
+    <ul>
+      <li>Det, der sendes: den feedbacktype, du har valgt, og den tekst, du har skrevet, samt appversion, iOS-version, enhedstype og enhedens sprogindstilling</li>
+      <li>Navn og e-mail sendes kun med, hvis du selv har skrevet dem, og bruges kun til at svare dig.</li>
+      <li>Udviklerens svar kan læses i appen.</li>
+      <li>Ønsker du, at sendt feedback slettes, så giv besked via kontaktoplysningerne nedenfor.</li>
+    </ul>
+
+    <h2>6. Videregivelse til tredjepart og reklamer</h2>
+    <ul>
+      <li>Appen sælger ikke dine personlige oplysninger og giver dem ikke til tredjeparter.</li>
+      <li>Appen viser ingen reklamer og sporer dig ikke.</li>
+    </ul>
+
+    <h2>7. Opbevaring og sletning af data</h2>
+    <ul>
+      <li>Alle registreringer gemmes på din enhed og i din egen iCloud, og du kan selv slette
+          fodspor og dagbogsindlæg i appen.</li>
+      <li><strong>Hvis du sletter appen</strong>, slettes alle data gemt på enheden (lokalitet, fotos, dagbog) samtidig.
+          Kopier gemt i iCloud kan fjernes fra iCloud-administrationen i appen Indstillinger i iOS.</li>
+      <li>Da udvikleren ikke opbevarer din lokalitet, dine fotos eller din dagbog, kan han hverken se eller
+          genskabe disse data.</li>
+      <li>Den anonyme brugsstatistik indeholder intet, der kan knyttes til dig, så individuelle anmodninger om sletning kan ikke behandles.
+          Men når du sletter appen, indsamles der intet mere fra det tidspunkt.</li>
+    </ul>
+
+    <h2>8. Børns personoplysninger</h2>
+    <p>
+      Appen indsamler ikke oplysninger, der kan identificere dig, og indsamler derfor ikke data rettet mod bestemte aldersgrupper.
+      Alle data bliver kun på din enhed.
+    </p>
+
+    <h2>9. Ændringer af politikken</h2>
+    <p>
+      Politikken kan blive revideret på grund af ændringer i lovgivningen eller appens funktioner; ved ændringer opdaterer vi denne side.
+    </p>
+
+    <h2>10. Kontakt</h2>
+    <p>
+      Spørgsmål om behandling af personoplysninger kan rettes til:<br />
+      E-mail: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a><br />
+      Supportside: <a href="support.html">Support / Kontakt</a>
+    </p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) · Gælder fra 27. august 2026
+    </footer>
+  </div>
+</body>
+</html>
