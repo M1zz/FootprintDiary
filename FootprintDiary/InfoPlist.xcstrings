@@ -110,6 +110,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -221,6 +227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kameralla tallennetaan kuva paikasta ja leikataan kuvaamasi kohde tarraksi, jonka voi asettaa kartalle."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamera dipakai untuk menyimpan foto tempat dan memotong benda yang kamu foto menjadi stiker untuk ditaruh di peta."
           }
         }
       }
@@ -334,6 +346,12 @@
             "state" : "translated",
             "value" : "”Aina”-lupa tarvitaan, jotta jalanjälkesi tallentuvat automaattisesti aina paikkaa vaihtaessasi."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izin \"Selalu\" diperlukan untuk mencatat jejak kakimu secara otomatis setiap kali berpindah tempat."
+          }
         }
       }
     },
@@ -446,6 +464,12 @@
             "state" : "translated",
             "value" : "Sijaintilupa tarvitaan, jotta nykyinen sijaintisi voidaan tallentaa jalanjäljeksi karttaan."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Izin lokasi diperlukan untuk mencatat posisimu saat ini sebagai jejak kaki di peta."
+          }
         }
       }
     },
@@ -557,6 +581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Liiketietoja käytetään tunnistamaan, liikuitko kävellen vai juosten, jotta ajoneuvolla kuljettuja matkoja ei tallenneta."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data gerakan dipakai untuk memastikan apakah kamu bergerak dengan berjalan atau berlari, agar perjalanan dengan kendaraan tidak dicatat."
           }
         }
       }

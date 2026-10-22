@@ -110,6 +110,12 @@
             "state" : "translated",
             "value" : "%@ · Jalanjäljet %lld/%lld"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Jejak kaki %lld/%lld"
+          }
         }
       }
     },
@@ -221,6 +227,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Käveltiin %@ ajassa %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berjalan %@ dalam %@"
           }
         }
       }
@@ -334,6 +346,12 @@
             "state" : "translated",
             "value" : "Käveltiin %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berjalan %@"
+          }
         }
       }
     },
@@ -445,6 +463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ kerätty"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ terkumpul"
           }
         }
       }
@@ -558,6 +582,12 @@
             "state" : "translated",
             "value" : "Symboli: %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simbol %@"
+          }
         }
       }
     },
@@ -670,6 +700,12 @@
             "state" : "translated",
             "value" : "%@, %lld lajia"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld jenis"
+          }
         }
       }
     },
@@ -778,6 +814,12 @@
           }
         },
         "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@×"
@@ -894,6 +936,12 @@
             "state" : "translated",
             "value" : "Suuntaan %@ olet kulkenut vähiten"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Arah %@ paling sedikit kamu jalani"
+          }
         }
       }
     },
@@ -1005,6 +1053,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld m päässä"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Berjarak %lld m"
           }
         }
       }
@@ -1118,6 +1172,12 @@
             "state" : "translated",
             "value" : "%lld metrin sisällä suljin avautuu"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dalam jarak %lld m, rana terbuka"
+          }
         }
       }
     },
@@ -1229,6 +1289,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld lajia"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld jenis"
           }
         }
       }
@@ -1342,6 +1408,12 @@
             "state" : "translated",
             "value" : "%lld paikkaa"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld tempat"
+          }
         }
       }
     },
@@ -1453,6 +1525,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld kertaa"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kali"
           }
         }
       }
@@ -1566,6 +1644,12 @@
             "state" : "translated",
             "value" : "Lähdit ulos %lld kertaa"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keluar %lld kali"
+          }
         }
       }
     },
@@ -1678,6 +1762,12 @@
             "state" : "translated",
             "value" : "%lld. löytö"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Temuan ke-%lld"
+          }
         }
       }
     },
@@ -1789,6 +1879,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Etsi AR:llä"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tuju dengan AR"
           }
         }
       }
@@ -1903,6 +1999,12 @@
             "state" : "translated",
             "value" : "Face ID -lukitus"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunci Face ID"
+          }
         }
       }
     },
@@ -2015,6 +2117,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lukitse appi Face ID:llä tai Touch ID:llä suojataksesi kulkemasi paikat ja päiväkirjasi."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunci aplikasi dengan Face ID atau Touch ID untuk menjaga tempat yang kamu lalui dan catatan harianmu."
           }
         }
       }
@@ -2129,6 +2237,12 @@
             "state" : "translated",
             "value" : "Kysy Siriltä, kuinka pitkälle olet tänään kävellyt."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanya Siri untuk langsung tahu jarak yang kamu tempuh hari ini."
+          }
         }
       }
     },
@@ -2241,6 +2355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri ja Pikakomennot"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri dan Pintasan"
           }
         }
       }
@@ -2355,6 +2475,12 @@
             "state" : "translated",
             "value" : "VoiceOver lukee kartan ja tallenteiden kaikki painikkeet ja tiedot oikeassa järjestyksessä."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver membacakan semua tombol dan isi peta serta catatanmu, dalam urutan yang tepat."
+          }
         }
       }
     },
@@ -2468,6 +2594,12 @@
             "state" : "translated",
             "value" : "Helpompi VoiceOver"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver Lebih Nyaman"
+          }
         }
       }
     },
@@ -2579,6 +2711,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "”%@” ei vastaa mitään leimaa"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada stempel yang cocok dengan \"%@\""
           }
         }
       }
@@ -2692,6 +2830,12 @@
             "state" : "translated",
             "value" : "Aioit mennä tänne. Merkitäänkö käydyksi?"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini tempat yang ingin kamu kunjungi. Catat sebagai sudah dikunjungi?"
+          }
         }
       }
     },
@@ -2803,6 +2947,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ei vielä käyty"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belum dikunjungi"
           }
         }
       }
@@ -2916,6 +3066,12 @@
             "state" : "translated",
             "value" : "Haluan käydä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ingin Dikunjungi"
+          }
         }
       }
     },
@@ -3027,6 +3183,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Käyntikohteeksi leimattu paikka"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempat yang dicap sebagai tujuan kunjungan"
           }
         }
       }
@@ -3140,6 +3302,12 @@
             "state" : "translated",
             "value" : "Yleisin syy: %@ (%lld kertaa). %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alasan paling sering: %@ (%lld kali). %@"
+          }
         }
       }
     },
@@ -3251,6 +3419,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Luokka"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori"
           }
         }
       }
@@ -3364,6 +3538,12 @@
             "state" : "translated",
             "value" : "Pioneerin kompassi"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kompas Perintis"
+          }
         }
       }
     },
@@ -3475,6 +3655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ohita"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lewati"
           }
         }
       }
@@ -3588,6 +3774,12 @@
             "state" : "translated",
             "value" : "Kävelyn tallennus"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pencatatan Jalan Kaki"
+          }
         }
       }
     },
@@ -3699,6 +3891,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kävelyn tallennus on pois päältä. Vaikka kävelisit, jälkeä ei jää."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pencatatan jalan kaki mati. Meski kamu berjalan, tidak ada jejak yang tersimpan."
           }
         }
       }
@@ -3812,6 +4010,12 @@
             "state" : "translated",
             "value" : "Kävellessä asettamasi leimat kasaantuvat tähän aikajärjestyksessä.\nPaikat, joissa viivyt, tallentuvat itsestään ilman leimaa."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempel yang kamu bubuhkan saat berjalan menumpuk di sini berurutan waktu.\nTempat yang kamu singgahi tersimpan sendiri tanpa stempel."
+          }
         }
       }
     },
@@ -3923,6 +4127,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kävellen saavutetut paikat"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempat yang dicapai dengan berjalan kaki"
           }
         }
       }
@@ -4036,6 +4246,12 @@
             "state" : "translated",
             "value" : "Kun saavut kävellen, voit ottaa siellä kuvan"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jika tiba dengan berjalan kaki, kamu bisa mengambil foto di tempat"
+          }
         }
       }
     },
@@ -4148,6 +4364,12 @@
             "state" : "translated",
             "value" : "Jos kävelit mutta karttaan ei piirtynyt viivaa, näet syyn täältä."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jika kamu berjalan tetapi tidak ada garis di peta, kamu bisa melihat alasannya di sini."
+          }
         }
       }
     },
@@ -4259,6 +4481,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kun kävelet, kulkemasi tiet kasautuvat järjestyksessä."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saat kamu berjalan, jalan yang dilalui menumpuk berurutan."
           }
         }
       }
@@ -4373,6 +4601,12 @@
             "state" : "translated",
             "value" : "Tallenna kulkemasi tiet ja päiväkirja tiedostoon ja tuo ne takaisin myöhemmin."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan jalan yang kamu lalui dan catatan harian ke berkas lalu muat kembali nanti."
+          }
         }
       }
     },
@@ -4484,6 +4718,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Karttaan jäävät vain valitun jakson aikana kävellyt tiet ja asetetut leimat."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hanya jalan yang dilalui dan stempel yang dibubuhkan pada periode terpilih yang tersisa di peta."
           }
         }
       }
@@ -4597,6 +4837,12 @@
             "state" : "translated",
             "value" : "Ei kiinnosta"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak tertarik"
+          }
         }
       }
     },
@@ -4708,6 +4954,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sopii"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak apa-apa"
           }
         }
       }
@@ -4821,6 +5073,12 @@
             "state" : "translated",
             "value" : "Katso piirtymistä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat Cara Digambar"
+          }
         }
       }
     },
@@ -4932,6 +5190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kuvakartta"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peta Gambar"
           }
         }
       }
@@ -5046,6 +5310,12 @@
             "state" : "translated",
             "value" : "Vaikka suurennat tekstiä, näkymät järjestyvät siististi uudelleen eivätkä leikkaudu."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meski teks diperbesar, layar tersusun ulang rapi dan tidak terpotong."
+          }
         }
       }
     },
@@ -5157,6 +5427,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Näytä jakson mukaan"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat per Periode"
           }
         }
       }
@@ -5270,6 +5546,12 @@
             "state" : "translated",
             "value" : "Tallennustapa"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cara Pencatatan"
+          }
         }
       }
     },
@@ -5381,6 +5663,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tallennuksen tila"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Status Pencatatan"
           }
         }
       }
@@ -5494,6 +5782,12 @@
             "state" : "translated",
             "value" : "Näytä tallennuksen tila"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat Status Pencatatan"
+          }
         }
       }
     },
@@ -5605,6 +5899,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Palauta oletuskuva"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kembalikan ke Gambar Awal"
           }
         }
       }
@@ -5718,6 +6018,12 @@
             "state" : "translated",
             "value" : "Pois kytketyt näkymät voi aina avata yllä olevasta ”Näytä kaikki yhdessä” -kohdasta. Leimojen ja asetusten painikkeet näkyvät aina."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layar yang dimatikan tetap bisa dibuka kapan saja lewat \"Lihat Semua Sekaligus\" di atas. Tombol stempel dan pengaturan selalu terlihat."
+          }
         }
       }
     },
@@ -5829,6 +6135,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Loppu"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selesai"
           }
         }
       }
@@ -5942,6 +6254,12 @@
             "state" : "translated",
             "value" : "Myöhemmin"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nanti"
+          }
         }
       }
     },
@@ -6053,6 +6371,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tallentuu vain omaan iCloudiisi. Muut eivät näe sitä."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hanya tersimpan di iCloud pribadimu. Orang lain tidak bisa melihatnya."
           }
         }
       }
@@ -6167,6 +6491,12 @@
             "state" : "translated",
             "value" : "Poista kaikki tallenteeni kerralla"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Semua Catatanku Sekaligus"
+          }
         }
       }
     },
@@ -6278,6 +6608,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naapurustoni ääriviiva"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Garis Tepi Lingkunganku"
           }
         }
       }
@@ -6391,6 +6727,12 @@
             "state" : "translated",
             "value" : "Karttani"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peta Saya"
+          }
         }
       }
     },
@@ -6502,6 +6844,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avaa karttani"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka Peta Saya"
           }
         }
       }
@@ -6615,6 +6963,12 @@
             "state" : "translated",
             "value" : "Katso, kuinka karttasi piirtyy"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat Peta Kamu Digambar"
+          }
         }
       }
     },
@@ -6726,6 +7080,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esikatselu kartan piirtymisestä"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pratinjau peta kamu yang sedang digambar"
           }
         }
       }
@@ -6839,6 +7199,12 @@
             "state" : "translated",
             "value" : "Piirtämäni tiet"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jalan yang Kugambar"
+          }
         }
       }
     },
@@ -6950,6 +7316,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leimaamani paikat"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempat yang Kucap"
           }
         }
       }
@@ -7063,6 +7435,12 @@
             "state" : "translated",
             "value" : "Napauta, niin kartta kuultaa läpi"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk agar peta tembus pandang"
+          }
         }
       }
     },
@@ -7174,6 +7552,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Napauta leimataksesi nykyisen sijainnin"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk untuk mencap lokasi saat ini"
           }
         }
       }
@@ -7287,6 +7671,12 @@
             "state" : "translated",
             "value" : "Vahvista, oletko käynyt %lld paikassa"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Konfirmasi apakah kamu benar ke %lld tempat"
+          }
         }
       }
     },
@@ -7398,6 +7788,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Käyntikertoja"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jumlah Kunjungan"
           }
         }
       }
@@ -7511,6 +7907,12 @@
             "state" : "translated",
             "value" : "Kävin siellä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saya ke sana"
+          }
         }
       }
     },
@@ -7622,6 +8024,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Napauta uudelleen palataksesi paperiin. Kätevä, kun haluat tietää, missä olet."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk lagi untuk kembali ke kertas. Berguna saat ingin tahu kamu ada di mana."
           }
         }
       }
@@ -7735,6 +8143,12 @@
             "state" : "translated",
             "value" : "Ota uudelleen"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto Ulang"
+          }
         }
       }
     },
@@ -7846,6 +8260,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Paikka, jossa kävit uudelleen"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempat yang Kamu Datangi Lagi"
           }
         }
       }
@@ -7959,6 +8379,12 @@
             "state" : "translated",
             "value" : "Tämä on kirjattu vakiopaikaksi"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempat ini terdaftar sebagai tempat langganan"
+          }
         }
       }
     },
@@ -8070,6 +8496,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sulje"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tutup"
           }
         }
       }
@@ -8184,6 +8616,12 @@
             "state" : "translated",
             "value" : "Vaikka nostaisit kontrastia tai värien erottaminen olisi vaikeaa, tunnistat kartan tiet ja leimat."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meski kontras ditingkatkan atau sulit membedakan warna, kamu tetap bisa mengenali jalan dan stempel di peta."
+          }
         }
       }
     },
@@ -8296,6 +8734,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Käytä appia useammalla kielellä."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gunakan aplikasi dalam lebih banyak bahasa."
           }
         }
       }
@@ -8410,6 +8854,12 @@
             "state" : "translated",
             "value" : "Lisää kieliä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lebih Banyak Bahasa"
+          }
         }
       }
     },
@@ -8521,6 +8971,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lisää pari sanaa (valinnainen)"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambahkan beberapa kata (opsional)"
           }
         }
       }
@@ -8634,6 +9090,12 @@
             "state" : "translated",
             "value" : "Kokoelmasta näet tähän mennessä keräämäsi jalanjäljet"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di koleksi kamu bisa melihat jejak kaki yang sudah terkumpul sejauh ini"
+          }
         }
       }
     },
@@ -8745,6 +9207,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tätä ei voi perua."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak dapat dibatalkan."
           }
         }
       }
@@ -8858,6 +9326,12 @@
             "state" : "translated",
             "value" : "Napauta keskeyttääksesi tai jatkaaksesi"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ketuk untuk jeda atau lanjutkan pemutaran"
+          }
         }
       }
     },
@@ -8969,6 +9443,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Käyty %lld paikassa"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld tempat dikunjungi"
           }
         }
       }
@@ -9082,6 +9562,12 @@
             "state" : "translated",
             "value" : "Selvää kohdetta ei löytynyt, joten taustaa ei voitu poistaa. Mene lähemmäs esinettä ja yritä uudelleen."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada benda yang jelas sehingga latar tidak bisa dihapus. Dekatkan ke benda dan foto lagi."
+          }
         }
       }
     },
@@ -9193,6 +9679,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Viimeisin käynti"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kunjungan Terakhir"
           }
         }
       }
@@ -9306,6 +9798,12 @@
             "state" : "translated",
             "value" : "Mustekartta"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Peta Tinta"
+          }
         }
       }
     },
@@ -9417,6 +9915,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Muistiinpano"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catatan"
           }
         }
       }
@@ -9530,6 +10034,12 @@
             "state" : "translated",
             "value" : "Näytä kaikki yhdessä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat Semua Sekaligus"
+          }
         }
       }
     },
@@ -9641,6 +10151,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Asetetaan vesistöjä ja vuoria"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Menempatkan air dan gunung"
           }
         }
       }
@@ -9754,6 +10270,12 @@
             "state" : "translated",
             "value" : "Löytämättä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belum Ditemukan"
+          }
         }
       }
     },
@@ -9865,6 +10387,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jalanjäljet"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jejak Kaki"
           }
         }
       }
@@ -9978,6 +10506,12 @@
             "state" : "translated",
             "value" : "Jalanjälkien time-lapse"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse Jejak Kaki"
+          }
         }
       }
     },
@@ -10090,6 +10624,12 @@
             "state" : "translated",
             "value" : "Paljastettu maa %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wilayah terbuka %@"
+          }
         }
       }
     },
@@ -10201,6 +10741,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Näytä taustakartta läpi"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tembus Pandang Peta Latar"
           }
         }
       }
@@ -10315,6 +10861,12 @@
             "state" : "translated",
             "value" : "Varmuuskopiointi ja vienti"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cadangan dan Ekspor"
+          }
         }
       }
     },
@@ -10426,6 +10978,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hylkäämisen syyt"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alasan Dibuang"
           }
         }
       }
@@ -10539,6 +11097,12 @@
             "state" : "translated",
             "value" : "Versio %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versi %@"
+          }
         }
       }
     },
@@ -10650,6 +11214,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Näkymä"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampilan"
           }
         }
       }
@@ -10764,6 +11334,12 @@
             "state" : "translated",
             "value" : "Miellyttävät värit ja kontrasti"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Warna dan Kontras yang Nyaman"
+          }
         }
       }
     },
@@ -10875,6 +11451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Näytettävät tiet"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jalan yang Ditampilkan"
           }
         }
       }
@@ -10988,6 +11570,12 @@
             "state" : "translated",
             "value" : "Tyhjä paperi ei itse tiedä, mikä on missä.\nNykyinen sijaintisi on **ensimmäinen vertailupiste**."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kertas kosong tidak tahu sendiri mana yang mana.\nTempat kamu berada sekarang menjadi **titik acuan pertama**."
+          }
         }
       }
     },
@@ -11099,6 +11687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aloitetaan tyhjältä paperilta"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai dari Kertas Kosong"
           }
         }
       }
@@ -11212,6 +11806,12 @@
             "state" : "translated",
             "value" : "Käyttötilastot (kehittäjä)"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistik Penggunaan (Pengembang)"
+          }
         }
       }
     },
@@ -11323,6 +11923,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kuvat"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto"
           }
         }
       }
@@ -11436,6 +12042,12 @@
             "state" : "translated",
             "value" : "Poista kuva"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Foto"
+          }
         }
       }
     },
@@ -11547,6 +12159,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ota kuva"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ambil Foto"
           }
         }
       }
@@ -11660,6 +12278,12 @@
             "state" : "translated",
             "value" : "Lisää kuva"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah Foto"
+          }
         }
       }
     },
@@ -11771,6 +12395,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lisätään kuvaa"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Memasukkan foto"
           }
         }
       }
@@ -11884,6 +12514,12 @@
             "state" : "translated",
             "value" : "Kuvan tallennus epäonnistui"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto tidak dapat disimpan"
+          }
         }
       }
     },
@@ -11995,6 +12631,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poista"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus"
           }
         }
       }
@@ -12109,6 +12751,12 @@
             "state" : "translated",
             "value" : "Kävelymuistutus"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengingat Jalan Santai"
+          }
         }
       }
     },
@@ -12220,6 +12868,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uudet saavutetut paikat (%lld) leimataan kulkemallesi reitille"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld tempat yang baru dicapai dicap di jalur yang dilalui"
           }
         }
       }
@@ -12333,6 +12987,12 @@
             "state" : "translated",
             "value" : "Uutta"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Yang Baru"
+          }
         }
       }
     },
@@ -12444,6 +13104,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Asetukset"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pengaturan"
           }
         }
       }
@@ -12557,6 +13223,12 @@
             "state" : "translated",
             "value" : "Ota kamera käyttöön kohdassa Asetukset > 벅뚜벅뚜."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktifkan kamera di Pengaturan > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -12668,6 +13340,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avaa Asetukset"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka Pengaturan"
           }
         }
       }
@@ -12781,6 +13459,12 @@
             "state" : "translated",
             "value" : "Ota käyttöoikeudet käyttöön Asetuksissa"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktifkan Izin di Pengaturan"
+          }
         }
       }
     },
@@ -12892,6 +13576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voit avata tämän myös Asetuksista"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bisa juga dibuka dari Pengaturan"
           }
         }
       }
@@ -13005,6 +13695,12 @@
             "state" : "translated",
             "value" : "Nollaa laskenta"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Setel Ulang Hitungan"
+          }
         }
       }
     },
@@ -13116,6 +13812,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Muut kartat ovat jo piirtäneet maailman.\nTähän jäävät **vain paikat, joissa olet kulkenut omin jaloin**."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dunia sudah digambar oleh peta-peta lain.\nDi sini hanya tersisa **tempat yang kamu lalui dengan kakimu sendiri**."
           }
         }
       }
@@ -13229,6 +13931,12 @@
             "state" : "translated",
             "value" : "Kerätyt spotit"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spot yang Terkumpul"
+          }
         }
       }
     },
@@ -13340,6 +14048,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leima"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempel"
           }
         }
       }
@@ -13453,6 +14167,12 @@
             "state" : "translated",
             "value" : "Alku"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai"
+          }
         }
       }
     },
@@ -13564,6 +14284,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aloita"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mulai"
           }
         }
       }
@@ -13677,6 +14403,12 @@
             "state" : "translated",
             "value" : "Symboli"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simbol"
+          }
         }
       }
     },
@@ -13788,6 +14520,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Suurenna symboli"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perbesar Simbol"
           }
         }
       }
@@ -13902,6 +14640,12 @@
             "state" : "translated",
             "value" : "Jatka keskeneräistä päiväkirjaa"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lanjutkan Catatan Harian yang Belum Selesai"
+          }
         }
       }
     },
@@ -14013,6 +14757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pyyhkäise selataksesi kuin kortteja, kaksoisnapauta suurentaaksesi"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geser untuk membalik seperti kartu, ketuk dua kali untuk memperbesar"
           }
         }
       }
@@ -14126,6 +14876,12 @@
             "state" : "translated",
             "value" : "En"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bukan"
+          }
         }
       }
     },
@@ -14234,6 +14990,12 @@
           }
         },
         "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -14350,6 +15112,12 @@
             "state" : "translated",
             "value" : "Ei vielä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belum"
+          }
         }
       }
     },
@@ -14461,6 +15229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ei vielä käyty"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belum dikunjungi"
           }
         }
       }
@@ -14574,6 +15348,12 @@
             "state" : "translated",
             "value" : "Et ole vielä käynyt täällä. Se jää ”Haluan käydä” -paikaksi ja muuttuu käydyksi, kun saavut."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamu belum pernah ke sini. Tetap tercatat sebagai \"Ingin Dikunjungi\" dan menjadi tempat yang dikunjungi saat kamu tiba."
+          }
         }
       }
     },
@@ -14685,6 +15465,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hylättyjä pisteitä ei vielä ole"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belum ada titik yang dibuang"
           }
         }
       }
@@ -14798,6 +15584,12 @@
             "state" : "translated",
             "value" : "Ei vielä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Belum"
+          }
         }
       }
     },
@@ -14909,6 +15701,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Opas"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Panduan"
           }
         }
       }
@@ -15023,6 +15821,12 @@
             "state" : "translated",
             "value" : "Appia voi käyttää myös englanniksi."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikasi juga bisa dipakai dalam bahasa Inggris."
+          }
         }
       }
     },
@@ -15134,6 +15938,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avaa appi kerran"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buka aplikasi sekali"
           }
         }
       }
@@ -15247,6 +16057,12 @@
             "state" : "translated",
             "value" : "Mikä päivä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hari yang mana"
+          }
         }
       }
     },
@@ -15358,6 +16174,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kummin tahansa kaikki vastaanotetut sijainnit tallennetaan. Vain heikon tarkkuuden pisteitä ei piirretä karttaan."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Apa pun pilihannya, semua lokasi yang diterima tetap disimpan. Hanya titik dengan akurasi rendah yang tidak digambar di peta."
           }
         }
       }
@@ -15471,6 +16293,12 @@
             "state" : "translated",
             "value" : "Anonyymisti lasketaan vain, mitä näkymiä käytetään. Kävelemiäsi paikkoja ja päiväkirjatekstejä ei lähetetä."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hanya dihitung secara anonim layar mana yang dipakai. Tempat yang kamu lalui dan isi catatan harian tidak dikirim."
+          }
         }
       }
     },
@@ -15582,6 +16410,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Viivyit täällä %@"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kamu berada di sini selama %@"
           }
         }
       }
@@ -15695,6 +16529,12 @@
             "state" : "translated",
             "value" : "Säilytä tämä paikka"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan Tempat Ini"
+          }
         }
       }
     },
@@ -15806,6 +16646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Merkitse tähän"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catat di Sini"
           }
         }
       }
@@ -15919,6 +16765,12 @@
             "state" : "translated",
             "value" : "Sopiiko, ettei tätä paikkaa tallenneta?"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak apa-apa jika tempat ini tidak dicatat?"
+          }
         }
       }
     },
@@ -16030,6 +16882,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Missä tämä oli?"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini di mana ya?"
           }
         }
       }
@@ -16143,6 +17001,12 @@
             "state" : "translated",
             "value" : "Vie videona"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekspor sebagai Video"
+          }
         }
       }
     },
@@ -16254,6 +17118,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Luodaan videota %lld %%"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Membuat video %lld%%"
           }
         }
       }
@@ -16368,6 +17238,12 @@
             "state" : "translated",
             "value" : "Englannin tuki"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dukungan Bahasa Inggris"
+          }
         }
       }
     },
@@ -16479,6 +17355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Esim. koti, työ, kantakahvila"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mis. rumah, kantor, kafe langganan"
           }
         }
       }
@@ -16592,6 +17474,12 @@
             "state" : "translated",
             "value" : "Tänään %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hari ini %@"
+          }
         }
       }
     },
@@ -16703,6 +17591,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tämän päivän tie"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jalan yang Ditarik Hari Ini"
           }
         }
       }
@@ -16816,6 +17710,12 @@
             "state" : "translated",
             "value" : "Kuva lisättiin tämän päivän päiväkirjaan"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto ditambahkan ke catatan harian hari ini"
+          }
         }
       }
     },
@@ -16927,6 +17827,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Toista tämä päivä"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Putar Hari Ini"
           }
         }
       }
@@ -17040,6 +17946,12 @@
             "state" : "translated",
             "value" : "Tänään et ole vielä käynyt missään"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hari ini belum ada tempat yang dikunjungi"
+          }
         }
       }
     },
@@ -17151,6 +18063,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tänään et ole vielä pysähtynyt missään"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hari ini belum ada tempat yang disinggahi"
           }
         }
       }
@@ -17264,6 +18182,12 @@
             "state" : "translated",
             "value" : "Missä tutkit tänään?"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ke mana kamu menjelajah hari ini?"
+          }
         }
       }
     },
@@ -17375,6 +18299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Päivän jalanjäljet"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jejak Kaki Hari Ini"
           }
         }
       }
@@ -17488,6 +18418,12 @@
             "state" : "translated",
             "value" : "Päivän tutkimukset"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Penjelajahan Hari Ini"
+          }
         }
       }
     },
@@ -17599,6 +18535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Valmis"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Selesai"
           }
         }
       }
@@ -17713,6 +18655,12 @@
             "state" : "translated",
             "value" : "Vähennä liikettä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kurangi Gerakan"
+          }
         }
       }
     },
@@ -17825,6 +18773,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kun Vähennä liikettä on päällä, kartta ja näytön tehosteet rauhoittuvat."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dengan Kurangi Gerakan aktif, peta dan efek layar menjadi lebih tenang."
           }
         }
       }
@@ -17939,6 +18893,12 @@
             "state" : "translated",
             "value" : "Halutessasi voit poistaa apissa kaikki kulkemasi tiet ja päiväkirjan."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jika mau, kamu bisa menghapus semua jalan yang dilalui dan catatan harian di dalam aplikasi."
+          }
         }
       }
     },
@@ -18050,6 +19010,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kun asetat sijainnin tilaan ”Aina” ja otat käyttöön Liike ja kunto, kävelysi tallentuu ilman että avaat appia."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Atur lokasi ke \"Selalu\" dan aktifkan Gerakan & Kebugaran, maka jalan kakimu tercatat tanpa membuka aplikasi."
           }
         }
       }
@@ -18163,6 +19129,12 @@
             "state" : "translated",
             "value" : "Tältä jaksolta ei ole jalanjälkiä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada jejak kaki pada periode ini"
+          }
         }
       }
     },
@@ -18274,6 +19246,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Näytä tämä jakso"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat Periode Ini"
           }
         }
       }
@@ -18387,6 +19365,12 @@
             "state" : "translated",
             "value" : "Tänä päivänä kuvatut paikat"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempat yang difoto pada hari ini"
+          }
         }
       }
     },
@@ -18498,6 +19482,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tältä päivältä ei ole kirjattu askelia"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada langkah tercatat pada hari ini"
           }
         }
       }
@@ -18611,6 +19601,12 @@
             "state" : "translated",
             "value" : "Tältä päivältä ei ole jalanjälkiä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tidak ada jejak kaki pada hari ini"
+          }
         }
       }
     },
@@ -18722,6 +19718,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poista tämä leima"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Stempel Ini"
           }
         }
       }
@@ -18835,6 +19837,12 @@
             "state" : "translated",
             "value" : "Käytä tätä symbolia"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pakai Simbol Ini"
+          }
         }
       }
     },
@@ -18946,6 +19954,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Poista jalanjäljet tästä paikasta"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus Jejak Kaki di Tempat Ini"
           }
         }
       }
@@ -19059,6 +20073,12 @@
             "state" : "translated",
             "value" : "Paikan nimi (esim. työ, kantakahvila)"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nama tempat ini (mis. kantor, kafe langganan)"
+          }
         }
       }
     },
@@ -19170,6 +20190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aseta ensimmäinen leima tälle paperille"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bubuhkan Stempel Pertama di Kertas Ini"
           }
         }
       }
@@ -19283,6 +20309,12 @@
             "state" : "translated",
             "value" : "Nimi"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nama"
+          }
         }
       }
     },
@@ -19394,6 +20426,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anna nimi"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beri Nama"
           }
         }
       }
@@ -19507,6 +20545,12 @@
             "state" : "translated",
             "value" : "Lisää kuva"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tambah Gambar"
+          }
         }
       }
     },
@@ -19619,6 +20663,12 @@
             "state" : "translated",
             "value" : "Lähde nyt kävelemään"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sekarang Cobalah Berjalan"
+          }
         }
       }
     },
@@ -19730,6 +20780,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lähde nyt kävelemään.\nPaikat, joiden ohi kuljet, painautuvat tälle paperille piste kerrallaan."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sekarang cobalah berjalan.\nTempat yang kamu lalui tercap di kertas ini satu titik demi satu titik."
           }
         }
       }
@@ -19844,6 +20900,12 @@
             "state" : "translated",
             "value" : "Jos appi sulkeutuu päiväkirjaa kirjoittaessasi, kirjoittamasi säilyy."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jika aplikasi tertutup saat menulis catatan harian, tulisanmu tetap ada."
+          }
         }
       }
     },
@@ -19955,6 +21017,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Päiväkirja"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catatan"
           }
         }
       }
@@ -20068,6 +21136,12 @@
             "state" : "translated",
             "value" : "Kun **saavut paikkaan, jossa käyt usein, leimaa siellä vielä kerran**.\nKahdella vertailupisteellä tyhjäkin paperi löytää suunnan."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saat **tiba di tempat yang sering kamu datangi, cap sekali lagi di sana**.\nDengan dua titik acuan, kertas kosong pun tahu arah."
+          }
         }
       }
     },
@@ -20179,6 +21253,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Yritä hetken kuluttua uudelleen tai paina karttaa pitkään ja leimaa, mihin haluat."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Coba lagi sebentar lagi, atau tekan lama peta untuk mencap di tempat yang kamu mau."
           }
         }
       }
@@ -20292,6 +21372,12 @@
             "state" : "translated",
             "value" : "Tallenna"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Simpan"
+          }
         }
       }
     },
@@ -20403,6 +21489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Takaisin koko jaksoon"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kembali ke Seluruh Periode"
           }
         }
       }
@@ -20516,6 +21608,12 @@
             "state" : "translated",
             "value" : "Pisteiden laskenta"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hitung Titik"
+          }
         }
       }
     },
@@ -20627,6 +21725,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Myös heikon tarkkuuden pisteet tallennetaan. Nyt niitä ei piirretä karttaan, mutta ne voi ottaa käyttöön, kun korjaus paranee."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Titik dengan akurasi rendah tetap disimpan. Saat ini belum digambar di peta, tetapi bisa dipakai saat koreksinya membaik."
           }
         }
       }
@@ -20740,6 +21844,12 @@
             "state" : "translated",
             "value" : "Nykytila"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Status Saat Ini"
+          }
         }
       }
     },
@@ -20851,6 +21961,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Etsitään sijaintiasi"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mencari lokasimu"
           }
         }
       }
@@ -20964,6 +22080,12 @@
             "state" : "translated",
             "value" : "Jätä merkki tähän"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tandai Tempat Ini"
+          }
         }
       }
     },
@@ -21075,6 +22197,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leimaa nykyiseen sijaintiin"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bubuhkan Stempel di Lokasi Saat Ini"
           }
         }
       }
@@ -21188,6 +22316,12 @@
             "state" : "translated",
             "value" : "Leimaa tähän"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cap di Sini"
+          }
         }
       }
     },
@@ -21299,6 +22433,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Paikat, joiden ohi kuljet, painautuvat tälle paperille piste kerrallaan.\nAutolla tai metrolla kuljettuja teitä ei piirretä."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempat yang kamu lalui tercap di kertas ini satu titik demi satu titik.\nJalan yang dilalui dengan mobil atau kereta bawah tanah tidak digambar."
           }
         }
       }
@@ -21412,6 +22552,12 @@
             "state" : "translated",
             "value" : "Valitse kartan painikkeet Asetuksissa"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih tombol peta di Pengaturan"
+          }
         }
       }
     },
@@ -21523,6 +22669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kartan tyyli"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gaya Peta"
           }
         }
       }
@@ -21636,6 +22788,12 @@
             "state" : "translated",
             "value" : "Kartan mittakaava. Yksi palkki vastaa %@"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skala peta. Satu batang sama dengan %@"
+          }
         }
       }
     },
@@ -21747,6 +22905,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Valitse, mitkä painikkeet leijuvat kartalla, ja avaa pois kytketyt näkymät suoraan Asetuksista."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih tombol yang melayang di peta, dan buka layar yang dimatikan langsung dari Pengaturan."
           }
         }
       }
@@ -21860,6 +23024,12 @@
             "state" : "translated",
             "value" : "Etukäteen kartalle leimaamiasi paikkoja. Kun saavut, niistä tulee käytyjä paikkoja."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tempat yang kamu cap lebih dulu di peta. Saat kamu tiba, jadi tempat yang dikunjungi."
+          }
         }
       }
     },
@@ -21971,6 +23141,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Näytä kartalla"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tampilkan di Peta"
           }
         }
       }
@@ -22084,6 +23260,12 @@
             "state" : "translated",
             "value" : "Näytä kartalla"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lihat di Peta"
+          }
         }
       }
     },
@@ -22195,6 +23377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kartalla se näyttää tältä"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beginilah tampilannya di peta"
           }
         }
       }
@@ -22308,6 +23496,12 @@
             "state" : "translated",
             "value" : "Tyhjennä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hapus"
+          }
         }
       }
     },
@@ -22419,6 +23613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tuki"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dukungan"
           }
         }
       }
@@ -22532,6 +23732,12 @@
             "state" : "translated",
             "value" : "Valitse jokin, mikä kelpaa vertailupisteeksi, esim. koti tai työ."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pilih sesuatu yang bisa jadi acuan, seperti rumah atau kantor."
+          }
         }
       }
     },
@@ -22643,6 +23849,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ota"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ambil"
           }
         }
       }
@@ -22756,6 +23968,12 @@
             "state" : "translated",
             "value" : "Leimauspäivä"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tanggal Cap"
+          }
         }
       }
     },
@@ -22867,6 +24085,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Leimattu"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tercap"
           }
         }
       }
@@ -22980,6 +24204,12 @@
             "state" : "translated",
             "value" : "Autolla tai metrolla kuljettuja teitä ei piirretä.\nVain kävely painaa pisteen kerrallaan."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jalan yang dilalui dengan mobil atau kereta bawah tanah tidak digambar.\nHanya berjalan kaki yang mencap satu titik demi satu titik."
+          }
         }
       }
     },
@@ -23091,6 +24321,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vain kehyksen sisällä oleva jää jäljelle, tausta häviää"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hanya yang ada di dalam bingkai yang tersisa, latarnya dihapus"
           }
         }
       }
@@ -23204,6 +24440,12 @@
             "state" : "translated",
             "value" : "Ensimmäinen"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pertama"
+          }
         }
       }
     },
@@ -23315,6 +24557,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ensimmäistä kertaa kuljetut tiet"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jalan yang Pertama Kali Dilalui"
           }
         }
       }
@@ -23428,6 +24676,12 @@
             "state" : "translated",
             "value" : "Tähän paikkaan astut ensimmäistä kertaa"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ini tempat yang baru pertama kali kamu injak"
+          }
         }
       }
     },
@@ -23539,6 +24793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Peruuta"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Batal"
           }
         }
       }
@@ -23652,6 +24912,12 @@
             "state" : "translated",
             "value" : "Ota käyttöön"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktifkan"
+          }
         }
       }
     },
@@ -23763,6 +25029,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Suurenna"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Perbesar"
           }
         }
       }
@@ -23877,6 +25149,12 @@
             "state" : "translated",
             "value" : "Näkymät suurelle tekstille"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layar untuk Teks Besar"
+          }
         }
       }
     },
@@ -23988,6 +25266,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Time-lapse"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse"
           }
         }
       }
@@ -24101,6 +25385,12 @@
             "state" : "translated",
             "value" : "Tutki"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jelajah"
+          }
         }
       }
     },
@@ -24213,6 +25503,12 @@
             "state" : "translated",
             "value" : "Tutkimusloki"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catatan Penjelajahan"
+          }
         }
       }
     },
@@ -24324,6 +25620,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tutkimuspäiväkirja"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Catatan Penjelajahan"
           }
         }
       }
@@ -24438,6 +25740,12 @@
             "state" : "translated",
             "value" : "Taitettavan iPhonen näyttö"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Layar iPhone Lipat"
+          }
         }
       }
     },
@@ -24551,6 +25859,12 @@
             "state" : "translated",
             "value" : "Taitettavalla iPhonella näet kartan ja tallenteet kahdessa osassa."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di iPhone lipat, lihat peta dan catatan dalam dua panel."
+          }
         }
       }
     },
@@ -24662,6 +25976,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Päivän time-lapse"
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse Sehari"
           }
         }
       }
@@ -24776,6 +26096,12 @@
             "state" : "translated",
             "value" : "Päivän päätteeksi ilmoitus kertoo tänään kulkemasi reitin."
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Di akhir hari, notifikasi memberi tahu jalan yang kamu lalui hari ini."
+          }
         }
       }
     },
@@ -24887,6 +26213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jos viivyt samassa paikassa yli %lld minuuttia,\npaikka ilmestyy päivän jalanjälkiin."
+          }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jika kamu berada di satu tempat lebih dari %lld menit,\ntempat itu muncul di jejak kaki hari ini."
           }
         }
       }
@@ -25000,6 +26332,12 @@
             "state" : "translated",
             "value" : "Sijaintiasi ei ole vielä löydetty"
           }
+        },
+        "id" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lokasi belum ditemukan"
+          }
         }
       }
     },
@@ -25108,6 +26446,12 @@
           }
         },
         "fi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "id" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
