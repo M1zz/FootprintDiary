@@ -1407,3 +1407,67 @@ Wybierz między priorytetem dokładności a priorytetem baterii. Przy prioryteci
 Twoje zapisy w Twoim iCloud
 Kroki, pieczątki, dziennik i zdjęcia są przechowywane w Twoim osobistym iCloud i podążają za Tobą po zmianie urządzenia.
 Anonimowe statystyki użycia nigdy nie zawierają współrzędnych lokalizacji, tekstów dziennika, nazw miejsc ani zdjęć.
+
+## sv
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/sv/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/sv/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/sv/
+
+### 이름
+
+벅뚜벅뚜: Karta av dina steg
+
+### 부제
+
+Bara nya vägar färgas
+
+### 키워드
+
+promenad,vandring,gps,spårning,dagbok,resa,steg,utforska,stämplar,område,stad,rutt,motion
+
+### 프로모션 텍스트
+
+En tom karta där resor med bil eller tunnelbana aldrig ritas. Bara vägar du går för första gången gör den större. Vart drar du en ny väg i dag?
+
+### 설명
+
+En karta som börjar som ett tomt papper. Bara platserna du gått på med egna fötter fylls i, punkt för punkt.
+Vägar du åker med bil eller tunnelbana ritas inte, och även om du går samma väg hundra gånger växer inte kartan. För att utvidga den måste du ta nya vägar.
+
+I dag och tidigare steg i olika färger
+Där du gick i dag stämplas med rött bläck, tidigare steg med indigo. Ju oftare du passerar en plats, desto mörkare blir den, så din dagliga radie visar sig av sig själv.
+Platser du inte trampat på på över tre månader raderas inte utan bleknar till grått.
+
+Stämplar för besökta platser och platser du vill besöka
+Stämpla där du står, eller håll ned på kartan för att sätta en stämpel var du vill. Det finns 212 stämplar att välja mellan, ordnade efter kategori.
+En stämpel på en plats där du aldrig gått blir kvar som en plats att besöka och blir en besökt plats när du verkligen närmar dig.
+Fotografera en butiksskylt med kameran så klipps bakgrunden bort och skylten reser sig som ett klistermärke som bara hör till den platsen.
+
+Dagens fotspår
+Platserna där du stannade i dag radas upp i tidsordning, tillsammans med hur långt du gick mellan dem. Om det finns en stämpel där dina steg stannade frågar appen om du var där och räknar besöket.
+
+Pionjärkompass
+Delar in omgivningen runt där du står i åtta riktningar och pekar ut den du gått minst åt. Använd den när du ska välja riktning för nästa promenad.
+
+Film och kalender
+Välj en period och se hur din karta ritas som en video du kan exportera.
+Kalendern ritar formen på dagens promenad i stället för en siffra. Du kan också föra dagbok varje dag med text och foton.
+
+Widgetar
+Hemskärmen visar formen och längden på vägen du ritade i dag, och låsskärmen dagens sträcka på en enda rad med siffror.
+
+Loggningssätt
+Välj mellan noggrannhet först och batteri först. Med noggrannhet först loggas dina steg även när appen är stängd.
+
+Dina loggar i din iCloud
+Steg, stämplar, dagbok och foton sparas i din personliga iCloud och följer med när du byter enhet.
+Anonym användningsstatistik innehåller aldrig positionskoordinater, dagbokstext, platsnamn eller foton.

@@ -134,6 +134,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -269,6 +275,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aparat służy do zapisania zdjęcia miejsca i wycięcia fotografowanego obiektu w naklejkę, którą można postawić na mapie."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kameran används för att spara ett foto av platsen och klippa ut det du fotograferar till ett klistermärke som kan läggas på kartan."
           }
         }
       }
@@ -406,6 +418,12 @@
             "state" : "translated",
             "value" : "Uprawnienie „Zawsze” jest potrzebne, aby automatycznie zapisywać ślady przy każdej zmianie miejsca."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behörigheten ”Alltid” behövs för att automatiskt logga dina fotspår varje gång du byter plats."
+          }
         }
       }
     },
@@ -542,6 +560,12 @@
             "state" : "translated",
             "value" : "Uprawnienie do lokalizacji jest potrzebne, aby zapisać Twoją obecną pozycję jako ślad na mapie."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platsbehörighet behövs för att logga din nuvarande position som ett fotspår på kartan."
+          }
         }
       }
     },
@@ -677,6 +701,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dane o ruchu służą do sprawdzenia, czy poruszałeś się pieszo, czy biegiem, aby nie zapisywać jazdy pojazdem."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rörelsedata används för att se om du rörde dig till fots eller springande, så att färd i fordon inte loggas."
           }
         }
       }

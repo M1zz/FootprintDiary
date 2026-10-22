@@ -134,6 +134,12 @@
             "state" : "translated",
             "value" : "%@ · Ślady %lld/%lld"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Fotspår %lld/%lld"
+          }
         }
       }
     },
@@ -269,6 +275,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Przeszedłeś %@ w %@"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gick %@ på %@"
           }
         }
       }
@@ -406,6 +418,12 @@
             "state" : "translated",
             "value" : "Przeszedłeś %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gick %@"
+          }
         }
       }
     },
@@ -542,6 +560,12 @@
             "state" : "translated",
             "value" : "Zebrano: %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ samlad"
+          }
         }
       }
     },
@@ -674,6 +698,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol: %@"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Symbol: %@"
@@ -814,6 +844,12 @@
             "state" : "translated",
             "value" : "%@, rodzajów: %lld"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld sorter"
+          }
         }
       }
     },
@@ -946,6 +982,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@×"
@@ -1086,6 +1128,12 @@
             "state" : "translated",
             "value" : "W kierunku %@ chodziłeś najmniej"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Åt %@ har du gått minst"
+          }
         }
       }
     },
@@ -1221,6 +1269,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld m stąd"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m bort"
           }
         }
       }
@@ -1358,6 +1412,12 @@
             "state" : "translated",
             "value" : "W promieniu %lld m migawka się otwiera"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inom %lld m öppnas slutaren"
+          }
         }
       }
     },
@@ -1493,6 +1553,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Rodzajów: %lld"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld sorter"
           }
         }
       }
@@ -1630,6 +1696,12 @@
             "state" : "translated",
             "value" : "Miejsc: %lld"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld platser"
+          }
         }
       }
     },
@@ -1765,6 +1837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld razy"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld gånger"
           }
         }
       }
@@ -1902,6 +1980,12 @@
             "state" : "translated",
             "value" : "Wyszedłeś %lld razy"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gick ut %lld gånger"
+          }
         }
       }
     },
@@ -2038,6 +2122,12 @@
             "state" : "translated",
             "value" : "%lld. odkrycie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upptäckt nr %lld"
+          }
         }
       }
     },
@@ -2173,6 +2263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dojdź z AR"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hitta dit med AR"
           }
         }
       }
@@ -2311,6 +2407,12 @@
             "state" : "translated",
             "value" : "Blokada Face ID"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID-lås"
+          }
         }
       }
     },
@@ -2447,6 +2549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zablokuj aplikację za pomocą Face ID lub Touch ID, aby chronić miejsca, w których byłeś, i swój dziennik."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lås appen med Face ID eller Touch ID för att skydda var du varit och din dagbok."
           }
         }
       }
@@ -2585,6 +2693,12 @@
             "state" : "translated",
             "value" : "Zapytaj Siri, ile dziś przeszedłeś."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fråga Siri hur långt du gått i dag."
+          }
         }
       }
     },
@@ -2721,6 +2835,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri i Skróty"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri och Genvägar"
           }
         }
       }
@@ -2859,6 +2979,12 @@
             "state" : "translated",
             "value" : "VoiceOver czyta wszystkie przyciski i szczegóły mapy oraz zapisów, w odpowiedniej kolejności."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver läser upp alla knappar och detaljer på kartan och i loggarna, i rätt ordning."
+          }
         }
       }
     },
@@ -2996,6 +3122,12 @@
             "state" : "translated",
             "value" : "Wygodniejszy VoiceOver"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bättre VoiceOver"
+          }
         }
       }
     },
@@ -3131,6 +3263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Brak pieczątek pasujących do „%@”"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga stämplar matchar ”%@”"
           }
         }
       }
@@ -3268,6 +3406,12 @@
             "state" : "translated",
             "value" : "To było miejsce, do którego chciałeś pójść. Zapisać jako odwiedzone?"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det var en plats du tänkte besöka. Ska den sparas som besökt?"
+          }
         }
       }
     },
@@ -3403,6 +3547,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jeszcze nie odwiedzono"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inte besökt än"
           }
         }
       }
@@ -3540,6 +3690,12 @@
             "state" : "translated",
             "value" : "Do odwiedzenia"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vill besöka"
+          }
         }
       }
     },
@@ -3675,6 +3831,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Miejsce oznaczone pieczątką jako cel wizyty"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En plats du stämplat som besöksmål"
           }
         }
       }
@@ -3812,6 +3974,12 @@
             "state" : "translated",
             "value" : "Najczęstszy powód: %@ (%lld razy). %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vanligaste orsak: %@ (%lld gånger). %@"
+          }
         }
       }
     },
@@ -3947,6 +4115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategoria"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategori"
           }
         }
       }
@@ -4084,6 +4258,12 @@
             "state" : "translated",
             "value" : "Kompas pioniera"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pionjärkompass"
+          }
         }
       }
     },
@@ -4219,6 +4399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pomiń"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoppa över"
           }
         }
       }
@@ -4356,6 +4542,12 @@
             "state" : "translated",
             "value" : "Zapis spacerów"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Promenadlogg"
+          }
         }
       }
     },
@@ -4491,6 +4683,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zapis spacerów jest wyłączony. Nawet jeśli pójdziesz, nie zostanie żaden ślad."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Promenadloggen är avstängd. Även om du går lämnas inget spår."
           }
         }
       }
@@ -4628,6 +4826,12 @@
             "state" : "translated",
             "value" : "Pieczątki stawiane podczas spaceru gromadzą się tu w kolejności czasu.\nMiejsca, w których się zatrzymujesz, zapisują się same, nawet bez pieczątki."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stämplar du sätter medan du går samlas här i tidsordning.\nPlatser där du stannar sparas av sig själva, utan stämpel."
+          }
         }
       }
     },
@@ -4763,6 +4967,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Miejsca, do których doszedłeś pieszo"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platser du nått till fots"
           }
         }
       }
@@ -4900,6 +5110,12 @@
             "state" : "translated",
             "value" : "Gdy dojdziesz pieszo, będziesz mógł zrobić tam zdjęcie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "När du kommer fram till fots kan du ta ett foto på platsen"
+          }
         }
       }
     },
@@ -5036,6 +5252,12 @@
             "state" : "translated",
             "value" : "Jeśli szedłeś, a na mapie nie pojawiła się linia, tutaj zobaczysz powód."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om du gick men ingen linje ritades på kartan kan du se orsaken här."
+          }
         }
       }
     },
@@ -5171,6 +5393,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gdy idziesz, przebyte drogi nakładają się po kolei."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "När du går läggs vägarna du passerat på varandra i ordning."
           }
         }
       }
@@ -5309,6 +5537,12 @@
             "state" : "translated",
             "value" : "Zapisz przebyte drogi i dziennik do pliku i przywróć je później."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara vägarna du gått och din dagbok i en fil och hämta tillbaka dem senare."
+          }
         }
       }
     },
@@ -5444,6 +5678,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Na mapie zostają tylko drogi przebyte i pieczątki postawione w wybranym okresie."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På kartan blir bara vägarna du gått och stämplarna du satt under vald period kvar."
           }
         }
       }
@@ -5581,6 +5821,12 @@
             "state" : "translated",
             "value" : "Nie interesuje mnie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inte intresserad"
+          }
         }
       }
     },
@@ -5716,6 +5962,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "W porządku"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det går bra"
           }
         }
       }
@@ -5853,6 +6105,12 @@
             "state" : "translated",
             "value" : "Zobacz, jak powstaje"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se hur den ritas"
+          }
         }
       }
     },
@@ -5988,6 +6246,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mapa rysunkowa"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ritad karta"
           }
         }
       }
@@ -6126,6 +6390,12 @@
             "state" : "translated",
             "value" : "Nawet przy większym tekście ekrany układają się czytelnie zamiast się ucinać."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Även med större text ordnas skärmarna snyggt om i stället för att klippas av."
+          }
         }
       }
     },
@@ -6261,6 +6531,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pokaż według okresu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visa per period"
           }
         }
       }
@@ -6398,6 +6674,12 @@
             "state" : "translated",
             "value" : "Sposób zapisu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loggningssätt"
+          }
         }
       }
     },
@@ -6533,6 +6815,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stan zapisu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loggningsstatus"
           }
         }
       }
@@ -6670,6 +6958,12 @@
             "state" : "translated",
             "value" : "Zobacz stan zapisu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visa loggningsstatus"
+          }
         }
       }
     },
@@ -6805,6 +7099,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Przywróć obraz domyślny"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Återställ standardbilden"
           }
         }
       }
@@ -6942,6 +7242,12 @@
             "state" : "translated",
             "value" : "Wyłączone ekrany zawsze otworzysz przez „Pokaż wszystko razem” powyżej. Przyciski pieczątek i ustawień są zawsze widoczne."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avstängda skärmar kan alltid öppnas via ”Visa allt samlat” ovan. Knapparna för stämplar och inställningar syns alltid."
+          }
         }
       }
     },
@@ -7077,6 +7383,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Koniec"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slut"
           }
         }
       }
@@ -7214,6 +7526,12 @@
             "state" : "translated",
             "value" : "Później"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senare"
+          }
         }
       }
     },
@@ -7349,6 +7667,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zapisywane tylko w Twoim osobistym iCloud. Nikt inny tego nie widzi."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sparas bara i din personliga iCloud. Ingen annan kan se det."
           }
         }
       }
@@ -7487,6 +7811,12 @@
             "state" : "translated",
             "value" : "Usuń wszystkie moje zapisy naraz"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera alla mina loggar på en gång"
+          }
         }
       }
     },
@@ -7622,6 +7952,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zarys mojej okolicy"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kontur av mitt område"
           }
         }
       }
@@ -7759,6 +8095,12 @@
             "state" : "translated",
             "value" : "Moja mapa"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Min karta"
+          }
         }
       }
     },
@@ -7894,6 +8236,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otwórz moją mapę"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna min karta"
           }
         }
       }
@@ -8031,6 +8379,12 @@
             "state" : "translated",
             "value" : "Zobacz, jak powstaje Twoja mapa"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se hur din karta ritas"
+          }
         }
       }
     },
@@ -8166,6 +8520,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Podgląd rysowania Twojej mapy"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förhandsvisning av hur din karta ritas"
           }
         }
       }
@@ -8303,6 +8663,12 @@
             "state" : "translated",
             "value" : "Drogi, które narysowałem"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vägar jag ritat"
+          }
         }
       }
     },
@@ -8438,6 +8804,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Miejsca, które oznaczyłem pieczątką"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platser jag stämplat"
           }
         }
       }
@@ -8575,6 +8947,12 @@
             "state" : "translated",
             "value" : "Dotknij, aby mapa prześwitywała"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck så syns kartan igenom"
+          }
         }
       }
     },
@@ -8710,6 +9088,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dotknij, aby postawić pieczątkę w obecnym miejscu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck för att stämpla din nuvarande position"
           }
         }
       }
@@ -8847,6 +9231,12 @@
             "state" : "translated",
             "value" : "Do potwierdzenia, czy byłeś w %lld miejscach"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekräfta om du varit på %lld platser"
+          }
         }
       }
     },
@@ -8982,6 +9372,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Liczba wizyt"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Antal besök"
           }
         }
       }
@@ -9119,6 +9515,12 @@
             "state" : "translated",
             "value" : "Byłem tam"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jag var där"
+          }
         }
       }
     },
@@ -9254,6 +9656,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dotknij ponownie, aby wrócić do papieru. Przydatne, gdy chcesz sprawdzić, gdzie jesteś."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck igen för att gå tillbaka till pappret. Bra när du vill se var du ungefär är."
           }
         }
       }
@@ -9391,6 +9799,12 @@
             "state" : "translated",
             "value" : "Zrób ponownie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta om"
+          }
         }
       }
     },
@@ -9526,6 +9940,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Miejsce, do którego wróciłeś"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En plats du kommit tillbaka till"
           }
         }
       }
@@ -9663,6 +10083,12 @@
             "state" : "translated",
             "value" : "To miejsce jest zapisane jako stałe"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det här är registrerat som en stamplats"
+          }
         }
       }
     },
@@ -9798,6 +10224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zamknij"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stäng"
           }
         }
       }
@@ -9936,6 +10368,12 @@
             "state" : "translated",
             "value" : "Nawet przy wyższym kontraście lub trudności w rozróżnianiu kolorów rozpoznasz drogi i pieczątki na mapie."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Även med högre kontrast eller svårt att skilja färger kan du känna igen vägarna och stämplarna på kartan."
+          }
         }
       }
     },
@@ -10072,6 +10510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Korzystaj z aplikacji w większej liczbie języków."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Använd appen på fler språk."
           }
         }
       }
@@ -10210,6 +10654,12 @@
             "state" : "translated",
             "value" : "Więcej języków"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fler språk"
+          }
         }
       }
     },
@@ -10345,6 +10795,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dopisz kilka słów (opcjonalnie)"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till några ord (valfritt)"
           }
         }
       }
@@ -10482,6 +10938,12 @@
             "state" : "translated",
             "value" : "W kolekcji zobaczysz ślady zebrane do tej pory"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I samlingen ser du fotspåren du samlat hittills"
+          }
         }
       }
     },
@@ -10617,6 +11079,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nie można tego cofnąć."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det går inte att ångra."
           }
         }
       }
@@ -10754,6 +11222,12 @@
             "state" : "translated",
             "value" : "Dotknij, aby wstrzymać lub wznowić"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tryck för att pausa eller fortsätta"
+          }
         }
       }
     },
@@ -10889,6 +11363,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Odwiedzone miejsca: %lld"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld platser besökta"
           }
         }
       }
@@ -11026,6 +11506,12 @@
             "state" : "translated",
             "value" : "Nie znaleziono wyraźnego obiektu, więc nie udało się usunąć tła. Podejdź bliżej do przedmiotu i spróbuj jeszcze raz."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inget tydligt hittades, så bakgrunden gick inte att ta bort. Gå närmare föremålet och ta om bilden."
+          }
         }
       }
     },
@@ -11161,6 +11647,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ostatnia wizyta"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Senaste besök"
           }
         }
       }
@@ -11298,6 +11790,12 @@
             "state" : "translated",
             "value" : "Mapa tuszem"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bläckkarta"
+          }
         }
       }
     },
@@ -11433,6 +11931,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notatka"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anteckning"
           }
         }
       }
@@ -11570,6 +12074,12 @@
             "state" : "translated",
             "value" : "Pokaż wszystko razem"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visa allt samlat"
+          }
         }
       }
     },
@@ -11705,6 +12215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Układam wody i góry"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placerar vatten och berg"
           }
         }
       }
@@ -11842,6 +12358,12 @@
             "state" : "translated",
             "value" : "Nieodkryte"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ej upptäckt"
+          }
         }
       }
     },
@@ -11977,6 +12499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ślady"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotspår"
           }
         }
       }
@@ -12114,6 +12642,12 @@
             "state" : "translated",
             "value" : "Timelapse śladów"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotspårens timelapse"
+          }
         }
       }
     },
@@ -12250,6 +12784,12 @@
             "state" : "translated",
             "value" : "Odsłonięty teren: %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avtäckt mark %@"
+          }
         }
       }
     },
@@ -12385,6 +12925,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pokaż mapę w tle"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Låt bakgrundskartan synas igenom"
           }
         }
       }
@@ -12523,6 +13069,12 @@
             "state" : "translated",
             "value" : "Kopia zapasowa i eksport"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Säkerhetskopiering och export"
+          }
         }
       }
     },
@@ -12658,6 +13210,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Powody odrzucenia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Orsaker till att punkter kasseras"
           }
         }
       }
@@ -12795,6 +13353,12 @@
             "state" : "translated",
             "value" : "Wersja %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
+          }
         }
       }
     },
@@ -12930,6 +13494,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Widok"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visning"
           }
         }
       }
@@ -13068,6 +13638,12 @@
             "state" : "translated",
             "value" : "Wygodne kolory i kontrast"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sköna färger och kontrast"
+          }
         }
       }
     },
@@ -13203,6 +13779,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pokazywane drogi"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visade vägar"
           }
         }
       }
@@ -13340,6 +13922,12 @@
             "state" : "translated",
             "value" : "Pusta kartka sama nie wie, co jest gdzie.\nMiejsce, w którym teraz stoisz, stanie się **pierwszym punktem odniesienia**."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ett tomt papper vet inte själv vad som är vad.\nPlatsen du står på nu blir **första referenspunkten**."
+          }
         }
       }
     },
@@ -13475,6 +14063,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zaczynamy od pustej kartki"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vi börjar med ett tomt papper"
           }
         }
       }
@@ -13612,6 +14206,12 @@
             "state" : "translated",
             "value" : "Statystyki użycia (deweloper)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Användningsstatistik (utvecklare)"
+          }
         }
       }
     },
@@ -13747,6 +14347,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zdjęcia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foton"
           }
         }
       }
@@ -13884,6 +14490,12 @@
             "state" : "translated",
             "value" : "Usuń zdjęcie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera foto"
+          }
         }
       }
     },
@@ -14019,6 +14631,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zrób zdjęcie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta bild"
           }
         }
       }
@@ -14156,6 +14774,12 @@
             "state" : "translated",
             "value" : "Dodaj zdjęcie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till foto"
+          }
         }
       }
     },
@@ -14291,6 +14915,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wstawiam zdjęcie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägger in foto"
           }
         }
       }
@@ -14428,6 +15058,12 @@
             "state" : "translated",
             "value" : "Nie udało się zapisać zdjęcia"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotot kunde inte sparas"
+          }
         }
       }
     },
@@ -14563,6 +15199,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usuń"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera"
           }
         }
       }
@@ -14701,6 +15343,12 @@
             "state" : "translated",
             "value" : "Przypomnienie o spacerze"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Promenadpåminnelse"
+          }
         }
       }
     },
@@ -14836,6 +15484,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nowo osiągnięte miejsca (%lld) zostaną odbite na trasie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld nyligen nådda platser stämplas på vägen du gick"
           }
         }
       }
@@ -14973,6 +15627,12 @@
             "state" : "translated",
             "value" : "Nowości"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nyheter"
+          }
         }
       }
     },
@@ -15108,6 +15768,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ustawienia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inställningar"
           }
         }
       }
@@ -15245,6 +15911,12 @@
             "state" : "translated",
             "value" : "Włącz aparat w Ustawienia > 벅뚜벅뚜."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå på kameran i Inställningar > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -15380,6 +16052,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otwórz Ustawienia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna Inställningar"
           }
         }
       }
@@ -15517,6 +16195,12 @@
             "state" : "translated",
             "value" : "Włącz uprawnienia w Ustawieniach"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå på behörigheter i Inställningar"
+          }
         }
       }
     },
@@ -15652,6 +16336,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Można to otworzyć także w Ustawieniach"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Går också att öppna från Inställningar"
           }
         }
       }
@@ -15789,6 +16479,12 @@
             "state" : "translated",
             "value" : "Zeruj liczniki"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nollställ räkningen"
+          }
         }
       }
     },
@@ -15924,6 +16620,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Świat narysowały już inne mapy.\nTutaj zostaną **tylko miejsca, które przeszedłeś własnymi nogami**."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Världen har redan ritats av andra kartor.\nHär blir **bara platserna du gått på med egna fötter** kvar."
           }
         }
       }
@@ -16061,6 +16763,12 @@
             "state" : "translated",
             "value" : "Zebrane spoty"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Samlade spots"
+          }
         }
       }
     },
@@ -16196,6 +16904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pieczątka"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stämpel"
           }
         }
       }
@@ -16333,6 +17047,12 @@
             "state" : "translated",
             "value" : "Początek"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
         }
       }
     },
@@ -16469,6 +17189,12 @@
             "state" : "translated",
             "value" : "Zaczynamy"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kom igång"
+          }
         }
       }
     },
@@ -16601,6 +17327,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Symbol"
@@ -16741,6 +17473,12 @@
             "state" : "translated",
             "value" : "Powiększ symbol"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förstora symbol"
+          }
         }
       }
     },
@@ -16878,6 +17616,12 @@
             "state" : "translated",
             "value" : "Dokończ rozpoczęty dziennik"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skriv vidare på en påbörjad dagbok"
+          }
         }
       }
     },
@@ -17013,6 +17757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Przesuń, aby przewijać jak karty, dotknij dwukrotnie, aby powiększyć"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Svep för att bläddra som kort, tryck två gånger för att förstora"
           }
         }
       }
@@ -17150,6 +17900,12 @@
             "state" : "translated",
             "value" : "Nie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nej"
+          }
         }
       }
     },
@@ -17282,6 +18038,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -17422,6 +18184,12 @@
             "state" : "translated",
             "value" : "Jeszcze nie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inte än"
+          }
         }
       }
     },
@@ -17557,6 +18325,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jeszcze nieodwiedzone"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inte besökta än"
           }
         }
       }
@@ -17694,6 +18468,12 @@
             "state" : "translated",
             "value" : "Jeszcze tu nie byłeś. Miejsce zostaje jako „Do odwiedzenia” i staje się odwiedzone, gdy dotrzesz."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har inte varit här än. Den blir kvar som ”Vill besöka” och blir en besökt plats när du kommer fram."
+          }
         }
       }
     },
@@ -17829,6 +18609,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nie odrzucono jeszcze żadnych punktów"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inga punkter har kasserats än"
           }
         }
       }
@@ -17966,6 +18752,12 @@
             "state" : "translated",
             "value" : "Jeszcze nie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inte än"
+          }
         }
       }
     },
@@ -18101,6 +18893,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Przewodnik"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guide"
           }
         }
       }
@@ -18239,6 +19037,12 @@
             "state" : "translated",
             "value" : "Z aplikacji można korzystać także po angielsku."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du kan också använda appen på engelska."
+          }
         }
       }
     },
@@ -18374,6 +19178,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Otwórz aplikację raz"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Öppna appen en gång"
           }
         }
       }
@@ -18511,6 +19321,12 @@
             "state" : "translated",
             "value" : "Który dzień"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vilken dag"
+          }
         }
       }
     },
@@ -18646,6 +19462,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tak czy inaczej wszystkie otrzymane lokalizacje są zapisywane. Tylko punkty o niskiej dokładności nie są rysowane na mapie."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oavsett sparas alla mottagna positioner. Det är bara punkter med låg noggrannhet som inte ritas på kartan."
           }
         }
       }
@@ -18783,6 +19605,12 @@
             "state" : "translated",
             "value" : "Anonimowo liczone jest tylko to, które ekrany są używane. Miejsca, w których chodzisz, i treść dziennika nie są wysyłane."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det räknas bara anonymt vilka skärmar som används. Var du går och vad du skriver i dagboken skickas inte."
+          }
         }
       }
     },
@@ -18918,6 +19746,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Byłeś tu %@"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du stannade här i %@"
           }
         }
       }
@@ -19055,6 +19889,12 @@
             "state" : "translated",
             "value" : "Zachowaj to miejsce"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Behåll den här platsen"
+          }
         }
       }
     },
@@ -19190,6 +20030,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zapisz tutaj"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara här"
           }
         }
       }
@@ -19327,6 +20173,12 @@
             "state" : "translated",
             "value" : "Czy nie zapisywać tego miejsca?"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Går det bra att inte registrera den här platsen?"
+          }
         }
       }
     },
@@ -19462,6 +20314,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Co to było za miejsce?"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Var var det här?"
           }
         }
       }
@@ -19599,6 +20457,12 @@
             "state" : "translated",
             "value" : "Eksportuj jako wideo"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportera som video"
+          }
         }
       }
     },
@@ -19734,6 +20598,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tworzę wideo %lld%%"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skapar video %lld %%"
           }
         }
       }
@@ -19872,6 +20742,12 @@
             "state" : "translated",
             "value" : "Obsługa angielskiego"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stöd för engelska"
+          }
         }
       }
     },
@@ -20007,6 +20883,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Np. dom, praca, ulubiona kawiarnia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "T.ex. hemma, jobbet, stamcaféet"
           }
         }
       }
@@ -20144,6 +21026,12 @@
             "state" : "translated",
             "value" : "Dziś %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I dag %@"
+          }
         }
       }
     },
@@ -20279,6 +21167,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dzisiejsza droga"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens väg"
           }
         }
       }
@@ -20416,6 +21310,12 @@
             "state" : "translated",
             "value" : "Dodano zdjęcie do dzisiejszego dziennika"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ett foto lades till i dagens dagbok"
+          }
         }
       }
     },
@@ -20551,6 +21451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Odtwórz dzisiaj"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spela upp i dag"
           }
         }
       }
@@ -20688,6 +21594,12 @@
             "state" : "translated",
             "value" : "Dziś nie odwiedziłeś jeszcze żadnych miejsc"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har inte besökt några platser än i dag"
+          }
         }
       }
     },
@@ -20823,6 +21735,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dziś nigdzie jeszcze nie zatrzymałeś się na dłużej"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Du har inte stannat på någon plats än i dag"
           }
         }
       }
@@ -20960,6 +21878,12 @@
             "state" : "translated",
             "value" : "Gdzie dziś zwiedzałeś?"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Var utforskade du i dag?"
+          }
         }
       }
     },
@@ -21095,6 +22019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dzisiejsze ślady"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens fotspår"
           }
         }
       }
@@ -21232,6 +22162,12 @@
             "state" : "translated",
             "value" : "Dzisiejsze odkrywanie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens upptäckter"
+          }
         }
       }
     },
@@ -21367,6 +22303,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gotowe"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klar"
           }
         }
       }
@@ -21505,6 +22447,12 @@
             "state" : "translated",
             "value" : "Ogranicz ruch"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Minska rörelse"
+          }
         }
       }
     },
@@ -21641,6 +22589,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Po włączeniu Ograniczenia ruchu mapa i efekty na ekranie stają się spokojniejsze."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Med Minska rörelse på blir kartan och skärmeffekterna lugnare."
           }
         }
       }
@@ -21779,6 +22733,12 @@
             "state" : "translated",
             "value" : "Jeśli chcesz, możesz w aplikacji usunąć wszystkie przebyte drogi i dziennik."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om du vill kan du radera alla vägar du gått och din dagbok i appen."
+          }
         }
       }
     },
@@ -21914,6 +22874,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ustaw lokalizację na „Zawsze” i włącz Ruch i kondycja, a spacery będą zapisywane bez otwierania aplikacji."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ställ in plats på ”Alltid” och slå på Rörelse och kondition, så loggas dina promenader utan att du öppnar appen."
           }
         }
       }
@@ -22051,6 +23017,12 @@
             "state" : "translated",
             "value" : "W tym okresie nie ma śladów"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Under den här perioden finns inga fotspår"
+          }
         }
       }
     },
@@ -22186,6 +23158,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pokaż ten okres"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visa den här perioden"
           }
         }
       }
@@ -22323,6 +23301,12 @@
             "state" : "translated",
             "value" : "Miejsca sfotografowane tego dnia"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platser fotograferade denna dag"
+          }
         }
       }
     },
@@ -22458,6 +23442,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tego dnia nie zapisano żadnych kroków"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Den här dagen finns inga steg registrerade"
           }
         }
       }
@@ -22595,6 +23585,12 @@
             "state" : "translated",
             "value" : "Tego dnia nie ma śladów"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Den här dagen finns inga fotspår"
+          }
         }
       }
     },
@@ -22730,6 +23726,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usuń tę pieczątkę"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera den här stämpeln"
           }
         }
       }
@@ -22867,6 +23869,12 @@
             "state" : "translated",
             "value" : "Użyj tego symbolu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Använd den här symbolen"
+          }
         }
       }
     },
@@ -23002,6 +24010,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usuń ślady stóp w tym miejscu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Radera fotspåren på den här platsen"
           }
         }
       }
@@ -23139,6 +24153,12 @@
             "state" : "translated",
             "value" : "Nazwa tego miejsca (np. praca, ulubiona kawiarnia)"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platsens namn (t.ex. jobbet, stamcaféet)"
+          }
         }
       }
     },
@@ -23274,6 +24294,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Postaw pierwszą pieczątkę na tej kartce"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sätt den första stämpeln på det här pappret"
           }
         }
       }
@@ -23411,6 +24437,12 @@
             "state" : "translated",
             "value" : "Nazwa"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Namn"
+          }
         }
       }
     },
@@ -23546,6 +24578,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nadaj nazwę"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ge namn"
           }
         }
       }
@@ -23683,6 +24721,12 @@
             "state" : "translated",
             "value" : "Dodaj obraz"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lägg till bild"
+          }
         }
       }
     },
@@ -23819,6 +24863,12 @@
             "state" : "translated",
             "value" : "Teraz wyrusz na spacer"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gå ut på en promenad nu"
+          }
         }
       }
     },
@@ -23954,6 +25004,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Teraz wyrusz na spacer.\nMiejsca, które mijasz, odbijają się na tej kartce punkt po punkcie."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gå ut på en promenad nu.\nPlatserna du passerar stämplas på det här pappret punkt för punkt."
           }
         }
       }
@@ -24092,6 +25148,12 @@
             "state" : "translated",
             "value" : "Jeśli aplikacja zamknie się podczas pisania dziennika, to, co napisałeś, zostanie."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om appen stängs medan du skriver dagbok finns det du skrev kvar."
+          }
         }
       }
     },
@@ -24227,6 +25289,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dziennik"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagbok"
           }
         }
       }
@@ -24364,6 +25432,12 @@
             "state" : "translated",
             "value" : "Gdy **dotrzesz do miejsca, w którym często bywasz, postaw tam pieczątkę jeszcze raz**.\nZ dwoma punktami odniesienia nawet pusta kartka znajdzie kierunek."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "När du **kommer fram till en plats du ofta besöker, stämpla där en gång till**.\nMed två referenspunkter hittar även ett tomt papper riktning."
+          }
         }
       }
     },
@@ -24499,6 +25573,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spróbuj za chwilę ponownie albo przytrzymaj mapę, aby postawić pieczątkę, gdzie chcesz."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Försök igen om en stund, eller håll ned på kartan för att stämpla där du vill."
           }
         }
       }
@@ -24636,6 +25716,12 @@
             "state" : "translated",
             "value" : "Zapisz"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spara"
+          }
         }
       }
     },
@@ -24771,6 +25857,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wróć do całego okresu"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tillbaka till hela perioden"
           }
         }
       }
@@ -24908,6 +26000,12 @@
             "state" : "translated",
             "value" : "Liczenie punktów"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punkträkning"
+          }
         }
       }
     },
@@ -25043,6 +26141,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Punkty o niskiej dokładności też są zapisywane. Teraz nie są rysowane na mapie, ale przydadzą się, gdy korekta się poprawi."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punkter med låg noggrannhet sparas också. De ritas inte på kartan nu, men kan användas när korrigeringen blir bättre."
           }
         }
       }
@@ -25180,6 +26284,12 @@
             "state" : "translated",
             "value" : "Aktualny stan"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktuell status"
+          }
         }
       }
     },
@@ -25315,6 +26425,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Szukam Twojej lokalizacji"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Söker efter din position"
           }
         }
       }
@@ -25452,6 +26568,12 @@
             "state" : "translated",
             "value" : "Zostaw znak tutaj"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sätt märke här"
+          }
         }
       }
     },
@@ -25587,6 +26709,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Postaw pieczątkę tam, gdzie jesteś"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sätt en stämpel där du står"
           }
         }
       }
@@ -25724,6 +26852,12 @@
             "state" : "translated",
             "value" : "Postaw tutaj"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stämpla här"
+          }
         }
       }
     },
@@ -25859,6 +26993,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Miejsca, które mijasz, odbijają się na tej kartce punkt po punkcie.\nDrogi pokonane samochodem lub metrem nie są rysowane."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platserna du passerar stämplas på det här pappret punkt för punkt.\nVägar du åkt med bil eller tunnelbana ritas inte."
           }
         }
       }
@@ -25996,6 +27136,12 @@
             "state" : "translated",
             "value" : "Wybierz przyciski mapy w Ustawieniach"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj kartknappar i Inställningar"
+          }
         }
       }
     },
@@ -26131,6 +27277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Styl mapy"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartstil"
           }
         }
       }
@@ -26268,6 +27420,12 @@
             "state" : "translated",
             "value" : "Skala mapy. Jeden pasek to %@"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kartskala. Ett streck motsvarar %@"
+          }
         }
       }
     },
@@ -26403,6 +27561,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wybierz, które przyciski mają unosić się na mapie, a wyłączone ekrany otworzysz wprost z Ustawień."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj vilka knappar som svävar på kartan och öppna avstängda skärmar direkt från Inställningar."
           }
         }
       }
@@ -26540,6 +27704,12 @@
             "state" : "translated",
             "value" : "Miejsca oznaczone pieczątką z wyprzedzeniem na mapie. Gdy dotrzesz, staną się odwiedzone."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Platser du stämplat i förväg på kartan. När du kommer fram blir de besökta platser."
+          }
         }
       }
     },
@@ -26675,6 +27845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pokaż na mapie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visa på kartan"
           }
         }
       }
@@ -26812,6 +27988,12 @@
             "state" : "translated",
             "value" : "Zobacz na mapie"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visa på kartan"
+          }
         }
       }
     },
@@ -26947,6 +28129,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tak to wygląda na mapie"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Så här ser det ut på kartan"
           }
         }
       }
@@ -27084,6 +28272,12 @@
             "state" : "translated",
             "value" : "Wyczyść"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rensa"
+          }
         }
       }
     },
@@ -27219,6 +28413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pomoc"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
           }
         }
       }
@@ -27356,6 +28556,12 @@
             "state" : "translated",
             "value" : "Wybierz coś, co może być punktem odniesienia, np. dom lub pracę."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Välj något som kan fungera som referens, till exempel hemmet eller jobbet."
+          }
         }
       }
     },
@@ -27491,6 +28697,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zrób"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ta"
           }
         }
       }
@@ -27628,6 +28840,12 @@
             "state" : "translated",
             "value" : "Data pieczątki"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stämplad"
+          }
         }
       }
     },
@@ -27763,6 +28981,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Postawiono"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stämplat"
           }
         }
       }
@@ -27900,6 +29124,12 @@
             "state" : "translated",
             "value" : "Drogi pokonane samochodem lub metrem nie są rysowane.\nTylko chodzenie odbija po jednym punkcie."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vägar du åkt med bil eller tunnelbana ritas inte.\nBara när du går sätts en punkt i taget."
+          }
         }
       }
     },
@@ -28035,6 +29265,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zostaje tylko to, co jest w ramce; tło jest usuwane"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bara det som är inom ramen blir kvar; bakgrunden raderas"
           }
         }
       }
@@ -28172,6 +29408,12 @@
             "state" : "translated",
             "value" : "Pierwsza"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Första"
+          }
         }
       }
     },
@@ -28307,6 +29549,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Drogi przebyte po raz pierwszy"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vägar du gått för första gången"
           }
         }
       }
@@ -28444,6 +29692,12 @@
             "state" : "translated",
             "value" : "To miejsce, w którym stajesz po raz pierwszy"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Det här är en plats du kliver på för första gången"
+          }
         }
       }
     },
@@ -28579,6 +29833,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Anuluj"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Avbryt"
           }
         }
       }
@@ -28716,6 +29976,12 @@
             "state" : "translated",
             "value" : "Włącz"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Slå på"
+          }
         }
       }
     },
@@ -28851,6 +30117,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Powiększ"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Förstora"
           }
         }
       }
@@ -28989,6 +30261,12 @@
             "state" : "translated",
             "value" : "Ekrany dla dużego tekstu"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skärmar för stor text"
+          }
         }
       }
     },
@@ -29121,6 +30399,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse"
@@ -29261,6 +30545,12 @@
             "state" : "translated",
             "value" : "Odkrywaj"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Utforska"
+          }
         }
       }
     },
@@ -29397,6 +30687,12 @@
             "state" : "translated",
             "value" : "Dziennik odkryć"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upptäcktslogg"
+          }
         }
       }
     },
@@ -29532,6 +30828,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dziennik odkryć"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upptäcktsdagbok"
           }
         }
       }
@@ -29670,6 +30972,12 @@
             "state" : "translated",
             "value" : "Ekran składanego iPhone’a"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vikbar iPhone-skärm"
+          }
         }
       }
     },
@@ -29807,6 +31115,12 @@
             "state" : "translated",
             "value" : "Na składanym iPhonie zobaczysz mapę i zapisy w dwóch panelach."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "På en vikbar iPhone ser du kartan och loggarna i två paneler."
+          }
         }
       }
     },
@@ -29942,6 +31256,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse dnia"
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagens timelapse"
           }
         }
       }
@@ -30080,6 +31400,12 @@
             "state" : "translated",
             "value" : "Pod koniec dnia powiadomienie przypomni drogę, którą dziś przeszedłeś."
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I slutet av dagen berättar en avisering vilken väg du gick i dag."
+          }
         }
       }
     },
@@ -30215,6 +31541,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Jeśli zostaniesz w jednym miejscu dłużej niż %lld min,\npojawi się ono w dzisiejszych śladach."
+          }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Om du stannar längre än %lld minuter på samma plats\nsyns den i dagens fotspår."
           }
         }
       }
@@ -30352,6 +31684,12 @@
             "state" : "translated",
             "value" : "Nie znaleziono jeszcze Twojej lokalizacji"
           }
+        },
+        "sv" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Din position har inte hittats än"
+          }
         }
       }
     },
@@ -30484,6 +31822,12 @@
           }
         },
         "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "sv" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"

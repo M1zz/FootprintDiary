@@ -54,6 +54,7 @@ SEARCH = {
     "nb": ("gåloggen", "Et kart som vokser<br>for hvert <mark>skritt</mark>", "Det utvides bare på veier du aldri har gått"),
     "nl": ("wandellogboek", "Een kaart die groeit<br>met elke <mark>stap</mark>", "Hij wordt alleen groter op wegen waar je nog nooit liep"),
     "pl": ("dziennik spacerów", "Mapa, która rośnie<br>z każdym <mark>krokiem</mark>", "Powiększa się tylko na drogach, którymi jeszcze nie szedłeś"),
+    "sv": ("promenadlogg", "En karta som växer<br>för varje <mark>steg</mark>", "Den växer bara på vägar du aldrig gått"),
 }
 
 # 헤더: 처음 온 사람에게 한 가지 약속. 내 발로 걸은 자리만 지도에 남는다.
@@ -80,6 +81,7 @@ HEADER = {
     "nb": ("Et kart tegnet til fots", "Bare veiene du går,<br>blir på <mark>kartet</mark>"),
     "nl": ("Een kaart getekend met lopen", "Alleen de wegen die je loopt<br>blijven op de <mark>kaart</mark>"),
     "pl": ("Mapa rysowana pieszo", "Na <mark>mapie</mark> zostają tylko<br>drogi, którymi idziesz"),
+    "sv": ("En karta ritad till fots", "Bara vägarna du går<br>blir kvar på <mark>kartan</mark>"),
 }
 
 # 기기 화면(시뮬레이터 캡처, 가상의 두 달치 산책 기록으로 채움)

@@ -18,7 +18,7 @@ W, H = 1242, 2688   # 이 계정의 iPhone 제출 규격
 
 # ── 앱마다 고치는 곳 ──────────────────────────────────────────────
 # 앱 언어 → App Store 로케일 (스토어 폴더 이름)
-STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "es": "es-ES", "de": "de-DE", "fr": "fr-FR", "it": "it", "pt-BR": "pt-BR", "ru": "ru", "th": "th", "vi": "vi", "cs": "cs", "da": "da", "el": "el", "fi": "fi", "id": "id", "nb": "no", "nl": "nl-NL", "pl": "pl"}
+STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja", "zh-Hans": "zh-Hans", "zh-Hant": "zh-Hant", "es": "es-ES", "de": "de-DE", "fr": "fr-FR", "it": "it", "pt-BR": "pt-BR", "ru": "ru", "th": "th", "vi": "vi", "cs": "cs", "da": "da", "el": "el", "fi": "fi", "id": "id", "nb": "no", "nl": "nl-NL", "pl": "pl", "sv": "sv"}
 # 바탕 · 포인트 색 (헤더·검색 결과 그림과 맞춘다)
 BG, ACCENT, INK, SUB = "#F3EFE4", "#B8322A", "#1F3358", "#6B6458"
 # 언어 → [(원본 파일, 레이아웃, 헤드라인, 서브카피)]
@@ -29,6 +29,13 @@ SHOTS = {
         ("03-stamps.png",   "text-bottom", "가본 곳, 가볼 곳에 도장", "212가지 스탬프로 동네를 기록해요"),
         ("04-calendar.png", "flat-rotate", "날마다<br>걸은 모양 그대로", "달력에 숫자 대신 그날의 길이 남아요"),
         ("05-diary.png",    "dark",        "처음 걷는 길이<br>얼마였는지", "같은 길만 걸으면 지도는 자라지 않아요"),
+    ],
+    "sv": [
+        ("01-map.png",      "hero-bleed",  "En tom karta som bara<br>sparar dina steg", "Vägar med bil ritas inte"),
+        ("02-compass.png",  "left-text",   "I dag<br>åt vilket håll?", "Kompassen pekar där du gått minst"),
+        ("03-stamps.png",   "text-bottom", "Stämplar för besökta platser och mål", "Logga ditt område med 212 stämplar"),
+        ("04-calendar.png", "flat-rotate", "Varje dag<br>som du gick den", "Kalendern sparar dagens väg i stället för en siffra"),
+        ("05-diary.png",    "dark",        "Hur mycket var<br>ny väg?", "Går du bara samma vägar växer inte kartan"),
     ],
     "pl": [
         ("01-map.png",      "hero-bleed",  "Pusta mapa, która zachowuje<br>tylko Twoje kroki", "Przejazdy samochodem nie są rysowane"),
