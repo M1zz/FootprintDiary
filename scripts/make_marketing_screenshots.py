@@ -18,7 +18,7 @@ W, H = 1242, 2688   # 이 계정의 iPhone 제출 규격
 
 # ── 앱마다 고치는 곳 ──────────────────────────────────────────────
 # 앱 언어 → App Store 로케일 (스토어 폴더 이름)
-STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB"}
+STORE = {"ko": "ko", "en": "en-US", "en-GB": "en-GB", "ja": "ja"}
 # 바탕 · 포인트 색 (헤더·검색 결과 그림과 맞춘다)
 BG, ACCENT, INK, SUB = "#F3EFE4", "#B8322A", "#1F3358", "#6B6458"
 # 언어 → [(원본 파일, 레이아웃, 헤드라인, 서브카피)]
@@ -29,6 +29,13 @@ SHOTS = {
         ("03-stamps.png",   "text-bottom", "가본 곳, 가볼 곳에 도장", "212가지 스탬프로 동네를 기록해요"),
         ("04-calendar.png", "flat-rotate", "날마다<br>걸은 모양 그대로", "달력에 숫자 대신 그날의 길이 남아요"),
         ("05-diary.png",    "dark",        "처음 걷는 길이<br>얼마였는지", "같은 길만 걸으면 지도는 자라지 않아요"),
+    ],
+    "ja": [
+        ("01-map.png",      "hero-bleed",  "自分の足で通った道だけが<br>残る白地図", "車で通った道は描かれません"),
+        ("02-compass.png",  "left-text",   "今日は<br>どちらへ？", "あまり歩いていない方向をコンパスが指します"),
+        ("03-stamps.png",   "text-bottom", "行った場所、行きたい場所にスタンプ", "212種類のスタンプで街を記録します"),
+        ("04-calendar.png", "flat-rotate", "毎日<br>歩いた形のまま", "カレンダーには数字の代わりにその日の道が残ります"),
+        ("05-diary.png",    "dark",        "はじめての道は<br>どれだけだった？", "同じ道ばかり歩いても地図は育ちません"),
     ],
     "en-GB": [
         ("01-map.png",      "hero-bleed",  "A blank map that keeps<br>only where you've walked", "Roads passed by car aren't drawn"),

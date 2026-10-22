@@ -35,6 +35,7 @@ SEARCH = {
     "ko": ("산책 기록", "걸을수록 자라는<br><mark>나만의 지도</mark>", "처음 가는 길을 걸어야 넓어져요"),
     "en": ("walking log", "A map that grows<br>as you <mark>walk</mark>", "It only widens on paths you've never walked"),
     "en-GB": ("walking log", "A map that grows<br>as you <mark>walk</mark>", "It only widens on paths you've never walked"),
+    "ja": ("散歩 記録", "歩くほど育つ<br><mark>自分だけの地図</mark>", "はじめての道を歩くと広がります"),
 }
 
 # 헤더: 처음 온 사람에게 한 가지 약속. 내 발로 걸은 자리만 지도에 남는다.
@@ -42,6 +43,7 @@ HEADER = {
     "ko": ("걸어서 그리는 지도", "내 발로 걸은 길만<br><mark>지도</mark>에 남아요"),
     "en": ("A map drawn by walking", "Only the roads you walk<br>stay on the <mark>map</mark>"),
     "en-GB": ("A map drawn by walking", "Only the roads you walk<br>stay on the <mark>map</mark>"),
+    "ja": ("歩いて描く地図", "自分の足で歩いた道だけが<br><mark>地図</mark>に残ります"),
 }
 
 # 기기 화면(시뮬레이터 캡처, 가상의 두 달치 산책 기록으로 채움)

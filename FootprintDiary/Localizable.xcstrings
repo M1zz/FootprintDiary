@@ -20,6 +20,12 @@
             "state" : "translated",
             "value" : "%@ · Footprints %lld/%lld"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · 足あと %lld/%lld"
+          }
         }
       }
     },
@@ -41,6 +47,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Walked %@ in %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@を歩いて%@"
           }
         }
       }
@@ -64,6 +76,12 @@
             "state" : "translated",
             "value" : "Walked %@"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ 歩きました"
+          }
         }
       }
     },
@@ -85,6 +103,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ collected"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ を収集しました"
           }
         }
       }
@@ -108,6 +132,12 @@
             "state" : "translated",
             "value" : "%@ symbol"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@のシンボル"
+          }
         }
       }
     },
@@ -129,6 +159,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, %lld kinds"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@、%lld種類"
           }
         }
       }
@@ -152,6 +188,12 @@
             "state" : "translated",
             "value" : "%@×"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@倍"
+          }
         }
       }
     },
@@ -173,6 +215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ is the least explored"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@方面がいちばん手薄です"
           }
         }
       }
@@ -196,6 +244,12 @@
             "state" : "translated",
             "value" : "%lldm away"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldm離れています"
+          }
         }
       }
     },
@@ -217,6 +271,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The shutter opens within %lldm"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldm以内に入るとシャッターが開きます"
           }
         }
       }
@@ -240,6 +300,12 @@
             "state" : "translated",
             "value" : "%lld kinds"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld種類"
+          }
         }
       }
     },
@@ -261,6 +327,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld places"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld件"
           }
         }
       }
@@ -284,6 +356,12 @@
             "state" : "translated",
             "value" : "%lld times"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld回"
+          }
         }
       }
     },
@@ -305,6 +383,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Went out %lld times"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld回出かけました"
           }
         }
       }
@@ -328,6 +412,12 @@
             "state" : "translated",
             "value" : "Discovery #%lld"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld番目の発見"
+          }
         }
       }
     },
@@ -349,6 +439,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Find with AR"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ARで探しに行く"
           }
         }
       }
@@ -373,6 +469,12 @@
             "state" : "translated",
             "value" : "Face ID Lock"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face IDロック"
+          }
         }
       }
     },
@@ -395,6 +497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lock the app with Face ID or Touch ID to keep where you've been and your diary private."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face IDまたはTouch IDでアプリをロックして、歩いた場所と日記を守ります。"
           }
         }
       }
@@ -419,6 +527,12 @@
             "state" : "translated",
             "value" : "Ask Siri how far you've walked today."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siriに聞いて、今日歩いた距離をすぐに確認できます。"
+          }
         }
       }
     },
@@ -441,6 +555,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri and Shortcuts"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siriとショートカット"
           }
         }
       }
@@ -465,6 +585,12 @@
             "state" : "translated",
             "value" : "VoiceOver reads every button and detail on your map and records, in the right order."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOverが地図と記録のボタンや内容を、漏れなく適切な順序で読み上げます。"
+          }
         }
       }
     },
@@ -488,6 +614,12 @@
             "state" : "translated",
             "value" : "Better VoiceOver Support"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOverをもっと使いやすく"
+          }
         }
       }
     },
@@ -509,6 +641,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No stamps match \"%@\""
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "「%@」に合うスタンプがありません"
           }
         }
       }
@@ -532,6 +670,12 @@
             "state" : "translated",
             "value" : "You were planning to visit this place. Mark it as visited?"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行こうとしていた場所です。行った場所として残しますか？"
+          }
         }
       }
     },
@@ -553,6 +697,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not yet visited"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未訪問の場所"
           }
         }
       }
@@ -576,6 +726,12 @@
             "state" : "translated",
             "value" : "Want to Visit"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行きたい場所"
+          }
         }
       }
     },
@@ -597,6 +753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A spot you stamped as a place to visit"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行きたい場所として押しておいた場所"
           }
         }
       }
@@ -620,6 +782,12 @@
             "state" : "translated",
             "value" : "Most common blocker: %@ (%lld times). %@"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "いちばん多く弾かれた理由：%@（%lld回）。%@"
+          }
         }
       }
     },
@@ -641,6 +809,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Category"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カテゴリ"
           }
         }
       }
@@ -664,6 +838,12 @@
             "state" : "translated",
             "value" : "Pioneer Compass"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開拓コンパス"
+          }
         }
       }
     },
@@ -685,6 +865,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skip"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スキップ"
           }
         }
       }
@@ -708,6 +894,12 @@
             "state" : "translated",
             "value" : "Walk Tracking"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歩行記録"
+          }
         }
       }
     },
@@ -729,6 +921,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Walk tracking is off. Your path won't be saved as you walk."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歩行記録がオフです。歩いても道は残りません。"
           }
         }
       }
@@ -752,6 +950,12 @@
             "state" : "translated",
             "value" : "Stamps you place while walking pile up here in time order.\nPlaces you stay at are saved on their own, no stamp needed."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歩きながらスタンプを押すと、ここに時間順に積み重なります。\n滞在した場所は、押さなくても自動で残ります。"
+          }
         }
       }
     },
@@ -773,6 +977,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Places Reached on Foot"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歩いて着いた場所"
           }
         }
       }
@@ -796,6 +1006,12 @@
             "state" : "translated",
             "value" : "Walk there and you can take a photo on the spot"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歩いて着くと、その場所で写真を残せます"
+          }
         }
       }
     },
@@ -818,6 +1034,12 @@
             "state" : "translated",
             "value" : "If you walked but no line was drawn on the map, you can find out why here."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歩いたのに地図に線が引かれないときは、ここで理由を確認できます。"
+          }
         }
       }
     },
@@ -839,6 +1061,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "As you walk, the paths you've passed stack up in order."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歩くと、通った道が順に重なっていきます。"
           }
         }
       }
@@ -863,6 +1091,12 @@
             "state" : "translated",
             "value" : "Save your walks and diary to a file and bring them back later."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "歩いた道と日記をファイルに保存して、あとから読み込めます。"
+          }
         }
       }
     },
@@ -884,6 +1118,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Only paths walked and stamps placed during the chosen period stay on the map."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選んだ期間に歩いた道と、その期間に押したスタンプだけが地図に残ります。"
           }
         }
       }
@@ -907,6 +1147,12 @@
             "state" : "translated",
             "value" : "Not interested"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "興味がありません"
+          }
         }
       }
     },
@@ -928,6 +1174,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "It's okay"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大丈夫です"
           }
         }
       }
@@ -951,6 +1203,12 @@
             "state" : "translated",
             "value" : "Watch It Being Drawn"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "描かれる様子を見る"
+          }
         }
       }
     },
@@ -972,6 +1230,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Illustrated Map"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "絵地図"
           }
         }
       }
@@ -996,6 +1260,12 @@
             "state" : "translated",
             "value" : "Screens rearrange neatly instead of getting cut off when you enlarge text."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "文字サイズを大きくしても、切れずに見やすく配置し直されます。"
+          }
         }
       }
     },
@@ -1017,6 +1287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "View by Period"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "期間で見る"
           }
         }
       }
@@ -1040,6 +1316,12 @@
             "state" : "translated",
             "value" : "Tracking Mode"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記録方法"
+          }
         }
       }
     },
@@ -1061,6 +1343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tracking Status"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記録の状態"
           }
         }
       }
@@ -1084,6 +1372,12 @@
             "state" : "translated",
             "value" : "View Tracking Status"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記録の状態を見る"
+          }
         }
       }
     },
@@ -1105,6 +1399,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restore Default Image"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "初期の絵に戻す"
           }
         }
       }
@@ -1128,6 +1428,12 @@
             "state" : "translated",
             "value" : "Screens you've turned off can still be opened from \"Browse\" above at any time. Stamp and settings buttons always show."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オフにした画面も、上の「まとめて見る」からいつでも開けます。スタンプと設定のボタンは常に表示されます。"
+          }
         }
       }
     },
@@ -1149,6 +1455,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "End"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了"
           }
         }
       }
@@ -1172,6 +1484,12 @@
             "state" : "translated",
             "value" : "Later"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あとで"
+          }
         }
       }
     },
@@ -1193,6 +1511,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stored only in your personal iCloud. No one else can see it."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あなた個人のiCloudにのみ保存されます。ほかの人には見えません。"
           }
         }
       }
@@ -1217,6 +1541,12 @@
             "state" : "translated",
             "value" : "Wipe All My Data in One Go"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分の記録をまとめて消去"
+          }
         }
       }
     },
@@ -1238,6 +1568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "My Neighbourhood Outline"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マイエリアの輪郭"
           }
         }
       }
@@ -1261,6 +1597,12 @@
             "state" : "translated",
             "value" : "My Map"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マイマップ"
+          }
         }
       }
     },
@@ -1282,6 +1624,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open My Map"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マイマップを開く"
           }
         }
       }
@@ -1305,6 +1653,12 @@
             "state" : "translated",
             "value" : "Watch Your Map Take Shape"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図が描かれていく様子"
+          }
         }
       }
     },
@@ -1326,6 +1680,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Preview of your map being drawn"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図が描かれていくプレビュー"
           }
         }
       }
@@ -1349,6 +1709,12 @@
             "state" : "translated",
             "value" : "Paths You've Drawn"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分が描いた道"
+          }
         }
       }
     },
@@ -1370,6 +1736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Places I've Stamped"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分が押した場所"
           }
         }
       }
@@ -1393,6 +1765,12 @@
             "state" : "translated",
             "value" : "Tap to see the map beneath"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タップすると地図が透けます"
+          }
         }
       }
     },
@@ -1414,6 +1792,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap to stamp your current spot"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タップして今いる場所に押す"
           }
         }
       }
@@ -1437,6 +1821,12 @@
             "state" : "translated",
             "value" : "Asking whether you really visited %lld places"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行った場所かどうか%lld件を確認します"
+          }
         }
       }
     },
@@ -1458,6 +1848,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visits"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "訪問回数"
           }
         }
       }
@@ -1481,6 +1877,12 @@
             "state" : "translated",
             "value" : "I went there"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "行きました"
+          }
         }
       }
     },
@@ -1502,6 +1904,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap again to return to paper. Handy for checking where you are."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もう一度タップすると紙に戻ります。今どのあたりか確かめるときに使ってください。"
           }
         }
       }
@@ -1525,6 +1933,12 @@
             "state" : "translated",
             "value" : "Retake"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "撮り直す"
+          }
         }
       }
     },
@@ -1546,6 +1960,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "A Spot You've Revisited"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "再訪した場所"
           }
         }
       }
@@ -1569,6 +1989,12 @@
             "state" : "translated",
             "value" : "This is one of your regular spots"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "よく行く場所として登録されています"
+          }
         }
       }
     },
@@ -1590,6 +2016,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Close"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閉じる"
           }
         }
       }
@@ -1614,6 +2046,12 @@
             "state" : "translated",
             "value" : "Even with higher contrast, or if colours are hard to tell apart, you can still make out the paths and stamps on your map."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コントラストを上げたり色の区別がつきにくくても、地図の道とスタンプを見分けられます。"
+          }
         }
       }
     },
@@ -1636,6 +2074,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Use the app in more languages."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "より多くの言語でアプリを使えるようにします。"
           }
         }
       }
@@ -1660,6 +2104,12 @@
             "state" : "translated",
             "value" : "More Languages"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "さらに多くの言語"
+          }
         }
       }
     },
@@ -1681,6 +2131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add a note (optional)"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ひとこと添える（なくてもOK）"
           }
         }
       }
@@ -1704,6 +2160,12 @@
             "state" : "translated",
             "value" : "See the footprints you've collected so far in your collection"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "図鑑でこれまで集めた足あとを見られます"
+          }
         }
       }
     },
@@ -1725,6 +2187,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "This can't be undone."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "元に戻せません。"
           }
         }
       }
@@ -1748,6 +2216,12 @@
             "state" : "translated",
             "value" : "Tap to pause or resume playback"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タップで一時停止または再生します"
+          }
         }
       }
     },
@@ -1769,6 +2243,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld places visited"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "立ち寄り %lld件"
           }
         }
       }
@@ -1792,6 +2272,12 @@
             "state" : "translated",
             "value" : "Couldn't find anything distinct to cut out. Get closer to the object and try again."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "はっきりした被写体がなく、背景を消せませんでした。物に近づけて撮り直してください。"
+          }
         }
       }
     },
@@ -1813,6 +2299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Last Visit"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最後の訪問"
           }
         }
       }
@@ -1836,6 +2328,12 @@
             "state" : "translated",
             "value" : "Ink Map"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "墨の地図"
+          }
         }
       }
     },
@@ -1857,6 +2355,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Note"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "メモ"
           }
         }
       }
@@ -1880,6 +2384,12 @@
             "state" : "translated",
             "value" : "Browse"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まとめて見る"
+          }
         }
       }
     },
@@ -1901,6 +2411,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Placing water and mountains"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "水と山を配置しています"
           }
         }
       }
@@ -1924,6 +2440,12 @@
             "state" : "translated",
             "value" : "Undiscovered"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未発見"
+          }
         }
       }
     },
@@ -1945,6 +2467,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Footprints"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "足あと"
           }
         }
       }
@@ -1968,6 +2496,12 @@
             "state" : "translated",
             "value" : "Footprint Time-lapse"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "足あとタイムラプス"
+          }
         }
       }
     },
@@ -1990,6 +2524,12 @@
             "state" : "translated",
             "value" : "Cleared area %@"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "晴らした土地 %@"
+          }
         }
       }
     },
@@ -2011,6 +2551,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show Background Map"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背景の地図を透かす"
           }
         }
       }
@@ -2035,6 +2581,12 @@
             "state" : "translated",
             "value" : "Backup and Export"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バックアップと書き出し"
+          }
         }
       }
     },
@@ -2056,6 +2608,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Why Points Were Discarded"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "破棄された理由"
           }
         }
       }
@@ -2079,6 +2637,12 @@
             "state" : "translated",
             "value" : "Version %@"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バージョン %@"
+          }
         }
       }
     },
@@ -2100,6 +2664,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "View"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示"
           }
         }
       }
@@ -2124,6 +2694,12 @@
             "state" : "translated",
             "value" : "Comfortable Colours and Contrast"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "見やすい色とコントラスト"
+          }
         }
       }
     },
@@ -2145,6 +2721,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "View Paths"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "表示する道"
           }
         }
       }
@@ -2168,6 +2750,12 @@
             "state" : "translated",
             "value" : "A blank sheet can't tell where is where on its own.\nYour current spot becomes the **first reference point**."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "白紙のままでは、どこがどこなのかわかりません。\n今いる場所が**最初の基準点**になります。"
+          }
         }
       }
     },
@@ -2189,6 +2777,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Starting from a Blank Sheet"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "白紙から始めます"
           }
         }
       }
@@ -2212,6 +2806,12 @@
             "state" : "translated",
             "value" : "Usage Stats (Developer)"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "利用統計（開発者向け）"
+          }
         }
       }
     },
@@ -2233,6 +2833,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Photos"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "写真"
           }
         }
       }
@@ -2256,6 +2862,12 @@
             "state" : "translated",
             "value" : "Delete Photo"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "写真を削除"
+          }
         }
       }
     },
@@ -2277,6 +2889,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Take Photo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "写真を撮る"
           }
         }
       }
@@ -2300,6 +2918,12 @@
             "state" : "translated",
             "value" : "Add Photo"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "写真を追加"
+          }
         }
       }
     },
@@ -2321,6 +2945,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adding photo"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "写真を入れています"
           }
         }
       }
@@ -2344,6 +2974,12 @@
             "state" : "translated",
             "value" : "Couldn't save the photo"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "写真を保存できませんでした"
+          }
         }
       }
     },
@@ -2365,6 +3001,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "削除"
           }
         }
       }
@@ -2389,6 +3031,12 @@
             "state" : "translated",
             "value" : "Walk Reminders"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "散歩のお知らせ"
+          }
         }
       }
     },
@@ -2410,6 +3058,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld newly reached spots are stamped along the route"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しく着いた場所%lld件が、通った道に刻まれます"
           }
         }
       }
@@ -2433,6 +3087,12 @@
             "state" : "translated",
             "value" : "What's New"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新機能"
+          }
         }
       }
     },
@@ -2454,6 +3114,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Settings"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
           }
         }
       }
@@ -2477,6 +3143,12 @@
             "state" : "translated",
             "value" : "Please turn on the camera in Settings > 벅뚜벅뚜."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定アプリ > 벅뚜벅뚜 > カメラをオンにしてください。"
+          }
         }
       }
     },
@@ -2498,6 +3170,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open Settings"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定を開く"
           }
         }
       }
@@ -2521,6 +3199,12 @@
             "state" : "translated",
             "value" : "Turn On Permissions in Settings"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定で権限をオンにする"
+          }
         }
       }
     },
@@ -2542,6 +3226,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "You can also open this in Settings"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定からも開けます"
           }
         }
       }
@@ -2565,6 +3255,12 @@
             "state" : "translated",
             "value" : "Reset Counts"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カウントをリセット"
+          }
         }
       }
     },
@@ -2586,6 +3282,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Other maps have already drawn the whole world.\nHere, only **the places you've walked** remain."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "世界はもう、ほかの地図が描き終えています。\nここに残るのは、**あなたが自分の足で通った場所だけ**です。"
           }
         }
       }
@@ -2609,6 +3311,12 @@
             "state" : "translated",
             "value" : "Collected Spots"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "集めたスポット"
+          }
         }
       }
     },
@@ -2630,6 +3338,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stamp"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スタンプ"
           }
         }
       }
@@ -2653,6 +3367,12 @@
             "state" : "translated",
             "value" : "Start"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始"
+          }
         }
       }
     },
@@ -2674,6 +3394,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Get Started"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "はじめる"
           }
         }
       }
@@ -2697,6 +3423,12 @@
             "state" : "translated",
             "value" : "Symbol"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シンボル"
+          }
         }
       }
     },
@@ -2718,6 +3450,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "View Symbol Larger"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シンボルを大きく見る"
           }
         }
       }
@@ -2742,6 +3480,12 @@
             "state" : "translated",
             "value" : "Resume Unfinished Diary Entries"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "書きかけの日記の続きを書く"
+          }
         }
       }
     },
@@ -2763,6 +3507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Swipe to flip through like cards, double-tap to view larger"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スワイプでカードのようにめくれ、ダブルタップで大きく見られます"
           }
         }
       }
@@ -2786,6 +3536,12 @@
             "state" : "translated",
             "value" : "No, I didn't"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "違います"
+          }
         }
       }
     },
@@ -2804,6 +3560,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -2830,6 +3592,12 @@
             "state" : "translated",
             "value" : "Not yet"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだ"
+          }
         }
       }
     },
@@ -2851,6 +3619,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not yet visited"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "未訪問の場所"
           }
         }
       }
@@ -2874,6 +3648,12 @@
             "state" : "translated",
             "value" : "You haven't been here yet. It stays as a \"Want to Visit\" spot and becomes a visited place once you arrive."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだ行ったことのない場所です。「行きたい場所」として残り、そこに着くと行った場所になります。"
+          }
         }
       }
     },
@@ -2895,6 +3675,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No discarded points yet"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "破棄されたポイントはまだありません"
           }
         }
       }
@@ -2918,6 +3704,12 @@
             "state" : "translated",
             "value" : "Not yet"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだです"
+          }
         }
       }
     },
@@ -2939,6 +3731,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guide"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "案内"
           }
         }
       }
@@ -2963,6 +3761,12 @@
             "state" : "translated",
             "value" : "Use the app in English too."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリを英語でも使えます。"
+          }
         }
       }
     },
@@ -2984,6 +3788,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Please open the app once"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリを一度開いてください"
           }
         }
       }
@@ -3007,6 +3817,12 @@
             "state" : "translated",
             "value" : "Which Day"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どの日"
+          }
         }
       }
     },
@@ -3028,6 +3844,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Either way, every location received is saved. Low-accuracy points just aren't drawn on the map."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どちらを選んでも、受け取った位置情報はすべて保存します。精度の低いポイントを地図に描かないだけです。"
           }
         }
       }
@@ -3051,6 +3873,12 @@
             "state" : "translated",
             "value" : "We only count which screens are used, anonymously. Where you walked and your diary entries are never sent."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どの画面が使われたかを匿名で数えるだけです。歩いた場所や日記の文章は送信しません。"
+          }
         }
       }
     },
@@ -3072,6 +3900,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "You stayed here for %@"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ここに%@滞在しました"
           }
         }
       }
@@ -3095,6 +3929,12 @@
             "state" : "translated",
             "value" : "Keep This Place"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ここを残す"
+          }
         }
       }
     },
@@ -3116,6 +3956,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mark Here"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ここに残す"
           }
         }
       }
@@ -3139,6 +3985,12 @@
             "state" : "translated",
             "value" : "Is it okay not to record this place?"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ここは記録しなくても大丈夫ですか？"
+          }
         }
       }
     },
@@ -3160,6 +4012,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Where was this?"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ここはどこでしたか？"
           }
         }
       }
@@ -3183,6 +4041,12 @@
             "state" : "translated",
             "value" : "Export as Video"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "動画で書き出す"
+          }
         }
       }
     },
@@ -3204,6 +4068,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Creating video %lld%%"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "動画を作成中 %lld%%"
           }
         }
       }
@@ -3228,6 +4098,12 @@
             "state" : "translated",
             "value" : "English Support"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英語に対応"
+          }
         }
       }
     },
@@ -3249,6 +4125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "e.g. Home, Work, Favourite café"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "例：自宅、職場、行きつけのカフェ"
           }
         }
       }
@@ -3272,6 +4154,12 @@
             "state" : "translated",
             "value" : "Today %@"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日 %@"
+          }
         }
       }
     },
@@ -3293,6 +4181,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Today's Path"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日引いた道"
           }
         }
       }
@@ -3316,6 +4210,12 @@
             "state" : "translated",
             "value" : "A photo was added to today's diary"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の日記に写真が追加されました"
+          }
         }
       }
     },
@@ -3337,6 +4237,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Play Today"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日を再生"
           }
         }
       }
@@ -3360,6 +4266,12 @@
             "state" : "translated",
             "value" : "No places visited yet today"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日はまだ訪れた場所がありません"
+          }
         }
       }
     },
@@ -3381,6 +4293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No stops yet today"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日はまだ滞在した場所がありません"
           }
         }
       }
@@ -3404,6 +4322,12 @@
             "state" : "translated",
             "value" : "Where did you explore today?"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日はどこを探検しましたか？"
+          }
         }
       }
     },
@@ -3425,6 +4349,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Today's Footprints"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の足あと"
           }
         }
       }
@@ -3448,6 +4378,12 @@
             "state" : "translated",
             "value" : "Today's Exploration"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の探検"
+          }
         }
       }
     },
@@ -3469,6 +4405,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Done"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
           }
         }
       }
@@ -3493,6 +4435,12 @@
             "state" : "translated",
             "value" : "Reduce Motion"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "視差効果を減らす"
+          }
         }
       }
     },
@@ -3515,6 +4463,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Turn on Reduce Motion to calm the map and on-screen effects."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "視差効果を減らすをオンにすると、地図と画面効果が落ち着きます。"
           }
         }
       }
@@ -3539,6 +4493,12 @@
             "state" : "translated",
             "value" : "If you like, erase all your walks and diary from inside the app."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "希望すれば、アプリ内で歩いた道と日記をすべて消去できます。"
+          }
         }
       }
     },
@@ -3560,6 +4520,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Set location to \"Always\" and turn on Motion & Fitness, and your walks are recorded even without opening the app."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "位置情報を「常に許可」にして、モーションとフィットネスをオンにしておくと、アプリを開かずに歩いても記録されます。"
           }
         }
       }
@@ -3583,6 +4549,12 @@
             "state" : "translated",
             "value" : "No footprints in this period"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この期間には足あとがありません"
+          }
         }
       }
     },
@@ -3604,6 +4576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "View This Period"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この期間で見る"
           }
         }
       }
@@ -3627,6 +4605,12 @@
             "state" : "translated",
             "value" : "Spots Photographed This Day"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この日に撮った場所"
+          }
         }
       }
     },
@@ -3648,6 +4632,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "No steps were recorded on this day"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この日は歩いた記録がありません"
           }
         }
       }
@@ -3671,6 +4661,12 @@
             "state" : "translated",
             "value" : "No footprints on this day"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この日の足あとがありません"
+          }
         }
       }
     },
@@ -3692,6 +4688,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete This Stamp"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このスタンプを削除"
           }
         }
       }
@@ -3715,6 +4717,12 @@
             "state" : "translated",
             "value" : "Use This Symbol"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このシンボルを使う"
+          }
         }
       }
     },
@@ -3736,6 +4744,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clear Footprints Here"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この場所の足あとを消す"
           }
         }
       }
@@ -3759,6 +4773,12 @@
             "state" : "translated",
             "value" : "Name for this spot (e.g. Work, Favourite café)"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この場所の名前（例：職場、行きつけのカフェ）"
+          }
         }
       }
     },
@@ -3780,6 +4800,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Place Your First Stamp on This Sheet"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この紙に最初のスタンプを押してください"
           }
         }
       }
@@ -3803,6 +4829,12 @@
             "state" : "translated",
             "value" : "Name"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前"
+          }
         }
       }
     },
@@ -3824,6 +4856,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add Name"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前をつける"
           }
         }
       }
@@ -3847,6 +4885,12 @@
             "state" : "translated",
             "value" : "Add Image"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "画像を追加"
+          }
         }
       }
     },
@@ -3869,6 +4913,12 @@
             "state" : "translated",
             "value" : "Now Go for a Walk"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "さあ、歩いてみましょう"
+          }
         }
       }
     },
@@ -3890,6 +4940,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Now go for a walk.\nThe places you pass are marked on this sheet, one dot at a time."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "さあ、歩いてみましょう。\n通った場所が一点ずつこの紙に刻まれます。"
           }
         }
       }
@@ -3914,6 +4970,12 @@
             "state" : "translated",
             "value" : "If the app closes while you're writing a diary entry, what you wrote is still there."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日記を書いている途中でアプリが終了しても、書きかけの内容が残ります。"
+          }
         }
       }
     },
@@ -3935,6 +4997,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Journal"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日誌"
           }
         }
       }
@@ -3958,6 +5026,12 @@
             "state" : "translated",
             "value" : "When you **arrive somewhere you visit often, stamp it once more.**\nWith two reference points, even a blank sheet knows its direction."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "よく行く場所に**着いたら、そこでもう一度**押してください。\n基準が2つになると、白紙でも方角がわかります。"
+          }
         }
       }
     },
@@ -3979,6 +5053,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Try again in a moment, or long-press the map to stamp wherever you like."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "しばらくしてからもう一度試すか、地図を長押しして好きな場所に押してください。"
           }
         }
       }
@@ -4002,6 +5082,12 @@
             "state" : "translated",
             "value" : "Save"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
         }
       }
     },
@@ -4023,6 +5109,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Back to All Time"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "全期間に戻る"
           }
         }
       }
@@ -4046,6 +5138,12 @@
             "state" : "translated",
             "value" : "Point Count"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ポイント数"
+          }
         }
       }
     },
@@ -4067,6 +5165,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Points with low accuracy are still saved. They aren't drawn on the map for now, but can be used once the correction improves."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "精度が足りないポイントも保存しています。今は地図に描きませんが、補正が良くなれば使えます。"
           }
         }
       }
@@ -4090,6 +5194,12 @@
             "state" : "translated",
             "value" : "Current Status"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在の状態"
+          }
         }
       }
     },
@@ -4111,6 +5221,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Finding your location"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在地を探しています"
           }
         }
       }
@@ -4134,6 +5250,12 @@
             "state" : "translated",
             "value" : "Mark This Spot"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今いる場所を残す"
+          }
         }
       }
     },
@@ -4155,6 +5277,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stamp Where You Are"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今いる場所にスタンプを押す"
           }
         }
       }
@@ -4178,6 +5306,12 @@
             "state" : "translated",
             "value" : "Stamp Here"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今いる場所に押す"
+          }
         }
       }
     },
@@ -4199,6 +5333,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "The places you pass are marked on this sheet, one dot at a time.\nRoads you pass by car or train aren't drawn."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通った場所が一点ずつこの紙に刻まれます。\n車や地下鉄で通った道は描かれません。"
           }
         }
       }
@@ -4222,6 +5362,12 @@
             "state" : "translated",
             "value" : "Choose map buttons in Settings"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図のボタンは設定で選べます"
+          }
         }
       }
     },
@@ -4243,6 +5389,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Map Style"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図のスタイル"
           }
         }
       }
@@ -4266,6 +5418,12 @@
             "state" : "translated",
             "value" : "Map scale. One bar equals %@"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図の縮尺。バー1本が%@"
+          }
         }
       }
     },
@@ -4287,6 +5445,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pick which buttons float on the map, and open screens you've turned off right from Settings."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図に出すボタンを選べます。オフにした画面も設定からすぐ開けます。"
           }
         }
       }
@@ -4310,6 +5474,12 @@
             "state" : "translated",
             "value" : "Spots you stamped ahead of time. They become visited places once you arrive."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図にあらかじめ押しておいた場所です。そこに着くと行った場所になります。"
+          }
         }
       }
     },
@@ -4331,6 +5501,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show on Map"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図に表示"
           }
         }
       }
@@ -4354,6 +5530,12 @@
             "state" : "translated",
             "value" : "View on Map"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図で見る"
+          }
         }
       }
     },
@@ -4375,6 +5557,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "This is how it looks on the map"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "地図ではこう見えます"
           }
         }
       }
@@ -4398,6 +5586,12 @@
             "state" : "translated",
             "value" : "Clear"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "消去"
+          }
         }
       }
     },
@@ -4419,6 +5613,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Support"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サポート"
           }
         }
       }
@@ -4442,6 +5642,12 @@
             "state" : "translated",
             "value" : "Pick something that can serve as a reference, like home or work."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自宅や職場など、基準になりそうな場所を選んでください。"
+          }
         }
       }
     },
@@ -4463,6 +5669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Capture"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "撮る"
           }
         }
       }
@@ -4486,6 +5698,12 @@
             "state" : "translated",
             "value" : "Stamped On"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "押した日"
+          }
         }
       }
     },
@@ -4507,6 +5725,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stamped!"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "押しました"
           }
         }
       }
@@ -4530,6 +5754,12 @@
             "state" : "translated",
             "value" : "Roads you pass by car or train aren't drawn.\nOnly walking puts down a dot at a time."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "車や地下鉄で通った道は描かれません。\n歩いたときだけ、一点ずつ刻まれます。"
+          }
         }
       }
     },
@@ -4551,6 +5781,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Only what's inside the frame stays; the background is erased"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "枠の中に入ったものだけが残り、背景は消えます"
           }
         }
       }
@@ -4574,6 +5810,12 @@
             "state" : "translated",
             "value" : "First"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "初回"
+          }
         }
       }
     },
@@ -4595,6 +5837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "First-Time Paths"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "はじめて歩く道"
           }
         }
       }
@@ -4618,6 +5866,12 @@
             "state" : "translated",
             "value" : "This is a spot you're visiting for the first time"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "はじめて訪れた場所です"
+          }
         }
       }
     },
@@ -4639,6 +5893,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
           }
         }
       }
@@ -4662,6 +5922,12 @@
             "state" : "translated",
             "value" : "Turn On"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オンにする"
+          }
         }
       }
     },
@@ -4683,6 +5949,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "View Larger"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大きく見る"
           }
         }
       }
@@ -4707,6 +5979,12 @@
             "state" : "translated",
             "value" : "Screens for Large Text"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "大きな文字に合わせた画面"
+          }
         }
       }
     },
@@ -4728,6 +6006,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Time-lapse"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タイムラプス"
           }
         }
       }
@@ -4751,6 +6035,12 @@
             "state" : "translated",
             "value" : "Explore"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探検"
+          }
         }
       }
     },
@@ -4773,6 +6063,12 @@
             "state" : "translated",
             "value" : "Exploration Log"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探検記録"
+          }
         }
       }
     },
@@ -4794,6 +6090,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Exploration Log"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "探検ログ"
           }
         }
       }
@@ -4818,6 +6120,12 @@
             "state" : "translated",
             "value" : "Foldable iPhone Layout"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "折りたたみiPhoneの画面"
+          }
         }
       }
     },
@@ -4841,6 +6149,12 @@
             "state" : "translated",
             "value" : "On a foldable iPhone, see your map and records side by side in two panes."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "折りたたみiPhoneで、地図と記録を2つのペインに分けて見られます。"
+          }
         }
       }
     },
@@ -4862,6 +6176,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Day Time-lapse"
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日のタイムラプス"
           }
         }
       }
@@ -4886,6 +6206,12 @@
             "state" : "translated",
             "value" : "At the end of the day, get a notification about the path you walked today."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日の終わりに、今日歩いた道を通知でお知らせします。"
+          }
         }
       }
     },
@@ -4907,6 +6233,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "When you stay in one place for over %lld minutes,\nit's added to today's footprints."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1か所に%lld分以上とどまると、\nその場所が今日の足あとに並びます。"
           }
         }
       }
@@ -4930,6 +6262,12 @@
             "state" : "translated",
             "value" : "Couldn't find your location yet"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在地がまだ見つかりません"
+          }
         }
       }
     },
@@ -4948,6 +6286,12 @@
           }
         },
         "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "ja" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"

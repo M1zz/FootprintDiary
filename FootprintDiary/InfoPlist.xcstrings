@@ -20,6 +20,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -41,6 +47,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uses the camera to save a photo of the spot and turn what you capture into a sticker for your map."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その場所の写真を残し、撮ったものを切り抜いて地図に載せるステッカーにするため、カメラを使用します。"
           }
         }
       }
@@ -64,6 +76,12 @@
             "state" : "translated",
             "value" : "\"Always\" permission is needed to automatically record your footprints whenever you move between places."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "場所を移動するたびに足あとを自動で記録するには、「常に許可」の権限が必要です。"
+          }
         }
       }
     },
@@ -86,6 +104,12 @@
             "state" : "translated",
             "value" : "Location permission is needed to record your current position as a footprint on the map."
           }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "現在地を足あととして地図に記録するために、位置情報の権限が必要です。"
+          }
         }
       }
     },
@@ -107,6 +131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uses motion data to tell whether you moved on foot or by running, so travel by vehicle isn't recorded."
+          }
+        },
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "徒歩やランニングで移動したかを確認し、乗り物での移動を記録しないために、モーションデータを使用します。"
           }
         }
       }

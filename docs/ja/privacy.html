@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>プライバシーポリシー · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --border: #e5e7eb; --note-bg: #eef7ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36; --note-bg: #1a2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; padding-top: 8px; }
+    p, li { color: var(--text); }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    .note {
+      background: var(--note-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+    }
+    .note strong { color: var(--accent); }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--card); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/ja/privacy.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../privacy.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/privacy.html" hreflang="en" lang="en">English</a> · <a href="privacy.html" hreflang="ja" lang="ja" aria-current="true">日本語</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← 벅뚜벅뚜 ホーム</a>
+    <h1>プライバシーポリシー</h1>
+    <p class="updated">施行日：2026年8月27日</p>
+
+    <p>
+      <strong>벅뚜벅뚜（FootprintDiary）</strong>（以下「本アプリ」）は、利用者の個人情報を大切にします。
+      本アプリは、利用者の移動記録と日記を<strong>利用者ご本人の端末とご自身のiCloudアカウント</strong>にのみ
+      保存するよう設計されています。アプリ開発者は、利用者の位置情報・写真・日記にアクセスできません。
+    </p>
+
+    <div class="note">
+      <strong>要点</strong> — 本アプリには会員登録もアカウントもありません。
+      位置情報・写真・日記は端末と<strong>利用者ご本人のiCloud</strong>にのみ保存され、開発者は見ることができません。
+      ただし、アプリを改善していくために、開発者は<strong>誰のものか特定できない利用統計</strong>（アプリの起動回数や、
+      どの画面が使われたかなど）を匿名で収集します。ここに位置情報や文章は一切含まれません。
+      詳しくは下記4番の項目をご覧ください。
+    </div>
+
+    <h2>1. 収集する情報</h2>
+    <p>本アプリは次の情報を<strong>利用者の端末の中だけで</strong>処理し、開発者や第三者のサーバーには送信しません。</p>
+    <table>
+      <tr><th>項目</th><th>用途</th><th>保存場所</th></tr>
+      <tr><td>位置情報（訪問地点、移動座標）</td><td>地図への足あと表示、移動経路の記録</td><td>端末内（SwiftData）</td></tr>
+      <tr><td>動作・モーションデータ</td><td>徒歩／乗り物での移動の区別（乗り物での移動は記録から除外）</td><td>端末内で即時に使用し、保存しません</td></tr>
+      <tr><td>写真</td><td>日記への添付</td><td>端末内（SwiftData）</td></tr>
+      <tr><td>カメラ（撮影した写真）</td><td>その場所の写真を残すこと、撮影した対象を切り抜いて地図に載せるステッカーを作ること（切り抜きは端末内で処理）</td><td>端末内（SwiftData）</td></tr>
+      <tr><td>日記の文章、場所の名前</td><td>利用者ご自身が書いた記録</td><td>端末内（SwiftData）</td></tr>
+    </table>
+    <p>
+      iCloud同期をオンにすると、上記の記録は<strong>利用者ご本人のiCloudのプライベートデータベース</strong>にも
+      保存され、同じApple Accountの他の端末に引き継がれます。この保存領域は利用者ご本人のものであり、
+      開発者はアクセス権限を持ちません。
+    </p>
+    <p>
+      上記とは別に、開発者は下記4番の項目にある<strong>匿名の利用統計</strong>を収集します。
+    </p>
+
+    <h2>2. 位置情報の利用</h2>
+    <ul>
+      <li>本アプリはiOSの<strong>訪問検出（Visit）</strong>と<strong>大幅変更位置情報サービス</strong>の機能を使い、
+          バッテリー消費を最小限に抑えながら場所の移動を自動で記録します。</li>
+      <li>自動記録のために「常に許可」の位置情報の権限をお願いすることがあります。権限はいつでも
+          iOSの設定アプリで変更または取り消せます。</li>
+      <li>位置情報の権限を許可しない場合、自動記録機能は動作しませんが、そのほかの機能はご利用いただけます。</li>
+    </ul>
+
+    <h2>3. 第三者サービス（Apple）</h2>
+    <p>
+      本アプリは、座標を人が読める住所や場所の名前に変換するために、
+      Appleが提供する<strong>逆ジオコーディング（CLGeocoder）</strong>と地図表示（MapKit）を使用します。
+      この過程で該当の座標が処理のためにAppleへ送信されることがあり、これは
+      <a href="https://www.apple.com/legal/privacy/">Appleのプライバシーポリシー</a>が適用されます。
+      アプリ開発者はこのデータにアクセスしません。
+    </p>
+
+    <h2>4. 匿名の利用統計</h2>
+    <p>
+      どの機能が実際に使われているかを知らなければアプリを改善できないため、開発者は次の情報を
+      <strong>利用者を特定できない形で</strong>収集します。保存先は開発者の
+      Apple CloudKit領域であり、利用者の記録が保存される個人のiCloudとは別の領域です。
+    </p>
+    <table>
+      <tr><th>収集するもの</th><th>収集しないもの</th></tr>
+      <tr>
+        <td>
+          アプリの起動回数、インストール後の日数、アプリのバージョン、iOSのバージョン、端末の言語設定<br>
+          どの機能を使ったか（スタンプ、動画の書き出し、日記の作成、場所の名前付け、カレンダーを開く）<br>
+          おおよその規模（歩いて描いた総距離（km）、歩みが残った日数、スタンプ・場所・日記の数）
+        </td>
+        <td>
+          位置座標（1件も送信しません）<br>
+          日記の文章、場所の名前、写真<br>
+          氏名・メールアドレス・電話番号・Apple Accountなど、利用者を特定できる情報<br>
+          広告用識別子（IDFA）、端末固有の識別子
+        </td>
+      </tr>
+    </table>
+    <ul>
+      <li>インストールを区別するために、アプリのインストール時に<strong>ランダムに生成した値</strong>を一つ使用します。
+          この値は端末やApple Accountとは無関係で、アプリを削除して再インストールすると
+          以前の値とはつながりません。</li>
+      <li>本アプリは<strong>広告SDKや第三者の解析SDK、トラッキングツールを使用しません。</strong>
+          上記の統計は、開発者自身が作成したコードでApple CloudKitにのみ保存されます。</li>
+      <li>この統計はアプリの改善目的にのみ使用し、販売したり第三者に提供したりしません。</li>
+    </ul>
+
+    <h2>5. フィードバックの送信</h2>
+    <p>
+      アプリの設定にある<strong>フィードバックを送る</strong>は、利用者ご自身が書いて送信したときにのみ動作します。
+      送信された内容は開発者のApple CloudKit領域に保存され、開発者が読んで返信するためだけに使います。
+    </p>
+    <ul>
+      <li>送信するもの：利用者が選んだフィードバックの種類と書いた文章、アプリのバージョン・iOSのバージョン・端末の種類・端末の言語設定</li>
+      <li>お名前・メールアドレスは、利用者ご自身が入力したときにのみ一緒に送信し、返信のためだけに使います。</li>
+      <li>開発者からの返信は、アプリ内で読むことができます。</li>
+      <li>送信したフィードバックの削除をご希望の場合は、下記の連絡先までお知らせください。</li>
+    </ul>
+
+    <h2>6. 第三者への提供と広告</h2>
+    <ul>
+      <li>本アプリは、利用者の個人情報を販売したり第三者に提供したりしません。</li>
+      <li>本アプリは広告を表示せず、利用者を追跡しません。</li>
+    </ul>
+
+    <h2>7. データの保管と削除</h2>
+    <ul>
+      <li>すべての記録は利用者の端末とご自身のiCloudに保存され、利用者がアプリ内で
+          足あとや日記を直接削除できます。</li>
+      <li><strong>アプリを削除すると</strong>、端末に保存されたすべてのデータ（位置情報、写真、日記）も一緒に削除されます。
+          iCloudに保存されたコピーは、iOSの設定アプリのiCloud管理画面から削除できます。</li>
+      <li>開発者は利用者の位置情報・写真・日記を保管していないため、そのデータを閲覧したり
+          復元したりすることはできません。</li>
+      <li>匿名の利用統計には利用者と結びつけられる情報がないため、個別の削除依頼には対応できません。
+          ただし、アプリを削除すればその時点以降は何も収集されません。</li>
+    </ul>
+
+    <h2>8. 子どもの個人情報</h2>
+    <p>
+      本アプリは利用者を特定できる情報を収集しないため、特定の年齢層を対象にデータを収集することはありません。
+      すべてのデータは利用者の端末にのみ残ります。
+    </p>
+
+    <h2>9. ポリシーの変更</h2>
+    <p>
+      本ポリシーは、法令やアプリの機能の変更に応じて改定されることがあり、変更した場合はこのページを更新してお知らせします。
+    </p>
+
+    <h2>10. お問い合わせ先</h2>
+    <p>
+      個人情報の取り扱いに関するお問い合わせは、下記までご連絡ください。<br />
+      メール：<a href="mailto:leeo@kakao.com">leeo@kakao.com</a><br />
+      サポートページ：<a href="support.html">サポート / お問い合わせ</a>
+    </p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) · 施行日 2026年8月27日
+    </footer>
+  </div>
+</body>
+</html>
