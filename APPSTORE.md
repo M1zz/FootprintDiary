@@ -895,3 +895,67 @@ Chọn giữa ưu tiên chính xác và ưu tiên pin. Khi ưu tiên chính xác
 Bản ghi của bạn nằm trong iCloud của bạn
 Bước chân, con dấu, nhật ký và ảnh được lưu trong iCloud cá nhân của bạn và đi theo khi bạn đổi thiết bị.
 Thống kê sử dụng ẩn danh không bao gồm tọa độ vị trí, nội dung nhật ký, tên địa điểm hay ảnh.
+
+## cs
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/cs/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/cs/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/cs/
+
+### 이름
+
+벅뚜벅뚜: Mapa z kroků
+
+### 부제
+
+Vybarví se jen nová cesta
+
+### 키워드
+
+procházky,pěší,turistika,gps,sledování,deník,cestování,kroky,objevování,razítka,čtvrť,město,trasa
+
+### 프로모션 텍스트
+
+Prázdná mapa, do které se nekreslí cesty autem ani metrem. Rozšiřují ji jen cesty, kudy jdeš poprvé. Kterým směrem dnes nakreslíš novou cestu?
+
+### 설명
+
+Mapa, která začíná prázdným papírem. Bod po bodu se vyplňují jen místa, kudy jsi prošel vlastníma nohama.
+Cesty projeté autem nebo metrem se nekreslí a ani stonásobné procházení téže cesty mapu nerozšíří. Aby rostla, musíš vyrazit novou cestou.
+
+Dnešek a minulé kroky, každé jinou barvou
+Kde jsi dnes šel, otiskne se červeným inkoustem, minulé kroky indigovou modří. Čím častěji místem projdeš, tím je tmavší, takže se sám ukáže tvůj každodenní okruh.
+Místa, kam jsi se nevrátil víc než tři měsíce, se nemažou, ale vyblednou do šedi.
+
+Razítka pro navštívená místa i místa, kam se chceš podívat
+Otiskni razítko tam, kde stojíš, nebo dlouze stiskni mapu a razítko dej, kam chceš. Na výběr je 212 razítek rozdělených do kategorií.
+Razítko na místě, kde jsi ještě nešel, zůstane jako místo k návštěvě a stane se navštíveným, až se k němu opravdu přiblížíš.
+Vyfoť fotoaparátem ceduli obchodu, pozadí se vystřihne a cedule se postaví na mapu jako nálepka jen pro to místo.
+
+Dnešní stopy
+Místa, kde ses dnes zastavil, se řadí podle času a je u nich napsáno, kolik jsi mezi nimi ušel. Pokud je tam, kde ses zdržel, razítko, aplikace se zeptá, jestli jsi tam byl, a započítá návštěvu.
+
+Kompas průkopníka
+Rozdělí okolí tvé polohy do osmi směrů a ukáže ten, kudy jsi chodil nejméně. Použij ho, když vybíráš směr příští procházky.
+
+Film a kalendář
+Vyber období a sleduj, jak se tvá mapa kreslí, případně ji exportuj jako video.
+Kalendář nekreslí čísla, ale tvar toho, co jsi ten den prošel. Můžeš také každý den psát deník s textem a fotkami.
+
+Widgety
+Na domovské obrazovce uvidíš tvar a délku dnes nakreslené cesty, na zamčené obrazovce dnešní vzdálenost jako jediný řádek čísel.
+
+Způsob záznamu
+Vybírej mezi přesností a šetřením baterie. Při přednosti přesnosti se kroky zaznamenávají i se zavřenou aplikací.
+
+Tvé záznamy v tvém iCloudu
+Kroky, razítka, deník a fotky jsou uložené v tvém osobním iCloudu a při výměně zařízení jdou s tebou.
+Anonymní statistiky používání nikdy neobsahují souřadnice polohy, text deníku, názvy míst ani fotky.

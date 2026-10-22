@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zásady ochrany osobních údajů · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --border: #e5e7eb; --note-bg: #eef7ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36; --note-bg: #1a2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; padding-top: 8px; }
+    p, li { color: var(--text); }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    .note {
+      background: var(--note-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+    }
+    .note strong { color: var(--accent); }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--card); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/cs/privacy.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/privacy.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/privacy.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/FootprintDiary/zh-Hant/privacy.html">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/FootprintDiary/ru/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/FootprintDiary/es/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/FootprintDiary/de/privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/FootprintDiary/fr/privacy.html">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/FootprintDiary/it/privacy.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/FootprintDiary/pt-BR/privacy.html">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/FootprintDiary/th/privacy.html">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/FootprintDiary/vi/privacy.html">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/FootprintDiary/cs/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../privacy.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/privacy.html" hreflang="en" lang="en">English</a> · <a href="../ja/privacy.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/privacy.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/privacy.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/privacy.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/privacy.html" hreflang="es" lang="es">Español</a> · <a href="../de/privacy.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/privacy.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/privacy.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/privacy.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/privacy.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/privacy.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="privacy.html" hreflang="cs" lang="cs" aria-current="true">Čeština</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← Domů 벅뚜벅뚜</a>
+    <h1>Zásady ochrany osobních údajů</h1>
+    <p class="updated">Účinnost od: 27. srpna 2026</p>
+
+    <p>
+      <strong>벅뚜벅뚜 (FootprintDiary)</strong> (dále „Aplikace“) si váží osobních údajů uživatelů.
+      Aplikace je navržena tak, aby historii pohybu a deník uživatele ukládala <strong>jen do vlastního zařízení a vlastního účtu iCloud uživatele</strong>.
+      Vývojář Aplikace nemá přístup k poloze, fotkám ani deníku uživatele.
+    </p>
+
+    <div class="note">
+      <strong>Stručně</strong> — Aplikace nemá registraci ani účty.
+      Poloha, fotky a deník se ukládají jen do zařízení a do <strong>vašeho vlastního iCloudu</strong> a vývojář je nevidí.
+      Aby však mohl Aplikaci dál vylepšovat, vývojář anonymně shromažďuje <strong>statistiky používání, z nichž nelze poznat, kdo jste</strong>
+      (například kolikrát se Aplikace otevřela a které obrazovky se používaly). Nikdy neobsahují polohu ani texty;
+      podrobnosti jsou v bodě 4 níže.
+    </div>
+
+    <h2>1. Shromažďované údaje</h2>
+    <p>Aplikace zpracovává následující údaje <strong>pouze uvnitř vašeho zařízení</strong> a neodesílá je vývojáři ani na servery třetích stran.</p>
+    <table>
+      <tr><th>Položka</th><th>Účel</th><th>Kde je uložena</th></tr>
+      <tr><td>Údaje o poloze (navštívená místa, souřadnice pohybu)</td><td>Zobrazení stop na mapě, záznam trasy</td><td>V zařízení (SwiftData)</td></tr>
+      <tr><td>Údaje o pohybu</td><td>Rozlišení chůze od jízdy vozidlem (jízdy vozidlem se ze záznamu vylučují)</td><td>Použijí se hned v zařízení a neukládají se</td></tr>
+      <tr><td>Fotky</td><td>Přiložení k deníku</td><td>V zařízení (SwiftData)</td></tr>
+      <tr><td>Fotoaparát (pořízené fotky)</td><td>Uložení fotky místa a vystřižení vyfoceného předmětu do nálepky na mapu (vystřižení probíhá v zařízení)</td><td>V zařízení (SwiftData)</td></tr>
+      <tr><td>Text deníku, názvy míst</td><td>Záznamy, které si sami píšete</td><td>V zařízení (SwiftData)</td></tr>
+    </table>
+    <p>
+      Pokud zapnete synchronizaci iCloud, výše uvedené záznamy se ukládají i do <strong>vaší soukromé databáze iCloud</strong>
+      a přecházejí do dalších zařízení se stejným Apple ID. Toto úložiště patří vám
+      a vývojář k němu nemá přístup.
+    </p>
+    <p>
+      Nezávisle na výše uvedeném vývojář shromažďuje <strong>anonymní statistiky používání</strong> popsané v bodě 4.
+    </p>
+
+    <h2>2. Využití údajů o poloze</h2>
+    <ul>
+      <li>Aplikace využívá funkce iOS <strong>rozpoznávání návštěv (Visit)</strong> a <strong>významných změn polohy</strong>,
+          aby automaticky zaznamenávala přesuny mezi místy při co nejmenší spotřebě baterie.</li>
+      <li>K automatickému záznamu může Aplikace požádat o oprávnění k poloze „Vždy“. Toto oprávnění můžete kdykoli změnit nebo odvolat
+          v aplikaci Nastavení v iOS.</li>
+      <li>Pokud oprávnění k poloze nepovolíte, automatický záznam nebude fungovat, ostatní funkce ale zůstanou k dispozici.</li>
+    </ul>
+
+    <h2>3. Služby třetích stran (Apple)</h2>
+    <p>
+      K převodu souřadnic na čitelné adresy a názvy míst Aplikace využívá
+      <strong>zpětné geokódování (CLGeocoder)</strong> a zobrazení map (MapKit) od společnosti Apple.
+      Při tom mohou být příslušné souřadnice odeslány společnosti Apple ke zpracování, na což se vztahují
+      <a href="https://www.apple.com/legal/privacy/">Zásady ochrany osobních údajů společnosti Apple</a>.
+      Vývojář Aplikace k těmto údajům nemá přístup.
+    </p>
+
+    <h2>4. Anonymní statistiky používání</h2>
+    <p>
+      K vylepšování Aplikace vývojář potřebuje vědět, které funkce se skutečně používají, a proto shromažďuje následující údaje
+      <strong>ve formě, která neumožňuje identifikaci uživatele</strong>. Ukládají se do vlastního prostoru
+      Apple CloudKit vývojáře, odděleného od osobního iCloudu, kde jsou uloženy vaše záznamy.
+    </p>
+    <table>
+      <tr><th>Co shromažďujeme</th><th>Co neshromažďujeme</th></tr>
+      <tr>
+        <td>
+          Počet otevření Aplikace, počet dnů od instalace, verzi Aplikace, verzi iOS, jazyk zařízení<br>
+          Které funkce se použily (otiskování razítek, export videa, psaní deníku, pojmenování míst, otevření kalendáře)<br>
+          Přibližný rozsah (celková ušlá vzdálenost v km, počet dnů se zaznamenanými kroky, počet razítek, míst a zápisů v deníku)
+        </td>
+        <td>
+          Souřadnice polohy (neodešle se ani jediná)<br>
+          Text deníku, názvy míst, fotky<br>
+          Jméno, e-mail, telefonní číslo, Apple ID ani jiné údaje, podle kterých lze uživatele poznat<br>
+          Reklamní identifikátor (IDFA), jedinečné identifikátory zařízení
+        </td>
+      </tr>
+    </table>
+    <ul>
+      <li>K rozlišení instalací Aplikace při instalaci používá jedinou <strong>náhodně vygenerovanou hodnotu</strong>.
+          Tato hodnota nemá žádnou souvislost se zařízením ani Apple ID a pokud Aplikaci smažete a znovu nainstalujete,
+          s předchozí hodnotou se nespojí.</li>
+      <li>Aplikace <strong>nepoužívá reklamní SDK, analytické SDK třetích stran ani nástroje pro sledování.</strong>
+          Uvedené statistiky se ukládají pouze do Apple CloudKit kódem, který napsal sám vývojář.</li>
+      <li>Tyto statistiky slouží jen k vylepšování Aplikace a neprodávají se ani neposkytují třetím stranám.</li>
+    </ul>
+
+    <h2>5. Odesílání zpětné vazby</h2>
+    <p>
+      Funkce <strong>Odeslat zpětnou vazbu</strong> v nastavení Aplikace funguje, jen když sami něco napíšete a odešlete.
+      Odeslaný obsah se ukládá do prostoru Apple CloudKit vývojáře a slouží pouze k tomu, aby ho vývojář přečetl a odpověděl.
+    </p>
+    <ul>
+      <li>Co se odesílá: vámi zvolený druh zpětné vazby a napsaný text, verze Aplikace, verze iOS, typ zařízení a jazyk zařízení</li>
+      <li>Jméno a e-mail se odesílají, jen když je sami zadáte, a slouží pouze k odpovědi.</li>
+      <li>Odpovědi vývojáře si můžete přečíst v Aplikaci.</li>
+      <li>Chcete-li odeslanou zpětnou vazbu smazat, dejte nám vědět na kontaktu níže.</li>
+    </ul>
+
+    <h2>6. Poskytování třetím stranám a reklama</h2>
+    <ul>
+      <li>Aplikace neprodává vaše osobní údaje ani je neposkytuje třetím stranám.</li>
+      <li>Aplikace nezobrazuje reklamy a nesleduje vás.</li>
+    </ul>
+
+    <h2>7. Uchovávání a mazání údajů</h2>
+    <ul>
+      <li>Všechny záznamy se ukládají do vašeho zařízení a do vašeho iCloudu a stopy
+          i zápisy v deníku můžete sami mazat přímo v Aplikaci.</li>
+      <li><strong>Smazáním Aplikace</strong> se smažou i všechna data uložená v zařízení (poloha, fotky, deník).
+          Kopie uložené v iCloudu lze odstranit na obrazovce správy iCloudu v aplikaci Nastavení v iOS.</li>
+      <li>Protože vývojář vaši polohu, fotky ani deník neuchovává, nemůže tyto údaje zobrazit ani
+          obnovit.</li>
+      <li>Anonymní statistiky používání neobsahují nic, co by se dalo s vámi spojit, takže individuální žádosti o smazání nelze vyřídit.
+          Po smazání Aplikace se však od tohoto okamžiku už nic neshromažďuje.</li>
+    </ul>
+
+    <h2>8. Osobní údaje dětí</h2>
+    <p>
+      Aplikace neshromažďuje údaje, podle kterých by bylo možné uživatele identifikovat, a proto neshromažďuje údaje zaměřené na žádnou konkrétní věkovou skupinu.
+      Všechna data zůstávají jen ve vašem zařízení.
+    </p>
+
+    <h2>9. Změny zásad</h2>
+    <p>
+      Tyto zásady mohou být upraveny v závislosti na změnách právních předpisů nebo funkcí Aplikace; při změně tuto stránku aktualizujeme.
+    </p>
+
+    <h2>10. Kontakt</h2>
+    <p>
+      S dotazy ke zpracování osobních údajů se obracejte na:<br />
+      E-mail: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a><br />
+      Stránka podpory: <a href="support.html">Podpora / Kontakt</a>
+    </p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) · Účinnost od 27. srpna 2026
+    </footer>
+  </div>
+</body>
+</html>

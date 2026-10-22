@@ -187,6 +187,7 @@
 				ru,
 				th,
 				vi,
+				cs,
 			);
 			mainGroup = A10000000000000000000003;
 			minimizedProjectReferenceProxies = 1;

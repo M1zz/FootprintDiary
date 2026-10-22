@@ -86,6 +86,12 @@
             "state" : "translated",
             "value" : "%@ · Dấu chân %lld/%lld"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Stopy %lld/%lld"
+          }
         }
       }
     },
@@ -173,6 +179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đi bộ %@ trong %@"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ušel jsi %@ za %@"
           }
         }
       }
@@ -262,6 +274,12 @@
             "state" : "translated",
             "value" : "Đã đi bộ %@"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ušel jsi %@"
+          }
         }
       }
     },
@@ -349,6 +367,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đã sưu tầm %@"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nasbíráno: %@"
           }
         }
       }
@@ -438,6 +462,12 @@
             "state" : "translated",
             "value" : "Biểu tượng %@"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol: %@"
+          }
         }
       }
     },
@@ -526,6 +556,12 @@
             "state" : "translated",
             "value" : "%@, %lld loại"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, druhů: %lld"
+          }
         }
       }
     },
@@ -610,6 +646,12 @@
           }
         },
         "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
+        },
+        "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@×"
@@ -702,6 +744,12 @@
             "state" : "translated",
             "value" : "Hướng %@ bạn đi ít nhất"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Směrem %@ jsi chodil nejméně"
+          }
         }
       }
     },
@@ -789,6 +837,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cách %lld m"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vzdálenost %lld m"
           }
         }
       }
@@ -878,6 +932,12 @@
             "state" : "translated",
             "value" : "Vào trong %lld m thì màn trập sẽ mở"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do %lld m se otevře závěrka"
+          }
         }
       }
     },
@@ -965,6 +1025,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld loại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Druhů: %lld"
           }
         }
       }
@@ -1054,6 +1120,12 @@
             "state" : "translated",
             "value" : "%lld nơi"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Míst: %lld"
+          }
         }
       }
     },
@@ -1141,6 +1213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld lần"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld×"
           }
         }
       }
@@ -1230,6 +1308,12 @@
             "state" : "translated",
             "value" : "Đã ra ngoài %lld lần"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyšel jsi %lld×"
+          }
         }
       }
     },
@@ -1318,6 +1402,12 @@
             "state" : "translated",
             "value" : "Lần khám phá thứ %lld"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld. objev"
+          }
         }
       }
     },
@@ -1405,6 +1495,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đi tới bằng AR"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dojít s AR"
           }
         }
       }
@@ -1495,6 +1591,12 @@
             "state" : "translated",
             "value" : "Khóa bằng Face ID"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zámek Face ID"
+          }
         }
       }
     },
@@ -1583,6 +1685,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Khóa ứng dụng bằng Face ID hoặc Touch ID để bảo vệ nơi bạn đã đi và nhật ký."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zamkni aplikaci pomocí Face ID nebo Touch ID a ochraň, kudy jsi chodil, i svůj deník."
           }
         }
       }
@@ -1673,6 +1781,12 @@
             "state" : "translated",
             "value" : "Hỏi Siri để biết ngay hôm nay bạn đã đi bao xa."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeptej se Siri, kolik jsi dnes ušel."
+          }
         }
       }
     },
@@ -1761,6 +1875,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri và Phím tắt"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri a Zkratky"
           }
         }
       }
@@ -1851,6 +1971,12 @@
             "state" : "translated",
             "value" : "VoiceOver đọc đầy đủ mọi nút và nội dung của bản đồ và bản ghi, theo đúng thứ tự."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver přečte všechna tlačítka a podrobnosti mapy i záznamů, a to ve správném pořadí."
+          }
         }
       }
     },
@@ -1940,6 +2066,12 @@
             "state" : "translated",
             "value" : "VoiceOver dễ dùng hơn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pohodlnější VoiceOver"
+          }
         }
       }
     },
@@ -2027,6 +2159,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Không có con dấu nào khớp với \"%@\""
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Žádná razítka neodpovídají „%@“"
           }
         }
       }
@@ -2116,6 +2254,12 @@
             "state" : "translated",
             "value" : "Đây là nơi bạn định tới. Đánh dấu là đã tới nhé?"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chtěl jsi sem zajít. Označit jako navštívené?"
+          }
         }
       }
     },
@@ -2203,6 +2347,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chưa từng tới"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatím nenavštíveno"
           }
         }
       }
@@ -2292,6 +2442,12 @@
             "state" : "translated",
             "value" : "Muốn tới"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chci navštívit"
+          }
         }
       }
     },
@@ -2379,6 +2535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nơi từng đóng dấu là muốn tới"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Místo označené razítkem jako cíl návštěvy"
           }
         }
       }
@@ -2468,6 +2630,12 @@
             "state" : "translated",
             "value" : "Lý do bị chặn nhiều nhất: %@ (%lld lần). %@"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nejčastější důvod: %@ (%lld×). %@"
+          }
         }
       }
     },
@@ -2555,6 +2723,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nhóm"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategorie"
           }
         }
       }
@@ -2644,6 +2818,12 @@
             "state" : "translated",
             "value" : "La bàn tiên phong"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kompas průkopníka"
+          }
         }
       }
     },
@@ -2731,6 +2911,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bỏ qua"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přeskočit"
           }
         }
       }
@@ -2820,6 +3006,12 @@
             "state" : "translated",
             "value" : "Ghi lại việc đi bộ"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záznam chůze"
+          }
         }
       }
     },
@@ -2907,6 +3099,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ghi lại việc đi bộ đang tắt. Dù bạn đi bộ cũng sẽ không để lại đường nào."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záznam chůze je vypnutý. I když půjdeš, žádná stopa nezůstane."
           }
         }
       }
@@ -2996,6 +3194,12 @@
             "state" : "translated",
             "value" : "Con dấu đóng khi đi bộ sẽ xếp ở đây theo thứ tự thời gian.\nNơi bạn dừng lại sẽ tự được giữ lại mà không cần đóng dấu."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Razítka otištěná při chůzi se tu skládají v pořadí času.\nMísta, kde se zdržíš, se uloží sama, i bez razítka."
+          }
         }
       }
     },
@@ -3083,6 +3287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Những nơi đã đi bộ tới"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Místa, kam jsi došel pěšky"
           }
         }
       }
@@ -3172,6 +3382,12 @@
             "state" : "translated",
             "value" : "Khi đi bộ tới nơi, bạn có thể chụp ảnh ngay tại đó"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Když dojdeš pěšky, můžeš tam pořídit fotku"
+          }
         }
       }
     },
@@ -3260,6 +3476,12 @@
             "state" : "translated",
             "value" : "Nếu bạn đã đi bộ mà bản đồ không có đường nào, bạn có thể xem lý do ở đây."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokud jsi šel, ale v mapě se nevykreslila čára, důvod najdeš tady."
+          }
         }
       }
     },
@@ -3347,6 +3569,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Khi bạn đi, những con đường đã qua sẽ chồng lên nhau theo thứ tự."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jak jdeš, projité cesty se vrství v pořadí."
           }
         }
       }
@@ -3437,6 +3665,12 @@
             "state" : "translated",
             "value" : "Lưu đường đã đi và nhật ký thành tệp rồi nạp lại sau."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ulož své cesty a deník do souboru a později je zase načti."
+          }
         }
       }
     },
@@ -3524,6 +3758,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chỉ những con đường đã đi và con dấu đã đóng trong khoảng thời gian đã chọn mới được giữ lại trên bản đồ."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na mapě zůstanou jen cesty, které jsi v tomto období prošel, a razítka, která jsi v něm otiskl."
           }
         }
       }
@@ -3613,6 +3853,12 @@
             "state" : "translated",
             "value" : "Không quan tâm"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nezajímá mě to"
+          }
         }
       }
     },
@@ -3700,6 +3946,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Không sao"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nevadí"
           }
         }
       }
@@ -3789,6 +4041,12 @@
             "state" : "translated",
             "value" : "Xem cách được vẽ"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sledovat kreslení"
+          }
         }
       }
     },
@@ -3876,6 +4134,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bản đồ tranh vẽ"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kreslená mapa"
           }
         }
       }
@@ -3966,6 +4230,12 @@
             "state" : "translated",
             "value" : "Dù phóng to chữ, màn hình cũng không bị cắt mà được sắp xếp lại gọn gàng."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I při větším písmu se obrazovky přehledně uspořádají, místo aby se oříznuly."
+          }
         }
       }
     },
@@ -4053,6 +4323,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xem theo khoảng thời gian"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazit podle období"
           }
         }
       }
@@ -4142,6 +4418,12 @@
             "state" : "translated",
             "value" : "Cách ghi"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Způsob záznamu"
+          }
         }
       }
     },
@@ -4229,6 +4511,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trạng thái ghi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stav záznamu"
           }
         }
       }
@@ -4318,6 +4606,12 @@
             "state" : "translated",
             "value" : "Xem trạng thái ghi"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazit stav záznamu"
+          }
         }
       }
     },
@@ -4405,6 +4699,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trở về hình mặc định"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vrátit výchozí obrázek"
           }
         }
       }
@@ -4494,6 +4794,12 @@
             "state" : "translated",
             "value" : "Màn hình đã tắt vẫn có thể mở bất cứ lúc nào từ \"Xem gộp\" ở trên. Nút con dấu và nút cài đặt luôn hiển thị."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vypnuté obrazovky můžeš kdykoli otevřít přes „Zobrazit vše“ výše. Tlačítka razítek a nastavení jsou vidět vždy."
+          }
         }
       }
     },
@@ -4581,6 +4887,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kết thúc"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do"
           }
         }
       }
@@ -4670,6 +4982,12 @@
             "state" : "translated",
             "value" : "Để sau"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Později"
+          }
         }
       }
     },
@@ -4757,6 +5075,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chỉ được lưu trong iCloud cá nhân của bạn. Người khác không thấy được."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ukládá se jen do tvého osobního iCloudu. Nikdo jiný to nevidí."
           }
         }
       }
@@ -4847,6 +5171,12 @@
             "state" : "translated",
             "value" : "Xóa toàn bộ bản ghi của tôi cùng lúc"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat všechny mé záznamy najednou"
+          }
         }
       }
     },
@@ -4934,6 +5264,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Viền khu phố của tôi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrys mé čtvrti"
           }
         }
       }
@@ -5023,6 +5359,12 @@
             "state" : "translated",
             "value" : "Bản đồ của tôi"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moje mapa"
+          }
         }
       }
     },
@@ -5110,6 +5452,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mở bản đồ của tôi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevřít mou mapu"
           }
         }
       }
@@ -5199,6 +5547,12 @@
             "state" : "translated",
             "value" : "Xem bản đồ của bạn được vẽ ra"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sleduj, jak se kreslí tvá mapa"
+          }
         }
       }
     },
@@ -5286,6 +5640,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xem trước cách bản đồ của bạn được vẽ"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Náhled kreslení tvé mapy"
           }
         }
       }
@@ -5375,6 +5735,12 @@
             "state" : "translated",
             "value" : "Đường tôi đã vẽ"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cesty, které jsem nakreslil"
+          }
         }
       }
     },
@@ -5462,6 +5828,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nơi tôi đã đóng dấu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Místa, kam jsem otiskl razítko"
           }
         }
       }
@@ -5551,6 +5923,12 @@
             "state" : "translated",
             "value" : "Chạm để thấy bản đồ xuyên qua"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klepnutím prosvítne mapa"
+          }
         }
       }
     },
@@ -5638,6 +6016,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chạm để đóng dấu vị trí hiện tại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klepnutím otiskneš razítko na aktuální místo"
           }
         }
       }
@@ -5727,6 +6111,12 @@
             "state" : "translated",
             "value" : "Hỏi xem bạn có thật sự tới %lld nơi không"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "K potvrzení, zda jsi tam byl: %lld míst"
+          }
         }
       }
     },
@@ -5814,6 +6204,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Số lần tới"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Počet návštěv"
           }
         }
       }
@@ -5903,6 +6299,12 @@
             "state" : "translated",
             "value" : "Tôi đã tới"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Byl jsem tam"
+          }
         }
       }
     },
@@ -5990,6 +6392,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chạm lần nữa để quay lại tờ giấy. Hữu ích khi muốn biết mình đang ở đâu."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dalším klepnutím se vrátíš k papíru. Hodí se, když chceš zjistit, kde asi jsi."
           }
         }
       }
@@ -6079,6 +6487,12 @@
             "state" : "translated",
             "value" : "Chụp lại"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyfotit znovu"
+          }
         }
       }
     },
@@ -6166,6 +6580,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nơi bạn đã quay lại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Místo, kam ses vrátil"
           }
         }
       }
@@ -6255,6 +6675,12 @@
             "state" : "translated",
             "value" : "Đây là nơi quen thuộc đã đăng ký"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toto místo je uložené jako stálé"
+          }
         }
       }
     },
@@ -6342,6 +6768,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đóng"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zavřít"
           }
         }
       }
@@ -6432,6 +6864,12 @@
             "state" : "translated",
             "value" : "Dù tăng độ tương phản hay khó phân biệt màu, bạn vẫn nhận ra đường và con dấu trên bản đồ."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I při vyšším kontrastu nebo potížích s rozlišováním barev poznáš na mapě cesty a razítka."
+          }
         }
       }
     },
@@ -6520,6 +6958,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dùng ứng dụng bằng nhiều ngôn ngữ hơn."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Používej aplikaci ve více jazycích."
           }
         }
       }
@@ -6610,6 +7054,12 @@
             "state" : "translated",
             "value" : "Thêm ngôn ngữ"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Více jazyků"
+          }
         }
       }
     },
@@ -6697,6 +7147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thêm vài lời (không bắt buộc)"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Připiš pár slov (nepovinné)"
           }
         }
       }
@@ -6786,6 +7242,12 @@
             "state" : "translated",
             "value" : "Xem những dấu chân đã sưu tầm cho đến nay trong bộ sưu tập"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "V kolekci uvidíš stopy, které jsi doposud nasbíral"
+          }
         }
       }
     },
@@ -6873,6 +7335,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Không thể hoàn tác."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nelze vrátit zpět."
           }
         }
       }
@@ -6962,6 +7430,12 @@
             "state" : "translated",
             "value" : "Chạm để tạm dừng hoặc phát tiếp"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klepnutím pozastavíš nebo obnovíš přehrávání"
+          }
         }
       }
     },
@@ -7049,6 +7523,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đã ghé %lld nơi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Navštíveno míst: %lld"
           }
         }
       }
@@ -7138,6 +7618,12 @@
             "state" : "translated",
             "value" : "Không tìm thấy vật nào rõ nét nên không xóa được nền. Hãy đưa lại gần vật rồi chụp lại."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nenašlo se nic zřetelného, takže se pozadí nepodařilo odstranit. Přibliž se k předmětu a vyfoť znovu."
+          }
         }
       }
     },
@@ -7225,6 +7711,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lần tới gần nhất"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poslední návštěva"
           }
         }
       }
@@ -7314,6 +7806,12 @@
             "state" : "translated",
             "value" : "Bản đồ mực"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inkoustová mapa"
+          }
         }
       }
     },
@@ -7401,6 +7899,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ghi chú"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poznámka"
           }
         }
       }
@@ -7490,6 +7994,12 @@
             "state" : "translated",
             "value" : "Xem gộp"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazit vše"
+          }
         }
       }
     },
@@ -7577,6 +8087,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đang đặt nước và núi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Umisťuji vodu a hory"
           }
         }
       }
@@ -7666,6 +8182,12 @@
             "state" : "translated",
             "value" : "Chưa phát hiện"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Neobjeveno"
+          }
         }
       }
     },
@@ -7753,6 +8275,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dấu chân"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stopy"
           }
         }
       }
@@ -7842,6 +8370,12 @@
             "state" : "translated",
             "value" : "Timelapse dấu chân"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Časosběr stop"
+          }
         }
       }
     },
@@ -7930,6 +8464,12 @@
             "state" : "translated",
             "value" : "Vùng đã mở: %@"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odkrytá země: %@"
+          }
         }
       }
     },
@@ -8017,6 +8557,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cho thấy bản đồ nền"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prosvítit podkladovou mapu"
           }
         }
       }
@@ -8107,6 +8653,12 @@
             "state" : "translated",
             "value" : "Sao lưu và xuất"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záloha a export"
+          }
         }
       }
     },
@@ -8194,6 +8746,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lý do bị loại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Důvody zahození"
           }
         }
       }
@@ -8283,6 +8841,12 @@
             "state" : "translated",
             "value" : "Phiên bản %@"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verze %@"
+          }
         }
       }
     },
@@ -8370,6 +8934,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cách xem"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazení"
           }
         }
       }
@@ -8460,6 +9030,12 @@
             "state" : "translated",
             "value" : "Màu sắc và độ tương phản dễ nhìn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Příjemné barvy a kontrast"
+          }
         }
       }
     },
@@ -8547,6 +9123,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đường hiển thị"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazené cesty"
           }
         }
       }
@@ -8636,6 +9218,12 @@
             "state" : "translated",
             "value" : "Tờ giấy trắng tự nó không biết đâu là đâu.\nNơi bạn đang đứng sẽ là **điểm mốc đầu tiên**."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prázdný papír sám nepozná, co je kde.\nMísto, kde právě stojíš, se stane **prvním orientačním bodem**."
+          }
         }
       }
     },
@@ -8723,6 +9311,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bắt đầu từ tờ giấy trắng"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Začínáme s prázdným papírem"
           }
         }
       }
@@ -8812,6 +9406,12 @@
             "state" : "translated",
             "value" : "Thống kê sử dụng (nhà phát triển)"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statistiky používání (vývojář)"
+          }
         }
       }
     },
@@ -8899,6 +9499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ảnh"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotky"
           }
         }
       }
@@ -8988,6 +9594,12 @@
             "state" : "translated",
             "value" : "Xóa ảnh"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat fotku"
+          }
         }
       }
     },
@@ -9075,6 +9687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chụp ảnh"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyfotit"
           }
         }
       }
@@ -9164,6 +9782,12 @@
             "state" : "translated",
             "value" : "Thêm ảnh"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat fotku"
+          }
         }
       }
     },
@@ -9251,6 +9875,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đang thêm ảnh"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vkládám fotku"
           }
         }
       }
@@ -9340,6 +9970,12 @@
             "state" : "translated",
             "value" : "Không lưu được ảnh"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotku se nepodařilo uložit"
+          }
         }
       }
     },
@@ -9427,6 +10063,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xóa"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat"
           }
         }
       }
@@ -9517,6 +10159,12 @@
             "state" : "translated",
             "value" : "Nhắc đi dạo"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Upozornění na procházku"
+          }
         }
       }
     },
@@ -9604,6 +10252,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld nơi vừa tới sẽ được đóng dấu trên đường đã đi"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nově dosažená místa (%lld) se otisknou na trase"
           }
         }
       }
@@ -9693,6 +10347,12 @@
             "state" : "translated",
             "value" : "Có gì mới"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Novinky"
+          }
         }
       }
     },
@@ -9780,6 +10440,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cài đặt"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nastavení"
           }
         }
       }
@@ -9869,6 +10535,12 @@
             "state" : "translated",
             "value" : "Hãy bật máy ảnh trong Cài đặt > 벅뚜벅뚜."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapni fotoaparát v Nastavení > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -9956,6 +10628,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mở Cài đặt"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevřít Nastavení"
           }
         }
       }
@@ -10045,6 +10723,12 @@
             "state" : "translated",
             "value" : "Bật quyền trong Cài đặt"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapnout oprávnění v Nastavení"
+          }
         }
       }
     },
@@ -10132,6 +10816,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cũng có thể mở từ Cài đặt"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevřít jde i z Nastavení"
           }
         }
       }
@@ -10221,6 +10911,12 @@
             "state" : "translated",
             "value" : "Đặt lại số đếm"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vynulovat počty"
+          }
         }
       }
     },
@@ -10308,6 +11004,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Thế giới đã được các bản đồ khác vẽ hết rồi.\nỞ đây chỉ còn lại **những nơi bạn đã đi qua bằng chính đôi chân mình**."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Svět už nakreslily jiné mapy.\nTady zůstane **jen to, kudy jsi prošel vlastníma nohama**."
           }
         }
       }
@@ -10397,6 +11099,12 @@
             "state" : "translated",
             "value" : "Điểm đã sưu tầm"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nasbírané spoty"
+          }
         }
       }
     },
@@ -10484,6 +11192,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Con dấu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Razítko"
           }
         }
       }
@@ -10573,6 +11287,12 @@
             "state" : "translated",
             "value" : "Bắt đầu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Od"
+          }
         }
       }
     },
@@ -10660,6 +11380,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bắt đầu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Začít"
           }
         }
       }
@@ -10749,6 +11475,12 @@
             "state" : "translated",
             "value" : "Biểu tượng"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
+          }
         }
       }
     },
@@ -10836,6 +11568,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xem biểu tượng lớn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zvětšit symbol"
           }
         }
       }
@@ -10926,6 +11664,12 @@
             "state" : "translated",
             "value" : "Viết tiếp nhật ký đang dở"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dopsat rozepsaný deník"
+          }
         }
       }
     },
@@ -11013,6 +11757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vuốt để lật như thẻ, chạm hai lần để xem lớn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přejetím listuješ jako kartami, dvojitým klepnutím zvětšíš"
           }
         }
       }
@@ -11102,6 +11852,12 @@
             "state" : "translated",
             "value" : "Không phải"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nebyl"
+          }
         }
       }
     },
@@ -11186,6 +11942,12 @@
           }
         },
         "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -11278,6 +12040,12 @@
             "state" : "translated",
             "value" : "Chưa"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatím ne"
+          }
         }
       }
     },
@@ -11365,6 +12133,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chưa từng tới"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatím nenavštívená"
           }
         }
       }
@@ -11454,6 +12228,12 @@
             "state" : "translated",
             "value" : "Bạn chưa từng tới đây. Nơi này sẽ giữ ở mục \"Muốn tới\" và thành nơi đã tới khi bạn đến."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ještě jsi tu nebyl. Zůstane jako „Chci navštívit“ a po příchodu se z něj stane navštívené místo."
+          }
         }
       }
     },
@@ -11541,6 +12321,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chưa có điểm nào bị loại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zatím žádné zahozené body"
           }
         }
       }
@@ -11630,6 +12416,12 @@
             "state" : "translated",
             "value" : "Chưa"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ještě ne"
+          }
         }
       }
     },
@@ -11717,6 +12509,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hướng dẫn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nápověda"
           }
         }
       }
@@ -11807,6 +12605,12 @@
             "state" : "translated",
             "value" : "Bạn cũng có thể dùng ứng dụng bằng tiếng Anh."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aplikaci můžeš používat i v angličtině."
+          }
         }
       }
     },
@@ -11894,6 +12698,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hãy mở ứng dụng một lần"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otevři aplikaci jednou"
           }
         }
       }
@@ -11983,6 +12793,12 @@
             "state" : "translated",
             "value" : "Ngày nào"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Který den"
+          }
         }
       }
     },
@@ -12070,6 +12886,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dù chọn cách nào, mọi vị trí nhận được đều được lưu. Chỉ là các điểm kém chính xác sẽ không được vẽ lên bản đồ."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tak či tak se ukládají všechny přijaté polohy. Jen body s nízkou přesností se do mapy nekreslí."
           }
         }
       }
@@ -12159,6 +12981,12 @@
             "state" : "translated",
             "value" : "Chỉ đếm ẩn danh xem màn hình nào được dùng. Nơi bạn đã đi và nội dung nhật ký sẽ không được gửi đi."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anonymně se počítá jen to, které obrazovky se používají. Kde chodíš a co píšeš do deníku, se neodesílá."
+          }
         }
       }
     },
@@ -12246,6 +13074,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bạn đã ở đây %@"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zdržel ses tu %@"
           }
         }
       }
@@ -12335,6 +13169,12 @@
             "state" : "translated",
             "value" : "Giữ lại nơi này"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ponechat toto místo"
+          }
         }
       }
     },
@@ -12422,6 +13262,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ghi lại ở đây"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zanechat tady"
           }
         }
       }
@@ -12511,6 +13357,12 @@
             "state" : "translated",
             "value" : "Không ghi lại nơi này có được không?"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nevadí, že se toto místo nezaznamená?"
+          }
         }
       }
     },
@@ -12598,6 +13450,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đây là đâu nhỉ?"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kde to bylo?"
           }
         }
       }
@@ -12687,6 +13545,12 @@
             "state" : "translated",
             "value" : "Xuất thành video"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportovat jako video"
+          }
         }
       }
     },
@@ -12774,6 +13638,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đang tạo video %lld%%"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vytvářím video %lld %%"
           }
         }
       }
@@ -12864,6 +13734,12 @@
             "state" : "translated",
             "value" : "Hỗ trợ tiếng Anh"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podpora angličtiny"
+          }
         }
       }
     },
@@ -12951,6 +13827,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ví dụ: nhà, chỗ làm, quán cà phê quen"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Např. domov, práce, oblíbená kavárna"
           }
         }
       }
@@ -13040,6 +13922,12 @@
             "state" : "translated",
             "value" : "Hôm nay %@"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dnes %@"
+          }
         }
       }
     },
@@ -13127,6 +14015,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đường vẽ hôm nay"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dnešní cesta"
           }
         }
       }
@@ -13216,6 +14110,12 @@
             "state" : "translated",
             "value" : "Đã thêm ảnh vào nhật ký hôm nay"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotka byla přidána do dnešního deníku"
+          }
         }
       }
     },
@@ -13303,6 +14203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Phát hôm nay"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přehrát dnešek"
           }
         }
       }
@@ -13392,6 +14298,12 @@
             "state" : "translated",
             "value" : "Hôm nay chưa tới nơi nào"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dnes jsi ještě nikde nebyl"
+          }
         }
       }
     },
@@ -13479,6 +14391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hôm nay chưa có nơi nào bạn dừng lại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dnes ses ještě nikde nezastavil"
           }
         }
       }
@@ -13568,6 +14486,12 @@
             "state" : "translated",
             "value" : "Hôm nay bạn đã khám phá ở đâu?"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kde jsi dnes objevoval?"
+          }
         }
       }
     },
@@ -13655,6 +14579,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dấu chân hôm nay"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dnešní stopy"
           }
         }
       }
@@ -13744,6 +14674,12 @@
             "state" : "translated",
             "value" : "Khám phá hôm nay"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dnešní objevování"
+          }
         }
       }
     },
@@ -13831,6 +14767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xong"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hotovo"
           }
         }
       }
@@ -13921,6 +14863,12 @@
             "state" : "translated",
             "value" : "Giảm chuyển động"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omezit pohyb"
+          }
         }
       }
     },
@@ -14009,6 +14957,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Khi bật Giảm chuyển động, bản đồ và hiệu ứng màn hình sẽ dịu hơn."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Při zapnutém Omezení pohybu jsou mapa a efekty na obrazovce klidnější."
           }
         }
       }
@@ -14099,6 +15053,12 @@
             "state" : "translated",
             "value" : "Nếu muốn, bạn có thể xóa mọi đường đã đi và nhật ký ngay trong ứng dụng."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Chceš-li, můžeš v aplikaci smazat všechny cesty i deník."
+          }
         }
       }
     },
@@ -14186,6 +15146,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đặt vị trí là \"Luôn luôn\" và bật Chuyển động & Thể dục thì dù không mở ứng dụng, việc đi bộ vẫn được ghi lại."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Když nastavíš polohu na „Vždy“ a zapneš Pohyb a kondici, chůze se zaznamenává i bez otevření aplikace."
           }
         }
       }
@@ -14275,6 +15241,12 @@
             "state" : "translated",
             "value" : "Khoảng thời gian này không có dấu chân"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "V tomto období nejsou žádné stopy"
+          }
         }
       }
     },
@@ -14362,6 +15334,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xem khoảng thời gian này"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazit toto období"
           }
         }
       }
@@ -14451,6 +15429,12 @@
             "state" : "translated",
             "value" : "Những nơi đã chụp trong ngày này"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Místa vyfocená tento den"
+          }
         }
       }
     },
@@ -14538,6 +15522,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ngày này không có bước chân nào được ghi lại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tento den nebyly zaznamenány žádné kroky"
           }
         }
       }
@@ -14627,6 +15617,12 @@
             "state" : "translated",
             "value" : "Ngày này không có dấu chân"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tento den nejsou žádné stopy"
+          }
         }
       }
     },
@@ -14714,6 +15710,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xóa con dấu này"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat toto razítko"
           }
         }
       }
@@ -14803,6 +15805,12 @@
             "state" : "translated",
             "value" : "Dùng biểu tượng này"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Použít tento symbol"
+          }
         }
       }
     },
@@ -14890,6 +15898,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xóa dấu chân ở nơi này"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Smazat stopy na tomto místě"
           }
         }
       }
@@ -14979,6 +15993,12 @@
             "state" : "translated",
             "value" : "Tên của nơi này (ví dụ: chỗ làm, quán cà phê quen)"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název tohoto místa (např. práce, oblíbená kavárna)"
+          }
         }
       }
     },
@@ -15066,6 +16086,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đóng con dấu đầu tiên lên tờ giấy này"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otiskni první razítko na tento papír"
           }
         }
       }
@@ -15155,6 +16181,12 @@
             "state" : "translated",
             "value" : "Tên"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Název"
+          }
         }
       }
     },
@@ -15242,6 +16274,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đặt tên"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pojmenovat"
           }
         }
       }
@@ -15331,6 +16369,12 @@
             "state" : "translated",
             "value" : "Thêm hình ảnh"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Přidat obrázek"
+          }
         }
       }
     },
@@ -15419,6 +16463,12 @@
             "state" : "translated",
             "value" : "Giờ hãy đi bộ thử nào"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teď si vyraz na procházku"
+          }
         }
       }
     },
@@ -15506,6 +16556,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Giờ hãy đi bộ thử nào.\nNhững nơi bạn đi qua sẽ được in lên tờ giấy này từng điểm một."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teď si vyraz na procházku.\nMísta, kudy půjdeš, se otisknou na tento papír bod po bodu."
           }
         }
       }
@@ -15596,6 +16652,12 @@
             "state" : "translated",
             "value" : "Nếu ứng dụng tắt khi bạn đang viết nhật ký, phần đã viết vẫn còn."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokud se aplikace při psaní deníku vypne, napsané zůstane."
+          }
         }
       }
     },
@@ -15683,6 +16745,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nhật ký"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deník"
           }
         }
       }
@@ -15772,6 +16840,12 @@
             "state" : "translated",
             "value" : "Khi **tới một nơi bạn hay đến, hãy đóng dấu ở đó thêm lần nữa**.\nCó hai điểm mốc thì tờ giấy trắng cũng xác định được hướng."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Až **dorazíš na místo, kam chodíš často, otiskni tam razítko ještě jednou**.\nSe dvěma orientačními body najde směr i prázdný papír."
+          }
         }
       }
     },
@@ -15859,6 +16933,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hãy thử lại sau giây lát, hoặc nhấn giữ bản đồ để đóng dấu ở nơi bạn muốn."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zkus to za chvíli znovu, nebo dlouze stiskni mapu a otiskni razítko, kam chceš."
           }
         }
       }
@@ -15948,6 +17028,12 @@
             "state" : "translated",
             "value" : "Lưu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uložit"
+          }
         }
       }
     },
@@ -16035,6 +17121,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Quay lại toàn bộ thời gian"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zpět na celé období"
           }
         }
       }
@@ -16124,6 +17216,12 @@
             "state" : "translated",
             "value" : "Đếm điểm"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Počet bodů"
+          }
         }
       }
     },
@@ -16211,6 +17309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Những điểm kém chính xác vẫn được lưu. Hiện chúng chưa được vẽ lên bản đồ, nhưng sẽ dùng được khi việc hiệu chỉnh tốt hơn."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Body s nízkou přesností se také ukládají. Teď se do mapy nekreslí, ale použít se dají, až se korekce zlepší."
           }
         }
       }
@@ -16300,6 +17404,12 @@
             "state" : "translated",
             "value" : "Trạng thái hiện tại"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktuální stav"
+          }
         }
       }
     },
@@ -16387,6 +17497,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đang tìm vị trí của bạn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hledám tvou polohu"
           }
         }
       }
@@ -16476,6 +17592,12 @@
             "state" : "translated",
             "value" : "Đánh dấu chỗ này"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zanechat značku tady"
+          }
         }
       }
     },
@@ -16563,6 +17685,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đóng dấu vị trí hiện tại"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otisknout razítko tam, kde jsi"
           }
         }
       }
@@ -16652,6 +17780,12 @@
             "state" : "translated",
             "value" : "Đóng dấu ở đây"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otisknout tady"
+          }
         }
       }
     },
@@ -16739,6 +17873,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Những nơi bạn đi qua sẽ được in lên tờ giấy này từng điểm một.\nĐường đi bằng ô tô hay tàu điện ngầm sẽ không được vẽ."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Místa, kudy půjdeš, se otisknou na tento papír bod po bodu.\nCesty projeté autem nebo metrem se nekreslí."
           }
         }
       }
@@ -16828,6 +17968,12 @@
             "state" : "translated",
             "value" : "Chọn nút bản đồ trong Cài đặt"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tlačítka mapy se vybírají v Nastavení"
+          }
         }
       }
     },
@@ -16915,6 +18061,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kiểu bản đồ"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Styl mapy"
           }
         }
       }
@@ -17004,6 +18156,12 @@
             "state" : "translated",
             "value" : "Tỷ lệ bản đồ. Một thanh bằng %@"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Měřítko mapy. Jeden pruh odpovídá %@"
+          }
         }
       }
     },
@@ -17091,6 +18249,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chọn nút nổi trên bản đồ, và mở màn hình đã tắt ngay từ Cài đặt."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyber tlačítka, která se mají na mapě objevit, a vypnuté obrazovky otevřeš přímo z Nastavení."
           }
         }
       }
@@ -17180,6 +18344,12 @@
             "state" : "translated",
             "value" : "Nơi bạn đã đóng dấu trước trên bản đồ. Khi tới nơi, chúng sẽ thành nơi đã tới."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Místa, kam jsi razítko otiskl předem. Po příchodu se z nich stanou navštívená místa."
+          }
         }
       }
     },
@@ -17267,6 +18437,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hiện trên bản đồ"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazit na mapě"
           }
         }
       }
@@ -17356,6 +18532,12 @@
             "state" : "translated",
             "value" : "Xem trên bản đồ"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobrazit na mapě"
+          }
         }
       }
     },
@@ -17443,6 +18625,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trên bản đồ sẽ trông như thế này"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na mapě to vypadá takto"
           }
         }
       }
@@ -17532,6 +18720,12 @@
             "state" : "translated",
             "value" : "Xóa sạch"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vymazat"
+          }
         }
       }
     },
@@ -17619,6 +18813,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hỗ trợ"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podpora"
           }
         }
       }
@@ -17708,6 +18908,12 @@
             "state" : "translated",
             "value" : "Hãy chọn một nơi có thể làm mốc, như nhà hay chỗ làm."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyber něco, co poslouží jako orientační bod, třeba domov nebo práci."
+          }
         }
       }
     },
@@ -17795,6 +19001,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chụp"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vyfotit"
           }
         }
       }
@@ -17884,6 +19096,12 @@
             "state" : "translated",
             "value" : "Ngày đóng dấu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otištěno dne"
+          }
         }
       }
     },
@@ -17971,6 +19189,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Đã đóng dấu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otištěno"
           }
         }
       }
@@ -18060,6 +19284,12 @@
             "state" : "translated",
             "value" : "Đường đi bằng ô tô hay tàu điện ngầm sẽ không được vẽ.\nChỉ khi đi bộ mới in lên từng điểm một."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cesty projeté autem nebo metrem se nekreslí.\nJen chůze otiskuje bod po bodu."
+          }
         }
       }
     },
@@ -18147,6 +19377,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Chỉ giữ lại phần nằm trong khung, nền sẽ bị xóa"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zůstane jen to, co je v rámečku; pozadí se vymaže"
           }
         }
       }
@@ -18236,6 +19472,12 @@
             "state" : "translated",
             "value" : "Lần đầu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "První"
+          }
         }
       }
     },
@@ -18323,6 +19565,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Những con đường đi lần đầu"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cesty projité poprvé"
           }
         }
       }
@@ -18412,6 +19660,12 @@
             "state" : "translated",
             "value" : "Đây là nơi bạn đặt chân đến lần đầu"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na tomto místě stojíš poprvé"
+          }
         }
       }
     },
@@ -18499,6 +19753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hủy"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrušit"
           }
         }
       }
@@ -18588,6 +19848,12 @@
             "state" : "translated",
             "value" : "Bật"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapnout"
+          }
         }
       }
     },
@@ -18675,6 +19941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Xem lớn"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zvětšit"
           }
         }
       }
@@ -18765,6 +20037,12 @@
             "state" : "translated",
             "value" : "Màn hình cho chữ lớn"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrazovky pro velké písmo"
+          }
         }
       }
     },
@@ -18852,6 +20130,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Časosběr"
           }
         }
       }
@@ -18941,6 +20225,12 @@
             "state" : "translated",
             "value" : "Khám phá"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Objevovat"
+          }
         }
       }
     },
@@ -19029,6 +20319,12 @@
             "state" : "translated",
             "value" : "Nhật ký khám phá"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Záznam objevování"
+          }
         }
       }
     },
@@ -19116,6 +20412,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nhật ký khám phá"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deník objevování"
           }
         }
       }
@@ -19206,6 +20508,12 @@
             "state" : "translated",
             "value" : "Màn hình iPhone gập"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obrazovka skládacího iPhonu"
+          }
         }
       }
     },
@@ -19295,6 +20603,12 @@
             "state" : "translated",
             "value" : "Trên iPhone gập, xem bản đồ và bản ghi chia thành hai ô."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na skládacím iPhonu uvidíš mapu a záznamy ve dvou panelech."
+          }
         }
       }
     },
@@ -19382,6 +20696,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse trong ngày"
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Časosběr dne"
           }
         }
       }
@@ -19472,6 +20792,12 @@
             "state" : "translated",
             "value" : "Cuối ngày, thông báo sẽ cho bạn biết con đường đã đi hôm nay."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na konci dne ti oznámení připomene cestu, kterou jsi dnes ušel."
+          }
         }
       }
     },
@@ -19559,6 +20885,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nếu bạn ở một chỗ quá %lld phút,\nchỗ đó sẽ hiện trong dấu chân hôm nay."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Když se na jednom místě zdržíš déle než %lld minut,\nobjeví se v dnešních stopách."
           }
         }
       }
@@ -19648,6 +20980,12 @@
             "state" : "translated",
             "value" : "Chưa tìm được vị trí hiện tại"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tvou polohu se zatím nepodařilo najít"
+          }
         }
       }
     },
@@ -19732,6 +21070,12 @@
           }
         },
         "vi" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "cs" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"

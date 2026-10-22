@@ -86,6 +86,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -173,6 +179,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dùng máy ảnh để lưu ảnh nơi đó và cắt vật bạn chụp thành nhãn dán đặt lên bản đồ."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotoaparát slouží k uložení fotky místa a k vystřižení vyfoceného předmětu do nálepky, kterou položíš na mapu."
           }
         }
       }
@@ -262,6 +274,12 @@
             "state" : "translated",
             "value" : "Cần quyền \"Luôn luôn\" để tự động ghi dấu chân mỗi khi bạn đổi chỗ."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "K automatickému zaznamenávání stop při každé změně místa je potřeba oprávnění „Vždy“."
+          }
         }
       }
     },
@@ -350,6 +368,12 @@
             "state" : "translated",
             "value" : "Cần quyền vị trí để ghi vị trí hiện tại của bạn thành dấu chân trên bản đồ."
           }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Oprávnění k poloze je potřeba, aby se tvá aktuální poloha zaznamenala jako stopa na mapě."
+          }
         }
       }
     },
@@ -437,6 +461,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dùng dữ liệu chuyển động để xác định bạn đi bộ hay chạy, nhằm không ghi lại việc di chuyển bằng phương tiện."
+          }
+        },
+        "cs" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Údaje o pohybu slouží ke zjištění, zda ses pohyboval pěšky nebo během, aby se nezaznamenávaly jízdy vozidlem."
           }
         }
       }
