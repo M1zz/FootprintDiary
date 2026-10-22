@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Soporte · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --accent2: #00c2a8; --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 24px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; }
+    .contact {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff; border-radius: 16px; padding: 24px; margin-bottom: 8px;
+    }
+    .contact h2 { margin-top: 0; color: #fff; }
+    .contact a { color: #fff; font-weight: 600; }
+    .faq {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; margin: 12px 0; padding: 4px 18px;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 600; padding: 14px 0; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "＋"; color: var(--muted); font-weight: 400; }
+    .faq[open] summary::after { content: "－"; }
+    .faq p { margin: 0 0 16px; color: var(--muted); }
+    a { color: var(--accent); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/es/support.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/support.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/support.html">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/support.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/support.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/FootprintDiary/zh-Hant/support.html">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/FootprintDiary/es/support.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/support.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../support.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/support.html" hreflang="en" lang="en">English</a> · <a href="../ja/support.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/support.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/support.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="support.html" hreflang="es" lang="es" aria-current="true">Español</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← Inicio de 벅뚜벅뚜</a>
+    <h1>Soporte / Contacto</h1>
+
+    <div class="contact">
+      <h2>💬 Contacto</h2>
+      <p>Envíanos por correo electrónico los informes de errores, las sugerencias de funciones y cualquier otra consulta. Te responderemos lo antes posible.</p>
+      <p>Correo electrónico: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+      <p>Incidencias en GitHub: <a href="https://github.com/M1zz/FootprintDiary/issues">github.com/M1zz/FootprintDiary/issues</a></p>
+    </div>
+
+    <h2>Preguntas frecuentes (FAQ)</h2>
+
+    <details class="faq">
+      <summary>Mis huellas no se registran automáticamente.</summary>
+      <p>
+        El registro automático solo funciona si el permiso de ubicación de iOS está en <strong>«Siempre»</strong>.
+        Ve a Ajustes → 벅뚜벅뚜 → Ubicación y elige «Siempre». Además, la detección de visitas
+        solo registra un lugar después de que te hayas quedado un tiempo y luego te hayas marchado, así que puede no verse al instante.
+        Si quieres guardarlo en el momento, usa el botón ➕ de la esquina superior derecha de la pantalla del mapa.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>¿Se envía mi ubicación a algún sitio?</summary>
+      <p>
+        No se envía al desarrollador. Las huellas, el diario y las fotos se guardan solo en tu dispositivo y en
+        <strong>tu iCloud personal</strong> (para que tus registros te sigan cuando cambies de dispositivo). El desarrollador
+        no puede ver nada de eso. Lo único que la app envía al desarrollador son recuentos anónimos, como cuánto has caminado
+        o cuántas entradas de diario has escrito, y <strong>no se envía ni una sola coordenada</strong>.
+        Además, se usan los servicios de mapas y geocodificación de Apple para convertir coordenadas en nombres de lugar.
+        Para más detalles, consulta la <a href="privacy.html">Política de privacidad</a>.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>¿También se registran los trayectos en vehículo?</summary>
+      <p>
+        La app usa los datos de movimiento para registrar sobre todo los desplazamientos a pie y corriendo,
+        e intenta excluir de las huellas los tramos que parecen hechos en vehículo.
+        Según la situación, puede haber algún error.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>¿Se transfieren mis datos si cambio de dispositivo?</summary>
+      <p>
+        Tus registros se guardan en el dispositivo y en tu propio iCloud. Inicia sesión con el mismo ID de Apple en el
+        dispositivo nuevo y mantén iCloud activado: tus huellas, tu diario y tus fotos continuarán.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Quiero borrar huellas o entradas del diario.</summary>
+      <p>
+        Puedes eliminar huellas una a una tocando un marcador de huella o la lista en la pantalla del mapa, y
+        las entradas del diario desde la pantalla del diario. Al borrar la app se eliminan también todos sus datos.
+      </p>
+    </details>
+
+    <h2>Requisitos</h2>
+    <p>iOS 17.0 o posterior · iPhone</p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) ·
+      <a href="privacy.html">Política de privacidad</a> ·
+      <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>

@@ -38,6 +38,12 @@
             "state" : "translated",
             "value" : "%@ · 足跡 %lld/%lld"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Huellas %lld/%lld"
+          }
         }
       }
     },
@@ -77,6 +83,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "步行%@，花了%@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caminaste %@ en %@"
           }
         }
       }
@@ -118,6 +130,12 @@
             "state" : "translated",
             "value" : "步行%@"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caminaste %@"
+          }
         }
       }
     },
@@ -157,6 +175,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已蒐集%@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ recopilado"
           }
         }
       }
@@ -198,6 +222,12 @@
             "state" : "translated",
             "value" : "%@圖示"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Símbolo de %@"
+          }
         }
       }
     },
@@ -237,6 +267,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@，%lld種"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld tipos"
           }
         }
       }
@@ -278,6 +314,12 @@
             "state" : "translated",
             "value" : "%@倍"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "×%@"
+          }
         }
       }
     },
@@ -317,6 +359,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@方向走得最少"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Por %@ has caminado menos"
           }
         }
       }
@@ -358,6 +406,12 @@
             "state" : "translated",
             "value" : "相距%lld公尺"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estás a %lld m"
+          }
         }
       }
     },
@@ -397,6 +451,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "進入%lld公尺範圍內，快門才會開啟"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El obturador se abre a menos de %lld m"
           }
         }
       }
@@ -438,6 +498,12 @@
             "state" : "translated",
             "value" : "%lld種"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld tipos"
+          }
         }
       }
     },
@@ -477,6 +543,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld處"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld lugares"
           }
         }
       }
@@ -518,6 +590,12 @@
             "state" : "translated",
             "value" : "%lld次"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld veces"
+          }
         }
       }
     },
@@ -557,6 +635,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "出門%lld次"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Saliste %lld veces"
           }
         }
       }
@@ -598,6 +682,12 @@
             "state" : "translated",
             "value" : "第%lld次發現"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Descubrimiento n.º %lld"
+          }
         }
       }
     },
@@ -637,6 +727,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "用 AR 尋找"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ir con RA"
           }
         }
       }
@@ -679,6 +775,12 @@
             "state" : "translated",
             "value" : "Face ID 鎖定"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloqueo con Face ID"
+          }
         }
       }
     },
@@ -719,6 +821,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "用 Face ID 或 Touch ID 鎖定 App，守護你走過的地方和日記。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bloquea la app con Face ID o Touch ID para proteger dónde has estado y tu diario."
           }
         }
       }
@@ -761,6 +869,12 @@
             "state" : "translated",
             "value" : "詢問 Siri，立刻查看今天走了多遠。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pregunta a Siri cuánto has caminado hoy."
+          }
         }
       }
     },
@@ -801,6 +915,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri 與捷徑"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri y Atajos"
           }
         }
       }
@@ -843,6 +963,12 @@
             "state" : "translated",
             "value" : "VoiceOver 會依合適的順序，完整朗讀地圖和紀錄裡的按鈕與內容。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver lee todos los botones y detalles de tu mapa y tus registros, en el orden correcto."
+          }
         }
       }
     },
@@ -884,6 +1010,12 @@
             "state" : "translated",
             "value" : "更便利的 VoiceOver"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver más cómodo"
+          }
         }
       }
     },
@@ -923,6 +1055,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "沒有符合「%@」的印章"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay sellos que coincidan con «%@»"
           }
         }
       }
@@ -964,6 +1102,12 @@
             "state" : "translated",
             "value" : "這是你想去的地方。要標記為已去過嗎？"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Era un lugar al que querías ir. ¿Lo guardo como visitado?"
+          }
         }
       }
     },
@@ -1003,6 +1147,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "還沒去過的地方"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin visitar"
           }
         }
       }
@@ -1044,6 +1194,12 @@
             "state" : "translated",
             "value" : "想去的地方"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para visitar"
+          }
         }
       }
     },
@@ -1083,6 +1239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "曾作為想去的地方蓋下的位置"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lugar que sellaste como pendiente de visitar"
           }
         }
       }
@@ -1124,6 +1286,12 @@
             "state" : "translated",
             "value" : "攔截最多的原因：%@（%lld次）。%@"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motivo más frecuente: %@ (%lld veces). %@"
+          }
         }
       }
     },
@@ -1163,6 +1331,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "類別"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categoría"
           }
         }
       }
@@ -1204,6 +1378,12 @@
             "state" : "translated",
             "value" : "開拓羅盤"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brújula de pioneros"
+          }
         }
       }
     },
@@ -1243,6 +1423,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "略過"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Omitir"
           }
         }
       }
@@ -1284,6 +1470,12 @@
             "state" : "translated",
             "value" : "步行紀錄"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registro de caminatas"
+          }
         }
       }
     },
@@ -1323,6 +1515,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "步行紀錄已關閉。走再多路也不會留下軌跡。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El registro de caminatas está desactivado. Aunque camines, no quedará rastro."
           }
         }
       }
@@ -1364,6 +1562,12 @@
             "state" : "translated",
             "value" : "步行時蓋下的印章會依時間順序堆疊在這裡。\n停留過的地方即使不蓋章也會自動保留。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los sellos que pongas al caminar se apilan aquí en orden cronológico.\nLos lugares donde te detienes se guardan solos, sin sellar."
+          }
         }
       }
     },
@@ -1403,6 +1607,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "步行抵達的地方"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lugares alcanzados a pie"
           }
         }
       }
@@ -1444,6 +1654,12 @@
             "state" : "translated",
             "value" : "步行抵達後，就能在那裡留下照片"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si llegas caminando, podrás sacar una foto allí mismo"
+          }
         }
       }
     },
@@ -1484,6 +1700,12 @@
             "state" : "translated",
             "value" : "如果走了路但地圖上沒有畫出線，可以在這裡查看原因。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si caminaste y no se trazó ninguna línea en el mapa, aquí puedes ver el motivo."
+          }
         }
       }
     },
@@ -1523,6 +1745,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "一路走來，經過的路會依序疊加。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A medida que caminas, los caminos recorridos se van apilando en orden."
           }
         }
       }
@@ -1565,6 +1793,12 @@
             "state" : "translated",
             "value" : "把走過的路和日記存成檔案，之後還能再匯入。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guarda tus caminos y tu diario en un archivo y recupéralos cuando quieras."
+          }
         }
       }
     },
@@ -1604,6 +1838,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "只有所選期間內走過的路和蓋下的印章會留在地圖上。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En el mapa solo quedan los caminos recorridos y los sellos puestos en el periodo elegido."
           }
         }
       }
@@ -1645,6 +1885,12 @@
             "state" : "translated",
             "value" : "沒興趣"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No me interesa"
+          }
         }
       }
     },
@@ -1684,6 +1930,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "沒關係"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hace falta"
           }
         }
       }
@@ -1725,6 +1977,12 @@
             "state" : "translated",
             "value" : "查看繪製過程"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver cómo se dibuja"
+          }
         }
       }
     },
@@ -1764,6 +2022,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "繪本地圖"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapa ilustrado"
           }
         }
       }
@@ -1806,6 +2070,12 @@
             "state" : "translated",
             "value" : "即使放大字級，畫面也不會被截斷，而是重新排版得清清楚楚。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Al agrandar el texto, las pantallas se reorganizan sin cortarse y se ven bien."
+          }
         }
       }
     },
@@ -1845,6 +2115,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "依期間檢視"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver por periodo"
           }
         }
       }
@@ -1886,6 +2162,12 @@
             "state" : "translated",
             "value" : "紀錄方式"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Modo de registro"
+          }
         }
       }
     },
@@ -1925,6 +2207,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "紀錄狀態"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado del registro"
           }
         }
       }
@@ -1966,6 +2254,12 @@
             "state" : "translated",
             "value" : "檢視紀錄狀態"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver estado del registro"
+          }
         }
       }
     },
@@ -2005,6 +2299,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "還原為預設圖案"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volver a la imagen original"
           }
         }
       }
@@ -2046,6 +2346,12 @@
             "state" : "translated",
             "value" : "關閉的畫面仍可隨時從上方「彙整檢視」中開啟。印章和設定按鈕一律顯示。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Las pantallas que desactives se pueden abrir siempre desde «Ver todo junto». Los botones de sellos y ajustes siempre se muestran."
+          }
         }
       }
     },
@@ -2085,6 +2391,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "結束"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fin"
           }
         }
       }
@@ -2126,6 +2438,12 @@
             "state" : "translated",
             "value" : "稍後再說"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más tarde"
+          }
         }
       }
     },
@@ -2165,6 +2483,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "僅儲存在你個人的 iCloud 中，其他人看不到。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se guarda solo en tu iCloud personal. Nadie más puede verlo."
           }
         }
       }
@@ -2207,6 +2531,12 @@
             "state" : "translated",
             "value" : "一次清除我的全部紀錄"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar todos mis registros de una vez"
+          }
         }
       }
     },
@@ -2246,6 +2576,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "我的社區輪廓"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contorno de mi barrio"
           }
         }
       }
@@ -2287,6 +2623,12 @@
             "state" : "translated",
             "value" : "我的地圖"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mi mapa"
+          }
         }
       }
     },
@@ -2326,6 +2668,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟我的地圖"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir mi mapa"
           }
         }
       }
@@ -2367,6 +2715,12 @@
             "state" : "translated",
             "value" : "看地圖如何一點一點畫成"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cómo se dibuja tu mapa"
+          }
         }
       }
     },
@@ -2406,6 +2760,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地圖繪製過程預覽"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista previa del dibujo de tu mapa"
           }
         }
       }
@@ -2447,6 +2807,12 @@
             "state" : "translated",
             "value" : "我畫出的路"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los caminos que dibujé"
+          }
         }
       }
     },
@@ -2486,6 +2852,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "我蓋過章的地方"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lugares que sellé"
           }
         }
       }
@@ -2527,6 +2899,12 @@
             "state" : "translated",
             "value" : "輕點即可透出地圖"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para ver el mapa debajo"
+          }
         }
       }
     },
@@ -2566,6 +2944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "輕點即可在目前位置蓋章"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para sellar tu posición actual"
           }
         }
       }
@@ -2607,6 +2991,12 @@
             "state" : "translated",
             "value" : "有%lld處需要確認你是否去過"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hay %lld lugares por confirmar si estuviste"
+          }
         }
       }
     },
@@ -2646,6 +3036,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "造訪次數"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visitas"
           }
         }
       }
@@ -2687,6 +3083,12 @@
             "state" : "translated",
             "value" : "我去過"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sí fui"
+          }
         }
       }
     },
@@ -2726,6 +3128,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "再次輕點就回到白紙。想確認自己大概在哪裡時可以用。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vuelve a tocar para regresar al papel. Útil para comprobar dónde estás."
           }
         }
       }
@@ -2767,6 +3175,12 @@
             "state" : "translated",
             "value" : "重拍"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repetir foto"
+          }
         }
       }
     },
@@ -2806,6 +3220,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "再次造訪的地方"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Un lugar al que has vuelto"
           }
         }
       }
@@ -2847,6 +3267,12 @@
             "state" : "translated",
             "value" : "這是已登錄的常去地點"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este lugar está guardado como habitual"
+          }
         }
       }
     },
@@ -2886,6 +3312,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "關閉"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cerrar"
           }
         }
       }
@@ -2928,6 +3360,12 @@
             "state" : "translated",
             "value" : "即使調高對比或難以分辨顏色，也能認出地圖上的路和印章。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aunque subas el contraste o te cueste distinguir colores, podrás reconocer los caminos y sellos del mapa."
+          }
         }
       }
     },
@@ -2968,6 +3406,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "讓你用更多語言使用 App。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa la app en más idiomas."
           }
         }
       }
@@ -3010,6 +3454,12 @@
             "state" : "translated",
             "value" : "更多語言"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Más idiomas"
+          }
         }
       }
     },
@@ -3049,6 +3499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "補充幾句（可不填）"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añade algo más (opcional)"
           }
         }
       }
@@ -3090,6 +3546,12 @@
             "state" : "translated",
             "value" : "可在圖鑑中查看至今蒐集的足跡"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En la colección puedes ver las huellas reunidas hasta ahora"
+          }
         }
       }
     },
@@ -3129,6 +3591,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "此動作無法復原。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se puede deshacer."
           }
         }
       }
@@ -3170,6 +3638,12 @@
             "state" : "translated",
             "value" : "輕點即可暫停或繼續播放"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Toca para pausar o reanudar"
+          }
         }
       }
     },
@@ -3209,6 +3683,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "造訪%lld處"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld lugares visitados"
           }
         }
       }
@@ -3250,6 +3730,12 @@
             "state" : "translated",
             "value" : "沒有找到清楚的主體，無法去除背景。請靠近物體再拍一次。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se encontró nada nítido y no se pudo quitar el fondo. Acércate al objeto y vuelve a hacer la foto."
+          }
         }
       }
     },
@@ -3289,6 +3775,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "最近一次造訪"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Última visita"
           }
         }
       }
@@ -3330,6 +3822,12 @@
             "state" : "translated",
             "value" : "水墨地圖"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapa de tinta"
+          }
         }
       }
     },
@@ -3369,6 +3867,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "備註"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nota"
           }
         }
       }
@@ -3410,6 +3914,12 @@
             "state" : "translated",
             "value" : "彙整檢視"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver todo junto"
+          }
         }
       }
     },
@@ -3449,6 +3959,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在安放水域與山巒"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colocando el agua y las montañas"
           }
         }
       }
@@ -3490,6 +4006,12 @@
             "state" : "translated",
             "value" : "未發現"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sin descubrir"
+          }
         }
       }
     },
@@ -3529,6 +4051,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "足跡"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huellas"
           }
         }
       }
@@ -3570,6 +4098,12 @@
             "state" : "translated",
             "value" : "足跡縮時回放"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse de huellas"
+          }
         }
       }
     },
@@ -3610,6 +4144,12 @@
             "state" : "translated",
             "value" : "已點亮的土地 %@"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terreno despejado: %@"
+          }
         }
       }
     },
@@ -3649,6 +4189,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "透出底圖"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver mapa de fondo"
           }
         }
       }
@@ -3691,6 +4237,12 @@
             "state" : "translated",
             "value" : "備份與匯出"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Copia de seguridad y exportación"
+          }
         }
       }
     },
@@ -3730,6 +4282,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "被捨棄的原因"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Motivos del descarte"
           }
         }
       }
@@ -3771,6 +4329,12 @@
             "state" : "translated",
             "value" : "版本 %@"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versión %@"
+          }
         }
       }
     },
@@ -3810,6 +4374,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "檢視方式"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vista"
           }
         }
       }
@@ -3852,6 +4422,12 @@
             "state" : "translated",
             "value" : "更舒適的色彩與對比"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Colores y contraste cómodos"
+          }
         }
       }
     },
@@ -3891,6 +4467,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "檢視的路"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caminos mostrados"
           }
         }
       }
@@ -3932,6 +4514,12 @@
             "state" : "translated",
             "value" : "一張白紙，本身分不清哪裡是哪裡。\n你現在所在的位置會成為**第一個基準點**。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Una hoja en blanco no sabe por sí sola qué es cada sitio.\nDonde estás ahora será el **primer punto de referencia**."
+          }
         }
       }
     },
@@ -3971,6 +4559,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "從一張白紙開始"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empezamos con una hoja en blanco"
           }
         }
       }
@@ -4012,6 +4606,12 @@
             "state" : "translated",
             "value" : "使用統計（開發者）"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estadísticas de uso (desarrollador)"
+          }
         }
       }
     },
@@ -4051,6 +4651,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "照片"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fotos"
           }
         }
       }
@@ -4092,6 +4698,12 @@
             "state" : "translated",
             "value" : "刪除照片"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar foto"
+          }
         }
       }
     },
@@ -4131,6 +4743,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "拍照"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hacer foto"
           }
         }
       }
@@ -4172,6 +4790,12 @@
             "state" : "translated",
             "value" : "加入照片"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir foto"
+          }
         }
       }
     },
@@ -4211,6 +4835,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在放入照片"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadiendo la foto"
           }
         }
       }
@@ -4252,6 +4882,12 @@
             "state" : "translated",
             "value" : "無法儲存照片"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No se pudo guardar la foto"
+          }
         }
       }
     },
@@ -4291,6 +4927,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "刪除"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar"
           }
         }
       }
@@ -4333,6 +4975,12 @@
             "state" : "translated",
             "value" : "散步提醒"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aviso de paseo"
+          }
         }
       }
     },
@@ -4372,6 +5020,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "新抵達的%lld處地點會印在途經的路上"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los %lld lugares nuevos se marcan sobre el camino"
           }
         }
       }
@@ -4413,6 +5067,12 @@
             "state" : "translated",
             "value" : "新功能"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Novedades"
+          }
         }
       }
     },
@@ -4452,6 +5112,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設定"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ajustes"
           }
         }
       }
@@ -4493,6 +5159,12 @@
             "state" : "translated",
             "value" : "請在「設定」App > 벅뚜벅뚜 中開啟相機。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activa la cámara en Ajustes > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -4532,6 +5204,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟設定"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abrir Ajustes"
           }
         }
       }
@@ -4573,6 +5251,12 @@
             "state" : "translated",
             "value" : "在設定中開啟權限"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activar permisos en Ajustes"
+          }
         }
       }
     },
@@ -4612,6 +5296,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "也可以在設定中開啟"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "También puedes abrirlo desde Ajustes"
           }
         }
       }
@@ -4653,6 +5343,12 @@
             "state" : "translated",
             "value" : "重設統計"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reiniciar recuento"
+          }
         }
       }
     },
@@ -4692,6 +5388,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "世界早已被別的地圖畫滿。\n而這裡只留下**你親腳走過的地方**。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los demás mapas ya dibujaron el mundo entero.\nAquí solo quedan **los lugares que pisaste con tus propios pies**."
           }
         }
       }
@@ -4733,6 +5435,12 @@
             "state" : "translated",
             "value" : "已蒐集的地點"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lugares recopilados"
+          }
         }
       }
     },
@@ -4772,6 +5480,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "印章"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sello"
           }
         }
       }
@@ -4813,6 +5527,12 @@
             "state" : "translated",
             "value" : "開始"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inicio"
+          }
         }
       }
     },
@@ -4852,6 +5572,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開始使用"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Empezar"
           }
         }
       }
@@ -4893,6 +5619,12 @@
             "state" : "translated",
             "value" : "圖示"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Símbolo"
+          }
         }
       }
     },
@@ -4932,6 +5664,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "放大檢視圖示"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver símbolo más grande"
           }
         }
       }
@@ -4974,6 +5712,12 @@
             "state" : "translated",
             "value" : "接著寫沒寫完的日記"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retomar un diario sin terminar"
+          }
         }
       }
     },
@@ -5013,6 +5757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "滑動可像卡片一樣翻頁，連點兩下可放大檢視"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Desliza para pasar como tarjetas; toca dos veces para ver más grande"
           }
         }
       }
@@ -5054,6 +5804,12 @@
             "state" : "translated",
             "value" : "沒有"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No"
+          }
         }
       }
     },
@@ -5090,6 +5846,12 @@
           }
         },
         "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "es" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -5134,6 +5896,12 @@
             "state" : "translated",
             "value" : "尚未"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no"
+          }
         }
       }
     },
@@ -5173,6 +5941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "還沒去過的地方"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún sin visitar"
           }
         }
       }
@@ -5214,6 +5988,12 @@
             "state" : "translated",
             "value" : "這是你還沒去過的地方。它會作為「想去的地方」保留，走到那裡後就變成去過的地方。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no has estado aquí. Quedará como «Para visitar» y pasará a ser un lugar visitado cuando llegues."
+          }
         }
       }
     },
@@ -5253,6 +6033,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "還沒有被捨棄的點位"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no se ha descartado ningún punto"
           }
         }
       }
@@ -5294,6 +6080,12 @@
             "state" : "translated",
             "value" : "還沒有"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Todavía no"
+          }
         }
       }
     },
@@ -5333,6 +6125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "導覽"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guía"
           }
         }
       }
@@ -5375,6 +6173,12 @@
             "state" : "translated",
             "value" : "App 也可以用英文了。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "También puedes usar la app en inglés."
+          }
         }
       }
     },
@@ -5414,6 +6218,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請先開啟一次 App"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Abre la app una vez"
           }
         }
       }
@@ -5455,6 +6265,12 @@
             "state" : "translated",
             "value" : "哪一天"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Qué día?"
+          }
         }
       }
     },
@@ -5494,6 +6310,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "無論選哪一種，收到的位置都會全部儲存。只是精準度較低的點位不會繪製到地圖上。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En cualquier caso, se guardan todas las ubicaciones recibidas. Solo que los puntos poco precisos no se dibujan en el mapa."
           }
         }
       }
@@ -5535,6 +6357,12 @@
             "state" : "translated",
             "value" : "僅以匿名方式統計哪些畫面被使用。不會傳送你走過的地點和日記內容。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo se cuentan, de forma anónima, las pantallas que se usan. No se envían los lugares que caminas ni el texto de tu diario."
+          }
         }
       }
     },
@@ -5574,6 +6402,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "你在這裡待了%@"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estuviste aquí %@"
           }
         }
       }
@@ -5615,6 +6449,12 @@
             "state" : "translated",
             "value" : "留下這裡"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar este lugar"
+          }
         }
       }
     },
@@ -5654,6 +6494,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "記在這裡"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Marcar aquí"
           }
         }
       }
@@ -5695,6 +6541,12 @@
             "state" : "translated",
             "value" : "這裡不記錄也沒關係嗎？"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Seguro que no quieres registrar este lugar?"
+          }
         }
       }
     },
@@ -5734,6 +6586,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "這裡是哪裡？"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Dónde era esto?"
           }
         }
       }
@@ -5775,6 +6633,12 @@
             "state" : "translated",
             "value" : "匯出為影片"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exportar como vídeo"
+          }
         }
       }
     },
@@ -5814,6 +6678,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在產生影片 %lld%%"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creando el vídeo %lld%%"
           }
         }
       }
@@ -5856,6 +6726,12 @@
             "state" : "translated",
             "value" : "支援英文"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Compatible con inglés"
+          }
         }
       }
     },
@@ -5895,6 +6771,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "例如：家、公司、常去的咖啡廳"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "P. ej., casa, trabajo, cafetería habitual"
           }
         }
       }
@@ -5936,6 +6818,12 @@
             "state" : "translated",
             "value" : "今天 %@"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoy %@"
+          }
         }
       }
     },
@@ -5975,6 +6863,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今天畫的路"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "El camino de hoy"
           }
         }
       }
@@ -6016,6 +6910,12 @@
             "state" : "translated",
             "value" : "照片已加入今天的日記"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se añadió una foto al diario de hoy"
+          }
         }
       }
     },
@@ -6055,6 +6955,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "回放今天"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reproducir hoy"
           }
         }
       }
@@ -6096,6 +7002,12 @@
             "state" : "translated",
             "value" : "今天還沒有去過的地方"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoy aún no has visitado ningún lugar"
+          }
         }
       }
     },
@@ -6135,6 +7047,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今天還沒有停留過的地點"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoy aún no te has detenido en ningún lugar"
           }
         }
       }
@@ -6176,6 +7094,12 @@
             "state" : "translated",
             "value" : "今天去哪裡探索了？"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¿Dónde exploraste hoy?"
+          }
         }
       }
     },
@@ -6215,6 +7139,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "今日足跡"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huellas de hoy"
           }
         }
       }
@@ -6256,6 +7186,12 @@
             "state" : "translated",
             "value" : "今日探索"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exploración de hoy"
+          }
         }
       }
     },
@@ -6295,6 +7231,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "完成"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Listo"
           }
         }
       }
@@ -6337,6 +7279,12 @@
             "state" : "translated",
             "value" : "減少動態效果"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reducir movimiento"
+          }
         }
       }
     },
@@ -6377,6 +7325,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "開啟「減少動態效果」後，地圖和畫面效果會更平靜。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Con Reducir movimiento activado, el mapa y los efectos de pantalla son más tranquilos."
           }
         }
       }
@@ -6419,6 +7373,12 @@
             "state" : "translated",
             "value" : "如有需要，可以在 App 內清除所有走過的路和日記。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si quieres, puedes borrar dentro de la app todos tus caminos y tu diario."
+          }
         }
       }
     },
@@ -6458,6 +7418,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "將定位設為「永遠」，並開啟「體能活動」，即使不開啟 App 步行也會被記錄。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si pones la ubicación en «Siempre» y activas Movimiento y forma física, tus caminatas se registran sin abrir la app."
           }
         }
       }
@@ -6499,6 +7465,12 @@
             "state" : "translated",
             "value" : "這段期間沒有足跡"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay huellas en este periodo"
+          }
         }
       }
     },
@@ -6538,6 +7510,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "檢視此期間"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver este periodo"
           }
         }
       }
@@ -6579,6 +7557,12 @@
             "state" : "translated",
             "value" : "這天拍下的地點"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lugares fotografiados este día"
+          }
         }
       }
     },
@@ -6618,6 +7602,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "這天沒有留下步行紀錄"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Este día no quedaron pasos registrados"
           }
         }
       }
@@ -6659,6 +7649,12 @@
             "state" : "translated",
             "value" : "這天沒有足跡"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No hay huellas este día"
+          }
         }
       }
     },
@@ -6698,6 +7694,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "刪除此印章"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eliminar este sello"
           }
         }
       }
@@ -6739,6 +7741,12 @@
             "state" : "translated",
             "value" : "使用此圖示"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usar este símbolo"
+          }
         }
       }
     },
@@ -6778,6 +7786,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "清除此處的足跡"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar las huellas de este lugar"
           }
         }
       }
@@ -6819,6 +7833,12 @@
             "state" : "translated",
             "value" : "這個地點的名稱（例如：公司、常去的咖啡廳）"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre de este lugar (p. ej., trabajo, cafetería habitual)"
+          }
         }
       }
     },
@@ -6858,6 +7878,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在這張紙上蓋下第一個印章"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pon el primer sello en esta hoja"
           }
         }
       }
@@ -6899,6 +7925,12 @@
             "state" : "translated",
             "value" : "名稱"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nombre"
+          }
         }
       }
     },
@@ -6938,6 +7970,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "命名"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poner nombre"
           }
         }
       }
@@ -6979,6 +8017,12 @@
             "state" : "translated",
             "value" : "加入圖片"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Añadir imagen"
+          }
         }
       }
     },
@@ -7019,6 +8063,12 @@
             "state" : "translated",
             "value" : "現在出發走走吧"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora sal a caminar"
+          }
         }
       }
     },
@@ -7058,6 +8108,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "現在出發走走吧。\n經過的地方會一點一點印在這張紙上。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ahora sal a caminar.\nLos lugares por los que pases se marcarán en esta hoja, punto a punto."
           }
         }
       }
@@ -7100,6 +8156,12 @@
             "state" : "translated",
             "value" : "寫日記時即使 App 被關閉，寫到一半的內容也會保留。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si la app se cierra mientras escribes el diario, lo que habías escrito sigue ahí."
+          }
         }
       }
     },
@@ -7139,6 +8201,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "日誌"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diario"
           }
         }
       }
@@ -7180,6 +8248,12 @@
             "state" : "translated",
             "value" : "到達常去的地方時，**請在那裡再蓋一次**。\n有了兩個基準點，即使是白紙也能確定方向。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cuando **llegues a un lugar que frecuentas, sella allí otra vez**.\nCon dos referencias, hasta una hoja en blanco encuentra su orientación."
+          }
         }
       }
     },
@@ -7219,6 +8293,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "請稍後再試，或長按地圖，在想要的位置蓋章。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inténtalo de nuevo en un momento, o mantén pulsado el mapa para sellar donde quieras."
           }
         }
       }
@@ -7260,6 +8340,12 @@
             "state" : "translated",
             "value" : "儲存"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guardar"
+          }
         }
       }
     },
@@ -7299,6 +8385,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "回到全部期間"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Volver a todo el periodo"
           }
         }
       }
@@ -7340,6 +8432,12 @@
             "state" : "translated",
             "value" : "點位統計"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Recuento de puntos"
+          }
         }
       }
     },
@@ -7379,6 +8477,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "精準度不足的點位也會儲存。目前不會繪製到地圖上，等校正改善後就能派上用場。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los puntos con poca precisión también se guardan. Ahora no se dibujan en el mapa, pero podrán usarse cuando mejore la corrección."
           }
         }
       }
@@ -7420,6 +8524,12 @@
             "state" : "translated",
             "value" : "目前狀態"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estado actual"
+          }
         }
       }
     },
@@ -7459,6 +8569,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "正在定位"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Buscando tu ubicación"
           }
         }
       }
@@ -7500,6 +8616,12 @@
             "state" : "translated",
             "value" : "留下目前的位置"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dejar marca aquí"
+          }
         }
       }
     },
@@ -7539,6 +8661,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在目前位置蓋印章"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Poner un sello donde estás"
           }
         }
       }
@@ -7580,6 +8708,12 @@
             "state" : "translated",
             "value" : "在目前位置蓋章"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sellar donde estoy"
+          }
         }
       }
     },
@@ -7619,6 +8753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "經過的地方會一點一點印在這張紙上。\n搭車或捷運經過的路不會被畫出。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los lugares por los que pases se marcarán en esta hoja, punto a punto.\nLos caminos que recorres en coche o metro no se dibujan."
           }
         }
       }
@@ -7660,6 +8800,12 @@
             "state" : "translated",
             "value" : "在設定中選擇地圖按鈕"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige los botones del mapa en Ajustes"
+          }
         }
       }
     },
@@ -7699,6 +8845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "地圖樣式"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Estilo del mapa"
           }
         }
       }
@@ -7740,6 +8892,12 @@
             "state" : "translated",
             "value" : "地圖比例尺。一格代表%@"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Escala del mapa. Una barra equivale a %@"
+          }
         }
       }
     },
@@ -7779,6 +8937,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "選擇要浮在地圖上的按鈕，關閉的畫面也能直接從設定裡開啟。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige qué botones flotan sobre el mapa y abre desde Ajustes las pantallas que hayas desactivado."
           }
         }
       }
@@ -7820,6 +8984,12 @@
             "state" : "translated",
             "value" : "這是你事先在地圖上蓋好章的地方。走到那裡後就變成去過的地方。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lugares que sellaste de antemano en el mapa. Al llegar, pasan a ser lugares visitados."
+          }
         }
       }
     },
@@ -7859,6 +9029,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在地圖上顯示"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mostrar en el mapa"
           }
         }
       }
@@ -7900,6 +9076,12 @@
             "state" : "translated",
             "value" : "在地圖上查看"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver en el mapa"
+          }
         }
       }
     },
@@ -7939,6 +9121,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在地圖上會是這樣"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Así se ve en el mapa"
           }
         }
       }
@@ -7980,6 +9168,12 @@
             "state" : "translated",
             "value" : "清除"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Borrar"
+          }
         }
       }
     },
@@ -8019,6 +9213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "支援"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Soporte"
           }
         }
       }
@@ -8060,6 +9260,12 @@
             "state" : "translated",
             "value" : "請選擇家、公司這類可以作為基準的地方。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Elige algo que sirva de referencia, como casa o trabajo."
+          }
         }
       }
     },
@@ -8099,6 +9305,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "拍攝"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Capturar"
           }
         }
       }
@@ -8140,6 +9352,12 @@
             "state" : "translated",
             "value" : "蓋章日期"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Fecha del sello"
+          }
         }
       }
     },
@@ -8179,6 +9397,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "已蓋章"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "¡Sellado!"
           }
         }
       }
@@ -8220,6 +9444,12 @@
             "state" : "translated",
             "value" : "搭車或捷運經過的路不會被畫出。\n只有步行，才會一點一點落下印記。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Los caminos que recorres en coche o metro no se dibujan.\nSolo al caminar se marca un punto tras otro."
+          }
         }
       }
     },
@@ -8259,6 +9489,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "只保留框內的內容，背景會被抹去"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Solo queda lo que está dentro del marco; el fondo se borra"
           }
         }
       }
@@ -8300,6 +9536,12 @@
             "state" : "translated",
             "value" : "首次"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Primera"
+          }
         }
       }
     },
@@ -8339,6 +9581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "首次走過的路"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Caminos recorridos por primera vez"
           }
         }
       }
@@ -8380,6 +9628,12 @@
             "state" : "translated",
             "value" : "這是你第一次踏足的地方"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Es un lugar que pisas por primera vez"
+          }
         }
       }
     },
@@ -8419,6 +9673,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "取消"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancelar"
           }
         }
       }
@@ -8460,6 +9720,12 @@
             "state" : "translated",
             "value" : "開啟"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Activar"
+          }
         }
       }
     },
@@ -8499,6 +9765,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "放大檢視"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ver más grande"
           }
         }
       }
@@ -8541,6 +9813,12 @@
             "state" : "translated",
             "value" : "適配大字級的畫面"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pantallas para texto grande"
+          }
         }
       }
     },
@@ -8580,6 +9858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "縮時回放"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse"
           }
         }
       }
@@ -8621,6 +9905,12 @@
             "state" : "translated",
             "value" : "探索"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explorar"
+          }
         }
       }
     },
@@ -8661,6 +9951,12 @@
             "state" : "translated",
             "value" : "探索紀錄"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registro de exploración"
+          }
         }
       }
     },
@@ -8700,6 +9996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "探索日誌"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Diario de exploración"
           }
         }
       }
@@ -8742,6 +10044,12 @@
             "state" : "translated",
             "value" : "適配摺疊式 iPhone"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pantalla de iPhone plegable"
+          }
         }
       }
     },
@@ -8783,6 +10091,12 @@
             "state" : "translated",
             "value" : "在摺疊式 iPhone 上，把地圖和紀錄分成兩欄並排檢視。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "En un iPhone plegable, divide el mapa y los registros en dos paneles."
+          }
         }
       }
     },
@@ -8822,6 +10136,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "一日縮時回放"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse del día"
           }
         }
       }
@@ -8864,6 +10184,12 @@
             "state" : "translated",
             "value" : "每天結束時，用通知告訴你今天走過的路。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Al terminar el día, te avisa con una notificación del camino que recorriste hoy."
+          }
         }
       }
     },
@@ -8903,6 +10229,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "在同一處停留超過%lld分鐘，\n這個地方就會出現在今日足跡中。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Si te quedas más de %lld minutos en un mismo sitio,\neste aparecerá en las huellas de hoy."
           }
         }
       }
@@ -8944,6 +10276,12 @@
             "state" : "translated",
             "value" : "暫時無法定位"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aún no se encuentra tu ubicación"
+          }
         }
       }
     },
@@ -8983,6 +10321,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "好"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aceptar"
           }
         }
       }

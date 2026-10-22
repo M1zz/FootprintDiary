@@ -38,6 +38,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -77,6 +83,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "用於拍下當地的照片，並把拍到的物體去背，製作可放在地圖上的貼圖，因此需要使用相機。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa la cámara para guardar una foto del lugar y recortar lo que fotografíes para convertirlo en una pegatina para el mapa."
           }
         }
       }
@@ -118,6 +130,12 @@
             "state" : "translated",
             "value" : "若要在你每次換地方時自動記錄足跡，需要「永遠允許」的權限。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para registrar tus huellas automáticamente cada vez que cambias de lugar, se necesita el permiso «Siempre»."
+          }
         }
       }
     },
@@ -158,6 +176,12 @@
             "state" : "translated",
             "value" : "需要定位權限，才能把你目前的位置作為足跡記錄到地圖上。"
           }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Se necesita el permiso de ubicación para registrar tu posición actual como una huella en el mapa."
+          }
         }
       }
     },
@@ -197,6 +221,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "使用動作資料來確認你是步行或跑步移動，以免記錄搭乘交通工具的移動。"
+          }
+        },
+        "es" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa los datos de movimiento para comprobar si te desplazaste caminando o corriendo y no registrar los trayectos en vehículo."
           }
         }
       }

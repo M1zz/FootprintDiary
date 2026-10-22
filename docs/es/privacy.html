@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Política de privacidad · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --border: #e5e7eb; --note-bg: #eef7ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36; --note-bg: #1a2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; padding-top: 8px; }
+    p, li { color: var(--text); }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    .note {
+      background: var(--note-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+    }
+    .note strong { color: var(--accent); }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--card); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/es/privacy.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/privacy.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/privacy.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/FootprintDiary/zh-Hant/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/FootprintDiary/es/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../privacy.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/privacy.html" hreflang="en" lang="en">English</a> · <a href="../ja/privacy.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/privacy.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/privacy.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="privacy.html" hreflang="es" lang="es" aria-current="true">Español</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← Inicio de 벅뚜벅뚜</a>
+    <h1>Política de privacidad</h1>
+    <p class="updated">Fecha de entrada en vigor: 27 de agosto de 2026</p>
+
+    <p>
+      <strong>벅뚜벅뚜 (FootprintDiary)</strong> (en adelante, la «App») valora tu privacidad.
+      La App está diseñada para guardar tu historial de movimientos y tu diario <strong>solo en tu propio dispositivo y en tu propia cuenta de iCloud</strong>.
+      El desarrollador de la App no puede acceder a tu ubicación, tus fotos ni tu diario.
+    </p>
+
+    <div class="note">
+      <strong>Resumen</strong> — La App no tiene registro ni cuentas.
+      La ubicación, las fotos y el diario se guardan solo en tu dispositivo y en <strong>tu propio iCloud</strong>, y el desarrollador no puede verlos.
+      Ahora bien, para seguir mejorando la App, el desarrollador recopila de forma anónima <strong>estadísticas de uso que no permiten saber quién eres</strong>
+      (como cuántas veces se abre la App o qué pantallas se usan). Estas nunca incluyen ubicación ni textos;
+      encontrarás los detalles en el apartado 4.
+    </div>
+
+    <h2>1. Información que recopilamos</h2>
+    <p>La App trata la siguiente información <strong>solo dentro de tu dispositivo</strong> y no la envía al desarrollador ni a servidores de terceros.</p>
+    <table>
+      <tr><th>Elemento</th><th>Finalidad</th><th>Dónde se guarda</th></tr>
+      <tr><td>Datos de ubicación (lugares visitados, coordenadas de movimiento)</td><td>Mostrar huellas en el mapa y registrar tu recorrido</td><td>En el dispositivo (SwiftData)</td></tr>
+      <tr><td>Datos de movimiento</td><td>Distinguir entre caminar y desplazarse en vehículo (los trayectos en vehículo se excluyen del registro)</td><td>Se usan al instante en el dispositivo y no se guardan</td></tr>
+      <tr><td>Fotos</td><td>Adjuntarlas al diario</td><td>En el dispositivo (SwiftData)</td></tr>
+      <tr><td>Cámara (fotos que haces)</td><td>Guardar una foto del lugar y recortar lo que fotografíes para crear una pegatina para tu mapa (el recorte se hace en tu dispositivo)</td><td>En el dispositivo (SwiftData)</td></tr>
+      <tr><td>Texto del diario, nombres de lugares</td><td>Registros que escribes tú mismo</td><td>En el dispositivo (SwiftData)</td></tr>
+    </table>
+    <p>
+      Si activas la sincronización con iCloud, los registros anteriores también se guardan en <strong>tu base de datos privada de iCloud</strong>
+      y pasan a los demás dispositivos con el mismo ID de Apple. Este almacenamiento es tuyo
+      y el desarrollador no tiene acceso a él.
+    </p>
+    <p>
+      Aparte de lo anterior, el desarrollador recopila las <strong>estadísticas de uso anónimas</strong> descritas en el apartado 4.
+    </p>
+
+    <h2>2. Uso de los datos de ubicación</h2>
+    <ul>
+      <li>La App usa las funciones de <strong>detección de visitas (Visit)</strong> y de <strong>cambios significativos de ubicación</strong> de iOS
+          para registrar automáticamente tus movimientos entre lugares con el menor gasto posible de batería.</li>
+      <li>Para el registro automático, la App puede solicitar el permiso de ubicación «Siempre». Puedes cambiar o retirar
+          este permiso en cualquier momento en la app Ajustes de iOS.</li>
+      <li>Si no concedes el permiso de ubicación, el registro automático no funcionará, pero el resto de las funciones seguirá disponible.</li>
+    </ul>
+
+    <h2>3. Servicios de terceros (Apple)</h2>
+    <p>
+      Para convertir coordenadas en direcciones y nombres de lugar legibles, la App usa la
+      <strong>geocodificación inversa (CLGeocoder)</strong> y la visualización de mapas (MapKit) de Apple.
+      En este proceso, esas coordenadas pueden enviarse a Apple para su tratamiento, lo cual se rige por la
+      <a href="https://www.apple.com/legal/privacy/">Política de privacidad de Apple</a>.
+      El desarrollador de la App no tiene acceso a estos datos.
+    </p>
+
+    <h2>4. Estadísticas de uso anónimas</h2>
+    <p>
+      Para mejorar la App, el desarrollador necesita saber qué funciones se usan de verdad, por lo que recopila la siguiente información
+      <strong>de forma que no permite identificarte</strong>. Se guarda en el espacio de
+      Apple CloudKit del desarrollador, que es independiente del iCloud personal donde se guardan tus registros.
+    </p>
+    <table>
+      <tr><th>Qué recopilamos</th><th>Qué no recopilamos</th></tr>
+      <tr>
+        <td>
+          Número de veces que se abre la App, días desde la instalación, versión de la App, versión de iOS, idioma del dispositivo<br>
+          Qué funciones se usaron (poner sellos, exportar vídeo, escribir el diario, poner nombre a lugares, abrir el calendario)<br>
+          Magnitudes aproximadas (distancia total caminada en km, días con pasos registrados, número de sellos, lugares y entradas de diario)
+        </td>
+        <td>
+          Coordenadas de ubicación (no se envía ni una)<br>
+          Texto del diario, nombres de lugares, fotos<br>
+          Nombre, correo electrónico, teléfono, ID de Apple u otra información que permita identificarte<br>
+          Identificador de publicidad (IDFA), identificadores únicos del dispositivo
+        </td>
+      </tr>
+    </table>
+    <ul>
+      <li>Para distinguir unas instalaciones de otras, la App usa un único <strong>valor generado al azar</strong> en el momento de la instalación.
+          Este valor no guarda relación con tu dispositivo ni con tu ID de Apple, y si borras la App y la vuelves a instalar,
+          no se vinculará con el valor anterior.</li>
+      <li>La App <strong>no usa SDK de publicidad, SDK de análisis de terceros ni herramientas de seguimiento.</strong>
+          Las estadísticas anteriores se guardan solo en Apple CloudKit mediante código escrito por el propio desarrollador.</li>
+      <li>Estas estadísticas se usan únicamente para mejorar la App y nunca se venden ni se ceden a terceros.</li>
+    </ul>
+
+    <h2>5. Envío de comentarios</h2>
+    <p>
+      La opción <strong>Enviar comentarios</strong> de los ajustes de la App solo funciona cuando eres tú quien escribe y envía algo.
+      Lo que envías se guarda en el espacio de Apple CloudKit del desarrollador y se usa únicamente para que el desarrollador lo lea y responda.
+    </p>
+    <ul>
+      <li>Qué se envía: el tipo de comentario que elegiste y el texto que escribiste, además de la versión de la App, la versión de iOS, el tipo de dispositivo y el idioma del dispositivo</li>
+      <li>Tu nombre y correo electrónico se envían solo si los escribes tú mismo, y se usan únicamente para responderte.</li>
+      <li>Las respuestas del desarrollador se pueden leer dentro de la App.</li>
+      <li>Si quieres que se elimine un comentario que enviaste, avísanos a través del contacto que figura más abajo.</li>
+    </ul>
+
+    <h2>6. Cesión a terceros y publicidad</h2>
+    <ul>
+      <li>La App no vende tu información personal ni la cede a terceros.</li>
+      <li>La App no muestra anuncios y no te rastrea.</li>
+    </ul>
+
+    <h2>7. Conservación y eliminación de datos</h2>
+    <ul>
+      <li>Todos los registros se guardan en tu dispositivo y en tu propio iCloud, y puedes eliminar tú mismo las huellas y
+          las entradas del diario dentro de la App.</li>
+      <li><strong>Si eliminas la App</strong>, se borran también todos los datos guardados en el dispositivo (ubicación, fotos, diario).
+          Las copias guardadas en iCloud pueden eliminarse desde la pantalla de gestión de iCloud de la app Ajustes de iOS.</li>
+      <li>Como el desarrollador no conserva tu ubicación, tus fotos ni tu diario, no puede consultar ni
+          recuperar esos datos.</li>
+      <li>Las estadísticas de uso anónimas no contienen nada que se pueda vincular contigo, por lo que no pueden atenderse solicitudes de eliminación individuales.
+          Eso sí, cuando eliminas la App, a partir de ese momento ya no se recopila nada.</li>
+    </ul>
+
+    <h2>8. Información personal de menores</h2>
+    <p>
+      La App no recopila información que permita identificarte, por lo que no recopila datos dirigidos a ningún grupo de edad concreto.
+      Todos los datos permanecen únicamente en tu dispositivo.
+    </p>
+
+    <h2>9. Cambios en esta política</h2>
+    <p>
+      Esta política puede revisarse por cambios en la normativa o en las funciones de la App. Cuando cambie, actualizaremos esta página para avisarlo.
+    </p>
+
+    <h2>10. Contacto</h2>
+    <p>
+      Si tienes preguntas sobre el tratamiento de la información personal, escríbenos a:<br />
+      Correo electrónico: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a><br />
+      Página de soporte: <a href="support.html">Soporte / Contacto</a>
+    </p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) · En vigor desde el 27 de agosto de 2026
+    </footer>
+  </div>
+</body>
+</html>

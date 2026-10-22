@@ -383,3 +383,67 @@ https://m1zz.github.io/FootprintDiary/zh-Hant/
 你的紀錄存放在你自己的 iCloud
 腳步、印章、日記和照片都儲存在你個人的 iCloud 中，換了裝置也能同步。
 匿名使用統計不會傳送位置座標、日記文字、地點名稱和照片。
+
+## es
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/es/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/es/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/es/
+
+### 이름
+
+벅뚜벅뚜: Mapa a pie
+
+### 부제
+
+Solo se pinta lo que pisas
+
+### 키워드
+
+senderismo,caminar,paseo,ruta,gps,rastreador,viajes,diario,exploración,sellos,pasos,barrio,ciudad
+
+### 프로모션 텍스트
+
+Un mapa en blanco donde no se dibuja lo que recorres en coche o metro. Solo los caminos que pisas por primera vez lo amplían. ¿Hacia dónde trazarás hoy uno nuevo?
+
+### 설명
+
+Un mapa que empieza en una hoja en blanco. Solo se van rellenando, punto a punto, los lugares que recorres con tus propios pies.
+Los caminos que haces en coche o metro no se dibujan, y por mucho que repitas el mismo camino el mapa no crece. Para ampliarlo, hay que tomar caminos nuevos.
+
+Hoy y tus pasos del pasado, en colores distintos
+Donde caminaste hoy queda marcado en tinta roja, y tus pasos anteriores en azul índigo. Cuanto más pasas por un sitio, más se oscurece, y tu radio de vida diaria se ve solo.
+Los lugares que no pisas desde hace más de tres meses no se borran: se van apagando hasta quedar en gris.
+
+Sellos para donde fuiste y donde quieres ir
+Sella el lugar donde estás o mantén pulsado el mapa para poner un sello donde quieras. Hay 212 sellos para elegir, organizados por categorías.
+Un sello puesto donde nunca has caminado queda como lugar por visitar y, cuando llegues de verdad a su cercanía, pasa a ser un lugar visitado.
+Haz una foto al letrero de una tienda con la cámara y se recorta el fondo para levantarlo como una pegatina exclusiva de ese lugar.
+
+Huellas de hoy
+Los lugares en los que te detuviste hoy se ordenan por hora, junto con lo que caminaste entre uno y otro. Si hay un sello donde se detuvieron tus pasos, la app te pregunta si estuviste y cuenta la visita.
+
+Brújula de pioneros
+Divide el entorno de donde estás en ocho direcciones y señala la que menos has caminado. Úsala para decidir hacia dónde ir en tu próximo paseo.
+
+Película y calendario
+Elige un periodo y mira, o exporta como vídeo, cómo se va dibujando tu mapa.
+El calendario dibuja, en lugar de un número, la forma de lo que caminaste cada día. Además, puedes escribir un diario con texto y fotos.
+
+Widgets
+En la pantalla de inicio verás la forma y la longitud del camino que trazaste hoy, y en la pantalla de bloqueo, la distancia de hoy en una sola línea de cifras.
+
+Modo de registro
+Elige entre dar prioridad a la precisión o a la batería. Con prioridad a la precisión, tus pasos se registran incluso con la app cerrada.
+
+Tus registros, en tu iCloud
+Tus pasos, sellos, diario y fotos se guardan en tu iCloud personal y te siguen cuando cambias de dispositivo.
+Las estadísticas de uso anónimas nunca incluyen coordenadas de ubicación, texto del diario, nombres de lugares ni fotos.
