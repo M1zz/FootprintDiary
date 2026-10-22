@@ -39,6 +39,7 @@ SEARCH = {
     "zh-Hans": ("散步记录", "越走越大的<br><mark>专属地图</mark>", "走没走过的路，地图才会变大"),
     "zh-Hant": ("散步紀錄", "越走越大的<br><mark>專屬地圖</mark>", "走沒走過的路，地圖才會變大"),
     "es": ("registro de paseos", "Un mapa que crece<br>a medida que <mark>caminas</mark>", "Solo se amplía con caminos que nunca has pisado"),
+    "de": ("Spaziergänge aufzeichnen", "Eine Karte, die mit<br>jedem <mark>Schritt</mark> wächst", "Sie wächst nur auf Wegen, die du noch nie gegangen bist"),
 }
 
 # 헤더: 처음 온 사람에게 한 가지 약속. 내 발로 걸은 자리만 지도에 남는다.
@@ -50,6 +51,7 @@ HEADER = {
     "zh-Hans": ("用脚步绘制的地图", "只有你亲脚走过的路<br>才会留在<mark>地图</mark>上"),
     "zh-Hant": ("用腳步繪製的地圖", "只有你親腳走過的路<br>才會留在<mark>地圖</mark>上"),
     "es": ("Un mapa dibujado a pie", "Solo los caminos que pisas<br>quedan en el <mark>mapa</mark>"),
+    "de": ("Eine zu Fuß gezeichnete Karte", "Nur die Wege, die du gehst,<br>bleiben auf der <mark>Karte</mark>"),
 }
 
 # 기기 화면(시뮬레이터 캡처, 가상의 두 달치 산책 기록으로 채움)

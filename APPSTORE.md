@@ -447,3 +447,67 @@ Elige entre dar prioridad a la precisión o a la batería. Con prioridad a la pr
 Tus registros, en tu iCloud
 Tus pasos, sellos, diario y fotos se guardan en tu iCloud personal y te siguen cuando cambias de dispositivo.
 Las estadísticas de uso anónimas nunca incluyen coordenadas de ubicación, texto del diario, nombres de lugares ni fotos.
+
+## de
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/de/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/de/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/de/
+
+### 이름
+
+벅뚜벅뚜: Zu Fuß gezeichnet
+
+### 부제
+
+Nur neue Wege färben die Karte
+
+### 키워드
+
+wandern,spazieren,gps,tracker,reisetagebuch,schritte,entdecken,stempel,viertel,stadt,route,outdoor
+
+### 프로모션 텍스트
+
+Eine leere Karte, auf der Wege mit Auto oder U-Bahn nicht gezeichnet werden. Nur Wege, die du zum ersten Mal gehst, vergrößern sie. Wohin ziehst du heute einen neuen Weg?
+
+### 설명
+
+Eine Karte, die als leeres Blatt Papier beginnt. Nur was du mit deinen eigenen Füßen gegangen bist, füllt sich Punkt für Punkt.
+Wege mit Auto oder U-Bahn werden nicht gezeichnet, und auch wenn du hundertmal denselben Weg gehst, wächst die Karte nicht. Um sie zu erweitern, musst du neue Wege gehen.
+
+Heute und frühere Schritte in unterschiedlichen Farben
+Wo du heute gegangen bist, wird in roter Tusche gestempelt, frühere Schritte in Indigo. Je öfter du an einer Stelle vorbeikommst, desto dunkler wird sie – so zeigt sich dein Alltagsradius von selbst.
+Orte, die du seit über drei Monaten nicht mehr betreten hast, werden nicht gelöscht, sondern verblassen zu Grau.
+
+Stempel für besuchte und geplante Orte
+Stempel dort, wo du stehst, oder halte die Karte gedrückt, um an einer beliebigen Stelle einen Stempel zu setzen. Es stehen 212 Stempel zur Auswahl, nach Kategorien geordnet.
+Ein Stempel an einem Ort, an dem du noch nie gegangen bist, bleibt als Ort zum Besuchen erhalten und wird zum besuchten Ort, sobald du ihn wirklich erreichst.
+Fotografiere mit der Kamera ein Ladenschild, und der Hintergrund wird entfernt – das Schild steht dann als Sticker nur für diesen Ort auf der Karte.
+
+Heutige Fußspuren
+Die Orte, an denen du heute warst, reihen sich in zeitlicher Reihenfolge auf, dazu steht, wie weit du zwischen ihnen gegangen bist. Liegt dort, wo deine Schritte verweilten, ein Stempel, fragt die App, ob du dort warst, und zählt den Besuch.
+
+Pionierkompass
+Teilt die Umgebung deines Standorts in acht Richtungen auf und zeigt, in welche du am wenigsten gegangen bist. Nutze ihn, um die Richtung deines nächsten Spaziergangs zu wählen.
+
+Film und Kalender
+Wähle einen Zeitraum und sieh dir als Video an, wie deine Karte entsteht – oder exportiere es.
+Der Kalender zeichnet statt einer Zahl die Form des Weges, den du an dem Tag gegangen bist. Außerdem kannst du jeden Tag ein Tagebuch mit Text und Fotos führen.
+
+Widgets
+Der Home-Bildschirm zeigt Form und Länge des heute gezeichneten Weges, der Sperrbildschirm die heute gezogene Strecke als einzelne Zahlenzeile.
+
+Aufzeichnungsmodus
+Du kannst zwischen Genauigkeit zuerst und Akku zuerst wählen. Bei Genauigkeit zuerst werden deine Schritte auch bei geschlossener App aufgezeichnet.
+
+Deine Aufzeichnungen in deiner iCloud
+Schritte, Stempel, Tagebuch und Fotos liegen in deiner persönlichen iCloud und folgen dir beim Gerätewechsel.
+Die anonyme Nutzungsstatistik enthält keine Standortkoordinaten, keine Tagebuchtexte, keine Ortsnamen und keine Fotos.

@@ -44,6 +44,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -89,6 +95,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usa la cámara para guardar una foto del lugar y recortar lo que fotografíes para convertirlo en una pegatina para el mapa."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Kamera wird genutzt, um ein Foto vom Ort zu sichern und das Fotografierte als Sticker für deine Karte freizustellen."
           }
         }
       }
@@ -136,6 +148,12 @@
             "state" : "translated",
             "value" : "Para registrar tus huellas automáticamente cada vez que cambias de lugar, se necesita el permiso «Siempre»."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Um deine Fußspuren bei jedem Ortswechsel automatisch aufzuzeichnen, ist die Berechtigung „Immer“ nötig."
+          }
         }
       }
     },
@@ -182,6 +200,12 @@
             "state" : "translated",
             "value" : "Se necesita el permiso de ubicación para registrar tu posición actual como una huella en el mapa."
           }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Der Standortzugriff wird benötigt, um deinen aktuellen Standort als Fußspur auf der Karte aufzuzeichnen."
+          }
         }
       }
     },
@@ -227,6 +251,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usa los datos de movimiento para comprobar si te desplazaste caminando o corriendo y no registrar los trayectos en vehículo."
+          }
+        },
+        "de" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewegungsdaten werden genutzt, um zu erkennen, ob du zu Fuß oder laufend unterwegs warst, damit Fahrten im Fahrzeug nicht aufgezeichnet werden."
           }
         }
       }
