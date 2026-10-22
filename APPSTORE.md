@@ -639,3 +639,67 @@ Scegli tra precisione prioritaria e batteria prioritaria. Con la precisione prio
 Le tue registrazioni nel tuo iCloud
 Passi, timbri, diario e foto sono conservati nel tuo iCloud personale e ti seguono quando cambi dispositivo.
 Le statistiche d’uso anonime non includono mai coordinate di posizione, testi del diario, nomi di luoghi o foto.
+
+## pt-BR
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/pt-BR/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/pt-BR/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/pt-BR/
+
+### 이름
+
+벅뚜벅뚜: mapa a pé
+
+### 부제
+
+Só o caminho novo conta
+
+### 키워드
+
+caminhada,passeio,trilha,gps,rastreador,diário,viagem,passos,explorar,carimbos,bairro,cidade
+
+### 프로모션 텍스트
+
+Um mapa em branco onde trajetos de carro ou metrô não são desenhados. Só caminhos pisados pela primeira vez o ampliam. Por onde você vai traçar um caminho novo hoje?
+
+### 설명
+
+Um mapa que começa em uma folha em branco. Só os lugares que você percorre com os próprios pés vão sendo preenchidos, um ponto de cada vez.
+Trajetos de carro ou metrô não são desenhados, e mesmo repetindo cem vezes o mesmo caminho o mapa não cresce. Para ampliar, é preciso seguir por caminhos novos.
+
+Hoje e os passos do passado, em cores diferentes
+Onde você caminhou hoje fica marcado em tinta vermelha, e os passos antigos em azul-índigo. Quanto mais você passa por um lugar, mais escuro ele fica, e seu raio de vida diária aparece sozinho.
+Lugares que você não pisa há mais de três meses não são apagados: vão desbotando até ficar cinza.
+
+Carimbos para lugares visitados e para visitar
+Carimbe onde você está ou mantenha o mapa pressionado para colocar um carimbo onde quiser. São 212 carimbos para escolher, organizados por categoria.
+Um carimbo colocado onde você nunca caminhou fica como lugar para visitar e vira lugar visitado quando você realmente chega perto.
+Fotografe a placa de uma loja com a câmera e o fundo é recortado, erguendo-a como um adesivo exclusivo daquele lugar.
+
+Pegadas de hoje
+Os lugares em que você parou hoje aparecem em ordem de horário, junto com o quanto você andou entre um e outro. Se houver um carimbo onde seus passos pararam, o app pergunta se você esteve lá e conta a visita.
+
+Bússola dos pioneiros
+Divide a região ao seu redor em oito direções e aponta a que você menos percorreu. Use para decidir a direção da sua próxima caminhada.
+
+Filme e calendário
+Escolha um período para assistir, ou exportar como vídeo, seu mapa sendo desenhado.
+O calendário desenha, no lugar de um número, a forma do que você caminhou em cada dia. Você também pode manter um diário com texto e fotos.
+
+Widgets
+A tela de início mostra a forma e o comprimento do caminho traçado hoje, e a tela bloqueada, a distância de hoje em uma única linha de números.
+
+Modo de registro
+Escolha entre prioridade à precisão ou à bateria. Com prioridade à precisão, seus passos são registrados mesmo com o app fechado.
+
+Seus registros no seu iCloud
+Passos, carimbos, diário e fotos ficam no seu iCloud pessoal e acompanham você quando troca de aparelho.
+As estatísticas de uso anônimas nunca incluem coordenadas de localização, texto do diário, nomes de lugares nem fotos.

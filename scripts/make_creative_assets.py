@@ -42,6 +42,7 @@ SEARCH = {
     "de": ("Spaziergänge aufzeichnen", "Eine Karte, die mit<br>jedem <mark>Schritt</mark> wächst", "Sie wächst nur auf Wegen, die du noch nie gegangen bist"),
     "fr": ("suivi de balades", "Une carte qui grandit<br>à chaque <mark>pas</mark>", "Elle ne s’agrandit que sur des chemins jamais foulés"),
     "it": ("registro passeggiate", "Una mappa che cresce<br>a ogni <mark>passo</mark>", "Si amplia solo sui percorsi mai fatti"),
+    "pt-BR": ("registro de caminhadas", "Um mapa que cresce<br>a cada <mark>passo</mark>", "Só se amplia em caminhos que você nunca fez"),
 }
 
 # 헤더: 처음 온 사람에게 한 가지 약속. 내 발로 걸은 자리만 지도에 남는다.
@@ -56,6 +57,7 @@ HEADER = {
     "de": ("Eine zu Fuß gezeichnete Karte", "Nur die Wege, die du gehst,<br>bleiben auf der <mark>Karte</mark>"),
     "fr": ("Une carte dessinée à pied", "Seuls les chemins que vous marchez<br>restent sur la <mark>carte</mark>"),
     "it": ("Una mappa disegnata a piedi", "Sulla <mark>mappa</mark> restano<br>solo le strade che percorri"),
+    "pt-BR": ("Um mapa desenhado a pé", "Só os caminhos que você percorre<br>ficam no <mark>mapa</mark>"),
 }
 
 # 기기 화면(시뮬레이터 캡처, 가상의 두 달치 산책 기록으로 채움)

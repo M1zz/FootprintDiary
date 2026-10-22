@@ -62,6 +62,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -125,6 +131,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usa la fotocamera per conservare una foto del luogo e ritagliare ciò che fotografi, così da farne un adesivo da mettere sulla mappa."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa a câmera para guardar uma foto do lugar e recortar o que você fotografar, transformando em um adesivo para colocar no mapa."
           }
         }
       }
@@ -190,6 +202,12 @@
             "state" : "translated",
             "value" : "Per registrare automaticamente le tue impronte a ogni cambio di luogo serve il permesso «Sempre»."
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Para registrar suas pegadas automaticamente a cada mudança de lugar, é preciso a permissão «Sempre»."
+          }
         }
       }
     },
@@ -254,6 +272,12 @@
             "state" : "translated",
             "value" : "Serve il permesso di posizione per registrare la tua posizione attuale come impronta sulla mappa."
           }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A permissão de localização é necessária para registrar sua posição atual como pegada no mapa."
+          }
         }
       }
     },
@@ -317,6 +341,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Usa i dati di movimento per capire se ti sei spostato a piedi o correndo, così da non registrare gli spostamenti in veicolo."
+          }
+        },
+        "pt-BR" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usa dados de movimento para verificar se você se deslocou a pé ou correndo e não registrar trajetos de veículo."
           }
         }
       }
