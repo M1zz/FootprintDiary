@@ -122,6 +122,12 @@
             "state" : "translated",
             "value" : "%@ · Fotspor %lld/%lld"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Voetafdrukken %lld/%lld"
+          }
         }
       }
     },
@@ -245,6 +251,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gikk %@ på %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ gelopen in %@"
           }
         }
       }
@@ -370,6 +382,12 @@
             "state" : "translated",
             "value" : "Gikk %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ gelopen"
+          }
         }
       }
     },
@@ -493,6 +511,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ samlet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ verzameld"
           }
         }
       }
@@ -618,6 +642,12 @@
             "state" : "translated",
             "value" : "Symbol: %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbool: %@"
+          }
         }
       }
     },
@@ -742,6 +772,12 @@
             "state" : "translated",
             "value" : "%@, %lld slag"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld soorten"
+          }
         }
       }
     },
@@ -862,6 +898,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@×"
@@ -990,6 +1032,12 @@
             "state" : "translated",
             "value" : "I retning %@ har du gått minst"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In de richting %@ ben je het minst geweest"
+          }
         }
       }
     },
@@ -1113,6 +1161,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld m unna"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m verderop"
           }
         }
       }
@@ -1238,6 +1292,12 @@
             "state" : "translated",
             "value" : "Innen %lld m åpner lukkeren seg"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Binnen %lld m gaat de sluiter open"
+          }
         }
       }
     },
@@ -1361,6 +1421,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld slag"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld soorten"
           }
         }
       }
@@ -1486,6 +1552,12 @@
             "state" : "translated",
             "value" : "%lld steder"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld plekken"
+          }
         }
       }
     },
@@ -1609,6 +1681,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld ganger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld keer"
           }
         }
       }
@@ -1734,6 +1812,12 @@
             "state" : "translated",
             "value" : "Gikk ut %lld ganger"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld keer erop uit geweest"
+          }
         }
       }
     },
@@ -1858,6 +1942,12 @@
             "state" : "translated",
             "value" : "Oppdagelse nr. %lld"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ontdekking nr. %lld"
+          }
         }
       }
     },
@@ -1981,6 +2071,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Finn fram med AR"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vind het met AR"
           }
         }
       }
@@ -2107,6 +2203,12 @@
             "state" : "translated",
             "value" : "Face ID-lås"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID-vergrendeling"
+          }
         }
       }
     },
@@ -2231,6 +2333,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lås appen med Face ID eller Touch ID for å beskytte stedene du har vært og dagboken din."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergrendel de app met Face ID of Touch ID om te beschermen waar je bent geweest en je dagboek."
           }
         }
       }
@@ -2357,6 +2465,12 @@
             "state" : "translated",
             "value" : "Spør Siri hvor langt du har gått i dag."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vraag het aan Siri en zie meteen hoe ver je vandaag hebt gelopen."
+          }
         }
       }
     },
@@ -2481,6 +2595,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri og Snarveier"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri en Opdrachten"
           }
         }
       }
@@ -2607,6 +2727,12 @@
             "state" : "translated",
             "value" : "VoiceOver leser opp alle knapper og detaljer på kartet og i registreringene i riktig rekkefølge."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver leest alle knoppen en details van je kaart en registraties voor, in de juiste volgorde."
+          }
         }
       }
     },
@@ -2732,6 +2858,12 @@
             "state" : "translated",
             "value" : "Bedre VoiceOver"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prettiger VoiceOver"
+          }
         }
       }
     },
@@ -2855,6 +2987,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen stempler passer med «%@»"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Geen stempels die passen bij ‘%@’"
           }
         }
       }
@@ -2980,6 +3118,12 @@
             "state" : "translated",
             "value" : "Dette var et sted du ville til. Skal det lagres som besøkt?"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit was een plek waar je naartoe wilde. Als bezocht vastleggen?"
+          }
         }
       }
     },
@@ -3103,6 +3247,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ikke besøkt ennå"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog niet bezocht"
           }
         }
       }
@@ -3228,6 +3378,12 @@
             "state" : "translated",
             "value" : "Vil besøke"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wil ik bezoeken"
+          }
         }
       }
     },
@@ -3351,6 +3507,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Et sted du stemplet som besøksmål"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een plek die je als bezoekdoel hebt gestempeld"
           }
         }
       }
@@ -3476,6 +3638,12 @@
             "state" : "translated",
             "value" : "Vanligste årsak: %@ (%lld ganger). %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meest voorkomende reden: %@ (%lld keer). %@"
+          }
         }
       }
     },
@@ -3599,6 +3767,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kategori"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Categorie"
           }
         }
       }
@@ -3724,6 +3898,12 @@
             "state" : "translated",
             "value" : "Pionerkompass"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pionierskompas"
+          }
         }
       }
     },
@@ -3847,6 +4027,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hopp over"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Overslaan"
           }
         }
       }
@@ -3972,6 +4158,12 @@
             "state" : "translated",
             "value" : "Gåregistrering"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wandelregistratie"
+          }
         }
       }
     },
@@ -4095,6 +4287,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gåregistrering er slått av. Selv om du går, blir det ikke igjen noe spor."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wandelregistratie staat uit. Ook als je loopt, blijft er geen spoor achter."
           }
         }
       }
@@ -4220,6 +4418,12 @@
             "state" : "translated",
             "value" : "Stempler du setter mens du går, hoper seg opp her i tidsrekkefølge.\nSteder der du stopper, lagres av seg selv uten stempel."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempels die je tijdens het lopen zet, stapelen zich hier op in tijdsvolgorde.\nPlekken waar je blijft staan, worden vanzelf bewaard, ook zonder stempel."
+          }
         }
       }
     },
@@ -4343,6 +4547,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Steder nådd til fots"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plekken te voet bereikt"
           }
         }
       }
@@ -4468,6 +4678,12 @@
             "state" : "translated",
             "value" : "Når du kommer fram til fots, kan du ta et bilde på stedet"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als je te voet aankomt, kun je daar een foto maken"
+          }
         }
       }
     },
@@ -4592,6 +4808,12 @@
             "state" : "translated",
             "value" : "Hvis du gikk, men det ikke kom noen strek på kartet, kan du se årsaken her."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als je hebt gelopen maar er geen lijn op de kaart verscheen, zie je hier waarom."
+          }
         }
       }
     },
@@ -4715,6 +4937,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Når du går, legger veiene du har gått seg oppå hverandre i rekkefølge."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terwijl je loopt, stapelen de doorlopen wegen zich in volgorde op."
           }
         }
       }
@@ -4841,6 +5069,12 @@
             "state" : "translated",
             "value" : "Lagre veiene du har gått og dagboken i en fil, og hent dem tilbake senere."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaar je wegen en dagboek in een bestand en haal ze later terug."
+          }
         }
       }
     },
@@ -4964,6 +5198,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "På kartet blir bare veiene du har gått og stemplene du har satt i den valgte perioden."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op de kaart blijven alleen de wegen die je in de gekozen periode liep en de stempels die je zette."
           }
         }
       }
@@ -5089,6 +5329,12 @@
             "state" : "translated",
             "value" : "Ikke interessert"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Niet geïnteresseerd"
+          }
         }
       }
     },
@@ -5212,6 +5458,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Det går bra"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Het is goed"
           }
         }
       }
@@ -5337,6 +5589,12 @@
             "state" : "translated",
             "value" : "Se hvordan det tegnes"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zien hoe het getekend wordt"
+          }
         }
       }
     },
@@ -5460,6 +5718,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Illustrert kart"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Getekende kaart"
           }
         }
       }
@@ -5586,6 +5850,12 @@
             "state" : "translated",
             "value" : "Selv med større tekst blir skjermene ordnet pent i stedet for å bli kuttet."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ook bij grotere tekst worden schermen netjes opnieuw ingedeeld in plaats van afgesneden."
+          }
         }
       }
     },
@@ -5709,6 +5979,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se etter periode"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bekijken per periode"
           }
         }
       }
@@ -5834,6 +6110,12 @@
             "state" : "translated",
             "value" : "Registreringsmåte"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registratiewijze"
+          }
         }
       }
     },
@@ -5957,6 +6239,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Registreringsstatus"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registratiestatus"
           }
         }
       }
@@ -6082,6 +6370,12 @@
             "state" : "translated",
             "value" : "Se registreringsstatus"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Registratiestatus bekijken"
+          }
         }
       }
     },
@@ -6205,6 +6499,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gjenopprett standardbildet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Standaardafbeelding herstellen"
           }
         }
       }
@@ -6330,6 +6630,12 @@
             "state" : "translated",
             "value" : "Skjermer du har slått av, kan alltid åpnes via «Se alt samlet» over. Knappene for stempler og innstillinger vises alltid."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uitgezette schermen kun je altijd openen via ‘Alles samen bekijken’ hierboven. De knoppen voor stempels en instellingen zijn altijd zichtbaar."
+          }
         }
       }
     },
@@ -6453,6 +6759,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slutt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Einde"
           }
         }
       }
@@ -6578,6 +6890,12 @@
             "state" : "translated",
             "value" : "Senere"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Later"
+          }
         }
       }
     },
@@ -6701,6 +7019,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lagres bare i din personlige iCloud. Andre kan ikke se det."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wordt alleen in je persoonlijke iCloud bewaard. Anderen kunnen het niet zien."
           }
         }
       }
@@ -6827,6 +7151,12 @@
             "state" : "translated",
             "value" : "Slett alle registreringene mine på én gang"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Al mijn registraties in één keer wissen"
+          }
         }
       }
     },
@@ -6950,6 +7280,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Omriss av nabolaget mitt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Contour van mijn buurt"
           }
         }
       }
@@ -7075,6 +7411,12 @@
             "state" : "translated",
             "value" : "Kartet mitt"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mijn kaart"
+          }
         }
       }
     },
@@ -7198,6 +7540,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åpne kartet mitt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mijn kaart openen"
           }
         }
       }
@@ -7323,6 +7671,12 @@
             "state" : "translated",
             "value" : "Se kartet ditt bli tegnet"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zie je kaart getekend worden"
+          }
         }
       }
     },
@@ -7446,6 +7800,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Forhåndsvisning av kartet ditt mens det tegnes"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voorvertoning van het tekenen van je kaart"
           }
         }
       }
@@ -7571,6 +7931,12 @@
             "state" : "translated",
             "value" : "Veiene jeg har tegnet"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wegen die ik heb getekend"
+          }
         }
       }
     },
@@ -7694,6 +8060,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Steder jeg har stemplet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plekken die ik heb gestempeld"
           }
         }
       }
@@ -7819,6 +8191,12 @@
             "state" : "translated",
             "value" : "Trykk for å la kartet skinne gjennom"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik om de kaart te laten doorschemeren"
+          }
         }
       }
     },
@@ -7942,6 +8320,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trykk for å stemple din nåværende posisjon"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik om je huidige plek af te stempelen"
           }
         }
       }
@@ -8067,6 +8451,12 @@
             "state" : "translated",
             "value" : "Bekreft om du har vært på %lld steder"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bevestig of je op %lld plekken bent geweest"
+          }
         }
       }
     },
@@ -8190,6 +8580,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Antall besøk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aantal bezoeken"
           }
         }
       }
@@ -8315,6 +8711,12 @@
             "state" : "translated",
             "value" : "Jeg var der"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ik was er"
+          }
         }
       }
     },
@@ -8438,6 +8840,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Trykk igjen for å gå tilbake til papiret. Nyttig når du vil se hvor du er."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik nogmaals om terug te keren naar het papier. Handig om te zien waar je ongeveer bent."
           }
         }
       }
@@ -8563,6 +8971,12 @@
             "state" : "translated",
             "value" : "Ta på nytt"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Opnieuw maken"
+          }
         }
       }
     },
@@ -8686,6 +9100,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Et sted du har kommet tilbake til"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een plek waar je terug bent"
           }
         }
       }
@@ -8811,6 +9231,12 @@
             "state" : "translated",
             "value" : "Dette stedet er registrert som et fast sted"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit is als vaste plek geregistreerd"
+          }
         }
       }
     },
@@ -8934,6 +9360,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lukk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sluiten"
           }
         }
       }
@@ -9060,6 +9492,12 @@
             "state" : "translated",
             "value" : "Selv med høyere kontrast eller vansker med å skille farger kan du kjenne igjen veiene og stemplene på kartet."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ook met hoger contrast of moeite om kleuren te onderscheiden herken je de wegen en stempels op de kaart."
+          }
         }
       }
     },
@@ -9184,6 +9622,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bruk appen på flere språk."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebruik de app in meer talen."
           }
         }
       }
@@ -9310,6 +9754,12 @@
             "state" : "translated",
             "value" : "Flere språk"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Meer talen"
+          }
         }
       }
     },
@@ -9433,6 +9883,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legg til noen ord (valgfritt)"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voeg een paar woorden toe (optioneel)"
           }
         }
       }
@@ -9558,6 +10014,12 @@
             "state" : "translated",
             "value" : "I samlingen ser du fotsporene du har samlet så langt"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In de collectie zie je de voetafdrukken die je tot nu toe hebt verzameld"
+          }
         }
       }
     },
@@ -9681,6 +10143,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dette kan ikke angres."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit kan niet ongedaan worden gemaakt."
           }
         }
       }
@@ -9806,6 +10274,12 @@
             "state" : "translated",
             "value" : "Trykk for å sette på pause eller fortsette"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tik om te pauzeren of te hervatten"
+          }
         }
       }
     },
@@ -9929,6 +10403,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld steder besøkt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld plekken bezocht"
           }
         }
       }
@@ -10054,6 +10534,12 @@
             "state" : "translated",
             "value" : "Fant ikke noe tydelig, så bakgrunnen kunne ikke fjernes. Gå nærmere gjenstanden og ta bildet på nytt."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er is niets scherps gevonden, dus de achtergrond kon niet worden verwijderd. Ga dichter bij het voorwerp staan en probeer opnieuw."
+          }
         }
       }
     },
@@ -10177,6 +10663,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siste besøk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Laatste bezoek"
           }
         }
       }
@@ -10302,6 +10794,12 @@
             "state" : "translated",
             "value" : "Blekkkart"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Inktkaart"
+          }
         }
       }
     },
@@ -10425,6 +10923,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notat"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notitie"
           }
         }
       }
@@ -10550,6 +11054,12 @@
             "state" : "translated",
             "value" : "Se alt samlet"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alles samen bekijken"
+          }
         }
       }
     },
@@ -10673,6 +11183,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plasserer vann og fjell"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Water en bergen worden geplaatst"
           }
         }
       }
@@ -10798,6 +11314,12 @@
             "state" : "translated",
             "value" : "Ikke oppdaget"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog niet ontdekt"
+          }
         }
       }
     },
@@ -10921,6 +11443,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Fotspor"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voetafdrukken"
           }
         }
       }
@@ -11046,6 +11574,12 @@
             "state" : "translated",
             "value" : "Timelapse av fotspor"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse van voetafdrukken"
+          }
         }
       }
     },
@@ -11170,6 +11704,12 @@
             "state" : "translated",
             "value" : "Avdekket land %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Onthuld gebied %@"
+          }
         }
       }
     },
@@ -11293,6 +11833,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "La bakgrunnskartet skinne gjennom"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Achtergrondkaart laten doorschemeren"
           }
         }
       }
@@ -11419,6 +11965,12 @@
             "state" : "translated",
             "value" : "Sikkerhetskopi og eksport"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back-up en export"
+          }
         }
       }
     },
@@ -11542,6 +12094,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Årsaker til forkasting"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Redenen voor weggooien"
           }
         }
       }
@@ -11667,6 +12225,12 @@
             "state" : "translated",
             "value" : "Versjon %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Versie %@"
+          }
         }
       }
     },
@@ -11790,6 +12354,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Visning"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Weergave"
           }
         }
       }
@@ -11916,6 +12486,12 @@
             "state" : "translated",
             "value" : "Behagelige farger og kontrast"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Prettige kleuren en contrast"
+          }
         }
       }
     },
@@ -12039,6 +12615,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Viste veier"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Getoonde wegen"
           }
         }
       }
@@ -12164,6 +12746,12 @@
             "state" : "translated",
             "value" : "Et blankt ark vet ikke selv hva som er hva.\nStedet du står nå, blir **det første holdepunktet**."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een leeg vel weet zelf niet wat waar is.\nJe huidige plek wordt het **eerste referentiepunt**."
+          }
         }
       }
     },
@@ -12287,6 +12875,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vi begynner med et blankt ark"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We beginnen met een leeg vel"
           }
         }
       }
@@ -12412,6 +13006,12 @@
             "state" : "translated",
             "value" : "Bruksstatistikk (utvikler)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gebruiksstatistieken (ontwikkelaar)"
+          }
         }
       }
     },
@@ -12535,6 +13135,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bilder"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto's"
           }
         }
       }
@@ -12660,6 +13266,12 @@
             "state" : "translated",
             "value" : "Slett bilde"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto verwijderen"
+          }
         }
       }
     },
@@ -12783,6 +13395,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ta bilde"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto maken"
           }
         }
       }
@@ -12908,6 +13526,12 @@
             "state" : "translated",
             "value" : "Legg til bilde"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto toevoegen"
+          }
         }
       }
     },
@@ -13031,6 +13655,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Legger inn bilde"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foto wordt toegevoegd"
           }
         }
       }
@@ -13156,6 +13786,12 @@
             "state" : "translated",
             "value" : "Bildet kunne ikke arkiveres"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De foto kon niet worden bewaard"
+          }
         }
       }
     },
@@ -13279,6 +13915,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slett"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verwijderen"
           }
         }
       }
@@ -13405,6 +14047,12 @@
             "state" : "translated",
             "value" : "Turpåminnelse"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wandelherinnering"
+          }
         }
       }
     },
@@ -13528,6 +14176,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld nylig nådde steder stemples på veien du gikk"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld nieuw bereikte plekken worden op de route afgestempeld"
           }
         }
       }
@@ -13653,6 +14307,12 @@
             "state" : "translated",
             "value" : "Nytt"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieuw"
+          }
         }
       }
     },
@@ -13776,6 +14436,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Innstillinger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen"
           }
         }
       }
@@ -13901,6 +14567,12 @@
             "state" : "translated",
             "value" : "Slå på kameraet i Innstillinger > 벅뚜벅뚜."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zet de camera aan in Instellingen > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -14024,6 +14696,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åpne Innstillinger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Instellingen openen"
           }
         }
       }
@@ -14149,6 +14827,12 @@
             "state" : "translated",
             "value" : "Slå på tillatelser i Innstillinger"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rechten aanzetten in Instellingen"
+          }
         }
       }
     },
@@ -14272,6 +14956,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kan også åpnes fra Innstillinger"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je kunt dit ook openen via Instellingen"
           }
         }
       }
@@ -14397,6 +15087,12 @@
             "state" : "translated",
             "value" : "Nullstill telling"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Telling resetten"
+          }
         }
       }
     },
@@ -14520,6 +15216,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Verden er allerede tegnet av andre kart.\nHer blir **bare stedene du har gått med dine egne føtter**."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De wereld is al getekend door andere kaarten.\nHier blijft **alleen over waar je met je eigen voeten bent geweest**."
           }
         }
       }
@@ -14645,6 +15347,12 @@
             "state" : "translated",
             "value" : "Samlede spots"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verzamelde spots"
+          }
         }
       }
     },
@@ -14765,6 +15473,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stempel"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stempel"
@@ -14893,6 +15607,12 @@
             "state" : "translated",
             "value" : "Start"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Begin"
+          }
         }
       }
     },
@@ -15016,6 +15736,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kom i gang"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beginnen"
           }
         }
       }
@@ -15141,6 +15867,12 @@
             "state" : "translated",
             "value" : "Symbol"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbool"
+          }
         }
       }
     },
@@ -15264,6 +15996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Forstørr symbol"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbool vergroten"
           }
         }
       }
@@ -15390,6 +16128,12 @@
             "state" : "translated",
             "value" : "Skriv videre på en påbegynt dagbok"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een onafgemaakt dagboek voortzetten"
+          }
         }
       }
     },
@@ -15513,6 +16257,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sveip for å bla som kort, dobbelttrykk for å forstørre"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Veeg om als kaarten door te bladeren, tik tweemaal om te vergroten"
           }
         }
       }
@@ -15638,6 +16388,12 @@
             "state" : "translated",
             "value" : "Nei"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nee"
+          }
         }
       }
     },
@@ -15758,6 +16514,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -15886,6 +16648,12 @@
             "state" : "translated",
             "value" : "Ikke ennå"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog niet"
+          }
         }
       }
     },
@@ -16009,6 +16777,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ikke besøkt ennå"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog niet bezocht"
           }
         }
       }
@@ -16134,6 +16908,12 @@
             "state" : "translated",
             "value" : "Du har ikke vært her ennå. Det blir stående som «Vil besøke» og blir et besøkt sted når du kommer fram."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je bent hier nog niet geweest. Het blijft staan als ‘Wil ik bezoeken’ en wordt een bezochte plek zodra je aankomt."
+          }
         }
       }
     },
@@ -16257,6 +17037,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ingen punkter er forkastet ennå"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog geen punten weggegooid"
           }
         }
       }
@@ -16382,6 +17168,12 @@
             "state" : "translated",
             "value" : "Ikke ennå"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nog niet"
+          }
         }
       }
     },
@@ -16505,6 +17297,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Veiledning"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uitleg"
           }
         }
       }
@@ -16631,6 +17429,12 @@
             "state" : "translated",
             "value" : "Du kan også bruke appen på engelsk."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je kunt de app ook in het Engels gebruiken."
+          }
         }
       }
     },
@@ -16754,6 +17558,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Åpne appen én gang"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open de app één keer"
           }
         }
       }
@@ -16879,6 +17689,12 @@
             "state" : "translated",
             "value" : "Hvilken dag"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Welke dag"
+          }
         }
       }
     },
@@ -17002,6 +17818,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uansett lagres alle mottatte posisjoner. Det er bare punkter med lav nøyaktighet som ikke tegnes på kartet."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hoe dan ook worden alle ontvangen locaties bewaard. Alleen punten met lage nauwkeurigheid worden niet op de kaart getekend."
           }
         }
       }
@@ -17127,6 +17949,12 @@
             "state" : "translated",
             "value" : "Det telles bare anonymt hvilke skjermer som brukes. Stedene du går og det du skriver i dagboken, sendes ikke."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er wordt alleen anoniem geteld welke schermen worden gebruikt. Waar je loopt en wat je in je dagboek schrijft, wordt niet verstuurd."
+          }
         }
       }
     },
@@ -17250,6 +18078,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Du var her i %@"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je was hier %@"
           }
         }
       }
@@ -17375,6 +18209,12 @@
             "state" : "translated",
             "value" : "Behold dette stedet"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze plek bewaren"
+          }
         }
       }
     },
@@ -17498,6 +18338,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lagre her"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier vastleggen"
           }
         }
       }
@@ -17623,6 +18469,12 @@
             "state" : "translated",
             "value" : "Går det bra å ikke registrere dette stedet?"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Is het goed om deze plek niet te registreren?"
+          }
         }
       }
     },
@@ -17746,6 +18598,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hvor var dette?"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waar was dit?"
           }
         }
       }
@@ -17871,6 +18729,12 @@
             "state" : "translated",
             "value" : "Eksporter som video"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exporteren als video"
+          }
         }
       }
     },
@@ -17994,6 +18858,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Lager video %lld %%"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Video maken %lld%%"
           }
         }
       }
@@ -18120,6 +18990,12 @@
             "state" : "translated",
             "value" : "Støtte for engelsk"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Engelse ondersteuning"
+          }
         }
       }
     },
@@ -18243,6 +19119,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "F.eks. hjem, jobb, stamkafé"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bijv. thuis, werk, stamcafé"
           }
         }
       }
@@ -18368,6 +19250,12 @@
             "state" : "translated",
             "value" : "I dag %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vandaag %@"
+          }
         }
       }
     },
@@ -18491,6 +19379,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dagens vei"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De weg van vandaag"
           }
         }
       }
@@ -18616,6 +19510,12 @@
             "state" : "translated",
             "value" : "Et bilde er lagt til i dagens dagbok"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Er is een foto toegevoegd aan het dagboek van vandaag"
+          }
         }
       }
     },
@@ -18739,6 +19639,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spill av i dag"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vandaag afspelen"
           }
         }
       }
@@ -18864,6 +19770,12 @@
             "state" : "translated",
             "value" : "I dag har du ikke besøkt noen steder ennå"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je hebt vandaag nog geen plekken bezocht"
+          }
         }
       }
     },
@@ -18987,6 +19899,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "I dag har du ikke stoppet noe sted ennå"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je hebt vandaag nog nergens stilgestaan"
           }
         }
       }
@@ -19112,6 +20030,12 @@
             "state" : "translated",
             "value" : "Hvor utforsket du i dag?"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Waar heb je vandaag verkend?"
+          }
         }
       }
     },
@@ -19235,6 +20159,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dagens fotspor"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voetafdrukken van vandaag"
           }
         }
       }
@@ -19360,6 +20290,12 @@
             "state" : "translated",
             "value" : "Dagens utforskning"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verkenning van vandaag"
+          }
         }
       }
     },
@@ -19483,6 +20419,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ferdig"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Klaar"
           }
         }
       }
@@ -19609,6 +20551,12 @@
             "state" : "translated",
             "value" : "Reduser bevegelse"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Beweging verminderen"
+          }
         }
       }
     },
@@ -19733,6 +20681,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Med Reduser bevegelse på blir kartet og skjermeffektene roligere."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Met Beweging verminderen aan worden de kaart en schermeffecten rustiger."
           }
         }
       }
@@ -19859,6 +20813,12 @@
             "state" : "translated",
             "value" : "Hvis du vil, kan du slette alle veiene du har gått og dagboken i appen."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als je wilt, kun je in de app alle wegen en je dagboek wissen."
+          }
         }
       }
     },
@@ -19982,6 +20942,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sett posisjon til «Alltid» og slå på Bevegelse og form, så registreres turene dine uten at du åpner appen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zet locatie op ‘Altijd’ en zet Beweging en fitness aan, dan worden je wandelingen vastgelegd zonder dat je de app opent."
           }
         }
       }
@@ -20107,6 +21073,12 @@
             "state" : "translated",
             "value" : "Ingen fotspor i denne perioden"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "In deze periode zijn er geen voetafdrukken"
+          }
         }
       }
     },
@@ -20230,6 +21202,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Se denne perioden"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze periode bekijken"
           }
         }
       }
@@ -20355,6 +21333,12 @@
             "state" : "translated",
             "value" : "Steder fotografert denne dagen"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plekken gefotografeerd op deze dag"
+          }
         }
       }
     },
@@ -20478,6 +21462,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Denne dagen er det ikke registrert noen skritt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op deze dag zijn geen stappen vastgelegd"
           }
         }
       }
@@ -20603,6 +21593,12 @@
             "state" : "translated",
             "value" : "Ingen fotspor denne dagen"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op deze dag zijn er geen voetafdrukken"
+          }
         }
       }
     },
@@ -20726,6 +21722,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slett dette stempelet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deze stempel verwijderen"
           }
         }
       }
@@ -20851,6 +21853,12 @@
             "state" : "translated",
             "value" : "Bruk dette symbolet"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit symbool gebruiken"
+          }
         }
       }
     },
@@ -20974,6 +21982,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slett fotsporene på dette stedet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voetafdrukken op deze plek wissen"
           }
         }
       }
@@ -21099,6 +22113,12 @@
             "state" : "translated",
             "value" : "Navn på dette stedet (f.eks. jobb, stamkafé)"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naam van deze plek (bijv. werk, stamcafé)"
+          }
         }
       }
     },
@@ -21222,6 +22242,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sett det første stempelet på dette arket"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zet de eerste stempel op dit vel"
           }
         }
       }
@@ -21347,6 +22373,12 @@
             "state" : "translated",
             "value" : "Navn"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naam"
+          }
         }
       }
     },
@@ -21470,6 +22502,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gi navn"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Naam geven"
           }
         }
       }
@@ -21595,6 +22633,12 @@
             "state" : "translated",
             "value" : "Legg til bilde"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Afbeelding toevoegen"
+          }
         }
       }
     },
@@ -21719,6 +22763,12 @@
             "state" : "translated",
             "value" : "Gå en tur nå"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ga nu lopen"
+          }
         }
       }
     },
@@ -21842,6 +22892,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gå en tur nå.\nStedene du passerer, stemples på dette arket ett punkt om gangen."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ga nu lopen.\nDe plekken waar je langskomt worden punt voor punt op dit vel gestempeld."
           }
         }
       }
@@ -21968,6 +23024,12 @@
             "state" : "translated",
             "value" : "Hvis appen lukkes mens du skriver dagbok, blir det du har skrevet, stående."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als de app sluit terwijl je dagboek schrijft, blijft wat je schreef bewaard."
+          }
         }
       }
     },
@@ -22091,6 +23153,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dagbok"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dagboek"
           }
         }
       }
@@ -22216,6 +23284,12 @@
             "state" : "translated",
             "value" : "Når du **kommer til et sted du ofte besøker, stempler du der en gang til**.\nMed to holdepunkter finner selv et blankt ark retningen."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wanneer je **aankomt op een plek waar je vaak komt, stempel dan daar nog een keer**.\nMet twee referentiepunten vindt zelfs een leeg vel zijn richting."
+          }
         }
       }
     },
@@ -22339,6 +23413,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Prøv igjen om litt, eller trykk og hold på kartet for å stemple der du vil."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Probeer het zo opnieuw, of houd de kaart ingedrukt om te stempelen waar je wilt."
           }
         }
       }
@@ -22464,6 +23544,12 @@
             "state" : "translated",
             "value" : "Arkiver"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Bewaren"
+          }
         }
       }
     },
@@ -22587,6 +23673,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tilbake til hele perioden"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Terug naar de hele periode"
           }
         }
       }
@@ -22712,6 +23804,12 @@
             "state" : "translated",
             "value" : "Punkttelling"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punten tellen"
+          }
         }
       }
     },
@@ -22835,6 +23933,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Punkter med lav nøyaktighet lagres også. De tegnes ikke på kartet nå, men kan brukes når korrigeringen blir bedre."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punten met lage nauwkeurigheid worden ook bewaard. Nu worden ze niet op de kaart getekend, maar ze zijn bruikbaar zodra de correctie beter wordt."
           }
         }
       }
@@ -22960,6 +24064,12 @@
             "state" : "translated",
             "value" : "Nåværende status"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Huidige status"
+          }
         }
       }
     },
@@ -23083,6 +24193,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Finner posisjonen din"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je locatie wordt gezocht"
           }
         }
       }
@@ -23208,6 +24324,12 @@
             "state" : "translated",
             "value" : "Sett merke her"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plek vastleggen"
+          }
         }
       }
     },
@@ -23331,6 +24453,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sett et stempel der du står"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Een stempel zetten waar je staat"
           }
         }
       }
@@ -23456,6 +24584,12 @@
             "state" : "translated",
             "value" : "Stemple her"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Hier stempelen"
+          }
         }
       }
     },
@@ -23579,6 +24713,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stedene du passerer, stemples på dette arket ett punkt om gangen.\nVeier du kjører i bil eller T-bane tegnes ikke."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "De plekken waar je langskomt worden punt voor punt op dit vel gestempeld.\nWegen die je met de auto of metro aflegt, worden niet getekend."
           }
         }
       }
@@ -23704,6 +24844,12 @@
             "state" : "translated",
             "value" : "Velg kartknapper i Innstillinger"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies kaartknoppen in Instellingen"
+          }
         }
       }
     },
@@ -23827,6 +24973,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kartstil"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaartstijl"
           }
         }
       }
@@ -23952,6 +25104,12 @@
             "state" : "translated",
             "value" : "Kartskala. Én strek tilsvarer %@"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kaartschaal. Eén balk is %@"
+          }
         }
       }
     },
@@ -24075,6 +25233,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Velg hvilke knapper som svever på kartet, og åpne avslåtte skjermer direkte fra Innstillinger."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies welke knoppen op de kaart zweven en open uitgezette schermen direct via Instellingen."
           }
         }
       }
@@ -24200,6 +25364,12 @@
             "state" : "translated",
             "value" : "Steder du har stemplet på forhånd på kartet. Når du kommer fram, blir de besøkte steder."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Plekken die je vooraf op de kaart hebt gestempeld. Zodra je aankomt, worden het bezochte plekken."
+          }
         }
       }
     },
@@ -24323,6 +25493,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vis på kartet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tonen op de kaart"
           }
         }
       }
@@ -24448,6 +25624,12 @@
             "state" : "translated",
             "value" : "Se på kartet"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op de kaart bekijken"
+          }
         }
       }
     },
@@ -24571,6 +25753,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Slik ser det ut på kartet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zo ziet het eruit op de kaart"
           }
         }
       }
@@ -24696,6 +25884,12 @@
             "state" : "translated",
             "value" : "Fjern"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wissen"
+          }
         }
       }
     },
@@ -24819,6 +26013,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Støtte"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
           }
         }
       }
@@ -24944,6 +26144,12 @@
             "state" : "translated",
             "value" : "Velg noe som kan være holdepunkt, for eksempel hjem eller jobb."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kies iets wat als referentie kan dienen, zoals thuis of werk."
+          }
         }
       }
     },
@@ -25067,6 +26273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ta"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Maken"
           }
         }
       }
@@ -25192,6 +26404,12 @@
             "state" : "translated",
             "value" : "Stemplet"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestempeld op"
+          }
         }
       }
     },
@@ -25315,6 +26533,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stemplet"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gestempeld"
           }
         }
       }
@@ -25440,6 +26664,12 @@
             "state" : "translated",
             "value" : "Veier du kjører i bil eller T-bane tegnes ikke.\nBare når du går, settes det ett punkt om gangen."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wegen die je met de auto of metro aflegt, worden niet getekend.\nAlleen lopen zet één punt tegelijk."
+          }
         }
       }
     },
@@ -25563,6 +26793,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bare det som er innenfor rammen, blir igjen; bakgrunnen fjernes"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alleen wat binnen het kader valt, blijft over; de achtergrond wordt gewist"
           }
         }
       }
@@ -25688,6 +26924,12 @@
             "state" : "translated",
             "value" : "Første"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eerste"
+          }
         }
       }
     },
@@ -25811,6 +27053,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Veier gått for første gang"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Voor het eerst belopen wegen"
           }
         }
       }
@@ -25936,6 +27184,12 @@
             "state" : "translated",
             "value" : "Dette er et sted du setter foten på for første gang"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dit is een plek waar je voor het eerst komt"
+          }
         }
       }
     },
@@ -26059,6 +27313,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Avbryt"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Annuleren"
           }
         }
       }
@@ -26184,6 +27444,12 @@
             "state" : "translated",
             "value" : "Slå på"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aanzetten"
+          }
         }
       }
     },
@@ -26307,6 +27573,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Forstørr"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Vergroten"
           }
         }
       }
@@ -26433,6 +27705,12 @@
             "state" : "translated",
             "value" : "Skjermer for stor tekst"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Schermen voor grote tekst"
+          }
         }
       }
     },
@@ -26553,6 +27831,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse"
@@ -26681,6 +27965,12 @@
             "state" : "translated",
             "value" : "Utforsk"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verkennen"
+          }
         }
       }
     },
@@ -26805,6 +28095,12 @@
             "state" : "translated",
             "value" : "Utforskningslogg"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verkenningslogboek"
+          }
         }
       }
     },
@@ -26928,6 +28224,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Utforskningsdagbok"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Verkenningsdagboek"
           }
         }
       }
@@ -27054,6 +28356,12 @@
             "state" : "translated",
             "value" : "Skjerm på foldbar iPhone"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Scherm van opvouwbare iPhone"
+          }
         }
       }
     },
@@ -27179,6 +28487,12 @@
             "state" : "translated",
             "value" : "På en foldbar iPhone ser du kartet og registreringene i to ruter."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Op een opvouwbare iPhone zie je kaart en registraties in twee vensters."
+          }
         }
       }
     },
@@ -27302,6 +28616,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse for dagen"
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse van de dag"
           }
         }
       }
@@ -27428,6 +28748,12 @@
             "state" : "translated",
             "value" : "På slutten av dagen forteller et varsel deg om veien du gikk i dag."
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aan het eind van de dag laat een melding je weten welke weg je vandaag liep."
+          }
         }
       }
     },
@@ -27551,6 +28877,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hvis du blir mer enn %lld minutter på samme sted,\nvises det i dagens fotspor."
+          }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Als je langer dan %lld minuten op één plek blijft,\nverschijnt die plek in de voetafdrukken van vandaag."
           }
         }
       }
@@ -27676,6 +29008,12 @@
             "state" : "translated",
             "value" : "Posisjonen din er ikke funnet ennå"
           }
+        },
+        "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Je locatie is nog niet gevonden"
+          }
         }
       }
     },
@@ -27796,6 +29134,12 @@
           }
         },
         "nb" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "nl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"
