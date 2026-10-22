@@ -1343,3 +1343,67 @@ Kies tussen nauwkeurigheid eerst en batterij eerst. Met nauwkeurigheid eerst wor
 Je registraties in je eigen iCloud
 Stappen, stempels, dagboek en foto's worden bewaard in je persoonlijke iCloud en volgen je als je van apparaat wisselt.
 Anonieme gebruiksstatistieken bevatten nooit locatiecoördinaten, dagboekteksten, plaatsnamen of foto's.
+
+## pl
+
+### 지원 URL
+
+https://m1zz.github.io/FootprintDiary/pl/support.html
+
+### 개인정보처리방침 URL
+
+https://m1zz.github.io/FootprintDiary/pl/privacy.html
+
+### 마케팅 URL
+
+https://m1zz.github.io/FootprintDiary/pl/
+
+### 이름
+
+벅뚜벅뚜: Mapa z kroków
+
+### 부제
+
+Barwią się tylko nowe drogi
+
+### 키워드
+
+spacer,piesze wędrówki,gps,tracker,dziennik,podróże,kroki,odkrywanie,pieczątki,okolica,miasto,trasa
+
+### 프로모션 텍스트
+
+Pusta mapa, na której nie rysują się przejazdy samochodem ani metrem. Powiększają ją tylko drogi, którymi idziesz pierwszy raz. Dokąd dziś poprowadzisz nową drogę?
+
+### 설명
+
+Mapa, która zaczyna się od pustej kartki. Wypełniają się, punkt po punkcie, tylko miejsca, które przeszedłeś własnymi nogami.
+Drogi pokonane samochodem lub metrem nie są rysowane, a choćbyś sto razy szedł tą samą drogą, mapa się nie powiększy. Aby ją powiększyć, trzeba wybrać nowe drogi.
+
+Dzisiejsze i dawne kroki w różnych kolorach
+Miejsca, w których szedłeś dziś, odbijają się czerwonym tuszem, dawne kroki indygo. Im częściej mijasz dane miejsce, tym ciemniejsze się staje, więc Twój codzienny zasięg pokazuje się sam.
+Miejsca, w których nie byłeś od ponad trzech miesięcy, nie znikają, tylko blakną do szarości.
+
+Pieczątki dla miejsc odwiedzonych i do odwiedzenia
+Postaw pieczątkę tam, gdzie stoisz, albo przytrzymaj mapę, aby postawić ją, gdzie chcesz. Do wyboru jest 212 pieczątek podzielonych na kategorie.
+Pieczątka postawiona w miejscu, w którym nigdy nie szedłeś, zostaje jako miejsce do odwiedzenia i staje się odwiedzonym, gdy naprawdę się zbliżysz.
+Sfotografuj aparatem szyld sklepu, a tło zostanie wycięte i szyld stanie na mapie jako naklejka tylko dla tego miejsca.
+
+Dzisiejsze ślady
+Miejsca, w których dziś się zatrzymałeś, układają się w kolejności czasu, razem z odległością przebytą między nimi. Jeśli tam, gdzie zatrzymały się Twoje kroki, jest pieczątka, aplikacja pyta, czy tam byłeś, i zalicza wizytę.
+
+Kompas pioniera
+Dzieli okolicę wokół Ciebie na osiem kierunków i wskazuje ten, w którym chodziłeś najmniej. Użyj go, wybierając kierunek następnego spaceru.
+
+Film i kalendarz
+Wybierz okres i oglądaj jako wideo, które możesz wyeksportować, jak rysuje się Twoja mapa.
+Kalendarz zamiast liczby rysuje kształt trasy danego dnia. Możesz też codziennie prowadzić dziennik z tekstem i zdjęciami.
+
+Widżety
+Ekran początkowy pokazuje kształt i długość drogi narysowanej dziś, a ekran blokady dzisiejszy dystans w jednej linii cyfr.
+
+Sposób zapisu
+Wybierz między priorytetem dokładności a priorytetem baterii. Przy priorytecie dokładności kroki są zapisywane nawet przy zamkniętej aplikacji.
+
+Twoje zapisy w Twoim iCloud
+Kroki, pieczątki, dziennik i zdjęcia są przechowywane w Twoim osobistym iCloud i podążają za Tobą po zmianie urządzenia.
+Anonimowe statystyki użycia nigdy nie zawierają współrzędnych lokalizacji, tekstów dziennika, nazw miejsc ani zdjęć.

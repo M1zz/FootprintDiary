@@ -128,6 +128,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -257,6 +263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De camera wordt gebruikt om een foto van de plek te bewaren en het gefotografeerde uit te knippen als sticker voor op de kaart."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aparat służy do zapisania zdjęcia miejsca i wycięcia fotografowanego obiektu w naklejkę, którą można postawić na mapie."
           }
         }
       }
@@ -388,6 +400,12 @@
             "state" : "translated",
             "value" : "De toestemming ‘Altijd’ is nodig om je voetafdrukken automatisch vast te leggen telkens als je van plek wisselt."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uprawnienie „Zawsze” jest potrzebne, aby automatycznie zapisywać ślady przy każdej zmianie miejsca."
+          }
         }
       }
     },
@@ -518,6 +536,12 @@
             "state" : "translated",
             "value" : "Locatietoestemming is nodig om je huidige positie als voetafdruk op de kaart vast te leggen."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uprawnienie do lokalizacji jest potrzebne, aby zapisać Twoją obecną pozycję jako ślad na mapie."
+          }
         }
       }
     },
@@ -647,6 +671,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bewegingsgegevens worden gebruikt om te controleren of je te voet of rennend bent gegaan, zodat ritten in een voertuig niet worden vastgelegd."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dane o ruchu służą do sprawdzenia, czy poruszałeś się pieszo, czy biegiem, aby nie zapisywać jazdy pojazdem."
           }
         }
       }

@@ -128,6 +128,12 @@
             "state" : "translated",
             "value" : "%@ · Voetafdrukken %lld/%lld"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Ślady %lld/%lld"
+          }
         }
       }
     },
@@ -257,6 +263,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ gelopen in %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przeszedłeś %@ w %@"
           }
         }
       }
@@ -388,6 +400,12 @@
             "state" : "translated",
             "value" : "%@ gelopen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przeszedłeś %@"
+          }
         }
       }
     },
@@ -517,6 +535,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ verzameld"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zebrano: %@"
           }
         }
       }
@@ -648,6 +672,12 @@
             "state" : "translated",
             "value" : "Symbool: %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol: %@"
+          }
         }
       }
     },
@@ -778,6 +808,12 @@
             "state" : "translated",
             "value" : "%@, %lld soorten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, rodzajów: %lld"
+          }
         }
       }
     },
@@ -904,6 +940,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@×"
@@ -1038,6 +1080,12 @@
             "state" : "translated",
             "value" : "In de richting %@ ben je het minst geweest"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W kierunku %@ chodziłeś najmniej"
+          }
         }
       }
     },
@@ -1167,6 +1215,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld m verderop"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld m stąd"
           }
         }
       }
@@ -1298,6 +1352,12 @@
             "state" : "translated",
             "value" : "Binnen %lld m gaat de sluiter open"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W promieniu %lld m migawka się otwiera"
+          }
         }
       }
     },
@@ -1427,6 +1487,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld soorten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Rodzajów: %lld"
           }
         }
       }
@@ -1558,6 +1624,12 @@
             "state" : "translated",
             "value" : "%lld plekken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miejsc: %lld"
+          }
         }
       }
     },
@@ -1687,6 +1759,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld keer"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld razy"
           }
         }
       }
@@ -1818,6 +1896,12 @@
             "state" : "translated",
             "value" : "%lld keer erop uit geweest"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyszedłeś %lld razy"
+          }
         }
       }
     },
@@ -1948,6 +2032,12 @@
             "state" : "translated",
             "value" : "Ontdekking nr. %lld"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld. odkrycie"
+          }
         }
       }
     },
@@ -2077,6 +2167,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vind het met AR"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dojdź z AR"
           }
         }
       }
@@ -2209,6 +2305,12 @@
             "state" : "translated",
             "value" : "Face ID-vergrendeling"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Blokada Face ID"
+          }
         }
       }
     },
@@ -2339,6 +2441,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vergrendel de app met Face ID of Touch ID om te beschermen waar je bent geweest en je dagboek."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zablokuj aplikację za pomocą Face ID lub Touch ID, aby chronić miejsca, w których byłeś, i swój dziennik."
           }
         }
       }
@@ -2471,6 +2579,12 @@
             "state" : "translated",
             "value" : "Vraag het aan Siri en zie meteen hoe ver je vandaag hebt gelopen."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapytaj Siri, ile dziś przeszedłeś."
+          }
         }
       }
     },
@@ -2601,6 +2715,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri en Opdrachten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri i Skróty"
           }
         }
       }
@@ -2733,6 +2853,12 @@
             "state" : "translated",
             "value" : "VoiceOver leest alle knoppen en details van je kaart en registraties voor, in de juiste volgorde."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver czyta wszystkie przyciski i szczegóły mapy oraz zapisów, w odpowiedniej kolejności."
+          }
         }
       }
     },
@@ -2864,6 +2990,12 @@
             "state" : "translated",
             "value" : "Prettiger VoiceOver"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wygodniejszy VoiceOver"
+          }
         }
       }
     },
@@ -2993,6 +3125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Geen stempels die passen bij ‘%@’"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Brak pieczątek pasujących do „%@”"
           }
         }
       }
@@ -3124,6 +3262,12 @@
             "state" : "translated",
             "value" : "Dit was een plek waar je naartoe wilde. Als bezocht vastleggen?"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To było miejsce, do którego chciałeś pójść. Zapisać jako odwiedzone?"
+          }
         }
       }
     },
@@ -3253,6 +3397,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nog niet bezocht"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeszcze nie odwiedzono"
           }
         }
       }
@@ -3384,6 +3534,12 @@
             "state" : "translated",
             "value" : "Wil ik bezoeken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do odwiedzenia"
+          }
         }
       }
     },
@@ -3513,6 +3669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Een plek die je als bezoekdoel hebt gestempeld"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miejsce oznaczone pieczątką jako cel wizyty"
           }
         }
       }
@@ -3644,6 +3806,12 @@
             "state" : "translated",
             "value" : "Meest voorkomende reden: %@ (%lld keer). %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Najczęstszy powód: %@ (%lld razy). %@"
+          }
         }
       }
     },
@@ -3773,6 +3941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Categorie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kategoria"
           }
         }
       }
@@ -3904,6 +4078,12 @@
             "state" : "translated",
             "value" : "Pionierskompas"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kompas pioniera"
+          }
         }
       }
     },
@@ -4033,6 +4213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Overslaan"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomiń"
           }
         }
       }
@@ -4164,6 +4350,12 @@
             "state" : "translated",
             "value" : "Wandelregistratie"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapis spacerów"
+          }
         }
       }
     },
@@ -4293,6 +4485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wandelregistratie staat uit. Ook als je loopt, blijft er geen spoor achter."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapis spacerów jest wyłączony. Nawet jeśli pójdziesz, nie zostanie żaden ślad."
           }
         }
       }
@@ -4424,6 +4622,12 @@
             "state" : "translated",
             "value" : "Stempels die je tijdens het lopen zet, stapelen zich hier op in tijdsvolgorde.\nPlekken waar je blijft staan, worden vanzelf bewaard, ook zonder stempel."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pieczątki stawiane podczas spaceru gromadzą się tu w kolejności czasu.\nMiejsca, w których się zatrzymujesz, zapisują się same, nawet bez pieczątki."
+          }
         }
       }
     },
@@ -4553,6 +4757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plekken te voet bereikt"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miejsca, do których doszedłeś pieszo"
           }
         }
       }
@@ -4684,6 +4894,12 @@
             "state" : "translated",
             "value" : "Als je te voet aankomt, kun je daar een foto maken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gdy dojdziesz pieszo, będziesz mógł zrobić tam zdjęcie"
+          }
         }
       }
     },
@@ -4814,6 +5030,12 @@
             "state" : "translated",
             "value" : "Als je hebt gelopen maar er geen lijn op de kaart verscheen, zie je hier waarom."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeśli szedłeś, a na mapie nie pojawiła się linia, tutaj zobaczysz powód."
+          }
         }
       }
     },
@@ -4943,6 +5165,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terwijl je loopt, stapelen de doorlopen wegen zich in volgorde op."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gdy idziesz, przebyte drogi nakładają się po kolei."
           }
         }
       }
@@ -5075,6 +5303,12 @@
             "state" : "translated",
             "value" : "Bewaar je wegen en dagboek in een bestand en haal ze later terug."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz przebyte drogi i dziennik do pliku i przywróć je później."
+          }
         }
       }
     },
@@ -5204,6 +5438,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Op de kaart blijven alleen de wegen die je in de gekozen periode liep en de stempels die je zette."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na mapie zostają tylko drogi przebyte i pieczątki postawione w wybranym okresie."
           }
         }
       }
@@ -5335,6 +5575,12 @@
             "state" : "translated",
             "value" : "Niet geïnteresseerd"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie interesuje mnie"
+          }
         }
       }
     },
@@ -5464,6 +5710,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Het is goed"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W porządku"
           }
         }
       }
@@ -5595,6 +5847,12 @@
             "state" : "translated",
             "value" : "Zien hoe het getekend wordt"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobacz, jak powstaje"
+          }
         }
       }
     },
@@ -5724,6 +5982,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Getekende kaart"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapa rysunkowa"
           }
         }
       }
@@ -5856,6 +6120,12 @@
             "state" : "translated",
             "value" : "Ook bij grotere tekst worden schermen netjes opnieuw ingedeeld in plaats van afgesneden."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nawet przy większym tekście ekrany układają się czytelnie zamiast się ucinać."
+          }
         }
       }
     },
@@ -5985,6 +6255,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bekijken per periode"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokaż według okresu"
           }
         }
       }
@@ -6116,6 +6392,12 @@
             "state" : "translated",
             "value" : "Registratiewijze"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sposób zapisu"
+          }
         }
       }
     },
@@ -6245,6 +6527,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Registratiestatus"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stan zapisu"
           }
         }
       }
@@ -6376,6 +6664,12 @@
             "state" : "translated",
             "value" : "Registratiestatus bekijken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobacz stan zapisu"
+          }
         }
       }
     },
@@ -6505,6 +6799,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Standaardafbeelding herstellen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przywróć obraz domyślny"
           }
         }
       }
@@ -6636,6 +6936,12 @@
             "state" : "translated",
             "value" : "Uitgezette schermen kun je altijd openen via ‘Alles samen bekijken’ hierboven. De knoppen voor stempels en instellingen zijn altijd zichtbaar."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyłączone ekrany zawsze otworzysz przez „Pokaż wszystko razem” powyżej. Przyciski pieczątek i ustawień są zawsze widoczne."
+          }
         }
       }
     },
@@ -6765,6 +7071,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Einde"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Koniec"
           }
         }
       }
@@ -6896,6 +7208,12 @@
             "state" : "translated",
             "value" : "Later"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Później"
+          }
         }
       }
     },
@@ -7025,6 +7343,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Wordt alleen in je persoonlijke iCloud bewaard. Anderen kunnen het niet zien."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisywane tylko w Twoim osobistym iCloud. Nikt inny tego nie widzi."
           }
         }
       }
@@ -7157,6 +7481,12 @@
             "state" : "translated",
             "value" : "Al mijn registraties in één keer wissen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usuń wszystkie moje zapisy naraz"
+          }
         }
       }
     },
@@ -7286,6 +7616,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Contour van mijn buurt"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zarys mojej okolicy"
           }
         }
       }
@@ -7417,6 +7753,12 @@
             "state" : "translated",
             "value" : "Mijn kaart"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Moja mapa"
+          }
         }
       }
     },
@@ -7546,6 +7888,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mijn kaart openen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz moją mapę"
           }
         }
       }
@@ -7677,6 +8025,12 @@
             "state" : "translated",
             "value" : "Zie je kaart getekend worden"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobacz, jak powstaje Twoja mapa"
+          }
         }
       }
     },
@@ -7806,6 +8160,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voorvertoning van het tekenen van je kaart"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Podgląd rysowania Twojej mapy"
           }
         }
       }
@@ -7937,6 +8297,12 @@
             "state" : "translated",
             "value" : "Wegen die ik heb getekend"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drogi, które narysowałem"
+          }
         }
       }
     },
@@ -8066,6 +8432,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Plekken die ik heb gestempeld"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miejsca, które oznaczyłem pieczątką"
           }
         }
       }
@@ -8197,6 +8569,12 @@
             "state" : "translated",
             "value" : "Tik om de kaart te laten doorschemeren"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij, aby mapa prześwitywała"
+          }
         }
       }
     },
@@ -8326,6 +8704,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tik om je huidige plek af te stempelen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij, aby postawić pieczątkę w obecnym miejscu"
           }
         }
       }
@@ -8457,6 +8841,12 @@
             "state" : "translated",
             "value" : "Bevestig of je op %lld plekken bent geweest"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Do potwierdzenia, czy byłeś w %lld miejscach"
+          }
         }
       }
     },
@@ -8586,6 +8976,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Aantal bezoeken"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liczba wizyt"
           }
         }
       }
@@ -8717,6 +9113,12 @@
             "state" : "translated",
             "value" : "Ik was er"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Byłem tam"
+          }
         }
       }
     },
@@ -8846,6 +9248,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tik nogmaals om terug te keren naar het papier. Handig om te zien waar je ongeveer bent."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij ponownie, aby wrócić do papieru. Przydatne, gdy chcesz sprawdzić, gdzie jesteś."
           }
         }
       }
@@ -8977,6 +9385,12 @@
             "state" : "translated",
             "value" : "Opnieuw maken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrób ponownie"
+          }
         }
       }
     },
@@ -9106,6 +9520,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Een plek waar je terug bent"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miejsce, do którego wróciłeś"
           }
         }
       }
@@ -9237,6 +9657,12 @@
             "state" : "translated",
             "value" : "Dit is als vaste plek geregistreerd"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To miejsce jest zapisane jako stałe"
+          }
         }
       }
     },
@@ -9366,6 +9792,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Sluiten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zamknij"
           }
         }
       }
@@ -9498,6 +9930,12 @@
             "state" : "translated",
             "value" : "Ook met hoger contrast of moeite om kleuren te onderscheiden herken je de wegen en stempels op de kaart."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nawet przy wyższym kontraście lub trudności w rozróżnianiu kolorów rozpoznasz drogi i pieczątki na mapie."
+          }
         }
       }
     },
@@ -9628,6 +10066,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gebruik de app in meer talen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Korzystaj z aplikacji w większej liczbie języków."
           }
         }
       }
@@ -9760,6 +10204,12 @@
             "state" : "translated",
             "value" : "Meer talen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Więcej języków"
+          }
         }
       }
     },
@@ -9889,6 +10339,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voeg een paar woorden toe (optioneel)"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dopisz kilka słów (opcjonalnie)"
           }
         }
       }
@@ -10020,6 +10476,12 @@
             "state" : "translated",
             "value" : "In de collectie zie je de voetafdrukken die je tot nu toe hebt verzameld"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W kolekcji zobaczysz ślady zebrane do tej pory"
+          }
         }
       }
     },
@@ -10149,6 +10611,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dit kan niet ongedaan worden gemaakt."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie można tego cofnąć."
           }
         }
       }
@@ -10280,6 +10748,12 @@
             "state" : "translated",
             "value" : "Tik om te pauzeren of te hervatten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dotknij, aby wstrzymać lub wznowić"
+          }
         }
       }
     },
@@ -10409,6 +10883,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld plekken bezocht"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odwiedzone miejsca: %lld"
           }
         }
       }
@@ -10540,6 +11020,12 @@
             "state" : "translated",
             "value" : "Er is niets scherps gevonden, dus de achtergrond kon niet worden verwijderd. Ga dichter bij het voorwerp staan en probeer opnieuw."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie znaleziono wyraźnego obiektu, więc nie udało się usunąć tła. Podejdź bliżej do przedmiotu i spróbuj jeszcze raz."
+          }
         }
       }
     },
@@ -10669,6 +11155,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Laatste bezoek"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ostatnia wizyta"
           }
         }
       }
@@ -10800,6 +11292,12 @@
             "state" : "translated",
             "value" : "Inktkaart"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mapa tuszem"
+          }
         }
       }
     },
@@ -10929,6 +11427,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Notitie"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Notatka"
           }
         }
       }
@@ -11060,6 +11564,12 @@
             "state" : "translated",
             "value" : "Alles samen bekijken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokaż wszystko razem"
+          }
         }
       }
     },
@@ -11189,6 +11699,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Water en bergen worden geplaatst"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Układam wody i góry"
           }
         }
       }
@@ -11320,6 +11836,12 @@
             "state" : "translated",
             "value" : "Nog niet ontdekt"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nieodkryte"
+          }
         }
       }
     },
@@ -11449,6 +11971,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voetafdrukken"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ślady"
           }
         }
       }
@@ -11580,6 +12108,12 @@
             "state" : "translated",
             "value" : "Timelapse van voetafdrukken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse śladów"
+          }
         }
       }
     },
@@ -11710,6 +12244,12 @@
             "state" : "translated",
             "value" : "Onthuld gebied %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odsłonięty teren: %@"
+          }
         }
       }
     },
@@ -11839,6 +12379,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Achtergrondkaart laten doorschemeren"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokaż mapę w tle"
           }
         }
       }
@@ -11971,6 +12517,12 @@
             "state" : "translated",
             "value" : "Back-up en export"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Kopia zapasowa i eksport"
+          }
         }
       }
     },
@@ -12100,6 +12652,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Redenen voor weggooien"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powody odrzucenia"
           }
         }
       }
@@ -12231,6 +12789,12 @@
             "state" : "translated",
             "value" : "Versie %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wersja %@"
+          }
         }
       }
     },
@@ -12360,6 +12924,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Weergave"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Widok"
           }
         }
       }
@@ -12492,6 +13062,12 @@
             "state" : "translated",
             "value" : "Prettige kleuren en contrast"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wygodne kolory i kontrast"
+          }
         }
       }
     },
@@ -12621,6 +13197,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Getoonde wegen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokazywane drogi"
           }
         }
       }
@@ -12752,6 +13334,12 @@
             "state" : "translated",
             "value" : "Een leeg vel weet zelf niet wat waar is.\nJe huidige plek wordt het **eerste referentiepunt**."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pusta kartka sama nie wie, co jest gdzie.\nMiejsce, w którym teraz stoisz, stanie się **pierwszym punktem odniesienia**."
+          }
         }
       }
     },
@@ -12881,6 +13469,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "We beginnen met een leeg vel"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zaczynamy od pustej kartki"
           }
         }
       }
@@ -13012,6 +13606,12 @@
             "state" : "translated",
             "value" : "Gebruiksstatistieken (ontwikkelaar)"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Statystyki użycia (deweloper)"
+          }
         }
       }
     },
@@ -13141,6 +13741,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Foto's"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zdjęcia"
           }
         }
       }
@@ -13272,6 +13878,12 @@
             "state" : "translated",
             "value" : "Foto verwijderen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usuń zdjęcie"
+          }
         }
       }
     },
@@ -13401,6 +14013,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Foto maken"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrób zdjęcie"
           }
         }
       }
@@ -13532,6 +14150,12 @@
             "state" : "translated",
             "value" : "Foto toevoegen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj zdjęcie"
+          }
         }
       }
     },
@@ -13661,6 +14285,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Foto wordt toegevoegd"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wstawiam zdjęcie"
           }
         }
       }
@@ -13792,6 +14422,12 @@
             "state" : "translated",
             "value" : "De foto kon niet worden bewaard"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie udało się zapisać zdjęcia"
+          }
         }
       }
     },
@@ -13921,6 +14557,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Verwijderen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usuń"
           }
         }
       }
@@ -14053,6 +14695,12 @@
             "state" : "translated",
             "value" : "Wandelherinnering"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przypomnienie o spacerze"
+          }
         }
       }
     },
@@ -14182,6 +14830,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld nieuw bereikte plekken worden op de route afgestempeld"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nowo osiągnięte miejsca (%lld) zostaną odbite na trasie"
           }
         }
       }
@@ -14313,6 +14967,12 @@
             "state" : "translated",
             "value" : "Nieuw"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nowości"
+          }
         }
       }
     },
@@ -14442,6 +15102,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instellingen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ustawienia"
           }
         }
       }
@@ -14573,6 +15239,12 @@
             "state" : "translated",
             "value" : "Zet de camera aan in Instellingen > 벅뚜벅뚜."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Włącz aparat w Ustawienia > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -14702,6 +15374,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Instellingen openen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz Ustawienia"
           }
         }
       }
@@ -14833,6 +15511,12 @@
             "state" : "translated",
             "value" : "Rechten aanzetten in Instellingen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Włącz uprawnienia w Ustawieniach"
+          }
         }
       }
     },
@@ -14962,6 +15646,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Je kunt dit ook openen via Instellingen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Można to otworzyć także w Ustawieniach"
           }
         }
       }
@@ -15093,6 +15783,12 @@
             "state" : "translated",
             "value" : "Telling resetten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zeruj liczniki"
+          }
         }
       }
     },
@@ -15222,6 +15918,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De wereld is al getekend door andere kaarten.\nHier blijft **alleen over waar je met je eigen voeten bent geweest**."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Świat narysowały już inne mapy.\nTutaj zostaną **tylko miejsca, które przeszedłeś własnymi nogami**."
           }
         }
       }
@@ -15353,6 +16055,12 @@
             "state" : "translated",
             "value" : "Verzamelde spots"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zebrane spoty"
+          }
         }
       }
     },
@@ -15482,6 +16190,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stempel"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pieczątka"
           }
         }
       }
@@ -15613,6 +16327,12 @@
             "state" : "translated",
             "value" : "Begin"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Początek"
+          }
         }
       }
     },
@@ -15742,6 +16462,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Beginnen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zaczynamy"
           }
         }
       }
@@ -15873,6 +16599,12 @@
             "state" : "translated",
             "value" : "Symbool"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
+          }
         }
       }
     },
@@ -16002,6 +16734,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Symbool vergroten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiększ symbol"
           }
         }
       }
@@ -16134,6 +16872,12 @@
             "state" : "translated",
             "value" : "Een onafgemaakt dagboek voortzetten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dokończ rozpoczęty dziennik"
+          }
         }
       }
     },
@@ -16263,6 +17007,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Veeg om als kaarten door te bladeren, tik tweemaal om te vergroten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przesuń, aby przewijać jak karty, dotknij dwukrotnie, aby powiększyć"
           }
         }
       }
@@ -16394,6 +17144,12 @@
             "state" : "translated",
             "value" : "Nee"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie"
+          }
         }
       }
     },
@@ -16520,6 +17276,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -16654,6 +17416,12 @@
             "state" : "translated",
             "value" : "Nog niet"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeszcze nie"
+          }
         }
       }
     },
@@ -16783,6 +17551,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nog niet bezocht"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeszcze nieodwiedzone"
           }
         }
       }
@@ -16914,6 +17688,12 @@
             "state" : "translated",
             "value" : "Je bent hier nog niet geweest. Het blijft staan als ‘Wil ik bezoeken’ en wordt een bezochte plek zodra je aankomt."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeszcze tu nie byłeś. Miejsce zostaje jako „Do odwiedzenia” i staje się odwiedzone, gdy dotrzesz."
+          }
         }
       }
     },
@@ -17043,6 +17823,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Nog geen punten weggegooid"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie odrzucono jeszcze żadnych punktów"
           }
         }
       }
@@ -17174,6 +17960,12 @@
             "state" : "translated",
             "value" : "Nog niet"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeszcze nie"
+          }
         }
       }
     },
@@ -17303,6 +18095,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uitleg"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Przewodnik"
           }
         }
       }
@@ -17435,6 +18233,12 @@
             "state" : "translated",
             "value" : "Je kunt de app ook in het Engels gebruiken."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Z aplikacji można korzystać także po angielsku."
+          }
         }
       }
     },
@@ -17564,6 +18368,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open de app één keer"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Otwórz aplikację raz"
           }
         }
       }
@@ -17695,6 +18505,12 @@
             "state" : "translated",
             "value" : "Welke dag"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Który dzień"
+          }
         }
       }
     },
@@ -17824,6 +18640,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hoe dan ook worden alle ontvangen locaties bewaard. Alleen punten met lage nauwkeurigheid worden niet op de kaart getekend."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tak czy inaczej wszystkie otrzymane lokalizacje są zapisywane. Tylko punkty o niskiej dokładności nie są rysowane na mapie."
           }
         }
       }
@@ -17955,6 +18777,12 @@
             "state" : "translated",
             "value" : "Er wordt alleen anoniem geteld welke schermen worden gebruikt. Waar je loopt en wat je in je dagboek schrijft, wordt niet verstuurd."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anonimowo liczone jest tylko to, które ekrany są używane. Miejsca, w których chodzisz, i treść dziennika nie są wysyłane."
+          }
         }
       }
     },
@@ -18084,6 +18912,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Je was hier %@"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Byłeś tu %@"
           }
         }
       }
@@ -18215,6 +19049,12 @@
             "state" : "translated",
             "value" : "Deze plek bewaren"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zachowaj to miejsce"
+          }
         }
       }
     },
@@ -18344,6 +19184,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hier vastleggen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz tutaj"
           }
         }
       }
@@ -18475,6 +19321,12 @@
             "state" : "translated",
             "value" : "Is het goed om deze plek niet te registreren?"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Czy nie zapisywać tego miejsca?"
+          }
         }
       }
     },
@@ -18604,6 +19456,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Waar was dit?"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Co to było za miejsce?"
           }
         }
       }
@@ -18735,6 +19593,12 @@
             "state" : "translated",
             "value" : "Exporteren als video"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Eksportuj jako wideo"
+          }
         }
       }
     },
@@ -18864,6 +19728,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Video maken %lld%%"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tworzę wideo %lld%%"
           }
         }
       }
@@ -18996,6 +19866,12 @@
             "state" : "translated",
             "value" : "Engelse ondersteuning"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Obsługa angielskiego"
+          }
         }
       }
     },
@@ -19125,6 +20001,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bijv. thuis, werk, stamcafé"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Np. dom, praca, ulubiona kawiarnia"
           }
         }
       }
@@ -19256,6 +20138,12 @@
             "state" : "translated",
             "value" : "Vandaag %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziś %@"
+          }
         }
       }
     },
@@ -19385,6 +20273,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De weg van vandaag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dzisiejsza droga"
           }
         }
       }
@@ -19516,6 +20410,12 @@
             "state" : "translated",
             "value" : "Er is een foto toegevoegd aan het dagboek van vandaag"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodano zdjęcie do dzisiejszego dziennika"
+          }
         }
       }
     },
@@ -19645,6 +20545,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vandaag afspelen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odtwórz dzisiaj"
           }
         }
       }
@@ -19776,6 +20682,12 @@
             "state" : "translated",
             "value" : "Je hebt vandaag nog geen plekken bezocht"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziś nie odwiedziłeś jeszcze żadnych miejsc"
+          }
         }
       }
     },
@@ -19905,6 +20817,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Je hebt vandaag nog nergens stilgestaan"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziś nigdzie jeszcze nie zatrzymałeś się na dłużej"
           }
         }
       }
@@ -20036,6 +20954,12 @@
             "state" : "translated",
             "value" : "Waar heb je vandaag verkend?"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gdzie dziś zwiedzałeś?"
+          }
         }
       }
     },
@@ -20165,6 +21089,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voetafdrukken van vandaag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dzisiejsze ślady"
           }
         }
       }
@@ -20296,6 +21226,12 @@
             "state" : "translated",
             "value" : "Verkenning van vandaag"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dzisiejsze odkrywanie"
+          }
         }
       }
     },
@@ -20425,6 +21361,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Klaar"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gotowe"
           }
         }
       }
@@ -20557,6 +21499,12 @@
             "state" : "translated",
             "value" : "Beweging verminderen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ogranicz ruch"
+          }
         }
       }
     },
@@ -20687,6 +21635,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Met Beweging verminderen aan worden de kaart en schermeffecten rustiger."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Po włączeniu Ograniczenia ruchu mapa i efekty na ekranie stają się spokojniejsze."
           }
         }
       }
@@ -20819,6 +21773,12 @@
             "state" : "translated",
             "value" : "Als je wilt, kun je in de app alle wegen en je dagboek wissen."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeśli chcesz, możesz w aplikacji usunąć wszystkie przebyte drogi i dziennik."
+          }
         }
       }
     },
@@ -20948,6 +21908,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zet locatie op ‘Altijd’ en zet Beweging en fitness aan, dan worden je wandelingen vastgelegd zonder dat je de app opent."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ustaw lokalizację na „Zawsze” i włącz Ruch i kondycja, a spacery będą zapisywane bez otwierania aplikacji."
           }
         }
       }
@@ -21079,6 +22045,12 @@
             "state" : "translated",
             "value" : "In deze periode zijn er geen voetafdrukken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "W tym okresie nie ma śladów"
+          }
         }
       }
     },
@@ -21208,6 +22180,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deze periode bekijken"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokaż ten okres"
           }
         }
       }
@@ -21339,6 +22317,12 @@
             "state" : "translated",
             "value" : "Plekken gefotografeerd op deze dag"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miejsca sfotografowane tego dnia"
+          }
         }
       }
     },
@@ -21468,6 +22452,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Op deze dag zijn geen stappen vastgelegd"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tego dnia nie zapisano żadnych kroków"
           }
         }
       }
@@ -21599,6 +22589,12 @@
             "state" : "translated",
             "value" : "Op deze dag zijn er geen voetafdrukken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tego dnia nie ma śladów"
+          }
         }
       }
     },
@@ -21728,6 +22724,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Deze stempel verwijderen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usuń tę pieczątkę"
           }
         }
       }
@@ -21859,6 +22861,12 @@
             "state" : "translated",
             "value" : "Dit symbool gebruiken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Użyj tego symbolu"
+          }
         }
       }
     },
@@ -21988,6 +22996,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voetafdrukken op deze plek wissen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usuń ślady stóp w tym miejscu"
           }
         }
       }
@@ -22119,6 +23133,12 @@
             "state" : "translated",
             "value" : "Naam van deze plek (bijv. werk, stamcafé)"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nazwa tego miejsca (np. praca, ulubiona kawiarnia)"
+          }
         }
       }
     },
@@ -22248,6 +23268,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zet de eerste stempel op dit vel"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Postaw pierwszą pieczątkę na tej kartce"
           }
         }
       }
@@ -22379,6 +23405,12 @@
             "state" : "translated",
             "value" : "Naam"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nazwa"
+          }
         }
       }
     },
@@ -22508,6 +23540,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Naam geven"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nadaj nazwę"
           }
         }
       }
@@ -22639,6 +23677,12 @@
             "state" : "translated",
             "value" : "Afbeelding toevoegen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dodaj obraz"
+          }
         }
       }
     },
@@ -22769,6 +23813,12 @@
             "state" : "translated",
             "value" : "Ga nu lopen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teraz wyrusz na spacer"
+          }
         }
       }
     },
@@ -22898,6 +23948,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Ga nu lopen.\nDe plekken waar je langskomt worden punt voor punt op dit vel gestempeld."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Teraz wyrusz na spacer.\nMiejsca, które mijasz, odbijają się na tej kartce punkt po punkcie."
           }
         }
       }
@@ -23030,6 +24086,12 @@
             "state" : "translated",
             "value" : "Als de app sluit terwijl je dagboek schrijft, blijft wat je schreef bewaard."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeśli aplikacja zamknie się podczas pisania dziennika, to, co napisałeś, zostanie."
+          }
         }
       }
     },
@@ -23159,6 +24221,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Dagboek"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziennik"
           }
         }
       }
@@ -23290,6 +24358,12 @@
             "state" : "translated",
             "value" : "Wanneer je **aankomt op een plek waar je vaak komt, stempel dan daar nog een keer**.\nMet twee referentiepunten vindt zelfs een leeg vel zijn richting."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Gdy **dotrzesz do miejsca, w którym często bywasz, postaw tam pieczątkę jeszcze raz**.\nZ dwoma punktami odniesienia nawet pusta kartka znajdzie kierunek."
+          }
         }
       }
     },
@@ -23419,6 +24493,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Probeer het zo opnieuw, of houd de kaart ingedrukt om te stempelen waar je wilt."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spróbuj za chwilę ponownie albo przytrzymaj mapę, aby postawić pieczątkę, gdzie chcesz."
           }
         }
       }
@@ -23550,6 +24630,12 @@
             "state" : "translated",
             "value" : "Bewaren"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zapisz"
+          }
         }
       }
     },
@@ -23679,6 +24765,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Terug naar de hele periode"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wróć do całego okresu"
           }
         }
       }
@@ -23810,6 +24902,12 @@
             "state" : "translated",
             "value" : "Punten tellen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Liczenie punktów"
+          }
         }
       }
     },
@@ -23939,6 +25037,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Punten met lage nauwkeurigheid worden ook bewaard. Nu worden ze niet op de kaart getekend, maar ze zijn bruikbaar zodra de correctie beter wordt."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Punkty o niskiej dokładności też są zapisywane. Teraz nie są rysowane na mapie, ale przydadzą się, gdy korekta się poprawi."
           }
         }
       }
@@ -24070,6 +25174,12 @@
             "state" : "translated",
             "value" : "Huidige status"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Aktualny stan"
+          }
         }
       }
     },
@@ -24199,6 +25309,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Je locatie wordt gezocht"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Szukam Twojej lokalizacji"
           }
         }
       }
@@ -24330,6 +25446,12 @@
             "state" : "translated",
             "value" : "Plek vastleggen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zostaw znak tutaj"
+          }
         }
       }
     },
@@ -24459,6 +25581,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Een stempel zetten waar je staat"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Postaw pieczątkę tam, gdzie jesteś"
           }
         }
       }
@@ -24590,6 +25718,12 @@
             "state" : "translated",
             "value" : "Hier stempelen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Postaw tutaj"
+          }
         }
       }
     },
@@ -24719,6 +25853,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "De plekken waar je langskomt worden punt voor punt op dit vel gestempeld.\nWegen die je met de auto of metro aflegt, worden niet getekend."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miejsca, które mijasz, odbijają się na tej kartce punkt po punkcie.\nDrogi pokonane samochodem lub metrem nie są rysowane."
           }
         }
       }
@@ -24850,6 +25990,12 @@
             "state" : "translated",
             "value" : "Kies kaartknoppen in Instellingen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz przyciski mapy w Ustawieniach"
+          }
         }
       }
     },
@@ -24979,6 +26125,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kaartstijl"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Styl mapy"
           }
         }
       }
@@ -25110,6 +26262,12 @@
             "state" : "translated",
             "value" : "Kaartschaal. Eén balk is %@"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skala mapy. Jeden pasek to %@"
+          }
         }
       }
     },
@@ -25239,6 +26397,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kies welke knoppen op de kaart zweven en open uitgezette schermen direct via Instellingen."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz, które przyciski mają unosić się na mapie, a wyłączone ekrany otworzysz wprost z Ustawień."
           }
         }
       }
@@ -25370,6 +26534,12 @@
             "state" : "translated",
             "value" : "Plekken die je vooraf op de kaart hebt gestempeld. Zodra je aankomt, worden het bezochte plekken."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Miejsca oznaczone pieczątką z wyprzedzeniem na mapie. Gdy dotrzesz, staną się odwiedzone."
+          }
         }
       }
     },
@@ -25499,6 +26669,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tonen op de kaart"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pokaż na mapie"
           }
         }
       }
@@ -25630,6 +26806,12 @@
             "state" : "translated",
             "value" : "Op de kaart bekijken"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zobacz na mapie"
+          }
         }
       }
     },
@@ -25759,6 +26941,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Zo ziet het eruit op de kaart"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tak to wygląda na mapie"
           }
         }
       }
@@ -25890,6 +27078,12 @@
             "state" : "translated",
             "value" : "Wissen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wyczyść"
+          }
         }
       }
     },
@@ -26019,6 +27213,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Support"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pomoc"
           }
         }
       }
@@ -26150,6 +27350,12 @@
             "state" : "translated",
             "value" : "Kies iets wat als referentie kan dienen, zoals thuis of werk."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wybierz coś, co może być punktem odniesienia, np. dom lub pracę."
+          }
         }
       }
     },
@@ -26279,6 +27485,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Maken"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zrób"
           }
         }
       }
@@ -26410,6 +27622,12 @@
             "state" : "translated",
             "value" : "Gestempeld op"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Data pieczątki"
+          }
         }
       }
     },
@@ -26539,6 +27757,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Gestempeld"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Postawiono"
           }
         }
       }
@@ -26670,6 +27894,12 @@
             "state" : "translated",
             "value" : "Wegen die je met de auto of metro aflegt, worden niet getekend.\nAlleen lopen zet één punt tegelijk."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drogi pokonane samochodem lub metrem nie są rysowane.\nTylko chodzenie odbija po jednym punkcie."
+          }
         }
       }
     },
@@ -26799,6 +28029,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Alleen wat binnen het kader valt, blijft over; de achtergrond wordt gewist"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Zostaje tylko to, co jest w ramce; tło jest usuwane"
           }
         }
       }
@@ -26930,6 +28166,12 @@
             "state" : "translated",
             "value" : "Eerste"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pierwsza"
+          }
         }
       }
     },
@@ -27059,6 +28301,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Voor het eerst belopen wegen"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Drogi przebyte po raz pierwszy"
           }
         }
       }
@@ -27190,6 +28438,12 @@
             "state" : "translated",
             "value" : "Dit is een plek waar je voor het eerst komt"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "To miejsce, w którym stajesz po raz pierwszy"
+          }
         }
       }
     },
@@ -27319,6 +28573,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Annuleren"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Anuluj"
           }
         }
       }
@@ -27450,6 +28710,12 @@
             "state" : "translated",
             "value" : "Aanzetten"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Włącz"
+          }
         }
       }
     },
@@ -27579,6 +28845,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Vergroten"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Powiększ"
           }
         }
       }
@@ -27711,6 +28983,12 @@
             "state" : "translated",
             "value" : "Schermen voor grote tekst"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekrany dla dużego tekstu"
+          }
         }
       }
     },
@@ -27837,6 +29115,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse"
@@ -27971,6 +29255,12 @@
             "state" : "translated",
             "value" : "Verkennen"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Odkrywaj"
+          }
         }
       }
     },
@@ -28101,6 +29391,12 @@
             "state" : "translated",
             "value" : "Verkenningslogboek"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziennik odkryć"
+          }
         }
       }
     },
@@ -28230,6 +29526,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Verkenningsdagboek"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dziennik odkryć"
           }
         }
       }
@@ -28362,6 +29664,12 @@
             "state" : "translated",
             "value" : "Scherm van opvouwbare iPhone"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ekran składanego iPhone’a"
+          }
         }
       }
     },
@@ -28493,6 +29801,12 @@
             "state" : "translated",
             "value" : "Op een opvouwbare iPhone zie je kaart en registraties in twee vensters."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Na składanym iPhonie zobaczysz mapę i zapisy w dwóch panelach."
+          }
         }
       }
     },
@@ -28622,6 +29936,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Timelapse van de dag"
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Timelapse dnia"
           }
         }
       }
@@ -28754,6 +30074,12 @@
             "state" : "translated",
             "value" : "Aan het eind van de dag laat een melding je weten welke weg je vandaag liep."
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pod koniec dnia powiadomienie przypomni drogę, którą dziś przeszedłeś."
+          }
         }
       }
     },
@@ -28883,6 +30209,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Als je langer dan %lld minuten op één plek blijft,\nverschijnt die plek in de voetafdrukken van vandaag."
+          }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Jeśli zostaniesz w jednym miejscu dłużej niż %lld min,\npojawi się ono w dzisiejszych śladach."
           }
         }
       }
@@ -29014,6 +30346,12 @@
             "state" : "translated",
             "value" : "Je locatie is nog niet gevonden"
           }
+        },
+        "pl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nie znaleziono jeszcze Twojej lokalizacji"
+          }
         }
       }
     },
@@ -29140,6 +30478,12 @@
           }
         },
         "nl" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "pl" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"

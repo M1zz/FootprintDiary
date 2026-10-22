@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pomoc · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --accent2: #00c2a8; --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 24px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; }
+    .contact {
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color: #fff; border-radius: 16px; padding: 24px; margin-bottom: 8px;
+    }
+    .contact h2 { margin-top: 0; color: #fff; }
+    .contact a { color: #fff; font-weight: 600; }
+    .faq {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 12px; margin: 12px 0; padding: 4px 18px;
+    }
+    .faq summary {
+      cursor: pointer; font-weight: 600; padding: 14px 0; list-style: none;
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "＋"; color: var(--muted); font-weight: 400; }
+    .faq[open] summary::after { content: "－"; }
+    .faq p { margin: 0 0 16px; color: var(--muted); }
+    a { color: var(--accent); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/pl/support.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/support.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/support.html">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/support.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/support.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/FootprintDiary/zh-Hant/support.html">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/FootprintDiary/ru/support.html">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/FootprintDiary/es/support.html">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/FootprintDiary/de/support.html">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/FootprintDiary/fr/support.html">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/FootprintDiary/it/support.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/FootprintDiary/pt-BR/support.html">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/FootprintDiary/th/support.html">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/FootprintDiary/vi/support.html">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/FootprintDiary/cs/support.html">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/FootprintDiary/da/support.html">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/FootprintDiary/el/support.html">
+  <link rel="alternate" hreflang="fi" href="https://m1zz.github.io/FootprintDiary/fi/support.html">
+  <link rel="alternate" hreflang="id" href="https://m1zz.github.io/FootprintDiary/id/support.html">
+  <link rel="alternate" hreflang="nb" href="https://m1zz.github.io/FootprintDiary/nb/support.html">
+  <link rel="alternate" hreflang="nl" href="https://m1zz.github.io/FootprintDiary/nl/support.html">
+  <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/support.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/support.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../support.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/support.html" hreflang="en" lang="en">English</a> · <a href="../ja/support.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/support.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/support.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/support.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/support.html" hreflang="es" lang="es">Español</a> · <a href="../de/support.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/support.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/support.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/support.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/support.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/support.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/support.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/support.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/support.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/support.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/support.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/support.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/support.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="support.html" hreflang="pl" lang="pl" aria-current="true">Polski</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← Strona główna 벅뚜벅뚜</a>
+    <h1>Pomoc / Kontakt</h1>
+
+    <div class="contact">
+      <h2>💬 Skontaktuj się z nami</h2>
+      <p>Zgłoszenia błędów, propozycje funkcji i inne pytania wysyłaj e-mailem. Odpowiemy tak szybko, jak to możliwe.</p>
+      <p>E-mail: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+      <p>GitHub Issues: <a href="https://github.com/M1zz/FootprintDiary/issues">github.com/M1zz/FootprintDiary/issues</a></p>
+    </div>
+
+    <h2>Najczęstsze pytania (FAQ)</h2>
+
+    <details class="faq">
+      <summary>Moje ślady nie zapisują się automatycznie.</summary>
+      <p>
+        Automatyczny zapis działa tylko wtedy, gdy uprawnienie lokalizacji w iOS jest ustawione na <strong>„Zawsze”</strong>.
+        Wejdź w Ustawienia → 벅뚜벅뚜 → Lokalizacja i wybierz „Zawsze”. Poza tym wykrywanie wizyt
+        zapisuje miejsce dopiero wtedy, gdy zostaniesz w nim jakiś czas, a potem odejdziesz, więc wpis może nie pojawić się od razu.
+        Aby zapisać od razu, użyj przycisku ➕ w prawym górnym rogu ekranu mapy.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Czy moje dane o lokalizacji są dokądś wysyłane?</summary>
+      <p>
+        Nie są wysyłane do dewelopera. Ślady, dziennik i zdjęcia są przechowywane tylko na Twoim urządzeniu i w
+        <strong>Twoim osobistym iCloud</strong> (aby zapisy podążały za Tobą po zmianie urządzenia). Deweloper
+        nie widzi żadnej z tych rzeczy. Aplikacja wysyła deweloperowi tylko anonimowe liczniki, na przykład jak daleko przeszedłeś lub ile wpisów w dzienniku napisałeś,
+        i <strong>ani jednej współrzędnej</strong>.
+        Ponadto do zamiany współrzędnych na nazwy miejsc używane są usługi map i geokodowania Apple.
+        Szczegóły znajdziesz w <a href="privacy.html">Polityce prywatności</a>.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Czy przejazdy pojazdem też są zapisywane?</summary>
+      <p>
+        Aplikacja korzysta z danych o ruchu, aby zapisywać głównie chodzenie i bieganie,
+        i stara się wykluczać ze śladów odcinki, które wyglądają na przejazd pojazdem.
+        W zależności od sytuacji mogą zdarzać się drobne niedokładności.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Czy dane przeniosą się, jeśli zmienię urządzenie?</summary>
+      <p>
+        Zapisy są przechowywane na urządzeniu i w Twoim własnym iCloud. Zaloguj się na nowym urządzeniu tym samym Apple ID
+        i pozostaw włączony iCloud, a ślady, dziennik i zdjęcia będą kontynuowane.
+      </p>
+    </details>
+
+    <details class="faq">
+      <summary>Chcę usunąć ślady lub wpisy w dzienniku.</summary>
+      <p>
+        Ślady możesz usuwać pojedynczo, dotykając znacznika śladu lub listy na ekranie mapy, a
+        wpisy w dzienniku na ekranie dziennika. Usunięcie aplikacji usuwa także wszystkie dane.
+      </p>
+    </details>
+
+    <h2>Wymagania</h2>
+    <p>iOS 17.0 lub nowszy · iPhone</p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) ·
+      <a href="privacy.html">Polityka prywatności</a> ·
+      <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>
