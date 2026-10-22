@@ -14,6 +14,12 @@
             "state" : "translated",
             "value" : "%@ · Footprints %lld/%lld"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ · Footprints %lld/%lld"
+          }
         }
       }
     },
@@ -26,6 +32,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walked %@ in %@"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Walked %@ in %@"
@@ -46,6 +58,12 @@
             "state" : "translated",
             "value" : "Walked %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walked %@"
+          }
         }
       }
     },
@@ -58,6 +76,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ collected"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ collected"
@@ -78,6 +102,12 @@
             "state" : "translated",
             "value" : "%@ symbol"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ symbol"
+          }
         }
       }
     },
@@ -90,6 +120,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@, %lld kinds"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@, %lld kinds"
@@ -110,6 +146,12 @@
             "state" : "translated",
             "value" : "%@×"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@×"
+          }
         }
       }
     },
@@ -122,6 +164,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@ is the least explored"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%@ is the least explored"
@@ -142,6 +190,12 @@
             "state" : "translated",
             "value" : "%lldm away"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldm away"
+          }
         }
       }
     },
@@ -154,6 +208,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The shutter opens within %lldm"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "The shutter opens within %lldm"
@@ -174,6 +234,12 @@
             "state" : "translated",
             "value" : "%lld kinds"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld kinds"
+          }
         }
       }
     },
@@ -186,6 +252,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld places"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld places"
@@ -206,6 +278,12 @@
             "state" : "translated",
             "value" : "%lld times"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld times"
+          }
         }
       }
     },
@@ -218,6 +296,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Went out %lld times"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Went out %lld times"
@@ -238,6 +322,12 @@
             "state" : "translated",
             "value" : "Discovery #%lld"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Discovery #%lld"
+          }
         }
       }
     },
@@ -250,6 +340,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Find with AR"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Find with AR"
@@ -271,6 +367,12 @@
             "state" : "translated",
             "value" : "Face ID 잠금"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Face ID Lock"
+          }
         }
       }
     },
@@ -287,6 +389,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Face ID나 Touch ID로 앱을 잠가 내가 걸은 곳과 일기를 지켜요."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lock the app with Face ID or Touch ID to keep where you've been and your diary private."
           }
         }
       }
@@ -305,6 +413,12 @@
             "state" : "translated",
             "value" : "Siri에게 물어 오늘 걸은 거리를 바로 확인해요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ask Siri how far you've walked today."
+          }
         }
       }
     },
@@ -321,6 +435,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Siri와 단축어"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Siri and Shortcuts"
           }
         }
       }
@@ -339,6 +459,12 @@
             "state" : "translated",
             "value" : "VoiceOver가 지도와 기록의 단추와 내용을 빠짐없이, 알맞은 순서로 읽어 줘요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "VoiceOver reads every button and detail on your map and records, in the right order."
+          }
         }
       }
     },
@@ -356,6 +482,12 @@
             "state" : "translated",
             "value" : "VoiceOver로 더 편하게"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Better VoiceOver Support"
+          }
         }
       }
     },
@@ -368,6 +500,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No stamps match \"%@\""
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No stamps match \"%@\""
@@ -388,6 +526,12 @@
             "state" : "translated",
             "value" : "You were planning to visit this place. Mark it as visited?"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You were planning to visit this place. Mark it as visited?"
+          }
         }
       }
     },
@@ -400,6 +544,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not yet visited"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not yet visited"
@@ -420,6 +570,12 @@
             "state" : "translated",
             "value" : "Want to Visit"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Want to Visit"
+          }
         }
       }
     },
@@ -432,6 +588,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A spot you stamped as a place to visit"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "A spot you stamped as a place to visit"
@@ -452,6 +614,12 @@
             "state" : "translated",
             "value" : "Most common blocker: %@ (%lld times). %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Most common blocker: %@ (%lld times). %@"
+          }
         }
       }
     },
@@ -464,6 +632,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Category"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Category"
@@ -484,6 +658,12 @@
             "state" : "translated",
             "value" : "Pioneer Compass"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pioneer Compass"
+          }
         }
       }
     },
@@ -496,6 +676,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Skip"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Skip"
@@ -516,6 +702,12 @@
             "state" : "translated",
             "value" : "Walk Tracking"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walk Tracking"
+          }
         }
       }
     },
@@ -528,6 +720,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walk tracking is off. Your path won't be saved as you walk."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Walk tracking is off. Your path won't be saved as you walk."
@@ -548,6 +746,12 @@
             "state" : "translated",
             "value" : "Stamps you place while walking pile up here in time order.\nPlaces you stay at are saved on their own, no stamp needed."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamps you place while walking pile up here in time order.\nPlaces you stay at are saved on their own, no stamp needed."
+          }
         }
       }
     },
@@ -560,6 +764,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Places Reached on Foot"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Places Reached on Foot"
@@ -580,6 +790,12 @@
             "state" : "translated",
             "value" : "Walk there and you can take a photo on the spot"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walk there and you can take a photo on the spot"
+          }
         }
       }
     },
@@ -596,6 +812,12 @@
             "state" : "translated",
             "value" : "If you walked but no line was drawn on the map, you can find out why here."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you walked but no line was drawn on the map, you can find out why here."
+          }
         }
       }
     },
@@ -608,6 +830,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "As you walk, the paths you've passed stack up in order."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "As you walk, the paths you've passed stack up in order."
@@ -629,6 +857,12 @@
             "state" : "translated",
             "value" : "걸은 길과 일기를 파일로 저장하고 다시 불러올 수 있어요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save your walks and diary to a file and bring them back later."
+          }
         }
       }
     },
@@ -641,6 +875,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Only paths walked and stamps placed during the chosen period stay on the map."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Only paths walked and stamps placed during the chosen period stay on the map."
@@ -661,6 +901,12 @@
             "state" : "translated",
             "value" : "Not interested"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not interested"
+          }
         }
       }
     },
@@ -673,6 +919,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "It's okay"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "It's okay"
@@ -693,6 +945,12 @@
             "state" : "translated",
             "value" : "Watch It Being Drawn"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watch It Being Drawn"
+          }
         }
       }
     },
@@ -705,6 +963,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Illustrated Map"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Illustrated Map"
@@ -726,6 +990,12 @@
             "state" : "translated",
             "value" : "글자 크기를 키워도 잘리지 않고 보기 좋게 다시 배치돼요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Screens rearrange neatly instead of getting cut off when you enlarge text."
+          }
         }
       }
     },
@@ -738,6 +1008,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View by Period"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "View by Period"
@@ -758,6 +1034,12 @@
             "state" : "translated",
             "value" : "Tracking Mode"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tracking Mode"
+          }
         }
       }
     },
@@ -770,6 +1052,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tracking Status"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tracking Status"
@@ -790,6 +1078,12 @@
             "state" : "translated",
             "value" : "View Tracking Status"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View Tracking Status"
+          }
         }
       }
     },
@@ -802,6 +1096,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Restore Default Image"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Restore Default Image"
@@ -822,6 +1122,12 @@
             "state" : "translated",
             "value" : "Screens you've turned off can still be opened from \"Browse\" above at any time. Stamp and settings buttons always show."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Screens you've turned off can still be opened from \"Browse\" above at any time. Stamp and settings buttons always show."
+          }
         }
       }
     },
@@ -834,6 +1140,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "End"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "End"
@@ -854,6 +1166,12 @@
             "state" : "translated",
             "value" : "Later"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Later"
+          }
         }
       }
     },
@@ -866,6 +1184,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stored only in your personal iCloud. No one else can see it."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stored only in your personal iCloud. No one else can see it."
@@ -887,6 +1211,12 @@
             "state" : "translated",
             "value" : "내 기록 한 번에 지우기"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Wipe All My Data in One Go"
+          }
         }
       }
     },
@@ -903,6 +1233,12 @@
             "state" : "translated",
             "value" : "My Neighborhood Outline"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Neighbourhood Outline"
+          }
         }
       }
     },
@@ -915,6 +1251,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "My Map"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "My Map"
@@ -935,6 +1277,12 @@
             "state" : "translated",
             "value" : "Open My Map"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open My Map"
+          }
         }
       }
     },
@@ -947,6 +1295,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Watch Your Map Take Shape"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Watch Your Map Take Shape"
@@ -967,6 +1321,12 @@
             "state" : "translated",
             "value" : "Preview of your map being drawn"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Preview of your map being drawn"
+          }
         }
       }
     },
@@ -979,6 +1339,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Paths You've Drawn"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Paths You've Drawn"
@@ -999,6 +1365,12 @@
             "state" : "translated",
             "value" : "Places I've Stamped"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Places I've Stamped"
+          }
         }
       }
     },
@@ -1011,6 +1383,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to see the map beneath"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Tap to see the map beneath"
@@ -1031,6 +1409,12 @@
             "state" : "translated",
             "value" : "Tap to stamp your current spot"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to stamp your current spot"
+          }
         }
       }
     },
@@ -1043,6 +1427,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Asking whether you really visited %lld places"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Asking whether you really visited %lld places"
@@ -1063,6 +1453,12 @@
             "state" : "translated",
             "value" : "Visits"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Visits"
+          }
         }
       }
     },
@@ -1075,6 +1471,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "I went there"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "I went there"
@@ -1095,6 +1497,12 @@
             "state" : "translated",
             "value" : "Tap again to return to paper. Handy for checking where you are."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap again to return to paper. Handy for checking where you are."
+          }
         }
       }
     },
@@ -1107,6 +1515,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Retake"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Retake"
@@ -1127,6 +1541,12 @@
             "state" : "translated",
             "value" : "A Spot You've Revisited"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A Spot You've Revisited"
+          }
         }
       }
     },
@@ -1143,6 +1563,12 @@
             "state" : "translated",
             "value" : "This is one of your regular spots"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is one of your regular spots"
+          }
         }
       }
     },
@@ -1155,6 +1581,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Close"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Close"
@@ -1176,6 +1608,12 @@
             "state" : "translated",
             "value" : "대비를 높이거나 색을 구별하기 어려워도 지도의 길과 스탬프를 알아볼 수 있어요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Even with higher contrast, or if colours are hard to tell apart, you can still make out the paths and stamps on your map."
+          }
         }
       }
     },
@@ -1192,6 +1630,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "더 많은 나라 말로 앱을 쓸 수 있게 해요."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use the app in more languages."
           }
         }
       }
@@ -1210,6 +1654,12 @@
             "state" : "translated",
             "value" : "더 많은 언어"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "More Languages"
+          }
         }
       }
     },
@@ -1222,6 +1672,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add a note (optional)"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add a note (optional)"
@@ -1242,6 +1698,12 @@
             "state" : "translated",
             "value" : "See the footprints you've collected so far in your collection"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "See the footprints you've collected so far in your collection"
+          }
         }
       }
     },
@@ -1254,6 +1716,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This can't be undone."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "This can't be undone."
@@ -1274,6 +1742,12 @@
             "state" : "translated",
             "value" : "Tap to pause or resume playback"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tap to pause or resume playback"
+          }
         }
       }
     },
@@ -1286,6 +1760,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld places visited"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld places visited"
@@ -1306,6 +1786,12 @@
             "state" : "translated",
             "value" : "Couldn't find anything distinct to cut out. Get closer to the object and try again."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't find anything distinct to cut out. Get closer to the object and try again."
+          }
         }
       }
     },
@@ -1318,6 +1804,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Last Visit"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Last Visit"
@@ -1338,6 +1830,12 @@
             "state" : "translated",
             "value" : "Ink Map"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Ink Map"
+          }
         }
       }
     },
@@ -1350,6 +1848,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Note"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Note"
@@ -1370,6 +1874,12 @@
             "state" : "translated",
             "value" : "Browse"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Browse"
+          }
         }
       }
     },
@@ -1382,6 +1892,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Placing water and mountains"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Placing water and mountains"
@@ -1402,6 +1918,12 @@
             "state" : "translated",
             "value" : "Undiscovered"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Undiscovered"
+          }
         }
       }
     },
@@ -1414,6 +1936,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Footprints"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Footprints"
@@ -1434,6 +1962,12 @@
             "state" : "translated",
             "value" : "Footprint Time-lapse"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Footprint Time-lapse"
+          }
         }
       }
     },
@@ -1450,6 +1984,12 @@
             "state" : "translated",
             "value" : "Cleared area %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cleared area %@"
+          }
         }
       }
     },
@@ -1462,6 +2002,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show Background Map"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Show Background Map"
@@ -1483,6 +2029,12 @@
             "state" : "translated",
             "value" : "백업과 내보내기"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Backup and Export"
+          }
         }
       }
     },
@@ -1495,6 +2047,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Why Points Were Discarded"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Why Points Were Discarded"
@@ -1515,6 +2073,12 @@
             "state" : "translated",
             "value" : "Version %@"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Version %@"
+          }
         }
       }
     },
@@ -1527,6 +2091,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "View"
@@ -1548,6 +2118,12 @@
             "state" : "translated",
             "value" : "보기 편한 색과 대비"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Comfortable Colours and Contrast"
+          }
         }
       }
     },
@@ -1560,6 +2136,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View Paths"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "View Paths"
@@ -1580,6 +2162,12 @@
             "state" : "translated",
             "value" : "A blank sheet can't tell where is where on its own.\nYour current spot becomes the **first reference point**."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A blank sheet can't tell where is where on its own.\nYour current spot becomes the **first reference point**."
+          }
         }
       }
     },
@@ -1592,6 +2180,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Starting from a Blank Sheet"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Starting from a Blank Sheet"
@@ -1612,6 +2206,12 @@
             "state" : "translated",
             "value" : "Usage Stats (Developer)"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Usage Stats (Developer)"
+          }
         }
       }
     },
@@ -1624,6 +2224,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Photos"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Photos"
@@ -1644,6 +2250,12 @@
             "state" : "translated",
             "value" : "Delete Photo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Photo"
+          }
         }
       }
     },
@@ -1656,6 +2268,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Take Photo"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Take Photo"
@@ -1676,6 +2294,12 @@
             "state" : "translated",
             "value" : "Add Photo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Photo"
+          }
         }
       }
     },
@@ -1688,6 +2312,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Adding photo"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Adding photo"
@@ -1708,6 +2338,12 @@
             "state" : "translated",
             "value" : "Couldn't save the photo"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't save the photo"
+          }
         }
       }
     },
@@ -1720,6 +2356,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete"
@@ -1741,6 +2383,12 @@
             "state" : "translated",
             "value" : "산책 알림"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Walk Reminders"
+          }
         }
       }
     },
@@ -1753,6 +2401,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld newly reached spots are stamped along the route"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "%lld newly reached spots are stamped along the route"
@@ -1773,6 +2427,12 @@
             "state" : "translated",
             "value" : "What's New"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "What's New"
+          }
         }
       }
     },
@@ -1785,6 +2445,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Settings"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Settings"
@@ -1805,6 +2471,12 @@
             "state" : "translated",
             "value" : "Please turn on the camera in Settings > 벅뚜벅뚜."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please turn on the camera in Settings > 벅뚜벅뚜."
+          }
         }
       }
     },
@@ -1817,6 +2489,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open Settings"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Open Settings"
@@ -1837,6 +2515,12 @@
             "state" : "translated",
             "value" : "Turn On Permissions in Settings"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn On Permissions in Settings"
+          }
         }
       }
     },
@@ -1849,6 +2533,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You can also open this in Settings"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "You can also open this in Settings"
@@ -1869,6 +2559,12 @@
             "state" : "translated",
             "value" : "Reset Counts"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset Counts"
+          }
         }
       }
     },
@@ -1881,6 +2577,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Other maps have already drawn the whole world.\nHere, only **the places you've walked** remain."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Other maps have already drawn the whole world.\nHere, only **the places you've walked** remain."
@@ -1901,6 +2603,12 @@
             "state" : "translated",
             "value" : "Collected Spots"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Collected Spots"
+          }
         }
       }
     },
@@ -1913,6 +2621,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamp"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stamp"
@@ -1933,6 +2647,12 @@
             "state" : "translated",
             "value" : "Start"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Start"
+          }
         }
       }
     },
@@ -1945,6 +2665,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Get Started"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Get Started"
@@ -1965,6 +2691,12 @@
             "state" : "translated",
             "value" : "Symbol"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Symbol"
+          }
         }
       }
     },
@@ -1977,6 +2709,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View Symbol Larger"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "View Symbol Larger"
@@ -1998,6 +2736,12 @@
             "state" : "translated",
             "value" : "쓰던 일기 이어 쓰기"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Resume Unfinished Diary Entries"
+          }
         }
       }
     },
@@ -2010,6 +2754,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Swipe to flip through like cards, double-tap to view larger"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Swipe to flip through like cards, double-tap to view larger"
@@ -2030,6 +2780,12 @@
             "state" : "translated",
             "value" : "No, I didn't"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No, I didn't"
+          }
         }
       }
     },
@@ -2042,6 +2798,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "iCloud"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "iCloud"
@@ -2062,6 +2824,12 @@
             "state" : "translated",
             "value" : "Not yet"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not yet"
+          }
         }
       }
     },
@@ -2074,6 +2842,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not yet visited"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Not yet visited"
@@ -2094,6 +2868,12 @@
             "state" : "translated",
             "value" : "You haven't been here yet. It stays as a \"Want to Visit\" spot and becomes a visited place once you arrive."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You haven't been here yet. It stays as a \"Want to Visit\" spot and becomes a visited place once you arrive."
+          }
         }
       }
     },
@@ -2106,6 +2886,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No discarded points yet"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No discarded points yet"
@@ -2126,6 +2912,12 @@
             "state" : "translated",
             "value" : "Not yet"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not yet"
+          }
         }
       }
     },
@@ -2138,6 +2930,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Guide"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Guide"
@@ -2159,6 +2957,12 @@
             "state" : "translated",
             "value" : "앱을 영어로도 쓸 수 있어요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use the app in English too."
+          }
         }
       }
     },
@@ -2171,6 +2975,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please open the app once"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Please open the app once"
@@ -2191,6 +3001,12 @@
             "state" : "translated",
             "value" : "Which Day"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Which Day"
+          }
         }
       }
     },
@@ -2203,6 +3019,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Either way, every location received is saved. Low-accuracy points just aren't drawn on the map."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Either way, every location received is saved. Low-accuracy points just aren't drawn on the map."
@@ -2223,6 +3045,12 @@
             "state" : "translated",
             "value" : "We only count which screens are used, anonymously. Where you walked and your diary entries are never sent."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "We only count which screens are used, anonymously. Where you walked and your diary entries are never sent."
+          }
         }
       }
     },
@@ -2235,6 +3063,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "You stayed here for %@"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "You stayed here for %@"
@@ -2255,6 +3089,12 @@
             "state" : "translated",
             "value" : "Keep This Place"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Keep This Place"
+          }
         }
       }
     },
@@ -2267,6 +3107,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mark Here"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Mark Here"
@@ -2287,6 +3133,12 @@
             "state" : "translated",
             "value" : "Is it okay not to record this place?"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Is it okay not to record this place?"
+          }
         }
       }
     },
@@ -2299,6 +3151,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Where was this?"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Where was this?"
@@ -2319,6 +3177,12 @@
             "state" : "translated",
             "value" : "Export as Video"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Export as Video"
+          }
         }
       }
     },
@@ -2331,6 +3195,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Creating video %lld%%"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Creating video %lld%%"
@@ -2352,6 +3222,12 @@
             "state" : "translated",
             "value" : "영어 지원"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "English Support"
+          }
         }
       }
     },
@@ -2368,6 +3244,12 @@
             "state" : "translated",
             "value" : "e.g. Home, Work, Favorite café"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "e.g. Home, Work, Favourite café"
+          }
         }
       }
     },
@@ -2380,6 +3262,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today %@"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Today %@"
@@ -2400,6 +3288,12 @@
             "state" : "translated",
             "value" : "Today's Path"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Path"
+          }
         }
       }
     },
@@ -2412,6 +3306,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "A photo was added to today's diary"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "A photo was added to today's diary"
@@ -2432,6 +3332,12 @@
             "state" : "translated",
             "value" : "Play Today"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Play Today"
+          }
         }
       }
     },
@@ -2444,6 +3350,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No places visited yet today"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No places visited yet today"
@@ -2464,6 +3376,12 @@
             "state" : "translated",
             "value" : "No stops yet today"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No stops yet today"
+          }
         }
       }
     },
@@ -2476,6 +3394,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Where did you explore today?"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Where did you explore today?"
@@ -2496,6 +3420,12 @@
             "state" : "translated",
             "value" : "Today's Footprints"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Footprints"
+          }
         }
       }
     },
@@ -2512,6 +3442,12 @@
             "state" : "translated",
             "value" : "Today's Exploration"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Today's Exploration"
+          }
         }
       }
     },
@@ -2524,6 +3460,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Done"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Done"
@@ -2545,6 +3487,12 @@
             "state" : "translated",
             "value" : "움직임 줄이기"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reduce Motion"
+          }
         }
       }
     },
@@ -2561,6 +3509,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "움직임 줄이기를 켜면 지도와 화면 효과가 차분해져요."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn on Reduce Motion to calm the map and on-screen effects."
           }
         }
       }
@@ -2579,6 +3533,12 @@
             "state" : "translated",
             "value" : "원하면 앱 안에서 걸은 길과 일기를 모두 지울 수 있어요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If you like, erase all your walks and diary from inside the app."
+          }
         }
       }
     },
@@ -2591,6 +3551,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Set location to \"Always\" and turn on Motion & Fitness, and your walks are recorded even without opening the app."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Set location to \"Always\" and turn on Motion & Fitness, and your walks are recorded even without opening the app."
@@ -2611,6 +3577,12 @@
             "state" : "translated",
             "value" : "No footprints in this period"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No footprints in this period"
+          }
         }
       }
     },
@@ -2623,6 +3595,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View This Period"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "View This Period"
@@ -2643,6 +3621,12 @@
             "state" : "translated",
             "value" : "Spots Photographed This Day"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spots Photographed This Day"
+          }
         }
       }
     },
@@ -2655,6 +3639,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No steps were recorded on this day"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "No steps were recorded on this day"
@@ -2675,6 +3665,12 @@
             "state" : "translated",
             "value" : "No footprints on this day"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "No footprints on this day"
+          }
         }
       }
     },
@@ -2687,6 +3683,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete This Stamp"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Delete This Stamp"
@@ -2707,6 +3709,12 @@
             "state" : "translated",
             "value" : "Use This Symbol"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Use This Symbol"
+          }
         }
       }
     },
@@ -2719,6 +3727,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear Footprints Here"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clear Footprints Here"
@@ -2739,6 +3753,12 @@
             "state" : "translated",
             "value" : "Name for this spot (e.g. Work, Favorite café)"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name for this spot (e.g. Work, Favourite café)"
+          }
         }
       }
     },
@@ -2751,6 +3771,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Place Your First Stamp on This Sheet"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Place Your First Stamp on This Sheet"
@@ -2771,6 +3797,12 @@
             "state" : "translated",
             "value" : "Name"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Name"
+          }
         }
       }
     },
@@ -2783,6 +3815,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Name"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Add Name"
@@ -2803,6 +3841,12 @@
             "state" : "translated",
             "value" : "Add Image"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Add Image"
+          }
         }
       }
     },
@@ -2819,6 +3863,12 @@
             "state" : "translated",
             "value" : "Now Go for a Walk"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now Go for a Walk"
+          }
         }
       }
     },
@@ -2831,6 +3881,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Now go for a walk.\nThe places you pass are marked on this sheet, one dot at a time."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Now go for a walk.\nThe places you pass are marked on this sheet, one dot at a time."
@@ -2852,6 +3908,12 @@
             "state" : "translated",
             "value" : "일기를 쓰다가 앱이 꺼져도 쓰던 내용이 남아 있어요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "If the app closes while you're writing a diary entry, what you wrote is still there."
+          }
         }
       }
     },
@@ -2864,6 +3926,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Journal"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Journal"
@@ -2884,6 +3952,12 @@
             "state" : "translated",
             "value" : "When you **arrive somewhere you visit often, stamp it once more.**\nWith two reference points, even a blank sheet knows its direction."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When you **arrive somewhere you visit often, stamp it once more.**\nWith two reference points, even a blank sheet knows its direction."
+          }
         }
       }
     },
@@ -2896,6 +3970,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Try again in a moment, or long-press the map to stamp wherever you like."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Try again in a moment, or long-press the map to stamp wherever you like."
@@ -2916,6 +3996,12 @@
             "state" : "translated",
             "value" : "Save"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Save"
+          }
         }
       }
     },
@@ -2928,6 +4014,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Back to All Time"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Back to All Time"
@@ -2948,6 +4040,12 @@
             "state" : "translated",
             "value" : "Point Count"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Point Count"
+          }
         }
       }
     },
@@ -2960,6 +4058,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Points with low accuracy are still saved. They aren't drawn on the map for now, but can be used once the correction improves."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Points with low accuracy are still saved. They aren't drawn on the map for now, but can be used once the correction improves."
@@ -2980,6 +4084,12 @@
             "state" : "translated",
             "value" : "Current Status"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Current Status"
+          }
         }
       }
     },
@@ -2992,6 +4102,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Finding your location"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Finding your location"
@@ -3012,6 +4128,12 @@
             "state" : "translated",
             "value" : "Mark This Spot"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Mark This Spot"
+          }
         }
       }
     },
@@ -3028,6 +4150,12 @@
             "state" : "translated",
             "value" : "Stamp Your Current Spot"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamp Where You Are"
+          }
         }
       }
     },
@@ -3040,6 +4168,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamp Here"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stamp Here"
@@ -3060,6 +4194,12 @@
             "state" : "translated",
             "value" : "The places you pass are marked on this sheet, one dot at a time.\nRoads you pass by car or subway aren't drawn."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The places you pass are marked on this sheet, one dot at a time.\nRoads you pass by car or train aren't drawn."
+          }
         }
       }
     },
@@ -3072,6 +4212,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Choose map buttons in Settings"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Choose map buttons in Settings"
@@ -3092,6 +4238,12 @@
             "state" : "translated",
             "value" : "Map Style"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map Style"
+          }
         }
       }
     },
@@ -3104,6 +4256,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Map scale. One bar equals %@"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Map scale. One bar equals %@"
@@ -3124,6 +4282,12 @@
             "state" : "translated",
             "value" : "Pick which buttons float on the map, and open screens you've turned off right from Settings."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick which buttons float on the map, and open screens you've turned off right from Settings."
+          }
         }
       }
     },
@@ -3136,6 +4300,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Spots you stamped ahead of time. They become visited places once you arrive."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Spots you stamped ahead of time. They become visited places once you arrive."
@@ -3156,6 +4326,12 @@
             "state" : "translated",
             "value" : "Show on Map"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Show on Map"
+          }
         }
       }
     },
@@ -3168,6 +4344,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View on Map"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "View on Map"
@@ -3188,6 +4370,12 @@
             "state" : "translated",
             "value" : "This is how it looks on the map"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is how it looks on the map"
+          }
         }
       }
     },
@@ -3200,6 +4388,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Clear"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Clear"
@@ -3220,6 +4414,12 @@
             "state" : "translated",
             "value" : "Support"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Support"
+          }
         }
       }
     },
@@ -3232,6 +4432,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Pick something that can serve as a reference, like home or work."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Pick something that can serve as a reference, like home or work."
@@ -3252,6 +4458,12 @@
             "state" : "translated",
             "value" : "Capture"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Capture"
+          }
         }
       }
     },
@@ -3264,6 +4476,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamped On"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Stamped On"
@@ -3284,6 +4502,12 @@
             "state" : "translated",
             "value" : "Stamped!"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Stamped!"
+          }
         }
       }
     },
@@ -3300,6 +4524,12 @@
             "state" : "translated",
             "value" : "Roads you pass by car or subway aren't drawn.\nOnly walking puts down a dot at a time."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Roads you pass by car or train aren't drawn.\nOnly walking puts down a dot at a time."
+          }
         }
       }
     },
@@ -3312,6 +4542,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Only what's inside the frame stays; the background is erased"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Only what's inside the frame stays; the background is erased"
@@ -3332,6 +4568,12 @@
             "state" : "translated",
             "value" : "First"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First"
+          }
         }
       }
     },
@@ -3344,6 +4586,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "First-Time Paths"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "First-Time Paths"
@@ -3364,6 +4612,12 @@
             "state" : "translated",
             "value" : "This is a spot you're visiting for the first time"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This is a spot you're visiting for the first time"
+          }
         }
       }
     },
@@ -3376,6 +4630,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cancel"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Cancel"
@@ -3396,6 +4656,12 @@
             "state" : "translated",
             "value" : "Turn On"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Turn On"
+          }
         }
       }
     },
@@ -3408,6 +4674,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View Larger"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "View Larger"
@@ -3429,6 +4701,12 @@
             "state" : "translated",
             "value" : "큰 글씨에 맞춘 화면"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Screens for Large Text"
+          }
         }
       }
     },
@@ -3441,6 +4719,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Time-lapse"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Time-lapse"
@@ -3461,6 +4745,12 @@
             "state" : "translated",
             "value" : "Explore"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Explore"
+          }
         }
       }
     },
@@ -3477,6 +4767,12 @@
             "state" : "translated",
             "value" : "Exploration Log"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exploration Log"
+          }
         }
       }
     },
@@ -3489,6 +4785,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Exploration Log"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Exploration Log"
@@ -3510,6 +4812,12 @@
             "state" : "translated",
             "value" : "펼치는 아이폰 화면"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Foldable iPhone Layout"
+          }
         }
       }
     },
@@ -3527,6 +4835,12 @@
             "state" : "translated",
             "value" : "펼치는 아이폰에서 지도와 기록을 두 쪽으로 나눠 봐요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "On a foldable iPhone, see your map and records side by side in two panes."
+          }
         }
       }
     },
@@ -3539,6 +4853,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Day Time-lapse"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Day Time-lapse"
@@ -3560,6 +4880,12 @@
             "state" : "translated",
             "value" : "하루를 마칠 때 오늘 걸은 길을 알림으로 알려 줘요."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "At the end of the day, get a notification about the path you walked today."
+          }
         }
       }
     },
@@ -3572,6 +4898,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "When you stay in one place for over %lld minutes,\nit's added to today's footprints."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "When you stay in one place for over %lld minutes,\nit's added to today's footprints."
@@ -3592,6 +4924,12 @@
             "state" : "translated",
             "value" : "Couldn't find your location yet"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Couldn't find your location yet"
+          }
         }
       }
     },
@@ -3604,6 +4942,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "OK"

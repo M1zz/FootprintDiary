@@ -14,6 +14,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -26,6 +32,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uses the camera to save a photo of the spot and turn what you capture into a sticker for your map."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uses the camera to save a photo of the spot and turn what you capture into a sticker for your map."
@@ -46,6 +58,12 @@
             "state" : "translated",
             "value" : "\"Always\" permission is needed to automatically record your footprints whenever you move between places."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "\"Always\" permission is needed to automatically record your footprints whenever you move between places."
+          }
         }
       }
     },
@@ -62,6 +80,12 @@
             "state" : "translated",
             "value" : "Location permission is needed to record your current position as a footprint on the map."
           }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Location permission is needed to record your current position as a footprint on the map."
+          }
         }
       }
     },
@@ -74,6 +98,12 @@
           }
         },
         "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Uses motion data to tell whether you moved on foot or by running, so travel by vehicle isn't recorded."
+          }
+        },
+        "en-GB" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "Uses motion data to tell whether you moved on foot or by running, so travel by vehicle isn't recorded."
