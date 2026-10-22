@@ -98,6 +98,12 @@
             "state" : "translated",
             "value" : "벅뚜벅뚜"
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "벅뚜벅뚜"
+          }
         }
       }
     },
@@ -197,6 +203,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Kameraet bruges til at gemme et foto af stedet og til at frilægge det, du fotograferer, som et klistermærke til kortet."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Η κάμερα χρησιμοποιείται για να κρατήσετε φωτογραφία του μέρους και να αποκόψετε ό,τι φωτογραφίζετε σε αυτοκόλλητο για τον χάρτη."
           }
         }
       }
@@ -298,6 +310,12 @@
             "state" : "translated",
             "value" : "Tilladelsen „Altid“ er nødvendig for automatisk at registrere dine fodspor, hver gang du skifter sted."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Για να καταγράφονται αυτόματα τα αποτυπώματα σε κάθε αλλαγή μέρους, χρειάζεται η άδεια «Πάντα»."
+          }
         }
       }
     },
@@ -398,6 +416,12 @@
             "state" : "translated",
             "value" : "Lokalitetstilladelse er nødvendig for at registrere din nuværende position som et fodspor på kortet."
           }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χρειάζεται η άδεια τοποθεσίας για να καταγράφεται η τρέχουσα θέση σας ως αποτύπωμα στον χάρτη."
+          }
         }
       }
     },
@@ -497,6 +521,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Bevægelsesdata bruges til at se, om du bevægede dig til fods eller løbende, så færd i køretøj ikke registreres."
+          }
+        },
+        "el" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Χρησιμοποιούνται δεδομένα κίνησης για να διαπιστωθεί αν μετακινηθήκατε περπατώντας ή τρέχοντας, ώστε να μην καταγράφονται οι μετακινήσεις με όχημα."
           }
         }
       }

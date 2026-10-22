@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Πολιτική απορρήτου · 벅뚜벅뚜</title>
+  <style>
+    :root {
+      --bg: #f7f8fa; --card: #ffffff; --text: #1c1d21; --muted: #6b7280;
+      --accent: #4facfe; --border: #e5e7eb; --note-bg: #eef7ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16171b; --card: #1f2126; --text: #f2f3f5; --muted: #9ca3af;
+        --border: #2c2f36; --note-bg: #1a2735;
+      }
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0; background: var(--bg); color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+      line-height: 1.75; -webkit-font-smoothing: antialiased;
+    }
+    .wrap { max-width: 760px; margin: 0 auto; padding: 40px 20px 72px; }
+    .back { display: inline-block; color: var(--accent); text-decoration: none; font-size: 0.9rem; margin-bottom: 24px; }
+    h1 { font-size: 1.9rem; margin: 0 0 4px; }
+    .updated { color: var(--muted); font-size: 0.9rem; margin-bottom: 32px; }
+    h2 { font-size: 1.25rem; margin: 36px 0 10px; padding-top: 8px; }
+    p, li { color: var(--text); }
+    ul { padding-left: 22px; }
+    li { margin: 8px 0; }
+    .note {
+      background: var(--note-bg); border: 1px solid var(--border);
+      border-radius: 12px; padding: 16px 18px; margin: 20px 0;
+    }
+    .note strong { color: var(--accent); }
+    a { color: var(--accent); }
+    table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.95rem; }
+    th, td { border: 1px solid var(--border); padding: 10px 12px; text-align: left; vertical-align: top; }
+    th { background: var(--card); }
+    footer { color: var(--muted); font-size: 0.85rem; margin-top: 48px; border-top: 1px solid var(--border); padding-top: 20px; }
+  </style>
+  <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/el/privacy.html">
+  <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/privacy.html">
+  <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+  <link rel="alternate" hreflang="ja" href="https://m1zz.github.io/FootprintDiary/ja/privacy.html">
+  <link rel="alternate" hreflang="zh-Hans" href="https://m1zz.github.io/FootprintDiary/zh-Hans/privacy.html">
+  <link rel="alternate" hreflang="zh-Hant" href="https://m1zz.github.io/FootprintDiary/zh-Hant/privacy.html">
+  <link rel="alternate" hreflang="ru" href="https://m1zz.github.io/FootprintDiary/ru/privacy.html">
+  <link rel="alternate" hreflang="es" href="https://m1zz.github.io/FootprintDiary/es/privacy.html">
+  <link rel="alternate" hreflang="de" href="https://m1zz.github.io/FootprintDiary/de/privacy.html">
+  <link rel="alternate" hreflang="fr" href="https://m1zz.github.io/FootprintDiary/fr/privacy.html">
+  <link rel="alternate" hreflang="it" href="https://m1zz.github.io/FootprintDiary/it/privacy.html">
+  <link rel="alternate" hreflang="pt-BR" href="https://m1zz.github.io/FootprintDiary/pt-BR/privacy.html">
+  <link rel="alternate" hreflang="th" href="https://m1zz.github.io/FootprintDiary/th/privacy.html">
+  <link rel="alternate" hreflang="vi" href="https://m1zz.github.io/FootprintDiary/vi/privacy.html">
+  <link rel="alternate" hreflang="cs" href="https://m1zz.github.io/FootprintDiary/cs/privacy.html">
+  <link rel="alternate" hreflang="da" href="https://m1zz.github.io/FootprintDiary/da/privacy.html">
+  <link rel="alternate" hreflang="el" href="https://m1zz.github.io/FootprintDiary/el/privacy.html">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/privacy.html">
+</head>
+<body>
+<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../privacy.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/privacy.html" hreflang="en" lang="en">English</a> · <a href="../ja/privacy.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/privacy.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/privacy.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/privacy.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/privacy.html" hreflang="es" lang="es">Español</a> · <a href="../de/privacy.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/privacy.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/privacy.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/privacy.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/privacy.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/privacy.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/privacy.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/privacy.html" hreflang="da" lang="da">Dansk</a> · <a href="privacy.html" hreflang="el" lang="el" aria-current="true">Ελληνικά</a></nav>
+  <div class="wrap">
+    <a class="back" href="index.html">← Αρχική 벅뚜벅뚜</a>
+    <h1>Πολιτική απορρήτου</h1>
+    <p class="updated">Ισχύει από: 27 Αυγούστου 2026</p>
+
+    <p>
+      Το <strong>벅뚜벅뚜 (FootprintDiary)</strong> (εφεξής η «Εφαρμογή») σέβεται τα προσωπικά δεδομένα των χρηστών.
+      Η Εφαρμογή έχει σχεδιαστεί ώστε το ιστορικό κινήσεών σας και το ημερολόγιό σας να αποθηκεύονται <strong>μόνο στη δική σας συσκευή και στον δικό σας λογαριασμό iCloud</strong>.
+      Ο προγραμματιστής της Εφαρμογής δεν έχει πρόσβαση στην τοποθεσία, τις φωτογραφίες ή το ημερολόγιό σας.
+    </p>
+
+    <div class="note">
+      <strong>Περίληψη</strong> — Η Εφαρμογή δεν έχει εγγραφή ούτε λογαριασμούς.
+      Η τοποθεσία, οι φωτογραφίες και το ημερολόγιο αποθηκεύονται μόνο στη συσκευή σας και στο <strong>δικό σας iCloud</strong> και ο προγραμματιστής δεν μπορεί να τα δει.
+      Ωστόσο, για να βελτιώνει την Εφαρμογή, ο προγραμματιστής συλλέγει ανώνυμα <strong>στατιστικά χρήσης που δεν μπορούν να σας ταυτοποιήσουν</strong>
+      (όπως πόσες φορές ανοίγει η Εφαρμογή και ποιες οθόνες χρησιμοποιούνται). Δεν περιλαμβάνουν ποτέ τοποθεσία ή κείμενα·
+      οι λεπτομέρειες βρίσκονται στο σημείο 4 παρακάτω.
+    </div>
+
+    <h2>1. Πληροφορίες που συλλέγονται</h2>
+    <p>Η Εφαρμογή επεξεργάζεται τις παρακάτω πληροφορίες <strong>μόνο μέσα στη συσκευή σας</strong> και δεν τις στέλνει στον προγραμματιστή ή σε διακομιστές τρίτων.</p>
+    <table>
+      <tr><th>Στοιχείο</th><th>Σκοπός</th><th>Πού αποθηκεύεται</th></tr>
+      <tr><td>Δεδομένα τοποθεσίας (μέρη επισκέψεων, συντεταγμένες κίνησης)</td><td>Εμφάνιση αποτυπωμάτων στον χάρτη και καταγραφή της διαδρομής σας</td><td>Στη συσκευή (SwiftData)</td></tr>
+      <tr><td>Δεδομένα κίνησης</td><td>Διάκριση περπατήματος από μετακίνηση με όχημα (οι μετακινήσεις με όχημα αποκλείονται από την καταγραφή)</td><td>Χρησιμοποιούνται αμέσως στη συσκευή και δεν αποθηκεύονται</td></tr>
+      <tr><td>Φωτογραφίες</td><td>Επισύναψη στο ημερολόγιο</td><td>Στη συσκευή (SwiftData)</td></tr>
+      <tr><td>Κάμερα (φωτογραφίες που τραβάτε)</td><td>Αποθήκευση φωτογραφίας του μέρους και αποκοπή αυτού που φωτογραφίζετε για αυτοκόλλητο στον χάρτη (η αποκοπή γίνεται στη συσκευή)</td><td>Στη συσκευή (SwiftData)</td></tr>
+      <tr><td>Κείμενο ημερολογίου, ονόματα μερών</td><td>Καταγραφές που γράφετε εσείς</td><td>Στη συσκευή (SwiftData)</td></tr>
+    </table>
+    <p>
+      Αν ενεργοποιήσετε τον συγχρονισμό iCloud, οι παραπάνω καταγραφές αποθηκεύονται και στην <strong>ιδιωτική σας βάση δεδομένων iCloud</strong>
+      και μεταφέρονται σε άλλες συσκευές με το ίδιο Apple ID. Αυτός ο χώρος αποθήκευσης είναι δικός σας
+      και ο προγραμματιστής δεν έχει πρόσβαση σε αυτόν.
+    </p>
+    <p>
+      Ξεχωριστά από τα παραπάνω, ο προγραμματιστής συλλέγει τα <strong>ανώνυμα στατιστικά χρήσης</strong> που περιγράφονται στο σημείο 4.
+    </p>
+
+    <h2>2. Χρήση δεδομένων τοποθεσίας</h2>
+    <ul>
+      <li>Η Εφαρμογή χρησιμοποιεί τις λειτουργίες του iOS <strong>εντοπισμού επισκέψεων (Visit)</strong> και <strong>σημαντικών αλλαγών τοποθεσίας</strong>
+          για να καταγράφει αυτόματα τις μετακινήσεις σας μεταξύ μερών με την ελάχιστη δυνατή κατανάλωση μπαταρίας.</li>
+      <li>Για την αυτόματη καταγραφή, η Εφαρμογή μπορεί να ζητήσει την άδεια τοποθεσίας «Πάντα». Μπορείτε να αλλάξετε ή να ανακαλέσετε
+          την άδεια οποιαδήποτε στιγμή στην εφαρμογή Ρυθμίσεις του iOS.</li>
+      <li>Αν δεν επιτρέψετε την τοποθεσία, η αυτόματη καταγραφή δεν θα λειτουργεί, αλλά οι υπόλοιπες λειτουργίες θα παραμένουν διαθέσιμες.</li>
+    </ul>
+
+    <h2>3. Υπηρεσίες τρίτων (Apple)</h2>
+    <p>
+      Για να μετατρέπει συντεταγμένες σε αναγνώσιμες διευθύνσεις και ονόματα μερών, η Εφαρμογή χρησιμοποιεί την
+      <strong>αντίστροφη γεωκωδικοποίηση (CLGeocoder)</strong> και την εμφάνιση χαρτών (MapKit) που παρέχει η Apple.
+      Σε αυτή τη διαδικασία, οι σχετικές συντεταγμένες ενδέχεται να σταλούν στην Apple για επεξεργασία, κάτι που διέπεται από την
+      <a href="https://www.apple.com/legal/privacy/">Πολιτική απορρήτου της Apple</a>.
+      Ο προγραμματιστής της Εφαρμογής δεν έχει πρόσβαση σε αυτά τα δεδομένα.
+    </p>
+
+    <h2>4. Ανώνυμα στατιστικά χρήσης</h2>
+    <p>
+      Για να βελτιώνει την Εφαρμογή, ο προγραμματιστής πρέπει να γνωρίζει ποιες λειτουργίες χρησιμοποιούνται πραγματικά, γι' αυτό συλλέγει τις παρακάτω πληροφορίες
+      <strong>σε μορφή που δεν επιτρέπει την ταυτοποίησή σας</strong>. Αποθηκεύονται στον δικό του χώρο
+      Apple CloudKit, ξεχωριστό από το προσωπικό σας iCloud όπου φυλάσσονται οι καταγραφές σας.
+    </p>
+    <table>
+      <tr><th>Τι συλλέγουμε</th><th>Τι δεν συλλέγουμε</th></tr>
+      <tr>
+        <td>
+          Αριθμό ανοιγμάτων της Εφαρμογής, ημέρες από την εγκατάσταση, έκδοση της Εφαρμογής, έκδοση iOS, ρύθμιση γλώσσας της συσκευής<br>
+          Ποιες λειτουργίες χρησιμοποιήθηκαν (σφράγισμα, εξαγωγή βίντεο, γράψιμο ημερολογίου, ονομασία μερών, άνοιγμα ημερολογίου)<br>
+          Κατά προσέγγιση μεγέθη (συνολική απόσταση που περπατήθηκε σε χλμ., ημέρες με καταγεγραμμένα βήματα, πλήθος σφραγίδων, μερών και εγγραφών ημερολογίου)
+        </td>
+        <td>
+          Συντεταγμένες τοποθεσίας (δεν στέλνεται ούτε μία)<br>
+          Κείμενο ημερολογίου, ονόματα μερών, φωτογραφίες<br>
+          Όνομα, email, αριθμό τηλεφώνου, Apple ID ή άλλα στοιχεία που θα σας ταυτοποιούσαν<br>
+          Αναγνωριστικό διαφήμισης (IDFA), μοναδικά αναγνωριστικά συσκευής
+        </td>
+      </tr>
+    </table>
+    <ul>
+      <li>Για να διακρίνει τις εγκαταστάσεις, η Εφαρμογή χρησιμοποιεί μία <strong>τυχαία παραγόμενη τιμή</strong> κατά την εγκατάσταση.
+          Η τιμή αυτή δεν σχετίζεται με τη συσκευή ή το Apple ID σας και, αν διαγράψετε την Εφαρμογή και την εγκαταστήσετε ξανά,
+          δεν θα συνδεθεί με την προηγούμενη τιμή.</li>
+      <li>Η Εφαρμογή <strong>δεν χρησιμοποιεί διαφημιστικά SDK, SDK ανάλυσης τρίτων ή εργαλεία παρακολούθησης.</strong>
+          Τα παραπάνω στατιστικά αποθηκεύονται μόνο στο Apple CloudKit με κώδικα που έγραψε ο ίδιος ο προγραμματιστής.</li>
+      <li>Αυτά τα στατιστικά χρησιμοποιούνται μόνο για τη βελτίωση της Εφαρμογής και δεν πωλούνται ούτε παρέχονται σε τρίτους.</li>
+    </ul>
+
+    <h2>5. Αποστολή σχολίων</h2>
+    <p>
+      Η επιλογή <strong>Αποστολή σχολίων</strong> στις ρυθμίσεις της Εφαρμογής λειτουργεί μόνο όταν γράφετε και στέλνετε εσείς κάτι.
+      Ό,τι στείλετε αποθηκεύεται στον χώρο Apple CloudKit του προγραμματιστή και χρησιμοποιείται μόνο για να το διαβάσει και να απαντήσει.
+    </p>
+    <ul>
+      <li>Τι στέλνεται: ο τύπος σχολίου που επιλέξατε και το κείμενο που γράψατε, η έκδοση της Εφαρμογής, η έκδοση iOS, ο τύπος συσκευής και η ρύθμιση γλώσσας της συσκευής</li>
+      <li>Το όνομα και το email στέλνονται μόνο αν τα γράψετε εσείς και χρησιμοποιούνται μόνο για να σας απαντήσουμε.</li>
+      <li>Οι απαντήσεις του προγραμματιστή διαβάζονται μέσα στην Εφαρμογή.</li>
+      <li>Αν θέλετε να διαγραφεί σχόλιο που στείλατε, ενημερώστε μας από τα στοιχεία επικοινωνίας παρακάτω.</li>
+    </ul>
+
+    <h2>6. Κοινοποίηση σε τρίτους και διαφημίσεις</h2>
+    <ul>
+      <li>Η Εφαρμογή δεν πουλά τα προσωπικά σας δεδομένα ούτε τα παρέχει σε τρίτους.</li>
+      <li>Η Εφαρμογή δεν εμφανίζει διαφημίσεις και δεν σας παρακολουθεί.</li>
+    </ul>
+
+    <h2>7. Διατήρηση και διαγραφή δεδομένων</h2>
+    <ul>
+      <li>Όλες οι καταγραφές αποθηκεύονται στη συσκευή σας και στο δικό σας iCloud και μπορείτε να διαγράψετε μόνοι σας
+          αποτυπώματα και εγγραφές ημερολογίου μέσα στην Εφαρμογή.</li>
+      <li><strong>Αν διαγράψετε την Εφαρμογή</strong>, διαγράφονται μαζί και όλα τα δεδομένα που είναι αποθηκευμένα στη συσκευή (τοποθεσία, φωτογραφίες, ημερολόγιο).
+          Τα αντίγραφα στο iCloud μπορούν να αφαιρεθούν από την οθόνη διαχείρισης iCloud στην εφαρμογή Ρυθμίσεις του iOS.</li>
+      <li>Επειδή ο προγραμματιστής δεν διατηρεί την τοποθεσία, τις φωτογραφίες ή το ημερολόγιό σας, δεν μπορεί ούτε να τα δει ούτε να τα
+          επαναφέρει.</li>
+      <li>Τα ανώνυμα στατιστικά χρήσης δεν περιέχουν τίποτα που να συνδέεται με εσάς, επομένως δεν μπορούν να εξυπηρετηθούν ατομικά αιτήματα διαγραφής.
+          Ωστόσο, μόλις διαγράψετε την Εφαρμογή, από εκείνη τη στιγμή δεν συλλέγεται τίποτα.</li>
+    </ul>
+
+    <h2>8. Προσωπικά δεδομένα παιδιών</h2>
+    <p>
+      Η Εφαρμογή δεν συλλέγει στοιχεία που θα σας ταυτοποιούσαν, επομένως δεν συλλέγει δεδομένα που στοχεύουν συγκεκριμένη ηλικιακή ομάδα.
+      Όλα τα δεδομένα παραμένουν μόνο στη συσκευή σας.
+    </p>
+
+    <h2>9. Αλλαγές στην πολιτική</h2>
+    <p>
+      Η παρούσα πολιτική μπορεί να αναθεωρηθεί λόγω αλλαγών στη νομοθεσία ή στις λειτουργίες της Εφαρμογής· σε περίπτωση αλλαγής, θα ενημερώσουμε αυτή τη σελίδα.
+    </p>
+
+    <h2>10. Επικοινωνία</h2>
+    <p>
+      Για απορίες σχετικά με την επεξεργασία προσωπικών δεδομένων, επικοινωνήστε στο:<br />
+      Email: <a href="mailto:leeo@kakao.com">leeo@kakao.com</a><br />
+      Σελίδα υποστήριξης: <a href="support.html">Υποστήριξη / Επικοινωνία</a>
+    </p>
+
+    <footer>
+      © 2026 벅뚜벅뚜 (FootprintDiary) · Ισχύει από 27 Αυγούστου 2026
+    </footer>
+  </div>
+</body>
+</html>
