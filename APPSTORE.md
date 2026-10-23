@@ -80,7 +80,7 @@ https://m1zz.github.io/FootprintDiary/en/
 
 ### 이름
 
-벅뚜벅뚜: Walk-Drawn Map
+Buktu Buktu: Walk-Drawn Map
 
 ### 부제
 
@@ -144,7 +144,7 @@ https://m1zz.github.io/FootprintDiary/en/
 
 ### 이름
 
-벅뚜벅뚜: Walk-Drawn Map
+Buktu Buktu: Walk-Drawn Map
 
 ### 부제
 
@@ -208,7 +208,7 @@ https://m1zz.github.io/FootprintDiary/ja/
 
 ### 이름
 
-벅뚜벅뚜: 歩いて描く地図
+Buktu Buktu: 歩いて描く地図
 
 ### 부제
 
@@ -272,7 +272,7 @@ https://m1zz.github.io/FootprintDiary/zh-Hans/
 
 ### 이름
 
-벅뚜벅뚜：用脚步绘制的地图
+Buktu Buktu：用脚步绘制的地图
 
 ### 부제
 
@@ -336,7 +336,7 @@ https://m1zz.github.io/FootprintDiary/zh-Hant/
 
 ### 이름
 
-벅뚜벅뚜：用腳步繪製的地圖
+Buktu Buktu：用腳步繪製的地圖
 
 ### 부제
 
@@ -400,7 +400,7 @@ https://m1zz.github.io/FootprintDiary/es/
 
 ### 이름
 
-벅뚜벅뚜: Mapa a pie
+Buktu Buktu: Mapa a pie
 
 ### 부제
 
@@ -464,7 +464,7 @@ https://m1zz.github.io/FootprintDiary/de/
 
 ### 이름
 
-벅뚜벅뚜: Zu Fuß gezeichnet
+Buktu Buktu: Zu Fuß gezeichnet
 
 ### 부제
 
@@ -528,7 +528,7 @@ https://m1zz.github.io/FootprintDiary/fr/
 
 ### 이름
 
-벅뚜벅뚜 : carte à pied
+Buktu Buktu : carte à pied
 
 ### 부제
 
@@ -592,7 +592,7 @@ https://m1zz.github.io/FootprintDiary/it/
 
 ### 이름
 
-벅뚜벅뚜: la mappa a piedi
+Buktu Buktu: la mappa a piedi
 
 ### 부제
 
@@ -656,7 +656,7 @@ https://m1zz.github.io/FootprintDiary/pt-BR/
 
 ### 이름
 
-벅뚜벅뚜: mapa a pé
+Buktu Buktu: mapa a pé
 
 ### 부제
 
@@ -720,7 +720,7 @@ https://m1zz.github.io/FootprintDiary/ru/
 
 ### 이름
 
-벅뚜벅뚜: карта шагами
+Buktu Buktu: карта шагами
 
 ### 부제
 
@@ -784,7 +784,7 @@ https://m1zz.github.io/FootprintDiary/th/
 
 ### 이름
 
-벅뚜벅뚜: แผนที่ที่เดินวาด
+Buktu Buktu: แผนที่ที่เดินวาด
 
 ### 부제
 
@@ -848,7 +848,7 @@ https://m1zz.github.io/FootprintDiary/vi/
 
 ### 이름
 
-벅뚜벅뚜: Bản đồ đi bộ
+Buktu Buktu: Bản đồ đi bộ
 
 ### 부제
 
@@ -912,7 +912,7 @@ https://m1zz.github.io/FootprintDiary/cs/
 
 ### 이름
 
-벅뚜벅뚜: Mapa z kroků
+Buktu Buktu: Mapa z kroků
 
 ### 부제
 
@@ -976,7 +976,7 @@ https://m1zz.github.io/FootprintDiary/da/
 
 ### 이름
 
-벅뚜벅뚜: Kort af dine skridt
+Buktu Buktu: Kort til fods
 
 ### 부제
 
@@ -1040,7 +1040,7 @@ https://m1zz.github.io/FootprintDiary/el/
 
 ### 이름
 
-벅뚜벅뚜: Χάρτης με βήματα
+Buktu Buktu: Χάρτης με βήματα
 
 ### 부제
 
@@ -1048,7 +1048,7 @@ https://m1zz.github.io/FootprintDiary/el/
 
 ### 키워드
 
-περπάτημα,βόλτα,πεζοπορία,gps,καταγραφή,ημερολόγιο,ταξίδια,βήματα,εξερεύνηση,γειτονιά,πόλη
+περπάτημα,βόλτα,πεζοπορία,gps,καταγραφή,ημερολόγιο,ταξίδια,διαδρομή,εξερεύνηση,γειτονιά,πόλη
 
 ### 프로모션 텍스트
 
@@ -1104,7 +1104,7 @@ https://m1zz.github.io/FootprintDiary/fi/
 
 ### 이름
 
-벅뚜벅뚜: Askelin piirretty kartta
+Buktu Buktu: Kävelykartta
 
 ### 부제
 
@@ -1168,7 +1168,7 @@ https://m1zz.github.io/FootprintDiary/id/
 
 ### 이름
 
-벅뚜벅뚜: Peta dari Langkah
+Buktu Buktu: Peta dari Langkah
 
 ### 부제
 
@@ -1176,7 +1176,7 @@ Hanya jalan baru yang diwarnai
 
 ### 키워드
 
-jalan kaki,jalan santai,hiking,gps,pelacak,jurnal,wisata,langkah,eksplorasi,stempel,kota,rute
+jalan kaki,jalan santai,hiking,gps,pelacak,jurnal,wisata,petualangan,eksplorasi,stempel,kota,rute
 
 ### 프로모션 텍스트
 
@@ -1232,7 +1232,7 @@ https://m1zz.github.io/FootprintDiary/nb/
 
 ### 이름
 
-벅뚜벅뚜: Kart av skrittene dine
+Buktu Buktu: Kart til fots
 
 ### 부제
 
@@ -1296,7 +1296,7 @@ https://m1zz.github.io/FootprintDiary/nl/
 
 ### 이름
 
-벅뚜벅뚜: Kaart van je stappen
+Buktu Buktu: Kaart te voet
 
 ### 부제
 
@@ -1360,7 +1360,7 @@ https://m1zz.github.io/FootprintDiary/pl/
 
 ### 이름
 
-벅뚜벅뚜: Mapa z kroków
+Buktu Buktu: Mapa z kroków
 
 ### 부제
 
@@ -1424,7 +1424,7 @@ https://m1zz.github.io/FootprintDiary/sv/
 
 ### 이름
 
-벅뚜벅뚜: Karta av dina steg
+Buktu Buktu: Karta till fots
 
 ### 부제
 
@@ -1488,7 +1488,7 @@ https://m1zz.github.io/FootprintDiary/tr/
 
 ### 이름
 
-벅뚜벅뚜: Adımlarla Harita
+Buktu Buktu: Adımlarla Harita
 
 ### 부제
 
