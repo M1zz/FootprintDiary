@@ -98,7 +98,7 @@ struct StampListScreen: View {
 
     private var modePicker: some View {
         Picker("보는 길", selection: $mode) {
-            ForEach(Mode.allCases) { Text($0.rawValue).tag($0) }
+            ForEach(Mode.allCases) { Text(LocalizedStringKey($0.rawValue)).tag($0) }
         }
         .pickerStyle(.segmented)
         .padding(.horizontal, 16)
@@ -113,8 +113,8 @@ struct StampListScreen: View {
         if stamps.isEmpty {
             hint(
                 symbol: "seal",
-                title: "아직 찍은 곳이 없어요",
-                detail: "지도에서 스탬프를 찍으면 여기에 갈래별로 모입니다."
+                title: String(localized: "아직 찍은 곳이 없어요"),
+                detail: String(localized: "지도에서 스탬프를 찍으면 여기에 갈래별로 모입니다.")
             )
         } else {
             VStack(spacing: 0) {
@@ -137,10 +137,10 @@ struct StampListScreen: View {
         if groups.count > 1 {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 8) {
-                    chip(title: "전부", symbol: "seal", isOn: onlyGroup == nil) { onlyGroup = nil }
+                    chip(title: String(localized: "전부"), symbol: "seal", isOn: onlyGroup == nil) { onlyGroup = nil }
                     ForEach(groups) { group in
                         chip(
-                            title: group.name,
+                            title: group.title,
                             symbol: group.symbolName,
                             isOn: onlyGroup == group
                         ) {
@@ -211,8 +211,8 @@ struct StampListScreen: View {
         if sections.isEmpty && unvisited.isEmpty {
             hint(
                 symbol: "magnifyingglass",
-                title: "찾는 것이 없어요",
-                detail: "다른 말로 찾거나 갈래를 바꿔 보세요."
+                title: String(localized: "찾는 것이 없어요"),
+                detail: String(localized: "다른 말로 찾거나 갈래를 바꿔 보세요.")
             )
         } else {
             List {
@@ -257,7 +257,7 @@ struct StampListScreen: View {
                         }
                     } header: {
                         HStack {
-                            Text(section.group.name)
+                            Text(section.group.title)
                             Spacer()
                             Text("\(section.stamps.count)곳")
                         }
@@ -686,9 +686,9 @@ enum PlaceText {
         if !stamp.placeName.isEmpty { parts.append(stamp.kind.title) }
         if includeDay {
             let date = day.string(from: stamp.isUnvisited ? stamp.createdAt : (stamp.firstVisitedAt ?? stamp.createdAt))
-            parts.append(stamp.isUnvisited ? "\(date)에 찍어 둠" : date)
+            parts.append(stamp.isUnvisited ? String(localized: "\(date)에 찍어 둠") : date)
         } else {
-            parts.append(stamp.kind.group)
+            parts.append(stamp.kind.groupTitle)
         }
         if !stamp.note.isEmpty { parts.append(stamp.note) }
         return parts.joined(separator: " · ")
@@ -696,13 +696,13 @@ enum PlaceText {
 
     /// 얼마나 머물렀는지. 아직 떠나지 않았으면 그렇게 적는다.
     static func stayed(_ visit: Visit) -> String {
-        guard let departure = visit.departureDate else { return "머무는 중" }
+        guard let departure = visit.departureDate else { return String(localized: "머무는 중") }
         let minutes = Int(departure.timeIntervalSince(visit.arrivalDate) / 60)
-        if minutes < 1 { return "잠깐 들름" }
-        if minutes < 60 { return "\(minutes)분 머무름" }
+        if minutes < 1 { return String(localized: "잠깐 들름") }
+        if minutes < 60 { return String(localized: "\(minutes)분 머무름") }
         let hours = minutes / 60
         let rest = minutes % 60
-        return rest == 0 ? "\(hours)시간 머무름" : "\(hours)시간 \(rest)분 머무름"
+        return rest == 0 ? String(localized: "\(hours)시간 머무름") : String(localized: "\(hours)시간 \(rest)분 머무름")
     }
 
     static func time(_ date: Date) -> String {
@@ -711,15 +711,15 @@ enum PlaceText {
 
     private static let day: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "yyyy년 M월 d일"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("yMMMd")
         return formatter
     }()
 
     private static let clock: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "a h:mm"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("jmm")
         return formatter
     }()
 }

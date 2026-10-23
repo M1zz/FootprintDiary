@@ -71,7 +71,7 @@ enum FilmMarks {
     private static func name(of visit: Visit) -> String {
         if let placeName = visit.placeName, !placeName.isEmpty { return placeName }
         if let district = visit.districtName, !district.isEmpty { return district }
-        if visit.discoveryIndex > 0 { return "\(visit.discoveryIndex)번째 발견" }
-        return "처음 온 자리"
+        if visit.discoveryIndex > 0 { return String(localized: "\(visit.discoveryIndex)번째 발견") }
+        return String(localized: "처음 온 자리")
     }
 }

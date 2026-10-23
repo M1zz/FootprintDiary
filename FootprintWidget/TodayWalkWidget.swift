@@ -88,8 +88,8 @@ struct TodayWalkView: View {
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 } else {
-                    detail("걸은 거리", WalkFormat.distance(snapshot.walkedMeters))
-                    detail("처음 밟은 자리", "\(snapshot.newPlaces)곳")
+                    detail(String(localized: "걸은 거리"), WalkFormat.distance(snapshot.walkedMeters))
+                    detail(String(localized: "처음 밟은 자리"), String(localized: "\(snapshot.newPlaces)곳"))
                 }
             }
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -130,6 +130,6 @@ struct TodayWalkView: View {
     /// 그림 아래 한 줄. 처음 밟은 자리가 있는 날에는 그것을 앞세운다 —
     /// 새 길로 갔다는 것이 이 앱에서 가장 값진 소식이라서다.
     private var subtitle: String {
-        snapshot.newPlaces > 0 ? "처음 \(snapshot.newPlaces)곳" : "오늘 그은 길"
+        snapshot.newPlaces > 0 ? String(localized: "처음 \(snapshot.newPlaces)곳") : String(localized: "오늘 그은 길")
     }
 }

@@ -565,8 +565,8 @@ enum WalkFilm {
 
     static let dayFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "yyyy년 M월 d일"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("yMMMd")
         return formatter
     }()
 

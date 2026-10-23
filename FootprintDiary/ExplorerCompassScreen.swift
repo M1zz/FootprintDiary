@@ -120,15 +120,15 @@ struct ExplorerCompassScreen: View {
 
             HStack(spacing: 28) {
                 figure(
-                    title: "둘레 \(distanceText(reading.radius)) 안",
+                    title: String(localized: "둘레 \(distanceText(reading.radius)) 안"),
                     value: "\(Int((reading.coverage * 100).rounded()))%",
-                    caption: "밟은 자리"
+                    caption: String(localized: "밟은 자리")
                 )
                 if let wide = reading.widest, wide.reach > 0 {
                     figure(
-                        title: "가장 멀리",
+                        title: String(localized: "가장 멀리"),
                         value: distanceText(wide.reach),
-                        caption: "\(wide.name)쪽"
+                        caption: String(localized: "\(wide.name)쪽")
                     )
                 }
             }
@@ -143,9 +143,9 @@ struct ExplorerCompassScreen: View {
 
     private func reachSentence(_ sector: CompassSector) -> String {
         if sector.reach < 1 {
-            return "그쪽으로는 아직 한 걸음도 나가 보지 않으셨어요."
+            return String(localized: "그쪽으로는 아직 한 걸음도 나가 보지 않으셨어요.")
         }
-        return "그쪽으로는 \(distanceText(sector.reach))까지 걸어 보셨습니다. 오늘 더 나가 보시겠어요?"
+        return String(localized: "그쪽으로는 \(distanceText(sector.reach))까지 걸어 보셨습니다. 오늘 더 나가 보시겠어요?")
     }
 
     private func figure(title: String, value: String, caption: String) -> some View {
@@ -167,6 +167,11 @@ struct ExplorerCompassScreen: View {
     ///
     /// 판만으로는 두 방위의 길이 차가 눈에 잘 안 잡히고, 무엇보다 판은 소리 내어
     /// 읽어 줄 수가 없다. 표가 있으면 보이스오버로도 같은 것을 알 수 있다.
+    private static var directionColumnWidth: CGFloat {
+        let language = Bundle.main.preferredLocalizations.first ?? "en"
+        return ["ko", "ja", "zh-Hans", "zh-Hant"].contains(language) ? 34 : 96
+    }
+
     private func sectorTable(_ reading: CompassReading) -> some View {
         VStack(spacing: 0) {
             ForEach(reading.sectors) { sector in
@@ -178,7 +183,10 @@ struct ExplorerCompassScreen: View {
                         .foregroundStyle(
                             isThinnest ? Color(InkStyle.sealRed) : Color(InkStyle.ink)
                         )
-                        .frame(width: 34, alignment: .leading)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.7)
+                        // 한국어 방위는 한두 글자지만, 다른 말은 'Northeast'처럼 길다
+                        .frame(width: Self.directionColumnWidth, alignment: .leading)
 
                     // 뻗음을 막대로 한 번 더 보여 준다. 숫자만 있으면 여덟 줄을
                     // 눈으로 견줘야 하는데, 막대는 견주는 일을 눈이 대신 해 준다.
@@ -211,9 +219,9 @@ struct ExplorerCompassScreen: View {
                 .padding(.vertical, 9)
                 .accessibilityElement(children: .ignore)
                 .accessibilityLabel(
-                    "\(sector.name)쪽, "
-                    + (sector.reach < 1 ? "걸어 나간 기록 없음" : "\(distanceText(sector.reach))까지, ")
-                    + "채움 \(Int((sector.coverage * 100).rounded()))퍼센트"
+                    sector.reach < 1
+                        ? String(localized: "\(sector.name)쪽, 걸어 나간 기록 없음, 채움 \(Int((sector.coverage * 100).rounded()))퍼센트")
+                        : String(localized: "\(sector.name)쪽, \(distanceText(sector.reach))까지, 채움 \(Int((sector.coverage * 100).rounded()))퍼센트")
                 )
 
                 if sector.index < reading.sectors.count - 1 {
@@ -250,14 +258,14 @@ struct ExplorerCompassScreen: View {
     }
 
     private var hintTitle: String {
-        locationManager.currentLocation == nil ? "지금 자리를 찾는 중입니다" : "아직 그릴 것이 없습니다"
+        locationManager.currentLocation == nil ? String(localized: "지금 자리를 찾는 중입니다") : String(localized: "아직 그릴 것이 없습니다")
     }
 
     private var hintBody: String {
         if locationManager.currentLocation == nil {
-            return "나침반은 선 자리를 한가운데 두고 둘레를 읽습니다.\n하늘이 보이는 곳에서 잠깐만 기다려 주세요."
+            return String(localized: "나침반은 선 자리를 한가운데 두고 둘레를 읽습니다.\n하늘이 보이는 곳에서 잠깐만 기다려 주세요.")
         }
-        return "이 나침반은 지금까지 걸으신 자리로 그립니다.\n조금 걸으신 뒤에 다시 열어 보세요."
+        return String(localized: "이 나침반은 지금까지 걸으신 자리로 그립니다.\n조금 걸으신 뒤에 다시 열어 보세요.")
     }
 
     // MARK: - 읽기
@@ -320,7 +328,10 @@ private struct CompassDial: View {
         Canvas { context, size in
             let center = CGPoint(x: size.width / 2, y: size.height / 2)
             // 글자가 판 바깥에 서므로 그만큼을 남긴다.
-            let dial = min(size.width, size.height) / 2 - 22
+            // 한중일 방위는 한두 글자지만, 다른 말은 'West'·'Δυτικά'처럼 길어 자리를 더 둔다.
+            let language = Bundle.main.preferredLocalizations.first ?? "en"
+            let margin: CGFloat = ["ko", "ja", "zh-Hans", "zh-Hant"].contains(language) ? 22 : 62
+            let dial = min(size.width, size.height) / 2 - margin
             // 판을 돌리는 각. 기기가 북동(45도)을 보고 있으면 판을 -45도 돌려
             // 북동이 위로 온다. 나침반이 없으면 진북을 위에 둔다.
             let rotation = -(heading ?? 0)
@@ -340,8 +351,8 @@ private struct CompassDial: View {
     }
 
     private var dialDescription: String {
-        guard let thin = reading.thinnest else { return "개척 나침반" }
-        return "개척 나침반. 둘레의 \(Int((reading.coverage * 100).rounded()))퍼센트를 밟으셨고, \(thin.name)쪽이 가장 얕습니다."
+        guard let thin = reading.thinnest else { return String(localized: "개척 나침반") }
+        return String(localized: "개척 나침반. 둘레의 \(Int((reading.coverage * 100).rounded()))퍼센트를 밟으셨고, \(thin.name)쪽이 가장 얕습니다.")
     }
 
     // MARK: 눈금 원
@@ -482,13 +493,18 @@ private struct CompassDial: View {
         rotation: Double
     ) {
         for sector in reading.sectors {
-            let point = pointAt(bearing: sector.bearing, radius: dial + 14, center: center, rotation: rotation)
+            let point = pointAt(bearing: sector.bearing, radius: dial + 6, center: center, rotation: rotation)
             let isNorth = sector.index == 0
+            // 글자를 판 바깥쪽으로 붙인다 — 'Northwest'처럼 긴 이름도 판 위로 넘어오거나
+            // 화면 끝에서 잘리지 않게, 왼쪽 이름은 오른쪽 끝을, 오른쪽 이름은 왼쪽 끝을 판에 댄다.
+            let angle = (sector.bearing + rotation - 90) * .pi / 180
+            let anchor = UnitPoint(x: 0.5 - 0.5 * cos(angle), y: 0.5 - 0.5 * sin(angle))
             context.draw(
                 Text(sector.name)
                     .font(.system(size: isNorth ? 13 : 11, weight: isNorth ? .semibold : .regular))
                     .foregroundStyle(Color(InkStyle.ink).opacity(isNorth ? 0.9 : 0.55)),
-                at: point
+                at: point,
+                anchor: anchor
             )
         }
     }

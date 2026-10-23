@@ -31,6 +31,12 @@ struct FootprintDiaryApp: App {
         // 기록까지 못 보게 된다. 붙여 보고, 안 되면 같은 파일을 기기 안에서만 연다.
         // (저장 자리가 같으므로 되돌아와도 기록은 그대로다)
         let container: ModelContainer
+        let demoContainer = Self.demoContainer(schema: schema)
+        let demo = demoContainer != nil
+        if let demoContainer {
+            container = demoContainer
+            CloudSync.isAttached = false
+        } else {
         do {
             container = try ModelContainer(
                 for: schema,
@@ -56,6 +62,7 @@ struct FootprintDiaryApp: App {
                 fatalError("SwiftData 컨테이너 생성 실패: \(error)")
             }
         }
+        }
 
         self.container = container
         let manager = LocationManager()
@@ -64,9 +71,20 @@ struct FootprintDiaryApp: App {
         // 모니터링이 즉시 재개되도록 초기화 시점에 시작한다.
         manager.startMonitoringIfAuthorized()
         _locationManager = StateObject(wrappedValue: manager)
-        LeeoEngagement.shared.registerLaunch()
+        if !demo { LeeoEngagement.shared.registerLaunch() }
         // 지도 단추 안내는 하루에 하나만 (AtlasTips.swift)
         try? Tips.configure([.displayFrequency(.daily)])
+    }
+
+    /// 스토어 스크린샷용 가상 기록 (DEBUG 빌드에서 `-demoSeed` 로 켰을 때만). DemoSeed.swift
+    private static func demoContainer(schema: Schema) -> ModelContainer? {
+        #if DEBUG
+        guard DemoSeed.isOn else { return nil }
+        DemoSeed.prepareDefaults()
+        return DemoSeed.makeContainer(schema: schema)
+        #else
+        return nil
+        #endif
     }
 
     var body: some Scene {

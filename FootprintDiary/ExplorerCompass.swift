@@ -56,7 +56,7 @@ struct CompassSector: Identifiable {
         total == 0 ? 0 : Double(walked) / Double(total)
     }
 
-    var name: String { ExplorerCompass.directionNames[index] }
+    var name: String { String(localized: String.LocalizationValue(ExplorerCompass.directionNames[index])) }
 }
 
 /// 한 자리에서 읽어 낸 나침반 한 장

@@ -82,7 +82,7 @@ struct DiaryScreen: View {
                 ToolbarItem(placement: .principal) {
                     Picker("보기", selection: $layoutRaw) {
                         ForEach(Layout.allCases, id: \.rawValue) { option in
-                            Text(option.rawValue).tag(option.rawValue)
+                            Text(LocalizedStringKey(option.rawValue)).tag(option.rawValue)
                         }
                     }
                     .pickerStyle(.segmented)
@@ -167,11 +167,11 @@ struct DiaryScreen: View {
     }
 
     private func dayTitle(_ day: Date) -> String {
-        if calendar.isDateInToday(day) { return "오늘" }
-        if calendar.isDateInYesterday(day) { return "어제" }
+        if calendar.isDateInToday(day) { return String(localized: "오늘") }
+        if calendar.isDateInYesterday(day) { return String(localized: "어제") }
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "M월 d일 (E)"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("MMMdE")
         return formatter.string(from: day)
     }
 }
@@ -351,8 +351,8 @@ struct DiaryDayView: View {
 
     private var navTitle: String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "M월 d일 (E)"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("MMMdE")
         return formatter.string(from: day)
     }
 
@@ -361,14 +361,14 @@ struct DiaryDayView: View {
             ? "\(Int(walk.distance))m"
             : String(format: "%.1fkm", walk.distance / 1_000)
         let minutes = Int(walk.duration / 60)
-        guard minutes >= 1 else { return "이 날 걸은 길 \(distance)" }
-        return "이 날 걸은 길 \(distance) · \(minutes)분"
+        guard minutes >= 1 else { return String(localized: "이 날 걸은 길 \(distance)") }
+        return String(localized: "이 날 걸은 길 \(distance) · \(minutes)분")
     }
 
     private func timeText(_ date: Date) -> String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "a h:mm"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("jmm")
         return formatter.string(from: date)
     }
 

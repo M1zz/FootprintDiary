@@ -37,13 +37,13 @@ enum LandmarkKind: String, CaseIterable {
 
     var title: String {
         switch self {
-        case .tree: return "나무"
-        case .tower: return "전망대"
-        case .lighthouse: return "등대"
-        case .temple: return "기둥 건물"
-        case .cup: return "찻잔"
-        case .bench: return "쉼터"
-        case .camera: return "표지물"
+        case .tree: return String(localized: "나무")
+        case .tower: return String(localized: "전망대")
+        case .lighthouse: return String(localized: "등대")
+        case .temple: return String(localized: "기둥 건물")
+        case .cup: return String(localized: "찻잔")
+        case .bench: return String(localized: "쉼터")
+        case .camera: return String(localized: "표지물")
         }
     }
 

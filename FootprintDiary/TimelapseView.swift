@@ -61,7 +61,6 @@ struct TimelapseView: View {
             DatePicker("끝", selection: $endDate, in: startDate..., displayedComponents: .date)
                 .labelsHidden()
         }
-        .environment(\.locale, Locale(identifier: "ko_KR"))
         .padding(.horizontal)
         .padding(.vertical, 8)
     }
@@ -281,15 +280,15 @@ private struct TimelapsePlayerView: View {
 
     private static let dayFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "M월 d일 (E)"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("MMMdE")
         return formatter
     }()
 
     private static let shortDayFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "M/d"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("Md")
         return formatter
     }()
 

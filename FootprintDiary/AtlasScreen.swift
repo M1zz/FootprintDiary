@@ -528,6 +528,14 @@ struct AtlasScreen: View {
             .onAppear {
                 rebuildAtlas()
                 AtlasTips.isMapIdle = isMapIdle
+                #if DEBUG
+                switch DemoSeed.screen {
+                case "compass": showCompass = true
+                case "stamps": showStampList = true
+                case "diary": showDiary = true
+                default: break
+                }
+                #endif
             }
             .onChange(of: isMapIdle) { AtlasTips.isMapIdle = isMapIdle }
             .onChange(of: period) { showPeriod() }
@@ -851,9 +859,9 @@ struct AtlasScreen: View {
     /// 확대·축소
     private var zoomButtons: some View {
         VStack(spacing: 1) {
-            zoomButton("plus", label: "확대") { mapProxy.zoomIn() }
+            zoomButton("plus", label: String(localized: "확대")) { mapProxy.zoomIn() }
             Divider().frame(width: 30)
-            zoomButton("minus", label: "축소") { mapProxy.zoomOut() }
+            zoomButton("minus", label: String(localized: "축소")) { mapProxy.zoomOut() }
         }
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10))
     }
@@ -911,11 +919,11 @@ struct AtlasScreen: View {
             VStack(alignment: .leading, spacing: 10) {
                 hintRow(
                     symbol: "seal.fill",
-                    text: "왼쪽 아래 **도장**을 누르면 지금 선 자리가 남아요"
+                    text: String(localized: "왼쪽 아래 **도장**을 누르면 지금 선 자리가 남아요")
                 )
                 hintRow(
                     symbol: "hand.point.up.left",
-                    text: "지도를 **길게 누르면** 가볼 곳을 미리 찍어 둘 수 있어요"
+                    text: String(localized: "지도를 **길게 누르면** 가볼 곳을 미리 찍어 둘 수 있어요")
                 )
             }
         }

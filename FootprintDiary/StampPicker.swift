@@ -39,7 +39,7 @@ struct StampPicker: View {
                 LazyVStack(alignment: .leading, spacing: 20) {
                     if query.isEmpty {
                         if !recent.isEmpty {
-                            StampGrid(title: "최근", kinds: recent, onPick: pick)
+                            StampGrid(title: String(localized: "최근"), kinds: recent, onPick: pick)
                         }
                         groupList
                     } else {
@@ -50,7 +50,7 @@ struct StampPicker: View {
                                 .frame(maxWidth: .infinity)
                                 .padding(.top, 40)
                         } else {
-                            StampGrid(title: "찾은 것 \(found.count)개", kinds: found, onPick: pick)
+                            StampGrid(title: String(localized: "찾은 것 \(found.count)개"), kinds: found, onPick: pick)
                         }
                     }
                 }
@@ -125,7 +125,7 @@ struct StampPicker: View {
                 .frame(width: 34, height: 34)
                 .background(RoundedRectangle(cornerRadius: 9).fill(Color(InkStyle.sealRed)))
 
-            Text(group.name)
+            Text(group.title)
                 .font(.body.weight(.medium))
                 .foregroundStyle(.primary)
 
@@ -143,7 +143,7 @@ struct StampPicker: View {
         .padding(.vertical, 10)
         .contentShape(Rectangle())
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(group.name), \(StampCatalog.kinds(in: group).count)가지")
+        .accessibilityLabel("\(group.title), \(StampCatalog.kinds(in: group).count)가지")
     }
 
     // MARK: - 고르기
@@ -185,7 +185,7 @@ private struct StampGroupScreen: View {
             .padding()
         }
         .background(Color(.systemGroupedBackground))
-        .navigationTitle(group.name)
+        .navigationTitle(group.title)
         .navigationBarTitleDisplayMode(.inline)
     }
 }
@@ -459,9 +459,9 @@ struct StampEditor: View {
     }
 
     private var visitButtonTitle: String {
-        if alreadyToday { return "오늘은 이미 남겼어요" }
+        if alreadyToday { return String(localized: "오늘은 이미 남겼어요") }
         // 안 가본 자리의 첫 걸음은 '한 번 더'가 아니라 '가본 곳이 되는' 일이다.
-        return stamp.isUnvisited ? "여기 왔어요 — 가본 곳으로" : "여기 다녀왔어요"
+        return stamp.isUnvisited ? String(localized: "여기 왔어요 — 가본 곳으로") : String(localized: "여기 다녀왔어요")
     }
 
     /// 다녀온 날들. 가장 나중에 온 날이 위다 — 되짚어 볼 때 궁금한 것은 늘 최근 쪽이다.
@@ -509,21 +509,24 @@ struct StampEditor: View {
 
     private var visitFooter: String {
         if alreadyToday {
-            return "하루에 한 번만 셉니다. 내일 다시 오면 또 남길 수 있어요."
+            return String(localized: "하루에 한 번만 셉니다. 내일 다시 오면 또 남길 수 있어요.")
         }
         let planned = stamp.isUnvisited
         guard let distanceFromHere else {
             return planned
-                ? "아직 가보지 않은 자리라 다녀온 횟수를 세지 않습니다. 위치를 켜고 이 자리에 닿으면 가본 곳이 됩니다."
-                : "현재 위치를 찾는 중이에요. 위치를 켜고 이 자리 근처에 오면 남길 수 있습니다."
+                ? String(localized: "아직 가보지 않은 자리라 다녀온 횟수를 세지 않습니다. 위치를 켜고 이 자리에 닿으면 가본 곳이 됩니다.")
+                : String(localized: "현재 위치를 찾는 중이에요. 위치를 켜고 이 자리 근처에 오면 남길 수 있습니다.")
         }
         if distanceFromHere <= MapStamp.visitRadius {
             return planned
-                ? "지금 이 자리에 있어요. 눌러서 가본 곳으로 굳히세요."
-                : "지금 이 자리에 있어요. 눌러서 다녀온 것으로 남기세요."
+                ? String(localized: "지금 이 자리에 있어요. 눌러서 가본 곳으로 굳히세요.")
+                : String(localized: "지금 이 자리에 있어요. 눌러서 다녀온 것으로 남기세요.")
         }
-        let gap = "여기서 \(distanceText(distanceFromHere)) 떨어져 있어요. \(Int(MapStamp.visitRadius))m 안에 들어가면 "
-        return gap + (planned ? "가본 곳이 됩니다." : "남길 수 있습니다.")
+        let gap = distanceText(distanceFromHere)
+        let radius = Int(MapStamp.visitRadius)
+        return planned
+            ? String(localized: "여기서 \(gap) 떨어져 있어요. \(radius)m 안에 들어가면 가본 곳이 됩니다.")
+            : String(localized: "여기서 \(gap) 떨어져 있어요. \(radius)m 안에 들어가면 남길 수 있습니다.")
     }
 
     private func addVisit() {
@@ -543,22 +546,22 @@ struct StampEditor: View {
     private func visitDayText(_ date: Date) -> String {
         let calendar = Calendar.current
         let time = StampEditor.clock.string(from: date)
-        if calendar.isDateInToday(date) { return "오늘 \(time)" }
-        if calendar.isDateInYesterday(date) { return "어제 \(time)" }
+        if calendar.isDateInToday(date) { return String(localized: "오늘 \(time)") }
+        if calendar.isDateInYesterday(date) { return String(localized: "어제 \(time)") }
         return StampEditor.day.string(from: date)
     }
 
     private static let clock: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "a h:mm"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("jmm")
         return formatter
     }()
 
     private static let day: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "yyyy년 M월 d일 (E)"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("yMMMdE")
         return formatter
     }()
 
@@ -701,15 +704,15 @@ struct StampEditor: View {
     private var subtitle: String {
         let trimmed = name.trimmingCharacters(in: .whitespacesAndNewlines)
         if trimmed.isEmpty {
-            return "\(stamp.kind.group) · \(dateText)"
+            return "\(stamp.kind.groupTitle) · \(dateText)"
         }
-        return "\(stamp.kind.title) · \(stamp.kind.group) · \(dateText)"
+        return "\(stamp.kind.title) · \(stamp.kind.groupTitle) · \(dateText)"
     }
 
     private var dateText: String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "M월 d일 (E) a h:mm"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("MMMdEjmm")
         return formatter.string(from: stamp.createdAt)
     }
 

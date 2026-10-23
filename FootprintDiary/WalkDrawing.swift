@@ -178,8 +178,8 @@ struct WalkDayCard: View {
         }
 
         private var summaryText: String {
-            guard entry.newDistance >= 1 else { return "늘 걷던 길만 걸었어요" }
-            return "\(distanceText(entry.walk.distance)) 중 \(distanceText(entry.newDistance))가 처음"
+            guard entry.newDistance >= 1 else { return String(localized: "늘 걷던 길만 걸었어요") }
+            return String(localized: "\(distanceText(entry.walk.distance)) 중 \(distanceText(entry.newDistance))가 처음")
         }
 
         private func distanceText(_ meters: CLLocationDistance) -> String {
@@ -202,9 +202,9 @@ struct WalkDayCard: View {
         VStack(alignment: .leading, spacing: 8) {
             if walk.distance > 0 {
                 HStack(spacing: 16) {
-                    stat(value: distanceText, label: "걸음")
+                    stat(value: distanceText, label: String(localized: "걸음"))
                     if walk.duration > 60 {
-                        stat(value: durationText, label: "시간")
+                        stat(value: durationText, label: String(localized: "시간"))
                     }
                     if walk.walkCount > 1 {
                         Text("\(walk.walkCount)번 나갔어요")
@@ -222,7 +222,7 @@ struct WalkDayCard: View {
                 }
             }
 
-            Text(note.isEmpty ? "한 줄 남겨보세요" : note)
+            Text(note.isEmpty ? String(localized: "한 줄 남겨보세요") : note)
                 .font(.subheadline)
                 .foregroundStyle(note.isEmpty ? .tertiary : .secondary)
                 .lineLimit(2)
@@ -247,15 +247,15 @@ struct WalkDayCard: View {
 
     private var durationText: String {
         let minutes = Int(walk.duration / 60)
-        if minutes < 60 { return "\(minutes)분" }
-        return "\(minutes / 60)시간 \(minutes % 60)분"
+        if minutes < 60 { return String(localized: "\(minutes)분") }
+        return String(localized: "\(minutes / 60)시간 \(minutes % 60)분")
     }
 
     private var timeRangeText: String {
         guard let start = walk.startTime, let end = walk.endTime else { return "" }
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "a h:mm"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("jmm")
         return formatter.string(from: start) + " ~ " + formatter.string(from: end)
     }
 }

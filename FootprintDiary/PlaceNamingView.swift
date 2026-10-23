@@ -249,8 +249,8 @@ struct DiscoveryReviewView: View {
 
     private func visitDescription(_ visit: Visit) -> String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "M월 d일 a h:mm"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("MMMdjmm")
         var text = formatter.string(from: visit.arrivalDate) + "에 머물렀던 곳"
         if let address = visit.address, !address.isEmpty {
             text += "\n" + address

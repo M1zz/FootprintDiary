@@ -31,8 +31,8 @@ enum WalkFilmExporter {
 
         var errorDescription: String? {
             switch self {
-            case .nothingToDraw: return "이 기간에는 그릴 발자국이 없어요."
-            case .cannotWrite: return "영상을 만들지 못했어요. 저장 공간을 확인해주세요."
+            case .nothingToDraw: return String(localized: "이 기간에는 그릴 발자국이 없어요.")
+            case .cannotWrite: return String(localized: "영상을 만들지 못했어요. 저장 공간을 확인해주세요.")
             }
         }
     }
@@ -48,7 +48,7 @@ enum WalkFilmExporter {
         guard !reel.isEmpty else { throw ExportError.nothingToDraw }
 
         let url = FileManager.default.temporaryDirectory
-            .appendingPathComponent("내지도-\(Int(Date().timeIntervalSince1970)).mp4")
+            .appendingPathComponent(String(localized: "내지도-\(Int(Date().timeIntervalSince1970)).mp4"))
         try? FileManager.default.removeItem(at: url)
 
         guard let writer = try? AVAssetWriter(outputURL: url, fileType: .mp4) else {

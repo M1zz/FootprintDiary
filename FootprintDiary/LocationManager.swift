@@ -96,9 +96,9 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         var message: String {
             switch self {
             case .permissionDenied:
-                return "위치 권한이 꺼져 있어요. 설정에서 위치 접근을 허용해주세요."
+                return String(localized: "위치 권한이 꺼져 있어요. 설정에서 위치 접근을 허용해주세요.")
             case .locationUnavailable:
-                return "현재 위치를 가져오지 못했어요. 잠시 후 다시 시도해주세요.\n(시뮬레이터라면 Features > Location에서 위치를 설정해주세요.)"
+                return String(localized: "현재 위치를 가져오지 못했어요. 잠시 후 다시 시도해주세요.\n(시뮬레이터라면 Features > Location에서 위치를 설정해주세요.)")
             }
         }
     }
@@ -331,7 +331,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         Task { @MainActor [weak self] in
             try? await Task.sleep(nanoseconds: UInt64(deadline * 1_000_000_000))
             guard let self, !self.didReceiveMotion, self.isDetectingActivity else { return }
-            self.diagnostics.motionState = "대답 없음 — 걷기 판정 없이 기록"
+            self.diagnostics.motionState = String(localized: "대답 없음 — 걷기 판정 없이 기록")
             self.addUpdateReason(.walking)
         }
     }
@@ -375,7 +375,7 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
         if isInVehicleHold {
             // 차에 타고 있는 동안 몇 걸음 잡히는 건 진동이다. 꾸준히 걸어야 내린 것으로 본다.
             guard isSustained else {
-                diagnostics.motionState = "탈것에서 내렸는지 확인 중 — 걸음 \(recentSteps.reduce(0) { $0 + $1.steps })"
+                diagnostics.motionState = String(localized: "탈것에서 내렸는지 확인 중 — 걸음 \(recentSteps.reduce(0) { $0 + $1.steps })")
                 return
             }
         }
@@ -429,16 +429,16 @@ final class LocationManager: NSObject, ObservableObject, CLLocationManagerDelega
     /// 모션이 알려 준 상태를 사람 말로 (계기판에 그대로 보여 준다)
     private static func describe(_ activity: CMMotionActivity) -> String {
         var names: [String] = []
-        if activity.walking { names.append("걷기") }
-        if activity.running { names.append("뛰기") }
-        if activity.cycling { names.append("자전거") }
-        if activity.automotive { names.append("차량") }
-        if activity.stationary { names.append("멈춤") }
-        if activity.unknown || names.isEmpty { names.append("알 수 없음") }
+        if activity.walking { names.append(String(localized: "걷기")) }
+        if activity.running { names.append(String(localized: "뛰기")) }
+        if activity.cycling { names.append(String(localized: "자전거")) }
+        if activity.automotive { names.append(String(localized: "차량")) }
+        if activity.stationary { names.append(String(localized: "멈춤")) }
+        if activity.unknown || names.isEmpty { names.append(String(localized: "알 수 없음")) }
         let confidence = switch activity.confidence {
-        case .high: "확실"
-        case .medium: "보통"
-        default: "낮음(무시됨)"
+        case .high: String(localized: "확실")
+        case .medium: String(localized: "보통")
+        default: String(localized: "낮음(무시됨)")
         }
         return names.joined(separator: "·") + " · " + confidence
     }

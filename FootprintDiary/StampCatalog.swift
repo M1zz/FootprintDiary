@@ -16,9 +16,24 @@ import Foundation
 /// 스탬프 한 종류
 struct StampKind: Identifiable, Hashable {
     let id: String
-    let title: String
+    /// 목록에 적힌 이름(한국어). 문자열 카탈로그의 키이기도 하다.
+    let titleKey: String
     let symbolName: String
+    /// 갈래 이름(한국어 키). 갈래를 가르는 데만 쓰고, 화면에는 `groupTitle`을 보인다.
     let group: String
+
+    init(id: String, title: String, symbolName: String, group: String) {
+        self.id = id
+        self.titleKey = title
+        self.symbolName = symbolName
+        self.group = group
+    }
+
+    /// 화면에 보이는 이름 (앱이 보이는 언어로)
+    var title: String { String(localized: String.LocalizationValue(titleKey)) }
+
+    /// 화면에 보이는 갈래 이름
+    var groupTitle: String { StampGroup.localizedTitle(group) }
 }
 
 /// 스탬프의 갈래.
@@ -31,6 +46,13 @@ struct StampGroup: Identifiable, Hashable {
     let symbolName: String
 
     var id: String { name }
+
+    /// 화면에 보이는 갈래 이름 (name 은 한국어 키로 남겨 갈래를 가르는 데 쓴다)
+    var title: String { Self.localizedTitle(name) }
+
+    static func localizedTitle(_ name: String) -> String {
+        String(localized: String.LocalizationValue(name))
+    }
 }
 
 enum StampCatalog {
@@ -285,6 +307,9 @@ enum StampCatalog {
     static func search(_ text: String) -> [StampKind] {
         let query = text.trimmingCharacters(in: .whitespaces)
         guard !query.isEmpty else { return [] }
-        return all.filter { $0.title.localizedCaseInsensitiveContains(query) }
+        return all.filter {
+            $0.title.localizedCaseInsensitiveContains(query)
+                || $0.titleKey.localizedCaseInsensitiveContains(query)
+        }
     }
 }

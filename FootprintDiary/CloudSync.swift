@@ -106,12 +106,12 @@ final class CloudSync: ObservableObject {
 
     var title: String {
         switch state {
-        case .on: return "아이클라우드에 저장 중"
-        case .signedOut: return "아이클라우드에 로그인되어 있지 않아요"
-        case .restricted: return "아이클라우드를 쓸 수 없어요"
-        case .checking: return "아이클라우드 상태를 보는 중"
-        case .localOnly: return "이 기기에만 저장 중"
-        case .failed: return "아이클라우드에 닿지 못했어요"
+        case .on: return String(localized: "아이클라우드에 저장 중")
+        case .signedOut: return String(localized: "아이클라우드에 로그인되어 있지 않아요")
+        case .restricted: return String(localized: "아이클라우드를 쓸 수 없어요")
+        case .checking: return String(localized: "아이클라우드 상태를 보는 중")
+        case .localOnly: return String(localized: "이 기기에만 저장 중")
+        case .failed: return String(localized: "아이클라우드에 닿지 못했어요")
         }
     }
 
@@ -119,20 +119,20 @@ final class CloudSync: ObservableObject {
         switch state {
         case .on:
             guard let lastExchange else {
-                return "걸음·스탬프·일기가 내 아이클라우드에 함께 저장됩니다. 기기를 바꿔도 그대로 따라와요."
+                return String(localized: "걸음·스탬프·일기가 내 아이클라우드에 함께 저장됩니다. 기기를 바꿔도 그대로 따라와요.")
             }
             let when = Self.clock.string(from: lastExchange.date)
             return lastExchange.succeeded
-                ? "마지막으로 주고받은 때: \(when)"
-                : "마지막으로 주고받다가 멈췄어요 (\(when)). 잠시 뒤 저절로 다시 시도합니다."
+                ? String(localized: "마지막으로 주고받은 때: \(when)")
+                : String(localized: "마지막으로 주고받다가 멈췄어요 (\(when)). 잠시 뒤 저절로 다시 시도합니다.")
         case .signedOut:
-            return "설정 앱에서 아이클라우드에 로그인하면 기록이 저장되기 시작해요. 그때까지 기록은 이 기기 안에만 남습니다."
+            return String(localized: "설정 앱에서 아이클라우드에 로그인하면 기록이 저장되기 시작해요. 그때까지 기록은 이 기기 안에만 남습니다.")
         case .restricted:
-            return "기기 설정이 아이클라우드를 막고 있어요. 기록은 이 기기 안에만 남습니다."
+            return String(localized: "기기 설정이 아이클라우드를 막고 있어요. 기록은 이 기기 안에만 남습니다.")
         case .checking:
-            return "잠시 뒤 다시 알아봅니다."
+            return String(localized: "잠시 뒤 다시 알아봅니다.")
         case .localOnly:
-            return "아이클라우드를 붙이지 못해 기기 안에만 열었어요. 기록은 그대로 남아 있고, 다음에 켤 때 다시 시도합니다."
+            return String(localized: "아이클라우드를 붙이지 못해 기기 안에만 열었어요. 기록은 그대로 남아 있고, 다음에 켤 때 다시 시도합니다.")
         case .failed(let message):
             return message
         }
@@ -154,8 +154,8 @@ final class CloudSync: ObservableObject {
 
     private static let clock: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "M월 d일 a h:mm"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("MMMdjmm")
         return formatter
     }()
 }

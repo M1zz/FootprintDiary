@@ -164,20 +164,22 @@ struct WalkCalendarScreen: View {
 
     private var monthTitle: String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = calendar.isDate(month, equalTo: thisMonth, toGranularity: .year)
-            ? "M월"
-            : "yyyy년 M월"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate(
+            calendar.isDate(month, equalTo: thisMonth, toGranularity: .year) ? "MMMM" : "yMMMM"
+        )
         return formatter.string(from: month)
     }
 
     // MARK: 칸
 
     /// 요일 머리글. 한 주가 무슨 요일부터인지는 지역 설정을 따르고,
-    /// 글자는 앱의 다른 곳과 같이 우리말로 적는다 — 기기 언어가 영어라도
-    /// 이 앱의 글은 전부 우리말이라 거기만 S M T가 서면 남의 화면 같다.
+    /// 글자는 앱이 보이는 언어로 적는다 (일요일부터 시작하는 7개).
     private var weekdayRow: some View {
-        let symbols = ["일", "월", "화", "수", "목", "금", "토"]
+        let formatter = DateFormatter()
+        formatter.locale = .current
+        let symbols = formatter.veryShortStandaloneWeekdaySymbols
+            ?? ["S", "M", "T", "W", "T", "F", "S"]
         return HStack(spacing: 4) {
             ForEach(0..<7, id: \.self) { column in
                 // firstWeekday는 1이 일요일이다. 월요일부터 시작하는 지역이면 2로 온다.
@@ -230,9 +232,9 @@ struct WalkCalendarScreen: View {
 
     private var legend: some View {
         HStack(spacing: 14) {
-            swatch(Color(DotPalette.today), "오늘")
-            swatch(Color(DotPalette.past), "지난 걸음")
-            swatch(Color(DotPalette.color(isToday: false, freshness: 0, dark: false)), "석 달 넘음")
+            swatch(Color(DotPalette.today), String(localized: "오늘"))
+            swatch(Color(DotPalette.past), String(localized: "지난 걸음"))
+            swatch(Color(DotPalette.color(isToday: false, freshness: 0, dark: false)), String(localized: "석 달 넘음"))
         }
         .font(.caption2)
         .foregroundStyle(.secondary)
@@ -321,23 +323,23 @@ private struct DayCell: View {
 
     private var accessibilityLabel: String {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "M월 d일"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("MMMd")
         let date = formatter.string(from: day)
 
         var parts: [String] = [date]
         if let walk, walk.distance >= 1 {
             parts.append(walk.distance < 1_000
-                         ? "\(Int(walk.distance))미터"
-                         : String(format: "%.1f킬로미터", walk.distance / 1_000))
+                         ? String(localized: "\(Int(walk.distance))미터")
+                         : String(format: String(localized: "%.1f킬로미터"), walk.distance / 1_000))
         }
         // 도장은 이름으로 읽어 준다. '도장 2개'로는 어디였는지 알 수 없는데,
         // 눈으로 훑을 수 없는 사람에게는 그 이름이 이 칸의 거의 전부다.
         if !stamps.isEmpty {
             parts.append(stamps.prefix(3).map(\.displayName).joined(separator: ", "))
-            if stamps.count > 3 { parts.append("외 \(stamps.count - 3)곳") }
+            if stamps.count > 3 { parts.append(String(localized: "외 \(stamps.count - 3)곳")) }
         }
-        if parts.count == 1 { return "\(date), 걸음 없음" }
+        if parts.count == 1 { return String(localized: "\(date), 걸음 없음") }
         return parts.joined(separator: ", ")
     }
 }

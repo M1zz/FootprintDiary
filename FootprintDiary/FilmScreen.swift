@@ -150,7 +150,7 @@ struct FilmScreen: View {
                     Button {
                         span = item
                     } label: {
-                        Text(item.rawValue)
+                        Text(LocalizedStringKey(item.rawValue))
                             .font(.subheadline.weight(span == item ? .semibold : .regular))
                             .foregroundStyle(span == item ? Color.white : Color(InkStyle.ink))
                             .padding(.horizontal, 14)
@@ -178,7 +178,6 @@ struct FilmScreen: View {
         if span == .pick {
             DatePicker("어느 날", selection: $picked, in: pickableDays, displayedComponents: .date)
                 .datePickerStyle(.compact)
-                .environment(\.locale, Locale(identifier: "ko_KR"))
                 .font(.subheadline)
                 .disabled(isExporting)
         }

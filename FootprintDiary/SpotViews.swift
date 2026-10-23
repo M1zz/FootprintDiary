@@ -139,8 +139,8 @@ struct SpotDetailSheet: View {
     private var statusText: String {
         if let collectedAt = spot.collectedAt {
             let formatter = DateFormatter()
-            formatter.locale = Locale(identifier: "ko_KR")
-            formatter.dateFormat = "yyyy년 M월 d일"
+            formatter.locale = .current
+            formatter.setLocalizedDateFormatFromTemplate("yMMMd")
             return formatter.string(from: collectedAt) + "에 다녀왔어요"
         }
         guard let distance else { return "아직 탐험하지 않은 곳" }

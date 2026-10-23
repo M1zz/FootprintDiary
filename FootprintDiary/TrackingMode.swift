@@ -24,15 +24,15 @@ enum TrackingMode: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .thorough: return "빠짐없이 기록"
-        case .thrifty: return "배터리 아끼기"
+        case .thorough: return String(localized: "빠짐없이 기록")
+        case .thrifty: return String(localized: "배터리 아끼기")
         }
     }
 
     var summary: String {
         switch self {
-        case .thorough: return "앱을 열지 않고 걸어도 남습니다. 배터리를 더 씁니다."
-        case .thrifty: return "앱을 열고 걷기 시작해야 남습니다. 배터리를 덜 씁니다."
+        case .thorough: return String(localized: "앱을 열지 않고 걸어도 남습니다. 배터리를 더 씁니다.")
+        case .thrifty: return String(localized: "앱을 열고 걷기 시작해야 남습니다. 배터리를 덜 씁니다.")
         }
     }
 
@@ -41,15 +41,15 @@ enum TrackingMode: String, CaseIterable, Identifiable {
         switch self {
         case .thorough:
             return [
-                "앱이 꺼져 있어도 위치가 크게 바뀌면 되살아나 이어서 기록해요",
-                "걸음 수로 걷기를 알아채서 산책 앞부분을 놓치지 않아요",
-                "경로 점을 8m마다 남겨 굽은 길이 뭉개지지 않아요"
+                String(localized: "앱이 꺼져 있어도 위치가 크게 바뀌면 되살아나 이어서 기록해요"),
+                String(localized: "걸음 수로 걷기를 알아채서 산책 앞부분을 놓치지 않아요"),
+                String(localized: "경로 점을 8m마다 남겨 굽은 길이 뭉개지지 않아요")
             ]
         case .thrifty:
             return [
-                "앱을 열고 걷기 시작할 때만 기록해요",
-                "걷기 판정이 확실해진 뒤 시작하므로 앞부분이 조금 빠질 수 있어요",
-                "경로 점을 12m마다 남겨요"
+                String(localized: "앱을 열고 걷기 시작할 때만 기록해요"),
+                String(localized: "걷기 판정이 확실해진 뒤 시작하므로 앞부분이 조금 빠질 수 있어요"),
+                String(localized: "경로 점을 12m마다 남겨요")
             ]
         }
     }

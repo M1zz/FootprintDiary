@@ -353,7 +353,7 @@ struct DayTimelineScreen: View {
     private func title(of entry: Entry) -> String {
         if let stamp = entry.stamp { return stamp.displayName }
         if let name = entry.row.stop.name { return name }
-        return "이름 없는 자리"
+        return String(localized: "이름 없는 자리")
     }
 
     /// 이름 아래 한 줄.
@@ -367,9 +367,9 @@ struct DayTimelineScreen: View {
     /// 적어 두지 않으면 다녀온 자리에 왜 또 묻는지 알 수 없다.
     private func subtitle(of entry: Entry) -> String? {
         guard let stamp = entry.stamp else { return nil }
-        if stamp.isUnvisited { return "가볼 곳으로 찍어 둔 자리" }
+        if stamp.isUnvisited { return String(localized: "가볼 곳으로 찍어 둔 자리") }
         guard stamp.visitCount > 1 else { return nil }
-        return "\(stamp.visitCount)번째 다녀온 자리"
+        return String(localized: "\(stamp.visitCount)번째 다녀온 자리")
     }
 
     private var emptyState: some View {

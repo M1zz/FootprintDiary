@@ -22,25 +22,25 @@ struct TrackingDiagnosticsView: View {
         NavigationStack {
             List {
                 Section("지금 상태") {
-                    row("자동 기록", locationManager.isTrackingEnabled ? "켜짐" : "꺼짐 — 아무것도 기록되지 않아요",
+                    row(String(localized: "자동 기록"), locationManager.isTrackingEnabled ? String(localized: "켜짐") : String(localized: "꺼짐 — 아무것도 기록되지 않아요"),
                         warn: !locationManager.isTrackingEnabled)
-                    row("기록 방식", locationManager.trackingMode.title)
-                    row("저전력 모드", isLowPower ? "켜짐 — 배경 기록이 줄어요" : "꺼짐", warn: isLowPower)
-                    row("걷기로 보고 기록 중", locationManager.diagnostics.isWalking ? "예" : "아니오",
+                    row(String(localized: "기록 방식"), locationManager.trackingMode.title)
+                    row(String(localized: "저전력 모드"), isLowPower ? String(localized: "켜짐 — 배경 기록이 줄어요") : String(localized: "꺼짐"), warn: isLowPower)
+                    row(String(localized: "걷기로 보고 기록 중"), locationManager.diagnostics.isWalking ? String(localized: "예") : String(localized: "아니오"),
                         warn: !locationManager.diagnostics.isWalking)
-                    row("모션이 알려 준 상태", locationManager.diagnostics.motionState)
-                    row("모션 권한", TrackingDiagnostics.motionAuthorizationText,
-                        warn: TrackingDiagnostics.motionAuthorizationText.contains("거부"))
-                    row("위치 권한", locationText,
+                    row(String(localized: "모션이 알려 준 상태"), locationManager.diagnostics.motionState)
+                    row(String(localized: "모션 권한"), TrackingDiagnostics.motionAuthorizationText,
+                        warn: TrackingDiagnostics.isMotionDenied)
+                    row(String(localized: "위치 권한"), locationText,
                         warn: !(locationManager.authorizationStatus == .authorizedAlways))
-                    row("마지막 위치 정확도", accuracyText, warn: isAccuracyBad)
-                    row("마지막 위치가 들어온 지", fixAgeText)
+                    row(String(localized: "마지막 위치 정확도"), accuracyText, warn: isAccuracyBad)
+                    row(String(localized: "마지막 위치가 들어온 지"), fixAgeText)
                 }
 
                 Section {
-                    row("이번 실행에서 저장한 점", "\(locationManager.diagnostics.accepted)개")
-                    row("지금까지 쌓인 점 전부", "\(track.count)개")
-                    row("그리기엔 정확도가 모자란 점", "\(lowQualityCount)개")
+                    row(String(localized: "이번 실행에서 저장한 점"), String(localized: "\(locationManager.diagnostics.accepted)개"))
+                    row(String(localized: "지금까지 쌓인 점 전부"), String(localized: "\(track.count)개"))
+                    row(String(localized: "그리기엔 정확도가 모자란 점"), String(localized: "\(lowQualityCount)개"))
                 } header: {
                     Text("점 세기")
                 } footer: {
@@ -57,7 +57,7 @@ struct TrackingDiagnosticsView: View {
                         ForEach(rejections, id: \.key) { rejection, count in
                             VStack(alignment: .leading, spacing: 3) {
                                 HStack {
-                                    Text(rejection.rawValue)
+                                    Text(LocalizedStringKey(rejection.rawValue))
                                     Spacer()
                                     Text("\(count)번")
                                         .foregroundStyle(.secondary)
@@ -74,7 +74,7 @@ struct TrackingDiagnosticsView: View {
                     Text("버려진 까닭")
                 } footer: {
                     if let (rejection, count) = locationManager.diagnostics.topRejection {
-                        Text("가장 많이 막힌 곳: \(rejection.rawValue) (\(count)번). \(rejection.hint)")
+                        Text("가장 많이 막힌 곳: \(String(localized: String.LocalizationValue(rejection.rawValue))) (\(count)번). \(rejection.hint)")
                     }
                 }
 
@@ -117,7 +117,7 @@ struct TrackingDiagnosticsView: View {
     /// 권한이 모자라 기록이 막힐 수 있는 상태인가
     private var needsSettings: Bool {
         locationManager.authorizationStatus != .authorizedAlways
-            || TrackingDiagnostics.motionAuthorizationText.contains("거부")
+            || TrackingDiagnostics.isMotionDenied
     }
 
     // MARK: - 줄
@@ -134,17 +134,17 @@ struct TrackingDiagnosticsView: View {
 
     private var locationText: String {
         switch locationManager.authorizationStatus {
-        case .authorizedAlways: return "항상 허용"
-        case .authorizedWhenInUse: return "앱 사용 중만 — 배경 기록 안 됨"
-        case .denied: return "거부됨"
-        case .restricted: return "제한됨"
-        default: return "아직 묻지 않음"
+        case .authorizedAlways: return String(localized: "항상 허용")
+        case .authorizedWhenInUse: return String(localized: "앱 사용 중만 — 배경 기록 안 됨")
+        case .denied: return String(localized: "거부됨")
+        case .restricted: return String(localized: "제한됨")
+        default: return String(localized: "아직 묻지 않음")
         }
     }
 
     private var accuracyText: String {
-        guard let accuracy = locationManager.diagnostics.lastAccuracy else { return "아직 없음" }
-        return String(format: "±%.0fm (그리기 기준 %.0fm)", accuracy, LocationManager.maxDrawAccuracy)
+        guard let accuracy = locationManager.diagnostics.lastAccuracy else { return String(localized: "아직 없음") }
+        return String(format: String(localized: "±%.0fm (그리기 기준 %.0fm)"), accuracy, LocationManager.maxDrawAccuracy)
     }
 
     private var isAccuracyBad: Bool {
@@ -153,9 +153,9 @@ struct TrackingDiagnosticsView: View {
     }
 
     private var fixAgeText: String {
-        guard let at = locationManager.diagnostics.lastFixAt else { return "아직 없음" }
+        guard let at = locationManager.diagnostics.lastFixAt else { return String(localized: "아직 없음") }
         let seconds = Int(max(0, clock.now.timeIntervalSince(at)))
-        return seconds < 60 ? "\(seconds)초 전" : "\(seconds / 60)분 전"
+        return seconds < 60 ? String(localized: "\(seconds)초 전") : String(localized: "\(seconds / 60)분 전")
     }
 }
 

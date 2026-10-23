@@ -132,7 +132,7 @@ final class WalkSpotView: MKAnnotationView {
         // 묶인 표지는 위로 겹쳐 쌓이지 않게 묶음 이름을 비운다
         clusteringIdentifier = annotation is MKClusterAnnotation ? nil : Self.clusterIdentifier
         image = Self.image(traits: traitCollection)
-        accessibilityLabel = count > 1 ? "걸은 곳 \(count)군데" : "걸은 곳"
+        accessibilityLabel = count > 1 ? String(localized: "걸은 곳 \(count)군데") : String(localized: "걸은 곳")
         isAccessibilityElement = true
 
         badge.isHidden = count < 2

@@ -49,31 +49,31 @@ enum MapControl: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .diary: return "일지 단추"
-        case .stampList: return "내가 찍은 곳 단추"
-        case .compass: return "개척 나침반 단추"
-        case .film: return "그려지는 것 보기 단추"
-        case .period: return "기간 단추"
-        case .skin: return "그림지도 단추"
-        case .neighborhood: return "내 동네 테두리"
-        case .peek: return "비춰보기 단추"
-        case .scaleBar: return "배율 막대"
-        case .zoom: return "확대·축소 단추"
+        case .diary: return String(localized: "일지 단추")
+        case .stampList: return String(localized: "내가 찍은 곳 단추")
+        case .compass: return String(localized: "개척 나침반 단추")
+        case .film: return String(localized: "그려지는 것 보기 단추")
+        case .period: return String(localized: "기간 단추")
+        case .skin: return String(localized: "그림지도 단추")
+        case .neighborhood: return String(localized: "내 동네 테두리")
+        case .peek: return String(localized: "비춰보기 단추")
+        case .scaleBar: return String(localized: "배율 막대")
+        case .zoom: return String(localized: "확대·축소 단추")
         }
     }
 
     var summary: String {
         switch self {
-        case .diary: return "왼쪽 위. 날마다 쓴 일기를 모아 봐요."
-        case .stampList: return "왼쪽 위. 찍은 자리를 목록으로 봐요."
-        case .compass: return "오른쪽 위. 어느 쪽이 아직 하얀지 가리켜요."
-        case .film: return "오른쪽 위. 내 지도가 그려지는 것을 영상으로 봐요."
-        case .period: return "왼쪽 아래. 이번 주, 이번 달처럼 기간으로 좁혀 봐요."
-        case .skin: return "왼쪽 아래. 먹 지도와 그림지도를 오가요."
-        case .neighborhood: return "걸은 자리로 내 동네가 어디까지인지 점선으로 그려요. 왼쪽 아래 단추로도 켜고 꺼요."
-        case .peek: return "왼쪽 아래. 누르면 배경 지도가 비치고, 다시 누르면 종이로 돌아가요."
-        case .scaleBar: return "왼쪽 아래. 지금 배율을 막대로 보여 줘요."
-        case .zoom: return "오른쪽. 두 손가락 대신 눌러서 확대·축소해요."
+        case .diary: return String(localized: "왼쪽 위. 날마다 쓴 일기를 모아 봐요.")
+        case .stampList: return String(localized: "왼쪽 위. 찍은 자리를 목록으로 봐요.")
+        case .compass: return String(localized: "오른쪽 위. 어느 쪽이 아직 하얀지 가리켜요.")
+        case .film: return String(localized: "오른쪽 위. 내 지도가 그려지는 것을 영상으로 봐요.")
+        case .period: return String(localized: "왼쪽 아래. 이번 주, 이번 달처럼 기간으로 좁혀 봐요.")
+        case .skin: return String(localized: "왼쪽 아래. 먹 지도와 그림지도를 오가요.")
+        case .neighborhood: return String(localized: "걸은 자리로 내 동네가 어디까지인지 점선으로 그려요. 왼쪽 아래 단추로도 켜고 꺼요.")
+        case .peek: return String(localized: "왼쪽 아래. 누르면 배경 지도가 비치고, 다시 누르면 종이로 돌아가요.")
+        case .scaleBar: return String(localized: "왼쪽 아래. 지금 배율을 막대로 보여 줘요.")
+        case .zoom: return String(localized: "오른쪽. 두 손가락 대신 눌러서 확대·축소해요.")
         }
     }
 
@@ -106,23 +106,23 @@ enum AtlasDestination: String, CaseIterable, Identifiable {
 
     var title: String {
         switch self {
-        case .diary: return "일지"
-        case .stampList: return "내가 찍은 곳"
-        case .timeline: return "오늘의 발자취"
-        case .compass: return "개척 나침반"
-        case .film: return "그려지는 것 보기"
-        case .period: return "기간으로 좁혀 보기"
+        case .diary: return String(localized: "일지")
+        case .stampList: return String(localized: "내가 찍은 곳")
+        case .timeline: return String(localized: "오늘의 발자취")
+        case .compass: return String(localized: "개척 나침반")
+        case .film: return String(localized: "그려지는 것 보기")
+        case .period: return String(localized: "기간으로 좁혀 보기")
         }
     }
 
     var summary: String {
         switch self {
-        case .diary: return "날마다 쓴 일기와 사진"
-        case .stampList: return "찍은 자리를 갈래별로, 오늘 것만 따로"
-        case .timeline: return "오늘 들른 곳을 차례대로"
-        case .compass: return "어느 쪽으로 걸어야 새 자리가 나오는지"
-        case .film: return "내 지도가 그려지는 과정을 영상으로"
-        case .period: return "이번 주, 이번 달, 올해만 골라서"
+        case .diary: return String(localized: "날마다 쓴 일기와 사진")
+        case .stampList: return String(localized: "찍은 자리를 갈래별로, 오늘 것만 따로")
+        case .timeline: return String(localized: "오늘 들른 곳을 차례대로")
+        case .compass: return String(localized: "어느 쪽으로 걸어야 새 자리가 나오는지")
+        case .film: return String(localized: "내 지도가 그려지는 과정을 영상으로")
+        case .period: return String(localized: "이번 주, 이번 달, 올해만 골라서")
         }
     }
 

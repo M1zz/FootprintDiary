@@ -272,15 +272,15 @@ private struct DayTimelapsePlayerView: View {
 
     private static let dayFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "M월 d일 (E)"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("MMMdE")
         return formatter
     }()
 
     private static let timeFormatter: DateFormatter = {
         let formatter = DateFormatter()
-        formatter.locale = Locale(identifier: "ko_KR")
-        formatter.dateFormat = "a h:mm"
+        formatter.locale = .current
+        formatter.setLocalizedDateFormatFromTemplate("jmm")
         return formatter
     }()
 

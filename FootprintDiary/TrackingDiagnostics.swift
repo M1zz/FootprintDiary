@@ -32,17 +32,17 @@ enum TrackRejection: String, CaseIterable, Identifiable {
     /// 이 까닭으로 자주 막힌다면 무엇을 손봐야 하는지
     var hint: String {
         switch self {
-        case .notWalking: return "모션 권한이 꺼져 있거나 걷기 판정이 안 되고 있어요"
-        case .staleFix: return "위치가 늦게 들어오고 있어요"
-        case .beforeStart: return "정상 — 켜기 직전의 묵은 위치를 버린 것"
-        case .warmupAccuracy: return "켠 직후 기준이 너무 엄해요"
-        case .accuracy: return "정확도 기준(25m)이 이 동네엔 너무 엄해요"
-        case .tooFast: return "차·자전거로 판정됐어요"
-        case .vehicleHold: return "정상 — 차를 탄 뒤 신호 대기 자리를 걸러 낸 것"
-        case .vehiclePurged: return "정상 — 차가 막 출발하거나 멈춘 자리를 나중에 지운 것"
-        case .jump: return "위치가 크게 튀고 있어요"
-        case .tooClose: return "정상 — 정해진 간격마다 한 점만 남긴다"
-        case .systemPaused: return "iOS가 '멈췄다'고 보고 껐어요. 되살리기를 시도했습니다"
+        case .notWalking: return String(localized: "모션 권한이 꺼져 있거나 걷기 판정이 안 되고 있어요")
+        case .staleFix: return String(localized: "위치가 늦게 들어오고 있어요")
+        case .beforeStart: return String(localized: "정상 — 켜기 직전의 묵은 위치를 버린 것")
+        case .warmupAccuracy: return String(localized: "켠 직후 기준이 너무 엄해요")
+        case .accuracy: return String(localized: "정확도 기준(25m)이 이 동네엔 너무 엄해요")
+        case .tooFast: return String(localized: "차·자전거로 판정됐어요")
+        case .vehicleHold: return String(localized: "정상 — 차를 탄 뒤 신호 대기 자리를 걸러 낸 것")
+        case .vehiclePurged: return String(localized: "정상 — 차가 막 출발하거나 멈춘 자리를 나중에 지운 것")
+        case .jump: return String(localized: "위치가 크게 튀고 있어요")
+        case .tooClose: return String(localized: "정상 — 정해진 간격마다 한 점만 남긴다")
+        case .systemPaused: return String(localized: "iOS가 '멈췄다'고 보고 껐어요. 되살리기를 시도했습니다")
         }
     }
 }
@@ -61,7 +61,7 @@ final class TrackingDiagnostics: ObservableObject {
     /// 지금 걷기로 보고 기록 중인지
     @Published var isWalking = false
     /// 마지막으로 모션이 알려 준 상태
-    @Published var motionState = "아직 없음"
+    @Published var motionState = String(localized: "아직 없음")
 
     func note(_ rejection: TrackRejection, count: Int = 1) {
         rejections[rejection, default: 0] += count
@@ -87,16 +87,21 @@ final class TrackingDiagnostics: ObservableObject {
     }
 
     /// 모션 권한 상태를 사람 말로
+    /// 모션 권한이 거부된 상태인가 (경고 표시에 쓴다 — 글자로 가르지 않는다)
+    static var isMotionDenied: Bool {
+        CMMotionActivityManager.authorizationStatus() == .denied
+    }
+
     static var motionAuthorizationText: String {
         guard CMMotionActivityManager.isActivityAvailable() else {
-            return "이 기기에서는 쓸 수 없음 (걷기 판정 없이 기록)"
+            return String(localized: "이 기기에서는 쓸 수 없음 (걷기 판정 없이 기록)")
         }
         switch CMMotionActivityManager.authorizationStatus() {
-        case .authorized: return "허용됨"
-        case .denied: return "거부됨 — 설정에서 켜야 기록됩니다"
-        case .restricted: return "제한됨"
-        case .notDetermined: return "아직 묻지 않음"
-        @unknown default: return "알 수 없음"
+        case .authorized: return String(localized: "허용됨")
+        case .denied: return String(localized: "거부됨 — 설정에서 켜야 기록됩니다")
+        case .restricted: return String(localized: "제한됨")
+        case .notDetermined: return String(localized: "아직 묻지 않음")
+        @unknown default: return String(localized: "알 수 없음")
         }
     }
 }

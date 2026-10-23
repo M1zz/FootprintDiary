@@ -68,9 +68,9 @@ enum StayPrompt {
     /// "2시간 10분"처럼 읽히게
     static func stayText(_ visit: Visit, now: Date = .now) -> String {
         let minutes = Int(stay(visit, now: now) / 60)
-        if minutes < 60 { return "\(minutes)분" }
+        if minutes < 60 { return String(localized: "\(minutes)분") }
         let hours = minutes / 60
         let rest = minutes % 60
-        return rest == 0 ? "\(hours)시간" : "\(hours)시간 \(rest)분"
+        return rest == 0 ? String(localized: "\(hours)시간") : String(localized: "\(hours)시간 \(rest)분")
     }
 }
