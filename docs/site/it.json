@@ -1,0 +1,173 @@
+{
+  "title": "Buktu Buktu: la mappa che disegni a piedi",
+  "description": "Una mappa che parte da un foglio bianco e si riempie solo dove cammini per la prima volta. Auto e metro non disegnano nulla. Tutto gratis.",
+  "hero": {
+    "headline": "Una mappa che si\nriempie solo a piedi",
+    "lead": "Parte da un foglio bianco. Si riempiono, un punto alla volta, solo i posti dove cammini, e percorrere cento volte la stessa via non la allarga. Per far crescere la mappa, prendi una strada nuova.",
+    "cta": "Scaricala gratis dall’App Store",
+    "note": "Tutte le funzioni sono gratuite, senza pubblicità."
+  },
+  "demo": {
+    "title": "Fai due passi",
+    "lead": "Trascina un dito o il mouse sul foglio per camminare. I punti blu sono vie già percorse. Guarda come cambia «Il percorso di oggi» se ci ripassi sopra o se vai da un’altra parte.",
+    "today": "Il percorso di oggi",
+    "walked": "A piedi",
+    "subway": "Prendi la metro",
+    "subwayOn": "In metro",
+    "reset": "Ricomincia",
+    "hint": "Trascina sul foglio per metterti in cammino.",
+    "fresh": "Una strada nuova. La mappa cresce.",
+    "same": "Qui ci sei già passato. Aumenta solo la distanza.",
+    "ride": "I tragitti in auto o in metro non vengono disegnati.",
+    "legendToday": "Oggi",
+    "legendPast": "Passi precedenti",
+    "legendFaded": "Oltre 3 mesi",
+    "note": "Qui trascini invece di camminare, con la stessa regola dell’app: tutto ciò che è entro 30 m da dove sei già passato conta come la stessa strada. Da tastiera, seleziona il foglio e cammina con i tasti freccia."
+  },
+  "problem": {
+    "title": "Sempre le stesse strade?",
+    "text": "Un contapassi conta i passi, ma non chiede mai dove ti hanno portato. Casa, stazione e ritorno, e l’anello si riempie lo stesso, mentre la stradina accanto resta un mistero per anni. Buktu Buktu conta solo i percorsi che fai per la prima volta: un buon motivo per allungare di un isolato oggi."
+  },
+  "features": [
+    {
+      "title": "Timbra i posti dove sei stato e dove vuoi andare",
+      "text": "Timbra il punto in cui ti trovi, oppure tieni premuto un punto qualsiasi della mappa. Ci sono 212 timbri tra cui scegliere, divisi per categoria.\nUn timbro messo dove non hai mai camminato resta un luogo da visitare e diventa visitato quando ci arrivi davvero. Fotografa l’insegna di un negozio: lo sfondo viene ritagliato e l’insegna resta in piedi come adesivo in quel punto.",
+      "shot": "03-stamps"
+    },
+    {
+      "title": "Prossima passeggiata: dove sei andato meno",
+      "text": "La Bussola dei pionieri divide la zona intorno a te in otto direzioni e indica quella che hai percorso meno.\nImpronte di oggi mette in fila i posti in cui ti sei fermato oggi, con la distanza percorsa tra uno e l’altro.",
+      "shot": "02-compass"
+    },
+    {
+      "title": "Ogni giorno lascia una forma",
+      "text": "Il calendario disegna la forma della camminata di ogni giorno invece di un numero. Tieni un diario con testo e foto, e scopri quanta parte di ogni passeggiata era terreno nuovo.\nScegli un periodo e guarda la tua mappa disegnarsi in un video da esportare.",
+      "shot": "04-calendar"
+    }
+  ],
+  "steps": {
+    "title": "Tre passi per iniziare",
+    "items": [
+      {
+        "title": "Apri l’app",
+        "text": "Si spiega un foglio bianco."
+      },
+      {
+        "title": "Consenti la posizione",
+        "text": "Scegli «Sempre» e attiva «Movimento e fitness» per registrare le camminate senza aprire l’app."
+      },
+      {
+        "title": "Esci",
+        "text": "Meno conosci la strada, più cresce la mappa."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Come leggere la mappa",
+    "rows": [
+      [
+        "Punti rossi",
+        "dove hai camminato oggi"
+      ],
+      [
+        "Punti indaco",
+        "passi precedenti, più scuri dove passi più spesso"
+      ],
+      [
+        "Punti grigi",
+        "posti in cui non torni da oltre tre mesi. Sbiadiscono, ma non spariscono mai"
+      ],
+      [
+        "Timbro tratteggiato",
+        "un luogo «Da visitare». Diventa visitato quando ci arrivi"
+      ],
+      [
+        "I percorsi che ho disegnato",
+        "lunghezza totale dei percorsi fatti per la prima volta"
+      ],
+      [
+        "Il percorso di oggi",
+        "quanta parte della camminata di oggi era nuova"
+      ],
+      [
+        "Vedi tutto insieme",
+        "nelle impostazioni, apre la Bussola dei pionieri, Impronte di oggi e il film della tua mappa"
+      ]
+    ],
+    "note": "Puoi scegliere tra la mappa a inchiostro e la Mappa illustrata."
+  },
+  "pricing": {
+    "title": "Tutte le funzioni sono gratuite",
+    "free": {
+      "name": "Gratis",
+      "items": [
+        "Una mappa che si riempie solo a piedi, con il conteggio dei percorsi nuovi",
+        "212 timbri e adesivi dalle insegne",
+        "Bussola dei pionieri e Impronte di oggi",
+        "Calendario e diario con testo e foto",
+        "Esporta il video della tua mappa che si disegna",
+        "Widget per la schermata Home e la schermata di blocco",
+        "Sincronizzazione iCloud tra dispositivi"
+      ]
+    },
+    "pro": {
+      "name": "Sostieni lo sviluppatore",
+      "items": [
+        "Se ti va, lascia una piccola mancia dalle impostazioni",
+        "La mancia non sblocca nulla. L’app resta identica"
+      ]
+    },
+    "note": "Niente pubblicità, niente abbonamento."
+  },
+  "faq": {
+    "title": "Domande",
+    "items": [
+      {
+        "q": "Ho camminato, ma sulla mappa non compare nulla.",
+        "a": "Vai in Impostazioni > Buktu Buktu > Posizione, scegli «Sempre» e attiva «Movimento e fitness». Così la registrazione funziona anche con l’app chiusa. Se nelle impostazioni dell’app hai scelto la modalità di registrazione che risparmia batteria, apri l’app prima di partire. Le posizioni poco precise vengono salvate ma non disegnate."
+      },
+      {
+        "q": "Vengono registrati i tragitti in auto o in metro?",
+        "a": "No. L’app usa i dati di movimento e la velocità per disegnare solo camminata e corsa, ed esclude i tratti che sembrano fatti in veicolo. Ogni tanto può sbagliare."
+      },
+      {
+        "q": "Faccio lo stesso percorso ogni giorno e la mappa non cresce.",
+        "a": "È la regola. Tutto ciò che è entro 30 m da dove hai già camminato conta come la stessa strada, quindi solo i percorsi nuovi si aggiungono a «I percorsi che ho disegnato». Anche il marciapiede di fronte conta come la stessa strada. La Bussola dei pionieri ti mostra dove hai camminato meno."
+      },
+      {
+        "q": "La mia posizione viene inviata da qualche parte?",
+        "a": "Non allo sviluppatore. Passi, timbri, diario e foto restano sul tuo dispositivo e nel tuo iCloud privato, e lo sviluppatore non può vederli. Le statistiche d’uso anonime non includono mai coordinate, testi del diario, nomi di luoghi o foto. Per trasformare le coordinate in nomi di luoghi si usano i servizi di Apple Mappe. Per i dettagli, consulta l’Informativa sulla privacy qui sotto."
+      },
+      {
+        "q": "Le mie registrazioni passano su un nuovo dispositivo?",
+        "a": "Sì. Accedi con lo stesso Account Apple sul nuovo dispositivo e lascia iCloud attivo: passi, timbri, diario e foto ti seguono."
+      },
+      {
+        "q": "Come elimino un timbro o una foto?",
+        "a": "Elimina i timbri dall’elenco «Luoghi che ho timbrato» e tieni premuta una foto del diario per eliminarla. È in programma un modo per cancellare in un colpo tutti i percorsi e le voci del diario."
+      },
+      {
+        "q": "Come aggiungo il widget?",
+        "a": "Tieni premuto sulla schermata Home, tocca Modifica > Aggiungi widget e scegli Buktu Buktu. Per la schermata di blocco, tienila premuta e tocca Personalizza. Il widget della schermata Home mostra forma e lunghezza del percorso di oggi, quello della schermata di blocco la distanza di oggi."
+      },
+      {
+        "q": "Di cosa ho bisogno?",
+        "a": "Di un iPhone con iOS 17.0 o successivo."
+      },
+      {
+        "q": "Come vi contatto?",
+        "a": "Invia un feedback dalle impostazioni dell’app o scrivici all’indirizzo qui sotto. Ti risponderemo il prima possibile."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "E se oggi allungassi\ndi un isolato?",
+    "cta": "Scaricala gratis dall’App Store"
+  },
+  "ui": {
+    "skip": "Vai al contenuto",
+    "languages": "Lingua",
+    "privacy": "Informativa sulla privacy",
+    "contact": "Domande o suggerimenti? Scrivi a {email}."
+  }
+}

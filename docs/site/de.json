@@ -1,0 +1,173 @@
+{
+  "title": "Buktu Buktu: die Karte, die du zu Fuß zeichnest",
+  "description": "Eine Karte, die als leeres Blatt beginnt und sich nur dort füllt, wo du zum ersten Mal gehst. Fahrten mit Auto oder U-Bahn bleiben leer. Alles gratis.",
+  "hero": {
+    "headline": "Eine Karte, die sich\nnur zu Fuß füllt",
+    "lead": "Sie beginnt als leeres Blatt Papier. Nur wo du gehst, füllt sie sich Punkt für Punkt, und wer hundertmal dieselbe Straße läuft, macht sie kein Stück größer. Damit die Karte wächst, brauchst du neue Wege.",
+    "cta": "Kostenlos im App Store laden",
+    "note": "Alle Funktionen sind kostenlos, ohne Werbung."
+  },
+  "demo": {
+    "title": "Geh eine Runde",
+    "lead": "Zieh mit dem Finger oder der Maus über das Papier, um zu gehen. Die blauen Punkte sind Straßen, die du schon gegangen bist. Sieh dir an, wie sich „Heute gezogene Wege“ verändert, wenn du sie noch einmal gehst oder Neuland betrittst.",
+    "today": "Heute gezogene Wege",
+    "walked": "Gegangen",
+    "subway": "U-Bahn nehmen",
+    "subwayOn": "In der U-Bahn",
+    "reset": "Von vorn",
+    "hint": "Zieh über das Papier, um loszugehen.",
+    "fresh": "Ein neuer Weg. Die Karte wächst.",
+    "same": "Hier warst du schon. Nur die Strecke wird länger.",
+    "ride": "Wege mit Auto oder U-Bahn werden nicht gezeichnet.",
+    "legendToday": "Heute",
+    "legendPast": "Frühere Schritte",
+    "legendFaded": "Über 3 Monate",
+    "note": "Hier ziehst du, statt zu gehen. Es gilt dieselbe Regel wie in der App: Alles im Umkreis von 30 m um bereits Gegangenes zählt als derselbe Weg. Mit der Tastatur wählst du das Papier aus und gehst mit den Pfeiltasten."
+  },
+  "problem": {
+    "title": "Jeden Tag dieselben Straßen?",
+    "text": "Ein Schrittzähler zählt Schritte, fragt aber nie, wohin sie geführt haben. Von zu Hause zum Bahnhof und zurück, und der Ring ist voll, während die Seitenstraße nebenan jahrelang ein Rätsel bleibt. Buktu Buktu zählt nur Wege, die du zum ersten Mal gehst. Ein guter Grund, heute einen Block Umweg zu machen."
+  },
+  "features": [
+    {
+      "title": "Stempel für Orte, an denen du warst und die du sehen willst",
+      "text": "Stempel die Stelle, an der du stehst, oder halte die Karte an einem beliebigen Punkt gedrückt. 212 Stempel stehen zur Auswahl, nach Kategorien sortiert.\nEin Stempel dort, wo du noch nie gegangen bist, bleibt ein Ort zum Besuchen und wird zum besuchten Ort, sobald du wirklich dort bist. Fotografiere ein Ladenschild, und der Hintergrund wird entfernt. Das Schild steht dann als Sticker an genau dieser Stelle.",
+      "shot": "03-stamps"
+    },
+    {
+      "title": "Nächster Spaziergang: dorthin, wo du am wenigsten warst",
+      "text": "Der Pionierkompass teilt deine Umgebung in acht Richtungen und zeigt auf die, die du am wenigsten erkundet hast.\nHeutige Fußspuren listet die Orte, an denen du heute angehalten hast, der Reihe nach auf, dazu die Strecke dazwischen.",
+      "shot": "02-compass"
+    },
+    {
+      "title": "Jeder Tag hinterlässt eine Form",
+      "text": "Der Kalender zeigt statt einer Zahl die Form des Weges, den du an diesem Tag gegangen bist. Führe ein Tagebuch mit Text und Fotos und sieh, wie viel von jedem Spaziergang Neuland war.\nWähle einen Zeitraum und sieh als Video zu, wie deine Karte entsteht. Das Video kannst du exportieren.",
+      "shot": "04-calendar"
+    }
+  ],
+  "steps": {
+    "title": "In drei Schritten loslegen",
+    "items": [
+      {
+        "title": "App öffnen",
+        "text": "Ein leeres Blatt Papier faltet sich auf."
+      },
+      {
+        "title": "Standort erlauben",
+        "text": "Wähle „Immer“ und schalte „Bewegung & Fitness“ ein, damit Spaziergänge auch ohne geöffnete App aufgezeichnet werden."
+      },
+      {
+        "title": "Losgehen",
+        "text": "Je unbekannter die Straße, desto mehr wächst die Karte."
+      }
+    ]
+  },
+  "reference": {
+    "title": "So liest du die Karte",
+    "rows": [
+      [
+        "Rote Punkte",
+        "wo du heute gegangen bist"
+      ],
+      [
+        "Indigoblaue Punkte",
+        "frühere Schritte, dunkler, wo du am häufigsten vorbeikommst"
+      ],
+      [
+        "Graue Punkte",
+        "Orte, an denen du seit über drei Monaten nicht mehr warst. Sie verblassen, verschwinden aber nie"
+      ],
+      [
+        "Gestrichelter Stempel",
+        "ein Ort aus „Möchte ich besuchen“. Er wird zum besuchten Ort, sobald du dort bist"
+      ],
+      [
+        "Meine gezeichneten Wege",
+        "Gesamtlänge aller Wege, die du zum ersten Mal gegangen bist"
+      ],
+      [
+        "Heute gezogene Wege",
+        "wie viel vom heutigen Spaziergang neu war"
+      ],
+      [
+        "Alles im Überblick",
+        "in den Einstellungen; öffnet Pionierkompass, Heutige Fußspuren und den Film deiner Karte"
+      ]
+    ],
+    "note": "Du kannst zwischen der Tuschekarte und der Bildkarte wählen."
+  },
+  "pricing": {
+    "title": "Alle Funktionen sind kostenlos",
+    "free": {
+      "name": "Kostenlos",
+      "items": [
+        "Eine Karte, die sich nur zu Fuß füllt, mit Erfassung neuer Wege",
+        "212 Stempel und Sticker aus Ladenschildern",
+        "Pionierkompass und Heutige Fußspuren",
+        "Kalender und Tagebuch mit Text und Fotos",
+        "Video deiner entstehenden Karte exportieren",
+        "Widgets für Home-Bildschirm und Sperrbildschirm",
+        "iCloud-Synchronisierung zwischen Geräten"
+      ]
+    },
+    "pro": {
+      "name": "Den Entwickler unterstützen",
+      "items": [
+        "Wenn du magst, gib in den Einstellungen ein kleines Trinkgeld",
+        "Trinkgeld schaltet nichts frei. Die App bleibt genau dieselbe"
+      ]
+    },
+    "note": "Keine Werbung, kein Abo."
+  },
+  "faq": {
+    "title": "Fragen",
+    "items": [
+      {
+        "q": "Ich bin gegangen, aber auf der Karte ist nichts zu sehen.",
+        "a": "Öffne Einstellungen > Buktu Buktu > Standort, wähle „Immer“ und schalte „Bewegung & Fitness“ ein. Dann wird auch bei geschlossener App aufgezeichnet. Hast du in den App-Einstellungen den akkuschonenden Aufzeichnungsmodus gewählt, öffne die App, bevor du losgehst. Ungenaue Standorte werden gespeichert, aber nicht gezeichnet."
+      },
+      {
+        "q": "Werden Fahrten mit Auto oder U-Bahn aufgezeichnet?",
+        "a": "Nein. Anhand von Bewegungsdaten und Geschwindigkeit werden nur Gehen und Laufen gezeichnet, Abschnitte, die nach einem Fahrzeug aussehen, bleiben weg. Gelegentlich kann das danebenliegen."
+      },
+      {
+        "q": "Ich gehe jeden Tag dieselbe Strecke, und die Karte wächst nicht.",
+        "a": "Das ist die Regel. Alles im Umkreis von 30 m um bereits Gegangenes zählt als derselbe Weg, deshalb wachsen „Meine gezeichneten Wege“ nur durch neue Wege. Auch der Gehweg auf der anderen Straßenseite zählt als derselbe Weg. Der Pionierkompass zeigt dir, wo du am wenigsten warst."
+      },
+      {
+        "q": "Wird mein Standort irgendwohin gesendet?",
+        "a": "Nicht an den Entwickler. Schritte, Stempel, Tagebuch und Fotos bleiben auf deinem Gerät und in deiner privaten iCloud, der Entwickler kann sie nicht sehen. Die anonyme Nutzungsstatistik enthält nie Koordinaten, Tagebuchtexte, Ortsnamen oder Fotos. Um Koordinaten in Ortsnamen umzuwandeln, werden Dienste von Apple Karten genutzt. Mehr dazu in der Datenschutzerklärung unten."
+      },
+      {
+        "q": "Kommen meine Aufzeichnungen auf ein neues Gerät mit?",
+        "a": "Ja. Melde dich auf dem neuen Gerät mit demselben Apple Account an und lass iCloud eingeschaltet, dann kommen Schritte, Stempel, Tagebuch und Fotos mit."
+      },
+      {
+        "q": "Wie lösche ich einen Stempel oder ein Foto?",
+        "a": "Stempel löschst du in der Liste „Orte, die ich gestempelt habe“, Tagebuchfotos durch langes Drücken. Eine Möglichkeit, alle Wege und Tagebucheinträge auf einmal zu löschen, ist geplant."
+      },
+      {
+        "q": "Wie füge ich das Widget hinzu?",
+        "a": "Halte den Finger auf dem Home-Bildschirm, tippe auf „Bearbeiten“ > „Widget hinzufügen“ und wähle Buktu Buktu. Für den Sperrbildschirm hältst du den Finger darauf und tippst auf „Anpassen“. Das Widget auf dem Home-Bildschirm zeigt Form und Länge des heutigen Weges, der Sperrbildschirm die heutige Strecke."
+      },
+      {
+        "q": "Was brauche ich?",
+        "a": "Ein iPhone mit iOS 17.0 oder neuer."
+      },
+      {
+        "q": "Wie erreiche ich euch?",
+        "a": "Schick uns Feedback aus den Einstellungen der App oder eine E-Mail an die Adresse unten. Wir antworten so schnell wie möglich."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Wie wäre heute\nein Block Umweg?",
+    "cta": "Kostenlos im App Store laden"
+  },
+  "ui": {
+    "skip": "Zum Inhalt springen",
+    "languages": "Sprache",
+    "privacy": "Datenschutzerklärung",
+    "contact": "Fragen oder Feedback? Schreib an {email}."
+  }
+}

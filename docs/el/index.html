@@ -1,72 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buktu Buktu (FootprintDiary)</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1c1d21;
-      --muted: #6b7280;
-      --accent: #4facfe;
-      --accent2: #00c2a8;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171b;
-        --card: #1f2126;
-        --text: #f2f3f5;
-        --muted: #9ca3af;
-        --border: #2c2f36;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
-    .hero .emoji { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
-    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
-    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: var(--text);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-      transition: transform .15s ease, box-shadow .15s ease;
-      display: block;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
-    .card .ico { font-size: 28px; }
-    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .features { margin-top: 40px; }
-    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .features ul { padding-left: 20px; color: var(--muted); }
-    .features li { margin: 8px 0; }
-    .features strong { color: var(--text); }
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buktu Buktu: ο χάρτης που σχεδιάζετε με τα πόδια</title>
+  <meta name="description" content="Ένας χάρτης που ξεκινά λευκός και γεμίζει μόνο όπου περπατάτε για πρώτη φορά. Αυτοκίνητο και μετρό δεν σχεδιάζονται. Όλα δωρεάν.">
+  <meta name="theme-color" content="#C72C18" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6789952970">
   <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/el/">
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
@@ -91,55 +32,159 @@
   <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/">
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/">
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buktu Buktu: ο χάρτης που σχεδιάζετε με τα πόδια">
+  <meta property="og:description" content="Ένας χάρτης που ξεκινά λευκός και γεμίζει μόνο όπου περπατάτε για πρώτη φορά. Αυτοκίνητο και μετρό δεν σχεδιάζονται. Όλα δωρεάν.">
+  <meta property="og:url" content="https://m1zz.github.io/FootprintDiary/el/">
+  <meta property="og:image" content="https://m1zz.github.io/FootprintDiary/img/el/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#C72C18}@media (prefers-color-scheme:dark){:root{--accent:#F29966}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="index.html" hreflang="el" lang="el" aria-current="true">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-  <div class="hero">
-    <div class="emoji">👣</div>
-    <h1>Buktu Buktu</h1>
-    <p>Ένας λευκός χάρτης που κρατά μόνο τα μέρη που περπατήσατε</p>
-  </div>
+  <a class="skip" href="#main">Μετάβαση στο περιεχόμενο</a>
+  <header class="bar">
+    <a class="brand" href="../el/"><img src="../icon.png" alt="" width="32" height="32">Buktu Buktu</a>
+    <a class="lang-link" href="#languages">Γλώσσα</a>
+  </header>
 
-  <div class="wrap">
-    <div class="cards">
-      <a class="card" href="privacy.html">
-        <div class="ico">🔒</div>
-        <h3>Πολιτική απορρήτου</h3>
-        <p>Δείτε ποια δεδομένα επεξεργαζόμαστε και πώς.</p>
-      </a>
-      <a class="card" href="support.html">
-        <div class="ico">💬</div>
-        <h3>Υποστήριξη / Επικοινωνία</h3>
-        <p>Βοήθεια, συχνές ερωτήσεις και τρόποι επικοινωνίας.</p>
-      </a>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Ένας χάρτης που γεμίζει<br>μόνο με τα πόδια</h1>
+        <p class="lead">Ξεκινά σαν ένα λευκό χαρτί. Γεμίζουν, σημείο σημείο, μόνο τα μέρη που περπατάτε, και αν περάσετε εκατό φορές από τον ίδιο δρόμο δεν πλαταίνει. Για να μεγαλώσει ο χάρτης, πάρτε έναν καινούργιο δρόμο.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6789952970">Κατεβάστε το δωρεάν από το App Store</a><a class="try" href="#try">Κάντε μια βόλτα ↓</a></div>
+        <p class="muted small">Όλες οι λειτουργίες δωρεάν, χωρίς διαφημίσεις.</p>
+      </div>
+      <div class="phone"><img src="../img/el/01-map.jpg" alt="Ένας χάρτης που γεμίζει μόνο με τα πόδια" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <div class="features">
-      <h2>Τι είναι το Buktu Buktu;</h2>
-      <p>Τον κόσμο τον έχουν ήδη σχεδιάσει άλλοι χάρτες. Ο χάρτης του Buktu Buktu ξεκινά από ένα χαρτί όπου δεν έχει σχεδιαστεί τίποτα
-         και γεμίζει σημείο σημείο, <strong>μόνο όταν περπατάτε</strong>.
-         Οι διαδρομές με αυτοκίνητο ή μετρό δεν σχεδιάζονται.</p>
-      <ul>
-        <li><strong>Ένας χάρτης που μεγαλώνει με τα βήματά σας</strong> — τα μέρη απ' όπου περνάτε αποτυπώνονται στο χαρτί ένα ένα.
-            Οι δρόμοι που περνάτε συχνά σκουραίνουν και όσοι δεν πατιούνται για τρεις μήνες ξεθωριάζουν σε γκρι</li>
-        <li><strong>Οι δρόμοι που σχεδιάσατε</strong> — δεν μετριέται η απόσταση που περπατήσατε αλλά το μήκος των
-            <em>νέων</em> δρόμων. Ακόμα κι αν περπατήσετε εκατό φορές τον ίδιο δρόμο, ο χάρτης δεν μεγαλώνει</li>
-        <li><strong>Σφραγίδες</strong> — σταθείτε σε ένα μέρος και βάλτε μία από τις 212 σφραγίδες.
-            Αν φωτογραφίσετε με την κάμερα την ταμπέλα ενός μαγαζιού, η ταμπέλα στήνεται στον χάρτη σας</li>
-        <li><strong>Μέρη που πήγατε και μέρη που θέλετε να πάτε</strong> — τα μέρη όπου δεν έχετε πάει μένουν ως διακεκομμένες σφραγίδες
-            και παγιώνονται ως επισκέψιμα μέρη όταν φτάσετε</li>
-        <li><strong>Πυξίδα πρωτοπόρου</strong> — δείχνει, από το σημείο όπου στέκεστε, ποια κατεύθυνση είναι ακόμα λευκή</li>
-        <li><strong>Φιλμ</strong> — εξαγάγετε ως βίντεο τη διαδικασία σχεδίασης του χάρτη σας</li>
-        <li><strong>Μόνο στο iCloud σας</strong> — βήματα, ημερολόγιο και φωτογραφίες φυλάσσονται στο προσωπικό σας iCloud,
-            μακριά από ξένα βλέμματα. Ούτε μία συντεταγμένη δεν στέλνεται στον προγραμματιστή</li>
-      </ul>
-    </div>
-  </div>
+
+    <section class="reveal" id="try">
+      <h2>Κάντε μια βόλτα</h2>
+      <p class="muted">Σύρετε το δάχτυλο ή το ποντίκι πάνω στο χαρτί για να περπατήσετε. Οι μπλε κουκκίδες είναι δρόμοι που έχετε ήδη περπατήσει. Δείτε πώς αλλάζει «Η σημερινή διαδρομή» όταν ξαναπερνάτε από εκεί και όταν πηγαίνετε κάπου καινούργιο.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Κάντε μια βόλτα&quot;, &quot;lead&quot;: &quot;Σύρετε το δάχτυλο ή το ποντίκι πάνω στο χαρτί για να περπατήσετε. Οι μπλε κουκκίδες είναι δρόμοι που έχετε ήδη περπατήσει. Δείτε πώς αλλάζει «Η σημερινή διαδρομή» όταν ξαναπερνάτε από εκεί και όταν πηγαίνετε κάπου καινούργιο.&quot;, &quot;today&quot;: &quot;Η σημερινή διαδρομή&quot;, &quot;walked&quot;: &quot;Περπάτημα&quot;, &quot;subway&quot;: &quot;Πάρτε το μετρό&quot;, &quot;subwayOn&quot;: &quot;Στο μετρό&quot;, &quot;reset&quot;: &quot;Από την αρχή&quot;, &quot;hint&quot;: &quot;Σύρετε πάνω στο χαρτί για να ξεκινήσετε.&quot;, &quot;fresh&quot;: &quot;Νέος δρόμος. Ο χάρτης μεγαλώνει.&quot;, &quot;same&quot;: &quot;Από εδώ έχετε ξαναπεράσει. Αυξάνεται μόνο η απόσταση.&quot;, &quot;ride&quot;: &quot;Οι διαδρομές με αυτοκίνητο ή μετρό δεν σχεδιάζονται.&quot;, &quot;legendToday&quot;: &quot;Σήμερα&quot;, &quot;legendPast&quot;: &quot;Παλαιότερα βήματα&quot;, &quot;legendFaded&quot;: &quot;Πάνω από 3 μήνες&quot;, &quot;note&quot;: &quot;Εδώ σύρετε αντί να περπατάτε, με τον ίδιο κανόνα της εφαρμογής: ό,τι βρίσκεται σε απόσταση έως 30 m από εκεί που έχετε ήδη περάσει μετρά ως ο ίδιος δρόμος. Με πληκτρολόγιο, επιλέξτε το χαρτί και περπατήστε με τα βελάκια.&quot;}"></div>
+    </section>
+
+    <section class="problem reveal">
+      <h2>Κάθε μέρα τους ίδιους δρόμους;</h2>
+      <p>Ο βηματομετρητής μετρά βήματα, αλλά δεν ρωτά ποτέ πού σας πήγαν. Σπίτι, σταθμός και πίσω, και ο κύκλος γεμίζει μια χαρά, ενώ το στενό δίπλα μένει μυστήριο για χρόνια. Το Buktu Buktu μετρά μόνο τους δρόμους που περπατάτε για πρώτη φορά. Ένας καλός λόγος να κάνετε σήμερα μια παράκαμψη ενός τετραγώνου.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Σφραγίστε τα μέρη που πήγατε και που θέλετε να πάτε</h2>
+        <p>Σφραγίστε το σημείο όπου στέκεστε ή πατήστε παρατεταμένα οπουδήποτε στον χάρτη. Υπάρχουν 212 σφραγίδες για να διαλέξετε, ταξινομημένες ανά κατηγορία.<br>Μια σφραγίδα σε μέρος που δεν έχετε περπατήσει ποτέ μένει ως μέρος προς επίσκεψη και γίνεται μέρος που επισκεφθήκατε μόλις πάτε πραγματικά. Φωτογραφίστε την ταμπέλα ενός μαγαζιού και το φόντο αποκόπτεται, ώστε η ταμπέλα να στέκεται σαν αυτοκόλλητο σε εκείνο το σημείο.</p>
+      </div>
+      <div class="phone"><img src="../img/el/03-stamps.jpg" alt="Σφραγίστε τα μέρη που πήγατε και που θέλετε να πάτε" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Επόμενη βόλτα: προς τα εκεί που πήγατε λιγότερο</h2>
+        <p>Η Πυξίδα πρωτοπόρου χωρίζει την περιοχή γύρω σας σε οκτώ κατευθύνσεις και δείχνει εκείνη που έχετε περπατήσει λιγότερο.<br>Τα σημερινά αποτυπώματα παρατάσσουν με τη σειρά τα μέρη όπου σταματήσατε σήμερα, μαζί με την απόσταση που περπατήσατε ανάμεσά τους.</p>
+      </div>
+      <div class="phone"><img src="../img/el/02-compass.jpg" alt="Επόμενη βόλτα: προς τα εκεί που πήγατε λιγότερο" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Κάθε μέρα αφήνει ένα σχήμα</h2>
+        <p>Το ημερολόγιο σχεδιάζει το σχήμα της βόλτας κάθε μέρας αντί για έναν αριθμό. Κρατήστε ημερολόγιο με κείμενο και φωτογραφίες και δείτε πόσο από κάθε βόλτα ήταν καινούργιο έδαφος.<br>Διαλέξτε μια περίοδο και δείτε τον χάρτη σας να σχεδιάζεται σε βίντεο που μπορείτε να εξαγάγετε.</p>
+      </div>
+      <div class="phone"><img src="../img/el/04-calendar.jpg" alt="Κάθε μέρα αφήνει ένα σχήμα" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Ξεκινήστε σε τρία βήματα</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Ανοίξτε την εφαρμογή</h3><p>Ένα λευκό χαρτί ξεδιπλώνεται.</p></li>
+<li class="card"><span class="n">2</span><h3>Επιτρέψτε την τοποθεσία</h3><p>Επιλέξτε «Πάντα» και ενεργοποιήστε την «Κίνηση και φυσική κατάσταση» για να καταγράφονται οι βόλτες χωρίς να ανοίγετε την εφαρμογή.</p></li>
+<li class="card"><span class="n">3</span><h3>Βγείτε έξω</h3><p>Όσο πιο άγνωστος ο δρόμος, τόσο περισσότερο μεγαλώνει ο χάρτης.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Πώς διαβάζεται ο χάρτης</h2>
+      <div class="card table">
+        <dl><div><dt>Κόκκινες κουκκίδες</dt><dd>όπου περπατήσατε σήμερα</dd></div><div><dt>Λουλακί κουκκίδες</dt><dd>παλαιότερα βήματα, πιο σκούρα όπου περνάτε πιο συχνά</dd></div><div><dt>Γκρι κουκκίδες</dt><dd>μέρη όπου δεν έχετε ξαναπάει για πάνω από τρεις μήνες. Ξεθωριάζουν αλλά δεν χάνονται ποτέ</dd></div><div><dt>Διακεκομμένη σφραγίδα</dt><dd>ένα μέρος στο «Θέλω να πάω». Γίνεται μέρος που επισκεφθήκατε μόλις φτάσετε εκεί</dd></div><div><dt>Οι δρόμοι που έχω σχεδιάσει</dt><dd>συνολικό μήκος όλων των δρόμων που περπατήσατε για πρώτη φορά</dd></div><div><dt>Η σημερινή διαδρομή</dt><dd>πόσο από τη σημερινή βόλτα ήταν καινούργιο</dd></div><div><dt>Προβολή όλων μαζί</dt><dd>στις ρυθμίσεις· ανοίγει την Πυξίδα πρωτοπόρου, τα Σημερινά αποτυπώματα και το φιλμ του χάρτη σας</dd></div></dl>
+      </div>
+      <p class="muted">Διαλέξτε ανάμεσα στον χάρτη με μελάνι και τον Ζωγραφισμένο χάρτη.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Όλες οι λειτουργίες είναι δωρεάν</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Δωρεάν</h3>
+          <ul><li>Ένας χάρτης που γεμίζει μόνο με τα πόδια, με καταμέτρηση νέων δρόμων</li><li>212 σφραγίδες και αυτοκόλλητα από ταμπέλες</li><li>Πυξίδα πρωτοπόρου και Τα σημερινά αποτυπώματα</li><li>Ημερολόγιο μήνα και καθημερινό ημερολόγιο με κείμενο και φωτογραφίες</li><li>Εξαγωγή του βίντεο με τον χάρτη σας να σχεδιάζεται</li><li>Widget για την αρχική οθόνη και την οθόνη κλειδώματος</li><li>Συγχρονισμός μέσω iCloud ανάμεσα σε συσκευές</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Στηρίξτε τον δημιουργό</h3>
+          <ul><li>Αν θέλετε, αφήστε ένα μικρό φιλοδώρημα από τις ρυθμίσεις</li><li>Το φιλοδώρημα δεν ξεκλειδώνει τίποτα. Η εφαρμογή μένει ίδια</li></ul>
+          
+        </div>
+      </div>
+      <p class="muted">Χωρίς διαφημίσεις, χωρίς συνδρομή.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Ερωτήσεις</h2>
+      <div class="faq"><details><summary>Περπάτησα, αλλά δεν εμφανίστηκε τίποτα στον χάρτη.</summary><p>Πηγαίνετε στις Ρυθμίσεις &gt; Buktu Buktu &gt; Τοποθεσία, επιλέξτε «Πάντα» και ενεργοποιήστε την «Κίνηση και φυσική κατάσταση». Έτσι η καταγραφή γίνεται ακόμα και με κλειστή την εφαρμογή. Αν στις ρυθμίσεις της εφαρμογής διαλέξατε τον τρόπο καταγραφής που εξοικονομεί μπαταρία, ανοίξτε την εφαρμογή πριν ξεκινήσετε. Οι τοποθεσίες με χαμηλή ακρίβεια αποθηκεύονται, αλλά δεν σχεδιάζονται.</p></details>
+<details><summary>Καταγράφονται οι διαδρομές με αυτοκίνητο ή μετρό;</summary><p>Όχι. Η εφαρμογή χρησιμοποιεί δεδομένα κίνησης και την ταχύτητα για να σχεδιάζει μόνο περπάτημα και τρέξιμο, και αφήνει έξω τα τμήματα που μοιάζουν με όχημα. Σπάνια μπορεί να κάνει λάθος.</p></details>
+<details><summary>Περπατώ κάθε μέρα την ίδια διαδρομή και ο χάρτης δεν μεγαλώνει.</summary><p>Αυτός είναι ο κανόνας. Ό,τι βρίσκεται σε απόσταση έως 30 m από εκεί που έχετε ήδη περπατήσει μετρά ως ο ίδιος δρόμος, οπότε μόνο οι νέοι δρόμοι προστίθενται στο «Οι δρόμοι που έχω σχεδιάσει». Και το απέναντι πεζοδρόμιο μετρά ως ο ίδιος δρόμος. Η Πυξίδα πρωτοπόρου σας δείχνει πού έχετε περπατήσει λιγότερο.</p></details>
+<details><summary>Στέλνεται κάπου η τοποθεσία μου;</summary><p>Όχι στον δημιουργό. Τα βήματα, οι σφραγίδες, το ημερολόγιο και οι φωτογραφίες μένουν στη συσκευή σας και στο προσωπικό σας iCloud, και ο δημιουργός δεν μπορεί να τα δει. Τα ανώνυμα στατιστικά χρήσης δεν περιλαμβάνουν ποτέ συντεταγμένες, κείμενο ημερολογίου, ονόματα μερών ή φωτογραφίες. Για τη μετατροπή συντεταγμένων σε ονόματα μερών χρησιμοποιούνται υπηρεσίες των Χαρτών της Apple. Για λεπτομέρειες δείτε την Πολιτική απορρήτου παρακάτω.</p></details>
+<details><summary>Θα μεταφερθούν οι καταγραφές μου σε νέα συσκευή;</summary><p>Ναι. Συνδεθείτε με τον ίδιο Λογαριασμό Apple στη νέα συσκευή και αφήστε το iCloud ενεργό, και τα βήματα, οι σφραγίδες, το ημερολόγιο και οι φωτογραφίες σας θα έρθουν μαζί.</p></details>
+<details><summary>Πώς διαγράφω μια σφραγίδα ή μια φωτογραφία;</summary><p>Διαγράψτε σφραγίδες από τη λίστα «Μέρη που έχω σφραγίσει» και πατήστε παρατεταμένα μια φωτογραφία του ημερολογίου για να τη διαγράψετε. Ένας τρόπος να σβήσετε με τη μία όλους τους δρόμους και τις εγγραφές ημερολογίου είναι στα σχέδιά μας.</p></details>
+<details><summary>Πώς προσθέτω το widget;</summary><p>Αγγίξτε παρατεταμένα την αρχική οθόνη, πατήστε «Επεξεργασία» &gt; «Προσθήκη widget» και επιλέξτε Buktu Buktu. Για την οθόνη κλειδώματος, αγγίξτε την παρατεταμένα και πατήστε «Προσαρμογή». Το widget της αρχικής οθόνης δείχνει το σχήμα και το μήκος της σημερινής διαδρομής, ενώ της οθόνης κλειδώματος τη σημερινή απόσταση.</p></details>
+<details><summary>Τι χρειάζομαι;</summary><p>Ένα iPhone με iOS 17.0 ή νεότερο.</p></details>
+<details><summary>Πώς επικοινωνώ μαζί σας;</summary><p>Στείλτε σχόλια από τις ρυθμίσεις της εφαρμογής ή γράψτε μας στη διεύθυνση παρακάτω. Θα απαντήσουμε το συντομότερο.</p></details></div>
+      <p class="contact">Ερωτήσεις ή σχόλια; Γράψτε στο <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Γιατί όχι σήμερα<br>μια παράκαμψη ενός τετραγώνου;</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6789952970">Κατεβάστε το δωρεάν από το App Store</a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Buktu Buktu (FootprintDiary) ·
-    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    <nav id="languages" class="langs" aria-label="Γλώσσα"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el" aria-current="page">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Πολιτική απορρήτου</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Buktu Buktu</p>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

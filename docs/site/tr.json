@@ -1,0 +1,173 @@
+{
+  "title": "Buktu Buktu: yürüyerek çizdiğin harita",
+  "description": "Boş bir kâğıtla başlayan ve yalnızca ilk kez yürüdüğün yerlerde dolan harita. Araba ve metro yolculukları çizilmez. Tüm özellikler ücretsiz.",
+  "hero": {
+    "headline": "Yalnızca yürüdükçe\ndolan bir harita",
+    "lead": "Boş bir kâğıt olarak başlar. Yalnızca yürüdüğün yerler nokta nokta dolar ve aynı sokağı yüz kez yürümek onu genişletmez. Haritayı büyütmek için yeni bir yola çık.",
+    "cta": "App Store'dan ücretsiz indir",
+    "note": "Tüm özellikler ücretsiz, reklam yok."
+  },
+  "demo": {
+    "title": "Bir yürüyüş yap",
+    "lead": "Yürümek için kâğıdın üzerinde parmağını ya da fareni sürükle. Mavi noktalar daha önce yürüdüğün sokaklar. Aynı yolları tekrar yürüdüğünde ve yeni bir yöne saptığında Bugün Çizilen Yol'un nasıl değiştiğine bak.",
+    "today": "Bugün Çizilen Yol",
+    "walked": "Yürünen mesafe",
+    "subway": "Metroya bin",
+    "subwayOn": "Metrodasın",
+    "reset": "Baştan başla",
+    "hint": "Yürümeye başlamak için kâğıdın üzerinde sürükle.",
+    "fresh": "Yeni bir yol. Harita büyüyor.",
+    "same": "Burayı daha önce yürüdün. Yalnızca mesafe artıyor.",
+    "ride": "Araba ya da metroyla geçilen yollar çizilmez.",
+    "legendToday": "Bugün",
+    "legendPast": "Önceki Yürüyüşler",
+    "legendFaded": "3 aydan eski",
+    "note": "Burada yürümek yerine sürüklüyorsun. Uygulamanın kendi kuralı geçerli: daha önce bulunduğun yerin 30 m yakınındaki her yer aynı yol sayılır. Klavyeyle kâğıdı seç ve ok tuşlarıyla yürü."
+  },
+  "problem": {
+    "title": "Her gün aynı sokaklarda mı yürüyorsun?",
+    "text": "Adım sayar uygulamaları adımlarını sayar ama nereye gittiklerini hiç sormaz. Evden istasyona gidip dönmek halkayı doldurmaya yeter, hemen yandaki ara sokak ise yıllarca bilinmez kalır. Buktu Buktu yalnızca ilk kez yürüdüğün yolları sayar. Bu da bugün bir sokak öteden dolaşman için bir sebep."
+  },
+  "features": [
+    {
+      "title": "Gittiğin ve gitmek istediğin yerlere damga bas",
+      "text": "Durduğun yere damga bas ya da haritada istediğin yere uzun bas. Kategorilere ayrılmış 212 damga arasından seçebilirsin.\nHiç yürümediğin bir yere basılan damga gidilecek yer olarak kalır, oraya gerçekten vardığında gidilen yere dönüşür. Bir dükkân tabelasının fotoğrafını çek; arka plan kesilir ve tabela o noktada bir çıkartma olarak ayağa kalkar.",
+      "shot": "03-stamps"
+    },
+    {
+      "title": "Sonraki yürüyüş: en az gittiğin yön",
+      "text": "Öncü Pusulası çevreni sekiz yöne böler ve en az yürüdüğün yönü gösterir.\nBugünün Ayak İzleri, bugün durduğun yerleri sırayla ve aralarında ne kadar yürüdüğünle birlikte dizer.",
+      "shot": "02-compass"
+    },
+    {
+      "title": "Her gün bir şekil bırakır",
+      "text": "Takvim, her günün yürüyüşünü bir sayı yerine şekliyle çizer. Yazı ve fotoğraflarla günlük tut, her yürüyüşün ne kadarının yeni yerlerden geçtiğini gör.\nBir dönem seç ve haritanın çizilişini dışa aktarabileceğin bir video olarak izle.",
+      "shot": "04-calendar"
+    }
+  ],
+  "steps": {
+    "title": "Başlamak için üç adım",
+    "items": [
+      {
+        "title": "Uygulamayı aç",
+        "text": "Boş bir kâğıt açılır."
+      },
+      {
+        "title": "Konuma izin ver",
+        "text": "Uygulamayı açmadan yürüyüşleri kaydetmek için Her Zaman'ı seç ve Hareket ve Fitness'ı aç."
+      },
+      {
+        "title": "Yola çık",
+        "text": "Sokak ne kadar yabancıysa harita o kadar büyür."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Haritayı okumak",
+    "rows": [
+      [
+        "Kırmızı noktalar",
+        "bugün yürüdüğün yerler"
+      ],
+      [
+        "Çivit mavisi noktalar",
+        "önceki yürüyüşler, en sık geçtiğin yerlerde daha koyu"
+      ],
+      [
+        "Gri noktalar",
+        "üç aydan uzun süredir dönmediğin yerler. Solar ama asla kaybolmaz"
+      ],
+      [
+        "Kesik çizgili damga",
+        "gidilecek bir yer. Oraya vardığında gidilen yer olur"
+      ],
+      [
+        "Çizdiğim Yollar",
+        "ilk kez yürüdüğün tüm yolların toplam uzunluğu"
+      ],
+      [
+        "Bugün Çizilen Yol",
+        "bugünkü yürüyüşün ne kadarının yeni olduğu"
+      ],
+      [
+        "Hepsini Birlikte Gör",
+        "Ayarlar'da; Öncü Pusulası'nı, Bugünün Ayak İzleri'ni ve çizim filmini açar"
+      ]
+    ],
+    "note": "Mürekkep harita ile Resimli Harita arasında seçim yapabilirsin."
+  },
+  "pricing": {
+    "title": "Tüm özellikler ücretsiz",
+    "free": {
+      "name": "Ücretsiz",
+      "items": [
+        "Yalnızca yürüdüğün yerde dolan harita ve yeni yol takibi",
+        "212 damga ve tabela çıkartmaları",
+        "Öncü Pusulası ve Bugünün Ayak İzleri",
+        "Takvim ve yazılı, fotoğraflı günlük",
+        "Haritanın çizilişini video olarak dışa aktarma",
+        "Ana ekran ve kilitli ekran widget'ları",
+        "Cihazlar arasında iCloud eşzamanlama"
+      ]
+    },
+    "pro": {
+      "name": "Geliştiriciyi destekle",
+      "items": [
+        "İstersen Ayarlar'dan küçük bir bahşiş gönder",
+        "Bahşiş hiçbir şeyin kilidini açmaz. Uygulama her durumda aynıdır"
+      ]
+    },
+    "note": "Reklam yok, abonelik yok."
+  },
+  "faq": {
+    "title": "Sorular",
+    "items": [
+      {
+        "q": "Yürüdüm ama haritada hiçbir şey görünmedi.",
+        "a": "Ayarlar > Buktu Buktu > Konum'a git, Her Zaman'ı seç ve Hareket ve Fitness'ı aç. Böylece uygulama kapalıyken de kayıt yapılır. Uygulama ayarlarında pil tasarruflu kayıt modunu seçtiysen yola çıkmadan önce uygulamayı aç. Doğruluğu düşük konumlar kaydedilir ama çizilmez."
+      },
+      {
+        "q": "Araba ya da metro yolculukları kaydedilir mi?",
+        "a": "Hayır. Hareket verisine ve hıza bakarak yalnızca yürüme ve koşuyu çizer, taşıta benzeyen bölümleri dışarıda bırakır. Ara sıra yanılabilir."
+      },
+      {
+        "q": "Her gün aynı yolu yürüyorum ve harita büyümüyor.",
+        "a": "Kural bu. Daha önce yürüdüğün yerin 30 m yakınındaki her yer aynı yol sayılır, bu yüzden Çizdiğim Yollar'a yalnızca ilk kez yürünen yollar eklenir. Karşı kaldırım da aynı yol sayılır. Öncü Pusulası en az yürüdüğün yeri gösterir."
+      },
+      {
+        "q": "Konumum bir yere gönderiliyor mu?",
+        "a": "Geliştiriciye gönderilmez. Adımların, damgaların, günlüğün ve fotoğrafların cihazında ve kendi özel iCloud'unda kalır, geliştirici bunları göremez. Anonim kullanım istatistikleri asla koordinat, günlük metni, yer adı veya fotoğraf içermez. Koordinatları yer adlarına çevirmek için Apple Haritalar hizmetleri kullanılır. Ayrıntılar için aşağıdaki Gizlilik Politikası'na bak."
+      },
+      {
+        "q": "Kayıtlarım yeni cihaza taşınır mı?",
+        "a": "Evet. Yeni cihazda aynı Apple Hesabı ile oturum aç ve iCloud'u açık tut; adımların, damgaların, günlüğün ve fotoğrafların seninle gelir."
+      },
+      {
+        "q": "Bir damgayı ya da fotoğrafı nasıl silerim?",
+        "a": "Damgaları Damga Bastığım Yerler listesinden sil. Günlükteki bir fotoğrafı silmek için üzerine dokunup basılı tut. Tüm yolları ve günlük kayıtlarını tek seferde silme özelliği yol haritasında."
+      },
+      {
+        "q": "Widget'ı nasıl eklerim?",
+        "a": "Ana ekranda dokunup basılı tut, Düzenle > Widget Ekle'ye dokun ve Buktu Buktu'yu seç. Kilitli ekranda ise dokunup basılı tut, ardından Özelleştir'e dokun. Ana ekran widget'ı bugünkü yolun şeklini ve uzunluğunu, kilitli ekran ise bugünkü mesafeyi gösterir."
+      },
+      {
+        "q": "Neye ihtiyacım var?",
+        "a": "iOS 17.0 veya üzeri yüklü bir iPhone."
+      },
+      {
+        "q": "Nasıl iletişime geçerim?",
+        "a": "Uygulama ayarlarından geri bildirim gönder ya da aşağıdaki adrese e-posta at. En kısa sürede yanıt veririz."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Bugün bir sokak öteden\ndolaşmaya ne dersin?",
+    "cta": "App Store'dan ücretsiz indir"
+  },
+  "ui": {
+    "skip": "İçeriğe geç",
+    "languages": "Dil",
+    "privacy": "Gizlilik Politikası",
+    "contact": "Soru ya da geri bildirim mi var? {email} adresine yaz."
+  }
+}

@@ -1,72 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buktu Buktu (FootprintDiary)</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1c1d21;
-      --muted: #6b7280;
-      --accent: #4facfe;
-      --accent2: #00c2a8;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171b;
-        --card: #1f2126;
-        --text: #f2f3f5;
-        --muted: #9ca3af;
-        --border: #2c2f36;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
-    .hero .emoji { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
-    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
-    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: var(--text);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-      transition: transform .15s ease, box-shadow .15s ease;
-      display: block;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
-    .card .ico { font-size: 28px; }
-    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .features { margin-top: 40px; }
-    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .features ul { padding-left: 20px; color: var(--muted); }
-    .features li { margin: 8px 0; }
-    .features strong { color: var(--text); }
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buktu Buktu: Peta yang digambar dengan langkah</title>
+  <meta name="description" content="Peta dari kertas kosong yang hanya terisi di tempat yang pertama kali kamu jalani. Perjalanan naik mobil atau kereta tidak digambar. Semua gratis.">
+  <meta name="theme-color" content="#C72C18" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6789952970">
   <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/id/">
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
@@ -91,55 +32,159 @@
   <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/">
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/">
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buktu Buktu: Peta yang digambar dengan langkah">
+  <meta property="og:description" content="Peta dari kertas kosong yang hanya terisi di tempat yang pertama kali kamu jalani. Perjalanan naik mobil atau kereta tidak digambar. Semua gratis.">
+  <meta property="og:url" content="https://m1zz.github.io/FootprintDiary/id/">
+  <meta property="og:image" content="https://m1zz.github.io/FootprintDiary/img/id/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#C72C18}@media (prefers-color-scheme:dark){:root{--accent:#F29966}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="index.html" hreflang="id" lang="id" aria-current="true">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-  <div class="hero">
-    <div class="emoji">👣</div>
-    <h1>Buktu Buktu</h1>
-    <p>Peta kosong yang hanya menyimpan tempat yang kamu lalui dengan berjalan kaki</p>
-  </div>
+  <a class="skip" href="#main">Lewati ke konten</a>
+  <header class="bar">
+    <a class="brand" href="../id/"><img src="../icon.png" alt="" width="32" height="32">Buktu Buktu</a>
+    <a class="lang-link" href="#languages">Bahasa</a>
+  </header>
 
-  <div class="wrap">
-    <div class="cards">
-      <a class="card" href="privacy.html">
-        <div class="ico">🔒</div>
-        <h3>Kebijakan Privasi</h3>
-        <p>Lihat data apa yang kami olah dan bagaimana caranya.</p>
-      </a>
-      <a class="card" href="support.html">
-        <div class="ico">💬</div>
-        <h3>Dukungan / Kontak</h3>
-        <p>Bantuan, pertanyaan yang sering diajukan, dan cara menghubungi kami.</p>
-      </a>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Peta yang terisi<br>hanya dengan berjalan</h1>
+        <p class="lead">Awalnya hanya selembar kertas kosong. Hanya tempat yang kamu jalani yang terisi, satu titik demi satu titik, dan menyusuri jalan yang sama seratus kali tak akan memperluasnya. Ingin petamu bertambah luas? Ambil jalan baru.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6789952970">Unduh gratis di App Store</a><a class="try" href="#try">Coba berjalan ↓</a></div>
+        <p class="muted small">Semua fitur gratis, tanpa iklan.</p>
+      </div>
+      <div class="phone"><img src="../img/id/01-map.jpg" alt="Peta yang terisi hanya dengan berjalan" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <div class="features">
-      <h2>Apa itu Buktu Buktu?</h2>
-      <p>Dunia sudah digambar oleh peta-peta lain. Peta di Buktu Buktu dimulai dari kertas yang belum tergambar apa pun
-         dan terisi satu titik demi satu titik, <strong>hanya saat kamu berjalan</strong>.
-         Jalan yang dilalui dengan mobil atau kereta bawah tanah tidak digambar.</p>
-      <ul>
-        <li><strong>Peta yang tumbuh bersama langkahmu</strong> — tempat yang kamu lalui tercap di kertas satu per satu.
-            Jalan yang sering dilalui makin pekat, dan yang tidak dipijak selama tiga bulan memudar menjadi abu-abu</li>
-        <li><strong>Jalan yang kamu gambar</strong> — yang diukur bukan jarak yang ditempuh, melainkan panjang jalan
-            <em>baru</em>. Menyusuri jalan yang sama seratus kali tidak membuat peta bertambah luas</li>
-        <li><strong>Stempel</strong> — berdirilah di suatu tempat dan bubuhkan salah satu dari 212 stempel.
-            Foto papan nama toko dengan kamera, dan papan itu berdiri di petamu</li>
-        <li><strong>Tempat yang dikunjungi dan ingin dikunjungi</strong> — tempat yang belum didatangi tetap berupa stempel bergaris putus-putus
-            dan menjadi tempat yang dikunjungi saat kamu tiba</li>
-        <li><strong>Kompas Perintis</strong> — dari tempatmu berdiri, menunjuk arah mana yang masih putih</li>
-        <li><strong>Film</strong> — ekspor proses petamu digambar sebagai video</li>
-        <li><strong>Hanya di iCloud-mu</strong> — langkah, catatan harian, dan foto tersimpan di iCloud pribadi
-            yang tidak terlihat orang lain. Satu koordinat pun tidak dikirim ke pengembang</li>
-      </ul>
-    </div>
-  </div>
+
+    <section class="reveal" id="try">
+      <h2>Coba berjalan</h2>
+      <p class="muted">Seret jari atau mouse di atas kertas untuk berjalan. Titik biru adalah jalan yang pernah kamu lalui. Lihat bagaimana Jalan yang Ditarik Hari Ini berubah saat kamu mengulang jalan lama dibanding saat menuju arah baru.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Coba berjalan&quot;, &quot;lead&quot;: &quot;Seret jari atau mouse di atas kertas untuk berjalan. Titik biru adalah jalan yang pernah kamu lalui. Lihat bagaimana Jalan yang Ditarik Hari Ini berubah saat kamu mengulang jalan lama dibanding saat menuju arah baru.&quot;, &quot;today&quot;: &quot;Jalan yang Ditarik Hari Ini&quot;, &quot;walked&quot;: &quot;Jarak tempuh&quot;, &quot;subway&quot;: &quot;Naik kereta&quot;, &quot;subwayOn&quot;: &quot;Di dalam kereta&quot;, &quot;reset&quot;: &quot;Ulang dari awal&quot;, &quot;hint&quot;: &quot;Seret di atas kertas untuk mulai berjalan.&quot;, &quot;fresh&quot;: &quot;Jalan baru. Peta bertambah luas.&quot;, &quot;same&quot;: &quot;Jalan ini sudah pernah kamu lalui. Hanya jaraknya yang bertambah.&quot;, &quot;ride&quot;: &quot;Jalan yang dilalui dengan mobil atau kereta tidak digambar.&quot;, &quot;legendToday&quot;: &quot;Hari Ini&quot;, &quot;legendPast&quot;: &quot;Langkah Lalu&quot;, &quot;legendFaded&quot;: &quot;Lebih dari 3 bulan&quot;, &quot;note&quot;: &quot;Di sini kamu menyeret, bukan berjalan. Aturannya sama dengan aplikasi: tempat dalam jarak 30 m dari yang sudah kamu lalui dihitung sebagai jalan yang sama. Dengan papan ketik, fokuskan ke kertas lalu berjalan dengan tombol panah.&quot;}"></div>
+    </section>
+
+    <section class="problem reveal">
+      <h2>Setiap hari lewat jalan yang sama?</h2>
+      <p>Penghitung langkah menghitung langkahmu, tapi tak pernah peduli ke mana langkah itu pergi. Bolak-balik dari rumah ke stasiun saja sudah memenuhi lingkarannya, sementara gang di sebelah tetap jadi misteri bertahun-tahun. Buktu Buktu hanya menghitung jalan yang pertama kali kamu lalui, jadi hari ini ada alasan untuk memutar satu blok lebih jauh.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Stempel tempat yang dikunjungi dan ingin dikunjungi</h2>
+        <p>Bubuhkan stempel di tempat kamu berdiri, atau tekan lama di mana saja di peta. Ada 212 stempel yang bisa dipilih, dikelompokkan per kategori.<br>Stempel di tempat yang belum pernah kamu jalani menjadi tempat yang ingin dikunjungi, lalu berubah jadi tempat yang dikunjungi saat kamu benar-benar sampai. Foto papan nama toko, latarnya dipotong dan papan itu berdiri sebagai stiker untuk tempat tersebut.</p>
+      </div>
+      <div class="phone"><img src="../img/id/03-stamps.jpg" alt="Stempel tempat yang dikunjungi dan ingin dikunjungi" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Jalan berikutnya: arah yang paling jarang kamu lalui</h2>
+        <p>Kompas Perintis membagi sekelilingmu menjadi delapan arah dan menunjuk arah yang paling sedikit kamu jalani.<br>Jejak Kaki Hari Ini menjajarkan tempat yang kamu singgahi hari ini secara berurutan, lengkap dengan jarak yang kamu tempuh di antaranya.</p>
+      </div>
+      <div class="phone"><img src="../img/id/02-compass.jpg" alt="Jalan berikutnya: arah yang paling jarang kamu lalui" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Setiap hari meninggalkan bentuk</h2>
+        <p>Kalender menggambar bentuk perjalanan kakimu setiap hari, bukan angka. Tulis catatan harian dengan teks dan foto, dan lihat seberapa banyak tiap perjalanan yang merupakan jalan baru.<br>Pilih periode untuk menonton petamu digambar sebagai video yang bisa diekspor.</p>
+      </div>
+      <div class="phone"><img src="../img/id/04-calendar.jpg" alt="Setiap hari meninggalkan bentuk" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Mulai dalam tiga langkah</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Buka aplikasi</h3><p>Selembar kertas kosong terbentang.</p></li>
+<li class="card"><span class="n">2</span><h3>Izinkan lokasi</h3><p>Pilih “Selalu Izinkan” dan nyalakan Gerakan &amp; Kebugaran agar jalan kakimu tercatat tanpa membuka aplikasi.</p></li>
+<li class="card"><span class="n">3</span><h3>Berangkat</h3><p>Makin asing jalannya, makin luas petanya.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Cara membaca peta</h2>
+      <div class="card table">
+        <dl><div><dt>Titik merah</dt><dd>tempat yang kamu jalani hari ini</dd></div><div><dt>Titik nila</dt><dd>langkah lalu, makin pekat di tempat yang sering dilalui</dd></div><div><dt>Titik abu-abu</dt><dd>tempat yang tidak kamu datangi lagi lebih dari tiga bulan. Warnanya memudar, tapi tak pernah hilang</dd></div><div><dt>Stempel garis putus</dt><dd>tempat yang ingin dikunjungi. Berubah jadi dikunjungi begitu kamu sampai</dd></div><div><dt>Jalan yang Kugambar</dt><dd>total panjang semua jalan yang pertama kali kamu lalui</dd></div><div><dt>Jalan yang Ditarik Hari Ini</dt><dd>seberapa banyak jalan hari ini yang baru</dd></div><div><dt>Lihat Semua Sekaligus</dt><dd>di Pengaturan, membuka Kompas Perintis, Jejak Kaki Hari Ini, dan film proses menggambar peta</dd></div></dl>
+      </div>
+      <p class="muted">Pilih antara peta tinta dan Peta Gambar.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Semua fitur gratis</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Gratis</h3>
+          <ul><li>Peta yang hanya terisi di tempat yang kamu jalani, dengan pelacakan jalan baru</li><li>212 stempel dan stiker papan nama toko</li><li>Kompas Perintis dan Jejak Kaki Hari Ini</li><li>Kalender dan catatan harian dengan teks dan foto</li><li>Ekspor video proses petamu digambar</li><li>Widget Layar Utama dan Layar Terkunci</li><li>Sinkronisasi iCloud antarperangkat</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Dukung pengembang</h3>
+          <ul><li>Kirim tip kecil dari Pengaturan, kalau kamu mau</li><li>Tip tidak membuka apa pun. Aplikasinya tetap sama</li></ul>
+          
+        </div>
+      </div>
+      <p class="muted">Tanpa iklan, tanpa langganan.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Pertanyaan</h2>
+      <div class="faq"><details><summary>Aku sudah berjalan, tapi tidak ada yang muncul di peta.</summary><p>Buka Pengaturan &gt; Buktu Buktu &gt; Lokasi, pilih Selalu, lalu nyalakan Gerakan &amp; Kebugaran. Dengan begitu langkahmu tercatat meski aplikasi ditutup. Jika kamu memilih cara pencatatan hemat baterai di pengaturan aplikasi, buka aplikasi sebelum berangkat. Lokasi dengan akurasi rendah tetap disimpan, tapi tidak digambar.</p></details>
+<details><summary>Apakah perjalanan dengan mobil atau kereta dicatat?</summary><p>Tidak. Aplikasi memakai data gerakan dan kecepatan untuk menggambar hanya jalan kaki dan lari, dan membuang ruas yang tampak seperti naik kendaraan. Sesekali bisa keliru.</p></details>
+<details><summary>Aku lewat rute yang sama setiap hari dan petanya tidak bertambah.</summary><p>Memang begitu aturannya. Tempat dalam jarak 30 m dari yang sudah kamu lalui dihitung sebagai jalan yang sama, jadi hanya jalan yang pertama kali kamu lalui yang menambah Jalan yang Kugambar. Trotoar di seberang jalan juga dihitung sebagai jalan yang sama. Kompas Perintis menunjukkan arah yang paling jarang kamu lalui.</p></details>
+<details><summary>Apakah lokasiku dikirim ke mana-mana?</summary><p>Tidak ke pengembang. Langkah, stempel, catatan harian, dan fotomu tersimpan di perangkat dan di iCloud pribadimu, dan pengembang tidak bisa melihatnya. Statistik penggunaan anonim tidak pernah menyertakan koordinat, teks catatan harian, nama tempat, atau foto. Layanan Peta Apple dipakai untuk mengubah koordinat menjadi nama tempat. Rinciannya ada di Kebijakan Privasi di bawah.</p></details>
+<details><summary>Apakah catatanku ikut pindah ke perangkat baru?</summary><p>Ya. Masuk dengan Akun Apple yang sama di perangkat baru dan biarkan iCloud tetap aktif, maka langkah, stempel, catatan harian, dan fotomu ikut pindah.</p></details>
+<details><summary>Bagaimana cara menghapus stempel atau foto?</summary><p>Hapus stempel dari daftar Tempat yang Kucap, dan sentuh lama foto di catatan harian untuk menghapusnya. Cara menghapus semua jalan dan catatan harian sekaligus sudah masuk rencana pengembangan.</p></details>
+<details><summary>Bagaimana cara menambahkan widget?</summary><p>Sentuh lama Layar Utama, ketuk Edit &gt; Tambah Widget, lalu pilih Buktu Buktu. Untuk Layar Terkunci, sentuh lama layarnya, lalu ketuk Sesuaikan. Widget Layar Utama menampilkan bentuk dan panjang jalan hari ini, sedangkan Layar Terkunci menampilkan jarak hari ini.</p></details>
+<details><summary>Apa yang kubutuhkan?</summary><p>iPhone dengan iOS 17.0 atau lebih baru.</p></details>
+<details><summary>Bagaimana cara menghubungi kalian?</summary><p>Kirim masukan dari pengaturan aplikasi atau email ke alamat di bawah. Kami akan membalas secepatnya.</p></details></div>
+      <p class="contact">Ada pertanyaan atau masukan? Tulis ke <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Hari ini, mau memutar<br>satu blok lebih jauh?</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6789952970">Unduh gratis di App Store</a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Buktu Buktu (FootprintDiary) ·
-    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    <nav id="languages" class="langs" aria-label="Bahasa"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id" aria-current="page">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Kebijakan Privasi</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Buktu Buktu</p>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

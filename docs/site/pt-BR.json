@@ -1,0 +1,173 @@
+{
+  "title": "Buktu Buktu: o mapa que você desenha a pé",
+  "description": "Um mapa que começa em branco e só se preenche onde você anda pela primeira vez. Trajetos de carro ou metrô não são desenhados. Tudo grátis.",
+  "hero": {
+    "headline": "Um mapa que só\nse preenche a pé",
+    "lead": "Ele começa como uma folha em branco. Só os lugares por onde você anda vão sendo preenchidos, ponto a ponto, e passar cem vezes pela mesma rua não o alarga. Para o mapa crescer, pegue um caminho novo.",
+    "cta": "Baixe grátis na App Store",
+    "note": "Todos os recursos são grátis, sem anúncios."
+  },
+  "demo": {
+    "title": "Dê uma volta",
+    "lead": "Arraste o dedo ou o mouse pelo papel para caminhar. Os pontos azuis são ruas por onde você já passou. Veja como o Caminho de hoje muda quando você repete o trajeto ou vai para um lado novo.",
+    "today": "Caminho de hoje",
+    "walked": "Caminhado",
+    "subway": "Pegar o metrô",
+    "subwayOn": "No metrô",
+    "reset": "Recomeçar",
+    "hint": "Arraste pelo papel para começar a andar.",
+    "fresh": "Um caminho novo. O mapa cresce.",
+    "same": "Você já passou por aqui. Só a distância aumenta.",
+    "ride": "Trajetos de carro ou metrô não são desenhados.",
+    "legendToday": "Hoje",
+    "legendPast": "Passos anteriores",
+    "legendFaded": "Mais de 3 meses",
+    "note": "Aqui você arrasta em vez de andar, com a mesma regra do app: tudo a menos de 30 m de onde você já passou conta como o mesmo caminho. No teclado, selecione o papel e ande com as setas."
+  },
+  "problem": {
+    "title": "Sempre pelas mesmas ruas?",
+    "text": "Um contador de passos conta passos, mas nunca pergunta para onde eles foram. Casa, estação e volta, e o anel enche direitinho, enquanto a ruazinha ao lado continua um mistério por anos. O Buktu Buktu só conta os caminhos que você faz pela primeira vez, e isso dá um motivo para desviar um quarteirão hoje."
+  },
+  "features": [
+    {
+      "title": "Carimbe onde você esteve e onde quer ir",
+      "text": "Carimbe o lugar onde você está ou mantenha pressionado qualquer ponto do mapa. São 212 carimbos para escolher, organizados por categoria.\nUm carimbo colocado onde você nunca andou fica como lugar para visitar e vira lugar visitado quando você chega lá de verdade. Fotografe a placa de uma loja e o fundo é recortado, deixando a placa em pé como um adesivo naquele ponto.",
+      "shot": "03-stamps"
+    },
+    {
+      "title": "Próxima caminhada: para onde você menos foi",
+      "text": "A Bússola dos pioneiros divide os arredores em oito direções e aponta a que você menos percorreu.\nPegadas de hoje mostra em ordem os lugares onde você parou hoje, com a distância caminhada entre eles.",
+      "shot": "02-compass"
+    },
+    {
+      "title": "Cada dia deixa uma forma",
+      "text": "O calendário desenha a forma da caminhada de cada dia em vez de um número. Mantenha um diário com texto e fotos e veja quanto de cada caminhada foi território novo.\nEscolha um período e veja seu mapa sendo desenhado em um vídeo que dá para exportar.",
+      "shot": "04-calendar"
+    }
+  ],
+  "steps": {
+    "title": "Comece em três passos",
+    "items": [
+      {
+        "title": "Abra o app",
+        "text": "Uma folha em branco se desdobra."
+      },
+      {
+        "title": "Permita a localização",
+        "text": "Escolha “Sempre” e ative “Movimento e Preparo Físico” para registrar caminhadas sem abrir o app."
+      },
+      {
+        "title": "Saia para andar",
+        "text": "Quanto menos conhecida a rua, mais o mapa cresce."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Como ler o mapa",
+    "rows": [
+      [
+        "Pontos vermelhos",
+        "onde você andou hoje"
+      ],
+      [
+        "Pontos índigo",
+        "passos anteriores, mais escuros onde você passa mais"
+      ],
+      [
+        "Pontos cinza",
+        "lugares aonde você não volta há mais de três meses. Eles desbotam, mas nunca somem"
+      ],
+      [
+        "Carimbo tracejado",
+        "um lugar “Para visitar”. Vira visitado quando você chega lá"
+      ],
+      [
+        "Caminhos que desenhei",
+        "comprimento total dos caminhos feitos pela primeira vez"
+      ],
+      [
+        "Caminho de hoje",
+        "quanto da caminhada de hoje foi novo"
+      ],
+      [
+        "Ver tudo junto",
+        "nos ajustes, abre a Bússola dos pioneiros, as Pegadas de hoje e o filme do seu mapa"
+      ]
+    ],
+    "note": "Escolha entre o mapa em nanquim e o Mapa ilustrado."
+  },
+  "pricing": {
+    "title": "Todos os recursos são grátis",
+    "free": {
+      "name": "Grátis",
+      "items": [
+        "Um mapa que só se preenche a pé, com registro de caminhos novos",
+        "212 carimbos e adesivos de placas de loja",
+        "Bússola dos pioneiros e Pegadas de hoje",
+        "Calendário e diário com texto e fotos",
+        "Exportação do vídeo do seu mapa sendo desenhado",
+        "Widgets para a Tela de Início e a Tela Bloqueada",
+        "Sincronização com o iCloud entre aparelhos"
+      ]
+    },
+    "pro": {
+      "name": "Apoie o desenvolvedor",
+      "items": [
+        "Se quiser, mande uma gorjeta pequena pelos ajustes",
+        "A gorjeta não libera nada. O app continua igualzinho"
+      ]
+    },
+    "note": "Sem anúncios, sem assinatura."
+  },
+  "faq": {
+    "title": "Perguntas",
+    "items": [
+      {
+        "q": "Caminhei, mas nada apareceu no mapa.",
+        "a": "Vá em Ajustes > Buktu Buktu > Localização, escolha “Sempre” e ative “Movimento e Preparo Físico”. Assim o registro funciona mesmo com o app fechado. Se você escolheu o modo de registro que economiza bateria nos ajustes do app, abra o app antes de sair. Localizações pouco precisas são salvas, mas não desenhadas."
+      },
+      {
+        "q": "Trajetos de carro ou metrô são registrados?",
+        "a": "Não. O app usa dados de movimento e a velocidade para desenhar só caminhada e corrida, e deixa de fora trechos que parecem ser de veículo. De vez em quando pode errar."
+      },
+      {
+        "q": "Faço o mesmo trajeto todo dia e o mapa não cresce.",
+        "a": "É a regra. Tudo a menos de 30 m de onde você já andou conta como o mesmo caminho, então só caminhos novos somam em Caminhos que desenhei. A calçada do outro lado da rua também conta como o mesmo caminho. A Bússola dos pioneiros mostra por onde você menos andou."
+      },
+      {
+        "q": "Minha localização é enviada para algum lugar?",
+        "a": "Para o desenvolvedor, não. Seus passos, carimbos, diário e fotos ficam no seu aparelho e no seu iCloud privado, e o desenvolvedor não consegue vê-los. As estatísticas de uso anônimas nunca incluem coordenadas, texto do diário, nomes de lugares nem fotos. Os serviços do Apple Mapas são usados para transformar coordenadas em nomes de lugares. Veja mais detalhes na Política de Privacidade abaixo."
+      },
+      {
+        "q": "Meus registros passam para um aparelho novo?",
+        "a": "Sim. Entre com a mesma Conta Apple no aparelho novo e mantenha o iCloud ativado: seus passos, carimbos, diário e fotos vão junto."
+      },
+      {
+        "q": "Como apago um carimbo ou uma foto?",
+        "a": "Apague carimbos na lista Lugares que carimbei e mantenha pressionada uma foto do diário para apagá-la. Uma forma de apagar de uma vez todos os caminhos e entradas do diário está nos planos."
+      },
+      {
+        "q": "Como adiciono o widget?",
+        "a": "Toque e mantenha pressionada a Tela de Início, toque em Editar > Adicionar Widget e escolha Buktu Buktu. Na Tela Bloqueada, toque e mantenha pressionado e depois toque em Personalizar. O widget da Tela de Início mostra a forma e o comprimento do caminho de hoje; o da Tela Bloqueada, a distância de hoje."
+      },
+      {
+        "q": "Do que eu preciso?",
+        "a": "De um iPhone com iOS 17.0 ou posterior."
+      },
+      {
+        "q": "Como entro em contato?",
+        "a": "Envie sua opinião pelos ajustes do app ou mande um e-mail para o endereço abaixo. Responderemos o quanto antes."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Que tal desviar\num quarteirão hoje?",
+    "cta": "Baixe grátis na App Store"
+  },
+  "ui": {
+    "skip": "Pular para o conteúdo",
+    "languages": "Idioma",
+    "privacy": "Política de Privacidade",
+    "contact": "Dúvidas ou sugestões? Escreva para {email}."
+  }
+}

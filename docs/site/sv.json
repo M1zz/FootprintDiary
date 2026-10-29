@@ -1,0 +1,173 @@
+{
+  "title": "Buktu Buktu: kartan du ritar till fots",
+  "description": "En karta som börjar som ett tomt papper och bara fylls i där du går för första gången. Bil och tunnelbana ritas aldrig. Allt är gratis.",
+  "hero": {
+    "headline": "En karta som bara\nfylls i till fots",
+    "lead": "Den börjar som ett tomt papper. Bara platserna du går på fylls i, punkt för punkt, och går du samma gata hundra gånger blir den inte bredare. Vill du att kartan ska växa får du ta en ny väg.",
+    "cta": "Hämta gratis på App Store",
+    "note": "Alla funktioner är gratis och utan reklam."
+  },
+  "demo": {
+    "title": "Ta en promenad",
+    "lead": "Dra med fingret eller musen över papperet för att gå. De blå prickarna är gator du gått förut. Se hur Dagens väg ändras när du går i gamla spår och när du tar dig någon ny väg.",
+    "today": "Dagens väg",
+    "walked": "Gått",
+    "subway": "Ta tunnelbanan",
+    "subwayOn": "På tunnelbanan",
+    "reset": "Börja om",
+    "hint": "Dra över papperet för att börja gå.",
+    "fresh": "En ny väg. Kartan växer.",
+    "same": "Här har du gått förut. Bara sträckan ökar.",
+    "ride": "Vägar med bil eller tunnelbana ritas inte.",
+    "legendToday": "I dag",
+    "legendPast": "Tidigare steg",
+    "legendFaded": "Över 3 månader",
+    "note": "Här drar du i stället för att gå. Appens egen regel gäller: allt inom 30 m från där du redan varit räknas som samma väg. Med tangentbord markerar du papperet och går med piltangenterna."
+  },
+  "problem": {
+    "title": "Går du samma gator varje dag?",
+    "text": "En stegräknare räknar steg men frågar aldrig vart de tog vägen. Hem till stationen och tillbaka räcker gott för att fylla ringen, så sidogatan intill förblir ett mysterium i åratal. Buktu Buktu räknar bara vägar du går för första gången, och det ger dig en anledning att ta en omväg på ett kvarter i dag."
+  },
+  "features": [
+    {
+      "title": "Stämpla platser du varit på och vill till",
+      "text": "Stämpla där du står, eller håll ned var som helst på kartan. Det finns 212 stämplar att välja mellan, ordnade efter kategori.\nEn stämpel på en plats där du aldrig gått blir kvar som en plats att besöka och blir en besökt plats när du väl kommer dit. Fotografera en butiksskylt så klipps bakgrunden bort och skylten reser sig som ett klistermärke på just den platsen.",
+      "shot": "03-stamps"
+    },
+    {
+      "title": "Nästa promenad: åt det håll du gått minst",
+      "text": "Pionjärkompass delar in omgivningen i åtta riktningar och pekar ut den du täckt minst.\nDagens fotspår radar upp platserna där du stannade i dag i ordning, med hur långt du gick mellan dem.",
+      "shot": "02-compass"
+    },
+    {
+      "title": "Varje dag lämnar en form",
+      "text": "Kalendern ritar formen på varje dags promenad i stället för en siffra. För dagbok med text och foton och se hur stor del av varje promenad som var ny mark.\nVälj en period och se din karta ritas fram som en video du kan exportera.",
+      "shot": "04-calendar"
+    }
+  ],
+  "steps": {
+    "title": "Tre steg för att komma igång",
+    "items": [
+      {
+        "title": "Öppna appen",
+        "text": "Ett tomt papper vecklas ut."
+      },
+      {
+        "title": "Tillåt platsåtkomst",
+        "text": "Välj Alltid och slå på Rörelse och träning så loggas promenaderna utan att du öppnar appen."
+      },
+      {
+        "title": "Gå ut",
+        "text": "Ju mindre bekant gatan är, desto mer växer kartan."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Så läser du kartan",
+    "rows": [
+      [
+        "Röda prickar",
+        "där du gick i dag"
+      ],
+      [
+        "Indigoblå prickar",
+        "tidigare steg, mörkare där du går oftast"
+      ],
+      [
+        "Grå prickar",
+        "platser du inte återvänt till på över tre månader. De bleknar men försvinner aldrig"
+      ],
+      [
+        "Streckad stämpel",
+        "en plats att besöka. Den blir besökt när du kommer dit"
+      ],
+      [
+        "Vägar jag ritat",
+        "den sammanlagda längden av alla vägar du gått för första gången"
+      ],
+      [
+        "Dagens väg",
+        "hur stor del av dagens promenad som var ny"
+      ],
+      [
+        "Visa allt samlat",
+        "i Inställningar, öppnar Pionjärkompass, Dagens fotspår och filmen där kartan ritas"
+      ]
+    ],
+    "note": "Välj mellan tuschkartan och Ritad karta."
+  },
+  "pricing": {
+    "title": "Alla funktioner är gratis",
+    "free": {
+      "name": "Gratis",
+      "items": [
+        "En karta som bara fylls i där du går, med koll på nya vägar",
+        "212 stämplar och klistermärken av butiksskyltar",
+        "Pionjärkompass och Dagens fotspår",
+        "Kalender och dagbok med text och foton",
+        "Exportera videon där din karta ritas",
+        "Widgetar för hemskärmen och låsskärmen",
+        "Synkning mellan enheter via iCloud"
+      ]
+    },
+    "pro": {
+      "name": "Stöd utvecklaren",
+      "items": [
+        "Skicka en liten dricks från Inställningar om du vill",
+        "Dricks låser inte upp något. Appen är densamma oavsett"
+      ]
+    },
+    "note": "Ingen reklam, ingen prenumeration."
+  },
+  "faq": {
+    "title": "Frågor",
+    "items": [
+      {
+        "q": "Jag gick en promenad men inget syns på kartan.",
+        "a": "Gå till Inställningar > Buktu Buktu > Plats, välj Alltid och slå på Rörelse och träning. Då loggas promenader även när appen är stängd. Om du valt det batterisparande loggningsläget i appens inställningar öppnar du appen innan du går ut. Platser med låg noggrannhet sparas men ritas inte."
+      },
+      {
+        "q": "Loggas resor med bil eller tunnelbana?",
+        "a": "Nej. Appen använder rörelsedata och hastighet för att bara rita gång och löpning, och utelämnar sträckor som ser ut att vara med fordon. Ibland kan den ta fel."
+      },
+      {
+        "q": "Jag går samma väg varje dag och kartan växer inte.",
+        "a": "Så är regeln. Allt inom 30 m från där du redan gått räknas som samma väg, så bara vägar du går för första gången läggs till i Vägar jag ritat. Trottoaren på andra sidan gatan räknas också som samma väg. Pionjärkompass visar var du gått minst."
+      },
+      {
+        "q": "Skickas min plats någonstans?",
+        "a": "Inte till utvecklaren. Dina steg, stämplar, dagbok och foton stannar på enheten och i din egen privata iCloud, och utvecklaren kan inte se dem. Anonym användningsstatistik innehåller aldrig koordinater, dagbokstext, platsnamn eller foton. Apple Kartor används för att göra om koordinater till platsnamn. Läs mer i integritetspolicyn nedan."
+      },
+      {
+        "q": "Följer mina loggar med till en ny enhet?",
+        "a": "Ja. Logga in med samma Apple-konto på den nya enheten och ha iCloud påslaget, så följer steg, stämplar, dagbok och foton med."
+      },
+      {
+        "q": "Hur tar jag bort en stämpel eller ett foto?",
+        "a": "Ta bort stämplar i listan Platser jag stämplat, och håll fingret på ett foto i dagboken för att ta bort det. Ett sätt att radera alla vägar och dagboksanteckningar på en gång finns med i planerna."
+      },
+      {
+        "q": "Hur lägger jag till widgeten?",
+        "a": "Håll fingret på hemskärmen, tryck på Redigera > Lägg till widget och välj Buktu Buktu. På låsskärmen håller du fingret på den och trycker på Anpassa. Widgeten på hemskärmen visar formen och längden på dagens väg, och låsskärmen visar dagens sträcka."
+      },
+      {
+        "q": "Vad behöver jag?",
+        "a": "En iPhone med iOS 17.0 eller senare."
+      },
+      {
+        "q": "Hur kontaktar jag er?",
+        "a": "Skicka feedback från appens inställningar eller mejla oss på adressen nedan. Vi svarar så snart vi kan."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Varför inte ta en omväg\npå ett kvarter i dag?",
+    "cta": "Hämta gratis på App Store"
+  },
+  "ui": {
+    "skip": "Hoppa till innehållet",
+    "languages": "Språk",
+    "privacy": "Integritetspolicy",
+    "contact": "Frågor eller synpunkter? Skriv till {email}."
+  }
+}

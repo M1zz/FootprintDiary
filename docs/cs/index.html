@@ -1,72 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="cs">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buktu Buktu (FootprintDiary)</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1c1d21;
-      --muted: #6b7280;
-      --accent: #4facfe;
-      --accent2: #00c2a8;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171b;
-        --card: #1f2126;
-        --text: #f2f3f5;
-        --muted: #9ca3af;
-        --border: #2c2f36;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
-    .hero .emoji { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
-    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
-    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: var(--text);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-      transition: transform .15s ease, box-shadow .15s ease;
-      display: block;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
-    .card .ico { font-size: 28px; }
-    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .features { margin-top: 40px; }
-    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .features ul { padding-left: 20px; color: var(--muted); }
-    .features li { margin: 8px 0; }
-    .features strong { color: var(--text); }
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buktu Buktu: mapa, kterou kreslíte chůzí</title>
+  <meta name="description" content="Mapa, která začíná jako prázdný list a plní se jen tam, kudy jdete poprvé. Cesty autem ani metrem se nekreslí. Všechny funkce zdarma.">
+  <meta name="theme-color" content="#C72C18" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6789952970">
   <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/cs/">
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
@@ -91,55 +32,159 @@
   <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/">
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/">
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buktu Buktu: mapa, kterou kreslíte chůzí">
+  <meta property="og:description" content="Mapa, která začíná jako prázdný list a plní se jen tam, kudy jdete poprvé. Cesty autem ani metrem se nekreslí. Všechny funkce zdarma.">
+  <meta property="og:url" content="https://m1zz.github.io/FootprintDiary/cs/">
+  <meta property="og:image" content="https://m1zz.github.io/FootprintDiary/img/cs/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#C72C18}@media (prefers-color-scheme:dark){:root{--accent:#F29966}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="index.html" hreflang="cs" lang="cs" aria-current="true">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-  <div class="hero">
-    <div class="emoji">👣</div>
-    <h1>Buktu Buktu</h1>
-    <p>Prázdná mapa, na které zůstanou jen místa, kudy jste prošli pěšky</p>
-  </div>
+  <a class="skip" href="#main">Přejít na obsah</a>
+  <header class="bar">
+    <a class="brand" href="../cs/"><img src="../icon.png" alt="" width="32" height="32">Buktu Buktu</a>
+    <a class="lang-link" href="#languages">Jazyk</a>
+  </header>
 
-  <div class="wrap">
-    <div class="cards">
-      <a class="card" href="privacy.html">
-        <div class="ico">🔒</div>
-        <h3>Zásady ochrany osobních údajů</h3>
-        <p>Zjistěte, jaké údaje zpracováváme a jak.</p>
-      </a>
-      <a class="card" href="support.html">
-        <div class="ico">💬</div>
-        <h3>Podpora / Kontakt</h3>
-        <p>Nápověda, časté dotazy a jak nás kontaktovat.</p>
-      </a>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Mapa, která roste<br>jen pod vašima nohama</h1>
+        <p class="lead">Začíná jako prázdný list papíru. Vyplňují se jen místa, kudy projdete pěšky, tečku po tečce, a stejná ulice prošlá stokrát ji nerozšíří. Chcete větší mapu? Vydejte se novou cestou.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6789952970">Stáhněte si zdarma v App Store</a><a class="try" href="#try">Vyzkoušejte si procházku ↓</a></div>
+        <p class="muted small">Všechny funkce jsou zdarma a bez reklam.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/01-map.jpg" alt="Mapa, která roste jen pod vašima nohama" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <div class="features">
-      <h2>Co je Buktu Buktu?</h2>
-      <p>Svět už nakreslily jiné mapy. Mapa v Buktu Buktu začíná na papíře, na kterém není nakresleno nic,
-         a bod po bodu se vyplňuje, <strong>jen když jdete</strong>.
-         Cesty projeté autem nebo metrem se nekreslí.</p>
-      <ul>
-        <li><strong>Mapa, která roste s vašimi kroky</strong> — místa, kudy projdete, se otiskují na papír jedno po druhém.
-            Často chozené cesty tmavnou a ty, na které tři měsíce nevkročíte, vyblednou do šedi</li>
-        <li><strong>Cesty, které jste nakreslili</strong> — neměří se ušlá vzdálenost, ale délka <em>nových</em>
-            cest. Ani stonásobné procházení téže cesty mapu nerozšíří</li>
-        <li><strong>Razítka</strong> — zastavte se na místě a otiskněte jedno z 212 razítek.
-            Vyfotíte-li fotoaparátem ceduli obchodu, tato cedule se postaví na vaši mapu</li>
-        <li><strong>Navštívená místa a místa k návštěvě</strong> — místa, kde jste ještě nebyli, zůstanou jako čárkovaná razítka
-            a po příchodu se z nich stanou navštívená místa</li>
-        <li><strong>Kompas průkopníka</strong> — z místa, kde stojíte, ukáže, kterým směrem je ještě bílo</li>
-        <li><strong>Film</strong> — exportujte jako video, jak se vaše mapa kreslí</li>
-        <li><strong>Jen ve vašem iCloudu</strong> — kroky, deník a fotky se ukládají do vašeho osobního iCloudu,
-            mimo cizí oči. Vývojáři se neodešle ani jediná souřadnice</li>
-      </ul>
-    </div>
-  </div>
+
+    <section class="reveal" id="try">
+      <h2>Vyzkoušejte si procházku</h2>
+      <p class="muted">Táhněte prstem nebo myší po papíře a jdete. Modré tečky jsou ulice, kudy jste už šli dřív. Sledujte, jak se Dnešní cesta mění, když jdete po starých stopách, a jak, když zamíříte jinam.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Vyzkoušejte si procházku&quot;, &quot;lead&quot;: &quot;Táhněte prstem nebo myší po papíře a jdete. Modré tečky jsou ulice, kudy jste už šli dřív. Sledujte, jak se Dnešní cesta mění, když jdete po starých stopách, a jak, když zamíříte jinam.&quot;, &quot;today&quot;: &quot;Dnešní cesta&quot;, &quot;walked&quot;: &quot;Ušlá vzdálenost&quot;, &quot;subway&quot;: &quot;Jet metrem&quot;, &quot;subwayOn&quot;: &quot;V metru&quot;, &quot;reset&quot;: &quot;Začít znovu&quot;, &quot;hint&quot;: &quot;Táhněte po papíře a vyrazte.&quot;, &quot;fresh&quot;: &quot;Nová cesta. Mapa roste.&quot;, &quot;same&quot;: &quot;Tudy už jste šli. Přibývá jen vzdálenost.&quot;, &quot;ride&quot;: &quot;Cesty autem ani metrem se nekreslí.&quot;, &quot;legendToday&quot;: &quot;Dnes&quot;, &quot;legendPast&quot;: &quot;Dřívější kroky&quot;, &quot;legendFaded&quot;: &quot;Přes 3 měsíce&quot;, &quot;note&quot;: &quot;Tady místo chůze táhnete. Platí stejné pravidlo jako v aplikaci: vše do 30 m od míst, kudy jste už prošli, se počítá jako stejná cesta. Na klávesnici vyberte papír a choďte šipkami.&quot;}"></div>
+    </section>
+
+    <section class="problem reveal">
+      <h2>Chodíte denně stejnými ulicemi?</h2>
+      <p>Krokoměr počítá kroky, ale neptá se, kam vedly. Cesta z domu na stanici a zpátky kruh klidně zaplní, a boční ulička hned vedle tak zůstane léta neznámá. Buktu Buktu počítá jen cesty, kudy jdete poprvé, a tak máte dnes důvod zajít si o blok dál.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Razítka pro místa, kde jste byli a kam chcete</h2>
+        <p>Otiskněte razítko tam, kde stojíte, nebo podržte prst kdekoli na mapě. Na výběr je 212 razítek rozdělených do kategorií.<br>Razítko na místě, kudy jste ještě nešli, zůstane jako místo k navštívení, a jakmile tam opravdu dojdete, změní se na navštívené. Vyfoťte vývěsní štít obchodu, pozadí se odstřihne a štít se na tom místě postaví jako samolepka.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/03-stamps.jpg" alt="Razítka pro místa, kde jste byli a kam chcete" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Příští procházka: směr, kam chodíte nejméně</h2>
+        <p>Kompas průkopníka rozdělí okolí do osmi směrů a ukáže ten, kterým jste chodili nejméně.<br>Dnešní stopy seřadí místa, kde jste se dnes zastavili, i s tím, kolik jste mezi nimi ušli.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/02-compass.jpg" alt="Příští procházka: směr, kam chodíte nejméně" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Každý den zanechá tvar</h2>
+        <p>Kalendář místo čísla kreslí tvar procházky každého dne. Pište si deník s textem a fotkami a sledujte, kolik z každé procházky byl nový terén.<br>Zvolte období a podívejte se, jak se vaše mapa kreslí, jako video, které můžete exportovat.</p>
+      </div>
+      <div class="phone"><img src="../img/cs/04-calendar.jpg" alt="Každý den zanechá tvar" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Tři kroky na začátek</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Otevřete aplikaci</h3><p>Rozloží se prázdný list papíru.</p></li>
+<li class="card"><span class="n">2</span><h3>Povolte polohu</h3><p>Zvolte Vždy a zapněte Pohyb a kondice, aby se procházky zaznamenávaly i bez otevírání aplikace.</p></li>
+<li class="card"><span class="n">3</span><h3>Vyrazte ven</h3><p>Čím méně známá ulice, tím víc mapa roste.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Jak číst mapu</h2>
+      <div class="card table">
+        <dl><div><dt>Červené tečky</dt><dd>kudy jste šli dnes</dd></div><div><dt>Indigové tečky</dt><dd>dřívější kroky, tmavší tam, kudy chodíte nejčastěji</dd></div><div><dt>Šedé tečky</dt><dd>místa, kam jste se nevrátili přes tři měsíce. Blednou, ale nikdy nezmizí</dd></div><div><dt>Čárkované razítko</dt><dd>místo k navštívení. Jakmile tam dojdete, stane se navštíveným</dd></div><div><dt>Cesty, které jsem nakreslil</dt><dd>celková délka všech cest, kudy jste šli poprvé</dd></div><div><dt>Dnešní cesta</dt><dd>kolik z dnešní chůze bylo nového</dd></div><div><dt>Zobrazit vše</dt><dd>v Nastavení, otevře Kompas průkopníka, Dnešní stopy a film s kreslením mapy</dd></div></dl>
+      </div>
+      <p class="muted">Vybrat si můžete tušovou mapu, nebo Kreslenou mapu.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Všechny funkce zdarma</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Zdarma</h3>
+          <ul><li>Mapa, která se plní jen tam, kudy chodíte, se sledováním nových cest</li><li>212 razítek a samolepky z vývěsních štítů</li><li>Kompas průkopníka a Dnešní stopy</li><li>Kalendář a deník s textem a fotkami</li><li>Export videa, jak se kreslí vaše mapa</li><li>Widgety na plochu a zamčenou obrazovku</li><li>Synchronizace mezi zařízeními přes iCloud</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Podpořte vývojáře</h3>
+          <ul><li>Pokud chcete, pošlete v Nastavení malé spropitné</li><li>Spropitné nic neodemyká. Aplikace je stejná tak i tak</li></ul>
+          
+        </div>
+      </div>
+      <p class="muted">Bez reklam, bez předplatného.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Otázky</h2>
+      <div class="faq"><details><summary>Po procházce se na mapě nic neobjevilo.</summary><p>Otevřete Nastavení &gt; Buktu Buktu &gt; Poloha, zvolte Vždy a zapněte Pohyb a kondice. Záznam pak běží i se zavřenou aplikací. Pokud jste v nastavení aplikace zvolili úsporný režim záznamu, otevřete aplikaci před odchodem. Polohy s nízkou přesností se ukládají, ale nekreslí.</p></details>
+<details><summary>Zaznamenávají se cesty autem nebo metrem?</summary><p>Ne. Podle údajů o pohybu a rychlosti kreslí jen chůzi a běh a úseky, které vypadají jako jízda vozidlem, vynechá. Občas se může splést.</p></details>
+<details><summary>Chodím denně stejnou trasou a mapa neroste.</summary><p>Tak zní pravidlo. Vše do 30 m od míst, kudy jste už šli, se počítá jako stejná cesta, takže k údaji „Cesty, které jsem nakreslil“ přibývají jen cesty prošlé poprvé. I chodník na druhé straně ulice se počítá jako stejná cesta. Kompas průkopníka ukáže, kudy jste chodili nejméně.</p></details>
+<details><summary>Posílá se moje poloha někam?</summary><p>Vývojáři ne. Kroky, razítka, deník a fotky zůstávají ve vašem zařízení a ve vašem soukromém iCloudu a vývojář je nevidí. Anonymní statistiky používání nikdy neobsahují souřadnice, text deníku, názvy míst ani fotky. K převodu souřadnic na názvy míst se používají služby Map Apple. Podrobnosti najdete v Zásadách ochrany osobních údajů níže.</p></details>
+<details><summary>Přenesou se záznamy do nového zařízení?</summary><p>Ano. Na novém zařízení se přihlaste stejným účtem Apple a nechte zapnutý iCloud. Kroky, razítka, deník i fotky půjdou s vámi.</p></details>
+<details><summary>Jak smažu razítko nebo fotku?</summary><p>Razítka smažete v seznamu Místa, kam jsem otiskl razítko, fotku v deníku smažete podržením prstu. Možnost smazat všechny cesty a záznamy v deníku najednou máme v plánu.</p></details>
+<details><summary>Jak přidám widget?</summary><p>Podržte prst na ploše, klepněte na Upravit &gt; Přidat widget a vyberte Buktu Buktu. Na zamčené obrazovce podržte prst a klepněte na Přizpůsobit. Widget na ploše ukazuje tvar a délku dnešní cesty, na zamčené obrazovce dnešní vzdálenost.</p></details>
+<details><summary>Co potřebuji?</summary><p>iPhone se systémem iOS 17.0 nebo novějším.</p></details>
+<details><summary>Jak vás kontaktovat?</summary><p>Pošlete zpětnou vazbu z nastavení aplikace nebo nám napište na adresu níže. Odpovíme co nejdřív.</p></details></div>
+      <p class="contact">Dotazy nebo připomínky? Napište na <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Co takhle dnes zajít<br>o blok dál?</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6789952970">Stáhněte si zdarma v App Store</a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Buktu Buktu (FootprintDiary) ·
-    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    <nav id="languages" class="langs" aria-label="Jazyk"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs" aria-current="page">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Zásady ochrany osobních údajů</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Buktu Buktu</p>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

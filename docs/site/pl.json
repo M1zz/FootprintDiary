@@ -1,0 +1,173 @@
+{
+  "title": "Buktu Buktu: mapa, którą rysujesz pieszo",
+  "description": "Mapa, która zaczyna się od pustej kartki i wypełnia tylko tam, gdzie idziesz pierwszy raz. Auto i metro się nie liczą. Wszystko za darmo.",
+  "hero": {
+    "headline": "Mapa, która rośnie\ntylko pod Twoimi stopami",
+    "lead": "Zaczyna się od pustej kartki. Wypełniają się tylko miejsca, które przejdziesz pieszo, punkt po punkcie, a ta sama ulica przemierzona sto razy jej nie poszerzy. Chcesz większej mapy? Wybierz nową drogę.",
+    "cta": "Pobierz za darmo z App Store",
+    "note": "Wszystkie funkcje są bezpłatne i bez reklam."
+  },
+  "demo": {
+    "title": "Wybierz się na spacer",
+    "lead": "Przeciągnij palcem lub myszą po kartce, aby iść. Niebieskie punkty to ulice przebyte wcześniej. Zobacz, jak zmienia się Dzisiejsza droga, gdy wracasz po własnych śladach, a jak, gdy skręcasz w nowe miejsce.",
+    "today": "Dzisiejsza droga",
+    "walked": "Dystans",
+    "subway": "Wsiądź do metra",
+    "subwayOn": "W metrze",
+    "reset": "Od nowa",
+    "hint": "Przeciągnij po kartce, aby ruszyć.",
+    "fresh": "Nowa droga. Mapa się powiększa.",
+    "same": "Ta droga jest już na mapie. Rośnie tylko dystans.",
+    "ride": "Drogi przebyte autem lub metrem nie są rysowane.",
+    "legendToday": "Dziś",
+    "legendPast": "Wcześniejsze kroki",
+    "legendFaded": "Ponad 3 miesiące",
+    "note": "Tutaj zamiast iść, przeciągasz. Obowiązuje ta sama zasada co w aplikacji: wszystko w promieniu 30 m od przebytej już trasy liczy się jako ta sama droga. Z klawiatury zaznacz kartkę i idź strzałkami."
+  },
+  "problem": {
+    "title": "Codziennie te same ulice?",
+    "text": "Krokomierz liczy kroki, ale nie pyta, dokąd prowadziły. Droga z domu na stację i z powrotem wystarczy, by zamknąć pierścień, a boczna uliczka tuż obok latami pozostaje zagadką. Buktu Buktu liczy tylko drogi przebyte po raz pierwszy, więc dziś masz powód, by zboczyć o jedną przecznicę."
+  },
+  "features": [
+    {
+      "title": "Pieczątki dla miejsc odwiedzonych i tych do odwiedzenia",
+      "text": "Postaw pieczątkę tam, gdzie stoisz, albo przytrzymaj palec w dowolnym miejscu mapy. Do wyboru jest 212 pieczątek podzielonych na kategorie.\nPieczątka postawiona tam, dokąd Twoje kroki jeszcze nie dotarły, zostaje miejscem do odwiedzenia, a gdy naprawdę tam dojdziesz, staje się miejscem odwiedzonym. Sfotografuj szyld sklepu, a tło zostanie wycięte i szyld stanie w tym miejscu jak naklejka.",
+      "shot": "03-stamps"
+    },
+    {
+      "title": "Następny spacer: kierunek, w którym bywasz najrzadziej",
+      "text": "Kompas pioniera dzieli okolicę na osiem kierunków i wskazuje ten, w którym chodzisz najmniej.\nDzisiejsze ślady układają po kolei dzisiejsze postoje razem z dystansem przebytym między nimi.",
+      "shot": "02-compass"
+    },
+    {
+      "title": "Każdy dzień zostawia kształt",
+      "text": "Kalendarz zamiast liczby pokazuje kształt każdego dziennego spaceru. Prowadź codzienny dziennik z tekstem i zdjęciami i sprawdzaj, ile z każdego spaceru było nowym terenem.\nWybierz okres i obejrzyj, jak rysuje się Twoja mapa, jako wideo do wyeksportowania.",
+      "shot": "04-calendar"
+    }
+  ],
+  "steps": {
+    "title": "Trzy kroki na start",
+    "items": [
+      {
+        "title": "Otwórz aplikację",
+        "text": "Rozkłada się pusta kartka papieru."
+      },
+      {
+        "title": "Zezwól na lokalizację",
+        "text": "Wybierz Zawsze i włącz Ruch i sprawność, aby spacery zapisywały się bez otwierania aplikacji."
+      },
+      {
+        "title": "Wyjdź z domu",
+        "text": "Im mniej znana ulica, tym bardziej rośnie mapa."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Jak czytać mapę",
+    "rows": [
+      [
+        "Czerwone punkty",
+        "dzisiejsza trasa"
+      ],
+      [
+        "Punkty indygo",
+        "wcześniejsze kroki, ciemniejsze tam, gdzie bywasz najczęściej"
+      ],
+      [
+        "Szare punkty",
+        "miejsca, do których nie wracasz od ponad trzech miesięcy. Blakną, ale nigdy nie znikają"
+      ],
+      [
+        "Przerywana pieczątka",
+        "miejsce do odwiedzenia. Gdy tam dotrzesz, staje się odwiedzone"
+      ],
+      [
+        "Drogi, które narysowałem",
+        "łączna długość wszystkich dróg przebytych po raz pierwszy"
+      ],
+      [
+        "Dzisiejsza droga",
+        "ile z dzisiejszego spaceru było nową drogą"
+      ],
+      [
+        "Pokaż wszystko razem",
+        "w Ustawieniach; otwiera Kompas pioniera, Dzisiejsze ślady i film z rysowaniem mapy"
+      ]
+    ],
+    "note": "Do wyboru: mapa tuszem albo Mapa rysunkowa."
+  },
+  "pricing": {
+    "title": "Wszystkie funkcje za darmo",
+    "free": {
+      "name": "Za darmo",
+      "items": [
+        "Mapa wypełniana tylko tam, gdzie chodzisz, ze śledzeniem nowych dróg",
+        "212 pieczątek i naklejki z szyldów",
+        "Kompas pioniera i Dzisiejsze ślady",
+        "Kalendarz i dziennik z tekstem i zdjęciami",
+        "Eksport wideo, na którym rysuje się Twoja mapa",
+        "Widżety na ekran początkowy i ekran blokady",
+        "Synchronizacja między urządzeniami przez iCloud"
+      ]
+    },
+    "pro": {
+      "name": "Wesprzyj twórcę",
+      "items": [
+        "Jeśli chcesz, wyślij drobny napiwek w Ustawieniach",
+        "Napiwek niczego nie odblokowuje. Aplikacja działa tak samo"
+      ]
+    },
+    "note": "Bez reklam i bez subskrypcji."
+  },
+  "faq": {
+    "title": "Pytania",
+    "items": [
+      {
+        "q": "Po spacerze na mapie nic się nie pojawiło.",
+        "a": "Wejdź w Ustawienia > Buktu Buktu > Lokalizacja, wybierz Zawsze i włącz Ruch i sprawność. Dzięki temu zapis działa nawet przy zamkniętej aplikacji. Jeśli w ustawieniach aplikacji wybrano tryb zapisu oszczędzający baterię, otwórz aplikację przed wyjściem. Lokalizacje o niskiej dokładności są zapisywane, ale nie rysowane."
+      },
+      {
+        "q": "Czy przejazdy autem lub metrem są zapisywane?",
+        "a": "Nie. Na podstawie danych o ruchu i prędkości rysowane są tylko chód i bieg, a odcinki wyglądające na jazdę pojazdem są pomijane. Czasem aplikacja może się pomylić."
+      },
+      {
+        "q": "Codziennie chodzę tą samą trasą, a mapa nie rośnie.",
+        "a": "Tak działa zasada. Wszystko w promieniu 30 m od przebytej już trasy liczy się jako ta sama droga, więc wartość „Drogi, które narysowałem” zwiększają tylko drogi przebyte po raz pierwszy. Chodnik po drugiej stronie ulicy też liczy się jako ta sama droga. Kompas pioniera pokazuje, gdzie chodzisz najmniej."
+      },
+      {
+        "q": "Czy moja lokalizacja jest gdzieś wysyłana?",
+        "a": "Nie do twórcy. Kroki, pieczątki, dziennik i zdjęcia zostają na urządzeniu i w Twoim prywatnym iCloud, a twórca ich nie widzi. Anonimowe statystyki użycia nigdy nie zawierają współrzędnych, treści dziennika, nazw miejsc ani zdjęć. Do zamiany współrzędnych na nazwy miejsc używane są usługi Map Apple. Szczegóły znajdziesz w Polityce prywatności poniżej."
+      },
+      {
+        "q": "Czy zapisy przeniosą się na nowe urządzenie?",
+        "a": "Tak. Zaloguj się na nowym urządzeniu na to samo Konto Apple i nie wyłączaj iCloud, a kroki, pieczątki, dziennik i zdjęcia przeniosą się razem z Tobą."
+      },
+      {
+        "q": "Jak usunąć pieczątkę lub zdjęcie?",
+        "a": "Pieczątki usuniesz z listy Miejsca, które oznaczyłem pieczątką, a zdjęcie w dzienniku usuniesz, przytrzymując je palcem. Możliwość usunięcia wszystkich dróg i wpisów w dzienniku naraz jest w planach."
+      },
+      {
+        "q": "Jak dodać widżet?",
+        "a": "Przytrzymaj palec na ekranie początkowym, stuknij Edycja > Dodaj widżet i wybierz Buktu Buktu. Na ekranie blokady przytrzymaj palec, a potem stuknij Dostosuj. Widżet na ekranie początkowym pokazuje kształt i długość dzisiejszej drogi, a na ekranie blokady dzisiejszy dystans."
+      },
+      {
+        "q": "Czego potrzebuję?",
+        "a": "iPhone’a z iOS 17.0 lub nowszym."
+      },
+      {
+        "q": "Jak się skontaktować?",
+        "a": "Wyślij opinię z ustawień aplikacji lub napisz na adres poniżej. Odpowiemy najszybciej, jak to możliwe."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Może dziś zboczysz\no jedną przecznicę?",
+    "cta": "Pobierz za darmo z App Store"
+  },
+  "ui": {
+    "skip": "Przejdź do treści",
+    "languages": "Język",
+    "privacy": "Polityka prywatności",
+    "contact": "Pytania lub uwagi? Napisz na {email}."
+  }
+}

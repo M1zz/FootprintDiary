@@ -1,72 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buktu Buktu (FootprintDiary)</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1c1d21;
-      --muted: #6b7280;
-      --accent: #4facfe;
-      --accent2: #00c2a8;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171b;
-        --card: #1f2126;
-        --text: #f2f3f5;
-        --muted: #9ca3af;
-        --border: #2c2f36;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
-    .hero .emoji { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
-    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
-    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: var(--text);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-      transition: transform .15s ease, box-shadow .15s ease;
-      display: block;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
-    .card .ico { font-size: 28px; }
-    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .features { margin-top: 40px; }
-    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .features ul { padding-left: 20px; color: var(--muted); }
-    .features li { margin: 8px 0; }
-    .features strong { color: var(--text); }
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buktu Buktu: la mappa che disegni a piedi</title>
+  <meta name="description" content="Una mappa che parte da un foglio bianco e si riempie solo dove cammini per la prima volta. Auto e metro non disegnano nulla. Tutto gratis.">
+  <meta name="theme-color" content="#C72C18" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6789952970">
   <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/it/">
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
@@ -91,55 +32,159 @@
   <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/">
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/">
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buktu Buktu: la mappa che disegni a piedi">
+  <meta property="og:description" content="Una mappa che parte da un foglio bianco e si riempie solo dove cammini per la prima volta. Auto e metro non disegnano nulla. Tutto gratis.">
+  <meta property="og:url" content="https://m1zz.github.io/FootprintDiary/it/">
+  <meta property="og:image" content="https://m1zz.github.io/FootprintDiary/img/it/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#C72C18}@media (prefers-color-scheme:dark){:root{--accent:#F29966}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="index.html" hreflang="it" lang="it" aria-current="true">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-  <div class="hero">
-    <div class="emoji">👣</div>
-    <h1>Buktu Buktu</h1>
-    <p>Una mappa bianca che conserva solo i luoghi percorsi a piedi</p>
-  </div>
+  <a class="skip" href="#main">Vai al contenuto</a>
+  <header class="bar">
+    <a class="brand" href="../it/"><img src="../icon.png" alt="" width="32" height="32">Buktu Buktu</a>
+    <a class="lang-link" href="#languages">Lingua</a>
+  </header>
 
-  <div class="wrap">
-    <div class="cards">
-      <a class="card" href="privacy.html">
-        <div class="ico">🔒</div>
-        <h3>Informativa sulla privacy</h3>
-        <p>Scopri quali dati trattiamo e come.</p>
-      </a>
-      <a class="card" href="support.html">
-        <div class="ico">💬</div>
-        <h3>Assistenza / Contatti</h3>
-        <p>Aiuto, domande frequenti e come contattarci.</p>
-      </a>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Una mappa che si<br>riempie solo a piedi</h1>
+        <p class="lead">Parte da un foglio bianco. Si riempiono, un punto alla volta, solo i posti dove cammini, e percorrere cento volte la stessa via non la allarga. Per far crescere la mappa, prendi una strada nuova.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6789952970">Scaricala gratis dall’App Store</a><a class="try" href="#try">Fai due passi ↓</a></div>
+        <p class="muted small">Tutte le funzioni sono gratuite, senza pubblicità.</p>
+      </div>
+      <div class="phone"><img src="../img/it/01-map.jpg" alt="Una mappa che si riempie solo a piedi" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <div class="features">
-      <h2>Che cos’è Buktu Buktu?</h2>
-      <p>Il mondo è già stato disegnato dalle altre mappe. La mappa di Buktu Buktu parte da un foglio su cui non c’è disegnato nulla
-         e si riempie, un punto alla volta, <strong>solo quando cammini</strong>.
-         I tragitti fatti in auto o in metropolitana non vengono disegnati.</p>
-      <ul>
-        <li><strong>Una mappa che cresce con i tuoi passi</strong> — i luoghi per cui passi si imprimono sul foglio uno alla volta.
-            I percorsi più battuti si scuriscono, e quelli che non calpesti per tre mesi sbiadiscono fino al grigio</li>
-        <li><strong>I percorsi che hai disegnato</strong> — non si misura la distanza camminata, ma la lunghezza dei
-            percorsi <em>nuovi</em>. Anche facendo cento volte la stessa strada, la mappa non cresce</li>
-        <li><strong>Timbri</strong> — fermati in un luogo e metti uno dei 212 timbri.
-            Se fotografi l’insegna di un negozio con la fotocamera, quell’insegna si alza sulla tua mappa</li>
-        <li><strong>Luoghi visitati e da visitare</strong> — i posti dove non sei ancora stato restano come timbri tratteggiati
-            e si fissano come luoghi visitati quando ci arrivi</li>
-        <li><strong>Bussola dei pionieri</strong> — da dove ti trovi, indica da che parte è ancora tutto bianco</li>
-        <li><strong>Film</strong> — esporta come video il processo con cui si disegna la tua mappa</li>
-        <li><strong>Solo nel tuo iCloud</strong> — passi, diario e foto sono conservati nel tuo iCloud personale,
-            lontano da occhi altrui. Nemmeno una coordinata viene inviata allo sviluppatore</li>
-      </ul>
-    </div>
-  </div>
+
+    <section class="reveal" id="try">
+      <h2>Fai due passi</h2>
+      <p class="muted">Trascina un dito o il mouse sul foglio per camminare. I punti blu sono vie già percorse. Guarda come cambia «Il percorso di oggi» se ci ripassi sopra o se vai da un’altra parte.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Fai due passi&quot;, &quot;lead&quot;: &quot;Trascina un dito o il mouse sul foglio per camminare. I punti blu sono vie già percorse. Guarda come cambia «Il percorso di oggi» se ci ripassi sopra o se vai da un’altra parte.&quot;, &quot;today&quot;: &quot;Il percorso di oggi&quot;, &quot;walked&quot;: &quot;A piedi&quot;, &quot;subway&quot;: &quot;Prendi la metro&quot;, &quot;subwayOn&quot;: &quot;In metro&quot;, &quot;reset&quot;: &quot;Ricomincia&quot;, &quot;hint&quot;: &quot;Trascina sul foglio per metterti in cammino.&quot;, &quot;fresh&quot;: &quot;Una strada nuova. La mappa cresce.&quot;, &quot;same&quot;: &quot;Qui ci sei già passato. Aumenta solo la distanza.&quot;, &quot;ride&quot;: &quot;I tragitti in auto o in metro non vengono disegnati.&quot;, &quot;legendToday&quot;: &quot;Oggi&quot;, &quot;legendPast&quot;: &quot;Passi precedenti&quot;, &quot;legendFaded&quot;: &quot;Oltre 3 mesi&quot;, &quot;note&quot;: &quot;Qui trascini invece di camminare, con la stessa regola dell’app: tutto ciò che è entro 30 m da dove sei già passato conta come la stessa strada. Da tastiera, seleziona il foglio e cammina con i tasti freccia.&quot;}"></div>
+    </section>
+
+    <section class="problem reveal">
+      <h2>Sempre le stesse strade?</h2>
+      <p>Un contapassi conta i passi, ma non chiede mai dove ti hanno portato. Casa, stazione e ritorno, e l’anello si riempie lo stesso, mentre la stradina accanto resta un mistero per anni. Buktu Buktu conta solo i percorsi che fai per la prima volta: un buon motivo per allungare di un isolato oggi.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Timbra i posti dove sei stato e dove vuoi andare</h2>
+        <p>Timbra il punto in cui ti trovi, oppure tieni premuto un punto qualsiasi della mappa. Ci sono 212 timbri tra cui scegliere, divisi per categoria.<br>Un timbro messo dove non hai mai camminato resta un luogo da visitare e diventa visitato quando ci arrivi davvero. Fotografa l’insegna di un negozio: lo sfondo viene ritagliato e l’insegna resta in piedi come adesivo in quel punto.</p>
+      </div>
+      <div class="phone"><img src="../img/it/03-stamps.jpg" alt="Timbra i posti dove sei stato e dove vuoi andare" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Prossima passeggiata: dove sei andato meno</h2>
+        <p>La Bussola dei pionieri divide la zona intorno a te in otto direzioni e indica quella che hai percorso meno.<br>Impronte di oggi mette in fila i posti in cui ti sei fermato oggi, con la distanza percorsa tra uno e l’altro.</p>
+      </div>
+      <div class="phone"><img src="../img/it/02-compass.jpg" alt="Prossima passeggiata: dove sei andato meno" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Ogni giorno lascia una forma</h2>
+        <p>Il calendario disegna la forma della camminata di ogni giorno invece di un numero. Tieni un diario con testo e foto, e scopri quanta parte di ogni passeggiata era terreno nuovo.<br>Scegli un periodo e guarda la tua mappa disegnarsi in un video da esportare.</p>
+      </div>
+      <div class="phone"><img src="../img/it/04-calendar.jpg" alt="Ogni giorno lascia una forma" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Tre passi per iniziare</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Apri l’app</h3><p>Si spiega un foglio bianco.</p></li>
+<li class="card"><span class="n">2</span><h3>Consenti la posizione</h3><p>Scegli «Sempre» e attiva «Movimento e fitness» per registrare le camminate senza aprire l’app.</p></li>
+<li class="card"><span class="n">3</span><h3>Esci</h3><p>Meno conosci la strada, più cresce la mappa.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Come leggere la mappa</h2>
+      <div class="card table">
+        <dl><div><dt>Punti rossi</dt><dd>dove hai camminato oggi</dd></div><div><dt>Punti indaco</dt><dd>passi precedenti, più scuri dove passi più spesso</dd></div><div><dt>Punti grigi</dt><dd>posti in cui non torni da oltre tre mesi. Sbiadiscono, ma non spariscono mai</dd></div><div><dt>Timbro tratteggiato</dt><dd>un luogo «Da visitare». Diventa visitato quando ci arrivi</dd></div><div><dt>I percorsi che ho disegnato</dt><dd>lunghezza totale dei percorsi fatti per la prima volta</dd></div><div><dt>Il percorso di oggi</dt><dd>quanta parte della camminata di oggi era nuova</dd></div><div><dt>Vedi tutto insieme</dt><dd>nelle impostazioni, apre la Bussola dei pionieri, Impronte di oggi e il film della tua mappa</dd></div></dl>
+      </div>
+      <p class="muted">Puoi scegliere tra la mappa a inchiostro e la Mappa illustrata.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Tutte le funzioni sono gratuite</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Gratis</h3>
+          <ul><li>Una mappa che si riempie solo a piedi, con il conteggio dei percorsi nuovi</li><li>212 timbri e adesivi dalle insegne</li><li>Bussola dei pionieri e Impronte di oggi</li><li>Calendario e diario con testo e foto</li><li>Esporta il video della tua mappa che si disegna</li><li>Widget per la schermata Home e la schermata di blocco</li><li>Sincronizzazione iCloud tra dispositivi</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Sostieni lo sviluppatore</h3>
+          <ul><li>Se ti va, lascia una piccola mancia dalle impostazioni</li><li>La mancia non sblocca nulla. L’app resta identica</li></ul>
+          
+        </div>
+      </div>
+      <p class="muted">Niente pubblicità, niente abbonamento.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Domande</h2>
+      <div class="faq"><details><summary>Ho camminato, ma sulla mappa non compare nulla.</summary><p>Vai in Impostazioni &gt; Buktu Buktu &gt; Posizione, scegli «Sempre» e attiva «Movimento e fitness». Così la registrazione funziona anche con l’app chiusa. Se nelle impostazioni dell’app hai scelto la modalità di registrazione che risparmia batteria, apri l’app prima di partire. Le posizioni poco precise vengono salvate ma non disegnate.</p></details>
+<details><summary>Vengono registrati i tragitti in auto o in metro?</summary><p>No. L’app usa i dati di movimento e la velocità per disegnare solo camminata e corsa, ed esclude i tratti che sembrano fatti in veicolo. Ogni tanto può sbagliare.</p></details>
+<details><summary>Faccio lo stesso percorso ogni giorno e la mappa non cresce.</summary><p>È la regola. Tutto ciò che è entro 30 m da dove hai già camminato conta come la stessa strada, quindi solo i percorsi nuovi si aggiungono a «I percorsi che ho disegnato». Anche il marciapiede di fronte conta come la stessa strada. La Bussola dei pionieri ti mostra dove hai camminato meno.</p></details>
+<details><summary>La mia posizione viene inviata da qualche parte?</summary><p>Non allo sviluppatore. Passi, timbri, diario e foto restano sul tuo dispositivo e nel tuo iCloud privato, e lo sviluppatore non può vederli. Le statistiche d’uso anonime non includono mai coordinate, testi del diario, nomi di luoghi o foto. Per trasformare le coordinate in nomi di luoghi si usano i servizi di Apple Mappe. Per i dettagli, consulta l’Informativa sulla privacy qui sotto.</p></details>
+<details><summary>Le mie registrazioni passano su un nuovo dispositivo?</summary><p>Sì. Accedi con lo stesso Account Apple sul nuovo dispositivo e lascia iCloud attivo: passi, timbri, diario e foto ti seguono.</p></details>
+<details><summary>Come elimino un timbro o una foto?</summary><p>Elimina i timbri dall’elenco «Luoghi che ho timbrato» e tieni premuta una foto del diario per eliminarla. È in programma un modo per cancellare in un colpo tutti i percorsi e le voci del diario.</p></details>
+<details><summary>Come aggiungo il widget?</summary><p>Tieni premuto sulla schermata Home, tocca Modifica &gt; Aggiungi widget e scegli Buktu Buktu. Per la schermata di blocco, tienila premuta e tocca Personalizza. Il widget della schermata Home mostra forma e lunghezza del percorso di oggi, quello della schermata di blocco la distanza di oggi.</p></details>
+<details><summary>Di cosa ho bisogno?</summary><p>Di un iPhone con iOS 17.0 o successivo.</p></details>
+<details><summary>Come vi contatto?</summary><p>Invia un feedback dalle impostazioni dell’app o scrivici all’indirizzo qui sotto. Ti risponderemo il prima possibile.</p></details></div>
+      <p class="contact">Domande o suggerimenti? Scrivi a <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>E se oggi allungassi<br>di un isolato?</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6789952970">Scaricala gratis dall’App Store</a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Buktu Buktu (FootprintDiary) ·
-    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    <nav id="languages" class="langs" aria-label="Lingua"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it" aria-current="page">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Informativa sulla privacy</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Buktu Buktu</p>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

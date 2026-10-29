@@ -1,0 +1,173 @@
+{
+  "title": "Buktu Buktu: Peta yang digambar dengan langkah",
+  "description": "Peta dari kertas kosong yang hanya terisi di tempat yang pertama kali kamu jalani. Perjalanan naik mobil atau kereta tidak digambar. Semua gratis.",
+  "hero": {
+    "headline": "Peta yang terisi\nhanya dengan berjalan",
+    "lead": "Awalnya hanya selembar kertas kosong. Hanya tempat yang kamu jalani yang terisi, satu titik demi satu titik, dan menyusuri jalan yang sama seratus kali tak akan memperluasnya. Ingin petamu bertambah luas? Ambil jalan baru.",
+    "cta": "Unduh gratis di App Store",
+    "note": "Semua fitur gratis, tanpa iklan."
+  },
+  "demo": {
+    "title": "Coba berjalan",
+    "lead": "Seret jari atau mouse di atas kertas untuk berjalan. Titik biru adalah jalan yang pernah kamu lalui. Lihat bagaimana Jalan yang Ditarik Hari Ini berubah saat kamu mengulang jalan lama dibanding saat menuju arah baru.",
+    "today": "Jalan yang Ditarik Hari Ini",
+    "walked": "Jarak tempuh",
+    "subway": "Naik kereta",
+    "subwayOn": "Di dalam kereta",
+    "reset": "Ulang dari awal",
+    "hint": "Seret di atas kertas untuk mulai berjalan.",
+    "fresh": "Jalan baru. Peta bertambah luas.",
+    "same": "Jalan ini sudah pernah kamu lalui. Hanya jaraknya yang bertambah.",
+    "ride": "Jalan yang dilalui dengan mobil atau kereta tidak digambar.",
+    "legendToday": "Hari Ini",
+    "legendPast": "Langkah Lalu",
+    "legendFaded": "Lebih dari 3 bulan",
+    "note": "Di sini kamu menyeret, bukan berjalan. Aturannya sama dengan aplikasi: tempat dalam jarak 30 m dari yang sudah kamu lalui dihitung sebagai jalan yang sama. Dengan papan ketik, fokuskan ke kertas lalu berjalan dengan tombol panah."
+  },
+  "problem": {
+    "title": "Setiap hari lewat jalan yang sama?",
+    "text": "Penghitung langkah menghitung langkahmu, tapi tak pernah peduli ke mana langkah itu pergi. Bolak-balik dari rumah ke stasiun saja sudah memenuhi lingkarannya, sementara gang di sebelah tetap jadi misteri bertahun-tahun. Buktu Buktu hanya menghitung jalan yang pertama kali kamu lalui, jadi hari ini ada alasan untuk memutar satu blok lebih jauh."
+  },
+  "features": [
+    {
+      "title": "Stempel tempat yang dikunjungi dan ingin dikunjungi",
+      "text": "Bubuhkan stempel di tempat kamu berdiri, atau tekan lama di mana saja di peta. Ada 212 stempel yang bisa dipilih, dikelompokkan per kategori.\nStempel di tempat yang belum pernah kamu jalani menjadi tempat yang ingin dikunjungi, lalu berubah jadi tempat yang dikunjungi saat kamu benar-benar sampai. Foto papan nama toko, latarnya dipotong dan papan itu berdiri sebagai stiker untuk tempat tersebut.",
+      "shot": "03-stamps"
+    },
+    {
+      "title": "Jalan berikutnya: arah yang paling jarang kamu lalui",
+      "text": "Kompas Perintis membagi sekelilingmu menjadi delapan arah dan menunjuk arah yang paling sedikit kamu jalani.\nJejak Kaki Hari Ini menjajarkan tempat yang kamu singgahi hari ini secara berurutan, lengkap dengan jarak yang kamu tempuh di antaranya.",
+      "shot": "02-compass"
+    },
+    {
+      "title": "Setiap hari meninggalkan bentuk",
+      "text": "Kalender menggambar bentuk perjalanan kakimu setiap hari, bukan angka. Tulis catatan harian dengan teks dan foto, dan lihat seberapa banyak tiap perjalanan yang merupakan jalan baru.\nPilih periode untuk menonton petamu digambar sebagai video yang bisa diekspor.",
+      "shot": "04-calendar"
+    }
+  ],
+  "steps": {
+    "title": "Mulai dalam tiga langkah",
+    "items": [
+      {
+        "title": "Buka aplikasi",
+        "text": "Selembar kertas kosong terbentang."
+      },
+      {
+        "title": "Izinkan lokasi",
+        "text": "Pilih “Selalu Izinkan” dan nyalakan Gerakan & Kebugaran agar jalan kakimu tercatat tanpa membuka aplikasi."
+      },
+      {
+        "title": "Berangkat",
+        "text": "Makin asing jalannya, makin luas petanya."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Cara membaca peta",
+    "rows": [
+      [
+        "Titik merah",
+        "tempat yang kamu jalani hari ini"
+      ],
+      [
+        "Titik nila",
+        "langkah lalu, makin pekat di tempat yang sering dilalui"
+      ],
+      [
+        "Titik abu-abu",
+        "tempat yang tidak kamu datangi lagi lebih dari tiga bulan. Warnanya memudar, tapi tak pernah hilang"
+      ],
+      [
+        "Stempel garis putus",
+        "tempat yang ingin dikunjungi. Berubah jadi dikunjungi begitu kamu sampai"
+      ],
+      [
+        "Jalan yang Kugambar",
+        "total panjang semua jalan yang pertama kali kamu lalui"
+      ],
+      [
+        "Jalan yang Ditarik Hari Ini",
+        "seberapa banyak jalan hari ini yang baru"
+      ],
+      [
+        "Lihat Semua Sekaligus",
+        "di Pengaturan, membuka Kompas Perintis, Jejak Kaki Hari Ini, dan film proses menggambar peta"
+      ]
+    ],
+    "note": "Pilih antara peta tinta dan Peta Gambar."
+  },
+  "pricing": {
+    "title": "Semua fitur gratis",
+    "free": {
+      "name": "Gratis",
+      "items": [
+        "Peta yang hanya terisi di tempat yang kamu jalani, dengan pelacakan jalan baru",
+        "212 stempel dan stiker papan nama toko",
+        "Kompas Perintis dan Jejak Kaki Hari Ini",
+        "Kalender dan catatan harian dengan teks dan foto",
+        "Ekspor video proses petamu digambar",
+        "Widget Layar Utama dan Layar Terkunci",
+        "Sinkronisasi iCloud antarperangkat"
+      ]
+    },
+    "pro": {
+      "name": "Dukung pengembang",
+      "items": [
+        "Kirim tip kecil dari Pengaturan, kalau kamu mau",
+        "Tip tidak membuka apa pun. Aplikasinya tetap sama"
+      ]
+    },
+    "note": "Tanpa iklan, tanpa langganan."
+  },
+  "faq": {
+    "title": "Pertanyaan",
+    "items": [
+      {
+        "q": "Aku sudah berjalan, tapi tidak ada yang muncul di peta.",
+        "a": "Buka Pengaturan > Buktu Buktu > Lokasi, pilih Selalu, lalu nyalakan Gerakan & Kebugaran. Dengan begitu langkahmu tercatat meski aplikasi ditutup. Jika kamu memilih cara pencatatan hemat baterai di pengaturan aplikasi, buka aplikasi sebelum berangkat. Lokasi dengan akurasi rendah tetap disimpan, tapi tidak digambar."
+      },
+      {
+        "q": "Apakah perjalanan dengan mobil atau kereta dicatat?",
+        "a": "Tidak. Aplikasi memakai data gerakan dan kecepatan untuk menggambar hanya jalan kaki dan lari, dan membuang ruas yang tampak seperti naik kendaraan. Sesekali bisa keliru."
+      },
+      {
+        "q": "Aku lewat rute yang sama setiap hari dan petanya tidak bertambah.",
+        "a": "Memang begitu aturannya. Tempat dalam jarak 30 m dari yang sudah kamu lalui dihitung sebagai jalan yang sama, jadi hanya jalan yang pertama kali kamu lalui yang menambah Jalan yang Kugambar. Trotoar di seberang jalan juga dihitung sebagai jalan yang sama. Kompas Perintis menunjukkan arah yang paling jarang kamu lalui."
+      },
+      {
+        "q": "Apakah lokasiku dikirim ke mana-mana?",
+        "a": "Tidak ke pengembang. Langkah, stempel, catatan harian, dan fotomu tersimpan di perangkat dan di iCloud pribadimu, dan pengembang tidak bisa melihatnya. Statistik penggunaan anonim tidak pernah menyertakan koordinat, teks catatan harian, nama tempat, atau foto. Layanan Peta Apple dipakai untuk mengubah koordinat menjadi nama tempat. Rinciannya ada di Kebijakan Privasi di bawah."
+      },
+      {
+        "q": "Apakah catatanku ikut pindah ke perangkat baru?",
+        "a": "Ya. Masuk dengan Akun Apple yang sama di perangkat baru dan biarkan iCloud tetap aktif, maka langkah, stempel, catatan harian, dan fotomu ikut pindah."
+      },
+      {
+        "q": "Bagaimana cara menghapus stempel atau foto?",
+        "a": "Hapus stempel dari daftar Tempat yang Kucap, dan sentuh lama foto di catatan harian untuk menghapusnya. Cara menghapus semua jalan dan catatan harian sekaligus sudah masuk rencana pengembangan."
+      },
+      {
+        "q": "Bagaimana cara menambahkan widget?",
+        "a": "Sentuh lama Layar Utama, ketuk Edit > Tambah Widget, lalu pilih Buktu Buktu. Untuk Layar Terkunci, sentuh lama layarnya, lalu ketuk Sesuaikan. Widget Layar Utama menampilkan bentuk dan panjang jalan hari ini, sedangkan Layar Terkunci menampilkan jarak hari ini."
+      },
+      {
+        "q": "Apa yang kubutuhkan?",
+        "a": "iPhone dengan iOS 17.0 atau lebih baru."
+      },
+      {
+        "q": "Bagaimana cara menghubungi kalian?",
+        "a": "Kirim masukan dari pengaturan aplikasi atau email ke alamat di bawah. Kami akan membalas secepatnya."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Hari ini, mau memutar\nsatu blok lebih jauh?",
+    "cta": "Unduh gratis di App Store"
+  },
+  "ui": {
+    "skip": "Lewati ke konten",
+    "languages": "Bahasa",
+    "privacy": "Kebijakan Privasi",
+    "contact": "Ada pertanyaan atau masukan? Tulis ke {email}."
+  }
+}

@@ -1,0 +1,173 @@
+{
+  "title": "Buktu Buktu: mapa, kterou kreslíte chůzí",
+  "description": "Mapa, která začíná jako prázdný list a plní se jen tam, kudy jdete poprvé. Cesty autem ani metrem se nekreslí. Všechny funkce zdarma.",
+  "hero": {
+    "headline": "Mapa, která roste\njen pod vašima nohama",
+    "lead": "Začíná jako prázdný list papíru. Vyplňují se jen místa, kudy projdete pěšky, tečku po tečce, a stejná ulice prošlá stokrát ji nerozšíří. Chcete větší mapu? Vydejte se novou cestou.",
+    "cta": "Stáhněte si zdarma v App Store",
+    "note": "Všechny funkce jsou zdarma a bez reklam."
+  },
+  "demo": {
+    "title": "Vyzkoušejte si procházku",
+    "lead": "Táhněte prstem nebo myší po papíře a jdete. Modré tečky jsou ulice, kudy jste už šli dřív. Sledujte, jak se Dnešní cesta mění, když jdete po starých stopách, a jak, když zamíříte jinam.",
+    "today": "Dnešní cesta",
+    "walked": "Ušlá vzdálenost",
+    "subway": "Jet metrem",
+    "subwayOn": "V metru",
+    "reset": "Začít znovu",
+    "hint": "Táhněte po papíře a vyrazte.",
+    "fresh": "Nová cesta. Mapa roste.",
+    "same": "Tudy už jste šli. Přibývá jen vzdálenost.",
+    "ride": "Cesty autem ani metrem se nekreslí.",
+    "legendToday": "Dnes",
+    "legendPast": "Dřívější kroky",
+    "legendFaded": "Přes 3 měsíce",
+    "note": "Tady místo chůze táhnete. Platí stejné pravidlo jako v aplikaci: vše do 30 m od míst, kudy jste už prošli, se počítá jako stejná cesta. Na klávesnici vyberte papír a choďte šipkami."
+  },
+  "problem": {
+    "title": "Chodíte denně stejnými ulicemi?",
+    "text": "Krokoměr počítá kroky, ale neptá se, kam vedly. Cesta z domu na stanici a zpátky kruh klidně zaplní, a boční ulička hned vedle tak zůstane léta neznámá. Buktu Buktu počítá jen cesty, kudy jdete poprvé, a tak máte dnes důvod zajít si o blok dál."
+  },
+  "features": [
+    {
+      "title": "Razítka pro místa, kde jste byli a kam chcete",
+      "text": "Otiskněte razítko tam, kde stojíte, nebo podržte prst kdekoli na mapě. Na výběr je 212 razítek rozdělených do kategorií.\nRazítko na místě, kudy jste ještě nešli, zůstane jako místo k navštívení, a jakmile tam opravdu dojdete, změní se na navštívené. Vyfoťte vývěsní štít obchodu, pozadí se odstřihne a štít se na tom místě postaví jako samolepka.",
+      "shot": "03-stamps"
+    },
+    {
+      "title": "Příští procházka: směr, kam chodíte nejméně",
+      "text": "Kompas průkopníka rozdělí okolí do osmi směrů a ukáže ten, kterým jste chodili nejméně.\nDnešní stopy seřadí místa, kde jste se dnes zastavili, i s tím, kolik jste mezi nimi ušli.",
+      "shot": "02-compass"
+    },
+    {
+      "title": "Každý den zanechá tvar",
+      "text": "Kalendář místo čísla kreslí tvar procházky každého dne. Pište si deník s textem a fotkami a sledujte, kolik z každé procházky byl nový terén.\nZvolte období a podívejte se, jak se vaše mapa kreslí, jako video, které můžete exportovat.",
+      "shot": "04-calendar"
+    }
+  ],
+  "steps": {
+    "title": "Tři kroky na začátek",
+    "items": [
+      {
+        "title": "Otevřete aplikaci",
+        "text": "Rozloží se prázdný list papíru."
+      },
+      {
+        "title": "Povolte polohu",
+        "text": "Zvolte Vždy a zapněte Pohyb a kondice, aby se procházky zaznamenávaly i bez otevírání aplikace."
+      },
+      {
+        "title": "Vyrazte ven",
+        "text": "Čím méně známá ulice, tím víc mapa roste."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Jak číst mapu",
+    "rows": [
+      [
+        "Červené tečky",
+        "kudy jste šli dnes"
+      ],
+      [
+        "Indigové tečky",
+        "dřívější kroky, tmavší tam, kudy chodíte nejčastěji"
+      ],
+      [
+        "Šedé tečky",
+        "místa, kam jste se nevrátili přes tři měsíce. Blednou, ale nikdy nezmizí"
+      ],
+      [
+        "Čárkované razítko",
+        "místo k navštívení. Jakmile tam dojdete, stane se navštíveným"
+      ],
+      [
+        "Cesty, které jsem nakreslil",
+        "celková délka všech cest, kudy jste šli poprvé"
+      ],
+      [
+        "Dnešní cesta",
+        "kolik z dnešní chůze bylo nového"
+      ],
+      [
+        "Zobrazit vše",
+        "v Nastavení, otevře Kompas průkopníka, Dnešní stopy a film s kreslením mapy"
+      ]
+    ],
+    "note": "Vybrat si můžete tušovou mapu, nebo Kreslenou mapu."
+  },
+  "pricing": {
+    "title": "Všechny funkce zdarma",
+    "free": {
+      "name": "Zdarma",
+      "items": [
+        "Mapa, která se plní jen tam, kudy chodíte, se sledováním nových cest",
+        "212 razítek a samolepky z vývěsních štítů",
+        "Kompas průkopníka a Dnešní stopy",
+        "Kalendář a deník s textem a fotkami",
+        "Export videa, jak se kreslí vaše mapa",
+        "Widgety na plochu a zamčenou obrazovku",
+        "Synchronizace mezi zařízeními přes iCloud"
+      ]
+    },
+    "pro": {
+      "name": "Podpořte vývojáře",
+      "items": [
+        "Pokud chcete, pošlete v Nastavení malé spropitné",
+        "Spropitné nic neodemyká. Aplikace je stejná tak i tak"
+      ]
+    },
+    "note": "Bez reklam, bez předplatného."
+  },
+  "faq": {
+    "title": "Otázky",
+    "items": [
+      {
+        "q": "Po procházce se na mapě nic neobjevilo.",
+        "a": "Otevřete Nastavení > Buktu Buktu > Poloha, zvolte Vždy a zapněte Pohyb a kondice. Záznam pak běží i se zavřenou aplikací. Pokud jste v nastavení aplikace zvolili úsporný režim záznamu, otevřete aplikaci před odchodem. Polohy s nízkou přesností se ukládají, ale nekreslí."
+      },
+      {
+        "q": "Zaznamenávají se cesty autem nebo metrem?",
+        "a": "Ne. Podle údajů o pohybu a rychlosti kreslí jen chůzi a běh a úseky, které vypadají jako jízda vozidlem, vynechá. Občas se může splést."
+      },
+      {
+        "q": "Chodím denně stejnou trasou a mapa neroste.",
+        "a": "Tak zní pravidlo. Vše do 30 m od míst, kudy jste už šli, se počítá jako stejná cesta, takže k údaji „Cesty, které jsem nakreslil“ přibývají jen cesty prošlé poprvé. I chodník na druhé straně ulice se počítá jako stejná cesta. Kompas průkopníka ukáže, kudy jste chodili nejméně."
+      },
+      {
+        "q": "Posílá se moje poloha někam?",
+        "a": "Vývojáři ne. Kroky, razítka, deník a fotky zůstávají ve vašem zařízení a ve vašem soukromém iCloudu a vývojář je nevidí. Anonymní statistiky používání nikdy neobsahují souřadnice, text deníku, názvy míst ani fotky. K převodu souřadnic na názvy míst se používají služby Map Apple. Podrobnosti najdete v Zásadách ochrany osobních údajů níže."
+      },
+      {
+        "q": "Přenesou se záznamy do nového zařízení?",
+        "a": "Ano. Na novém zařízení se přihlaste stejným účtem Apple a nechte zapnutý iCloud. Kroky, razítka, deník i fotky půjdou s vámi."
+      },
+      {
+        "q": "Jak smažu razítko nebo fotku?",
+        "a": "Razítka smažete v seznamu Místa, kam jsem otiskl razítko, fotku v deníku smažete podržením prstu. Možnost smazat všechny cesty a záznamy v deníku najednou máme v plánu."
+      },
+      {
+        "q": "Jak přidám widget?",
+        "a": "Podržte prst na ploše, klepněte na Upravit > Přidat widget a vyberte Buktu Buktu. Na zamčené obrazovce podržte prst a klepněte na Přizpůsobit. Widget na ploše ukazuje tvar a délku dnešní cesty, na zamčené obrazovce dnešní vzdálenost."
+      },
+      {
+        "q": "Co potřebuji?",
+        "a": "iPhone se systémem iOS 17.0 nebo novějším."
+      },
+      {
+        "q": "Jak vás kontaktovat?",
+        "a": "Pošlete zpětnou vazbu z nastavení aplikace nebo nám napište na adresu níže. Odpovíme co nejdřív."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Co takhle dnes zajít\no blok dál?",
+    "cta": "Stáhněte si zdarma v App Store"
+  },
+  "ui": {
+    "skip": "Přejít na obsah",
+    "languages": "Jazyk",
+    "privacy": "Zásady ochrany osobních údajů",
+    "contact": "Dotazy nebo připomínky? Napište na {email}."
+  }
+}

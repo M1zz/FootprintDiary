@@ -1,72 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buktu Buktu (FootprintDiary)</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1c1d21;
-      --muted: #6b7280;
-      --accent: #4facfe;
-      --accent2: #00c2a8;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171b;
-        --card: #1f2126;
-        --text: #f2f3f5;
-        --muted: #9ca3af;
-        --border: #2c2f36;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
-    .hero .emoji { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
-    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
-    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: var(--text);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-      transition: transform .15s ease, box-shadow .15s ease;
-      display: block;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
-    .card .ico { font-size: 28px; }
-    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .features { margin-top: 40px; }
-    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .features ul { padding-left: 20px; color: var(--muted); }
-    .features li { margin: 8px 0; }
-    .features strong { color: var(--text); }
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buktu Buktu: kartta, jonka piirrät kävellen</title>
+  <meta name="description" content="Kartta, joka alkaa tyhjästä paperista ja täyttyy vain siellä, missä kävelet ensimmäistä kertaa. Auto- ja metromatkat eivät piirry. Kaikki on ilmaista.">
+  <meta name="theme-color" content="#C72C18" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6789952970">
   <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/fi/">
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
@@ -91,55 +32,159 @@
   <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/">
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/">
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buktu Buktu: kartta, jonka piirrät kävellen">
+  <meta property="og:description" content="Kartta, joka alkaa tyhjästä paperista ja täyttyy vain siellä, missä kävelet ensimmäistä kertaa. Auto- ja metromatkat eivät piirry. Kaikki on ilmaista.">
+  <meta property="og:url" content="https://m1zz.github.io/FootprintDiary/fi/">
+  <meta property="og:image" content="https://m1zz.github.io/FootprintDiary/img/fi/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#C72C18}@media (prefers-color-scheme:dark){:root{--accent:#F29966}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="index.html" hreflang="fi" lang="fi" aria-current="true">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-  <div class="hero">
-    <div class="emoji">👣</div>
-    <h1>Buktu Buktu</h1>
-    <p>Tyhjä kartta, johon jäävät vain kävelemäsi paikat</p>
-  </div>
+  <a class="skip" href="#main">Siirry sisältöön</a>
+  <header class="bar">
+    <a class="brand" href="../fi/"><img src="../icon.png" alt="" width="32" height="32">Buktu Buktu</a>
+    <a class="lang-link" href="#languages">Kieli</a>
+  </header>
 
-  <div class="wrap">
-    <div class="cards">
-      <a class="card" href="privacy.html">
-        <div class="ico">🔒</div>
-        <h3>Tietosuojaseloste</h3>
-        <p>Katso, mitä tietoja käsittelemme ja miten.</p>
-      </a>
-      <a class="card" href="support.html">
-        <div class="ico">💬</div>
-        <h3>Tuki / Yhteydenotto</h3>
-        <p>Ohjeet, usein kysytyt kysymykset ja yhteystiedot.</p>
-      </a>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Kartta, joka täyttyy<br>vain kävellen</h1>
+        <p class="lead">Se alkaa tyhjänä paperiarkkina. Vain kävelemäsi paikat täyttyvät, piste kerrallaan, eikä sama katu sataan kertaan käveltynä levennä sitä. Jos haluat kartan kasvavan, valitse uusi reitti.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6789952970">Lataa ilmaiseksi App Storesta</a><a class="try" href="#try">Lähde kävelylle ↓</a></div>
+        <p class="muted small">Kaikki ominaisuudet ovat ilmaisia, eikä mainoksia ole.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/01-map.jpg" alt="Kartta, joka täyttyy vain kävellen" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <div class="features">
-      <h2>Mikä on Buktu Buktu?</h2>
-      <p>Muut kartat ovat jo piirtäneet maailman. Buktu Buktuin kartta alkaa paperista, johon ei ole piirretty mitään,
-         ja täyttyy piste kerrallaan, <strong>vain kun kävelet</strong>.
-         Autolla tai metrolla kuljettuja teitä ei piirretä.</p>
-      <ul>
-        <li><strong>Askelten mukana kasvava kartta</strong> — paikat, joiden ohi kuljet, painautuvat paperille yksi kerrallaan.
-            Usein kuljetut tiet tummuvat, ja kolmeen kuukauteen kulkemattomat haalistuvat harmaiksi</li>
-        <li><strong>Piirtämäsi tiet</strong> — mitattava ei ole kuljettu matka vaan <em>uusien</em> teiden pituus.
-            Vaikka kävelisit saman tien sata kertaa, kartta ei kasva</li>
-        <li><strong>Leimat</strong> — pysähdy paikkaan ja aseta yksi 212 leimasta.
-            Jos kuvaat kameralla kaupan kyltin, kyltti nousee pystyyn kartallesi</li>
-        <li><strong>Käydyt ja käytävät paikat</strong> — paikat, joissa et ole vielä käynyt, jäävät katkoviivaleimoiksi
-            ja vakiintuvat käydyiksi paikoiksi, kun saavut</li>
-        <li><strong>Pioneerin kompassi</strong> — osoittaa seisomapaikastasi, missä suunnassa on vielä valkoista</li>
-        <li><strong>Filmi</strong> — vie videona karttasi piirtymisen vaiheet</li>
-        <li><strong>Vain omassa iCloudissasi</strong> — askeleet, päiväkirja ja kuvat säilyvät henkilökohtaisessa iCloudissasi,
-            poissa muiden silmistä. Kehittäjälle ei lähde yhtäkään koordinaattia</li>
-      </ul>
-    </div>
-  </div>
+
+    <section class="reveal" id="try">
+      <h2>Lähde kävelylle</h2>
+      <p class="muted">Kävele vetämällä sormella tai hiirellä paperin yli. Siniset pisteet ovat katuja, joilla olet kävellyt aiemmin. Katso, miten Tämän päivän tie muuttuu, kun kuljet vanhoja jälkiä pitkin ja kun suuntaat jonnekin uuteen.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Lähde kävelylle&quot;, &quot;lead&quot;: &quot;Kävele vetämällä sormella tai hiirellä paperin yli. Siniset pisteet ovat katuja, joilla olet kävellyt aiemmin. Katso, miten Tämän päivän tie muuttuu, kun kuljet vanhoja jälkiä pitkin ja kun suuntaat jonnekin uuteen.&quot;, &quot;today&quot;: &quot;Tämän päivän tie&quot;, &quot;walked&quot;: &quot;Kävelty&quot;, &quot;subway&quot;: &quot;Mene metrolla&quot;, &quot;subwayOn&quot;: &quot;Metrossa&quot;, &quot;reset&quot;: &quot;Aloita alusta&quot;, &quot;hint&quot;: &quot;Aloita kävely vetämällä paperin yli.&quot;, &quot;fresh&quot;: &quot;Uusi tie. Kartta kasvaa.&quot;, &quot;same&quot;: &quot;Olet kävellyt tästä ennenkin. Vain matka kasvaa.&quot;, &quot;ride&quot;: &quot;Autolla tai metrolla kuljettuja teitä ei piirretä.&quot;, &quot;legendToday&quot;: &quot;Tänään&quot;, &quot;legendPast&quot;: &quot;Aiemmat&quot;, &quot;legendFaded&quot;: &quot;Yli 3 kk&quot;, &quot;note&quot;: &quot;Täällä vedät kävelemisen sijaan. Käytössä on apin oma sääntö: kaikki 30 m:n säteellä paikoista, joissa olet jo käynyt, lasketaan samaksi tieksi. Näppäimistöllä valitse paperi ja kävele nuolinäppäimillä.&quot;}"></div>
+    </section>
+
+    <section class="problem reveal">
+      <h2>Kävelätkö samoja katuja joka päivä?</h2>
+      <p>Askelmittari laskee askeleet, mutta ei koskaan kysy, minne ne veivät. Kotoa asemalle ja takaisin riittää täyttämään renkaan, joten viereinen sivukatu jää arvoitukseksi vuosiksi. Buktu Buktu laskee vain tiet, jotka kävelet ensimmäistä kertaa, ja antaa syyn poiketa tänään korttelin verran sivuun.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Leimaa paikat, joissa olet käynyt ja minne haluat</h2>
+        <p>Leimaa paikka, jossa seisot, tai paina pitkään missä tahansa kartalla. Valittavana on 212 leimaa luokkiin lajiteltuina.<br>Leima paikassa, jossa et ole koskaan kävellyt, jää käyntikohteeksi ja muuttuu käydyksi paikaksi, kun todella pääset perille. Ota kuva kaupan kyltistä, niin tausta leikataan pois ja kyltti nousee pystyyn tarrana juuri siihen paikkaan.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/03-stamps.jpg" alt="Leimaa paikat, joissa olet käynyt ja minne haluat" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Seuraava kävely: suunta, jossa olet kulkenut vähiten</h2>
+        <p>Pioneerin kompassi jakaa ympäristösi kahdeksaan suuntaan ja osoittaa sen, jossa olet kulkenut vähiten.<br>Päivän jalanjäljet listaa tänään pysähtymäsi paikat järjestyksessä ja kertoo, kuinka pitkän matkan kävelit niiden välillä.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/02-compass.jpg" alt="Seuraava kävely: suunta, jossa olet kulkenut vähiten" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Jokainen päivä jättää muodon</h2>
+        <p>Kalenteri piirtää numeron sijaan kunkin päivän kävelyn muodon. Pidä päiväkirjaa tekstillä ja kuvilla ja näe, kuinka suuri osa kustakin kävelystä kulki uusilla seuduilla.<br>Valitse jakso ja katso videona, jonka voit viedä, miten karttasi piirtyy.</p>
+      </div>
+      <div class="phone"><img src="../img/fi/04-calendar.jpg" alt="Jokainen päivä jättää muodon" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Kolme askelta alkuun</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Avaa appi</h3><p>Tyhjä paperiarkki levittyy eteesi.</p></li>
+<li class="card"><span class="n">2</span><h3>Salli sijainti</h3><p>Valitse Aina ja laita Liike ja kunto päälle, niin kävelyt tallentuvat avaamatta appia.</p></li>
+<li class="card"><span class="n">3</span><h3>Lähde liikkeelle</h3><p>Mitä vieraampi katu, sitä enemmän kartta kasvaa.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Näin luet karttaa</h2>
+      <div class="card table">
+        <dl><div><dt>Punaiset pisteet</dt><dd>missä kävelit tänään</dd></div><div><dt>Indigonsiniset pisteet</dt><dd>aiemmat askeleet, tummempia siellä, missä kuljet useimmin</dd></div><div><dt>Harmaat pisteet</dt><dd>paikat, joihin et ole palannut yli kolmeen kuukauteen. Ne haalistuvat mutta eivät koskaan katoa</dd></div><div><dt>Katkoviivaleima</dt><dd>käyntikohde. Siitä tulee käyty, kun pääset perille</dd></div><div><dt>Piirtämäni tiet</dt><dd>kaikkien ensimmäistä kertaa kävelemiesi teiden yhteispituus</dd></div><div><dt>Tämän päivän tie</dt><dd>kuinka suuri osa tämän päivän kävelystä oli uutta</dd></div><div><dt>Näytä kaikki yhdessä</dt><dd>Asetuksissa, avaa Pioneerin kompassin, Päivän jalanjäljet ja kartan piirtymisfilmin</dd></div></dl>
+      </div>
+      <p class="muted">Valittavana on tussikartta tai Kuvakartta.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Kaikki ominaisuudet ilmaiseksi</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Ilmainen</h3>
+          <ul><li>Kartta, joka täyttyy vain siellä, missä kävelet, ja uusien teiden seuranta</li><li>212 leimaa ja kylttitarrat</li><li>Pioneerin kompassi ja Päivän jalanjäljet</li><li>Kalenteri ja päiväkirja tekstillä ja kuvilla</li><li>Video kartan piirtymisestä vietäväksi</li><li>Widgetit Koti-valikkoon ja lukitusnäytölle</li><li>iCloud-synkronointi laitteiden välillä</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Tue kehittäjää</h3>
+          <ul><li>Voit halutessasi lähettää pienen tipin Asetuksista</li><li>Tippi ei avaa mitään. Appi on sama joka tapauksessa</li></ul>
+          
+        </div>
+      </div>
+      <p class="muted">Ei mainoksia, ei tilausta.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Kysymyksiä</h2>
+      <div class="faq"><details><summary>Kävelin, mutta kartalle ei tullut mitään.</summary><p>Avaa Asetukset &gt; Buktu Buktu &gt; Sijainti, valitse Aina ja laita Liike ja kunto päälle. Silloin tallennus toimii, vaikka appi olisi suljettu. Jos valitsit apin asetuksista akkua säästävän tallennustavan, avaa appi ennen kuin lähdet. Epätarkat sijainnit tallennetaan, mutta niitä ei piirretä.</p></details>
+<details><summary>Tallentuvatko auto- tai metromatkat?</summary><p>Eivät. Appi piirtää liiketietojen ja nopeuden perusteella vain kävelyn ja juoksun ja jättää pois osuudet, jotka näyttävät ajoneuvolla kuljetuilta. Joskus se voi erehtyä.</p></details>
+<details><summary>Kävelen joka päivä samaa reittiä, eikä kartta kasva.</summary><p>Niin sääntö menee. Kaikki 30 m:n säteellä jo kävellyistä paikoista lasketaan samaksi tieksi, joten Piirtämäni tiet kasvaa vain ensimmäistä kertaa kävellyistä teistä. Myös kadun toisen puolen jalkakäytävä lasketaan samaksi tieksi. Pioneerin kompassi näyttää, missä olet kävellyt vähiten.</p></details>
+<details><summary>Lähetetäänkö sijaintini jonnekin?</summary><p>Ei kehittäjälle. Askeleesi, leimasi, päiväkirjasi ja kuvasi pysyvät laitteellasi ja omassa yksityisessä iCloudissasi, eikä kehittäjä näe niitä. Anonyymit käyttötilastot eivät koskaan sisällä koordinaatteja, päiväkirjan tekstiä, paikannimiä tai kuvia. Koordinaattien muuttamiseen paikannimiksi käytetään Apple Karttoja. Lisätietoja on alla olevassa tietosuojakäytännössä.</p></details>
+<details><summary>Siirtyvätkö tallenteeni uuteen laitteeseen?</summary><p>Kyllä. Kirjaudu uudella laitteella samalla Apple-tilillä ja pidä iCloud päällä, niin askeleet, leimat, päiväkirja ja kuvat tulevat mukanasi.</p></details>
+<details><summary>Miten poistan leiman tai kuvan?</summary><p>Poista leimat Leimaamani paikat -luettelosta, ja poista päiväkirjan kuva painamalla sitä pitkään. Tapa poistaa kaikki tiet ja päiväkirjamerkinnät kerralla on suunnitelmissa.</p></details>
+<details><summary>Miten lisään widgetin?</summary><p>Paina Koti-valikkoa pitkään, napauta Muokkaa &gt; Lisää widget ja valitse Buktu Buktu. Lukitusnäytöllä paina näyttöä pitkään ja napauta Muokkaa. Koti-valikon widget näyttää tämän päivän tien muodon ja pituuden, lukitusnäyttö päivän matkan.</p></details>
+<details><summary>Mitä tarvitsen?</summary><p>iPhonen, jossa on iOS 17.0 tai uudempi.</p></details>
+<details><summary>Miten saan yhteyden?</summary><p>Lähetä palautetta apin asetuksista tai kirjoita meille alla olevaan osoitteeseen. Vastaamme niin pian kuin voimme.</p></details></div>
+      <p class="contact">Kysyttävää tai palautetta? Kirjoita osoitteeseen <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Mitä jos poikkeaisit tänään<br>korttelin verran sivuun?</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6789952970">Lataa ilmaiseksi App Storesta</a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Buktu Buktu (FootprintDiary) ·
-    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    <nav id="languages" class="langs" aria-label="Kieli"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi" aria-current="page">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Tietosuojakäytäntö</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Buktu Buktu</p>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

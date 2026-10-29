@@ -1,72 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buktu Buktu (FootprintDiary)</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1c1d21;
-      --muted: #6b7280;
-      --accent: #4facfe;
-      --accent2: #00c2a8;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171b;
-        --card: #1f2126;
-        --text: #f2f3f5;
-        --muted: #9ca3af;
-        --border: #2c2f36;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
-    .hero .emoji { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
-    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
-    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: var(--text);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-      transition: transform .15s ease, box-shadow .15s ease;
-      display: block;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
-    .card .ico { font-size: 28px; }
-    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .features { margin-top: 40px; }
-    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .features ul { padding-left: 20px; color: var(--muted); }
-    .features li { margin: 8px 0; }
-    .features strong { color: var(--text); }
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buktu Buktu: de kaart die je te voet tekent</title>
+  <meta name="description" content="Een kaart die begint als leeg vel en alleen inkleurt waar je voor het eerst loopt. Ritten met auto of metro worden nooit getekend. Alles is gratis.">
+  <meta name="theme-color" content="#C72C18" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6789952970">
   <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/nl/">
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
@@ -91,55 +32,159 @@
   <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/">
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/">
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buktu Buktu: de kaart die je te voet tekent">
+  <meta property="og:description" content="Een kaart die begint als leeg vel en alleen inkleurt waar je voor het eerst loopt. Ritten met auto of metro worden nooit getekend. Alles is gratis.">
+  <meta property="og:url" content="https://m1zz.github.io/FootprintDiary/nl/">
+  <meta property="og:image" content="https://m1zz.github.io/FootprintDiary/img/nl/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#C72C18}@media (prefers-color-scheme:dark){:root{--accent:#F29966}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="index.html" hreflang="nl" lang="nl" aria-current="true">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-  <div class="hero">
-    <div class="emoji">👣</div>
-    <h1>Buktu Buktu</h1>
-    <p>Een lege kaart die alleen bewaart waar je te voet bent geweest</p>
-  </div>
+  <a class="skip" href="#main">Naar de inhoud</a>
+  <header class="bar">
+    <a class="brand" href="../nl/"><img src="../icon.png" alt="" width="32" height="32">Buktu Buktu</a>
+    <a class="lang-link" href="#languages">Taal</a>
+  </header>
 
-  <div class="wrap">
-    <div class="cards">
-      <a class="card" href="privacy.html">
-        <div class="ico">🔒</div>
-        <h3>Privacybeleid</h3>
-        <p>Bekijk welke gegevens we verwerken en hoe.</p>
-      </a>
-      <a class="card" href="support.html">
-        <div class="ico">💬</div>
-        <h3>Support / Contact</h3>
-        <p>Hulp, veelgestelde vragen en hoe je ons bereikt.</p>
-      </a>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Een kaart die alleen<br>te voet inkleurt</h1>
+        <p class="lead">Hij begint als een leeg vel papier. Alleen waar je loopt, kleurt hij punt voor punt in, en honderd keer dezelfde straat maakt hem niet breder. Wil je dat de kaart groeit, neem dan een nieuwe weg.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6789952970">Gratis downloaden in de App Store</a><a class="try" href="#try">Maak een wandeling ↓</a></div>
+        <p class="muted small">Alle functies gratis, zonder advertenties.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/01-map.jpg" alt="Een kaart die alleen te voet inkleurt" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <div class="features">
-      <h2>Wat is Buktu Buktu?</h2>
-      <p>De wereld is al getekend door andere kaarten. De kaart van Buktu Buktu begint op een vel papier waarop niets is getekend
-         en wordt punt voor punt ingevuld, <strong>alleen wanneer je loopt</strong>.
-         Wegen die je met de auto of metro aflegt, worden niet getekend.</p>
-      <ul>
-        <li><strong>Een kaart die met je stappen groeit</strong> — de plekken waar je langskomt worden één voor één op het papier gestempeld.
-            Veelgebruikte wegen worden donkerder, en wegen waar je drie maanden niet liep, vervagen tot grijs</li>
-        <li><strong>De wegen die je tekende</strong> — wat telt is niet de afgelegde afstand, maar de lengte van
-            <em>nieuwe</em> wegen. Loop je honderd keer dezelfde weg, dan groeit de kaart niet</li>
-        <li><strong>Stempels</strong> — blijf op een plek staan en zet een van de 212 stempels.
-            Fotografeer je met de camera het uithangbord van een winkel, dan komt dat bord rechtop te staan op je kaart</li>
-        <li><strong>Bezochte plekken en plekken die je wilt bezoeken</strong> — plekken waar je nog niet was, blijven staan als stippellijnstempels
-            en worden bezochte plekken zodra je aankomt</li>
-        <li><strong>Pionierskompas</strong> — wijst vanaf waar je staat aan welke kant het nog wit is</li>
-        <li><strong>Film</strong> — exporteer als video hoe je kaart wordt getekend</li>
-        <li><strong>Alleen in je iCloud</strong> — stappen, dagboek en foto's worden bewaard in je persoonlijke iCloud,
-            buiten het zicht van anderen. Er wordt geen enkele coördinaat naar de ontwikkelaar gestuurd</li>
-      </ul>
-    </div>
-  </div>
+
+    <section class="reveal" id="try">
+      <h2>Maak een wandeling</h2>
+      <p class="muted">Sleep met je vinger of muis over het papier om te lopen. De blauwe punten zijn straten waar je al eerder liep. Kijk hoe De weg van vandaag verandert als je ze opnieuw loopt of juist een nieuwe kant op gaat.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Maak een wandeling&quot;, &quot;lead&quot;: &quot;Sleep met je vinger of muis over het papier om te lopen. De blauwe punten zijn straten waar je al eerder liep. Kijk hoe De weg van vandaag verandert als je ze opnieuw loopt of juist een nieuwe kant op gaat.&quot;, &quot;today&quot;: &quot;De weg van vandaag&quot;, &quot;walked&quot;: &quot;Gelopen&quot;, &quot;subway&quot;: &quot;Neem de metro&quot;, &quot;subwayOn&quot;: &quot;In de metro&quot;, &quot;reset&quot;: &quot;Opnieuw beginnen&quot;, &quot;hint&quot;: &quot;Sleep over het papier om te gaan lopen.&quot;, &quot;fresh&quot;: &quot;Een nieuwe weg. De kaart groeit.&quot;, &quot;same&quot;: &quot;Hier liep je al eerder. Alleen de afstand neemt toe.&quot;, &quot;ride&quot;: &quot;Ritten met auto of metro worden niet getekend.&quot;, &quot;legendToday&quot;: &quot;Vandaag&quot;, &quot;legendPast&quot;: &quot;Eerdere stappen&quot;, &quot;legendFaded&quot;: &quot;Meer dan 3 maanden&quot;, &quot;note&quot;: &quot;Hier sleep je in plaats van te lopen, met dezelfde regel als in de app: alles binnen 30 m van waar je al bent geweest, telt als dezelfde weg. Met een toetsenbord selecteer je het papier en loop je met de pijltjestoetsen.&quot;}"></div>
+    </section>
+
+    <section class="problem reveal">
+      <h2>Elke dag dezelfde straten?</h2>
+      <p>Een stappenteller telt stappen, maar vraagt nooit waar ze heen gingen. Van huis naar het station en terug vult de ring prima, terwijl het zijstraatje om de hoek jarenlang een raadsel blijft. Buktu Buktu telt alleen wegen die je voor het eerst loopt. Een mooie reden om vandaag een blokje om te gaan.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Stempel plekken waar je was en waar je heen wilt</h2>
+        <p>Stempel de plek waar je staat, of houd ergens op de kaart je vinger ingedrukt. Er zijn 212 stempels om uit te kiezen, gesorteerd per categorie.<br>Een stempel waar je nog nooit hebt gelopen, blijft een plek om te bezoeken en wordt een bezochte plek zodra je er echt komt. Fotografeer een uithangbord en de achtergrond wordt weggeknipt, zodat het bord als sticker op die plek komt te staan.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/03-stamps.jpg" alt="Stempel plekken waar je was en waar je heen wilt" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Volgende wandeling: de richting waar je het minst kwam</h2>
+        <p>Het Pionierskompas verdeelt je omgeving in acht richtingen en wijst de richting aan waar je het minst bent geweest.<br>Voetafdrukken van vandaag zet de plekken waar je vandaag stilstond op volgorde, met hoe ver je ertussen liep.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/02-compass.jpg" alt="Volgende wandeling: de richting waar je het minst kwam" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Elke dag laat een vorm achter</h2>
+        <p>De kalender tekent de vorm van elke dagwandeling in plaats van een getal. Houd een dagboek bij met tekst en foto’s, en zie hoeveel van elke wandeling nieuw terrein was.<br>Kies een periode en kijk in een video hoe je kaart wordt getekend. Die video kun je exporteren.</p>
+      </div>
+      <div class="phone"><img src="../img/nl/04-calendar.jpg" alt="Elke dag laat een vorm achter" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>In drie stappen aan de slag</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Open de app</h3><p>Er vouwt zich een leeg vel papier open.</p></li>
+<li class="card"><span class="n">2</span><h3>Sta locatie toe</h3><p>Kies ‘Altijd’ en zet ‘Beweging en fitness’ aan, zodat wandelingen ook worden vastgelegd als de app dicht is.</p></li>
+<li class="card"><span class="n">3</span><h3>Ga op pad</h3><p>Hoe onbekender de straat, hoe meer de kaart groeit.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Zo lees je de kaart</h2>
+      <div class="card table">
+        <dl><div><dt>Rode punten</dt><dd>waar je vandaag liep</dd></div><div><dt>Indigo punten</dt><dd>eerdere stappen, donkerder waar je het vaakst komt</dd></div><div><dt>Grijze punten</dt><dd>plekken waar je al meer dan drie maanden niet bent geweest. Ze vervagen, maar verdwijnen nooit</dd></div><div><dt>Gestippelde stempel</dt><dd>een plek uit ‘Wil ik bezoeken’. Die wordt bezocht zodra je er bent</dd></div><div><dt>Wegen die ik heb getekend</dt><dd>totale lengte van alle wegen die je voor het eerst liep</dd></div><div><dt>De weg van vandaag</dt><dd>hoeveel van de wandeling van vandaag nieuw was</dd></div><div><dt>Alles samen bekijken</dt><dd>in Instellingen; opent het Pionierskompas, Voetafdrukken van vandaag en de film van je kaart</dd></div></dl>
+      </div>
+      <p class="muted">Kies tussen de inktkaart en de Getekende kaart.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Alle functies zijn gratis</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Gratis</h3>
+          <ul><li>Een kaart die alleen te voet inkleurt, met bijhouden van nieuwe wegen</li><li>212 stempels en stickers van uithangborden</li><li>Pionierskompas en Voetafdrukken van vandaag</li><li>Kalender en dagboek met tekst en foto’s</li><li>Video van je kaart die wordt getekend exporteren</li><li>Widgets voor beginscherm en toegangsscherm</li><li>Synchronisatie via iCloud tussen apparaten</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Steun de ontwikkelaar</h3>
+          <ul><li>Geef via Instellingen een kleine fooi, als je dat wilt</li><li>Een fooi ontgrendelt niets. De app blijft precies hetzelfde</li></ul>
+          
+        </div>
+      </div>
+      <p class="muted">Geen advertenties, geen abonnement.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Vragen</h2>
+      <div class="faq"><details><summary>Ik heb gelopen, maar er staat niets op de kaart.</summary><p>Ga naar Instellingen &gt; Buktu Buktu &gt; Locatie, kies ‘Altijd’ en zet ‘Beweging en fitness’ aan. Dan wordt er ook vastgelegd als de app dicht is. Heb je in de instellingen van de app de batterijbesparende registratiewijze gekozen, open de app dan voordat je vertrekt. Onnauwkeurige locaties worden bewaard, maar niet getekend.</p></details>
+<details><summary>Worden ritten met auto of metro vastgelegd?</summary><p>Nee. De app gebruikt bewegingsgegevens en snelheid om alleen lopen en hardlopen te tekenen, en laat stukken die op een voertuig lijken weg. Heel af en toe kan dat misgaan.</p></details>
+<details><summary>Ik loop elke dag dezelfde route en de kaart groeit niet.</summary><p>Dat is de regel. Alles binnen 30 m van waar je al liep, telt als dezelfde weg, dus alleen nieuwe wegen tellen mee voor Wegen die ik heb getekend. Ook de stoep aan de overkant telt als dezelfde weg. Het Pionierskompas laat zien waar je het minst bent geweest.</p></details>
+<details><summary>Wordt mijn locatie ergens naartoe gestuurd?</summary><p>Niet naar de ontwikkelaar. Je stappen, stempels, dagboek en foto’s blijven op je apparaat en in je eigen privé-iCloud, en de ontwikkelaar kan ze niet zien. Anonieme gebruiksstatistieken bevatten nooit coördinaten, dagboekteksten, plaatsnamen of foto’s. Om coördinaten om te zetten in plaatsnamen worden diensten van Apple Kaarten gebruikt. Lees meer in het privacybeleid hieronder.</p></details>
+<details><summary>Gaan mijn gegevens mee naar een nieuw apparaat?</summary><p>Ja. Log op het nieuwe apparaat in met hetzelfde Apple Account en laat iCloud aan staan, dan komen je stappen, stempels, dagboek en foto’s mee.</p></details>
+<details><summary>Hoe verwijder ik een stempel of foto?</summary><p>Stempels verwijder je in de lijst Plekken die ik heb gestempeld, en een dagboekfoto verwijder je door je vinger erop te houden. Een manier om al je wegen en dagboekberichten in één keer te wissen, staat op de planning.</p></details>
+<details><summary>Hoe voeg ik de widget toe?</summary><p>Houd je vinger op het beginscherm, tik op ‘Wijzig’ &gt; ‘Voeg widget toe’ en kies Buktu Buktu. Voor het toegangsscherm houd je je vinger erop en tik je op ‘Pas aan’. De widget op het beginscherm toont de vorm en lengte van de weg van vandaag, die op het toegangsscherm de afstand van vandaag.</p></details>
+<details><summary>Wat heb ik nodig?</summary><p>Een iPhone met iOS 17.0 of nieuwer.</p></details>
+<details><summary>Hoe neem ik contact op?</summary><p>Stuur feedback via de instellingen van de app of mail ons op het adres hieronder. We antwoorden zo snel mogelijk.</p></details></div>
+      <p class="contact">Vragen of feedback? Mail naar <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Zin om vandaag<br>een blokje om te lopen?</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6789952970">Gratis downloaden in de App Store</a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Buktu Buktu (FootprintDiary) ·
-    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    <nav id="languages" class="langs" aria-label="Taal"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl" aria-current="page">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Privacybeleid</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Buktu Buktu</p>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

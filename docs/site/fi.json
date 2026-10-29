@@ -1,0 +1,173 @@
+{
+  "title": "Buktu Buktu: kartta, jonka piirrät kävellen",
+  "description": "Kartta, joka alkaa tyhjästä paperista ja täyttyy vain siellä, missä kävelet ensimmäistä kertaa. Auto- ja metromatkat eivät piirry. Kaikki on ilmaista.",
+  "hero": {
+    "headline": "Kartta, joka täyttyy\nvain kävellen",
+    "lead": "Se alkaa tyhjänä paperiarkkina. Vain kävelemäsi paikat täyttyvät, piste kerrallaan, eikä sama katu sataan kertaan käveltynä levennä sitä. Jos haluat kartan kasvavan, valitse uusi reitti.",
+    "cta": "Lataa ilmaiseksi App Storesta",
+    "note": "Kaikki ominaisuudet ovat ilmaisia, eikä mainoksia ole."
+  },
+  "demo": {
+    "title": "Lähde kävelylle",
+    "lead": "Kävele vetämällä sormella tai hiirellä paperin yli. Siniset pisteet ovat katuja, joilla olet kävellyt aiemmin. Katso, miten Tämän päivän tie muuttuu, kun kuljet vanhoja jälkiä pitkin ja kun suuntaat jonnekin uuteen.",
+    "today": "Tämän päivän tie",
+    "walked": "Kävelty",
+    "subway": "Mene metrolla",
+    "subwayOn": "Metrossa",
+    "reset": "Aloita alusta",
+    "hint": "Aloita kävely vetämällä paperin yli.",
+    "fresh": "Uusi tie. Kartta kasvaa.",
+    "same": "Olet kävellyt tästä ennenkin. Vain matka kasvaa.",
+    "ride": "Autolla tai metrolla kuljettuja teitä ei piirretä.",
+    "legendToday": "Tänään",
+    "legendPast": "Aiemmat",
+    "legendFaded": "Yli 3 kk",
+    "note": "Täällä vedät kävelemisen sijaan. Käytössä on apin oma sääntö: kaikki 30 m:n säteellä paikoista, joissa olet jo käynyt, lasketaan samaksi tieksi. Näppäimistöllä valitse paperi ja kävele nuolinäppäimillä."
+  },
+  "problem": {
+    "title": "Kävelätkö samoja katuja joka päivä?",
+    "text": "Askelmittari laskee askeleet, mutta ei koskaan kysy, minne ne veivät. Kotoa asemalle ja takaisin riittää täyttämään renkaan, joten viereinen sivukatu jää arvoitukseksi vuosiksi. Buktu Buktu laskee vain tiet, jotka kävelet ensimmäistä kertaa, ja antaa syyn poiketa tänään korttelin verran sivuun."
+  },
+  "features": [
+    {
+      "title": "Leimaa paikat, joissa olet käynyt ja minne haluat",
+      "text": "Leimaa paikka, jossa seisot, tai paina pitkään missä tahansa kartalla. Valittavana on 212 leimaa luokkiin lajiteltuina.\nLeima paikassa, jossa et ole koskaan kävellyt, jää käyntikohteeksi ja muuttuu käydyksi paikaksi, kun todella pääset perille. Ota kuva kaupan kyltistä, niin tausta leikataan pois ja kyltti nousee pystyyn tarrana juuri siihen paikkaan.",
+      "shot": "03-stamps"
+    },
+    {
+      "title": "Seuraava kävely: suunta, jossa olet kulkenut vähiten",
+      "text": "Pioneerin kompassi jakaa ympäristösi kahdeksaan suuntaan ja osoittaa sen, jossa olet kulkenut vähiten.\nPäivän jalanjäljet listaa tänään pysähtymäsi paikat järjestyksessä ja kertoo, kuinka pitkän matkan kävelit niiden välillä.",
+      "shot": "02-compass"
+    },
+    {
+      "title": "Jokainen päivä jättää muodon",
+      "text": "Kalenteri piirtää numeron sijaan kunkin päivän kävelyn muodon. Pidä päiväkirjaa tekstillä ja kuvilla ja näe, kuinka suuri osa kustakin kävelystä kulki uusilla seuduilla.\nValitse jakso ja katso videona, jonka voit viedä, miten karttasi piirtyy.",
+      "shot": "04-calendar"
+    }
+  ],
+  "steps": {
+    "title": "Kolme askelta alkuun",
+    "items": [
+      {
+        "title": "Avaa appi",
+        "text": "Tyhjä paperiarkki levittyy eteesi."
+      },
+      {
+        "title": "Salli sijainti",
+        "text": "Valitse Aina ja laita Liike ja kunto päälle, niin kävelyt tallentuvat avaamatta appia."
+      },
+      {
+        "title": "Lähde liikkeelle",
+        "text": "Mitä vieraampi katu, sitä enemmän kartta kasvaa."
+      }
+    ]
+  },
+  "reference": {
+    "title": "Näin luet karttaa",
+    "rows": [
+      [
+        "Punaiset pisteet",
+        "missä kävelit tänään"
+      ],
+      [
+        "Indigonsiniset pisteet",
+        "aiemmat askeleet, tummempia siellä, missä kuljet useimmin"
+      ],
+      [
+        "Harmaat pisteet",
+        "paikat, joihin et ole palannut yli kolmeen kuukauteen. Ne haalistuvat mutta eivät koskaan katoa"
+      ],
+      [
+        "Katkoviivaleima",
+        "käyntikohde. Siitä tulee käyty, kun pääset perille"
+      ],
+      [
+        "Piirtämäni tiet",
+        "kaikkien ensimmäistä kertaa kävelemiesi teiden yhteispituus"
+      ],
+      [
+        "Tämän päivän tie",
+        "kuinka suuri osa tämän päivän kävelystä oli uutta"
+      ],
+      [
+        "Näytä kaikki yhdessä",
+        "Asetuksissa, avaa Pioneerin kompassin, Päivän jalanjäljet ja kartan piirtymisfilmin"
+      ]
+    ],
+    "note": "Valittavana on tussikartta tai Kuvakartta."
+  },
+  "pricing": {
+    "title": "Kaikki ominaisuudet ilmaiseksi",
+    "free": {
+      "name": "Ilmainen",
+      "items": [
+        "Kartta, joka täyttyy vain siellä, missä kävelet, ja uusien teiden seuranta",
+        "212 leimaa ja kylttitarrat",
+        "Pioneerin kompassi ja Päivän jalanjäljet",
+        "Kalenteri ja päiväkirja tekstillä ja kuvilla",
+        "Video kartan piirtymisestä vietäväksi",
+        "Widgetit Koti-valikkoon ja lukitusnäytölle",
+        "iCloud-synkronointi laitteiden välillä"
+      ]
+    },
+    "pro": {
+      "name": "Tue kehittäjää",
+      "items": [
+        "Voit halutessasi lähettää pienen tipin Asetuksista",
+        "Tippi ei avaa mitään. Appi on sama joka tapauksessa"
+      ]
+    },
+    "note": "Ei mainoksia, ei tilausta."
+  },
+  "faq": {
+    "title": "Kysymyksiä",
+    "items": [
+      {
+        "q": "Kävelin, mutta kartalle ei tullut mitään.",
+        "a": "Avaa Asetukset > Buktu Buktu > Sijainti, valitse Aina ja laita Liike ja kunto päälle. Silloin tallennus toimii, vaikka appi olisi suljettu. Jos valitsit apin asetuksista akkua säästävän tallennustavan, avaa appi ennen kuin lähdet. Epätarkat sijainnit tallennetaan, mutta niitä ei piirretä."
+      },
+      {
+        "q": "Tallentuvatko auto- tai metromatkat?",
+        "a": "Eivät. Appi piirtää liiketietojen ja nopeuden perusteella vain kävelyn ja juoksun ja jättää pois osuudet, jotka näyttävät ajoneuvolla kuljetuilta. Joskus se voi erehtyä."
+      },
+      {
+        "q": "Kävelen joka päivä samaa reittiä, eikä kartta kasva.",
+        "a": "Niin sääntö menee. Kaikki 30 m:n säteellä jo kävellyistä paikoista lasketaan samaksi tieksi, joten Piirtämäni tiet kasvaa vain ensimmäistä kertaa kävellyistä teistä. Myös kadun toisen puolen jalkakäytävä lasketaan samaksi tieksi. Pioneerin kompassi näyttää, missä olet kävellyt vähiten."
+      },
+      {
+        "q": "Lähetetäänkö sijaintini jonnekin?",
+        "a": "Ei kehittäjälle. Askeleesi, leimasi, päiväkirjasi ja kuvasi pysyvät laitteellasi ja omassa yksityisessä iCloudissasi, eikä kehittäjä näe niitä. Anonyymit käyttötilastot eivät koskaan sisällä koordinaatteja, päiväkirjan tekstiä, paikannimiä tai kuvia. Koordinaattien muuttamiseen paikannimiksi käytetään Apple Karttoja. Lisätietoja on alla olevassa tietosuojakäytännössä."
+      },
+      {
+        "q": "Siirtyvätkö tallenteeni uuteen laitteeseen?",
+        "a": "Kyllä. Kirjaudu uudella laitteella samalla Apple-tilillä ja pidä iCloud päällä, niin askeleet, leimat, päiväkirja ja kuvat tulevat mukanasi."
+      },
+      {
+        "q": "Miten poistan leiman tai kuvan?",
+        "a": "Poista leimat Leimaamani paikat -luettelosta, ja poista päiväkirjan kuva painamalla sitä pitkään. Tapa poistaa kaikki tiet ja päiväkirjamerkinnät kerralla on suunnitelmissa."
+      },
+      {
+        "q": "Miten lisään widgetin?",
+        "a": "Paina Koti-valikkoa pitkään, napauta Muokkaa > Lisää widget ja valitse Buktu Buktu. Lukitusnäytöllä paina näyttöä pitkään ja napauta Muokkaa. Koti-valikon widget näyttää tämän päivän tien muodon ja pituuden, lukitusnäyttö päivän matkan."
+      },
+      {
+        "q": "Mitä tarvitsen?",
+        "a": "iPhonen, jossa on iOS 17.0 tai uudempi."
+      },
+      {
+        "q": "Miten saan yhteyden?",
+        "a": "Lähetä palautetta apin asetuksista tai kirjoita meille alla olevaan osoitteeseen. Vastaamme niin pian kuin voimme."
+      }
+    ]
+  },
+  "closing": {
+    "headline": "Mitä jos poikkeaisit tänään\nkorttelin verran sivuun?",
+    "cta": "Lataa ilmaiseksi App Storesta"
+  },
+  "ui": {
+    "skip": "Siirry sisältöön",
+    "languages": "Kieli",
+    "privacy": "Tietosuojakäytäntö",
+    "contact": "Kysyttävää tai palautetta? Kirjoita osoitteeseen {email}."
+  }
+}

@@ -1,72 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buktu Buktu (FootprintDiary)</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1c1d21;
-      --muted: #6b7280;
-      --accent: #4facfe;
-      --accent2: #00c2a8;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171b;
-        --card: #1f2126;
-        --text: #f2f3f5;
-        --muted: #9ca3af;
-        --border: #2c2f36;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
-    .hero .emoji { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
-    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
-    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: var(--text);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-      transition: transform .15s ease, box-shadow .15s ease;
-      display: block;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
-    .card .ico { font-size: 28px; }
-    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .features { margin-top: 40px; }
-    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .features ul { padding-left: 20px; color: var(--muted); }
-    .features li { margin: 8px 0; }
-    .features strong { color: var(--text); }
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buktu Buktu: yürüyerek çizdiğin harita</title>
+  <meta name="description" content="Boş bir kâğıtla başlayan ve yalnızca ilk kez yürüdüğün yerlerde dolan harita. Araba ve metro yolculukları çizilmez. Tüm özellikler ücretsiz.">
+  <meta name="theme-color" content="#C72C18" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6789952970">
   <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/tr/">
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
@@ -91,55 +32,159 @@
   <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/">
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/">
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buktu Buktu: yürüyerek çizdiğin harita">
+  <meta property="og:description" content="Boş bir kâğıtla başlayan ve yalnızca ilk kez yürüdüğün yerlerde dolan harita. Araba ve metro yolculukları çizilmez. Tüm özellikler ücretsiz.">
+  <meta property="og:url" content="https://m1zz.github.io/FootprintDiary/tr/">
+  <meta property="og:image" content="https://m1zz.github.io/FootprintDiary/img/tr/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#C72C18}@media (prefers-color-scheme:dark){:root{--accent:#F29966}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="index.html" hreflang="tr" lang="tr" aria-current="true">Türkçe</a></nav>
-  <div class="hero">
-    <div class="emoji">👣</div>
-    <h1>Buktu Buktu</h1>
-    <p>Yalnızca ayaklarınla geçtiğin yerleri saklayan boş bir harita</p>
-  </div>
+  <a class="skip" href="#main">İçeriğe geç</a>
+  <header class="bar">
+    <a class="brand" href="../tr/"><img src="../icon.png" alt="" width="32" height="32">Buktu Buktu</a>
+    <a class="lang-link" href="#languages">Dil</a>
+  </header>
 
-  <div class="wrap">
-    <div class="cards">
-      <a class="card" href="privacy.html">
-        <div class="ico">🔒</div>
-        <h3>Gizlilik Politikası</h3>
-        <p>Hangi verileri nasıl işlediğimizi öğren.</p>
-      </a>
-      <a class="card" href="support.html">
-        <div class="ico">💬</div>
-        <h3>Destek / İletişim</h3>
-        <p>Yardım, sık sorulan sorular ve bize ulaşma yolları.</p>
-      </a>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Yalnızca yürüdükçe<br>dolan bir harita</h1>
+        <p class="lead">Boş bir kâğıt olarak başlar. Yalnızca yürüdüğün yerler nokta nokta dolar ve aynı sokağı yüz kez yürümek onu genişletmez. Haritayı büyütmek için yeni bir yola çık.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6789952970">App Store'dan ücretsiz indir</a><a class="try" href="#try">Bir yürüyüş yap ↓</a></div>
+        <p class="muted small">Tüm özellikler ücretsiz, reklam yok.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/01-map.jpg" alt="Yalnızca yürüdükçe dolan bir harita" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <div class="features">
-      <h2>Buktu Buktu nedir?</h2>
-      <p>Dünyayı diğer haritalar çoktan çizdi. Buktu Buktu'un haritası üzerinde hiçbir şey çizili olmayan bir kâğıtla başlar
-         ve <strong>yalnızca sen yürüdükçe</strong> nokta nokta dolar.
-         Arabayla veya metroyla geçilen yollar çizilmez.</p>
-      <ul>
-        <li><strong>Adımlarınla büyüyen harita</strong> — geçtiğin yerler kâğıda tek tek işlenir.
-            Sık geçilen yollar koyulaşır, üç ay basılmayanlar griye solar</li>
-        <li><strong>Çizdiğin yollar</strong> — ölçülen şey yürüdüğün mesafe değil, <em>yeni</em> yolların
-            uzunluğudur. Aynı yolu yüz kez yürüsen de harita büyümez</li>
-        <li><strong>Damgalar</strong> — bir yerde dur ve 212 damgadan birini bas.
-            Kamerayla bir dükkân tabelasını çekersen o tabela haritanda dikilir</li>
-        <li><strong>Gidilen ve gidilecek yerler</strong> — henüz gitmediğin yerler kesik çizgili damga olarak kalır
-            ve vardığında gidilmiş yer olarak pekişir</li>
-        <li><strong>Öncü pusulası</strong> — bulunduğun yerden hangi yönün hâlâ beyaz olduğunu gösterir</li>
-        <li><strong>Film</strong> — haritanın nasıl çizildiğini video olarak dışa aktar</li>
-        <li><strong>Yalnızca kendi iCloud'unda</strong> — adımlar, günlük ve fotoğraflar başkalarının göremeyeceği
-            kişisel iCloud'unda saklanır. Geliştiriciye tek bir koordinat bile gönderilmez</li>
-      </ul>
-    </div>
-  </div>
+
+    <section class="reveal" id="try">
+      <h2>Bir yürüyüş yap</h2>
+      <p class="muted">Yürümek için kâğıdın üzerinde parmağını ya da fareni sürükle. Mavi noktalar daha önce yürüdüğün sokaklar. Aynı yolları tekrar yürüdüğünde ve yeni bir yöne saptığında Bugün Çizilen Yol'un nasıl değiştiğine bak.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Bir yürüyüş yap&quot;, &quot;lead&quot;: &quot;Yürümek için kâğıdın üzerinde parmağını ya da fareni sürükle. Mavi noktalar daha önce yürüdüğün sokaklar. Aynı yolları tekrar yürüdüğünde ve yeni bir yöne saptığında Bugün Çizilen Yol&#x27;un nasıl değiştiğine bak.&quot;, &quot;today&quot;: &quot;Bugün Çizilen Yol&quot;, &quot;walked&quot;: &quot;Yürünen mesafe&quot;, &quot;subway&quot;: &quot;Metroya bin&quot;, &quot;subwayOn&quot;: &quot;Metrodasın&quot;, &quot;reset&quot;: &quot;Baştan başla&quot;, &quot;hint&quot;: &quot;Yürümeye başlamak için kâğıdın üzerinde sürükle.&quot;, &quot;fresh&quot;: &quot;Yeni bir yol. Harita büyüyor.&quot;, &quot;same&quot;: &quot;Burayı daha önce yürüdün. Yalnızca mesafe artıyor.&quot;, &quot;ride&quot;: &quot;Araba ya da metroyla geçilen yollar çizilmez.&quot;, &quot;legendToday&quot;: &quot;Bugün&quot;, &quot;legendPast&quot;: &quot;Önceki Yürüyüşler&quot;, &quot;legendFaded&quot;: &quot;3 aydan eski&quot;, &quot;note&quot;: &quot;Burada yürümek yerine sürüklüyorsun. Uygulamanın kendi kuralı geçerli: daha önce bulunduğun yerin 30 m yakınındaki her yer aynı yol sayılır. Klavyeyle kâğıdı seç ve ok tuşlarıyla yürü.&quot;}"></div>
+    </section>
+
+    <section class="problem reveal">
+      <h2>Her gün aynı sokaklarda mı yürüyorsun?</h2>
+      <p>Adım sayar uygulamaları adımlarını sayar ama nereye gittiklerini hiç sormaz. Evden istasyona gidip dönmek halkayı doldurmaya yeter, hemen yandaki ara sokak ise yıllarca bilinmez kalır. Buktu Buktu yalnızca ilk kez yürüdüğün yolları sayar. Bu da bugün bir sokak öteden dolaşman için bir sebep.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Gittiğin ve gitmek istediğin yerlere damga bas</h2>
+        <p>Durduğun yere damga bas ya da haritada istediğin yere uzun bas. Kategorilere ayrılmış 212 damga arasından seçebilirsin.<br>Hiç yürümediğin bir yere basılan damga gidilecek yer olarak kalır, oraya gerçekten vardığında gidilen yere dönüşür. Bir dükkân tabelasının fotoğrafını çek; arka plan kesilir ve tabela o noktada bir çıkartma olarak ayağa kalkar.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/03-stamps.jpg" alt="Gittiğin ve gitmek istediğin yerlere damga bas" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Sonraki yürüyüş: en az gittiğin yön</h2>
+        <p>Öncü Pusulası çevreni sekiz yöne böler ve en az yürüdüğün yönü gösterir.<br>Bugünün Ayak İzleri, bugün durduğun yerleri sırayla ve aralarında ne kadar yürüdüğünle birlikte dizer.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/02-compass.jpg" alt="Sonraki yürüyüş: en az gittiğin yön" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Her gün bir şekil bırakır</h2>
+        <p>Takvim, her günün yürüyüşünü bir sayı yerine şekliyle çizer. Yazı ve fotoğraflarla günlük tut, her yürüyüşün ne kadarının yeni yerlerden geçtiğini gör.<br>Bir dönem seç ve haritanın çizilişini dışa aktarabileceğin bir video olarak izle.</p>
+      </div>
+      <div class="phone"><img src="../img/tr/04-calendar.jpg" alt="Her gün bir şekil bırakır" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Başlamak için üç adım</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Uygulamayı aç</h3><p>Boş bir kâğıt açılır.</p></li>
+<li class="card"><span class="n">2</span><h3>Konuma izin ver</h3><p>Uygulamayı açmadan yürüyüşleri kaydetmek için Her Zaman'ı seç ve Hareket ve Fitness'ı aç.</p></li>
+<li class="card"><span class="n">3</span><h3>Yola çık</h3><p>Sokak ne kadar yabancıysa harita o kadar büyür.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Haritayı okumak</h2>
+      <div class="card table">
+        <dl><div><dt>Kırmızı noktalar</dt><dd>bugün yürüdüğün yerler</dd></div><div><dt>Çivit mavisi noktalar</dt><dd>önceki yürüyüşler, en sık geçtiğin yerlerde daha koyu</dd></div><div><dt>Gri noktalar</dt><dd>üç aydan uzun süredir dönmediğin yerler. Solar ama asla kaybolmaz</dd></div><div><dt>Kesik çizgili damga</dt><dd>gidilecek bir yer. Oraya vardığında gidilen yer olur</dd></div><div><dt>Çizdiğim Yollar</dt><dd>ilk kez yürüdüğün tüm yolların toplam uzunluğu</dd></div><div><dt>Bugün Çizilen Yol</dt><dd>bugünkü yürüyüşün ne kadarının yeni olduğu</dd></div><div><dt>Hepsini Birlikte Gör</dt><dd>Ayarlar'da; Öncü Pusulası'nı, Bugünün Ayak İzleri'ni ve çizim filmini açar</dd></div></dl>
+      </div>
+      <p class="muted">Mürekkep harita ile Resimli Harita arasında seçim yapabilirsin.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Tüm özellikler ücretsiz</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Ücretsiz</h3>
+          <ul><li>Yalnızca yürüdüğün yerde dolan harita ve yeni yol takibi</li><li>212 damga ve tabela çıkartmaları</li><li>Öncü Pusulası ve Bugünün Ayak İzleri</li><li>Takvim ve yazılı, fotoğraflı günlük</li><li>Haritanın çizilişini video olarak dışa aktarma</li><li>Ana ekran ve kilitli ekran widget'ları</li><li>Cihazlar arasında iCloud eşzamanlama</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Geliştiriciyi destekle</h3>
+          <ul><li>İstersen Ayarlar'dan küçük bir bahşiş gönder</li><li>Bahşiş hiçbir şeyin kilidini açmaz. Uygulama her durumda aynıdır</li></ul>
+          
+        </div>
+      </div>
+      <p class="muted">Reklam yok, abonelik yok.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Sorular</h2>
+      <div class="faq"><details><summary>Yürüdüm ama haritada hiçbir şey görünmedi.</summary><p>Ayarlar &gt; Buktu Buktu &gt; Konum'a git, Her Zaman'ı seç ve Hareket ve Fitness'ı aç. Böylece uygulama kapalıyken de kayıt yapılır. Uygulama ayarlarında pil tasarruflu kayıt modunu seçtiysen yola çıkmadan önce uygulamayı aç. Doğruluğu düşük konumlar kaydedilir ama çizilmez.</p></details>
+<details><summary>Araba ya da metro yolculukları kaydedilir mi?</summary><p>Hayır. Hareket verisine ve hıza bakarak yalnızca yürüme ve koşuyu çizer, taşıta benzeyen bölümleri dışarıda bırakır. Ara sıra yanılabilir.</p></details>
+<details><summary>Her gün aynı yolu yürüyorum ve harita büyümüyor.</summary><p>Kural bu. Daha önce yürüdüğün yerin 30 m yakınındaki her yer aynı yol sayılır, bu yüzden Çizdiğim Yollar'a yalnızca ilk kez yürünen yollar eklenir. Karşı kaldırım da aynı yol sayılır. Öncü Pusulası en az yürüdüğün yeri gösterir.</p></details>
+<details><summary>Konumum bir yere gönderiliyor mu?</summary><p>Geliştiriciye gönderilmez. Adımların, damgaların, günlüğün ve fotoğrafların cihazında ve kendi özel iCloud'unda kalır, geliştirici bunları göremez. Anonim kullanım istatistikleri asla koordinat, günlük metni, yer adı veya fotoğraf içermez. Koordinatları yer adlarına çevirmek için Apple Haritalar hizmetleri kullanılır. Ayrıntılar için aşağıdaki Gizlilik Politikası'na bak.</p></details>
+<details><summary>Kayıtlarım yeni cihaza taşınır mı?</summary><p>Evet. Yeni cihazda aynı Apple Hesabı ile oturum aç ve iCloud'u açık tut; adımların, damgaların, günlüğün ve fotoğrafların seninle gelir.</p></details>
+<details><summary>Bir damgayı ya da fotoğrafı nasıl silerim?</summary><p>Damgaları Damga Bastığım Yerler listesinden sil. Günlükteki bir fotoğrafı silmek için üzerine dokunup basılı tut. Tüm yolları ve günlük kayıtlarını tek seferde silme özelliği yol haritasında.</p></details>
+<details><summary>Widget'ı nasıl eklerim?</summary><p>Ana ekranda dokunup basılı tut, Düzenle &gt; Widget Ekle'ye dokun ve Buktu Buktu'yu seç. Kilitli ekranda ise dokunup basılı tut, ardından Özelleştir'e dokun. Ana ekran widget'ı bugünkü yolun şeklini ve uzunluğunu, kilitli ekran ise bugünkü mesafeyi gösterir.</p></details>
+<details><summary>Neye ihtiyacım var?</summary><p>iOS 17.0 veya üzeri yüklü bir iPhone.</p></details>
+<details><summary>Nasıl iletişime geçerim?</summary><p>Uygulama ayarlarından geri bildirim gönder ya da aşağıdaki adrese e-posta at. En kısa sürede yanıt veririz.</p></details></div>
+      <p class="contact">Soru ya da geri bildirim mi var? <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> adresine yaz.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Bugün bir sokak öteden<br>dolaşmaya ne dersin?</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6789952970">App Store'dan ücretsiz indir</a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Buktu Buktu (FootprintDiary) ·
-    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    <nav id="languages" class="langs" aria-label="Dil"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr" aria-current="page">Türkçe</a></nav>
+    <p><a href="privacy.html">Gizlilik Politikası</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Buktu Buktu</p>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

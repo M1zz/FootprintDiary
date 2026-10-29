@@ -1,72 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buktu Buktu (FootprintDiary)</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1c1d21;
-      --muted: #6b7280;
-      --accent: #4facfe;
-      --accent2: #00c2a8;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171b;
-        --card: #1f2126;
-        --text: #f2f3f5;
-        --muted: #9ca3af;
-        --border: #2c2f36;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
-    .hero .emoji { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
-    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
-    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: var(--text);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-      transition: transform .15s ease, box-shadow .15s ease;
-      display: block;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
-    .card .ico { font-size: 28px; }
-    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .features { margin-top: 40px; }
-    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .features ul { padding-left: 20px; color: var(--muted); }
-    .features li { margin: 8px 0; }
-    .features strong { color: var(--text); }
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buktu Buktu: 歩いて描く地図</title>
+  <meta name="description" content="初めて歩いた場所だけが少しずつ埋まっていく白地図。車や電車で通った道は描かれません。すべての機能が無料です。">
+  <meta name="theme-color" content="#C72C18" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6789952970">
   <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/ja/">
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
@@ -91,55 +32,159 @@
   <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/">
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/">
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buktu Buktu: 歩いて描く地図">
+  <meta property="og:description" content="初めて歩いた場所だけが少しずつ埋まっていく白地図。車や電車で通った道は描かれません。すべての機能が無料です。">
+  <meta property="og:url" content="https://m1zz.github.io/FootprintDiary/ja/">
+  <meta property="og:image" content="https://m1zz.github.io/FootprintDiary/img/ja/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#C72C18}@media (prefers-color-scheme:dark){:root{--accent:#F29966}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="index.html" hreflang="ja" lang="ja" aria-current="true">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-  <div class="hero">
-    <div class="emoji">👣</div>
-    <h1>Buktu Buktu</h1>
-    <p>自分の足で通った場所だけが残る白地図</p>
-  </div>
+  <a class="skip" href="#main">本文へスキップ</a>
+  <header class="bar">
+    <a class="brand" href="../ja/"><img src="../icon.png" alt="" width="32" height="32">Buktu Buktu</a>
+    <a class="lang-link" href="#languages">言語</a>
+  </header>
 
-  <div class="wrap">
-    <div class="cards">
-      <a class="card" href="privacy.html">
-        <div class="ico">🔒</div>
-        <h3>プライバシーポリシー</h3>
-        <p>どんなデータをどう扱うかをご確認ください。</p>
-      </a>
-      <a class="card" href="support.html">
-        <div class="ico">💬</div>
-        <h3>サポート / お問い合わせ</h3>
-        <p>ヘルプ、よくある質問、お問い合わせ方法。</p>
-      </a>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>歩いた道だけが<br>色づく地図</h1>
+        <p class="lead">最初は真っ白な一枚の紙。自分の足で歩いた場所だけが一点ずつ埋まり、同じ道を百回歩いても地図は広がりません。広げたいなら、新しい道へ。</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6789952970">App Storeで無料ダウンロード</a><a class="try" href="#try">歩いてみよう ↓</a></div>
+        <p class="muted small">すべての機能が無料、広告もありません。</p>
+      </div>
+      <div class="phone"><img src="../img/ja/01-map.jpg" alt="歩いた道だけが 色づく地図" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <div class="features">
-      <h2>Buktu Buktuとは？</h2>
-      <p>世界はもう、ほかの地図が描き終えています。Buktu Buktuの地図は何も描かれていない紙から始まり、
-         <strong>あなたが歩いたときだけ</strong>一点ずつ埋まっていきます。
-         車や地下鉄で通った道は描かれません。</p>
-      <ul>
-        <li><strong>歩いた分だけ育つ地図</strong> — 通った場所が一点ずつ紙に刻まれます。
-            よく通る道ほど濃くなり、3か月歩かないと灰色に色あせます</li>
-        <li><strong>自分が描いた道</strong> — 測るのは歩いた距離ではなく、<em>はじめて歩く</em>道の長さです。
-            同じ道を何度歩いても地図は育ちません</li>
-        <li><strong>スタンプ</strong> — その場所に立って、212種類のスタンプから一つを押します。
-            カメラでお店の看板を撮ると、その看板が地図に立ちます</li>
-        <li><strong>行った場所と行きたい場所</strong> — まだ行っていない場所は点線のスタンプとして残り、
-            そこに着くと行った場所として固まります</li>
-        <li><strong>開拓コンパス</strong> — 今いる場所から、どちらがまだ白いかを指し示します</li>
-        <li><strong>フィルム</strong> — 自分の地図が描かれていく様子を動画で書き出せます</li>
-        <li><strong>あなたのiCloudだけに</strong> — 歩みと日記、写真は、他人の目に触れない
-            個人のiCloudに保存されます。座標は開発者に一つも送信されません</li>
-      </ul>
-    </div>
-  </div>
+
+    <section class="reveal" id="try">
+      <h2>歩いてみよう</h2>
+      <p class="muted">紙の上を指やマウスでなぞると、歩いたことになります。青い点は以前に歩いた道です。その上をなぞるときと、新しい方へ進むときで、「今日引いた道」がどう変わるか見てください。</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;歩いてみよう&quot;, &quot;lead&quot;: &quot;紙の上を指やマウスでなぞると、歩いたことになります。青い点は以前に歩いた道です。その上をなぞるときと、新しい方へ進むときで、「今日引いた道」がどう変わるか見てください。&quot;, &quot;today&quot;: &quot;今日引いた道&quot;, &quot;walked&quot;: &quot;歩いた距離&quot;, &quot;subway&quot;: &quot;電車に乗る&quot;, &quot;subwayOn&quot;: &quot;電車に乗車中&quot;, &quot;reset&quot;: &quot;最初から&quot;, &quot;hint&quot;: &quot;紙の上をなぞって歩き始めましょう。&quot;, &quot;fresh&quot;: &quot;初めての道です。地図が広がります。&quot;, &quot;same&quot;: &quot;歩いたことのある道です。距離だけが増えます。&quot;, &quot;ride&quot;: &quot;車や電車で通った道は描かれません。&quot;, &quot;legendToday&quot;: &quot;今日&quot;, &quot;legendPast&quot;: &quot;過去の歩み&quot;, &quot;legendFaded&quot;: &quot;3か月以上&quot;, &quot;note&quot;: &quot;ここでは歩く代わりになぞります。すでに歩いた場所から30 m以内は同じ道とみなす、アプリと同じルールです。キーボードでは紙にフォーカスして、矢印キーで歩けます。&quot;}"></div>
+    </section>
+
+    <section class="problem reveal">
+      <h2>毎日、同じ道ばかり歩いていませんか？</h2>
+      <p>歩数計は歩数を数えても、どこを歩いたかは気にしません。家と駅の往復でリングは埋まり、すぐ隣の路地は何年も知らないまま。Buktu Buktuは初めて歩いた道だけを数えるので、今日は一本となりの道へ寄り道する理由ができます。</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>行った場所と行きたい場所にスタンプを</h2>
+        <p>今いる場所に、または地図を長押しした好きな場所にスタンプを押せます。スタンプはカテゴリ別に212種類。<br>まだ歩いたことのない場所に押したスタンプは「行きたい場所」として残り、実際にたどり着くと「行った場所」に変わります。お店の看板を撮ると背景が切り抜かれ、その場所のステッカーとして立ちます。</p>
+      </div>
+      <div class="phone"><img src="../img/ja/03-stamps.jpg" alt="行った場所と行きたい場所にスタンプを" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>次の散歩は、いちばん歩いていない方角へ</h2>
+        <p>開拓コンパスは周りを8方位に分け、いちばん歩いていない方角を指し示します。<br>今日の足あとは、今日立ち寄った場所を順番に並べ、その間を歩いた距離も添えます。</p>
+      </div>
+      <div class="phone"><img src="../img/ja/02-compass.jpg" alt="次の散歩は、いちばん歩いていない方角へ" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>毎日が、ひとつの形になる</h2>
+        <p>カレンダーには数字の代わりに、その日歩いた形が描かれます。文章と写真で毎日の日記を残し、それぞれの散歩のうちどれだけが新しい道だったかも見られます。<br>期間を選べば、地図が描かれていく様子を動画で見て、書き出せます。</p>
+      </div>
+      <div class="phone"><img src="../img/ja/04-calendar.jpg" alt="毎日が、ひとつの形になる" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>3ステップで始めましょう</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>アプリを開く</h3><p>真っ白な紙が広がります。</p></li>
+<li class="card"><span class="n">2</span><h3>位置情報を許可する</h3><p>「常に許可」を選び、モーションとフィットネスをオンにすると、アプリを開かなくても散歩が記録されます。</p></li>
+<li class="card"><span class="n">3</span><h3>出かける</h3><p>知らない道ほど、地図は大きく広がります。</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>地図の見かた</h2>
+      <div class="card table">
+        <dl><div><dt>赤い点</dt><dd>今日歩いた場所</dd></div><div><dt>藍色の点</dt><dd>過去の歩み。よく通る場所ほど濃くなります</dd></div><div><dt>灰色の点</dt><dd>3か月以上行っていない場所。色あせても消えません</dd></div><div><dt>点線のスタンプ</dt><dd>行きたい場所。たどり着くと行った場所になります</dd></div><div><dt>自分が描いた道</dt><dd>これまでに初めて歩いた道の合計の長さ</dd></div><div><dt>今日引いた道</dt><dd>今日の散歩のうち、初めて歩いた道の長さ</dd></div><div><dt>まとめて見る</dt><dd>設定から開拓コンパス、今日の足あと、地図が描かれていくフィルムを開けます</dd></div></dl>
+      </div>
+      <p class="muted">地図は墨の地図と絵地図から選べます。</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>すべての機能が無料</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>無料</h3>
+          <ul><li>歩いた場所だけが埋まる地図と、新しい道の記録</li><li>212種類のスタンプと看板ステッカー</li><li>開拓コンパスと今日の足あと</li><li>カレンダーと、文章と写真の日記</li><li>地図が描かれていく動画の書き出し</li><li>ホーム画面とロック画面のウィジェット</li><li>デバイス間のiCloud同期</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>開発者を応援する</h3>
+          <ul><li>よろしければ、設定から少額のチップを送れます</li><li>チップで何かが解放されることはありません。アプリはどちらでも同じです</li></ul>
+          
+        </div>
+      </div>
+      <p class="muted">広告なし、サブスクリプションなし。</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>よくある質問</h2>
+      <div class="faq"><details><summary>歩いたのに、地図に何も表示されません。</summary><p>設定 &gt; Buktu Buktu &gt; 位置情報で「常に」を選び、モーションとフィットネスをオンにしてください。これでアプリを閉じていても記録されます。アプリの設定で記録方法をバッテリー優先にしている場合は、アプリを開いてから歩き始めてください。精度の低い位置は保存されますが、地図には描かれません。</p></details>
+<details><summary>車や電車での移動も記録されますか？</summary><p>いいえ。モーションデータと速度から歩きと走りだけを描き、乗り物らしい区間は除きます。まれに判定を誤ることがあります。</p></details>
+<details><summary>毎日同じ道を歩いているのに、地図が広がりません。</summary><p>それがルールです。すでに歩いた場所から30 m以内は同じ道とみなすので、「自分が描いた道」に加わるのは初めての道だけです。通りの向かいの歩道も同じ道に数えます。あまり歩いていない方角は、開拓コンパスで確かめられます。</p></details>
+<details><summary>位置情報はどこかに送信されますか？</summary><p>開発者には送信されません。歩み、スタンプ、日記、写真は端末とご自身の個人用iCloudに保存され、開発者は見ることができません。匿名の利用統計に、座標、日記の文章、場所の名前、写真が含まれることはありません。座標を場所の名前に変えるために、Appleマップのサービスを使います。詳しくは下のプライバシーポリシーをご覧ください。</p></details>
+<details><summary>機種変更しても記録は引き継がれますか？</summary><p>はい。新しい端末で同じAppleアカウントにサインインし、iCloudをオンにしておけば、歩み、スタンプ、日記、写真が引き継がれます。</p></details>
+<details><summary>スタンプや写真はどう削除しますか？</summary><p>スタンプは「自分が押した場所」の一覧から削除できます。日記の写真は長押しして削除します。道と日記をまとめて消す方法は、今後の予定に入っています。</p></details>
+<details><summary>ウィジェットはどう追加しますか？</summary><p>ホーム画面を長押しして「編集」&gt;「ウィジェットを追加」をタップし、Buktu Buktuを選びます。ロック画面は長押ししてから「カスタマイズ」をタップします。ホーム画面のウィジェットには今日の道の形と長さ、ロック画面には今日の距離が表示されます。</p></details>
+<details><summary>必要な環境は？</summary><p>iOS 17.0以降を搭載したiPhone。</p></details>
+<details><summary>問い合わせ方法は？</summary><p>アプリの設定からフィードバックを送るか、下のアドレスにメールしてください。できるだけ早くお返事します。</p></details></div>
+      <p class="contact">ご質問やご意見は <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> までお寄せください。</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>今日は一本となりの道へ、<br>寄り道してみませんか？</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6789952970">App Storeで無料ダウンロード</a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Buktu Buktu (FootprintDiary) ·
-    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    <nav id="languages" class="langs" aria-label="言語"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja" aria-current="page">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">プライバシーポリシー</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Buktu Buktu</p>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

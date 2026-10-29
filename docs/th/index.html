@@ -1,72 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="th">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buktu Buktu (FootprintDiary)</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1c1d21;
-      --muted: #6b7280;
-      --accent: #4facfe;
-      --accent2: #00c2a8;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171b;
-        --card: #1f2126;
-        --text: #f2f3f5;
-        --muted: #9ca3af;
-        --border: #2c2f36;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
-    .hero .emoji { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
-    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
-    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: var(--text);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-      transition: transform .15s ease, box-shadow .15s ease;
-      display: block;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
-    .card .ico { font-size: 28px; }
-    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .features { margin-top: 40px; }
-    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .features ul { padding-left: 20px; color: var(--muted); }
-    .features li { margin: 8px 0; }
-    .features strong { color: var(--text); }
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buktu Buktu: แผนที่ที่วาดด้วยการเดิน</title>
+  <meta name="description" content="แผนที่ที่เริ่มจากกระดาษเปล่า และเติมเฉพาะที่ที่คุณเดินเป็นครั้งแรก ทางที่ผ่านด้วยรถหรือรถไฟใต้ดินจะไม่ถูกวาด ทุกฟีเจอร์ใช้ได้ฟรี">
+  <meta name="theme-color" content="#C72C18" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6789952970">
   <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/th/">
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
@@ -91,55 +32,159 @@
   <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/">
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/">
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buktu Buktu: แผนที่ที่วาดด้วยการเดิน">
+  <meta property="og:description" content="แผนที่ที่เริ่มจากกระดาษเปล่า และเติมเฉพาะที่ที่คุณเดินเป็นครั้งแรก ทางที่ผ่านด้วยรถหรือรถไฟใต้ดินจะไม่ถูกวาด ทุกฟีเจอร์ใช้ได้ฟรี">
+  <meta property="og:url" content="https://m1zz.github.io/FootprintDiary/th/">
+  <meta property="og:image" content="https://m1zz.github.io/FootprintDiary/img/th/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#C72C18}@media (prefers-color-scheme:dark){:root{--accent:#F29966}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="index.html" hreflang="th" lang="th" aria-current="true">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="../da/index.html" hreflang="da" lang="da">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-  <div class="hero">
-    <div class="emoji">👣</div>
-    <h1>Buktu Buktu</h1>
-    <p>แผนที่เปล่าที่เก็บไว้เฉพาะที่ที่คุณเดินผ่านด้วยสองเท้า</p>
-  </div>
+  <a class="skip" href="#main">ข้ามไปยังเนื้อหา</a>
+  <header class="bar">
+    <a class="brand" href="../th/"><img src="../icon.png" alt="" width="32" height="32">Buktu Buktu</a>
+    <a class="lang-link" href="#languages">ภาษา</a>
+  </header>
 
-  <div class="wrap">
-    <div class="cards">
-      <a class="card" href="privacy.html">
-        <div class="ico">🔒</div>
-        <h3>นโยบายความเป็นส่วนตัว</h3>
-        <p>ดูว่าเราจัดการข้อมูลอะไรและอย่างไร</p>
-      </a>
-      <a class="card" href="support.html">
-        <div class="ico">💬</div>
-        <h3>ช่วยเหลือ / ติดต่อ</h3>
-        <p>วิธีใช้ คำถามที่พบบ่อย และช่องทางติดต่อ</p>
-      </a>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>แผนที่ที่เติม<br>ด้วยสองเท้าเท่านั้น</h1>
+        <p class="lead">เริ่มจากกระดาษเปล่าหนึ่งแผ่น เฉพาะที่ที่คุณเดินผ่านจะถูกเติมทีละจุด และต่อให้เดินถนนเดิมร้อยครั้ง แผนที่ก็ไม่กว้างขึ้น ถ้าอยากให้แผนที่กว้างขึ้น ต้องลองทางใหม่</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6789952970">ดาวน์โหลดฟรีบน App Store</a><a class="try" href="#try">ลองเดินดู ↓</a></div>
+        <p class="muted small">ทุกฟีเจอร์ฟรี ไม่มีโฆษณา</p>
+      </div>
+      <div class="phone"><img src="../img/th/01-map.jpg" alt="แผนที่ที่เติม ด้วยสองเท้าเท่านั้น" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <div class="features">
-      <h2>Buktu Buktu คืออะไร</h2>
-      <p>โลกถูกแผนที่อื่นวาดไว้หมดแล้ว แผนที่ของ Buktu Buktu เริ่มจากกระดาษที่ไม่มีอะไรวาดอยู่เลย
-         และจะถูกเติมทีละจุด <strong>เมื่อคุณเดินเท่านั้น</strong>
-         เส้นทางที่ผ่านด้วยรถยนต์หรือรถไฟใต้ดินจะไม่ถูกวาด</p>
-      <ul>
-        <li><strong>แผนที่ที่โตตามก้าวเดิน</strong> — ที่ที่ผ่านจะถูกประทับลงบนกระดาษทีละจุด
-            ทางที่ผ่านบ่อยจะเข้มขึ้น และทางที่ไม่ได้ไปซ้ำสามเดือนจะซีดจางเป็นสีเทา</li>
-        <li><strong>เส้นทางที่ฉันวาด</strong> — สิ่งที่วัดไม่ใช่ระยะทางที่เดิน แต่คือความยาวของทาง<em>ใหม่</em>
-            ต่อให้เดินเส้นเดิมร้อยครั้ง แผนที่ก็ไม่โตขึ้น</li>
-        <li><strong>ประทับตรา</strong> — ยืนอยู่ตรงนั้นแล้วเลือกประทับตราหนึ่งในสองร้อยสิบสองแบบ
-            ถ่ายป้ายร้านด้วยกล้อง ป้ายร้านนั้นก็จะตั้งขึ้นบนแผนที่</li>
-        <li><strong>ที่ที่ไปมาแล้วและที่อยากไป</strong> — ที่ที่ยังไม่เคยไปจะเหลือเป็นตราประทับเส้นประ
-            และเมื่อไปถึงก็จะกลายเป็นที่ที่ไปมาแล้ว</li>
-        <li><strong>เข็มทิศนักบุกเบิก</strong> — ชี้ว่าจากจุดที่คุณยืน ทิศไหนยังขาวอยู่</li>
-        <li><strong>ฟิล์ม</strong> — ส่งออกเป็นวิดีโอว่าแผนที่ของคุณถูกวาดขึ้นมาอย่างไร</li>
-        <li><strong>อยู่ใน iCloud ของคุณเท่านั้น</strong> — ก้าวเดิน ไดอารี่ และรูปภาพถูกเก็บไว้ใน iCloud ส่วนตัว
-            ที่คนอื่นมองไม่เห็น ไม่มีพิกัดแม้แต่จุดเดียวถูกส่งให้นักพัฒนา</li>
-      </ul>
-    </div>
-  </div>
+
+    <section class="reveal" id="try">
+      <h2>ลองเดินดู</h2>
+      <p class="muted">ลากนิ้วหรือเมาส์บนกระดาษเพื่อเดิน จุดสีน้ำเงินคือถนนที่เคยเดินไปแล้ว ลองดูว่า “เส้นทางที่ขีดวันนี้” เปลี่ยนไปอย่างไรเมื่อเดินซ้ำทางเดิม กับเมื่อเดินไปทางใหม่</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;ลองเดินดู&quot;, &quot;lead&quot;: &quot;ลากนิ้วหรือเมาส์บนกระดาษเพื่อเดิน จุดสีน้ำเงินคือถนนที่เคยเดินไปแล้ว ลองดูว่า “เส้นทางที่ขีดวันนี้” เปลี่ยนไปอย่างไรเมื่อเดินซ้ำทางเดิม กับเมื่อเดินไปทางใหม่&quot;, &quot;today&quot;: &quot;เส้นทางที่ขีดวันนี้&quot;, &quot;walked&quot;: &quot;ระยะที่เดิน&quot;, &quot;subway&quot;: &quot;นั่งรถไฟใต้ดิน&quot;, &quot;subwayOn&quot;: &quot;อยู่บนรถไฟใต้ดิน&quot;, &quot;reset&quot;: &quot;เริ่มใหม่&quot;, &quot;hint&quot;: &quot;ลากบนกระดาษเพื่อเริ่มเดิน&quot;, &quot;fresh&quot;: &quot;ทางใหม่ แผนที่กว้างขึ้นแล้ว&quot;, &quot;same&quot;: &quot;ทางนี้เคยเดินแล้ว เพิ่มแค่ระยะทาง&quot;, &quot;ride&quot;: &quot;ทางที่ผ่านด้วยรถหรือรถไฟใต้ดินจะไม่ถูกวาด&quot;, &quot;legendToday&quot;: &quot;วันนี้&quot;, &quot;legendPast&quot;: &quot;การเดินที่ผ่านมา&quot;, &quot;legendFaded&quot;: &quot;เกิน 3 เดือน&quot;, &quot;note&quot;: &quot;ในหน้านี้ใช้การลากแทนการเดิน โดยใช้กฎเดียวกับในแอป คือที่ที่อยู่ห่างจากที่ที่เคยเดินไม่เกิน 30 m ถือเป็นทางเดิม หากใช้แป้นพิมพ์ ให้โฟกัสที่กระดาษแล้วเดินด้วยปุ่มลูกศร&quot;}"></div>
+    </section>
+
+    <section class="problem reveal">
+      <h2>เดินถนนเดิมทุกวันอยู่หรือเปล่า</h2>
+      <p>ตัวนับก้าวนับจำนวนก้าว แต่ไม่เคยสนใจว่าก้าวไปที่ไหน แค่เดินจากบ้านไปสถานีแล้วกลับ วงก็เต็มแล้ว ส่วนซอยข้างบ้านก็ยังเป็นปริศนาไปอีกหลายปี Buktu Buktu นับเฉพาะเส้นทางที่คุณเดินเป็นครั้งแรก วันนี้จึงมีเหตุผลให้เดินอ้อมออกไปอีกสักช่วงตึก</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>ประทับตราที่ที่ไปมาแล้วและที่อยากไป</h2>
+        <p>ประทับตราตรงที่ยืนอยู่ หรือกดค้างตรงไหนก็ได้บนแผนที่ มีตราประทับให้เลือก 212 แบบ แยกตามหมวดหมู่<br>ตราที่ประทับในที่ที่ไม่เคยเดินจะเป็นที่อยากไป และเมื่อไปถึงจริงก็จะกลายเป็นที่ที่ไปมาแล้ว ถ่ายป้ายหน้าร้าน แล้วพื้นหลังจะถูกตัดออก ป้ายจะตั้งขึ้นเป็นสติกเกอร์ของที่นั้น</p>
+      </div>
+      <div class="phone"><img src="../img/th/03-stamps.jpg" alt="ประทับตราที่ที่ไปมาแล้วและที่อยากไป" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>เดินครั้งหน้า ไปทางที่เดินน้อยที่สุด</h2>
+        <p>เข็มทิศนักบุกเบิกแบ่งบริเวณรอบตัวคุณเป็นแปดทิศ แล้วชี้ไปยังทิศที่คุณเดินน้อยที่สุด<br>รอยเท้าวันนี้เรียงที่ที่คุณแวะวันนี้ตามลำดับ พร้อมระยะที่เดินระหว่างแต่ละที่</p>
+      </div>
+      <div class="phone"><img src="../img/th/02-compass.jpg" alt="เดินครั้งหน้า ไปทางที่เดินน้อยที่สุด" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>ทุกวันทิ้งรูปร่างไว้</h2>
+        <p>ปฏิทินวาดรูปร่างของการเดินแต่ละวันแทนตัวเลข เขียนไดอารี่ทุกวันด้วยข้อความและรูปภาพ และดูได้ว่าการเดินแต่ละครั้งเป็นทางใหม่มากแค่ไหน<br>เลือกช่วงเวลาเพื่อดูแผนที่ของคุณถูกวาดขึ้นเป็นวิดีโอ แล้วส่งออกได้</p>
+      </div>
+      <div class="phone"><img src="../img/th/04-calendar.jpg" alt="ทุกวันทิ้งรูปร่างไว้" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>เริ่มได้ใน 3 ขั้นตอน</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>เปิดแอป</h3><p>กระดาษเปล่าแผ่นหนึ่งจะคลี่ออก</p></li>
+<li class="card"><span class="n">2</span><h3>อนุญาตตำแหน่งที่ตั้ง</h3><p>เลือก “อนุญาตเสมอ” และเปิด การเคลื่อนไหวและฟิตเนส เพื่อบันทึกการเดินโดยไม่ต้องเปิดแอป</p></li>
+<li class="card"><span class="n">3</span><h3>ออกไปเดิน</h3><p>ยิ่งเป็นถนนที่ไม่คุ้นเคย แผนที่ก็ยิ่งกว้างขึ้น</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>วิธีอ่านแผนที่</h2>
+      <div class="card table">
+        <dl><div><dt>จุดสีแดง</dt><dd>ที่ที่เดินวันนี้</dd></div><div><dt>จุดสีคราม</dt><dd>การเดินที่ผ่านมา ยิ่งผ่านบ่อยยิ่งเข้ม</dd></div><div><dt>จุดสีเทา</dt><dd>ที่ที่ไม่ได้กลับไปเกินสามเดือน สีจะซีดลงแต่ไม่หายไป</dd></div><div><dt>ตราประทับเส้นประ</dt><dd>ที่อยากไป เมื่อไปถึงจะกลายเป็นที่ที่ไปมาแล้ว</dd></div><div><dt>เส้นทางที่ฉันวาด</dt><dd>ความยาวรวมของทุกเส้นทางที่เดินเป็นครั้งแรก</dd></div><div><dt>เส้นทางที่ขีดวันนี้</dt><dd>ส่วนของการเดินวันนี้ที่เป็นทางใหม่</dd></div><div><dt>ดูรวม</dt><dd>ในการตั้งค่า ใช้เปิดเข็มทิศนักบุกเบิก รอยเท้าวันนี้ และฟิล์มการวาดแผนที่</dd></div></dl>
+      </div>
+      <p class="muted">เลือกได้ระหว่างแผนที่หมึกกับแผนที่ภาพวาด</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>ทุกฟีเจอร์ฟรี</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>ฟรี</h3>
+          <ul><li>แผนที่ที่เติมเฉพาะที่ที่เดิน พร้อมติดตามทางใหม่</li><li>ตราประทับ 212 แบบ และสติกเกอร์ป้ายร้าน</li><li>เข็มทิศนักบุกเบิก และรอยเท้าวันนี้</li><li>ปฏิทิน และไดอารี่ด้วยข้อความและรูปภาพ</li><li>ส่งออกวิดีโอการวาดแผนที่</li><li>วิดเจ็ตบนหน้าจอโฮมและหน้าจอล็อค</li><li>ซิงค์ข้ามอุปกรณ์ด้วย iCloud</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>สนับสนุนนักพัฒนา</h3>
+          <ul><li>ส่งทิปเล็กๆ ได้จากการตั้งค่า หากต้องการ</li><li>ทิปไม่ได้ปลดล็อกอะไร แอปเหมือนเดิมทุกอย่าง</li></ul>
+          
+        </div>
+      </div>
+      <p class="muted">ไม่มีโฆษณา ไม่มีการสมัครสมาชิก</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>คำถาม</h2>
+      <div class="faq"><details><summary>เดินแล้ว แต่ไม่มีอะไรขึ้นบนแผนที่</summary><p>ไปที่ การตั้งค่า &gt; Buktu Buktu &gt; ตำแหน่งที่ตั้ง แล้วเลือก “เสมอ” จากนั้นเปิด การเคลื่อนไหวและฟิตเนส แอปจะบันทึกได้แม้ปิดอยู่ หากเลือกวิธีบันทึกแบบประหยัดแบตเตอรี่ในการตั้งค่าของแอป ให้เปิดแอปก่อนออกเดิน ตำแหน่งที่มีความแม่นยำต่ำจะถูกบันทึกไว้แต่ไม่วาดบนแผนที่</p></details>
+<details><summary>การเดินทางด้วยรถหรือรถไฟใต้ดินถูกบันทึกไหม</summary><p>ไม่ แอปใช้ข้อมูลการเคลื่อนไหวและความเร็วเพื่อวาดเฉพาะการเดินและการวิ่ง และตัดช่วงที่ดูเหมือนอยู่บนยานพาหนะออก บางครั้งอาจตัดสินผิดได้</p></details>
+<details><summary>เดินเส้นทางเดิมทุกวัน แต่แผนที่ไม่กว้างขึ้น</summary><p>นั่นคือกฎ ที่ที่อยู่ห่างจากที่ที่เคยเดินไม่เกิน 30 m ถือเป็นทางเดิม จึงมีเพียงเส้นทางที่เดินครั้งแรกเท่านั้นที่เพิ่มเข้าไปใน “เส้นทางที่ฉันวาด” ทางเท้าฝั่งตรงข้ามก็นับเป็นทางเดิมเช่นกัน เข็มทิศนักบุกเบิกจะบอกว่าทิศไหนเดินน้อยที่สุด</p></details>
+<details><summary>ตำแหน่งของฉันถูกส่งไปที่ไหนไหม</summary><p>ไม่ถูกส่งให้นักพัฒนา การเดิน ตราประทับ ไดอารี่ และรูปภาพของคุณอยู่ในอุปกรณ์และใน iCloud ส่วนตัวของคุณ นักพัฒนามองไม่เห็น สถิติการใช้งานแบบไม่ระบุตัวตนไม่มีพิกัด ข้อความไดอารี่ ชื่อสถานที่ หรือรูปภาพ แอปใช้บริการแผนที่ของ Apple เพื่อแปลงพิกัดเป็นชื่อสถานที่ ดูรายละเอียดได้ที่นโยบายความเป็นส่วนตัวด้านล่าง</p></details>
+<details><summary>บันทึกจะย้ายไปเครื่องใหม่ไหม</summary><p>ได้ ลงชื่อเข้าด้วยบัญชี Apple เดียวกันบนเครื่องใหม่และเปิด iCloud ไว้ การเดิน ตราประทับ ไดอารี่ และรูปภาพก็จะตามไปด้วย</p></details>
+<details><summary>ลบตราประทับหรือรูปภาพอย่างไร</summary><p>ลบตราประทับได้จากรายการ “ที่ที่ฉันประทับตราไว้” ส่วนรูปในไดอารี่ ให้แตะค้างไว้เพื่อลบ วิธีลบเส้นทางและไดอารี่ทั้งหมดในครั้งเดียวอยู่ในแผนงานแล้ว</p></details>
+<details><summary>เพิ่มวิดเจ็ตอย่างไร</summary><p>แตะหน้าจอโฮมค้างไว้ แตะ “แก้ไข” &gt; “เพิ่มวิดเจ็ต” แล้วเลือก Buktu Buktu สำหรับหน้าจอล็อค ให้แตะค้างไว้ แล้วแตะ “กำหนดเอง” วิดเจ็ตบนหน้าจอโฮมแสดงรูปร่างและความยาวของเส้นทางวันนี้ ส่วนหน้าจอล็อคแสดงระยะทางวันนี้</p></details>
+<details><summary>ต้องใช้อะไรบ้าง</summary><p>iPhone ที่ใช้ iOS 17.0 ขึ้นไป</p></details>
+<details><summary>ติดต่อได้อย่างไร</summary><p>ส่งความคิดเห็นจากการตั้งค่าของแอป หรือส่งอีเมลมาที่ที่อยู่ด้านล่าง เราจะตอบกลับโดยเร็วที่สุด</p></details></div>
+      <p class="contact">มีคำถามหรือข้อเสนอแนะ เขียนถึงเราได้ที่ <a href="mailto:leeo@kakao.com">leeo@kakao.com</a></p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>วันนี้ลองเดินอ้อม<br>ไปอีกสักช่วงตึกไหม</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6789952970">ดาวน์โหลดฟรีบน App Store</a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Buktu Buktu (FootprintDiary) ·
-    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    <nav id="languages" class="langs" aria-label="ภาษา"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th" aria-current="page">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">นโยบายความเป็นส่วนตัว</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Buktu Buktu</p>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

@@ -1,72 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="da">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Buktu Buktu (FootprintDiary)</title>
-  <style>
-    :root {
-      --bg: #f7f8fa;
-      --card: #ffffff;
-      --text: #1c1d21;
-      --muted: #6b7280;
-      --accent: #4facfe;
-      --accent2: #00c2a8;
-      --border: #e5e7eb;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #16171b;
-        --card: #1f2126;
-        --text: #f2f3f5;
-        --muted: #9ca3af;
-        --border: #2c2f36;
-      }
-    }
-    * { box-sizing: border-box; }
-    body {
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    .hero {
-      text-align: center;
-      padding: 72px 24px 48px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color: #fff;
-    }
-    .hero .emoji { font-size: 64px; line-height: 1; }
-    .hero h1 { margin: 16px 0 8px; font-size: 2rem; }
-    .hero p { margin: 0; opacity: 0.95; font-size: 1.05rem; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
-    .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: -32px; }
-    @media (max-width: 560px) { .cards { grid-template-columns: 1fr; } }
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 24px;
-      text-decoration: none;
-      color: var(--text);
-      box-shadow: 0 6px 24px rgba(0,0,0,0.06);
-      transition: transform .15s ease, box-shadow .15s ease;
-      display: block;
-    }
-    .card:hover { transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,0,0,0.10); }
-    .card .ico { font-size: 28px; }
-    .card h3 { margin: 12px 0 6px; font-size: 1.15rem; }
-    .card p { margin: 0; color: var(--muted); font-size: 0.92rem; }
-    .features { margin-top: 40px; }
-    .features h2 { font-size: 1.3rem; margin-bottom: 8px; }
-    .features ul { padding-left: 20px; color: var(--muted); }
-    .features li { margin: 8px 0; }
-    .features strong { color: var(--text); }
-    footer { text-align: center; color: var(--muted); font-size: 0.85rem; padding: 32px 20px 48px; }
-    footer a { color: var(--accent); text-decoration: none; }
-  </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buktu Buktu: kortet du tegner til fods</title>
+  <meta name="description" content="Et kort, der starter som et tomt ark og kun fyldes ud, hvor du går for første gang. Bil og metro tegnes aldrig. Alle funktioner er gratis.">
+  <meta name="theme-color" content="#C72C18" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0a0d0f" media="(prefers-color-scheme: dark)">
+  <meta name="apple-itunes-app" content="app-id=6789952970">
   <link rel="canonical" href="https://m1zz.github.io/FootprintDiary/da/">
   <link rel="alternate" hreflang="ko" href="https://m1zz.github.io/FootprintDiary/">
   <link rel="alternate" hreflang="en" href="https://m1zz.github.io/FootprintDiary/en/">
@@ -91,55 +32,159 @@
   <link rel="alternate" hreflang="pl" href="https://m1zz.github.io/FootprintDiary/pl/">
   <link rel="alternate" hreflang="sv" href="https://m1zz.github.io/FootprintDiary/sv/">
   <link rel="alternate" hreflang="tr" href="https://m1zz.github.io/FootprintDiary/tr/">
-  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/en/">
+  <link rel="alternate" hreflang="x-default" href="https://m1zz.github.io/FootprintDiary/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Buktu Buktu: kortet du tegner til fods">
+  <meta property="og:description" content="Et kort, der starter som et tomt ark og kun fyldes ud, hvor du går for første gang. Bil og metro tegnes aldrig. Alle funktioner er gratis.">
+  <meta property="og:url" content="https://m1zz.github.io/FootprintDiary/da/">
+  <meta property="og:image" content="https://m1zz.github.io/FootprintDiary/img/da/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="../icon.png">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../site.css">
+  <link rel="stylesheet" href="../demo.css">
+  <style>:root{--accent:#C72C18}@media (prefers-color-scheme:dark){:root{--accent:#F29966}}</style>
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-<nav class="langs" aria-label="Languages" style="max-width:760px;margin:12px auto 0;padding:0 20px;font-size:.85rem;text-align:right"><a href="../index.html" hreflang="ko" lang="ko">한국어</a> · <a href="../en/index.html" hreflang="en" lang="en">English</a> · <a href="../ja/index.html" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-Hans/index.html" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-Hant/index.html" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ru/index.html" hreflang="ru" lang="ru">Русский</a> · <a href="../es/index.html" hreflang="es" lang="es">Español</a> · <a href="../de/index.html" hreflang="de" lang="de">Deutsch</a> · <a href="../fr/index.html" hreflang="fr" lang="fr">Français</a> · <a href="../it/index.html" hreflang="it" lang="it">Italiano</a> · <a href="../pt-BR/index.html" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../th/index.html" hreflang="th" lang="th">ไทย</a> · <a href="../vi/index.html" hreflang="vi" lang="vi">Tiếng Việt</a> · <a href="../cs/index.html" hreflang="cs" lang="cs">Čeština</a> · <a href="index.html" hreflang="da" lang="da" aria-current="true">Dansk</a> · <a href="../el/index.html" hreflang="el" lang="el">Ελληνικά</a> · <a href="../fi/index.html" hreflang="fi" lang="fi">Suomi</a> · <a href="../id/index.html" hreflang="id" lang="id">Bahasa Indonesia</a> · <a href="../nb/index.html" hreflang="nb" lang="nb">Norsk bokmål</a> · <a href="../nl/index.html" hreflang="nl" lang="nl">Nederlands</a> · <a href="../pl/index.html" hreflang="pl" lang="pl">Polski</a> · <a href="../sv/index.html" hreflang="sv" lang="sv">Svenska</a> · <a href="../tr/index.html" hreflang="tr" lang="tr">Türkçe</a></nav>
-  <div class="hero">
-    <div class="emoji">👣</div>
-    <h1>Buktu Buktu</h1>
-    <p>Et tomt kort, der kun gemmer de steder, du har gået</p>
-  </div>
+  <a class="skip" href="#main">Gå til indhold</a>
+  <header class="bar">
+    <a class="brand" href="../da/"><img src="../icon.png" alt="" width="32" height="32">Buktu Buktu</a>
+    <a class="lang-link" href="#languages">Sprog</a>
+  </header>
 
-  <div class="wrap">
-    <div class="cards">
-      <a class="card" href="privacy.html">
-        <div class="ico">🔒</div>
-        <h3>Privatlivspolitik</h3>
-        <p>Se, hvilke data vi behandler, og hvordan.</p>
-      </a>
-      <a class="card" href="support.html">
-        <div class="ico">💬</div>
-        <h3>Support / Kontakt</h3>
-        <p>Hjælp, ofte stillede spørgsmål og hvordan du kontakter os.</p>
-      </a>
-    </div>
+  <main id="main">
+    <section class="hero">
+      <div class="copy">
+        <h1>Et kort, der kun<br>fyldes ud til fods</h1>
+        <p class="lead">Det starter som et tomt stykke papir. Kun de steder, du går, fyldes ud, prik for prik, og går du den samme gade hundrede gange, bliver det ikke bredere. Vil du have kortet til at vokse, må du tage en ny vej.</p>
+        <div class="actions"><a class="cta" href="https://apps.apple.com/app/id6789952970">Hent gratis i App Store</a><a class="try" href="#try">Gå en tur ↓</a></div>
+        <p class="muted small">Alle funktioner er gratis og uden reklamer.</p>
+      </div>
+      <div class="phone"><img src="../img/da/01-map.jpg" alt="Et kort, der kun fyldes ud til fods" width="720" height="1564" decoding="async"></div>
+    </section>
 
-    <div class="features">
-      <h2>Hvad er Buktu Buktu?</h2>
-      <p>Verden er allerede tegnet af andre kort. Kortet i Buktu Buktu begynder som et papir, hvor intet er tegnet,
-         og udfyldes et punkt ad gangen, <strong>kun når du går</strong>.
-         Veje, du kører i bil eller metro, tegnes ikke.</p>
-      <ul>
-        <li><strong>Et kort, der vokser med dine skridt</strong> — de steder, du kommer forbi, stemples på papiret ét efter ét.
-            Veje, du ofte går, bliver mørkere, og veje, du ikke har betrådt i tre måneder, falmer til grå</li>
-        <li><strong>Veje, du har tegnet</strong> — det, der måles, er ikke den tilbagelagte afstand, men længden af
-            <em>nye</em> veje. Går du samme vej hundrede gange, vokser kortet ikke</li>
-        <li><strong>Stempler</strong> — stå på et sted og sæt et af 212 stempler.
-            Fotograferer du et butiksskilt med kameraet, rejser skiltet sig på dit kort</li>
-        <li><strong>Besøgte steder og steder, du vil besøge</strong> — steder, du ikke har været endnu, bliver stående som stiplede stempler
-            og bliver til besøgte steder, når du når frem</li>
-        <li><strong>Pionerkompas</strong> — peger fra det sted, du står, mod den retning, der stadig er hvid</li>
-        <li><strong>Film</strong> — eksportér som video, hvordan dit kort bliver tegnet</li>
-        <li><strong>Kun i din iCloud</strong> — skridt, dagbog og fotos gemmes i din personlige iCloud,
-            uden for andres blikke. Ikke en eneste koordinat sendes til udvikleren</li>
-      </ul>
-    </div>
-  </div>
+
+    <section class="reveal" id="try">
+      <h2>Gå en tur</h2>
+      <p class="muted">Træk med fingeren eller musen hen over papiret for at gå. De blå prikker er gader, du har gået før. Se, hvordan Dagens vej ændrer sig, når du går i dine gamle spor, og når du går et nyt sted hen.</p>
+      <div id="demo" class="card demo-card" data-text="{&quot;title&quot;: &quot;Gå en tur&quot;, &quot;lead&quot;: &quot;Træk med fingeren eller musen hen over papiret for at gå. De blå prikker er gader, du har gået før. Se, hvordan Dagens vej ændrer sig, når du går i dine gamle spor, og når du går et nyt sted hen.&quot;, &quot;today&quot;: &quot;Dagens vej&quot;, &quot;walked&quot;: &quot;Gået&quot;, &quot;subway&quot;: &quot;Tag metroen&quot;, &quot;subwayOn&quot;: &quot;I metroen&quot;, &quot;reset&quot;: &quot;Start forfra&quot;, &quot;hint&quot;: &quot;Træk hen over papiret for at begynde at gå.&quot;, &quot;fresh&quot;: &quot;En ny vej. Kortet vokser.&quot;, &quot;same&quot;: &quot;Her har du gået før. Kun distancen stiger.&quot;, &quot;ride&quot;: &quot;Veje tilbagelagt i bil eller metro tegnes ikke.&quot;, &quot;legendToday&quot;: &quot;I dag&quot;, &quot;legendPast&quot;: &quot;Tidligere&quot;, &quot;legendFaded&quot;: &quot;Over 3 mdr.&quot;, &quot;note&quot;: &quot;Her trækker du i stedet for at gå. Appens egen regel gælder: alt inden for 30 m af, hvor du allerede har været, tæller som samme vej. Med tastatur vælger du papiret og går med piletasterne.&quot;}"></div>
+    </section>
+
+    <section class="problem reveal">
+      <h2>Går du de samme gader hver dag?</h2>
+      <p>En skridttæller tæller skridt, men spørger aldrig, hvor de førte hen. Hjem til stationen og tilbage fylder fint ringen ud, så sidegaden lige ved siden af forbliver et mysterium i årevis. Buktu Buktu tæller kun de veje, du går for første gang, og det giver dig en grund til at gå en gade længere i dag.</p>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Stempl steder, du har været, og vil hen</h2>
+        <p>Stempl det sted, du står, eller hold fingeren nede hvor som helst på kortet. Der er 212 stempler at vælge imellem, sorteret efter kategori.<br>Et stempel sat, hvor du aldrig har gået, bliver stående som et sted, du vil besøge, og bliver til et besøgt sted, når du rent faktisk kommer derhen. Tag et billede af et butiksskilt, så klippes baggrunden væk, og skiltet rejser sig som et klistermærke på netop det sted.</p>
+      </div>
+      <div class="phone"><img src="../img/da/03-stamps.jpg" alt="Stempl steder, du har været, og vil hen" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Næste tur: den retning, du har gået mindst</h2>
+        <p>Pionerkompas deler området omkring dig i otte retninger og peger på den, du har dækket mindst.<br>Dagens fodspor viser de steder, du stoppede i dag, i rækkefølge, med hvor langt du gik imellem dem.</p>
+      </div>
+      <div class="phone"><img src="../img/da/02-compass.jpg" alt="Næste tur: den retning, du har gået mindst" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="feature reveal">
+      <div class="copy">
+        <h2>Hver dag efterlader en form</h2>
+        <p>Kalenderen tegner formen på hver dags tur i stedet for et tal. Skriv dagbog med tekst og billeder, og se, hvor meget af hver tur der foregik på nye steder.<br>Vælg en periode, og se dit kort blive tegnet som en video, du kan eksportere.</p>
+      </div>
+      <div class="phone"><img src="../img/da/04-calendar.jpg" alt="Hver dag efterlader en form" width="720" height="1564" loading="lazy" decoding="async"></div>
+    </section>
+
+    <section class="reveal">
+      <h2>Tre trin til at komme i gang</h2>
+      <ol class="steps"><li class="card"><span class="n">1</span><h3>Åbn appen</h3><p>Et tomt stykke papir folder sig ud.</p></li>
+<li class="card"><span class="n">2</span><h3>Tillad lokalitet</h3><p>Vælg Altid, og slå Bevægelse og fitness til for at registrere ture uden at åbne appen.</p></li>
+<li class="card"><span class="n">3</span><h3>Gå ud</h3><p>Jo mindre kendt gaden er, jo mere vokser kortet.</p></li></ol>
+    </section>
+
+    <section class="reveal" id="commands">
+      <h2>Sådan læser du kortet</h2>
+      <div class="card table">
+        <dl><div><dt>Røde prikker</dt><dd>hvor du gik i dag</dd></div><div><dt>Indigo prikker</dt><dd>tidligere skridt, mørkere hvor du oftest kommer forbi</dd></div><div><dt>Grå prikker</dt><dd>steder, du ikke har været tilbage på i over tre måneder. De falmer, men forsvinder aldrig</dd></div><div><dt>Stiplet stempel</dt><dd>et sted, du vil besøge. Det bliver besøgt, når du kommer derhen</dd></div><div><dt>Veje, jeg har tegnet</dt><dd>samlet længde af alle veje, du har gået for første gang</dd></div><div><dt>Dagens vej</dt><dd>hvor meget af dagens tur der var nyt</dd></div><div><dt>Se alt samlet</dt><dd>i Indstillinger, åbner Pionerkompas, Dagens fodspor og filmen, hvor kortet tegnes</dd></div></dl>
+      </div>
+      <p class="muted">Vælg mellem tuschkortet og Tegnet kort.</p>
+    </section>
+
+    <section class="reveal" id="pricing">
+      <h2>Alle funktioner er gratis</h2>
+      <div class="plans">
+        <div class="card plan free">
+          <h3>Gratis</h3>
+          <ul><li>Et kort, der kun fyldes ud, hvor du går, med styr på nye veje</li><li>212 stempler og klistermærker af butiksskilte</li><li>Pionerkompas og Dagens fodspor</li><li>Kalender og dagbog med tekst og billeder</li><li>Eksportér videoen af dit kort, mens det tegnes</li><li>Widgets til hjemmeskærmen og låseskærmen</li><li>Synkronisering mellem enheder via iCloud</li></ul>
+          
+        </div>
+        <div class="card plan pro">
+          <h3>Støt udvikleren</h3>
+          <ul><li>Giv lidt drikkepenge i Indstillinger, hvis du har lyst</li><li>Drikkepenge låser ikke noget op. Appen er den samme uanset</li></ul>
+          
+        </div>
+      </div>
+      <p class="muted">Ingen reklamer, intet abonnement.</p>
+    </section>
+
+    <section class="reveal" id="faq">
+      <h2>Spørgsmål</h2>
+      <div class="faq"><details><summary>Jeg gik en tur, men der kom intet på kortet.</summary><p>Gå til Indstillinger &gt; Buktu Buktu &gt; Lokalitet, vælg Altid, og slå Bevægelse og fitness til. Så registreres der, selv når appen er lukket. Hvis du har valgt den batterisparende registreringstilstand i appens indstillinger, skal du åbne appen, før du går. Placeringer med lav nøjagtighed gemmes, men tegnes ikke.</p></details>
+<details><summary>Bliver ture i bil eller metro registreret?</summary><p>Nej. Appen bruger bevægelsesdata og hastighed til kun at tegne gang og løb og udelader strækninger, der ligner kørsel. Den kan en gang imellem tage fejl.</p></details>
+<details><summary>Jeg går den samme rute hver dag, og kortet vokser ikke.</summary><p>Sådan er reglen. Alt inden for 30 m af, hvor du allerede har gået, tæller som samme vej, så kun veje, du går for første gang, lægges til Veje, jeg har tegnet. Fortovet på den anden side af gaden tæller også som samme vej. Pionerkompas viser, hvor du har gået mindst.</p></details>
+<details><summary>Bliver min placering sendt nogen steder hen?</summary><p>Ikke til udvikleren. Dine skridt, stempler, dagbog og billeder bliver på enheden og i din egen private iCloud, og udvikleren kan ikke se dem. Anonym brugsstatistik indeholder aldrig koordinater, dagbogstekst, stednavne eller billeder. Apple Kort bruges til at omsætte koordinater til stednavne. Læs mere i privatlivspolitikken nedenfor.</p></details>
+<details><summary>Følger mine registreringer med til en ny enhed?</summary><p>Ja. Log ind med samme Apple-konto på den nye enhed, og hold iCloud slået til, så følger skridt, stempler, dagbog og billeder med.</p></details>
+<details><summary>Hvordan sletter jeg et stempel eller et billede?</summary><p>Slet stempler fra listen Steder, jeg har stemplet, og hold fingeren på et billede i dagbogen for at slette det. En måde at slette alle veje og dagbogsnotater på én gang er planlagt.</p></details>
+<details><summary>Hvordan tilføjer jeg widgetten?</summary><p>Hold fingeren på hjemmeskærmen, tryk på Rediger &gt; Tilføj widget, og vælg Buktu Buktu. På låseskærmen holder du fingeren nede og trykker på Tilpas. Widgetten på hjemmeskærmen viser formen og længden af dagens vej, og låseskærmen viser dagens distance.</p></details>
+<details><summary>Hvad skal jeg bruge?</summary><p>En iPhone med iOS 17.0 eller nyere.</p></details>
+<details><summary>Hvordan kontakter jeg jer?</summary><p>Send feedback fra appens indstillinger, eller skriv til os på adressen nedenfor. Vi svarer så hurtigt, vi kan.</p></details></div>
+      <p class="contact">Spørgsmål eller feedback? Skriv til <a href="mailto:leeo@kakao.com">leeo@kakao.com</a>.</p>
+    </section>
+
+    <section class="closing reveal">
+      <h2>Hvorfor ikke gå en gade<br>længere i dag?</h2>
+      <a class="cta" href="https://apps.apple.com/app/id6789952970">Hent gratis i App Store</a>
+    </section>
+  </main>
 
   <footer>
-    © 2026 Buktu Buktu (FootprintDiary) ·
-    <a href="https://github.com/M1zz/FootprintDiary">GitHub</a>
+    <nav id="languages" class="langs" aria-label="Sprog"><a href="../" hreflang="ko" lang="ko">한국어</a>
+<a href="../en/" hreflang="en" lang="en">English</a>
+<a href="../ja/" hreflang="ja" lang="ja">日本語</a>
+<a href="../zh-Hans/" hreflang="zh-Hans" lang="zh-Hans">简体中文</a>
+<a href="../zh-Hant/" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a>
+<a href="../ru/" hreflang="ru" lang="ru">Русский</a>
+<a href="../es/" hreflang="es" lang="es">Español</a>
+<a href="../de/" hreflang="de" lang="de">Deutsch</a>
+<a href="../fr/" hreflang="fr" lang="fr">Français</a>
+<a href="../it/" hreflang="it" lang="it">Italiano</a>
+<a href="../pt-BR/" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a>
+<a href="../th/" hreflang="th" lang="th">ไทย</a>
+<a href="../vi/" hreflang="vi" lang="vi">Tiếng Việt</a>
+<a href="../cs/" hreflang="cs" lang="cs">Čeština</a>
+<a href="../da/" hreflang="da" lang="da" aria-current="page">Dansk</a>
+<a href="../el/" hreflang="el" lang="el">Ελληνικά</a>
+<a href="../fi/" hreflang="fi" lang="fi">Suomi</a>
+<a href="../id/" hreflang="id" lang="id">Bahasa Indonesia</a>
+<a href="../nb/" hreflang="nb" lang="nb">Norsk bokmål</a>
+<a href="../nl/" hreflang="nl" lang="nl">Nederlands</a>
+<a href="../pl/" hreflang="pl" lang="pl">Polski</a>
+<a href="../sv/" hreflang="sv" lang="sv">Svenska</a>
+<a href="../tr/" hreflang="tr" lang="tr">Türkçe</a></nav>
+    <p><a href="privacy.html">Privatlivspolitik</a> · <a href="mailto:leeo@kakao.com">leeo@kakao.com</a> · © 2026 Buktu Buktu</p>
   </footer>
+
+  <script>
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add("in"); io.unobserve(e.target) }
+    }), { rootMargin: "0px 0px -10% 0px" });
+    document.querySelectorAll(".reveal").forEach(el => io.observe(el));
+  </script>
+  <script src="../demo.js"></script>
 </body>
 </html>

@@ -1,0 +1,34 @@
+/* 벅뚜벅뚜 웹 데모. 점 빛깔은 앱의 DotPalette 와 같다: 오늘 주묵, 지난 걸음 남빛, 석 달 넘으면 잿빛. */
+.demo-card { display: block; }
+.bk-stats { display: flex; gap: var(--s6); margin-bottom: var(--s4); }
+.bk-stats div { display: grid; }
+.bk-stats b { font-size: clamp(1.75rem, 4vw, 2.25rem); font-weight: 800; letter-spacing: -0.02em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.bk-today { color: var(--accent); }
+.bk-stats span { color: var(--muted); font-size: .875rem; }
+
+.bk-paper { display: block; width: 100%; aspect-ratio: 600 / 380; border-radius: var(--r-inner);
+            background: #fbfaf6; box-shadow: inset 0 0 0 1px var(--line);
+            touch-action: none; cursor: crosshair; }
+@media (prefers-color-scheme: dark) { .bk-paper { background: #101417; } }
+.bk-msg { min-height: 1.6em; margin: var(--s3) 0 0; font-weight: 600; }
+
+.bk-bar { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s2) var(--s3); margin-top: var(--s3); }
+.bk-legend { display: flex; flex-wrap: wrap; gap: var(--s4); list-style: none; padding: 0; margin: 0; color: var(--muted); font-size: .875rem; }
+.bk-legend li { display: flex; align-items: center; gap: 6px; }
+.bk-legend i { width: 10px; height: 10px; border-radius: 50%; }
+.bk-legend .t { background: #c72c18; }
+.bk-legend .p { background: #1872c7; }
+.bk-legend .f { background: rgb(107 107 107 / .6); }
+@media (prefers-color-scheme: dark) {
+  .bk-legend .t { background: #f2361d; } .bk-legend .p { background: #1d8bf2; } .bk-legend .f { background: rgb(179 179 179 / .6); }
+}
+.bk-space { flex: 1; }
+.bk-btn { font: inherit; font-size: .9375rem; font-weight: 600; color: var(--accent); background: var(--bg); border: 0;
+          border-radius: 999px; padding: 0 var(--s4); min-height: 44px; cursor: pointer;
+          transition: transform .15s var(--ease), background .15s var(--ease); }
+.bk-btn:hover { background: color-mix(in srgb, var(--accent) 14%, var(--bg)); }
+.bk-btn:active { transform: scale(.95); }
+.bk-btn[aria-pressed="true"] { background: #5d666d; color: #fff; }
+.bk-note { margin-top: var(--s4); margin-bottom: 0; }
+
+@media (prefers-reduced-motion: reduce) { .bk-btn { transition: none; } }
