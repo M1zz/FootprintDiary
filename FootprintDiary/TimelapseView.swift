@@ -226,6 +226,9 @@ private struct TimelapsePlayerView: View {
                     in: 0...Double(max(activeDays.count - 1, 1)),
                     step: 1
                 )
+                // 몇 퍼센트가 아니라 그날 날짜로 읽는다
+                .accessibilityValue(activeDays.indices.contains(frameIndex)
+                                    ? Self.dayFormatter.string(from: activeDays[frameIndex]) : "")
 
                 HStack {
                     Text(Self.shortDayFormatter.string(from: activeDays.first ?? .now))
@@ -243,6 +246,7 @@ private struct TimelapsePlayerView: View {
                         Image(systemName: isPlaying ? "pause.circle.fill" : "play.circle.fill")
                             .font(.system(size: 44))
                     }
+                    .accessibilityLabel(isPlaying ? String(localized: "일시정지") : String(localized: "재생"))
 
                     Spacer()
 

@@ -141,6 +141,7 @@ struct SpotARScreen: View {
                     .padding(10)
                     .background(.ultraThinMaterial, in: Circle())
             }
+            .accessibilityLabel("닫기")
         }
     }
 

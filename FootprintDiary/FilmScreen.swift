@@ -222,6 +222,7 @@ struct FilmScreen: View {
             .onTapGesture { togglePlaying() }
             .accessibilityLabel("내 지도가 그려지는 미리보기")
             .accessibilityHint("두드리면 멈추거나 다시 재생합니다")
+            .accessibilityAddTraits(.isButton)
         } else {
             empty
         }
@@ -229,7 +230,7 @@ struct FilmScreen: View {
 
     private func dayLabel(for reel: WalkFilm.Reel, progress: Double) -> some View {
         Text(WalkFilm.caption(reel, progress: progress))
-            .font(.system(size: 15, weight: .semibold, design: .serif))
+            .font(.system(.subheadline, design: .serif, weight: .semibold))
             .foregroundStyle(Color(InkStyle.ink).opacity(0.75))
             .padding(.horizontal, 12)
             .padding(.vertical, 6)

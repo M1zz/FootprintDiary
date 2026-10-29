@@ -205,6 +205,7 @@ struct AtlasScreen: View {
     @EnvironmentObject private var locationManager: LocationManager
 
     @StateObject private var state = AtlasState()
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var showDiary = false
     @State private var showSupport = false
     @State private var showFilm = false
@@ -692,11 +693,12 @@ struct AtlasScreen: View {
                     }
                     .animation(.easeOut(duration: 0.3), value: isEmptyMap)
                 }
-                .transition(.scale(scale: 0.4, anchor: .bottom).combined(with: .opacity))
+                // 동작 줄이기: 튀어나오는 대신 겹쳐 나타난다
+                .transition(reduceMotion ? .opacity : .scale(scale: 0.4, anchor: .bottom).combined(with: .opacity))
             }
             toolsToggle
         }
-        .animation(.spring(response: 0.32, dampingFraction: 0.78), value: toolsExpanded)
+        .animation(reduceMotion ? .easeOut(duration: 0.2) : .spring(response: 0.32, dampingFraction: 0.78), value: toolsExpanded)
         .onAppear {
             if isEmptyMap { toolsExpanded = true }
         }
@@ -936,6 +938,9 @@ struct AtlasScreen: View {
         .onTapGesture {
             withAnimation(.easeOut(duration: 0.25)) { showsEmptyHint = false }
         }
+        // VoiceOver: 안내를 한 번에 읽고, 동작으로 걷어 낸다
+        .accessibilityElement(children: .combine)
+        .accessibilityAction(named: Text("닫기")) { showsEmptyHint = false }
     }
 
     private func hintRow(symbol: String, text: String) -> some View {

@@ -82,7 +82,7 @@ struct WhatsNewView: View {
                 VStack(alignment: .leading, spacing: 28) {
                     VStack(alignment: .leading, spacing: 6) {
                         Text("새로 생긴 것")
-                            .font(.system(size: 30, weight: .bold, design: .serif))
+                            .font(.system(.title, design: .serif, weight: .bold))
                         Text("버전 \(WhatsNew.version)")
                             .font(.subheadline)
                             .foregroundStyle(.secondary)

@@ -33,6 +33,7 @@ struct StickerCameraScreen: View {
     let onUse: (Data) -> Void
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @StateObject private var camera = StickerCamera()
 
     /// 찍어서 오려 낸 것. 정해지면 '이걸 쓸까' 화면으로 넘어간다.
@@ -88,6 +89,7 @@ struct StickerCameraScreen: View {
                         } label: {
                             Image(systemName: "arrow.triangle.2.circlepath.camera")
                         }
+                        .accessibilityLabel("카메라 전환")
                         .disabled(!camera.isAuthorized)
                     }
                 }
@@ -398,6 +400,14 @@ struct StickerCameraScreen: View {
 
     private func use(_ image: UIImage) {
         guard flight == .idle, let data = StickerMaker.pngData(for: image) else { return }
+
+        // 동작 줄이기: 튀어 올라 날아가는 움직임 없이 바로 붙인다
+        if reduceMotion {
+            UIImpactFeedbackGenerator(style: .rigid).impactOccurred()
+            onUse(data)
+            dismiss()
+            return
+        }
 
         // 통 — 손끝에서 튀어 오르는 만큼만.
         withAnimation(.spring(response: 0.16, dampingFraction: 0.45)) { flight = .popped }

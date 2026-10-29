@@ -161,7 +161,7 @@ struct WalkDayCard: View {
 
                 VStack(spacing: 2) {
                     Text("\(Int((novelty * 100).rounded()))%")
-                        .font(.system(size: 34, weight: .bold, design: .rounded))
+                        .font(.system(.largeTitle, design: .rounded, weight: .bold))
                         .contentTransition(.numericText())
                     Text("처음 걷는 길")
                         .font(.caption)

@@ -95,6 +95,7 @@ struct DiaryScreen: View {
                     } label: {
                         Image(systemName: "gearshape")
                     }
+                    .accessibilityLabel("설정")
                 }
             }
             .navigationDestination(item: $pickedDay) { day in

@@ -123,6 +123,7 @@ struct WalkCalendarScreen: View {
             } label: {
                 Image(systemName: "chevron.left")
             }
+            .accessibilityLabel("이전 달")
             // 눌리지 않는 것은 눌리지 않아 보여야 한다. plain 단추는 못 쓰게 막아도
             // 겉모습이 그대로라, 눌러 보고서야 끝인 줄 알게 된다.
             .opacity(canStep(-1) ? 1 : 0.25)
@@ -141,6 +142,7 @@ struct WalkCalendarScreen: View {
             } label: {
                 Image(systemName: "chevron.right")
             }
+            .accessibilityLabel("다음 달")
             .opacity(canStep(1) ? 1 : 0.25)
             .disabled(!canStep(1))
         }
@@ -260,6 +262,7 @@ private struct DayCell: View {
     let isFuture: Bool
 
     private var calendar: Calendar { .current }
+    @Environment(\.colorSchemeContrast) private var contrast
 
     /// 오늘로부터 얼마나 안 바랬는지. 지도의 자(WalkHeatmap.fadingSpan)와 같다.
     private var freshness: Double {
@@ -279,7 +282,8 @@ private struct DayCell: View {
             // 겹쳐 둘 다 안 읽히고, 크게 두면 달력이 숫자판이 되어 버린다.
             Text("\(calendar.component(.day, from: day))")
                 .font(.system(size: 10, weight: isToday ? .bold : .regular))
-                .foregroundStyle(isToday ? Color(DotPalette.today) : Color(InkStyle.ink).opacity(0.45))
+                // 대비 높이기를 켰으면 흐린 날짜도 또렷하게
+                .foregroundStyle(isToday ? Color(DotPalette.today) : Color(InkStyle.ink).opacity(contrast == .increased ? 0.85 : 0.45))
                 .padding(3)
                 .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
 

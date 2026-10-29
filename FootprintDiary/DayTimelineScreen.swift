@@ -206,7 +206,7 @@ struct DayTimelineScreen: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 6) {
             Text(Date.now, format: .dateTime.month().day().weekday(.wide))
-                .font(.system(size: 22, weight: .bold, design: .serif))
+                .font(.system(.title2, design: .serif, weight: .bold))
             HStack(spacing: 6) {
                 Text("들른 곳 \(entries.count)곳")
                 if walkedToday >= 1 {

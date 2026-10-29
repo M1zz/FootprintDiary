@@ -1535,3 +1535,16 @@ Doğruluk öncelikli ile pil öncelikli arasında seçim yap. Doğruluk öncelik
 Kayıtların kendi iCloud'unda
 Adımlar, damgalar, günlük ve fotoğraflar kişisel iCloud'unda saklanır ve cihaz değiştirdiğinde seninle gelir.
 Anonim kullanım istatistikleri konum koordinatlarını, günlük yazılarını, yer adlarını ve fotoğrafları asla içermez.
+
+## 손쉬운 사용
+
+<!-- DeployBar 가 App Store Connect '앱의 손쉬운 사용' 에 올린다. 실제로 확인한 것만 적는다. -->
+
+### iPhone
+voiceOver
+voiceControl
+largerText
+darkInterface
+differentiateWithoutColor
+sufficientContrast
+reducedMotion
