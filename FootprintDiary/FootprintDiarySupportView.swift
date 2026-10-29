@@ -122,6 +122,7 @@ struct FootprintDiarySupportView: View {
                     LeeoSupportSection<FootprintDiarySpec>()
                     NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
                     LeeoShareAppLink<FootprintDiarySpec>()
+                    LeeoTipJarLink<FootprintDiarySpec>(tipJar: FootprintDiarySpec.tipJar)
                     if devMode {
                         NavigationLink {
                             LeeoUsageStatsView<FootprintDiarySpec>()

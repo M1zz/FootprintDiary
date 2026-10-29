@@ -94,6 +94,7 @@ struct FootprintDiaryApp: App {
                 .environmentObject(cloudSync)
                 .leeoSatisfactionCheck(FootprintDiarySpec.self)
                 .task { await cloudSync.refresh() }
+                .task { await FootprintDiarySpec.tipJar.startStandalone() }
         }
         .modelContainer(container)
     }

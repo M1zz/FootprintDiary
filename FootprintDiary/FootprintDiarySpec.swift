@@ -26,4 +26,12 @@ enum FootprintDiarySpec: LeeoAppSpec {
 
     /// 수익모델 — 인앱 결제가 없는 완전 무료 앱.
     static let monetization = LeeoMonetization.free
+
+    /// 개발자 응원하기 — 소모성 팁 세 가지(작은 것부터). 기능을 열지 않는다.
+    /// 결제가 없는 앱이라 LeeoStore 없이 혼자 돈다. 앱을 열 때 `startStandalone()` 을 부른다.
+    @MainActor static let tipJar = LeeoTipJar(config: LeeoTipJarConfig(productIDs: [
+        "com.leeo.FootprintDiary.tip.small",
+        "com.leeo.FootprintDiary.tip.medium",
+        "com.leeo.FootprintDiary.tip.large"
+    ]))
 }

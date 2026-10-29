@@ -8,6 +8,7 @@
 import SwiftUI
 import SwiftData
 import PhotosUI
+import LeeoKit
 
 /// 카드에 필요한 계산을 한 번만 해서 들고 있는 상자.
 /// 걸음이 쌓일수록 무거워지므로 본문에서 매번 하지 않고 백그라운드에서 만든다.
@@ -110,6 +111,12 @@ struct DiaryScreen: View {
     private var listBody: some View {
         ScrollView {
             LazyVStack(spacing: 16) {
+                // 걸은 날과 남긴 일기가 쌓인 것이 보이는 자리라, 고마운 순간이면 응원을 한 번 부탁한다.
+                LeeoTipAskSlot<FootprintDiarySpec>(
+                    tipJar: FootprintDiarySpec.tipJar,
+                    reached: FootprintTipMoments.reached(walkedDays: feed.entries.count,
+                                                         diaries: diaryEntries.filter { !$0.text.isEmpty }.count)
+                )
                 ForEach(days) { entry in
                     NavigationLink {
                         DiaryDayView(day: entry.walk.day, walk: entry.walk)
