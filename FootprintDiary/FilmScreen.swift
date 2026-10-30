@@ -122,7 +122,7 @@ struct FilmScreen: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("닫기") { dismiss() }
+                    Button { dismiss() } label: { Label("닫기", systemImage: "xmark") }
                 }
             }
             .task(id: reelKey) { rebuild() }

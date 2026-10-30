@@ -99,7 +99,7 @@ struct TrackingDiagnosticsView: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("닫기") { dismiss() }
+                    Button { dismiss() } label: { Label("닫기", systemImage: "xmark") }
                 }
             }
         }

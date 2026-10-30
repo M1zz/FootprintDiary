@@ -80,7 +80,7 @@ struct StickerCameraScreen: View {
             .toolbarBackground(.visible, for: .navigationBar)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("닫기") { dismiss() }
+                    Button { dismiss() } label: { Label("닫기", systemImage: "xmark") }
                 }
                 if sticker == nil {
                     ToolbarItem(placement: .topBarTrailing) {

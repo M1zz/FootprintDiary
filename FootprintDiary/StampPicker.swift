@@ -14,6 +14,7 @@
 //
 
 import SwiftUI
+import LeeoKit
 import SwiftData
 import PhotosUI
 import CoreLocation
@@ -65,7 +66,7 @@ struct StampPicker: View {
             .searchable(text: $query, prompt: "스탬프 찾기")
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    Button("닫기") { dismiss() }
+                    Button { dismiss() } label: { Label("닫기", systemImage: "xmark") }
                 }
             }
             .navigationDestination(for: StampGroup.self) { group in
@@ -255,7 +256,7 @@ struct StampDetailView: View {
             StampEditor(stamp: stamp, onDelete: onDelete)
                 .toolbar {
                     ToolbarItem(placement: .topBarTrailing) {
-                        Button("완료") { dismiss() }
+                        Button { dismiss() } label: { Label("완료", systemImage: "checkmark") }
                     }
                 }
         }
@@ -378,7 +379,7 @@ struct StampEditor: View {
         }
         .fullScreenCover(isPresented: $isViewingSticker) {
             if let data = stamp.sticker, let image = StickerMaker.displayImage(from: data) {
-                StickerViewer(image: image, title: headline)
+                StickerViewer(image: image, title: headline).foldConfined()
             } else {
                 // 열려는 사이에 스티커가 지워졌으면 빈 창만 남는다. 닫을 것이 없는
                 // 검은 화면에 갇히지 않도록 그대로 물러선다.
@@ -393,6 +394,7 @@ struct StampEditor: View {
                 try? modelContext.save()
                 FootprintUsage.log(.stickerMade)
             }
+            .foldConfined()
         }
     }
 

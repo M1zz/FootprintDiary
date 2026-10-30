@@ -19,6 +19,7 @@
 //
 
 import SwiftUI
+import LeeoKit
 import SwiftData
 import MapKit
 
@@ -102,10 +103,10 @@ struct MapScreen: View {
                     .presentationDetents([.medium])
             }
             .fullScreenCover(isPresented: $showTimelapse) {
-                TimelapseView()
+                TimelapseView().foldConfined()
             }
             .fullScreenCover(isPresented: $showDayTimelapse) {
-                DayTimelapseView(date: .now)
+                DayTimelapseView(date: .now).foldConfined()
             }
             .onAppear {
                 locationManager.refreshCurrentLocation()
@@ -327,10 +328,10 @@ struct PlaceDetailSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("닫기") { dismiss() }
+                    Button { dismiss() } label: { Label("닫기", systemImage: "xmark") }
                 }
                 ToolbarItem(placement: .confirmationAction) {
-                    Button("저장") { rename() }
+                    Button { rename() } label: { Label("저장", systemImage: "checkmark") }
                         .disabled(name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 }
             }

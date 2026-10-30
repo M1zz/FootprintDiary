@@ -49,7 +49,11 @@ struct DayTimelineScreen: View {
     /// 아직 스탬프가 없는 자리에 찍으려고 골라 둔 좌표
     @State private var pendingCoordinate: StampSpot?
 
-    init(now: Date = .now) {
+    /// 시트로 열렸는가. 아이폰 듀오를 폈을 때 지도 옆 판에 늘 서 있으면 닫을 것이 없다.
+    private let isSheet: Bool
+
+    init(now: Date = .now, isSheet: Bool = true) {
+        self.isSheet = isSheet
         let start = Calendar.current.startOfDay(for: now)
         _track = Query(
             filter: #Predicate<TrackPoint> { $0.timestamp >= start },
@@ -98,8 +102,10 @@ struct DayTimelineScreen: View {
             .navigationTitle("오늘의 발자취")
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button("닫기") { dismiss() }
+                if isSheet {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        Button { dismiss() } label: { Label("닫기", systemImage: "xmark") }
+                    }
                 }
             }
             .sheet(item: $pendingCoordinate) { spot in

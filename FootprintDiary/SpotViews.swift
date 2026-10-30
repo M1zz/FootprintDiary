@@ -18,6 +18,7 @@
 //
 
 import SwiftUI
+import LeeoKit
 import SwiftData
 import MapKit
 
@@ -117,21 +118,23 @@ struct SpotDetailSheet: View {
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .cancellationAction) {
-                    Button("닫기") { dismiss() }
+                    Button { dismiss() } label: { Label("닫기", systemImage: "xmark") }
                 }
                 if !spot.isCollected {
                     ToolbarItem(placement: .destructiveAction) {
-                        Button("관심 없어요") {
+                        Button {
                             modelContext.delete(spot)
                             try? modelContext.save()
                             dismiss()
+                        } label: {
+                            Label("관심 없어요", systemImage: "eye.slash")
                         }
                         .font(.caption)
                     }
                 }
             }
             .fullScreenCover(isPresented: $showAR) {
-                SpotARScreen(spot: spot)
+                SpotARScreen(spot: spot).foldConfined()
             }
         }
     }

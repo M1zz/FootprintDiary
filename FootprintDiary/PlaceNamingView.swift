@@ -75,7 +75,7 @@ struct DiscoveryReviewView: View {
                 .navigationBarTitleDisplayMode(.inline)
                 .toolbar {
                     ToolbarItem(placement: .cancellationAction) {
-                        Button("나중에") { dismiss() }
+                        Button { dismiss() } label: { Label("나중에", systemImage: "clock") }
                     }
                 }
             } else {
