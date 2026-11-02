@@ -59,7 +59,8 @@ struct FootprintDiaryApp: App {
                 )
                 CloudSync.isAttached = false
             } catch {
-                fatalError("SwiftData 컨테이너 생성 실패: \(error)")
+                container = StoreFallback.memoryContainer(schema: schema, after: error)
+                CloudSync.isAttached = false
             }
         }
         }
@@ -93,6 +94,7 @@ struct FootprintDiaryApp: App {
                 .environmentObject(locationManager)
                 .environmentObject(cloudSync)
                 .leeoSatisfactionCheck(FootprintDiarySpec.self)
+                .storeFallbackNotice()
                 .task { await cloudSync.refresh() }
                 .task { await FootprintDiarySpec.tipJar.startStandalone() }
         }
