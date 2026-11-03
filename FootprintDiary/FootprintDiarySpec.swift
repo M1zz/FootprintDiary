@@ -27,6 +27,9 @@ enum FootprintDiarySpec: LeeoAppSpec {
     /// 수익모델 — 인앱 결제가 없는 완전 무료 앱.
     static let monetization = LeeoMonetization.free
 
+    /// 백업 금고가 함께 떠 두는 공유 저장소 (위젯과 나누는 기록).
+    static let appGroups = ["group.com.leeo.FootprintDiary"]
+
     /// 개발자 응원하기 — 소모성 팁 세 가지(작은 것부터). 기능을 열지 않는다.
     /// 결제가 없는 앱이라 LeeoStore 없이 혼자 돈다. 앱을 열 때 `startStandalone()` 을 부른다.
     @MainActor static let tipJar = LeeoTipJar(config: LeeoTipJarConfig(productIDs: [

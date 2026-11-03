@@ -19,6 +19,9 @@ struct FootprintDiaryApp: App {
     @StateObject private var cloudSync = CloudSync()
 
     init() {
+        // 백업 금고 — 예약된 복원 적용 · 매일/업데이트 직전 백업. 저장소를 열기 전에 먼저.
+        LeeoVault.start(FootprintDiarySpec.self)
+
         // 걸음·스탬프·일기를 내 아이클라우드(개인 데이터베이스)에 함께 둔다.
         // 이 스키마의 모든 속성에 기본값이 있고 관계마다 짝이 있는 것은 그 조건을 맞추기
         // 위해서다 — 까닭은 Models.swift 머리말에 적어 두었다.
