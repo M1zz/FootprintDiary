@@ -7,6 +7,7 @@
 
 import SwiftUI
 import SwiftData
+import AppIntents
 import LeeoKit
 import TipKit
 
@@ -66,6 +67,8 @@ struct FootprintDiaryApp: App {
         }
 
         self.container = container
+        // Siri 인텐트가 같은 저장소를 읽게 한다 (→ WalkIntents.swift)
+        AppDependencyManager.shared.add(dependency: container)
         let manager = LocationManager()
         manager.modelContainer = container
         // 백그라운드에서 위치 이벤트로 앱이 다시 실행됐을 때도
