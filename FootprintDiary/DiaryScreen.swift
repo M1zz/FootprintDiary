@@ -106,6 +106,12 @@ struct DiaryScreen: View {
             }
             .onAppear { feed.rebuild(track: track, calendar: calendar) }
             .onChange(of: track.count) { feed.rebuild(track: track, calendar: calendar) }
+            // Siri · Spotlight 에서 고른 날로 넘어간다
+            .onChange(of: FootprintRouter.shared.diaryDay, initial: true) { _, day in
+                guard let day else { return }
+                pickedDay = day
+                FootprintRouter.shared.diaryDay = nil
+            }
         }
     }
 

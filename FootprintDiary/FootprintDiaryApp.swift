@@ -94,6 +94,8 @@ struct FootprintDiaryApp: App {
         #endif
     }
 
+    @Environment(\.scenePhase) private var scenePhase
+
     var body: some Scene {
         WindowGroup {
             ContentView()
@@ -103,6 +105,11 @@ struct FootprintDiaryApp: App {
                 .storeFallbackNotice()
                 .task { await cloudSync.refresh() }
                 .task { await FootprintDiarySpec.tipJar.startStandalone() }
+                // 일기를 Spotlight · Siri 가 찾게 한다 (→ WalkIntents.swift)
+                .task { await DiaryLibrary.reindex(container) }
+                .onChange(of: scenePhase) { _, phase in
+                    if phase == .background { Task { await DiaryLibrary.reindex(container) } }
+                }
         }
         .modelContainer(container)
     }

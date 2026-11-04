@@ -539,6 +539,10 @@ struct AtlasScreen: View {
                 #endif
             }
             .onChange(of: isMapIdle) { AtlasTips.isMapIdle = isMapIdle }
+            // Siri · Spotlight 에서 고른 일기 → 일지를 연다. 그날로 넘기는 것은 DiaryScreen 몫이다.
+            .onChange(of: FootprintRouter.shared.diaryDay, initial: true) { _, day in
+                if day != nil { showDiary = true }
+            }
             .onChange(of: period) { showPeriod() }
             // '이번 주'처럼 지금을 기준으로 잡는 기간은 날이 바뀌면 범위도 바뀐다
             .onReceive(NotificationCenter.default.publisher(for: .NSCalendarDayChanged)) { _ in showPeriod() }
