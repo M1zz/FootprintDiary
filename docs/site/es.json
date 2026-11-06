@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: el mapa que dibujas a pie",
-  "description": "Un mapa que empieza en blanco y solo se rellena donde caminas por primera vez. Lo que recorres en coche o metro no se dibuja. Todo es gratis.",
+  "description": "Un mapa que empieza en blanco y solo se rellena donde caminas por primera vez. Lo que recorres en coche o metro no se dibuja. El mapa y el diario son gratis.",
   "hero": {
     "headline": "Un mapa que solo\nse rellena a pie",
     "lead": "Empieza siendo una hoja en blanco. Solo se rellenan, punto a punto, los sitios por donde caminas, y aunque pases cien veces por la misma calle no se ensancha. Para que el mapa crezca, toma un camino nuevo.",
     "cta": "Descárgalo gratis en el App Store",
-    "note": "Todas las funciones son gratis y sin anuncios."
+    "note": "El mapa y el diario son gratis y sin anuncios."
   },
   "demo": {
     "title": "Date un paseo",
@@ -94,30 +94,31 @@
         "en Ajustes, abre la Brújula de pioneros, Huellas de hoy y la película de tu mapa"
       ]
     ],
-    "note": "Elige entre el mapa de tinta y el Mapa ilustrado."
+    "note": "Elige entre el mapa de tinta y el Mapa ilustrado (Plus)."
   },
   "pricing": {
-    "title": "Todas las funciones son gratis",
+    "title": "El mapa y el diario son gratis",
     "free": {
       "name": "Gratis",
       "items": [
         "Un mapa que solo se rellena a pie, con registro de caminos nuevos",
-        "212 sellos y pegatinas de letreros",
-        "Brújula de pioneros y Huellas de hoy",
+        "Hasta 30 sellos entre 212 diseños",
+        "Huellas de hoy",
         "Calendario y diario con texto y fotos",
-        "Exporta el vídeo de tu mapa dibujándose",
-        "Widgets para la pantalla de inicio y la pantalla bloqueada",
-        "Sincronización con iCloud entre dispositivos"
+        "Vista por semana, mes y año, y ver cómo se dibuja tu mapa",
+        "Sincronización con iCloud entre dispositivos",
+        "Exporta el registro de tus paseos"
       ]
     },
     "pro": {
-      "name": "Apoya al desarrollador",
+      "name": "Plus · Pro",
       "items": [
-        "Si te apetece, deja una pequeña propina desde Ajustes",
-        "La propina no desbloquea nada. La app es exactamente la misma"
-      ]
+        "Plus: sellos sin límite, cámara de pegatinas de letreros, Mapa ilustrado y fechas a tu medida",
+        "Pro: todo lo de Plus, además de widgets para la pantalla de inicio y la bloqueada, exportar el vídeo de tu mapa y la Brújula de pioneros"
+      ],
+      "note": "Cada uno se puede tener con suscripción semanal, mensual o anual, o con un único pago para siempre. Las propinas de Ajustes van aparte y no desbloquean nada."
     },
-    "note": "Sin anuncios ni suscripciones."
+    "note": "Sin anuncios."
   },
   "faq": {
     "title": "Preguntas",

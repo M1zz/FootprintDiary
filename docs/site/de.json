@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: die Karte, die du zu Fuß zeichnest",
-  "description": "Eine Karte, die als leeres Blatt beginnt und sich nur dort füllt, wo du zum ersten Mal gehst. Fahrten mit Auto oder U-Bahn bleiben leer. Alles gratis.",
+  "description": "Eine Karte, die als leeres Blatt beginnt und sich nur dort füllt, wo du zum ersten Mal gehst. Fahrten mit Auto oder U-Bahn bleiben leer. Karte und Tagebuch sind kostenlos.",
   "hero": {
     "headline": "Eine Karte, die sich\nnur zu Fuß füllt",
     "lead": "Sie beginnt als leeres Blatt Papier. Nur wo du gehst, füllt sie sich Punkt für Punkt, und wer hundertmal dieselbe Straße läuft, macht sie kein Stück größer. Damit die Karte wächst, brauchst du neue Wege.",
     "cta": "Kostenlos im App Store laden",
-    "note": "Alle Funktionen sind kostenlos, ohne Werbung."
+    "note": "Karte und Tagebuch sind kostenlos, ohne Werbung."
   },
   "demo": {
     "title": "Geh eine Runde",
@@ -94,30 +94,31 @@
         "in den Einstellungen; öffnet Pionierkompass, Heutige Fußspuren und den Film deiner Karte"
       ]
     ],
-    "note": "Du kannst zwischen der Tuschekarte und der Bildkarte wählen."
+    "note": "Du kannst zwischen der Tuschekarte und der Bildkarte (Plus) wählen."
   },
   "pricing": {
-    "title": "Alle Funktionen sind kostenlos",
+    "title": "Karte und Tagebuch sind kostenlos",
     "free": {
       "name": "Kostenlos",
       "items": [
         "Eine Karte, die sich nur zu Fuß füllt, mit Erfassung neuer Wege",
-        "212 Stempel und Sticker aus Ladenschildern",
-        "Pionierkompass und Heutige Fußspuren",
+        "Bis zu 30 Stempel aus 212 Motiven",
+        "Heutige Fußspuren",
         "Kalender und Tagebuch mit Text und Fotos",
-        "Video deiner entstehenden Karte exportieren",
-        "Widgets für Home-Bildschirm und Sperrbildschirm",
-        "iCloud-Synchronisierung zwischen Geräten"
+        "Ansicht nach Woche, Monat und Jahr, und zusehen, wie deine Karte entsteht",
+        "iCloud-Synchronisierung zwischen Geräten",
+        "Deine Spaziergänge exportieren"
       ]
     },
     "pro": {
-      "name": "Den Entwickler unterstützen",
+      "name": "Plus · Pro",
       "items": [
-        "Wenn du magst, gib in den Einstellungen ein kleines Trinkgeld",
-        "Trinkgeld schaltet nichts frei. Die App bleibt genau dieselbe"
-      ]
+        "Plus: unbegrenzt Stempel, Kamera für Sticker aus Ladenschildern, Bildkarte und frei gewählte Zeiträume",
+        "Pro: alles aus Plus, dazu Widgets für Home- und Sperrbildschirm, Video deiner entstehenden Karte exportieren und Pionierkompass"
+      ],
+      "note": "Jeweils als Wochen-, Monats- oder Jahresabo oder einmalig für immer. Trinkgeld in den Einstellungen ist davon getrennt und schaltet nichts frei."
     },
-    "note": "Keine Werbung, kein Abo."
+    "note": "Keine Werbung."
   },
   "faq": {
     "title": "Fragen",

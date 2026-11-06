@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: kartet du tegner til fots",
-  "description": "Et kart som starter som et blankt ark og bare fylles ut der du går for første gang. Bil og T-bane tegnes aldri. Alle funksjoner er gratis.",
+  "description": "Et kart som starter som et blankt ark og bare fylles ut der du går for første gang. Bil og T-bane tegnes aldri. Kartet og dagboken er gratis.",
   "hero": {
     "headline": "Et kart som bare\nfylles ut til fots",
     "lead": "Det starter som et blankt papirark. Bare stedene du går, fylles ut, prikk for prikk, og går du den samme gaten hundre ganger, blir det ikke bredere. Vil du at kartet skal vokse, må du ta en ny vei.",
     "cta": "Last ned gratis i App Store",
-    "note": "Alle funksjoner er gratis og uten reklame."
+    "note": "Kartet og dagboken er gratis og uten reklame."
   },
   "demo": {
     "title": "Gå en tur",
@@ -94,30 +94,31 @@
         "i Innstillinger, åpner Pionerkompass, Dagens fotspor og filmen der kartet tegnes"
       ]
     ],
-    "note": "Velg mellom tuschkartet og Illustrert kart."
+    "note": "Velg mellom tuschkartet og Illustrert kart (Plus)."
   },
   "pricing": {
-    "title": "Alle funksjoner er gratis",
+    "title": "Kartet og dagboken er gratis",
     "free": {
       "name": "Gratis",
       "items": [
         "Et kart som bare fylles ut der du går, med oversikt over nye veier",
-        "212 stempler og klistremerker av butikkskilt",
-        "Pionerkompass og Dagens fotspor",
+        "Opptil 30 stempler blant 212 motiver",
+        "Dagens fotspor",
         "Kalender og dagbok med tekst og bilder",
-        "Eksporter videoen av kartet ditt mens det tegnes",
-        "Widgeter for Hjem-skjermen og låst skjerm",
-        "Synkronisering mellom enheter via iCloud"
+        "Vis kartet per uke, måned og år, og se det bli tegnet",
+        "Synkronisering mellom enheter via iCloud",
+        "Eksporter turene dine"
       ]
     },
     "pro": {
-      "name": "Støtt utvikleren",
+      "name": "Plus · Pro",
       "items": [
-        "Gi et lite tips i Innstillinger hvis du har lyst",
-        "Tips låser ikke opp noe. Appen er den samme uansett"
-      ]
+        "Plus: ubegrensede stempler, kamera for klistremerker av butikkskilt, Illustrert kart og egendefinert periode",
+        "Pro: alt i Plus, i tillegg til widgeter for Hjem-skjermen og låst skjerm, eksport av videoen av kartet ditt og Pionerkompass"
+      ],
+      "note": "Hver fås som uke-, måneds- eller årsabonnement, eller som et engangskjøp for alltid. Tips i Innstillinger er noe annet og låser ikke opp noe."
     },
-    "note": "Ingen reklame, ikke noe abonnement."
+    "note": "Ingen reklame."
   },
   "faq": {
     "title": "Spørsmål",

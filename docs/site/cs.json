@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: mapa, kterou kreslíte chůzí",
-  "description": "Mapa, která začíná jako prázdný list a plní se jen tam, kudy jdete poprvé. Cesty autem ani metrem se nekreslí. Všechny funkce zdarma.",
+  "description": "Mapa, která začíná jako prázdný list a plní se jen tam, kudy jdete poprvé. Cesty autem ani metrem se nekreslí. Mapa a deník jsou zdarma.",
   "hero": {
     "headline": "Mapa, která roste\njen pod vašima nohama",
     "lead": "Začíná jako prázdný list papíru. Vyplňují se jen místa, kudy projdete pěšky, tečku po tečce, a stejná ulice prošlá stokrát ji nerozšíří. Chcete větší mapu? Vydejte se novou cestou.",
     "cta": "Stáhněte si zdarma v App Store",
-    "note": "Všechny funkce jsou zdarma a bez reklam."
+    "note": "Mapa a deník jsou zdarma a bez reklam."
   },
   "demo": {
     "title": "Vyzkoušejte si procházku",
@@ -94,30 +94,31 @@
         "v Nastavení, otevře Kompas průkopníka, Dnešní stopy a film s kreslením mapy"
       ]
     ],
-    "note": "Vybrat si můžete tušovou mapu, nebo Kreslenou mapu."
+    "note": "Vybrat si můžete tušovou mapu, nebo Kreslenou mapu (Plus)."
   },
   "pricing": {
-    "title": "Všechny funkce zdarma",
+    "title": "Mapa a deník zdarma",
     "free": {
       "name": "Zdarma",
       "items": [
         "Mapa, která se plní jen tam, kudy chodíte, se sledováním nových cest",
-        "212 razítek a samolepky z vývěsních štítů",
-        "Kompas průkopníka a Dnešní stopy",
+        "Až 30 razítek z 212 motivů",
+        "Dnešní stopy",
         "Kalendář a deník s textem a fotkami",
-        "Export videa, jak se kreslí vaše mapa",
-        "Widgety na plochu a zamčenou obrazovku",
-        "Synchronizace mezi zařízeními přes iCloud"
+        "Zobrazení po týdnech, měsících a letech a přehrání, jak se mapa kreslí",
+        "Synchronizace mezi zařízeními přes iCloud",
+        "Export záznamů vašich procházek"
       ]
     },
     "pro": {
-      "name": "Podpořte vývojáře",
+      "name": "Plus · Pro",
       "items": [
-        "Pokud chcete, pošlete v Nastavení malé spropitné",
-        "Spropitné nic neodemyká. Aplikace je stejná tak i tak"
-      ]
+        "Plus: neomezená razítka, fotoaparát na samolepky z vývěsních štítů, Kreslená mapa a vlastní rozsah dat",
+        "Pro: vše z Plus a k tomu widgety na plochu a zamčenou obrazovku, export videa, jak se kreslí vaše mapa, a Kompas průkopníka"
+      ],
+      "note": "Každou úroveň můžete mít jako týdenní, měsíční nebo roční předplatné, nebo jednorázově navždy. Spropitné v Nastavení je zvlášť a nic neodemyká."
     },
-    "note": "Bez reklam, bez předplatného."
+    "note": "Bez reklam."
   },
   "faq": {
     "title": "Otázky",

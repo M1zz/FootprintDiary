@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: yürüyerek çizdiğin harita",
-  "description": "Boş bir kâğıtla başlayan ve yalnızca ilk kez yürüdüğün yerlerde dolan harita. Araba ve metro yolculukları çizilmez. Tüm özellikler ücretsiz.",
+  "description": "Boş bir kâğıtla başlayan ve yalnızca ilk kez yürüdüğün yerlerde dolan harita. Araba ve metro yolculukları çizilmez. Harita ve günlük ücretsiz.",
   "hero": {
     "headline": "Yalnızca yürüdükçe\ndolan bir harita",
     "lead": "Boş bir kâğıt olarak başlar. Yalnızca yürüdüğün yerler nokta nokta dolar ve aynı sokağı yüz kez yürümek onu genişletmez. Haritayı büyütmek için yeni bir yola çık.",
     "cta": "App Store'dan ücretsiz indir",
-    "note": "Tüm özellikler ücretsiz, reklam yok."
+    "note": "Harita ve günlük ücretsiz, reklam yok."
   },
   "demo": {
     "title": "Bir yürüyüş yap",
@@ -94,30 +94,31 @@
         "Ayarlar'da; Öncü Pusulası'nı, Bugünün Ayak İzleri'ni ve çizim filmini açar"
       ]
     ],
-    "note": "Mürekkep harita ile Resimli Harita arasında seçim yapabilirsin."
+    "note": "Mürekkep harita ile Resimli Harita (Plus) arasında seçim yapabilirsin."
   },
   "pricing": {
-    "title": "Tüm özellikler ücretsiz",
+    "title": "Harita ve günlük ücretsiz",
     "free": {
       "name": "Ücretsiz",
       "items": [
         "Yalnızca yürüdüğün yerde dolan harita ve yeni yol takibi",
-        "212 damga ve tabela çıkartmaları",
-        "Öncü Pusulası ve Bugünün Ayak İzleri",
+        "212 desen arasından en fazla 30 damga",
+        "Bugünün Ayak İzleri",
         "Takvim ve yazılı, fotoğraflı günlük",
-        "Haritanın çizilişini video olarak dışa aktarma",
-        "Ana ekran ve kilitli ekran widget'ları",
-        "Cihazlar arasında iCloud eşzamanlama"
+        "Haftalık, aylık ve yıllık görünüm, haritanın çizilişini izleme",
+        "Cihazlar arasında iCloud eşzamanlama",
+        "Yürüyüş kayıtlarını dışa aktarma"
       ]
     },
     "pro": {
-      "name": "Geliştiriciyi destekle",
+      "name": "Plus · Pro",
       "items": [
-        "İstersen Ayarlar'dan küçük bir bahşiş gönder",
-        "Bahşiş hiçbir şeyin kilidini açmaz. Uygulama her durumda aynıdır"
-      ]
+        "Plus: sınırsız damga, tabela çıkartması kamerası, Resimli Harita ve istediğin tarih aralığı",
+        "Pro: Plus'taki her şeyin yanında ana ekran ve kilitli ekran widget'ları, haritanın çizilişini video olarak dışa aktarma ve Öncü Pusulası"
+      ],
+      "note": "Her biri haftalık, aylık ya da yıllık abonelikle veya tek seferlik ömür boyu satın alımla alınabilir. Ayarlar'daki bahşiş ayrıdır ve hiçbir şeyin kilidini açmaz."
     },
-    "note": "Reklam yok, abonelik yok."
+    "note": "Reklam yok."
   },
   "faq": {
     "title": "Sorular",

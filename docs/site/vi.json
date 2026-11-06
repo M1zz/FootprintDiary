@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: Bản đồ vẽ bằng bước chân",
-  "description": "Bản đồ bắt đầu từ tờ giấy trắng, chỉ tô kín nơi bạn đi bộ lần đầu. Đường đi bằng ô tô hay tàu điện ngầm không được vẽ. Mọi tính năng đều miễn phí.",
+  "description": "Bản đồ bắt đầu từ tờ giấy trắng, chỉ tô kín nơi bạn đi bộ lần đầu. Đường đi bằng ô tô hay tàu điện ngầm không được vẽ. Bản đồ và nhật ký đều miễn phí.",
   "hero": {
     "headline": "Bản đồ chỉ hiện ra\nkhi bạn đi bộ",
     "lead": "Mọi thứ bắt đầu từ một tờ giấy trắng. Chỉ những nơi bạn đi bộ qua mới được lấp đầy, từng chấm một, và đi cùng một con phố trăm lần cũng không làm bản đồ rộng thêm. Muốn bản đồ lớn lên, hãy chọn một con đường mới.",
     "cta": "Tải miễn phí trên App Store",
-    "note": "Mọi tính năng đều miễn phí, không quảng cáo."
+    "note": "Bản đồ và nhật ký đều miễn phí, không quảng cáo."
   },
   "demo": {
     "title": "Thử đi một vòng",
@@ -94,30 +94,31 @@
         "trong Cài đặt, mở La bàn tiên phong, Dấu chân hôm nay và phim quá trình vẽ bản đồ"
       ]
     ],
-    "note": "Chọn giữa bản đồ mực và Bản đồ tranh vẽ."
+    "note": "Chọn giữa bản đồ mực và Bản đồ tranh vẽ (Plus)."
   },
   "pricing": {
-    "title": "Mọi tính năng đều miễn phí",
+    "title": "Bản đồ và nhật ký đều miễn phí",
     "free": {
       "name": "Miễn phí",
       "items": [
         "Bản đồ chỉ tô kín nơi bạn đi, có theo dõi đường mới",
-        "212 con dấu và nhãn dán biển hiệu cửa hàng",
-        "La bàn tiên phong và Dấu chân hôm nay",
+        "Tối đa 30 con dấu, chọn trong 212 mẫu",
+        "Dấu chân hôm nay",
         "Lịch và nhật ký bằng chữ và ảnh",
-        "Xuất video quá trình vẽ bản đồ",
-        "Tiện ích trên Màn hình chính và Màn hình khóa",
-        "Đồng bộ iCloud giữa các thiết bị"
+        "Xem theo tuần, tháng, năm và xem bản đồ được vẽ dần",
+        "Đồng bộ iCloud giữa các thiết bị",
+        "Xuất dữ liệu các lần đi bộ"
       ]
     },
     "pro": {
-      "name": "Ủng hộ nhà phát triển",
+      "name": "Plus · Pro",
       "items": [
-        "Gửi một chút tiền tip từ Cài đặt, nếu bạn muốn",
-        "Tiền tip không mở khóa gì cả. Ứng dụng vẫn y như vậy"
-      ]
+        "Plus: con dấu không giới hạn, máy ảnh làm nhãn dán biển hiệu, Bản đồ tranh vẽ và tự chọn khoảng ngày",
+        "Pro: mọi thứ của Plus, thêm tiện ích trên Màn hình chính và Màn hình khóa, xuất video quá trình vẽ bản đồ và La bàn tiên phong"
+      ],
+      "note": "Mỗi gói có thể đăng ký theo tuần, tháng, năm hoặc mua một lần dùng mãi mãi. Tiền tip trong Cài đặt là riêng và không mở khóa gì."
     },
-    "note": "Không quảng cáo, không gói đăng ký."
+    "note": "Không quảng cáo."
   },
   "faq": {
     "title": "Câu hỏi",

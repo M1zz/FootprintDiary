@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: de kaart die je te voet tekent",
-  "description": "Een kaart die begint als leeg vel en alleen inkleurt waar je voor het eerst loopt. Ritten met auto of metro worden nooit getekend. Alles is gratis.",
+  "description": "Een kaart die begint als leeg vel en alleen inkleurt waar je voor het eerst loopt. Ritten met auto of metro worden nooit getekend. De kaart en het dagboek zijn gratis.",
   "hero": {
     "headline": "Een kaart die alleen\nte voet inkleurt",
     "lead": "Hij begint als een leeg vel papier. Alleen waar je loopt, kleurt hij punt voor punt in, en honderd keer dezelfde straat maakt hem niet breder. Wil je dat de kaart groeit, neem dan een nieuwe weg.",
     "cta": "Gratis downloaden in de App Store",
-    "note": "Alle functies gratis, zonder advertenties."
+    "note": "De kaart en het dagboek zijn gratis, zonder advertenties."
   },
   "demo": {
     "title": "Maak een wandeling",
@@ -94,30 +94,31 @@
         "in Instellingen; opent het Pionierskompas, Voetafdrukken van vandaag en de film van je kaart"
       ]
     ],
-    "note": "Kies tussen de inktkaart en de Getekende kaart."
+    "note": "Kies tussen de inktkaart en de Getekende kaart (Plus)."
   },
   "pricing": {
-    "title": "Alle functies zijn gratis",
+    "title": "De kaart en het dagboek zijn gratis",
     "free": {
       "name": "Gratis",
       "items": [
         "Een kaart die alleen te voet inkleurt, met bijhouden van nieuwe wegen",
-        "212 stempels en stickers van uithangborden",
-        "Pionierskompas en Voetafdrukken van vandaag",
+        "Tot 30 stempels uit 212 ontwerpen",
+        "Voetafdrukken van vandaag",
         "Kalender en dagboek met tekst en foto’s",
-        "Video van je kaart die wordt getekend exporteren",
-        "Widgets voor beginscherm en toegangsscherm",
-        "Synchronisatie via iCloud tussen apparaten"
+        "Weergave per week, maand en jaar, en je kaart zien ontstaan",
+        "Synchronisatie via iCloud tussen apparaten",
+        "Je wandelingen exporteren"
       ]
     },
     "pro": {
-      "name": "Steun de ontwikkelaar",
+      "name": "Plus · Pro",
       "items": [
-        "Geef via Instellingen een kleine fooi, als je dat wilt",
-        "Een fooi ontgrendelt niets. De app blijft precies hetzelfde"
-      ]
+        "Plus: onbeperkt stempels, camera voor stickers van uithangborden, Getekende kaart en zelf gekozen periodes",
+        "Pro: alles van Plus, aangevuld met widgets voor beginscherm en toegangsscherm, de video van je kaart exporteren en het Pionierskompas"
+      ],
+      "note": "Elk als week-, maand- of jaarabonnement, of eenmalig voor altijd. Een fooi via Instellingen staat daar los van en ontgrendelt niets."
     },
-    "note": "Geen advertenties, geen abonnement."
+    "note": "Geen advertenties."
   },
   "faq": {
     "title": "Vragen",

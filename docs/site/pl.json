@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: mapa, którą rysujesz pieszo",
-  "description": "Mapa, która zaczyna się od pustej kartki i wypełnia tylko tam, gdzie idziesz pierwszy raz. Auto i metro się nie liczą. Wszystko za darmo.",
+  "description": "Mapa, która zaczyna się od pustej kartki i wypełnia tylko tam, gdzie idziesz pierwszy raz. Auto i metro się nie liczą. Mapa i dziennik są za darmo.",
   "hero": {
     "headline": "Mapa, która rośnie\ntylko pod Twoimi stopami",
     "lead": "Zaczyna się od pustej kartki. Wypełniają się tylko miejsca, które przejdziesz pieszo, punkt po punkcie, a ta sama ulica przemierzona sto razy jej nie poszerzy. Chcesz większej mapy? Wybierz nową drogę.",
     "cta": "Pobierz za darmo z App Store",
-    "note": "Wszystkie funkcje są bezpłatne i bez reklam."
+    "note": "Mapa i dziennik są bezpłatne i bez reklam."
   },
   "demo": {
     "title": "Wybierz się na spacer",
@@ -94,30 +94,31 @@
         "w Ustawieniach; otwiera Kompas pioniera, Dzisiejsze ślady i film z rysowaniem mapy"
       ]
     ],
-    "note": "Do wyboru: mapa tuszem albo Mapa rysunkowa."
+    "note": "Do wyboru: mapa tuszem albo Mapa rysunkowa (Plus)."
   },
   "pricing": {
-    "title": "Wszystkie funkcje za darmo",
+    "title": "Mapa i dziennik za darmo",
     "free": {
       "name": "Za darmo",
       "items": [
         "Mapa wypełniana tylko tam, gdzie chodzisz, ze śledzeniem nowych dróg",
-        "212 pieczątek i naklejki z szyldów",
-        "Kompas pioniera i Dzisiejsze ślady",
+        "Do 30 pieczątek spośród 212 wzorów",
+        "Dzisiejsze ślady",
         "Kalendarz i dziennik z tekstem i zdjęciami",
-        "Eksport wideo, na którym rysuje się Twoja mapa",
-        "Widżety na ekran początkowy i ekran blokady",
-        "Synchronizacja między urządzeniami przez iCloud"
+        "Widok tygodnia, miesiąca i roku oraz podgląd, jak rysuje się mapa",
+        "Synchronizacja między urządzeniami przez iCloud",
+        "Eksport zapisu spacerów"
       ]
     },
     "pro": {
-      "name": "Wesprzyj twórcę",
+      "name": "Plus · Pro",
       "items": [
-        "Jeśli chcesz, wyślij drobny napiwek w Ustawieniach",
-        "Napiwek niczego nie odblokowuje. Aplikacja działa tak samo"
-      ]
+        "Plus: pieczątki bez limitu, aparat do naklejek z szyldów, Mapa rysunkowa i własny zakres dat",
+        "Pro: wszystko z Plus, a do tego widżety na ekran początkowy i ekran blokady, eksport wideo, na którym rysuje się Twoja mapa, oraz Kompas pioniera"
+      ],
+      "note": "Każdy pakiet jest dostępny w subskrypcji tygodniowej, miesięcznej lub rocznej albo jako jednorazowy zakup na zawsze. Napiwki z Ustawień to osobna sprawa i niczego nie odblokowują."
     },
-    "note": "Bez reklam i bez subskrypcji."
+    "note": "Bez reklam."
   },
   "faq": {
     "title": "Pytania",

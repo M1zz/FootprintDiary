@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: kartan du ritar till fots",
-  "description": "En karta som börjar som ett tomt papper och bara fylls i där du går för första gången. Bil och tunnelbana ritas aldrig. Allt är gratis.",
+  "description": "En karta som börjar som ett tomt papper och bara fylls i där du går för första gången. Bil och tunnelbana ritas aldrig. Kartan och dagboken är gratis.",
   "hero": {
     "headline": "En karta som bara\nfylls i till fots",
     "lead": "Den börjar som ett tomt papper. Bara platserna du går på fylls i, punkt för punkt, och går du samma gata hundra gånger blir den inte bredare. Vill du att kartan ska växa får du ta en ny väg.",
     "cta": "Hämta gratis på App Store",
-    "note": "Alla funktioner är gratis och utan reklam."
+    "note": "Kartan och dagboken är gratis och utan reklam."
   },
   "demo": {
     "title": "Ta en promenad",
@@ -94,30 +94,31 @@
         "i Inställningar, öppnar Pionjärkompass, Dagens fotspår och filmen där kartan ritas"
       ]
     ],
-    "note": "Välj mellan tuschkartan och Ritad karta."
+    "note": "Välj mellan tuschkartan och Ritad karta (Plus)."
   },
   "pricing": {
-    "title": "Alla funktioner är gratis",
+    "title": "Kartan och dagboken är gratis",
     "free": {
       "name": "Gratis",
       "items": [
         "En karta som bara fylls i där du går, med koll på nya vägar",
-        "212 stämplar och klistermärken av butiksskyltar",
-        "Pionjärkompass och Dagens fotspår",
+        "Upp till 30 stämplar bland 212 motiv",
+        "Dagens fotspår",
         "Kalender och dagbok med text och foton",
-        "Exportera videon där din karta ritas",
-        "Widgetar för hemskärmen och låsskärmen",
-        "Synkning mellan enheter via iCloud"
+        "Visa kartan per vecka, månad och år, och se den ritas",
+        "Synkning mellan enheter via iCloud",
+        "Exportera dina promenader"
       ]
     },
     "pro": {
-      "name": "Stöd utvecklaren",
+      "name": "Plus · Pro",
       "items": [
-        "Skicka en liten dricks från Inställningar om du vill",
-        "Dricks låser inte upp något. Appen är densamma oavsett"
-      ]
+        "Plus: obegränsat med stämplar, kamera för klistermärken av butiksskyltar, Ritad karta och egen period",
+        "Pro: allt i Plus, och dessutom widgetar för hemskärmen och låsskärmen, export av videon där din karta ritas och Pionjärkompass"
+      ],
+      "note": "Var och en finns som vecko-, månads- eller årsprenumeration, eller som ett engångsköp för alltid. Dricks från Inställningar är något annat och låser inte upp något."
     },
-    "note": "Ingen reklam, ingen prenumeration."
+    "note": "Ingen reklam."
   },
   "faq": {
     "title": "Frågor",

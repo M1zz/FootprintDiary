@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: kartta, jonka piirrät kävellen",
-  "description": "Kartta, joka alkaa tyhjästä paperista ja täyttyy vain siellä, missä kävelet ensimmäistä kertaa. Auto- ja metromatkat eivät piirry. Kaikki on ilmaista.",
+  "description": "Kartta, joka alkaa tyhjästä paperista ja täyttyy vain siellä, missä kävelet ensimmäistä kertaa. Auto- ja metromatkat eivät piirry. Kartta ja päiväkirja ovat ilmaisia.",
   "hero": {
     "headline": "Kartta, joka täyttyy\nvain kävellen",
     "lead": "Se alkaa tyhjänä paperiarkkina. Vain kävelemäsi paikat täyttyvät, piste kerrallaan, eikä sama katu sataan kertaan käveltynä levennä sitä. Jos haluat kartan kasvavan, valitse uusi reitti.",
     "cta": "Lataa ilmaiseksi App Storesta",
-    "note": "Kaikki ominaisuudet ovat ilmaisia, eikä mainoksia ole."
+    "note": "Kartta ja päiväkirja ovat ilmaisia, eikä mainoksia ole."
   },
   "demo": {
     "title": "Lähde kävelylle",
@@ -94,30 +94,31 @@
         "Asetuksissa, avaa Pioneerin kompassin, Päivän jalanjäljet ja kartan piirtymisfilmin"
       ]
     ],
-    "note": "Valittavana on tussikartta tai Kuvakartta."
+    "note": "Valittavana on tussikartta tai Kuvakartta (Plus)."
   },
   "pricing": {
-    "title": "Kaikki ominaisuudet ilmaiseksi",
+    "title": "Kartta ja päiväkirja ilmaiseksi",
     "free": {
       "name": "Ilmainen",
       "items": [
         "Kartta, joka täyttyy vain siellä, missä kävelet, ja uusien teiden seuranta",
-        "212 leimaa ja kylttitarrat",
-        "Pioneerin kompassi ja Päivän jalanjäljet",
+        "Enintään 30 leimaa 212 kuvasta",
+        "Päivän jalanjäljet",
         "Kalenteri ja päiväkirja tekstillä ja kuvilla",
-        "Video kartan piirtymisestä vietäväksi",
-        "Widgetit Koti-valikkoon ja lukitusnäytölle",
-        "iCloud-synkronointi laitteiden välillä"
+        "Viikko-, kuukausi- ja vuosinäkymä sekä kartan piirtymisen katselu",
+        "iCloud-synkronointi laitteiden välillä",
+        "Kävelytietojen vienti"
       ]
     },
     "pro": {
-      "name": "Tue kehittäjää",
+      "name": "Plus · Pro",
       "items": [
-        "Voit halutessasi lähettää pienen tipin Asetuksista",
-        "Tippi ei avaa mitään. Appi on sama joka tapauksessa"
-      ]
+        "Plus: rajattomasti leimoja, kylttitarrakamera, Kuvakartta ja oma aikaväli",
+        "Pro: kaikki Plussan ominaisuudet sekä widgetit Koti-valikkoon ja lukitusnäytölle, video kartan piirtymisestä vietäväksi ja Pioneerin kompassi"
+      ],
+      "note": "Kumpikin on saatavilla viikko-, kuukausi- tai vuositilauksena tai kertaostoksena pysyvästi. Asetusten tipit ovat erikseen eivätkä avaa mitään."
     },
-    "note": "Ei mainoksia, ei tilausta."
+    "note": "Ei mainoksia."
   },
   "faq": {
     "title": "Kysymyksiä",

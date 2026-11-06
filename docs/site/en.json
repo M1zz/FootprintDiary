@@ -1,11 +1,11 @@
 {
   "title": "Buktu Buktu: the map you draw on foot",
-  "description": "A map that starts blank and fills in only where you walk for the first time. Car and subway trips are never drawn. Every feature is free.",
+  "description": "A map that starts blank and fills in only where you walk for the first time. Car and subway trips are never drawn. The map and diary are free.",
   "hero": {
     "headline": "A map that only\nfills in on foot",
     "lead": "It starts as a blank sheet of paper. Only the places you walk fill in, one dot at a time, and walking the same street a hundred times won't widen it. To grow the map, take a new path.",
     "cta": "Get it free on the App Store",
-    "note": "Every feature is free, with no ads."
+    "note": "The map and diary are free, with no ads."
   },
   "demo": {
     "title": "Take a walk",
@@ -94,30 +94,31 @@
         "in Settings, opens the Pioneer Compass, Today's Footprints and the drawing film"
       ]
     ],
-    "note": "Choose between the ink map and the illustrated map."
+    "note": "Choose between the ink map and the illustrated map (Plus)."
   },
   "pricing": {
-    "title": "Every feature is free",
+    "title": "The map and diary are free",
     "free": {
       "name": "Free",
       "items": [
         "A map that fills in only where you walk, with new-path tracking",
-        "212 stamps and shop-sign stickers",
-        "Pioneer Compass and Today's Footprints",
+        "Up to 30 stamps, chosen from 212 designs",
+        "Today's Footprints",
         "Calendar and a diary with text and photos",
-        "Export the video of your map being drawn",
-        "Home Screen and Lock Screen widgets",
-        "iCloud sync across devices"
+        "Week, month and year views, and watching your map being drawn",
+        "iCloud sync across devices",
+        "Export your walk records"
       ]
     },
     "pro": {
-      "name": "Support the developer",
+      "name": "Plus · Pro",
       "items": [
-        "Send a small tip from Settings, if you'd like",
-        "Tips don't unlock anything. The app is the same either way"
-      ]
+        "Plus: unlimited stamps, the shop-sign sticker camera, the illustrated map, and custom date ranges",
+        "Pro: all of Plus, along with Home Screen and Lock Screen widgets, exporting the video of your map, and the Pioneer Compass"
+      ],
+      "note": "Each comes as a weekly, monthly or yearly subscription, or a one-time lifetime purchase. Tips from Settings are separate and unlock nothing."
     },
-    "note": "No ads, no subscription."
+    "note": "No ads."
   },
   "faq": {
     "title": "Questions",
