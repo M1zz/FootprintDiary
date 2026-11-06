@@ -64,6 +64,11 @@ https://m1zz.github.io/FootprintDiary/
 걸음과 도장, 일기와 사진은 내 개인 iCloud에 담겨 기기를 바꿔도 따라옵니다.
 익명 사용 통계에는 위치 좌표, 일기 글, 장소 이름, 사진을 보내지 않습니다.
 
+구독 안내
+벅뚜벅뚜 Plus와 Pro 구독은 자동 갱신 구독입니다. 갱신일 24시간 전까지 해지하지 않으면 Apple 계정으로 자동 결제되며, 설정의 구독 관리에서 언제든 해지할 수 있습니다.
+이용약관(EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+개인정보처리방침: https://m1zz.github.io/FootprintDiary/privacy.html
+
 ## en
 
 ### 지원 URL
@@ -127,6 +132,11 @@ Choose between prioritizing accuracy and prioritizing battery. With accuracy fir
 Your records stay in your iCloud
 Steps, stamps, diary entries, and photos are kept in your own private iCloud and follow you when you change devices.
 Anonymous usage statistics never include location coordinates, diary text, place names, or photos.
+
+Subscriptions
+Buktu Buktu Plus and Pro are auto-renewing subscriptions. Payment is charged to your Apple Account, and the subscription renews unless canceled at least 24 hours before the period ends. Manage or cancel anytime in Settings.
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://m1zz.github.io/FootprintDiary/en/privacy.html
 
 ## en-GB
 
@@ -192,6 +202,11 @@ Your records stay in your iCloud
 Steps, stamps, diary entries, and photos are kept in your own private iCloud and follow you when you change devices.
 Anonymous usage statistics never include location coordinates, diary text, place names, or photos.
 
+Subscriptions
+Buktu Buktu Plus and Pro are auto-renewing subscriptions. Payment is charged to your Apple Account, and the subscription renews unless cancelled at least 24 hours before the period ends. Manage or cancel anytime in Settings.
+Terms of Use (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacy Policy: https://m1zz.github.io/FootprintDiary/en/privacy.html
+
 ## ja
 
 ### 지원 URL
@@ -255,6 +270,11 @@ Buktu Buktu: 歩いて描く地図
 記録はあなたのiCloudに
 歩みとスタンプ、日記と写真は、あなた個人のiCloudに保存され、機種変更をしても引き継がれます。
 匿名の利用統計には、位置座標、日記の文章、場所の名前、写真は含まれません。
+
+サブスクリプションについて
+Buktu BuktuのPlusとProは自動更新のサブスクリプションです。期間終了の24時間前までに解約しない限り、Apple Accountに自動で請求されます。設定のサブスクリプション管理からいつでも解約できます。
+利用規約（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+プライバシーポリシー: https://m1zz.github.io/FootprintDiary/ja/privacy.html
 
 ## zh-Hans
 
@@ -320,6 +340,11 @@ Buktu Buktu：用脚步绘制的地图
 脚步、图章、日记和照片都保存在你个人的 iCloud 中，换了设备也能同步。
 匿名使用统计不会发送位置坐标、日记文字、地点名称和照片。
 
+订阅说明
+Buktu Buktu Plus 和 Pro 均为自动续期订阅。费用从你的 Apple 账户扣除，除非在当期结束前至少 24 小时取消，否则将自动续期。可随时在“设置”中管理或取消。
+使用条款（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+隐私政策: https://m1zz.github.io/FootprintDiary/zh-Hans/privacy.html
+
 ## zh-Hant
 
 ### 지원 URL
@@ -383,6 +408,11 @@ Buktu Buktu：用腳步繪製的地圖
 你的紀錄存放在你自己的 iCloud
 腳步、印章、日記和照片都儲存在你個人的 iCloud 中，換了裝置也能同步。
 匿名使用統計不會傳送位置座標、日記文字、地點名稱和照片。
+
+訂閱說明
+Buktu Buktu Plus 與 Pro 皆為自動續訂訂閱。費用會從你的 Apple 帳號扣款，除非在當期結束前至少 24 小時取消，否則將自動續訂。可隨時在「設定」中管理或取消。
+使用條款（EULA）: https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+隱私權政策: https://m1zz.github.io/FootprintDiary/zh-Hant/privacy.html
 
 ## es
 
@@ -448,6 +478,11 @@ Tus registros, en tu iCloud
 Tus pasos, sellos, diario y fotos se guardan en tu iCloud personal y te siguen cuando cambias de dispositivo.
 Las estadísticas de uso anónimas nunca incluyen coordenadas de ubicación, texto del diario, nombres de lugares ni fotos.
 
+Suscripciones
+Buktu Buktu Plus y Pro son suscripciones de renovación automática. El cargo se realiza en tu cuenta de Apple y la suscripción se renueva salvo que la canceles al menos 24 horas antes de que termine el periodo. Puedes gestionarla o cancelarla cuando quieras en Ajustes.
+Términos de uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de privacidad: https://m1zz.github.io/FootprintDiary/es/privacy.html
+
 ## de
 
 ### 지원 URL
@@ -511,6 +546,11 @@ Du kannst zwischen Genauigkeit zuerst und Akku zuerst wählen. Bei Genauigkeit z
 Deine Aufzeichnungen in deiner iCloud
 Schritte, Stempel, Tagebuch und Fotos liegen in deiner persönlichen iCloud und folgen dir beim Gerätewechsel.
 Die anonyme Nutzungsstatistik enthält keine Standortkoordinaten, keine Tagebuchtexte, keine Ortsnamen und keine Fotos.
+
+Abonnements
+Buktu Buktu Plus und Pro sind Abos mit automatischer Verlängerung. Die Zahlung erfolgt über deinen Apple Account. Das Abo verlängert sich, sofern du nicht mindestens 24 Stunden vor Ablauf des Zeitraums kündigst. Verwalten oder kündigen kannst du es jederzeit in den Einstellungen.
+Nutzungsbedingungen (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Datenschutzerklärung: https://m1zz.github.io/FootprintDiary/de/privacy.html
 
 ## fr
 
@@ -576,6 +616,11 @@ Vos enregistrements dans votre iCloud
 Vos pas, tampons, journal et photos sont conservés dans votre iCloud personnel et vous suivent quand vous changez d’appareil.
 Les statistiques d’usage anonymes n’incluent jamais de coordonnées de position, de texte de journal, de noms de lieux ni de photos.
 
+Abonnements
+Buktu Buktu Plus et Pro sont des abonnements à renouvellement automatique. Le paiement est débité sur votre compte Apple, et l’abonnement se renouvelle sauf résiliation au moins 24 heures avant la fin de la période. Gérez-le ou résiliez-le à tout moment dans Réglages.
+Conditions d'utilisation (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Politique de confidentialité: https://m1zz.github.io/FootprintDiary/fr/privacy.html
+
 ## it
 
 ### 지원 URL
@@ -639,6 +684,11 @@ Scegli tra precisione prioritaria e batteria prioritaria. Con la precisione prio
 Le tue registrazioni nel tuo iCloud
 Passi, timbri, diario e foto sono conservati nel tuo iCloud personale e ti seguono quando cambi dispositivo.
 Le statistiche d’uso anonime non includono mai coordinate di posizione, testi del diario, nomi di luoghi o foto.
+
+Abbonamenti
+Buktu Buktu Plus e Pro sono abbonamenti a rinnovo automatico. Il pagamento viene addebitato sul tuo Apple Account e l’abbonamento si rinnova se non lo disdici almeno 24 ore prima della scadenza. Puoi gestirlo o disdirlo in qualsiasi momento in Impostazioni.
+Condizioni d'uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Informativa sulla privacy: https://m1zz.github.io/FootprintDiary/it/privacy.html
 
 ## pt-BR
 
@@ -704,6 +754,11 @@ Seus registros no seu iCloud
 Passos, carimbos, diário e fotos ficam no seu iCloud pessoal e acompanham você quando troca de aparelho.
 As estatísticas de uso anônimas nunca incluem coordenadas de localização, texto do diário, nomes de lugares nem fotos.
 
+Assinaturas
+Buktu Buktu Plus e Pro são assinaturas com renovação automática. A cobrança é feita na sua Conta Apple e a assinatura é renovada, a menos que você cancele pelo menos 24 horas antes do fim do período. Gerencie ou cancele quando quiser em Ajustes.
+Termos de Uso (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Política de Privacidade: https://m1zz.github.io/FootprintDiary/pt-BR/privacy.html
+
 ## ru
 
 ### 지원 URL
@@ -767,6 +822,11 @@ Buktu Buktu: карта шагами
 Ваши записи — в вашем iCloud
 Шаги, штампы, дневник и фото хранятся в вашем личном iCloud и следуют за вами при смене устройства.
 Анонимная статистика использования никогда не включает координаты, тексты дневника, названия мест и фото.
+
+Подписки
+Buktu Buktu Plus и Pro — подписки с автопродлением. Оплата списывается с вашего Apple Account, а подписка продлевается, если не отменить её минимум за 24 часа до конца периода. Управлять подпиской и отменить её можно в Настройках.
+Условия использования (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Политика конфиденциальности: https://m1zz.github.io/FootprintDiary/ru/privacy.html
 
 ## th
 
@@ -832,6 +892,11 @@ Buktu Buktu: แผนที่ที่เดินวาด
 ก้าวเดิน ตราประทับ ไดอารี่ และรูปภาพถูกเก็บไว้ใน iCloud ส่วนตัวของคุณ และตามคุณไปเมื่อเปลี่ยนเครื่อง
 สถิติการใช้งานแบบไม่ระบุตัวตนไม่มีพิกัดตำแหน่ง ข้อความไดอารี่ ชื่อสถานที่ หรือรูปภาพ
 
+การสมัครสมาชิก
+Buktu Buktu Plus และ Pro เป็นการสมัครสมาชิกที่ต่ออายุอัตโนมัติ ระบบจะเรียกเก็บเงินจากบัญชี Apple ของคุณและต่ออายุเว้นแต่จะยกเลิกอย่างน้อย 24 ชั่วโมงก่อนสิ้นสุดรอบ จัดการหรือยกเลิกได้ทุกเมื่อในการตั้งค่า
+ข้อกำหนดการใช้งาน (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+นโยบายความเป็นส่วนตัว: https://m1zz.github.io/FootprintDiary/th/privacy.html
+
 ## vi
 
 ### 지원 URL
@@ -895,6 +960,11 @@ Chọn giữa ưu tiên chính xác và ưu tiên pin. Khi ưu tiên chính xác
 Bản ghi của bạn nằm trong iCloud của bạn
 Bước chân, con dấu, nhật ký và ảnh được lưu trong iCloud cá nhân của bạn và đi theo khi bạn đổi thiết bị.
 Thống kê sử dụng ẩn danh không bao gồm tọa độ vị trí, nội dung nhật ký, tên địa điểm hay ảnh.
+
+Gói đăng ký
+Buktu Buktu Plus và Pro là các gói đăng ký tự động gia hạn. Phí được tính vào Tài khoản Apple của bạn và tự gia hạn trừ khi bạn hủy ít nhất 24 giờ trước khi kỳ hạn kết thúc. Bạn có thể quản lý hoặc hủy bất cứ lúc nào trong Cài đặt.
+Điều khoản sử dụng (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Chính sách quyền riêng tư: https://m1zz.github.io/FootprintDiary/vi/privacy.html
 
 ## cs
 
@@ -960,6 +1030,11 @@ Tvé záznamy v tvém iCloudu
 Kroky, razítka, deník a fotky jsou uložené v tvém osobním iCloudu a při výměně zařízení jdou s tebou.
 Anonymní statistiky používání nikdy neobsahují souřadnice polohy, text deníku, názvy míst ani fotky.
 
+Předplatné
+Buktu Buktu Plus a Pro jsou automaticky obnovovaná předplatná. Platba se strhává z vašeho účtu Apple a předplatné se obnoví, pokud ho nezrušíte alespoň 24 hodin před koncem období. Spravovat nebo zrušit ho můžete kdykoli v Nastavení.
+Podmínky použití (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Zásady ochrany osobních údajů: https://m1zz.github.io/FootprintDiary/cs/privacy.html
+
 ## da
 
 ### 지원 URL
@@ -1023,6 +1098,11 @@ Vælg mellem nøjagtighed først og batteri først. Med nøjagtighed først regi
 Dine registreringer i din iCloud
 Skridt, stempler, dagbog og fotos gemmes i din personlige iCloud og følger med, når du skifter enhed.
 Anonym brugsstatistik indeholder aldrig positionskoordinater, dagbogstekst, stednavne eller fotos.
+
+Abonnementer
+Buktu Buktu Plus og Pro er abonnementer, der fornyes automatisk. Betalingen trækkes på din Apple-konto, og abonnementet fornyes, medmindre du opsiger det mindst 24 timer før perioden slutter. Administrer eller opsig når som helst i Indstillinger.
+Brugsvilkår (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privatlivspolitik: https://m1zz.github.io/FootprintDiary/da/privacy.html
 
 ## el
 
@@ -1088,6 +1168,11 @@ Widget
 Βήματα, σφραγίδες, ημερολόγιο και φωτογραφίες φυλάσσονται στο προσωπικό σας iCloud και σας ακολουθούν όταν αλλάζετε συσκευή.
 Τα ανώνυμα στατιστικά χρήσης δεν περιλαμβάνουν ποτέ συντεταγμένες τοποθεσίας, κείμενο ημερολογίου, ονόματα μερών ή φωτογραφίες.
 
+Συνδρομές
+Οι συνδρομές Buktu Buktu Plus και Pro ανανεώνονται αυτόματα. Η χρέωση γίνεται στον λογαριασμό Apple σας και η συνδρομή ανανεώνεται, εκτός αν την ακυρώσετε τουλάχιστον 24 ώρες πριν λήξει η περίοδος. Μπορείτε να τη διαχειριστείτε ή να την ακυρώσετε οποτεδήποτε από τις Ρυθμίσεις.
+Όροι χρήσης (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Πολιτική απορρήτου: https://m1zz.github.io/FootprintDiary/el/privacy.html
+
 ## fi
 
 ### 지원 URL
@@ -1151,6 +1236,11 @@ Valitse tarkkuus ensin tai akku ensin. Tarkkuus ensin -tilassa askeleesi tallent
 Tallenteesi omassa iCloudissasi
 Askeleet, leimat, päiväkirja ja kuvat säilyvät omassa iCloudissasi ja seuraavat mukanasi laitetta vaihtaessasi.
 Anonyymit käyttötilastot eivät koskaan sisällä sijaintikoordinaatteja, päiväkirjatekstejä, paikannimiä tai kuvia.
+
+Tilaukset
+Buktu Buktu Plus ja Pro ovat automaattisesti uusiutuvia tilauksia. Maksu veloitetaan Apple-tililtäsi, ja tilaus uusiutuu, ellei sitä peruta vähintään 24 tuntia ennen jakson päättymistä. Hallitse tai peru tilaus milloin tahansa Asetuksissa.
+Käyttöehdot (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Tietosuojakäytäntö: https://m1zz.github.io/FootprintDiary/fi/privacy.html
 
 ## id
 
@@ -1216,6 +1306,11 @@ Catatanmu di iCloud-mu
 Langkah, stempel, catatan harian, dan foto tersimpan di iCloud pribadimu dan ikut saat kamu berganti perangkat.
 Statistik penggunaan anonim tidak pernah menyertakan koordinat lokasi, teks catatan harian, nama tempat, atau foto.
 
+Langganan
+Buktu Buktu Plus dan Pro adalah langganan yang diperpanjang otomatis. Pembayaran ditagihkan ke Akun Apple Anda dan langganan diperpanjang kecuali dibatalkan paling lambat 24 jam sebelum periode berakhir. Kelola atau batalkan kapan saja di Pengaturan.
+Ketentuan Penggunaan (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Kebijakan Privasi: https://m1zz.github.io/FootprintDiary/id/privacy.html
+
 ## nb
 
 ### 지원 URL
@@ -1279,6 +1374,11 @@ Velg mellom nøyaktighet først og batteri først. Med nøyaktighet først regis
 Registreringene dine i din iCloud
 Skritt, stempler, dagbok og bilder lagres i din personlige iCloud og følger med når du bytter enhet.
 Anonym bruksstatistikk inneholder aldri posisjonskoordinater, dagbokstekst, stedsnavn eller bilder.
+
+Abonnementer
+Buktu Buktu Plus og Pro er abonnementer som fornyes automatisk. Betalingen belastes Apple-kontoen din, og abonnementet fornyes med mindre du sier det opp minst 24 timer før perioden er over. Administrer eller si opp når som helst i Innstillinger.
+Bruksvilkår (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Personvernerklæring: https://m1zz.github.io/FootprintDiary/nb/privacy.html
 
 ## nl
 
@@ -1344,6 +1444,11 @@ Je registraties in je eigen iCloud
 Stappen, stempels, dagboek en foto's worden bewaard in je persoonlijke iCloud en volgen je als je van apparaat wisselt.
 Anonieme gebruiksstatistieken bevatten nooit locatiecoördinaten, dagboekteksten, plaatsnamen of foto's.
 
+Abonnementen
+Buktu Buktu Plus en Pro zijn automatisch verlengende abonnementen. De betaling loopt via je Apple Account en het abonnement wordt verlengd tenzij je minstens 24 uur voor het einde van de periode opzegt. Beheer of zeg op wanneer je wilt in Instellingen.
+Gebruiksvoorwaarden (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Privacybeleid: https://m1zz.github.io/FootprintDiary/nl/privacy.html
+
 ## pl
 
 ### 지원 URL
@@ -1407,6 +1512,11 @@ Wybierz między priorytetem dokładności a priorytetem baterii. Przy prioryteci
 Twoje zapisy w Twoim iCloud
 Kroki, pieczątki, dziennik i zdjęcia są przechowywane w Twoim osobistym iCloud i podążają za Tobą po zmianie urządzenia.
 Anonimowe statystyki użycia nigdy nie zawierają współrzędnych lokalizacji, tekstów dziennika, nazw miejsc ani zdjęć.
+
+Subskrypcje
+Buktu Buktu Plus i Pro to subskrypcje odnawiane automatycznie. Opłata jest pobierana z Twojego konta Apple, a subskrypcja odnawia się, jeśli nie anulujesz jej co najmniej 24 godziny przed końcem okresu. Zarządzaj nią lub anuluj ją w dowolnej chwili w Ustawieniach.
+Warunki korzystania (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Polityka prywatności: https://m1zz.github.io/FootprintDiary/pl/privacy.html
 
 ## sv
 
@@ -1472,6 +1582,11 @@ Dina loggar i din iCloud
 Steg, stämplar, dagbok och foton sparas i din personliga iCloud och följer med när du byter enhet.
 Anonym användningsstatistik innehåller aldrig positionskoordinater, dagbokstext, platsnamn eller foton.
 
+Prenumerationer
+Buktu Buktu Plus och Pro är prenumerationer som förnyas automatiskt. Betalningen dras från ditt Apple-konto och prenumerationen förnyas om du inte avslutar den minst 24 timmar innan perioden slutar. Hantera eller avsluta när som helst i Inställningar.
+Användarvillkor (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Integritetspolicy: https://m1zz.github.io/FootprintDiary/sv/privacy.html
+
 ## tr
 
 ### 지원 URL
@@ -1535,6 +1650,11 @@ Doğruluk öncelikli ile pil öncelikli arasında seçim yap. Doğruluk öncelik
 Kayıtların kendi iCloud'unda
 Adımlar, damgalar, günlük ve fotoğraflar kişisel iCloud'unda saklanır ve cihaz değiştirdiğinde seninle gelir.
 Anonim kullanım istatistikleri konum koordinatlarını, günlük yazılarını, yer adlarını ve fotoğrafları asla içermez.
+
+Abonelikler
+Buktu Buktu Plus ve Pro otomatik yenilenen aboneliklerdir. Ödeme Apple Hesabınızdan alınır ve dönem bitmeden en az 24 saat önce iptal edilmezse abonelik yenilenir. Ayarlar'dan istediğiniz zaman yönetebilir veya iptal edebilirsiniz.
+Kullanım Koşulları (EULA): https://www.apple.com/legal/internet-services/itunes/dev/stdeula/
+Gizlilik Politikası: https://m1zz.github.io/FootprintDiary/tr/privacy.html
 
 ## 손쉬운 사용
 
