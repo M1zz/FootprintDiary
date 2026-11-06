@@ -31,6 +31,14 @@ struct FootprintDiarySupportView: View {
     /// 여기서는 그 값을 읽어 통계 화면 입구만 함께 연다.
     @AppStorage("dev.masterMode") private var devMode = false
 
+    // 요금제 (→ ProEntitlement.swift)
+    @State private var purchases = PurchaseManager.shared
+    @State private var paywallFeature: ProFeature?
+    @State private var showPlans = false
+    @State private var showLifetimePlans = false
+    @State private var showGraduation = false
+    @State private var managingSubscription = false
+
     var body: some View {
         NavigationStack {
             List {
@@ -98,6 +106,10 @@ struct FootprintDiarySupportView: View {
 
                 cloud
 
+                WalkExportSection()
+
+                planSection
+
                 Section {
                     Button {
                         showWhatsNew = true
@@ -122,7 +134,9 @@ struct FootprintDiarySupportView: View {
                     LeeoSupportSection<FootprintDiarySpec>()
                     NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
                     LeeoShareAppLink<FootprintDiarySpec>()
-                    LeeoTipJarLink<FootprintDiarySpec>(tipJar: FootprintDiarySpec.tipJar)
+                    if let tipJar = FootprintDiarySpec.tipJar {
+                        LeeoTipJarLink<FootprintDiarySpec>(tipJar: tipJar)
+                    }
                     if devMode {
                         NavigationLink {
                             LeeoUsageStatsView<FootprintDiarySpec>()
@@ -139,6 +153,22 @@ struct FootprintDiarySupportView: View {
             .sheet(isPresented: $showDiagnostics) {
                 TrackingDiagnosticsView()
             }
+            .sheet(item: $paywallFeature) { feature in
+                PaywallView(highlight: feature)
+            }
+            .sheet(isPresented: $showPlans) {
+                PaywallView()
+            }
+            .sheet(isPresented: $showLifetimePlans) {
+                PaywallView(term: .lifetime)
+            }
+            .sheet(isPresented: $showGraduation) {
+                LeeoGraduationOfferView(graduate: purchases.product(ProEntitlement.graduateID)) {
+                    await purchases.refresh()
+                }
+                .onAppear { purchases.markGraduationOffered() }
+            }
+            .manageSubscriptionsSheet(isPresented: $managingSubscription)
             .sheet(isPresented: $showWhatsNew) {
                 WhatsNewView { destination in open(destination) }
             }
@@ -206,7 +236,7 @@ struct FootprintDiarySupportView: View {
     /// 지도 위에 띄워 둘 것 고르기
     private var mapControls: some View {
         Section {
-            Picker(selection: $terrainSkinRaw) {
+            Picker(selection: skinSelection) {
                 Text("먹 지도").tag(TerrainSkin.ink.rawValue)
                 Text("그림지도").tag(TerrainSkin.picture.rawValue)
             } label: {
@@ -219,6 +249,54 @@ struct FootprintDiarySupportView: View {
             Text("지도에 보이기")
         } footer: {
             Text("꺼 둔 화면도 위 '모아 보기'에서 언제든 열 수 있어요. 도장과 설정 단추는 늘 보여요.")
+        }
+    }
+
+    /// 지도 모양 고르기. 그림지도는 Plus — 잠겨 있으면 고르는 대신 페이월을 띄운다.
+    private var skinSelection: Binding<String> {
+        Binding {
+            purchases.allows(.pictureMap) ? terrainSkinRaw : TerrainSkin.ink.rawValue
+        } set: { value in
+            if value == TerrainSkin.picture.rawValue && !purchases.allows(.pictureMap) {
+                paywallFeature = .pictureMap
+            } else {
+                terrainSkinRaw = value
+            }
+        }
+    }
+
+    // MARK: 요금제
+
+    private var planSection: some View {
+        Section {
+            HStack {
+                Text("지금 쓰는 칸")
+                Spacer()
+                Text(purchases.tier.title)
+                    .foregroundStyle(.secondary)
+            }
+            if purchases.tier < .pro {
+                Button("요금제 보기") { showPlans = true }
+            }
+            // 연 구독하는 분은 졸업가로, 아직 평생이 없는 분은 평생 길로.
+            if purchases.product(ProEntitlement.graduateID) != nil && purchases.subscription != nil {
+                Button(LeeoLadderText.switchToLifetimeEntry) { showGraduation = true }
+            } else if purchases.canBuy(max(purchases.tier, .plus)) {
+                Button(LeeoLadderText.switchToLifetimeEntry) { showLifetimePlans = true }
+            }
+            if purchases.hasSubscription {
+                Button("구독 관리") { managingSubscription = true }
+            }
+            Button("구매 복원") { Task { await purchases.restore() } }
+                .disabled(purchases.isWorking)
+            if let message = purchases.failureMessage {
+                Text(message)
+                    .foregroundStyle(.secondary)
+            }
+        } header: {
+            Text("요금제")
+        } footer: {
+            Text("걸음 기록 · 지도 · 일기 · 아이클라우드 보관은 어느 칸이든 무료예요.")
         }
     }
 

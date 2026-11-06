@@ -119,11 +119,14 @@ struct DiaryScreen: View {
         ScrollView {
             LazyVStack(spacing: 16) {
                 // 걸은 날과 남긴 일기가 쌓인 것이 보이는 자리라, 고마운 순간이면 응원을 한 번 부탁한다.
-                LeeoTipAskSlot<FootprintDiarySpec>(
-                    tipJar: FootprintDiarySpec.tipJar,
-                    reached: FootprintTipMoments.reached(walkedDays: feed.entries.count,
-                                                         diaries: diaryEntries.filter { !$0.text.isEmpty }.count)
-                )
+                // 응원 부탁은 이미 Pro 를 가진 사람에게만.
+                if PurchaseManager.shared.tier == .pro, let tipJar = FootprintDiarySpec.tipJar {
+                    LeeoTipAskSlot<FootprintDiarySpec>(
+                        tipJar: tipJar,
+                        reached: FootprintTipMoments.reached(walkedDays: feed.entries.count,
+                                                             diaries: diaryEntries.filter { !$0.text.isEmpty }.count)
+                    )
+                }
                 ForEach(days) { entry in
                     NavigationLink {
                         DiaryDayView(day: entry.walk.day, walk: entry.walk)

@@ -35,9 +35,13 @@ struct TodayWalkView: View {
     private var snapshot: WalkSnapshot { entry.snapshot }
 
     var body: some View {
-        switch family {
-        case .systemMedium: medium
-        default: small
+        if entry.isLocked {
+            WidgetLockedView()
+        } else {
+            switch family {
+            case .systemMedium: medium
+            default: small
+            }
         }
     }
 
@@ -131,5 +135,54 @@ struct TodayWalkView: View {
     /// 새 길로 갔다는 것이 이 앱에서 가장 값진 소식이라서다.
     private var subtitle: String {
         snapshot.newPlaces > 0 ? String(localized: "처음 \(snapshot.newPlaces)곳") : String(localized: "오늘 그은 길")
+    }
+}
+
+// MARK: - 잠긴 위젯
+
+/// Pro 가 아닐 때 내거는 자리. 누르면 앱이 열리고 Pro 페이월이 뜬다.
+/// 걸음 기록은 그대로 쌓이고 있다 — 앱을 열면 모두 보인다.
+struct WidgetLockedView: View {
+    @Environment(\.widgetFamily) private var family
+
+    var body: some View {
+        Group {
+            switch family {
+            case .accessoryInline:
+                Label("Pro로 열기", systemImage: "lock.fill")
+            case .accessoryCircular:
+                ZStack {
+                    AccessoryWidgetBackground()
+                    Image(systemName: "lock.fill")
+                        .font(.system(size: 18, weight: .semibold))
+                        .widgetAccentable()
+                }
+                .accessibilityLabel(Text("Pro로 열기"))
+            case .accessoryRectangular:
+                VStack(alignment: .leading, spacing: 1) {
+                    Label("오늘 그은 길", systemImage: "shoeprints.fill")
+                        .font(.caption2)
+                        .widgetAccentable()
+                    Label("Pro로 열기", systemImage: "lock.fill")
+                        .font(.headline)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
+            default:
+                VStack(spacing: 6) {
+                    Image(systemName: "lock.fill")
+                        .font(.title3)
+                        .foregroundStyle(Color(InkStyle.sealRed))
+                    Text("Pro로 열기")
+                        .font(.headline)
+                        .foregroundStyle(Color(InkStyle.ink))
+                    Text("위젯은 벅뚜벅뚜 Pro에서 열려요")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .multilineTextAlignment(.center)
+                }
+                .padding(4)
+            }
+        }
+        .widgetURL(ProPass.unlockURL)
     }
 }

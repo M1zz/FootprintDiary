@@ -79,6 +79,9 @@ struct AtlasPeriodPicker: View {
     @State private var customStart: Date
     @State private var customEnd: Date
     @State private var isCustom: Bool
+    /// 직접 정한 기간은 Plus. 잠겨 있으면 날짜 고르개 대신 페이월을 띄운다.
+    @State private var purchases = PurchaseManager.shared
+    @State private var showPaywall = false
 
     init(period: Binding<AtlasPeriod>) {
         _period = period
@@ -113,11 +116,16 @@ struct AtlasPeriodPicker: View {
                         .buttonStyle(.plain)
                     }
                     Button {
-                        withAnimation { isCustom = true }
+                        if purchases.allows(.customPeriod) {
+                            withAnimation { isCustom = true }
+                        } else {
+                            showPaywall = true
+                        }
                     } label: {
                         row(title: AtlasPeriod.custom(start: customStart, end: customEnd).title,
                             detail: nil,
-                            isSelected: isCustom)
+                            isSelected: isCustom,
+                            locked: !purchases.allows(.customPeriod))
                     }
                     .buttonStyle(.plain)
                 } footer: {
@@ -154,6 +162,11 @@ struct AtlasPeriodPicker: View {
             .onChange(of: customStart) {
                 if customEnd < customStart { customEnd = customStart }
             }
+            .sheet(isPresented: $showPaywall, onDismiss: {
+                if purchases.allows(.customPeriod) { withAnimation { isCustom = true } }
+            }) {
+                PaywallView(highlight: .customPeriod)
+            }
         }
         // 앱의 강조색은 옅은 살구빛이라 시트의 반투명 바탕 위에서 글자가 묻힌다.
         // 단추·날짜 고르개·체크는 도장과 같은 주묵으로 칠한다.
@@ -163,7 +176,7 @@ struct AtlasPeriodPicker: View {
 
     /// 행은 강조색에 물들지 않는 단추(.plain)로 그린다. 기본 단추는 글자를 강조색으로 칠해,
     /// 먹색으로 정한 글자가 옅은 살구빛으로 바래 읽히지 않았다.
-    private func row(title: LocalizedStringKey, detail: String?, isSelected: Bool) -> some View {
+    private func row(title: LocalizedStringKey, detail: String?, isSelected: Bool, locked: Bool = false) -> some View {
         HStack {
             Text(title)
                 .font(.body.weight(isSelected ? .semibold : .regular))
@@ -174,10 +187,14 @@ struct AtlasPeriodPicker: View {
                     .font(.body.monospacedDigit())
                     .foregroundStyle(Color(InkStyle.ink).opacity(0.7))
             }
-            Image(systemName: "checkmark")
-                .font(.body.weight(.semibold))
-                .foregroundStyle(Color(InkStyle.sealRed))
-                .opacity(isSelected ? 1 : 0)
+            if locked {
+                ProLockBadge(feature: .customPeriod)
+            } else {
+                Image(systemName: "checkmark")
+                    .font(.body.weight(.semibold))
+                    .foregroundStyle(Color(InkStyle.sealRed))
+                    .opacity(isSelected ? 1 : 0)
+            }
         }
         .contentShape(Rectangle())
     }

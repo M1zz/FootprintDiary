@@ -12,6 +12,7 @@ import SwiftUI
 import SwiftData
 import CoreLocation
 import TipKit
+import LeeoKit
 
 /// 지도가 그릴 것들을 한 번만 계산해 들고 있는 상자.
 /// 점이 쌓일수록 계산이 무거워지므로 본문에서 매번 하지 않고 백그라운드에서 만든다.
@@ -217,6 +218,17 @@ struct AtlasScreen: View {
     /// 닫히는 중인 시트 위에 다른 시트를 올리면 SwiftUI가 둘 중 하나를 버린다.
     @State private var pendingDestination: AtlasDestination?
 
+    // 요금제 (→ ProEntitlement.swift)
+    @State private var purchases = PurchaseManager.shared
+    /// 잠긴 자리를 눌렀을 때 띄울 페이월 (그 기능의 칸을 앞에)
+    @State private var paywallFeature: ProFeature?
+    @State private var showPlans = false
+    @State private var showGraduation = false
+    /// 그림지도를 한 번 미리 보여 주고 있는가 (무료로 쓰는 사람에게 한 번만)
+    @State private var isPreviewingSkin = false
+    @AppStorage("paywall.skin.previewed") private var skinPreviewed = false
+    @AppStorage("paywall.seventhDay.seen") private var seventhDaySeen = false
+
     // 지도 위에 무엇을 띄울지. 설정의 '지도에 보이기'와 같은 열쇠를 본다 (MapControls.swift)
     @AppStorage(MapControl.diary.storageKey) private var showsDiaryButton = MapControl.diary.isVisibleByDefault
     @AppStorage(MapControl.stampList.storageKey) private var showsStampListButton = MapControl.stampList.isVisibleByDefault
@@ -354,6 +366,15 @@ struct AtlasScreen: View {
                 .ignoresSafeArea()
 
                 VStack(spacing: 8) {
+                    if showsSeventhDay {
+                        SeventhDayNudge(atlasMeters: state.atlasLength) {
+                            seventhDaySeen = true
+                            showPlans = true
+                        } onClose: {
+                            withAnimation { seventhDaySeen = true }
+                        }
+                        .transition(.move(edge: .top).combined(with: .opacity))
+                    }
                     if !period.isAll {
                         periodChip
                             .transition(.move(edge: .top).combined(with: .opacity))
@@ -474,7 +495,29 @@ struct AtlasScreen: View {
                 FilmScreen()
             }
             .sheet(isPresented: $showCompass) {
-                ExplorerCompassScreen()
+                // 개척 나침반은 Pro. 어디서 열든(지도 단추 · 설정 · 새로 생긴 것) 여기 한 곳에서 가린다.
+                if purchases.allows(.compass) {
+                    ExplorerCompassScreen()
+                } else {
+                    PaywallView(highlight: .compass)
+                }
+            }
+            .sheet(item: $paywallFeature) { feature in
+                PaywallView(highlight: feature)
+            }
+            .sheet(isPresented: $showPlans) {
+                PaywallView()
+            }
+            .sheet(isPresented: $showGraduation) {
+                LeeoGraduationOfferView(graduate: purchases.product(ProEntitlement.graduateID)) {
+                    await purchases.refresh()
+                }
+                .onAppear { purchases.markGraduationOffered() }
+            }
+            // 잠긴 위젯의 'Pro로 열기'를 눌러 들어온 길
+            .onOpenURL { url in
+                guard url == ProPass.unlockURL, !purchases.allows(.widgets) else { return }
+                paywallFeature = .widgets
             }
             .sheet(isPresented: $showPeriodPicker) {
                 AtlasPeriodPicker(period: $period)
@@ -548,6 +591,13 @@ struct AtlasScreen: View {
             .onReceive(NotificationCenter.default.publisher(for: .NSCalendarDayChanged)) { _ in showPeriod() }
             // 이 판에서 새로 생긴 것을 처음 여는 한 번만 띄운다. 지도가 다 그려진 뒤에 띄워야
             // 닫았을 때 빈 종이가 아니라 내 지도가 기다리고 있다.
+            // 연 구독 6개월째와 갱신 7일 전에 한 번씩, 구독 졸업 평생가를 보인다.
+            .task(id: state.isReady) {
+                guard state.isReady else { return }
+                await purchases.refresh()
+                guard purchases.graduationIsDue, !WhatsNew.hasUnseen, !isPresentingSheet else { return }
+                showGraduation = true
+            }
             .task(id: state.isReady) {
                 guard state.isReady, WhatsNew.hasUnseen else { return }
                 try? await Task.sleep(for: .seconds(0.6))
@@ -574,6 +624,7 @@ struct AtlasScreen: View {
     private var isPresentingSheet: Bool {
         showDiary || showSupport || showFilm || showStampList || showCompass || showTimeline
             || showWhatsNew || showPeriodPicker || pendingCoordinate != nil || selectedStamp != nil
+            || paywallFeature != nil || showPlans || showGraduation
     }
 
     /// 단추 안내를 띄워도 되는 때. 가운데 안내가 서 있거나 다른 장이 덮여 있으면 미룬다.
@@ -764,14 +815,34 @@ struct AtlasScreen: View {
         .popoverTip(peekTip, arrowEdge: .leading)
     }
 
+    /// 지금 그리는 지도 모양. 그림지도는 Plus 이거나, 한 번 미리 보는 동안만이다.
     private var terrainSkin: TerrainSkin {
-        TerrainSkin(rawValue: terrainSkinRaw) ?? .ink
+        let chosen = TerrainSkin(rawValue: terrainSkinRaw) ?? .ink
+        guard chosen == .picture, !purchases.allows(.pictureMap), !isPreviewingSkin else { return chosen }
+        return .ink
     }
 
-    /// 먹 지도와 그림지도를 오간다
+    /// 걸음이 남은 날이 일곱이 되었고, 무료로 쓰고 있고, 아직 보인 적이 없을 때 한 번.
+    private var showsSeventhDay: Bool {
+        !seventhDaySeen && purchases.tier == .free && state.isReady && state.walkedDays >= 7
+    }
+
+    /// 먹 지도와 그림지도를 오간다. 그림지도는 Plus — 무료로 쓰는 사람에게는 한 번 미리 보여 준 뒤 페이월.
     private var skinButton: some View {
         Button {
-            terrainSkinRaw = (terrainSkin == .picture ? TerrainSkin.ink : .picture).rawValue
+            if terrainSkin == .picture {
+                isPreviewingSkin = false
+                terrainSkinRaw = TerrainSkin.ink.rawValue
+            } else if purchases.allows(.pictureMap) {
+                terrainSkinRaw = TerrainSkin.picture.rawValue
+            } else if !skinPreviewed {
+                // 무엇을 사는지 보고 나서 고르게, 한 번은 그대로 보여 준다.
+                skinPreviewed = true
+                isPreviewingSkin = true
+                terrainSkinRaw = TerrainSkin.picture.rawValue
+            } else {
+                paywallFeature = .pictureMap
+            }
         } label: {
             Image(systemName: terrainSkin == .picture ? "mountain.2.fill" : "mountain.2")
                 .font(.title3)

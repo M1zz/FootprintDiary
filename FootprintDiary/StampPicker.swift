@@ -30,7 +30,12 @@ struct StampPicker: View {
     let onPick: (StampKind) -> Void
 
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.modelContext) private var modelContext
     @State private var query = ""
+    @State private var purchases = PurchaseManager.shared
+    /// 한도에 닿아 페이월을 띄우는 동안 붙들어 둔 도장. 산 뒤 닫히면 마저 찍는다.
+    @State private var heldKind: StampKind?
+    @State private var showPaywall = false
     /// 최근에 쓴 스탬프 id (자주 쓰는 몇 가지를 맨 위에 둔다)
     @AppStorage("footprint.recentStamps") private var recentIDs = ""
 
@@ -71,6 +76,9 @@ struct StampPicker: View {
             }
             .navigationDestination(for: StampGroup.self) { group in
                 StampGroupScreen(group: group, onPick: pick)
+            }
+            .sheet(isPresented: $showPaywall, onDismiss: resumeHeld) {
+                PaywallView(highlight: .unlimitedStamps)
             }
         }
     }
@@ -152,9 +160,27 @@ struct StampPicker: View {
     /// 갈래 안에서 고르든 최근에서 고르든 여기 한 곳으로 모인다.
     /// 밀고 들어간 화면에서 dismiss를 부르면 시트가 아니라 그 화면만 물러난다.
     private func pick(_ kind: StampKind) {
+        // 무료로는 서른 곳까지. 이미 찍은 도장은 몇 개든 그대로 두고, 새로 찍는 것만 본다.
+        guard canPlace else {
+            heldKind = kind
+            showPaywall = true
+            return
+        }
         remember(kind)
         onPick(kind)
         dismiss()
+    }
+
+    private var canPlace: Bool {
+        purchases.allows(.unlimitedStamps)
+            || ((try? modelContext.fetchCount(FetchDescriptor<MapStamp>())) ?? 0) < ProEntitlement.freeStampLimit
+    }
+
+    /// 페이월에서 Plus 를 열고 돌아왔으면 고르던 도장을 마저 찍는다.
+    private func resumeHeld() {
+        guard let kind = heldKind else { return }
+        heldKind = nil
+        if purchases.allows(.unlimitedStamps) { pick(kind) }
     }
 
     // MARK: - 최근 쓴 것
@@ -287,6 +313,9 @@ struct StampEditor: View {
     @State private var isAddingPhotos = false
     /// 스티커를 찍는 카메라를 띄우고 있는지
     @State private var isMakingSticker = false
+    /// 스티커 카메라는 Plus. 잠겨 있으면 카메라 대신 페이월을 띄운다 (붙여 둔 스티커는 늘 보인다).
+    @State private var showStickerPaywall = false
+    @State private var purchases = PurchaseManager.shared
     /// 찍어 둔 스티커를 크게 들여다보고 있는지
     @State private var isViewingSticker = false
     /// 다녀온 날을 다 펼쳐 볼지 (여러 해 다닌 자리는 목록이 길어진다)
@@ -385,6 +414,9 @@ struct StampEditor: View {
                 // 검은 화면에 갇히지 않도록 그대로 물러선다.
                 Color.clear.onAppear { isViewingSticker = false }
             }
+        }
+        .sheet(isPresented: $showStickerPaywall) {
+            PaywallView(highlight: .stickerCamera)
         }
         .fullScreenCover(isPresented: $isMakingSticker) {
             // 전체 화면으로 띄운다. 카메라는 눈앞의 것을 겨누는 일이라 시트로 반쯤
@@ -608,10 +640,16 @@ struct StampEditor: View {
             }
 
             Button {
-                isMakingSticker = true
+                if purchases.allows(.stickerCamera) { isMakingSticker = true } else { showStickerPaywall = true }
             } label: {
-                Label(stamp.sticker == nil ? "스티커 추가하기" : "스티커 다시 찍기",
-                      systemImage: "camera.viewfinder")
+                HStack {
+                    Label(stamp.sticker == nil ? "스티커 추가하기" : "스티커 다시 찍기",
+                          systemImage: "camera.viewfinder")
+                    if !purchases.allows(.stickerCamera) {
+                        Spacer()
+                        ProLockBadge(feature: .stickerCamera)
+                    }
+                }
             }
             .foregroundStyle(.primary)
 

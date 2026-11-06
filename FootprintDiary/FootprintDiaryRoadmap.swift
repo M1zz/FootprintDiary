@@ -43,7 +43,7 @@ extension FootprintDiarySpec {
         .init(id: "siri-ai", status: .planned,
               title: NSLocalizedString("Siri에게 편하게 말하기", comment: "Roadmap item: Siri understands requests without the app name"),
               detail: NSLocalizedString("Siri에게 앱 이름 없이 말해도 걸은 길과 일기를 찾아 바로 보여 줘요.", comment: "Roadmap item detail: Siri understands requests without the app name")),
-        .init(id: "backup", status: .planned,
+        .init(id: "backup", status: .building,
               title: NSLocalizedString("백업과 내보내기", comment: "Roadmap item: backup and export"),
               detail: NSLocalizedString("걸은 길과 일기를 파일로 저장하고 다시 불러올 수 있어요.", comment: "Roadmap item detail: backup and export")),
         .init(id: "lock.faceid", status: .planned,

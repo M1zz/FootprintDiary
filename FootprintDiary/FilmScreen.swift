@@ -95,6 +95,9 @@ struct FilmScreen: View {
     @State private var exportProgress: Double = 0
     @State private var movie: Movie?
     @State private var failure: String?
+    /// 재생(미리보기)은 누구나, 영상으로 내보내기는 Pro.
+    @State private var purchases = PurchaseManager.shared
+    @State private var showPaywall = false
 
     @StateObject private var finder = FilmTerrainFinder()
 
@@ -128,6 +131,10 @@ struct FilmScreen: View {
             .task(id: reelKey) { rebuild() }
             .sheet(item: $movie) { movie in
                 ShareSheet(items: [movie.url])
+            }
+            // 오래 걸을 사람이 모이는 자리라 평생을 먼저 고른다.
+            .sheet(isPresented: $showPaywall) {
+                PaywallView(highlight: .filmExport, term: .lifetime)
             }
             .alert(
                 "영상을 만들지 못했어요",
@@ -314,9 +321,10 @@ struct FilmScreen: View {
             .padding(.vertical, 6)
         } else {
             Button {
-                export()
+                if purchases.allows(.filmExport) { export() } else { showPaywall = true }
             } label: {
-                Label("영상으로 내보내기", systemImage: "square.and.arrow.up")
+                Label("영상으로 내보내기",
+                      systemImage: purchases.allows(.filmExport) ? "square.and.arrow.up" : "lock.fill")
                     .font(.headline)
                     .foregroundStyle(.white)
                     .frame(maxWidth: .infinity)

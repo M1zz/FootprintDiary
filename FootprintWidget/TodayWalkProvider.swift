@@ -17,6 +17,8 @@ struct TodayWalkEntry: TimelineEntry {
     let snapshot: WalkSnapshot
     /// 앱 그룹 그릇조차 열리지 않았는지. 참이면 '걸음이 없다'가 아니라 '읽지 못했다'다.
     let isUnavailable: Bool
+    /// 위젯은 Pro. 잠겨 있으면 오늘 걸음 대신 'Pro로 열기' 자리를 내건다 (→ Shared/ProPass.swift).
+    var isLocked = false
 }
 
 struct TodayWalkProvider: TimelineProvider {
@@ -49,11 +51,12 @@ struct TodayWalkProvider: TimelineProvider {
     }
 
     private func current() -> TodayWalkEntry {
+        let isLocked = !ProPass.opensWidgets
         guard let stored = WalkSnapshotStore.load() else {
-            return TodayWalkEntry(date: .now, snapshot: WalkSnapshot(), isUnavailable: true)
+            return TodayWalkEntry(date: .now, snapshot: WalkSnapshot(), isUnavailable: true, isLocked: isLocked)
         }
         // 자정을 넘겼는데 앱이 아직 고쳐 쓰지 못했을 수 있다. 읽는 쪽에서 한 번 더 본다.
-        return TodayWalkEntry(date: .now, snapshot: stored.rolledOver(), isUnavailable: false)
+        return TodayWalkEntry(date: .now, snapshot: stored.rolledOver(), isUnavailable: false, isLocked: isLocked)
     }
 }
 

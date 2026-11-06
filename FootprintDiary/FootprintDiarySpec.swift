@@ -24,17 +24,31 @@ enum FootprintDiarySpec: LeeoAppSpec {
     /// App Store 앱 ID — 리뷰 남기기·친구에게 소개하기 링크.
     static let appStoreID: String? = "6789952970"
 
-    /// 수익모델 — 인앱 결제가 없는 완전 무료 앱.
-    static let monetization = LeeoMonetization.free
+    /// 수익모델 — 무료로 내려받고, 무료 · Plus · Pro 세 칸. 유료 칸마다 주 · 월 · 연 구독과 평생.
+    /// 걸음 기록 · 지도 · 일기 · iCloud 보관은 기간 제한 없이 무료다.
+    /// 칸마다 무엇이 열리는지는 `ProFeature.tier` 한 곳에 있다(→ ProEntitlement.swift).
+    static let monetization = LeeoMonetization.freemiumSubscription(
+        LeeoSubscriptionConfig(
+            productIDs: ProEntitlement.productIDs,
+            // 자체 약관이 없으므로 애플 표준 사용권 계약(EULA)을 건다. 구독을 파는 앱의 심사 필수 항목이다.
+            termsURL: URL(string: "https://www.apple.com/legal/internet-services/itunes/dev/stdeula/")!,
+            entitlementIDs: ProEntitlement.entitlementIDs,
+            gate: LeeoGatePolicy(
+                freeLimits: [Gate.stamps: ProEntitlement.freeStampLimit],
+                proOnly: Set(ProFeature.allCases.filter { $0 != .unlimitedStamps }.map(\.rawValue))),
+            // 위젯과 함께 읽는 그 통.
+            cacheSuiteName: "group.com.leeo.FootprintDiary",
+            // 개발자 응원 팁. 소모성 세 가지, 작은 것부터. 기능을 열지 않는다(→ `tipJar`).
+            tipJar: LeeoTipJarConfig(productIDs: ProEntitlement.tipProductIDs)))
+
+    /// 게이트 열쇠말.
+    enum Gate {
+        static let stamps = "stamps"
+    }
 
     /// 백업 금고가 함께 떠 두는 공유 저장소 (위젯과 나누는 기록).
     static let appGroups = ["group.com.leeo.FootprintDiary"]
 
-    /// 개발자 응원하기 — 소모성 팁 세 가지(작은 것부터). 기능을 열지 않는다.
-    /// 결제가 없는 앱이라 LeeoStore 없이 혼자 돈다. 앱을 열 때 `startStandalone()` 을 부른다.
-    @MainActor static let tipJar = LeeoTipJar(config: LeeoTipJarConfig(productIDs: [
-        "com.leeo.FootprintDiary.tip.small",
-        "com.leeo.FootprintDiary.tip.medium",
-        "com.leeo.FootprintDiary.tip.large"
-    ]))
+    /// 개발자 응원(팁). 결제 리스너를 함께 쓰도록 `LeeoStore` 가 만든 것을 쓴다.
+    @MainActor static var tipJar: LeeoTipJar? { PurchaseManager.shared.store.tipJar }
 }

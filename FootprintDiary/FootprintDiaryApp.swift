@@ -21,6 +21,9 @@ struct FootprintDiaryApp: App {
     init() {
         // 백업 금고 — 예약된 복원 적용 · 매일/업데이트 직전 백업. 저장소를 열기 전에 먼저.
         LeeoVault.start(FootprintDiarySpec.self)
+        // 페이월이 생긴 버전을 처음 켤 때, 이미 쓰던 사람이면 적어 둔다(Pro 평생 → PurchaseManager).
+        // 안내 화면을 거치기 전, 아무것도 묻기 전에 한 번.
+        ProEntitlement.noteUseBeforePaywall()
 
         // 걸음·스탬프·일기를 내 아이클라우드(개인 데이터베이스)에 함께 둔다.
         // 이 스키마의 모든 속성에 기본값이 있고 관계마다 짝이 있는 것은 그 조건을 맞추기
@@ -104,11 +107,13 @@ struct FootprintDiaryApp: App {
                 .leeoSatisfactionCheck(FootprintDiarySpec.self)
                 .storeFallbackNotice()
                 .task { await cloudSync.refresh() }
-                .task { await FootprintDiarySpec.tipJar.startStandalone() }
+                // 영수증을 읽어 칸을 정한다. 팁 상품과 끝나지 않은 팁은 LeeoStore 가 함께 챙긴다.
+                .task { await PurchaseManager.shared.refresh() }
                 // 일기를 Spotlight · Siri 가 찾게 한다 (→ WalkIntents.swift)
                 .task { await DiaryLibrary.reindex(container) }
                 .onChange(of: scenePhase) { _, phase in
                     if phase == .background { Task { await DiaryLibrary.reindex(container) } }
+                    if phase == .active { Task { await PurchaseManager.shared.refresh() } }
                 }
         }
         .modelContainer(container)

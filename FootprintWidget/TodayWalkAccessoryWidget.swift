@@ -35,6 +35,15 @@ struct TodayWalkAccessoryView: View {
     private var snapshot: WalkSnapshot { entry.snapshot }
 
     var body: some View {
+        if entry.isLocked {
+            WidgetLockedView()
+        } else {
+            unlocked
+        }
+    }
+
+    @ViewBuilder
+    private var unlocked: some View {
         switch family {
         case .accessoryInline:
             // 인라인은 한 줄에 아이콘 하나와 글씨 몇 자가 전부다. 시간 옆에 붙으므로
