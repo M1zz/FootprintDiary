@@ -206,7 +206,6 @@ struct AtlasScreen: View {
     @EnvironmentObject private var locationManager: LocationManager
 
     @StateObject private var state = AtlasState()
-    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     @State private var showDiary = false
     @State private var showSupport = false
     @State private var showFilm = false
@@ -224,25 +223,12 @@ struct AtlasScreen: View {
     @State private var paywallFeature: ProFeature?
     @State private var showPlans = false
     @State private var showGraduation = false
-    /// 그림지도를 한 번 미리 보여 주고 있는가 (무료로 쓰는 사람에게 한 번만)
-    @State private var isPreviewingSkin = false
-    @AppStorage("paywall.skin.previewed") private var skinPreviewed = false
     @AppStorage("paywall.seventhDay.seen") private var seventhDaySeen = false
 
-    // 지도 위에 무엇을 띄울지. 설정의 '지도에 보이기'와 같은 열쇠를 본다 (MapControls.swift)
-    @AppStorage(MapControl.diary.storageKey) private var showsDiaryButton = MapControl.diary.isVisibleByDefault
-    @AppStorage(MapControl.stampList.storageKey) private var showsStampListButton = MapControl.stampList.isVisibleByDefault
-    @AppStorage(MapControl.compass.storageKey) private var showsCompassButton = MapControl.compass.isVisibleByDefault
-    @AppStorage(MapControl.film.storageKey) private var showsFilmButton = MapControl.film.isVisibleByDefault
-    @AppStorage(MapControl.peek.storageKey) private var showsPeekButton = MapControl.peek.isVisibleByDefault
-    @AppStorage(MapControl.scaleBar.storageKey) private var showsScaleBar = MapControl.scaleBar.isVisibleByDefault
-    @AppStorage(MapControl.period.storageKey) private var showsPeriodButton = MapControl.period.isVisibleByDefault
-    @AppStorage(MapControl.skin.storageKey) private var showsSkinButton = MapControl.skin.isVisibleByDefault
-    @AppStorage(MapControl.zoom.storageKey) private var showsZoomButtons = MapControl.zoom.isVisibleByDefault
-    @AppStorage(MapControl.neighborhood.storageKey) private var showsNeighborhood = MapControl.neighborhood.isVisibleByDefault
+    /// 내 동네 테두리를 그릴지. 설정의 '지도에 보이기'에서 켜고 끈다.
+    @AppStorage("map.show.neighborhood") private var showsNeighborhood = true
 
     private let peekTip = PeekTip()
-    private let mapControlsTip = MapControlsTip()
     @State private var showPeriodPicker = false
     /// 지도를 좁혀 보는 기간. 앱을 다시 열면 전체로 돌아온다 — 좁혀 둔 것을 잊고
     /// 다음에 열었을 때 길이 사라진 줄 아는 것이 더 나쁘다.
@@ -257,11 +243,6 @@ struct AtlasScreen: View {
     /// 한 번 누르면 켜지고 다시 누르면 꺼지게 바꿨다. 다만 앱을 다시 열면 늘 종이로 돌아온다 —
     /// 켜 둔 채로 남으면 이 앱은 그냥 '지도 위에 선 긋는 앱'이 된다.
     @State private var isPeeking = false
-    /// 왼쪽 아래 도구(동네 테두리·기간·비춰보기·그림지도·도장)를 펼쳐 두었는지.
-    ///
-    /// 단추 넷이 늘 서 있으면 지도 왼쪽 아래가 단추 기둥이 된다. 평소에는 하나로 접어 두고
-    /// 쓸 때만 편다. 다만 아직 아무 길도 없는 지도에서는 도장이 첫 할 일이라 펴 둔 채로 연다.
-    @State private var toolsExpanded = false
     /// 이름을 붙이려고 고른 동네
     /// 물과 산을 무엇으로 칠할지. 한 번 고르면 다음에 열어도 그대로다.
     @AppStorage("footprint.terrainSkin") private var terrainSkinRaw = TerrainSkin.ink.rawValue
@@ -396,84 +377,45 @@ struct AtlasScreen: View {
                         .transition(.opacity)
                 }
 
-                VStack(alignment: .leading, spacing: 10) {
-                    if showsScaleBar {
-                        scaleBar
-                    }
-                    toolStack
-                }
-                .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
-                .padding(.leading, 16)
-                // 애플 지도 저작권 표기를 가리지 않도록 띄운다 (가리면 심사에서 걸린다)
-                .padding(.bottom, 52)
+                toolStack
 
-                // 안내가 떠 있는 동안에는 물러난다. 둘 다 화면 한가운데 높이에 서서
-                // 서로 겹치는데, 아직 아무것도 안 그려진 종이에서 확대·축소는 할 일이 없다.
-                if showsZoomButtons && !(isEmptyMap && showsEmptyHint) {
-                    zoomButtons
-                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .trailing)
-                        .padding(.trailing, 12)
-                        .transition(.opacity)
-                }
             }
             .navigationTitle("내 지도")
             .navigationBarTitleDisplayMode(.inline)
             // 막대는 바탕 없이 단추만 지도 위에 띄운다. 단추는 저마다 유리 바탕을 이미 갖고 있다.
             .toolbarBackground(.hidden, for: .navigationBar)
             .toolbar {
-                // 단추는 설정에서 고른 것만 단다. 꺼 둔 화면은 설정의 '모아 보기'에서 연다.
+                // 지도 위 단추는 고정이다. 날마다 여는 둘은 왼쪽에, 나머지는 설정의 '모아 보기'에.
                 ToolbarItemGroup(placement: .topBarLeading) {
-                    if showsDiaryButton {
-                        Button {
-                            showDiary = true
-                        } label: {
-                            Image(systemName: "book.closed")
-                        }
-                        .accessibilityLabel("일지")
-                    }
-                    if showsStampListButton {
-                        Button {
-                            showStampList = true
-                        } label: {
-                            Image(systemName: "list.bullet")
-                                // 물어볼 자리가 있으면 작은 점 하나로만 알린다.
-                                // 알림을 띄우면 걷는 중에 끼어들고, 아무 표시도 없으면 영영 안 본다.
-                                .overlay(alignment: .topTrailing) {
-                                    if !asking.isEmpty {
-                                        Circle()
-                                            .fill(Color(InkStyle.sealRed))
-                                            .frame(width: 7, height: 7)
-                                            .offset(x: 5, y: -3)
-                                    }
-                                }
-                        }
-                        .accessibilityLabel(asking.isEmpty ? "내가 찍은 곳" : "내가 찍은 곳, 물어볼 것 있음")
-                    }
-                }
-                ToolbarItemGroup(placement: .topBarTrailing) {
-                    if showsCompassButton {
-                        Button {
-                            showCompass = true
-                        } label: {
-                            Image(systemName: "location.north.line")
-                        }
-                        .accessibilityLabel("개척 나침반")
-                    }
-                    if showsFilmButton {
-                        Button {
-                            showFilm = true
-                        } label: {
-                            Image(systemName: "play.rectangle")
-                        }
-                        .accessibilityLabel("그려지는 것 보기")
-                    }
                     Button {
-                        mapControlsTip.invalidate(reason: .actionPerformed)
+                        showDiary = true
+                    } label: {
+                        Image(systemName: "book.closed")
+                    }
+                    .accessibilityLabel("일지")
+                    Button {
+                        showStampList = true
+                    } label: {
+                        Image(systemName: "list.bullet")
+                            // 물어볼 자리가 있으면 작은 점 하나로만 알린다.
+                            // 알림을 띄우면 걷는 중에 끼어들고, 아무 표시도 없으면 영영 안 본다.
+                            .overlay(alignment: .topTrailing) {
+                                if !asking.isEmpty {
+                                    Circle()
+                                        .fill(Color(InkStyle.sealRed))
+                                        .frame(width: 7, height: 7)
+                                        .offset(x: 5, y: -3)
+                                }
+                            }
+                    }
+                    .accessibilityLabel(asking.isEmpty ? "내가 찍은 곳" : "내가 찍은 곳, 물어볼 것 있음")
+                }
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
                         showSupport = true
                     } label: {
                         Image(systemName: "gearshape")
                     }
-                    .popoverTip(mapControlsTip)
                     .accessibilityLabel("설정")
                 }
             }
@@ -715,87 +657,36 @@ struct AtlasScreen: View {
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 14))
     }
 
-    /// 왼쪽 아래 도구 묶음. 접어 두면 단추 하나, 누르면 위로 넷이 펼쳐진다.
+    /// 왼쪽 아래 단추 둘 — 비춰보기와 도장.
+    ///
+    /// 전에는 동네 테두리·기간·그림지도까지 한 묶음으로 접어 두었다. 그러자 이 앱에서 손으로
+    /// 하는 단 하나의 일인 도장이 접힌 묶음 안에 숨었다. 지도에는 걷는 중에 쓰는 둘만 늘 두고,
+    /// 가끔 바꾸는 것은 설정으로 보냈다.
     private var toolStack: some View {
-        return VStack(alignment: .leading, spacing: 10) {
-            if toolsExpanded {
-                Group {
-                    neighborhoodButton
-                    if showsPeriodButton {
-                        periodButton
-                    }
-                    if showsPeekButton {
-                        peekButton
-                    }
-                    if showsSkinButton {
-                        skinButton
-                    }
-                    // 가운데 안내는 내 위치 점을 덮으므로 스스로 비켜난다. 그러고 나면
-                    // 다시 '무엇을 하지'가 되므로, 할 일 하나를 그 일을 하는 단추 옆에
-                    // 붙여 둔다 — 여기는 아무것도 가리지 않는 자리다.
-                    HStack(spacing: 8) {
-                        stampButton
-                        if isEmptyMap {
-                            Text("눌러서 지금 자리 찍기")
-                                .font(.body)
-                                .foregroundStyle(Color(InkStyle.ink))
-                                .padding(.horizontal, 12)
-                                .padding(.vertical, 6)
-                                .background(.ultraThinMaterial, in: Capsule())
-                                .transition(.opacity.combined(with: .move(edge: .leading)))
-                                .allowsHitTesting(false)
-                        }
-                    }
-                    .animation(.easeOut(duration: 0.3), value: isEmptyMap)
+        VStack(alignment: .leading, spacing: 10) {
+            peekButton
+            // 가운데 안내는 내 위치 점을 덮으므로 스스로 비켜난다. 그러고 나면
+            // 다시 '무엇을 하지'가 되므로, 할 일 하나를 그 일을 하는 단추 옆에
+            // 붙여 둔다 — 여기는 아무것도 가리지 않는 자리다.
+            HStack(spacing: 8) {
+                stampButton
+                if isEmptyMap {
+                    Text("눌러서 지금 자리 찍기")
+                        .font(.body)
+                        .foregroundStyle(Color(InkStyle.ink))
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 6)
+                        .background(.ultraThinMaterial, in: Capsule())
+                        .transition(.opacity.combined(with: .move(edge: .leading)))
+                        .allowsHitTesting(false)
                 }
-                // 동작 줄이기: 튀어나오는 대신 겹쳐 나타난다
-                .transition(reduceMotion ? .opacity : .scale(scale: 0.4, anchor: .bottom).combined(with: .opacity))
             }
-            toolsToggle
+            .animation(.easeOut(duration: 0.3), value: isEmptyMap)
         }
-        .animation(reduceMotion ? .easeOut(duration: 0.2) : .spring(response: 0.32, dampingFraction: 0.78), value: toolsExpanded)
-        .onAppear {
-            if isEmptyMap { toolsExpanded = true }
-        }
-    }
-
-    /// 내 동네 테두리를 켜고 끈다
-    private var neighborhoodButton: some View {
-        Button {
-            showsNeighborhood.toggle()
-        } label: {
-            Image(systemName: "circle.dashed")
-                .font(.title3.weight(showsNeighborhood ? .bold : .regular))
-                .foregroundStyle(showsNeighborhood ? Color(InkStyle.sealRed) : .secondary)
-                .frame(width: 44, height: 44)
-                .background(.ultraThinMaterial, in: Circle())
-        }
-        .accessibilityLabel("내 동네 테두리")
-        .accessibilityValue(showsNeighborhood ? "켬" : "끔")
-    }
-
-    /// 도구 묶음을 펴고 접는 단추. 접힌 채로도 무언가 켜져 있으면(기간·그림지도·비춰보기) 붉은 점으로 알린다.
-    private var toolsToggle: some View {
-        let somethingOn = !period.isAll || terrainSkin == .picture || isPeeking
-        return Button {
-            toolsExpanded.toggle()
-        } label: {
-            Image(systemName: toolsExpanded ? "xmark" : "square.grid.2x2")
-                .font(.title3)
-                .foregroundStyle(toolsExpanded ? Color.secondary : Color(InkStyle.ink))
-                .contentTransition(.symbolEffect(.replace))
-                .frame(width: 44, height: 44)
-                .background(.ultraThinMaterial, in: Circle())
-                .overlay(alignment: .topTrailing) {
-                    if somethingOn && !toolsExpanded {
-                        Circle()
-                            .fill(Color(InkStyle.sealRed))
-                            .frame(width: 9, height: 9)
-                            .offset(x: -3, y: 3)
-                    }
-                }
-        }
-        .accessibilityLabel(toolsExpanded ? "지도 도구 접기" : "지도 도구 펼치기")
+        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomLeading)
+        .padding(.leading, 16)
+        // 애플 지도 저작권 표기를 가리지 않도록 띄운다 (가리면 심사에서 걸린다)
+        .padding(.bottom, 52)
     }
 
     /// 배경 지도를 비춰 본다. 누르면 켜지고 다시 누르면 종이로 돌아간다.
@@ -818,55 +709,13 @@ struct AtlasScreen: View {
     /// 지금 그리는 지도 모양. 그림지도는 Plus 이거나, 한 번 미리 보는 동안만이다.
     private var terrainSkin: TerrainSkin {
         let chosen = TerrainSkin(rawValue: terrainSkinRaw) ?? .ink
-        guard chosen == .picture, !purchases.allows(.pictureMap), !isPreviewingSkin else { return chosen }
+        guard chosen == .picture, !purchases.allows(.pictureMap) else { return chosen }
         return .ink
     }
 
     /// 걸음이 남은 날이 일곱이 되었고, 무료로 쓰고 있고, 아직 보인 적이 없을 때 한 번.
     private var showsSeventhDay: Bool {
         !seventhDaySeen && purchases.tier == .free && state.isReady && state.walkedDays >= 7
-    }
-
-    /// 먹 지도와 그림지도를 오간다. 그림지도는 Plus — 무료로 쓰는 사람에게는 한 번 미리 보여 준 뒤 페이월.
-    private var skinButton: some View {
-        Button {
-            if terrainSkin == .picture {
-                isPreviewingSkin = false
-                terrainSkinRaw = TerrainSkin.ink.rawValue
-            } else if purchases.allows(.pictureMap) {
-                terrainSkinRaw = TerrainSkin.picture.rawValue
-            } else if !skinPreviewed {
-                // 무엇을 사는지 보고 나서 고르게, 한 번은 그대로 보여 준다.
-                skinPreviewed = true
-                isPreviewingSkin = true
-                terrainSkinRaw = TerrainSkin.picture.rawValue
-            } else {
-                paywallFeature = .pictureMap
-            }
-        } label: {
-            Image(systemName: terrainSkin == .picture ? "mountain.2.fill" : "mountain.2")
-                .font(.title3)
-                .foregroundStyle(terrainSkin == .picture ? Color(InkStyle.sealRed) : .secondary)
-                .frame(width: 44, height: 44)
-                .background(.ultraThinMaterial, in: Circle())
-        }
-        .accessibilityLabel("그림지도")
-        .accessibilityValue(terrainSkin == .picture ? "켬" : "끔")
-    }
-
-    /// 기간으로 좁혀 보기
-    private var periodButton: some View {
-        Button {
-            showPeriodPicker = true
-        } label: {
-            Image(systemName: period.isAll ? "calendar" : "calendar.badge.checkmark")
-                .font(.title3)
-                .foregroundStyle(period.isAll ? Color.secondary : Color(InkStyle.sealRed))
-                .frame(width: 44, height: 44)
-                .background(.ultraThinMaterial, in: Circle())
-        }
-        .accessibilityLabel("기간으로 보기")
-        .accessibilityValue(Text(period.title))
     }
 
     /// 지금 기간으로 좁혀 보고 있다는 표시. 잊고 지나가면 길이 사라진 줄 안다.
@@ -905,52 +754,6 @@ struct AtlasScreen: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 8)
         .background(.ultraThinMaterial, in: Capsule())
-    }
-
-    /// 지금 배율. 막대 길이가 곧 그 거리다.
-    private var scaleBar: some View {
-        VStack(alignment: .leading, spacing: 3) {
-            Text(mapProxy.scaleText)
-                .font(.caption2.monospacedDigit().weight(.semibold))
-                .foregroundStyle(.secondary)
-            Rectangle()
-                .fill(Color(InkStyle.ink).opacity(0.55))
-                .frame(width: max(mapProxy.scaleBarWidth, 1), height: 2)
-                .overlay(alignment: .leading) { tick }
-                .overlay(alignment: .trailing) { tick }
-        }
-        .padding(.horizontal, 10)
-        .padding(.vertical, 7)
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 8))
-        .opacity(mapProxy.scaleBarWidth > 0 ? 1 : 0)
-        .accessibilityElement(children: .ignore)
-        .accessibilityLabel("지도 배율. 막대 하나가 \(mapProxy.scaleText)")
-    }
-
-    private var tick: some View {
-        Rectangle()
-            .fill(Color(InkStyle.ink).opacity(0.55))
-            .frame(width: 2, height: 7)
-    }
-
-    /// 확대·축소
-    private var zoomButtons: some View {
-        VStack(spacing: 1) {
-            zoomButton("plus", label: String(localized: "확대")) { mapProxy.zoomIn() }
-            Divider().frame(width: 30)
-            zoomButton("minus", label: String(localized: "축소")) { mapProxy.zoomOut() }
-        }
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 10))
-    }
-
-    private func zoomButton(_ symbol: String, label: String, action: @escaping () -> Void) -> some View {
-        Button(action: action) {
-            Image(systemName: symbol)
-                .font(.body.weight(.medium))
-                .foregroundStyle(.primary)
-                .frame(width: 42, height: 40)
-        }
-        .accessibilityLabel(label)
     }
 
     /// 지금 선 자리에 찍는다. 걷는 중에는 지도를 정확히 짚기 어려우므로 이쪽이 빠르다.

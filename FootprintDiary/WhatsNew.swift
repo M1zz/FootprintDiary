@@ -40,11 +40,6 @@ enum WhatsNew {
             detail: String(localized: "이번 주, 이번 달, 올해처럼 기간을 골라 그때 걸은 길과 도장만 볼 수 있어요.")
         ),
         Item(
-            symbol: "sparkles",
-            title: String(localized: "지도가 한결 비었어요"),
-            detail: String(localized: "가끔 쓰는 단추는 설정으로 옮겼어요. 설정의 '지도에 보이기'에서 원하는 것만 다시 꺼내 둘 수 있어요.")
-        ),
-        Item(
             symbol: "square.grid.2x2",
             title: String(localized: "설정에서 바로 열기"),
             detail: String(localized: "개척 나침반, 그려지는 것 보기, 오늘의 발자취를 설정의 '모아 보기'에서 열 수 있어요.")

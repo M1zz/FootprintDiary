@@ -31,13 +31,3 @@ struct PeekTip: Tip {
         #Rule(AtlasTips.$isMapIdle) { $0 == true }
     }
 }
-
-struct MapControlsTip: Tip {
-    var title: Text { Text("지도 단추는 설정에서 골라요") }
-    var message: Text? { Text("지도에 띄워 둘 단추를 고르고, 꺼 둔 화면도 설정에서 바로 열 수 있어요.") }
-    var image: Image? { Image(systemName: "slider.horizontal.3") }
-
-    var rules: [Rule] {
-        #Rule(AtlasTips.$isMapIdle) { $0 == true }
-    }
-}

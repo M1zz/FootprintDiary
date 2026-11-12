@@ -25,8 +25,10 @@ struct FootprintDiarySupportView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var showDiagnostics = false
     @State private var showWhatsNew = false
-    /// 지도 모양. 지도 위 그림지도 단추와 같은 열쇠다 (단추를 꺼 둔 사람도 여기서 바꾼다)
+    /// 지도 모양. 지도가 보는 것과 같은 열쇠다.
     @AppStorage("footprint.terrainSkin") private var terrainSkinRaw = TerrainSkin.ink.rawValue
+    /// 내 동네 테두리. 지도가 보는 것과 같은 열쇠다.
+    @AppStorage("map.show.neighborhood") private var showsNeighborhood = true
     /// 개발자 모드. 버전 줄을 일곱 번 두드리면 켜진다 (LeeoSupportSection이 맡는다).
     /// 여기서는 그 값을 읽어 통계 화면 입구만 함께 연다.
     @AppStorage("dev.masterMode") private var devMode = false
@@ -79,13 +81,6 @@ struct FootprintDiarySupportView: View {
                         }
                         .foregroundStyle(.primary)
                     }
-                } header: {
-                    Text("기록 방식")
-                } footer: {
-                    Text("어느 쪽이든 받은 위치는 모두 저장합니다. 정확도가 낮은 점은 지도에 그리지 않을 뿐이에요.")
-                }
-
-                Section {
                     Button {
                         showDiagnostics = true
                     } label: {
@@ -99,9 +94,9 @@ struct FootprintDiarySupportView: View {
                     }
                     .foregroundStyle(.primary)
                 } header: {
-                    Text("걷기 기록")
+                    Text("기록 방식")
                 } footer: {
-                    Text("걸었는데 지도에 선이 그어지지 않으면 여기서 까닭을 볼 수 있어요.")
+                    Text("어느 쪽이든 받은 위치는 모두 저장합니다. 정확도가 낮은 점은 지도에 그리지 않을 뿐이에요.")
                 }
 
                 cloud
@@ -111,6 +106,7 @@ struct FootprintDiarySupportView: View {
                 planSection
 
                 Section {
+                    LeeoSupportSection<FootprintDiarySpec>()
                     Button {
                         showWhatsNew = true
                     } label: {
@@ -126,12 +122,6 @@ struct FootprintDiarySupportView: View {
                         }
                     }
                     .foregroundStyle(.primary)
-                } header: {
-                    Text("안내")
-                }
-
-                Section {
-                    LeeoSupportSection<FootprintDiarySpec>()
                     NavigationLink(LeeoRoadmapText.entry) { RoadmapScreen() }
                     LeeoShareAppLink<FootprintDiarySpec>()
                     if let tipJar = FootprintDiarySpec.tipJar {
@@ -180,7 +170,7 @@ struct FootprintDiarySupportView: View {
         }
     }
 
-    /// 지도에서 내려온 화면들. 지도에 단추가 없어도 여기서는 늘 열 수 있다.
+    /// 지도에 단추가 없는 화면들. 일지와 내가 찍은 곳은 지도 위에 늘 있어 여기 다시 두지 않는다.
     private var gallery: some View {
         Section {
             if let record {
@@ -206,7 +196,7 @@ struct FootprintDiarySupportView: View {
                 .padding(.vertical, 4)
                 .accessibilityElement(children: .combine)
             }
-            ForEach(AtlasDestination.allCases) { destination in
+            ForEach(AtlasDestination.allCases.filter { !$0.isOnMap }) { destination in
                 Button {
                     open(destination)
                 } label: {
@@ -233,7 +223,7 @@ struct FootprintDiarySupportView: View {
         }
     }
 
-    /// 지도 위에 띄워 둘 것 고르기
+    /// 지도를 어떻게 그릴지
     private var mapControls: some View {
         Section {
             Picker(selection: skinSelection) {
@@ -242,13 +232,11 @@ struct FootprintDiarySupportView: View {
             } label: {
                 Label("지도 모양", systemImage: "mountain.2")
             }
-            ForEach(MapControl.allCases) { control in
-                MapControlToggle(control: control)
+            Toggle(isOn: $showsNeighborhood) {
+                Label("내 동네 테두리", systemImage: "circle.dashed")
             }
         } header: {
             Text("지도에 보이기")
-        } footer: {
-            Text("꺼 둔 화면도 위 '모아 보기'에서 언제든 열 수 있어요. 도장과 설정 단추는 늘 보여요.")
         }
     }
 
@@ -332,33 +320,6 @@ struct FootprintDiarySupportView: View {
     }
 }
 
-
-/// 지도 위 하나를 켜고 끄는 줄. 열쇠가 줄마다 달라 @AppStorage를 줄 안에 둔다.
-private struct MapControlToggle: View {
-    let control: MapControl
-    @AppStorage private var isOn: Bool
-
-    init(control: MapControl) {
-        self.control = control
-        _isOn = AppStorage(wrappedValue: control.isVisibleByDefault, control.storageKey)
-    }
-
-    var body: some View {
-        Toggle(isOn: $isOn) {
-            HStack(spacing: 12) {
-                Image(systemName: control.symbol)
-                    .foregroundStyle(Color.accentColor)
-                    .frame(width: 24)
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(control.title)
-                    Text(control.summary)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                }
-            }
-        }
-    }
-}
 
 /// 앞에 작은 점을 찍는 목록 표시
 struct BulletLabelStyle: LabelStyle {
