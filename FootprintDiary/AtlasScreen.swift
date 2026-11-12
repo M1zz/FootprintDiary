@@ -227,6 +227,8 @@ struct AtlasScreen: View {
 
     /// 내 동네 테두리를 그릴지. 설정의 '지도에 보이기'에서 켜고 끈다.
     @AppStorage("map.show.neighborhood") private var showsNeighborhood = true
+    /// 스티커 크기. 설정의 '지도에 보이기'에서 고른다.
+    @AppStorage(StickerSize.storageKey) private var stickerSize = StickerSize.standard
 
     private let peekTip = PeekTip()
     @State private var showPeriodPicker = false
@@ -330,6 +332,7 @@ struct AtlasScreen: View {
                     proxy: mapProxy,
                     terrainSkin: terrainSkin,
                     showsNeighborhood: showsNeighborhood,
+                    stickerSize: stickerSize,
                     onSelectStamp: { selectedStamp = $0 },
                     onPickCoordinate: { coordinate in
                         pendingCoordinate = StampSpot(

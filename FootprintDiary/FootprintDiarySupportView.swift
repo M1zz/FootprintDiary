@@ -29,6 +29,7 @@ struct FootprintDiarySupportView: View {
     @AppStorage("footprint.terrainSkin") private var terrainSkinRaw = TerrainSkin.ink.rawValue
     /// 내 동네 테두리. 지도가 보는 것과 같은 열쇠다.
     @AppStorage("map.show.neighborhood") private var showsNeighborhood = true
+    @AppStorage(StickerSize.storageKey) private var stickerSize = StickerSize.standard
     /// 개발자 모드. 버전 줄을 일곱 번 두드리면 켜진다 (LeeoSupportSection이 맡는다).
     /// 여기서는 그 값을 읽어 통계 화면 입구만 함께 연다.
     @AppStorage("dev.masterMode") private var devMode = false
@@ -231,6 +232,13 @@ struct FootprintDiarySupportView: View {
                 Text("그림지도").tag(TerrainSkin.picture.rawValue)
             } label: {
                 Label("지도 모양", systemImage: "mountain.2")
+            }
+            Picker(selection: $stickerSize) {
+                ForEach(StickerSize.allCases) { size in
+                    Text(size.title).tag(size)
+                }
+            } label: {
+                Label("스티커 크기", systemImage: "photo")
             }
             Toggle(isOn: $showsNeighborhood) {
                 Label("내 동네 테두리", systemImage: "circle.dashed")

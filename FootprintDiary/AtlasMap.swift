@@ -37,6 +37,8 @@ struct AtlasMapView: UIViewRepresentable {
     var terrainSkin: TerrainSkin = .ink
     /// 걸은 자리로 뜬 내 동네 테두리를 그릴지
     var showsNeighborhood = true
+    /// 스티커를 얼마나 크게 세울지
+    var stickerSize: StickerSize = .standard
 
     /// 열자마자 여기를 한가운데 놓는다.
     ///
@@ -116,6 +118,7 @@ struct AtlasMapView: UIViewRepresentable {
         coordinator.syncSkin(on: mapView, skin: terrainSkin)
         coordinator.syncPaper(on: mapView, showsBasemap: showsBasemap)
         coordinator.syncNeighborhood(on: mapView, shows: showsNeighborhood)
+        coordinator.syncStickerSize(on: mapView, size: stickerSize)
         coordinator.syncDots(on: mapView, cells: cells)
         coordinator.syncStamps(on: mapView, stamps: stamps)
     }
@@ -648,6 +651,13 @@ struct AtlasMapView: UIViewRepresentable {
             )
             (view as? StampAnnotationView)?.stickerScale = stickerScale(on: mapView)
             return view
+        }
+
+        /// 스티커 크기를 바꾸면 지금 떠 있는 스티커를 다시 그린다. 새로 뜨는 것은 스스로 읽는다.
+        func syncStickerSize(on mapView: MKMapView, size: StickerSize) {
+            for annotation in mapView.annotations where annotation is StampAnnotation {
+                (mapView.view(for: annotation) as? StampAnnotationView)?.stickerSize = size
+            }
         }
 
         /// 확대·축소하는 동안 스티커가 손가락을 따라 커지고 작아진다

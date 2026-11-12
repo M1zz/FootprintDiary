@@ -44,6 +44,42 @@ final class StampAnnotation: NSObject, MKAnnotation {
     }
 }
 
+/// 지도에 선 스티커를 얼마나 크게 볼지. 설정의 '지도에 보이기'에서 고른다.
+///
+/// 스티커는 내가 찍은 간판이라 알아볼 수 있어야 쓸모가 있다. 도장과 넓이를 맞춘 크기(작게)는
+/// 지도의 균형은 좋지만 간판 글씨가 읽히지 않는다는 말이 있어, 기본을 한 칸 키웠다.
+/// 갈래 도장은 그대로 둔다 — 자리의 표시는 늘 같은 크기여야 한다.
+enum StickerSize: String, CaseIterable, Identifiable {
+    case small, medium, large
+
+    static let storageKey = "map.stickerSize"
+    static let standard: StickerSize = .medium
+
+    /// 지금 고른 크기. 지도가 새 스티커를 그릴 때 읽는다.
+    static var current: StickerSize {
+        UserDefaults.standard.string(forKey: storageKey).flatMap(StickerSize.init) ?? standard
+    }
+
+    var id: String { rawValue }
+
+    /// 도장과 넓이가 같은 크기에 곱하는 배수
+    var factor: CGFloat {
+        switch self {
+        case .small: return 1
+        case .medium: return 1.5
+        case .large: return 2.2
+        }
+    }
+
+    var title: String {
+        switch self {
+        case .small: return String(localized: "작게")
+        case .medium: return String(localized: "중간")
+        case .large: return String(localized: "크게")
+        }
+    }
+}
+
 /// 낙관처럼 보이는 도장 그림. SF Symbol을 붉은 인장 안에 새긴다.
 enum StampSeal {
     /// 지도에 서는 갈래 도장의 크기이자, 스티커가 설 자리의 넓이 기준.
@@ -212,6 +248,15 @@ final class StampAnnotationView: MKAnnotationView {
     /// 배율이 1일 때 스티커가 서는 크기. 스티커가 아니면 0이다.
     private var stickerBaseSize: CGSize = .zero
 
+    /// 스티커를 얼마나 크게 세울지. 바뀌면 그 크기로 다시 그린다 — 늘려 쓰면 흐려진다.
+    var stickerSize: StickerSize = .current {
+        didSet {
+            guard stickerSize != oldValue else { return }
+            renderSticker()
+            applyStickerSize()
+        }
+    }
+
     /// 확대했을 때 스티커를 키우는 배수. 지도가 정해 준다(`StampSeal.stickerScale`).
     var stickerScale: CGFloat = 1 {
         didSet {
@@ -237,13 +282,9 @@ final class StampAnnotationView: MKAnnotationView {
     override var annotation: (any MKAnnotation)? {
         didSet {
             guard let stamp = annotation as? StampAnnotation else { return }
-            if let sticker = stamp.sticker {
-                let largest = StampSeal.maxStickerScale
-                let drawn = StampSeal.image(sticker: sticker, unvisited: stamp.isUnvisited, magnified: largest)
+            if stamp.sticker != nil {
                 image = nil
-                stickerView.image = drawn
-                stickerView.isHidden = false
-                stickerBaseSize = CGSize(width: drawn.size.width / largest, height: drawn.size.height / largest)
+                renderSticker()
                 applyStickerSize()
             } else {
                 stickerView.image = nil
@@ -267,6 +308,17 @@ final class StampAnnotationView: MKAnnotationView {
             nameLabel.alpha = stamp.isUnvisited ? StampSeal.unvisitedAlpha + 0.25 : 1
             setNeedsLayout()
         }
+    }
+
+    /// 가장 크게 설 때의 크기로 미리 그려 두고, 배율 1일 때의 크기를 적어 둔다.
+    private func renderSticker() {
+        guard let stamp = annotation as? StampAnnotation, let sticker = stamp.sticker else { return }
+        let largest = StampSeal.maxStickerScale * stickerSize.factor
+        let drawn = StampSeal.image(sticker: sticker, unvisited: stamp.isUnvisited, magnified: largest)
+        stickerView.image = drawn
+        stickerView.isHidden = false
+        let base = largest / stickerSize.factor
+        stickerBaseSize = CGSize(width: drawn.size.width / base, height: drawn.size.height / base)
     }
 
     private func applyStickerSize() {
