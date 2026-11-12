@@ -10,144 +10,192 @@ App Store 의 "이 버전의 새로운 기능" 에 그대로 올라가는 글이
 Siri에게 오늘 얼마나 걸었는지 물어보세요
 남긴 일기를 Spotlight에서 바로 찾을 수 있어요
 기록이 매일 자동으로 백업되어 되살릴 수 있어요
+지도 위 단추를 줄여 지도가 한결 넓어졌어요
+설정에서 스티커를 더 크게 볼 수 있어요
 
 ### App Store (English)
 
 Ask Siri how far you walked today
 Find your diary entries in Spotlight
 Your walks are backed up every day
+A cleaner map with fewer buttons
+Choose a larger sticker size in Settings
 
 ### App Store (en-GB)
 
 Ask Siri how far you walked today
 Find your diary entries in Spotlight
 Your walks are backed up every day
+A cleaner map with fewer buttons
+Choose a larger sticker size in Settings
 
 ### App Store (Japanese)
 
 今日どれだけ歩いたかSiriに聞けます
 書いた日記をSpotlightで探せます
 記録は毎日自動でバックアップされ復元できます
+ボタンを減らして地図がすっきりしました
+設定でステッカーを大きく表示できます
 
 ### App Store (zh-Hans)
 
 可以问 Siri 今天走了多远
 在聚焦搜索中直接找到你写的日记
 记录每天自动备份，随时可以恢复
+地图上的按钮更少，画面更清爽
+可在设置中把贴纸调大
 
 ### App Store (zh-Hant)
 
 可以問 Siri 今天走了多遠
 在 Spotlight 中直接找到你寫的日記
 紀錄每天自動備份，隨時可以復原
+地圖上的按鈕更少，畫面更清爽
+可在設定中把貼紙調大
 
 ### App Store (Spanish)
 
 Pregunta a Siri cuánto has caminado hoy
 Encuentra tu diario en Spotlight
 Tus datos se guardan cada día
+Un mapa más limpio, con menos botones
+Elige pegatinas más grandes en Ajustes
 
 ### App Store (German)
 
 Siri sagt dir deine heutige Strecke
 Dein Tagebuch ist jetzt in Spotlight
 Deine Daten werden täglich gesichert
+Aufgeräumte Karte mit weniger Tasten
+Größere Sticker in den Einstellungen
 
 ### App Store (French)
 
 Demandez à Siri combien vous avez marché
 Retrouvez votre journal dans Spotlight
 Vos données sauvegardées chaque jour
+Une carte épurée, avec moins de boutons
+Autocollants plus grands dans Réglages
 
 ### App Store (Italian)
 
 Chiedi a Siri quanto hai camminato oggi
 Trova le pagine del diario in Spotlight
 I tuoi dati vengono salvati ogni giorno
+Una mappa più pulita, con meno pulsanti
+Adesivi più grandi nelle Impostazioni
 
 ### App Store (pt-BR)
 
 Pergunte à Siri quanto você andou hoje
 Encontre seu diário no Spotlight
 Seus dados têm backup todos os dias
+Um mapa mais limpo, com menos botões
+Escolha adesivos maiores nos Ajustes
 
 ### App Store (Russian)
 
 Спросите Siri, сколько вы прошли сегодня
 Ищите записи дневника в Spotlight
 Данные копируются каждый день
+Меньше кнопок, карта стала чище
+Стикеры можно увеличить в настройках
 
 ### App Store (Thai)
 
 ถาม Siri ได้ว่าวันนี้เดินไปไกลแค่ไหน
 ค้นหาบันทึกประจำวันได้จาก Spotlight
 ข้อมูลสำรองอัตโนมัติทุกวันและกู้คืนได้
+ปุ่มน้อยลง แผนที่ดูโล่งขึ้น
+ปรับสติกเกอร์ให้ใหญ่ขึ้นได้ในการตั้งค่า
 
 ### App Store (Vietnamese)
 
 Hỏi Siri hôm nay bạn đã đi bộ bao xa
 Tìm nhật ký của bạn ngay trong Spotlight
 Dữ liệu được tự động sao lưu mỗi ngày
+Bản đồ gọn hơn với ít nút hơn
+Phóng to nhãn dán trong Cài đặt
 
 ### App Store (Czech)
 
 Zeptejte se Siri, kolik jste dnes ušli
 Záznamy z deníku najdete ve Spotlightu
 Vaše data se každý den zálohují
+Přehlednější mapa s méně tlačítky
+Větší nálepky v Nastavení
 
 ### App Store (Danish)
 
 Spørg Siri, hvor langt du har gået i dag
 Find dine dagbogsnoter i Spotlight
 Dine data sikkerhedskopieres hver dag
+Et mere roligt kort med færre knapper
+Større klistermærker i Indstillinger
 
 ### App Store (Greek)
 
 Ρωτήστε τη Siri πόσο περπατήσατε σήμερα
 Βρείτε το ημερολόγιό σας στο Spotlight
 Τα δεδομένα σας αντιγράφονται κάθε μέρα
+Πιο καθαρός χάρτης με λιγότερα κουμπιά
+Μεγαλύτερα αυτοκόλλητα στις Ρυθμίσεις
 
 ### App Store (Finnish)
 
 Kysy Siriltä, paljonko kävelit tänään
 Löydä päiväkirjamerkinnät Spotlightista
 Tietosi varmuuskopioidaan joka päivä
+Selkeämpi kartta ja vähemmän painikkeita
+Suurenna tarroja asetuksista
 
 ### App Store (Indonesian)
 
 Tanya Siri jarak jalanmu hari ini
 Temukan catatan harian di Spotlight
 Datamu dicadangkan otomatis setiap hari
+Peta lebih lega, tombol lebih sedikit
+Perbesar stiker di Pengaturan
 
 ### App Store (Norwegian Bokmål)
 
 Spør Siri hvor langt du har gått i dag
 Finn dagboknotatene dine i Spotlight
 Dataene dine sikkerhetskopieres hver dag
+Et ryddigere kart med færre knapper
+Større klistremerker i Innstillinger
 
 ### App Store (Dutch)
 
 Vraag Siri hoe ver je vandaag liep
 Vind je dagboeknotities in Spotlight
 Je gegevens worden dagelijks bewaard
+Een rustigere kaart met minder knoppen
+Kies grotere stickers in Instellingen
 
 ### App Store (Polish)
 
 Zapytaj Siri, ile dziś przeszedłeś
 Znajdź wpisy z dziennika w Spotlight
 Twoje dane mają codzienną kopię
+Przejrzystsza mapa, mniej przycisków
+Większe naklejki w Ustawieniach
 
 ### App Store (Swedish)
 
 Fråga Siri hur långt du har gått i dag
 Hitta din dagbok i Spotlight
 Dina data säkerhetskopieras varje dag
+En luftigare karta med färre knappar
+Välj större klistermärken i Inställningar
 
 ### App Store (Turkish)
 
 Siri'ye bugün ne kadar yürüdüğünü sor
 Günlük notlarını Spotlight'ta bul
 Verilerin her gün otomatik yedeklenir
+Daha az düğmeyle daha sade bir harita
+Ayarlar’dan çıkartmaları büyütün
 
 ## 1.0.9
 
