@@ -93,7 +93,7 @@ Only new paths fill the page
 
 ### 키워드
 
-fog of war,hiking,route tracker,gps,trip log,steps,explore,stamps,neighborhood,journal,city,travel
+footprints,wander,scratch map,territory,places visited,exploration,urban,visited,streets,stamps,city
 
 ### 프로모션 텍스트
 
@@ -231,7 +231,7 @@ Buktu Buktu: 歩いて描く地図
 
 ### 키워드
 
-散歩,ウォーキング,ログ,記録,軌跡,旅行,街歩き,スタンプ,日記,探検,ハイキング,GPS,足あと,距離,移動,散策,ご近所,スタンプラリー,ジョギング,旅ログ,行動記録,お出かけ,ライフログ
+歩いた道,足跡マップ,行った場所,旅の記録,散歩記録,お散歩,マップ,街歩き,散策,旅ログ,ライフログ,行動記録,スタンプラリー,足あと,軌跡,距離,探検,ご近所,GPS,スタンプ,ハイキング,散歩
 
 ### 프로모션 텍스트
 
@@ -300,7 +300,7 @@ Buktu Buktu：用脚步绘制的地图
 
 ### 키워드
 
-散步,步行,徒步,城市漫步,轨迹,足迹,旅行,日记,探险,打卡,图章,位置记录,GPS,运动,健走,街区,行程,旅游,记录,计步,遛弯,里程,生活圈,探店,地标,漫游,同城,景点,爬山,出行
+遛弯,走过的路,漫步,点亮地图,迷雾地图,城市探索,散步记录,点亮城市,旅行足迹,足迹地图,徒步记录,行走轨迹,走路,地标,城市漫步,漫游,生活圈,图章,街区,足迹,位置记录,探店,GPS,散步,步行
 
 ### 프로모션 텍스트
 
