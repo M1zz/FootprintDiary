@@ -147,12 +147,16 @@ final class PurchaseManager {
     ///  ② 이 Apple 계정이 무료 시절 빌드(`lastFreeBuild` 이하)로 앱을 처음 받았다.
     ///     새 기기에 다시 받아 iCloud 기록을 되살린 사람도 여기서 Pro 가 된다.
     /// ⚠️ 샌드박스 · TestFlight 의 `originalAppVersion` 은 늘 "1.0" 이라 출시 환경에서만 ②를 본다.
+    /// ⚠️ 심사 · TestFlight 에서는 ①도 보지 않는다. 심사관은 무료 시절 빌드를 같은 기기에서 이미
+    ///    써 본 뒤 새 빌드를 덮어 깐다 — ①이 그 기기를 '쓰던 사람'으로 잡으면 Pro 가 열려
+    ///    페이월과 사기 단추가 통째로 사라지고, "인앱 상품을 찾을 수 없다"(2.1(b))로 돌아온다.
+    ///    영수증을 못 읽은 때(오프라인)는 출시 환경으로 여겨 ①을 그대로 본다 — 쓰던 사람을 잠그지 않게.
     private static func isGrandfathered() async -> Bool {
+        let app: AppTransaction? = if let result = try? await AppTransaction.shared,
+                                      case .verified(let verified) = result { verified } else { nil }
+        if let app, app.environment != .production { return false }
         if ProEntitlement.usedBeforePaywall { return true }
-        guard let result = try? await AppTransaction.shared,
-              case .verified(let app) = result,
-              app.environment == .production,
-              let build = Int(app.originalAppVersion) else { return false }
+        guard let app, let build = Int(app.originalAppVersion) else { return false }
         return build <= ProEntitlement.lastFreeBuild
     }
 }
