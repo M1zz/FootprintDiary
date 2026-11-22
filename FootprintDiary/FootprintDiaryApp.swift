@@ -107,6 +107,8 @@ struct FootprintDiaryApp: App {
                 .leeoSatisfactionCheck(FootprintDiarySpec.self)
                 // 개발자가 보낸 의견에 답장하면, 앱이 앞으로 올 때 답장을 시트로 보여 준다 (LeeoKit).
                 .leeoFeedbackReplyNotice(FootprintDiarySpec.self)
+                // App Store 이벤트 링크(<번들 ID>://paywall)로 열리면 요금제를 띄운다 (LeeoKit).
+                .leeoPaywallLink { PaywallView() }
                 .storeFallbackNotice()
                 .task { await cloudSync.refresh() }
                 // 영수증을 읽어 칸을 정한다. 팁 상품과 끝나지 않은 팁은 LeeoStore 가 함께 챙긴다.
