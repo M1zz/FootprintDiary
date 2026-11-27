@@ -71,6 +71,12 @@ enum FootprintUsage {
         reporter.logEventInBackground(event.rawValue)
     }
 
+    /// 처음 안내를 끝까지 마쳤다. 허브의 품질 탭 '온보딩' 칸이 이 이름을 읽는다.
+    /// 리뷰 눈금(LeeoEngagement)은 올리지 않는다 — 앱을 써 본 것이 아니라 들어온 것이다.
+    static func logOnboardingCompleted() {
+        reporter.logEventInBackground("onboarding_completed")
+    }
+
     /// 이 설치가 지금 어디까지 왔는지 한 장으로 갱신한다.
     ///
     /// 설치마다 한 줄이고 덮어쓰기라, 몇 번을 불러도 줄이 늘지 않는다. 실제로 보내는

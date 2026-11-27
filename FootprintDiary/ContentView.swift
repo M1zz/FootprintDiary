@@ -33,6 +33,7 @@ struct ContentView: View {
                 OnboardingView {
                     // 막 시작한 사람에게는 모든 것이 새것이라 '새로 생긴 것'을 따로 띄우지 않는다.
                     WhatsNew.markSeen()
+                    FootprintUsage.logOnboardingCompleted()
                     hasOnboarded = true
                 }
                 .foldConfined()
